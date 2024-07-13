@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 1 - Number 1 - August 1981</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Number 1 &middot;</span> <span class="nowrap">August 1981</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 13 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-11 page-13" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+You will now be able to get hard copy of machine code tabulations, Basic listings,
+and source and object code from assemblers and disassemblers. If you use the
+printer with Nas-Dis you will come across a strange problem &ndash; the machine goes into doubleprint
+mode. The reason for this is that after accepting the user options Nas-Dis uses an
+ESCAPE (&pound;1B) to get to the beginning of a line, and then prompt &ldquo;Go?&rdquo;. Unfortunately the
+printer interprets ESCAPE/G as an instruction to double print. The only cures are to
+modify Nas-Dis (for example, change to a lower case g), or to use a special printer output
+routine for Nas-Dis which ignores ESCAPE/G.
+</p>
+<p>
+If you try to use the pixel set in the Epson you will find that it is not
+compatible with the Nascom pixels; in fact, it is the
+<!-- External Link --><a href="https://en.wikipedia.org/wiki/TRS-80" title="External Link: TRS-80" target="_blank" rel="noreferrer">TRS&nbsp;80</a><!-- /External Link -->
+ pixel set, using characters &pound;80 &ndash;
+&pound;BF or &pound;A0 &ndash; &pound;DF (switch selectable). The following section of code carries out the
+necessary conversion. The effect of each step in the process is listed on the right. An X
+indicates that the value is not a copy of a specific original bit.
+</p>
+<table class="location-of-bits">
+<tr><th></th><th>Operation</th><th>Current location of<br>Original bits</th><th>Carry Flag</th><th>Zero Flag</th></tr>
+<tr><td></td><td>RRCA</td><td>07654321</td><td>0</td><td>X</td></tr>
+<tr><td></td><td>AND A</td><td>07654321</td><td>X</td><td>X</td></tr>
+<tr><td></td><td>RRA</td><td>X0765432</td><td>1</td><td>X</td></tr>
+<tr><td></td><td>RRA</td><td>1X076543</td><td>2</td><td>X</td></tr>
+<tr><td></td><td>RRA</td><td>21X07654</td><td>3</td><td>X</td></tr>
+<tr><td></td><td>JR NC, ANDA</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>SET 5,A</td><td>21307654</td><td>3</td><td>X</td></tr>
+<tr><td>ANDA</td><td>AND A</td><td>21307654</td><td>X</td><td>X</td></tr>
+<tr><td></td><td>RRA</td><td>X2130765</td><td>4</td><td>X</td></tr>
+<tr><td></td><td>BIT 6,A</td><td>X2130765</td><td>4</td><td>2</td></tr>
+<tr><td></td><td>JR Z, RES6</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>SET 7, A</td><td>22130765</td><td>4</td><td>2</td></tr>
+<tr><td>RES6</td><td>RES 6, A</td><td>2X130765</td><td>4</td><td>2</td></tr>
+<tr><td></td><td>JR NC, RRCA</td><td></td><td></td><td></td></tr>
+<tr><td></td><td>SET 6, A</td><td>24130765</td><td>4</td><td>2</td></tr>
+<tr><td>RRCA</td><td>RRCA</td><td>52413076</td><td>5</td><td>X</td></tr>
+<tr><td></td><td>RRCA</td><td>65241307</td><td>6</td><td>X</td></tr>
+<tr><td></td><td>RRCA</td><td>76524130</td><td>7</td><td>X</td></tr>
+</table>
+<p>
+This completes the bit. manipulation; SUB &pound;20 now shifts the characters to &pound;A0 &ndash; &pound;DF,
+SUB &pound;40 converts them to &pound;80 &ndash; &pound;BF.
+</p>
+<p>
+The graphics ROM in the Epson also contains 64 Japanese characters, which can
+be accessed when pin 7 of DIP switch 1, at the back of the printer PCB, is set to ON. These
+characters are coincident with the pixels. If you send control code ESCAPE/5 (i.e., &pound;1B
+&pound;35 in hex., 27 53 in decimal) subsequent characters in the graphics range will produce the
+Japanese set; ESCAPE/4 selects the pixel set. Now, you may not want to print in
+Japanese, but a bit of research into the software inside the machine shows that you could
+easily reprogram these 64 characters to your own design.
+</p>
+<p>
+At a first glance at the beautifully made P.C.B. there appear to be some chips
+missing. There are three 24 pin sockets near the back edge of the board labelled <!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="External Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->, but
+only one of these contains a chip, which is a 2332! However, this 4K ROM can be
+removed and replaced by two 2716s without any modifications to the board.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 13 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-1-1.pdf#page=15" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

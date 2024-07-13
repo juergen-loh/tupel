@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 1 - Number 2 - September 1981</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Number 2 &middot;</span> <span class="nowrap">September 1981</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 18 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../19/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-12 page-18" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<table style="width: 90%">
+<tr><td colspan=5><h4>RESET (D,E)</h4></td></tr>
+<tr><td>8007</td><td>CD1680</td><td>RESET</td><td>CALL CSPOS</td><td>Calculate screen posn.</td></tr>
+<tr><td>800A</td><td>CD58FF</td><td></td><td>CALL BRESET</td><td>Use Basic ROM</td></tr>
+<tr><td>800D</td><td>C9 RET</td><td></td><td></td><td></td></tr>
+<tr><td></td><td></td><td colspan=3><br>All registers corrupted (except alternate set)</td></tr>
+<tr><td colspan=5><br></td></tr>
+<tr><td colspan=5><h4>POINT (D,E)</h4></td></tr>
+<tr><td>800E</td><td></td><td>POINT</td><td>CALL CSPOS</td><td>Calculate screen posn.</td></tr>
+<tr><td>8011</td><td>46</td><td></td><td>LD B, (HL)</td><td>Pick up char. on screen</td></tr>
+<tr><td>8012</td><td>CDEDFF</td><td></td><td>CALL BPOINT</td><td>Use Basic ROM</td></tr>
+<tr><td>8015</td><td>C9</td><td></td><td>RET</td><td></td></tr>
+<tr><td></td><td></td><td colspan=3><br>NZ if point set, Z if reset<br>
+					All registers corrupted (except alternate set)</td></tr>
+<tr><td colspan=5><br></td></tr>
+<tr><td colspan=5><h4>CALCULATE SCREEN POSITION</h4></td></tr>
+<tr><td>8016</td><td>6A</td><td>CSPOS</td><td>LD L, D</td><td>Low byte of x co-ord</td></tr>
+<tr><td>8017</td><td>2600</td><td></td><td>LD H, 0</td><td>High byte set to zero</td></tr>
+<tr><td>8019</td><td>E5</td><td></td><td>PUSH HL</td><td>Put on stack for ROM</td></tr>
+<tr><td>801A</td><td>1600</td><td></td><td>LD D, 0</td><td>Set high of y to zero</td></tr>
+<tr><td>801C</td><td>C331FF</td><td></td><td>JP BCSPOS</td><td>Basic ROM does rest</td></tr>
+<tr><td colspan=5><br></td></tr>
+<tr><td></td><td></td><td>On exit</td><td colspan=2>HL = Screen Address</td></tr>
+<tr><td></td><td></td><td></td><td colspan=2>A = Pixel information</td></tr>
+<tr><td></td><td></td><td colspan=3>All other registers corrupted</td></tr>
+<tr><td colspan=5><br></td></tr>
+<tr><td colspan=5><h4>CHECK CO-ORDS AREWITHIN RANGE AND CONVERT THE<br>
+					Y CO-ORDS SO (0,0) IS AT THE BOTTOM LEFT CORNER</h4></td></tr>
+<tr><td>801F</td><td>7A</td><td>CHECK</td><td>LD A, D</td><td>X Co-ordinate</td></tr>
+<tr><td>8020</td><td>FE60</td><td></td><td>CP 96</td><td>Screen width</td></tr>
+<tr><td>8022</td><td>3F</td><td></td><td>CCF</td><td></td></tr>
+<tr><td>8023</td><td>D8</td><td></td><td>RET C</td><td>End if D &gt; 95</td></tr>
+<tr><td>8024</td><td>7B</td><td></td><td>LD A, E</td><td>Y co-ordinate</td></tr>
+<tr><td>8025</td><td>FE30</td><td></td><td>CP 48</td><td>Screenheight</td></tr>
+<tr><td>8027</td><td>3F</td><td></td><td>CCF</td><td></td></tr>
+<tr><td>8028</td><td>D8</td><td></td><td>RET C</td><td>End if E &gt; 47</td></tr>
+<tr><td>8029</td><td>FE2D</td><td></td><td>CP 45</td><td></td></tr>
+<tr><td>802B</td><td>3005</td><td></td><td>JR NC,CH2</td><td>Jump if 44 &lt; E &lt; 48</td></tr>
+<tr><td>802D</td><td>3E2C</td><td></td><td>LD A, 44</td><td></td></tr>
+<tr><td>802F</td><td>93</td><td></td><td>SUB E</td><td>Carry will not be set</td></tr>
+<tr><td>8030</td><td>5F</td><td></td><td>LD E, A</td><td>New y co-ord in E</td></tr>
+<tr><td>8031</td><td>C9</td><td></td><td>RET</td><td></td></tr>
+<tr><td>8032</td><td>3E5C</td><td>CH2</td><td>LD A, 92</td><td>Sort out top line</td></tr>
+<tr><td>8034</td><td>93</td><td></td><td>SUB E</td><td>Carry will not be set</td></tr>
+<tr><td>8035</td><td>5F</td><td></td><td>LD E, A</td><td>Carry will not be set</td></tr>
+<tr><td>8036</td><td>C9</td><td></td><td>RET</td><td></td></tr>
+<tr><td></td><td></td><td colspan=3><br>On exit D and E contain new co-ords.<br>
+					Carry set if out of range</td></tr>
+</table>
+<h3 class="article-stopper">
+.. &nbsp;
+.. &nbsp;
+.. &nbsp;
+.. &nbsp;
+.. &nbsp;
+.. &nbsp;
+.. &nbsp;
+..
+</h3>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 18 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../19/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-1-2.pdf#page=20" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

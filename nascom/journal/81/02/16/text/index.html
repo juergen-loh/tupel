@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 2/81</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">2/81</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 16 von 20</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 1 Spalten: Start --><div class="row"><div class="col-sm-12">
+<h4 id="article1">
+<u><span class="uppercase">Nasbug</span>&nbsp;&ndash; NAS-SYS&nbsp;&ndash; Umsetzung</u>
+</h4>
+<p>
+Aufgrund einiger Anfragen bringen wir hier eine Liste, die es Ihnen
+erleichtern soll, <span class="uppercase">Nasbug</span>&nbsp;&ndash; Programme in NAS-SYS-kompatible Programme
+umzusetzen. Hier wird nur eine Liste für <span class="uppercase">Nasbug</span>&nbsp;T4 angegeben, denn die
+Unterprogrammaufrufe von <span class="uppercase">Nasbug</span>&nbsp;T2 (und auch des sog.
+&bdquo;B-Bug&ldquo;) sind in den Aufrufen des T4 als Untermenge
+enthalten. Natürlich genügt es in der Regel nicht, die
+Unterprogrammaufrufen nun einfach durch <span class="uppercase">Restarts</span> zu ersetzen. Die
+Umsetzung ist natürlich oftmals um einiges komplizierter.
+</p>
+
+<table style="width: 100%">
+<tr>
+	<th><p><u>Name</u></p></th>
+	<th><p><u>Funktion</u></p></th>
+	<th><p><u class="uppercase">Nasbug&nbsp;T4</u></p></th>
+	<th><p><u>NAS-SYS&nbsp;1</u></p></th>
+</tr>
+<tr>
+	<td><p>RIN</p></td>
+	<td><p>Einlesen eines Zeichens</p></td>
+	<td><p>CD 3E 00</p></td>
+	<td><p>CF</p></td>
+</tr>
+<tr>
+	<td><p>ROUT</p></td>
+	<td><p>Ausgabe eines Zeichens<br>oder<br>oder</p></td>
+	<td><p>CD 4A 0C<br>F7<br>CD 3B 01</p></td>
+	<td><p>F7</p></td>
+</tr>
+<tr>
+	<td><p>PRS</p></td>
+	<td><p>Ausgabe eines String</p></td>
+	<td><p>EF&nbsp;&hellip; 00</p></td>
+	<td><p>EF&nbsp;&hellip; 00</p></td>
+</tr>
+<tr>
+	<td><p>RCAL</p></td>
+	<td><p>Relativer Unterprogrammaufruf</p></td>
+	<td><p>D7 &hellip;</p></td>
+	<td><p>D7 &hellip;</p></td>
+</tr>
+<tr>
+	<td><p>SCAL</p></td>
+	<td><p>Unterprogrammaufruf</p></td>
+	<td><p>nicht mögl.</p></td>
+	<td><p>DF&nbsp;&hellip;</p></td>
+</tr>
+<tr>
+	<td><p>RDEL</p></td>
+	<td><p>Zeitverzögerung<br>oder</p></td>
+	<td><p>FF<br>CD 35 00</p></td>
+	<td><p>FF</p></td>
+</tr>
+<tr>
+	<td><p>BRKPT</p></td>
+	<td><p>Breakpoint</p></td>
+	<td><p>E7</p></td>
+	<td><p>E7</p></td>
+</tr>
+<tr>
+	<td><p>START</p></td>
+	<td><p>RESET</p></td>
+	<td><p>C7</p></td>
+	<td><p>C7</p></td>
+</tr>
+<tr>
+	<td><p>MRET</p></td>
+	<td><p>Rücksprung zum Monitor<br>oder</p></td>
+	<td><p>C3 86 02<br>CF</p></td>
+	<td><p>DF 5B</p></td>
+</tr>
+<tr>
+	<td><p>TDEL</p></td>
+	<td><p>Lange Zeitverzögerung</p></td>
+	<td><p>nicht mögl.</p></td>
+	<td><p>DF 5D</p></td>
+</tr>
+<tr>
+	<td><p>FFLP</p></td>
+	<td><p>Bit in Port 0 setzen/&#x200b;löschen</p></td>
+	<td><p>CA 4A 00</p></td>
+	<td><p>DF 5E</p></td>
+</tr>
+<tr>
+	<td><p>MFLP</p></td>
+	<td><p>&bdquo;Drive&ldquo; LED ein/&#x200b;ausschalten</p></td>
+	<td><p>CD 51 00</p></td>
+	<td><p>DF 5F</p></td>
+</tr>
+<tr>
+	<td><p>ARGS</p></td>
+	<td><p>Argumente ARG1&hellip;ARG3 laden</p></td>
+	<td><p>CD 97 06</p></td>
+	<td><p>DF 60</p></td>
+</tr>
+<tr>
+	<td><p>IN</p></td>
+	<td><p>Tastatur nach einem eingegebenen<br>Zeichen abfragen</p></td>
+	<td><p>CD 4D 0C<br>CD 69 00</p></td>
+	<td><p>DF 62</p></td>
+</tr>
+<tr>
+	<td><p>INLIN</p></td>
+	<td><p>Eingegebene Zeile &bdquo;holen&ldquo;</p></td>
+	<td><p>nein</p></td>
+	<td><p>DF 63</p></td>
+</tr>
+<tr>
+	<td><p>NUM</p></td>
+	<td><p>ASCII-Binär-Umwandlung</p></td>
+	<td><p>CD 5A 02</p></td>
+	<td><p>DF 64</p></td>
+</tr>
+<tr>
+	<td><p>TBCD3</p></td>
+	<td><p>HL-Register in ASCII ausgeb.</p></td>
+	<td><p>CD 32 02</p></td>
+	<td><p>DF 66</p></td>
+</tr>
+<tr>
+	<td><p>TBCD2</p></td>
+	<td><p>A-Register in ASCII ausgeben</p></td>
+	<td><p>CD 2B 02</p></td>
+	<td><p>DF 67</p></td>
+</tr>
+<tr>
+	<td><p>B2HEX</p></td>
+	<td><p>A-Register in ASCII ausgeben</p></td>
+	<td><p>CD 44 02</p></td>
+	<td><p>DF 68</p></td>
+</tr>
+<tr>
+	<td><p>SPACE</p></td>
+	<td><p>Zwischenraum ausgeben</p></td>
+	<td><p>CD 3C 02</p></td>
+	<td><p>DF 69</p></td>
+</tr>
+<tr>
+	<td><p>CRLF</p></td>
+	<td><p>Wagenrücklauf ausgeben</p></td>
+	<td><p>CD 40 02</p></td>
+	<td><p>DF 6A</p></td>
+</tr>
+<tr>
+	<td><p>ERRM</p></td>
+	<td><p>Fehlermeldung ausgeben</p></td>
+	<td><p>nicht mögl.</p></td>
+	<td><p>DF 6B</p></td>
+</tr>
+<tr>
+	<td><p>TX1</p></td>
+	<td><p>HL,DE in ASCII ausgeben</p></td>
+	<td><p>CD 5B 04</p></td>
+	<td><p>DF 6C</p></td>
+</tr>
+<tr>
+	<td><p>SOUT</p></td>
+	<td><p>Zeichenstring an den seriellen<br>Ausgang schicken</p></td>
+	<td><p>CD CC 06</p></td>
+	<td><p>DF 6D</p></td>
+</tr>
+<tr>
+	<td><p>SRLX</p></td>
+	<td><p>Zeichen an den seriellen<br>Ausgang schicken &nbsp; &nbsp; &nbsp;&nbsp; oder</p>
+	</td><td><p>CD 5D 00<br>CD 5E 00</p>
+	</td><td><p>DF 6F</p></td>
+</tr>
+<tr>
+	<td><p>RLIN</p></td>
+	<td><p>Argumente der eingegebenen<br>Zeile abholen.</p></td>
+	<td><p>nicht mögl.</p></td>
+	<td><p>DF 79</p></td>
+</tr>
+<tr>
+	<td><p>B1HEX</p></td>
+	<td><p>Ausgeben einer Hälfte von A<br>in ASCII.</p></td>
+	<td><p>CD 4D 02</p></td>
+	<td><p>DF 7A</p></td>
+</tr>
+<tr>
+	<td><p>BLINK</p></td>
+	<td><p>Cursor blinken lassen,<br>Eingabe abfragen.</p></td>
+	<td><p>nicht mögl.</p></td>
+	<td><p>DF 7B</p></td>
+</tr>
+<tr>
+	<td><p>CPOS</p></td>
+	<td><p>Anfang der Zeile finden</p></td>
+	<td><p>nicht mögl.</p></td>
+	<td><p>DF 7C</p></td>
+</tr>
+</table>
+
+<p style="text-align:right">
+(red.; in Anlehnung an<br>
+<a href="../../../../../magazines/inmc-80-news/01/15/text/#article1">INMC-News 1/80</a>
+&nbsp; &nbsp; +
+</p>
+<!-- 1 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 16 von 20</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/81-02.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

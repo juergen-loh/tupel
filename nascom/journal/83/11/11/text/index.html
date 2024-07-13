@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - November 1983 - Ausgabe 10/11</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">November 1983 &middot;</span> <span class="nowrap">Ausgabe 10/11</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/09/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 11 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/12/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<p>
+verschiedenen Testroutinen). Es wird zunächst ein <span class="uppercase">Restore</span>- Befehl an
+den Controller gegeben, der den Kopf auf Spur0 setzen soll. Der Aufruf
+der Routine HOME wird deshalb nicht gewählt, weil diese eine
+Endlosschleife enthält, aus der das Programm nicht mehr herausfindet,
+wenn kein Interrupt erfolgt, d.h. wenn der Controller den Befehl nicht
+ausführen kann. Stattdessen wird eine Verzögerungsroutine aufgerufen,
+die dem Laufwerk Zeit gibt, den Motor anzuwerfen. Läuft die Diskette,
+kann der Controller an Bit1 das Vorhandensein des Indeximpulses
+feststellen. Fehlt dieser, so ist keine Diskette vorhanden. Bit2 zeigt
+an, daß der Kopf Spur0 erreicht hat. Hat er das nicht, so ist wohl kein
+Laufwerk angeschlossen (oder die Zigarette des Programmierers ist im
+Laufwerk eingeklemmt). In diesen Fällen erfolgt eine Fehlermeldung nach
+Rückkehr zu EMDOS.
+</p>
+<p>
+PREAD ruft wie PWRITE zunächst die Suchroutine PSEEK
+auf, die als erstes oben beschriebenen Test durchführt, falls das
+Laufwerk nicht bereit ist. Fällt dieser Test negativ aus, werden die
+PUSHs von PREAD/&#x200b;PWRITE rückgängig gemacht und ebenso die Returnadresse
+zu diesen Routinen &bdquo;weggeworfen&ldquo;. Ein Return kehrt dann
+direkt zu EMDOS zurück.
+</p>
+<p>
+Bei positivem Testverlauf wird Bit7 von HL untersucht. Dieses Bit ist
+rückgesetzt, wenn EMDOS absolute Sektornummern erwartet (es zählt die
+Sektoren auf der Diskette von Anfang bis Ende durch ohne Rücksicht auf
+die Spuren, auf denen sie sich befinden), d.h. der von EMDOS erwartete
+Sektor9 entspricht auch dem physikalischen Sektor9 auf der Diskette.
+Ist das Bit7 gesetzt, so erwartet EMDOS die Sektornummern ab Spur 3
+(die ersten 3 Spuren sind ja für das System reserviert). In unserem
+Fall muß also zur relativen Sektornummer die Anzahl addiert werden, die
+sich auf den ersten 3 Spuren befindet, und das sind 10. So ergibt die
+relative Sektornummer 9 die physikalische 39.
+</p>
+<p>
+Nun wird die Sektornummer durch die Anzahl der Sektoren pro Spur
+dividiert, (Beispiel: 39/10=3 Rest 9). Dabei entspricht das Ergebnis
+der Spur (die werden ja ab 0 gezählt) und der Rest dem Sektor. Da (bei
+Rest 0) der Sektor0 nicht existiert, wird jeweils noch 1 addiert.
+</p>
+<p>
+In Seek wird nun die entsprechende Spur
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+aufgesucht, in Setsek die Sektornummer gespeichert. Dann geht&rsquo;s zurück
+zur aufrufenden Routine.
+</p>
+<p>
+Da man nie sicher sein kann, ob ein Sektor auf Anhieb richtig gelesen
+werden kann, sollen mehrere Versuche gemacht werden. 10
+&bdquo;Retries&ldquo; sollen üblich sein, und so werden zunächst einmal 5
+Versuche gemacht und dann ein &bdquo;HOME&ldquo;, denn die Spur könnte
+sich ja leicht verstellt haben. Sind weitere 5 Versuche erfolglos, wird
+mit der Fehlermeldung 11H, gesetztem Carry und hängendem Kopf zu EMDOS
+zurückgekehrt. (Verstehen Sie das mit dem Kopf nicht falsch; es ist
+nicht der Schreib/&#x200b;Lesekopf gemeint).
+</p>
+<p>
+Die PWRITE Routine macht es etwas
+einfacher: sie versucht einfach 10 mal zu schreiben und macht dann ihre
+Fehlermeldung (Schreibschutz oder was anderes).
+</p>
+<p>
+Man könnte die Tests sicher noch viel aufwendiger machen, indem man
+statt HOME versucht, einen Schritt des Motors nach innen und außen
+vorzunehmen etc. Hierzu fehlt mir aber der Vergleich mit
+professionellen Programmen. Bis jetzt geht es gut, und ich hoffe nicht,
+Disketten lesen zu müssen, die von total verstellten Laufwerken
+beschrieben wurden.
+</p>
+<div id="nascompl">
+<img class="img-fluid" src="../../Image-11-1.jpeg" alt="NASCOMPL:&#32;&#10;So ein Laufwerk&#32;&#10;erspart viel&#32;&#10;Beinarbeit!" width="297" height="113">
+</div>
+<p>
+Die eigentlichen Controllerroutinen sind weitgehend gleich geblieben.
+Hie und da mußten einige PUSHs und POPs eingebaut werden, die
+Bildschirmanzeige beim Interrupt ist entfernt. Wenn Sie die Routinen im
+<a href="../../../09/11/text/#article1">letzten Heft</a>
+vergleichen, werden Sie die kleinen Änderungen erkennen.
+An der grundlegenden Funktion hat sich nichts geändert. Wenn Ihre
+Controllerkarte getestet ist, brauchen Sie nur noch das EMDOS
+einzutippen, die Anpassungsroutine zu assemblieren (oder auch im
+Maschinencode einzugeben) und dann können Sie Ihre ersten
+Speicherbereiche zum Test auf Diskette schreiben. (Hier kann man sich
+die tollsten Filenamen ausdenken. Die wurden bei mir z.T. recht
+unflätig, als die Anpassung noch nicht so recht funktionieren wollte).
+</p>
+<p>
+Auf daß Ihre Filenamen positiv sind!
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/09/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 11 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/12/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-11.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

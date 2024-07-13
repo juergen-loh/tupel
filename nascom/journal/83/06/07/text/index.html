@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - Juni 1983 - Ausgabe 6</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Juni 1983</span> &middot; <span class="nowrap">Ausgabe 6</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/05/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 7 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/07/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<h1 id="article1">
+ECB-System
+</h1>
+<h3>
+von <span class="uppercase">Karl Schulmeister</span>
+</h3>
+<h4>
+Z80 Computer auf
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">ECB</a><!-- /External Link -->,
+CP/M lauffähig, <span class="uppercase">Nascom</span>-kompatibel:
+</h4>
+<p>
+Durch Schwierigkeiten bei der Anpassung der
+<!-- External Link --><a href="https://hschuetz.selfhost.eu/mc-zeitschriften/1981/mc-1981-04.pdf#page=26" title="Externer Link: mc 4/1981, Seite 26" target="_blank" rel="noreferrer">64k Karte</a><!-- /External Link -->
+ aus
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Mc_%28Zeitschrift%29" title="Externer Link: mc" target="_blank" rel="noreferrer">MC</a><!-- /External Link -->
+ an meinen
+<span class="uppercase">Nascom</span>-1 habe ich mich im vorigen Jahr entschlossen, einen
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Zilog_Z80" title="Externer Link: Z80" target="_blank" rel="noreferrer">Z&nbsp;80</a><!-- /External Link -->
+Computer, möglichst <span class="uppercase">Nascom</span>-kompatibel, für das Europakartenformat zu
+bauen. Da mein System nun mit den Karten: CPU-CP/M;
+<a href="../../../07/29/text/#article1">Video-48x16</a>&nbsp;;
+<a href="../../../09/18/text/#article1">Keyboardanschluß</a>,
+<a href="../../../09/18/text/#article1"><span class="uppercase">Nascom</span>-2 Kasetteninterface</a>,
+Waitsignalerzeugung;
+256k RAM Karte;
+<a href="../../../03/05/text/#article1">Programm. Videokarte für 80x24</a>;
+<a href="../../../12/23/text/#article2">IO-Karte</a>, mit 4&nbsp;MHz ohne
+Probleme läuft, stelle ich meine Platinenfolien und die notwendigen
+Unterlagen hiezu gerne den Lesern zur Verfügung. (Die programm.
+Videokarte haben wir schon im
+<a href="../../../03/05/text/#article1">80-Bus Journal 3/83</a>
+vorgestellt. Danke, Herr Schulmeister. &nbsp; Red.)
+</p>
+<p>
+Die einzelnen Karten habe ich für eine händische Durchkontaktierung
+ausgelegt, indem ich bei den IC-Sockeln eine doppelte Lochbelegung
+vorgesehen habe. Wenn man die Durchkontaktierung mit sehr dünnem Draht
+(z.B. Wire-Wrap) vornimmt und diesen auf der Bestückungsseite vor dem
+Verlöten umbiegt, kann man die normalen und billigen IC-Sockel
+verwenden, die Karte erhält ein professionelles Aussehen.
+</p>
+<p>
+Vielleicht ist es der Redaktion &ndash; so wie bei der prog. Videokarte &ndash;
+möglich, durchkontaktierte Karten günstig zu besorgen und abzugeben,
+ansonsten könnte ich gerne ein paar Tips und Tricks für händisches
+Durchkontaktieren schreiben (so eine &bdquo;selbstgestrickte&ldquo; Karte
+kommt dann incl. Folie auf ca. 12 bis 15&nbsp;DM., Zeit geht allerdings auch
+einige drauf).
+</p>
+<p>
+Inzwischen läuft bei mir auch eine
+<a href="../../../11/48/text/#article1">24K-EPROM/&#x200b;RAM-Platine</a> (24K ROM oder
+16K ROM/8K RAM); Adressenwahl über DIL-Schalter getrennt für 16/8K. ROM
+ist über Port3,&#x200b;Bit1 auf der Karte ausblendbar. Damit habe ich von
+B000-FFFF alles mit der Firmware belegt, kann diese jedoch jederzeit
+ausblenden. Die Karte ist fehlerfrei. Sollte interesse bestehen, werde
+ich einen Schalt- und Bestückungsplan für das Journal anfertigen.
+</p>
+<p>
+Zwischenzeitlich wurde die
+<a href="../../../09/18/text/#article1">Port0/&#x200b;Cassetten-Interf.-Karte</a> noch mit einer
+RS&nbsp;232 und 20mA Schnittstelle versehen. Die Belegung des Stecksockels
+PL2 entspricht der des N2-Schaltplanes aus
+<a href="../../../../81/12/44/text/#article1">Journal 12-81</a>. Die
+Einstellung der Funktionsart geschieht über Schalter oder Jumper. (Sehr
+gute Erfahrungen habe ich bis jetzt mit einzelnen IC-Fassungskontakten
+gemacht, in die Drahtabfälle von Widerständen oder Kondensatoren als
+Brücken gesteckt werden. Der Systemtakt ist über diese Jumperart nun
+auch leichter einzustellen).
+</p>
+<h4>
+Wichtige Anmerkung der Redaktion:
+</h4>
+<p>
+Um die von Karl Schulmeister erstellten Schaltungen als preisgünstige
+(fertig durchkontaktierte!) Platinen anbieten zu können, müssen wir
+eine Mindestmenge anfertigen lassen. Wenn Sie also daran interessiert
+sind, daß eine Kleinserie in Auftrag gegeben wird, schreiben Sie uns
+bitte (möglichst sofort; spätestens aber bis Ende Juli 83), an welcher
+Platine Sie Interesse haben.
+</p>
+<p>
+Der Preis würde maximal DM&nbsp;50.&ndash; (inkl. Mehrwertsteuer, Verpackung,
+Porto etc.) betragen.
+</p>
+<h4>
+CPU-Platine:
+</h4>
+<p>
+Die Karte weist sowohl eine Pufferung des internen, als auch des
+externen Daten- und Adressbusses auf, wobei durch die logischen
+Verknüpfungen ein gegenseitiges Treiben verhindert wird.
+</p>
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+<p>
+Die Ausblendung der Karte (einschl. der
+<a href="../../../07/29/text/#article1">ECB-Video-Karte 48x16</a>&nbsp;)
+und damit die
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/CP/M" title="Externer Link" target="_blank" rel="noreferrer">CP/M</a><!-- /External Link -->-Fähigkeit
+erfolgt über das gesetzte Bit&nbsp;1 des Port&nbsp;3
+(LS&nbsp;173). Dieses Bit wird mit dem MRQ-Signal UND-verknüpft (LS&nbsp;32-negative
+Logik) und dem Adressdekodierungsbaustein LS&nbsp;85 zugeführt.
+</p>
+<p>
+Der LS&nbsp;137 ist als Ausgabeport eingesetzt und erzeugt zusätzlich mit
+Bit&nbsp;3 und 5 die Pseudoadressen A-16 und A-17 für die ECB-RAM-Karte. Bit&nbsp;7
+ist für den Benutzer frei und auf einen Lötstift herausgeführt. Das
+CE-Signal für die ECB-Video-Karte 48x16 wird über Pin&nbsp;25a der 64poligen
+Anschlußleiste der Videokarte zugeführt, auf dieser entfallen dann der
+vierpolige DIL-Schalter, sowie der LS&nbsp;85 und LS&nbsp;139. Die CPU-Karte
+erzeugt außerdem das Signal <span class="uppercase">Output-Buffer-Disable</span> für die
+<!-- External Link --><a href="https://hschuetz.selfhost.eu/mc-zeitschriften/1981/mc-1981-04.pdf#page=26" title="Externer Link: mc 4/1981, Seite 26" target="_blank" rel="noreferrer">64&nbsp;k-RAM-Karte</a><!-- /External Link -->
+ aus der Zeitschrift
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Mc_%28Zeitschrift%29" title="Externer Link: mc" target="_blank" rel="noreferrer">MC</a><!-- /External Link -->. Durch dieses Signal erfolgt die
+automatische Ausblendung der RAM-Karte, wenn irgend ein Speicherbereich
+auf einer anderen Karte innerhalb der 64&nbsp;k angesprochen wird. Es ist
+das jeweilige CE-Signal, das über eine Open-Collektor-Logik auf Pin&nbsp;26a
+des ECB gelegt wird. Der Arbeitswiderstand hiezu befindet sich auf der
+RAM-Karte. Ich habe mir für mein System die 64&nbsp;k Karte aus MC
+nachgebaut und sie mit 64&nbsp;k Bausteinen
+(<!-- External Link --><a href="https://www.mikrocontroller.net/attachment/4092/HYB4164.pdf" title="Externer Link" target="_blank" rel="noreferrer">4164</a><!-- /External Link -->) auf 256&nbsp;k RAMbereich
+aufgestockt. Ein großer Vorteil ist dabei auch die
+Single-5V-Stromversorgung und eine verringerte Störanfälligkeit. Da ich
+das Copyright für diese Karte nicht besitze, kann ich leider meine
+Folie nicht zu Verfügung stellen, die Karte gibt es aber bei den
+Verfassern zu kaufen.
+</p>
+
+<!-- Kasten über ganze Spalte: Start --><div style="border-style: solid; padding: 10px; border-width: 2px;  width: 100%; ">
+<img class="img-fluid mx-auto d-block " src="../../Image-07-1.jpeg" alt="" width="305" height="467">
+<!-- Kasten: Ende --></div>
+
+<br>
+
+<table>
+<tr><td>Ausblendung&nbsp;</td><td>von 0000-0FFF: Port3,&#x200b;Bit1=1</td></tr>
+<tr><td></td><td>(bei RESET: Bit1=0)</td></tr>
+</table>
+<p>
+Als RAM-Karte ist die
+<!-- External Link --><a href="https://hschuetz.selfhost.eu/mc-zeitschriften/1981/mc-1981-04.pdf#page=26" title="Externer Link: mc 4/1981, Seite 26" target="_blank" rel="noreferrer">64-K Platine</a><!-- /External Link -->
+ aus
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Mc_%28Zeitschrift%29" title="Externer Link: mc" target="_blank" rel="noreferrer">MC</a><!-- /External Link -->
+ vorgesehen; das Signal
+<span class="uppercase">Output-Buffer-Disable</span> wird durch die CPU-Karte erzeugt (Pin26a/&#x200b;ECB-Bus).
+</p>
+<p>
+Aus- und Einblendung RAM/&#x200b;ROM erfolgt damit automatisch.
+</p>
+<p>
+Port3, Bit3 und 5: Erzeugung von Adr. 16 und 17 für RAM-Karte. (Bit7
+für User frei).
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/05/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 7 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/07/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-06.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 16:39:06 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;June 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 16 of 59</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../59/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-23 page-16" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="noindent">
+[Ed. &ndash; My version of MBASIC works differently, in the form of:<br>
+SAVE "&lt;[disk drive name:]filename&gt;",[protect or ASCII option]<br>
+So SAVE "B:FRED",A means save file FRED to drive B: in ASCII format. This format
+also holds true for LOAD, KILL, OPEN, NAME &ndash; AS, MERGE and CHAIN.]
+</p>
+<h4>
+KILL:
+</h4>
+<p>
+This command erases a specified file from disk; if the file does not
+exist, an error message is output as is also the case if an attempt is made to
+erase a file which is in use. The format of the KILL command is:
+</p>
+<pre>
+KILL "&lt;filename&gt;".
+</pre>
+<h4>
+NAME:
+</h4>
+<p>
+Renaming of files is achieved by the use of the NAME command which has
+the following form:
+</p>
+<pre>
+NAME "&lt;old filename&gt;" AS "&lt;new filename&gt;"
+</pre>
+<p class="noindent">
+If the proposed new file name already exists, an appropriate error message is
+printed.
+</p>
+<h4>
+MERGE:
+</h4>
+<p>
+The MERGE command is used when it is desired to put part or all of two
+programs together to form a new program. It should be used with care since the
+results of merging two programs can be unpredictable (or just plain messy!). It
+has the following form:
+</p>
+<pre>
+MERGE "&lt;filename&gt;"
+</pre>
+<p class="noindent">
+The effect of this command is to load &lt;filename&gt; into the program already in RAM.
+Where the loaded program and the original program have identical line numbers,
+the loaded line numbers replace the existing line numbers. The file name to be
+loaded must specify an ASCII format saved program, otherwise a &lsquo;BAD FILE MODE
+ERROR&rsquo; will occur.
+</p>
+<h4>
+FILES:
+</h4>
+<p>
+This command is used to print out the names of ALL files, regardless of
+type, on the current disk. It is equivalent to the &lsquo;CAT&rsquo; or &lsquo;<span class="uppercase">Catalog</span>&rsquo; commands in
+mainframe BASICS, and to the &lsquo;DIR&rsquo; command when at disk operating system level.
+</p>
+<h4>
+Naming of files:
+</h4>
+<p>
+In MBASIC, all program and data files have a filename. This is a &lsquo;string&rsquo;
+expression between 1 and 8 characters in length; the first character must not be
+a null (0) or a byte of 255 (dec.). The format of a filename permits the addition
+of an extension, which can be used to convey further information about the file.
+The usual way of naming files is to give the filename, followed by a full stop
+and a 3 character extension. Thus FUNNYONE is a valid filename and so are
+FUNNYONE.BAS, FUNNYONE.DAT or FUNNYONE.123 but 0FUNNY is invalid because it has a
+&lsquo;0&rsquo; as its first character. As a matter of sensible programming technique, it is
+wise to&rsquo; name BASIC program files with &lt;filename.ext&gt;, e.g. COUNTER.BAS for the
+program or COUNTER.DAT if it is a data file. Note that, then loading a BASIC
+program file with &lsquo;LOAD&rsquo;, inclusion of the .BAS extension is optional, although
+it might be wise to include it if you have, for example, a data file as well as a
+program file under the same filename. The same holds true when SAVEing a program.
+File names can consist totally of numbers, or have some non-alphanumeric
+characters &ndash; 13579081.BAS is allowed, as is FILE$$1 or PROG&pound;2. Filenames in lower
+ease are the same as their equivalents in upper case &ndash; SHEAR and shear&nbsp;, for
+example.
+</p>
+<p class="noindent">
+[Ed. &ndash; Careful!!! If given a lower case file name, MBASIC will save and load it
+as such. However, if say an ASCII file were saved with a lower case file name for
+the purpose of loading into an editor for instance, then CP/M would not be able
+to find it as all CP/M command line input is converted to upper case
+automatically.]
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 16 of 59</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../59/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_23.pdf#page=16" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

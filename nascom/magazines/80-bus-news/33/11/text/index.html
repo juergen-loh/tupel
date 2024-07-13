@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;June 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 11 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-33 page-11" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+appears at the output pin Q when R/W goes high. /CAS also acts as an output
+enable; when it is high, Q switches into the high-impedance state. Because
+only one bit is stored for each address pattern, 8 chips are needed to service
+the full data bus. Thus a block of 8 <!-- External Link --><a href="https://console5.com/techwiki/images/8/85/MK4116.pdf" title="External Link" target="_blank" rel="noreferrer">4116</a><!-- /External Link -->s give 16&nbsp;kbytes and 8 <!-- External Link --><a href="https://www.mikrocontroller.net/attachment/4092/HYB4164.pdf" title="External Link" target="_blank" rel="noreferrer">4164</a><!-- /External Link -->s give a
+full 64&nbsp;kbytes. This is in contrast to the byte-mapped <!-- External Link --><a href="https://sites.ecse.rpi.edu/courses/CStudio/data%20sheets/hm6116.pdf" title="External Link" target="_blank" rel="noreferrer">6116</a><!-- /External Link -->, where a single
+chip can be used to provide a block of 2&nbsp;kbytes.
+</p>
+<p>
+The other main feature of dynamic RAM is that the charge in the memory
+cells slowly leaks away and has to be replenished periodically by rewriting.
+Fach cell has to be refreshed within a time less than 2 mSec for the 4116 and
+less than 4 mSec for the 4164. This is another feature which has to be
+provided by the memory board designer. Fortunately, the problem is not as
+complex as it first appears since cells in the same column can be refreshed in
+parallel by applying an address to the rows only which is strobed by /RAS.
+Provided all row addresses are strobed during the stated period, refresh is
+assured. During this process, /CAS is held high which minimises power
+consumption and ensures that no data is placed on the data bus during refresh
+cycles. The refresh process occurs during the second half of the opcode fetch
+cycle, and the Z80 provides a 7-bit refresh counter which makes this part of
+the memory board design fairly straight-forward. However, when selecting 64k
+chips a little care has to be taken since, for example, the Texas 4164
+requires an 8-bit refresh cycle and therefore presents problems when used with
+the Z80. Also, some chips, such as the Motorola MCM6664, have an internal
+refresh counter but require a strobe pulse to be applied to pin 1 to clock the
+counter on. You should therefore use 7-bit refresh chips which do not utilise
+pin 1, such as the Mostek MK4564, the Fujitsu MB8264, the NEC uPD4164, etc.
+The ones I actually used were Motorola MCM6665AP20s.
+</p>
+<p>
+The 4164 is simpler than the 4116 in that it can operate from a single
+5&nbsp;volt supply, so the &minus;5 and &minus;12&nbsp;volt supplies will not be required in the new
+layout. A further advantage of the 4164 is that it actually consumes less
+power than the 4116; the 4116 typically consumes only 125 mW when running and
+17 mW on standby, whereas the correponding figures for the 4116 are 460 and 20
+mW respectively. Let us turn now to the circuit modifications required to add
+a single set of 8 4116s to the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/nascom/rama.htm" title="External Link" target="_blank" rel="noreferrer">RAM&nbsp;A</a><!-- /External Link -->
+board, and after that we will go into the
+additional circuitry to achieve paging for the 128k RAM. Incidentally, if your
+copy of the circuit diagram is an minute as mine, you will probably find the
+use of a magnifying glass helpful to see the fine details of the circuit.
+</p>
+<p>
+The first item which must be attended to is the address multiplexing. For
+the 4116s, A0 to A6 are multiplexed with A7 to A13 by IC20 and IC21, which are
+74157 quad 2-to-1 line data selectors. The two remaining lines, A14 and A15,
+are decoded by IC24 to produce 4 16k decodes &ndash; we will utilise these for
+paging the 128k RAM. For the 4164s, A0 to A7 must be multiplexed with A8 to
+A15. It does not actually matter which lines are multiplexed together as long
+as the components of each pair come from the two different groupings, and that
+A0 to A6 are coupled as a unit to the RAM chips and latched by /RAS so that
+refreshing is performed correctly. Unfortunately, in the original design, A0
+is switched with A7 which is not allowed, so A7 must be disconnected and
+replaced by A14, which can be picked up from pin 15 of the 74LS75 address
+latch IC25. All the remaining pairs can be left unaltered, which leaves A7 and
+A15 to be dealt with. As currently configured, the remaining inputs on IC21
+toggle between 0 and +5&nbsp;volts to provide the /CAS signal via three buffers in
+IC&nbsp;3 which provide a short delay to allow the address lines to settle. It
+seemed to me to be more straightforward to use these inputs to toggle between
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 11 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_33.pdf#page=11" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

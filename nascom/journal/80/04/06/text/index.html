@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 4/80</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">4/80</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../05/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/03/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 6 von 20</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/05/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2 Spalten: Start --><div class="row"><div class="col-sm-6">
+
+<table style="margin: auto; border: 1px solid #000">
+	<tr>
+		<td style="padding: 10px; vertical-align:middle">
+			NAS-SYS&nbsp;1
+		</td>
+		<td style="padding: 10px; border-left: 1px solid #000">
+			0 C 80 -<br>
+			0 D 13
+		</td>
+	</tr>
+</table>
+<br>
+
+<!-- 2 Spalten: Spaltenwechsel --></div><div class="col-sm-6">
+<!-- 2 Spalten: Ende --></div></div>
+
+<!-- 2(2) Spalten: Start --><div class="style-multi-column-2">
+
+<p>
+eine Zahl zw. 0-9. Diese "gewürfelte" Zahl kann nun mit Hilfe der
+Tasten 1-3 in die entsprechenden Stellen einer dreistelligen Zahl
+kopiert werden. Dieser Vorgang wird solange durchgeführt, bis alle
+Stellen der Anzeige ausgefüllt sind. Danach wird das Spiel-Ende
+angezeigt und nach einer kurzen Wartezeit erneut gestartet.
+</p>
+<p>Übrigens sind zu diesem Spiel noch viele weitere Variationen
+erdenklich. Zu diesem Zweck muß man nur die Zielsetzung des Spiels
+ändern: niedrige Zahl, die Quersumme der Zahl muß durch 3 teilbar sein,
+oder man macht es sich zur Aufgabe, an eine vorher festgelegte Zahl so
+nahe wie möglich heranzukommen.
+</p>
+
+<table style="margin: auto">
+<tr><td>
+<div class="text-end"><img class="img-fluid" src="../../Image-06-1.jpeg" alt="" width="215" height="326"></div>
+<p style="text-align:right">
+Start:E 0C80
+</p>
+</td></tr>
+
+<tr><td>
+<p style="margin: 0; padding: 0">
+<br>
+Gerald Möse
+</p>
+</td></tr>
+</table>
+
+<p style="font-family: Arial; text-align: center; font-size: 5em; padding: 0; margin-top: 0; margin-bottom: 40px; line-height: 40px">
+<b>,,,,,,,</b>
+</p>
+
+<h4 id="article1">
+<u class="double">Priority&nbsp;&ndash; Scheduler für <span class="uppercase">Nascom&nbsp;1</span></u>
+</h4>
+<p>
+Das hier gezeigte Programm ist eine überarbeitete Version eines
+interruptgesteuerten Schedulers, der von J.R. Keneally in der
+Zeitschrift "Computing Today"
+
+<!-- 2 Spalten: Spaltenwechsel -->
+
+veröffentlicht wurde. Der Sinn des Programms ist folgender:
+</p>
+<p>
+Nehmen wir an, ein Rechner hat die Aufgabe, verschiedene Prozesse zu
+überwachen (z.B.in einer Alarmanlage Kontakte abfragen, Ein -Ausgabe in
+einem Multi-User System oder Heizungssteuerung). Die eine Lösung wäre,
+daß der Rechner zyklisch die einzelnen Stationen abfragt, ob es etwas
+zu tun gibt; das wäre ein "Polling". Die andere heißt
+Interrupt-Steuerung. Jede Station, die bedient werden will, löst einen
+bestimmten Interrupt aus, der einen Sprung zu der jeweiligen
+Bedienroutine ergibt. Ein Mittelding ist der Scheduler. Dieser hier ist
+speziell für den <span class="uppercase">Nascom&nbsp;1</span> geschrieben und nützt die
+Interrupt-fähigkeiten des <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->-Bausteins aus.
+</p>
+<p>
+Die Bedienroutinen für die einzelnen Aktionen (Tasks in der
+Fachsprache genannt) liegen irgendwo im Speicher. Weiterhin werden in
+genauen Zeitabständen durch ein externes Signal Interrupts ausgelöst.
+Diese Interrupts rufen den Scheduler auf, der nun anhand einer
+"Task-Control-Liste" entscheidet, welches Programm als nächstes
+abläuft. Entscheidend sind dabei die Daten in der TCL welche hier so
+liegen:
+</p>
+
+<table class="donthyphenate">
+	<tr>
+		<td>
+			<u>erstes Byte:</u>
+		</td>
+		<td>
+			Anzahl der Zeittakte, die zwischen jedem
+			Task-Aufruf übersprungen werden.
+		</td>
+	</tr>
+	<tr>
+		<td class="nowrap" style="padding-right: 1em">
+			<u>zweites Byte:</u>
+		</td>
+		<td>
+			Anzahl der Zeittakte, bevor die Task zum ersten
+			Mal aufgerufen wird.
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<u>drittes Byte:</u>
+		</td>
+		<td>
+			Status der Task<br>
+			00 nicht aufrufen<br>
+			04 Task gültig<br>
+			05 letzte gültige Task
+		</td>
+	</tr>
+	<tr>
+		<td colspan=2>
+			<u>viertes/&#x200b;fünftes&nbsp;Byte:</u><br>
+			Einsprungadresse der Task.
+		</td>
+	</tr>
+</table>
+
+<p>
+Jede Task, die nun aufgerufen wird, führt ihre Aktionen aus. Kehrt
+sie dann zum Scheduler zurück, entscheidet dieser anhand der TCL,
+welche Task die nächstniedrigere Priorität hat, worauf diese dann
+weiterlaufen darf, falls sie durch eine höher priorisierte Task
+unterbrochen wurde. Ist keine Task mehr aktiv, wird gewartet bis zum
+nächsten Zeittakt.
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../05/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/03/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 6 von 20</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/05/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/80-04.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

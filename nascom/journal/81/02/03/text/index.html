@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 2/81</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">2/81</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../02/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 3 von 20</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten: Start --><div class="style-multi-column-2">
+
+<h1 id="article1" style="text-align:center">
+R&nbsp;A&nbsp;M&nbsp;&ndash; T&nbsp;E&nbsp;S&nbsp;T
+</h1>
+<br>
+<h4>
+<u>RAM-Testprogramm für den <span class="uppercase">Nascom&nbsp;1</span></u>
+</h4>
+<p>
+Das hier beschriebene Testprogramm läuft auf dem <span class="uppercase">Nascom&nbsp;1</span> mit dem
+Monitor <span class="uppercase">Nasbug</span>&nbsp;T&nbsp;2, müßte aber auch mit den <span class="uppercase">Nasbug</span>&nbsp;T&nbsp;4 arbeiten. Es
+belegt die Speicherplätze 0C50 &ndash; 0D8B.
+</p>
+<p>
+Bei Speichertest muß natürlich davon ausgegangen werden, daß dieser
+Speicherbereich einwandfrei funktioniert. Nur die außerhalb dieser
+Adressen liegenden Bereiche kann man testen.
+</p>
+<p>
+<u>Programmbeschreibung:</u>
+</p>
+<p>
+Nach dem Start unter Angabe des zu testenden Speicherbereiches führt
+der Rechner zuerst einen groben Vortest auf der Suche nach
+&bdquo;Totalschäden&ldquo; durch. Dazu schreibt er in jede Speicherzelle
+erst &bdquo;FF&ldquo; und dann &bdquo;00&ldquo;. Unter der Überschrift
+&bdquo;defekte Zellen&ldquo; listet er alle Adressen schadhafter
+Speicherzellen hexadezimal via Bildschirm auf. Sollte der Bildschirm
+dabei voll werden, was nach 96 Fehlermeldungen der Fall ist,&#x200b;dann hält
+er an und setzt den Test erst nach Betätigen einer beliebigen Taste
+fort. Da im genannten Fall weitere Tests überflüssig sind, springt das
+Testprogramm nach Überprüfung der letzten Speicherzelle ins
+Monitorprogramm zurück.
+</p>
+<p>
+Sollte kein Fehler gefunden worden sein, so wird das Testprogramm
+fortgeführt. Nachdem das Programm unter der Überschrift &bdquo;defekte
+Zellen:&ldquo; mit &bdquo;keine&ldquo; geantwortet hat, beginnt die Suche
+nach Mehrfachadressierungen. Alle Zellen sind noch durch den Vortest
+auf &bdquo;00&ldquo; gesetzt. Nun werden in die Speicherzellen 1.,4.,7.,
+.... Adresse FF und prüft das so entstandene Muster auf Fehler. Dann
+werden 2.,5.,8., &hellip; Adresse FF Beschrieben und geprüft. Desgleichen
+danach mit der 3.,6., 9.....Adresse. Nachdem jetzt der gesamte zu
+testende Bereich FF enthält, wird die gesamte Prozedur mit 00
+wiederholt.
+</p>
+<p>
+Sollte bei diesen insgesamt 6 Durchläufen irgendwo ein Fehler im
+&bdquo;Muster&ldquo; festgestellt
+
+<!-- 2 Spalten: Spaltenwechsel -->
+
+werden, bricht das Programm ab, schreibt &bdquo;aber
+Mehrfachadressierungen&ldquo; auf den Bildschirm und kehrt ins
+Betriebssystem zurück.
+</p>
+<p>
+Ist bis hierher alles fehlerlos abgelaufen, dann beginnt der Dauertest
+unter der gleichnamigen Überschrift.
+</p>
+<p>
+Dazu wird bis zu 256 mal in jede Speicherzelle erst FF und dann wieder
+00 geschrieben. Die laufende Nummer des Durchlaufes wird dabei dauernd
+in der untersten Bildschirmzeile mit &bdquo;Durchlauf Nr. ii&ldquo;
+angezeigt. Wird ein Fehler registriert, bricht der Rechner wieder ab,
+hinterläßt aber die Nachricht &bdquo;Durchlauf Nr. ii fehlerhaft&ldquo;
+auf dem Schirm. Wurde während aller 256 Durchläufe kein Fehler bemerkt,
+schreibt das Programm &bdquo;Durchlauf 256 mal fehlerfrei&ldquo;, um dann
+endgültig abzubrechen.
+</p>
+<p>
+Dieser Programmteil eignet sich besonders gut, um sporadische
+Speicherfehler zu finden. Dazu sollte er allerdings bei erhöhter
+Taktfrequenz der CPU ablaufen. Am besten führt man diese Taktfrequenz
+aus einem einfachen externen RC-Generator mit angeschlossenem Zähler
+zu. Aus der maximal möglichen Taktfrequenz lassen sich dann
+Rückschlüsse auf die Zugriffszeit des getesteten RAMs ziehen. Bei einem
+solchen Test des Bereiches 0E00 &hellip; 0EFF, also eines Bereiches des
+Benutzer-RAM auf der Grundplatine, zeigten sich bis etwa 4&nbsp;MHz
+(normalerweise 2&nbsp;MHz) keine Fehler. Es besteht hier, zumindest bei
+meinem Gerät, ein Sicherheitsfaktor in der Zugriffszeit von zwei, den
+man dann wohl auch auf eine externe Erweiterung anwenden sollte.
+</p>
+<p>
+Ist der Speicher in Ordnung, steht nach
+dem Durchlauf der Programmes auf dem Schirm:
+</p>
+<pre class="donthyphenate">
+"    defekte Zellen:
+     keine,
+     also Dauertest:
+     Durchlauf 256 mal fehlerfrei    "
+</pre>
+<p>
+Da der Rechner das Programm sofort abbricht, sobald ein Fehler
+auftritt, läßt sich durch Ausgabe des getesteten Bereiches auf dem
+Schirm der Fehler erfahrungsgemäß leicht finden. Auf eine Fehleranalyse
+schon im Programm wurde deshalb verzichtet.
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../02/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 3 von 20</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/81-02.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

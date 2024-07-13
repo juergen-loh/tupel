@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 11 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-21 page-11" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+In this, the LSB 4 bits of 0111 indicate Interrupt Control Word. Bits 4 to 6 are
+only used in Mode 3, and Bit 7 enables or disables the Port to interrupt. If Bit
+7 = 1, then Interrupts are enabled. If 0, then disabled. If an interrupt
+condition occurs while disabled, the <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="External Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
+ latches it, and interrupts as soon as
+Port interrupts are re-enabled. If we don&rsquo;t want this to happen, then we can set
+Bit 4 in the Interrupt Control Word to reset the pending interrupt condition.
+Bits 4 &ndash; 6 are used in Mode 3. If Bit 6 = 1, then selected lines are monitored
+for AND condition, i.e. they must all be active for interrupts. If bit 7 = 0,
+then any one of them can be active and cause an interrupt. Bit 5 =1 indicates
+that they should be monitored for High level, = 0 for low level. Bit 4 = 1
+indicates that the next word sent to the port must define a mask. Only those
+lines whose mask bit is 0 will be monitored for generating an interrupt. To
+enable or disable a Port interrupt without modifying the rest of the Interrupt
+Control Word, we write the following word to the port.
+</p>
+<pre class="indent">
+EI x x x 0 0 1 1
+</pre>
+<p class="continued">
+Problems have occurred with the PIO&rsquo;s little peculiarities. Disabling interrupts
+by writing the above control word to the port is subject to them. For example,
+you write the disable control word to the port. As you do so, an interrupt
+occurs. The PIO generates an interrupt, and the CPU acknowledges it. By then, the
+PIO has deciphered the control word and deactivated the interrupt structure. In
+consequence, the PIO will not place the interrupt vector on the bus at the
+appropriate time. The CPU will read such a vector, however. As the bus lines are
+not in a well defined state, this value will be spurious, giving rise to
+eccentric behaviour of the interrupt structure. The cure for this is to disable
+CPU interrupts, send the disable control word, and reenable the CPU interrupts.
+Here is the sequence of instructions:
+</p>
+<pre class="indent">
+LD A,03H        ;Disable word
+DI              ;Disable CPU
+OUT (PIO),A     ;Disable PIO
+EI              ;Enable CPU
+</pre>
+<p class="continued">
+This causes the CPU to ignore any such spurious interrupts while the PIO is
+turning its own interrupt structure off.
+</p>
+<p>
+So much for the actual instructions for setting up the interrupts in the
+PIO. Now we have to consider what the Interrupt handling routine is to do.
+Obviously, without knowing the precise form of your peripheral, this is something
+I can&rsquo;t deal with in particular, but there are a few points to draw to your
+attention. First of all, an interrupt automatically disables any further
+interrupts &ndash; not just from the same device, but over the whole Machine, except
+for the NMI. It is at your discretion when to reenable them. This action will
+allow higher priority devices to interrupt the service routine currently running.
+As a rough rule of thumb, timer and floppy disk interrupts are usually accorded
+higher priority than simple input/&#x200b;output devices. So, suppose your parallel
+printer is connected up to a port, and interrupts for more data. Usually a
+printer has a buffer within it, and a print rate of 60 &ndash; 120 chars per sec. So
+long as the printer has about 100 chars in its buffer, it won&rsquo;t need any further
+attention for about a second. This means that we could, for example, allow our
+<!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0181.pdf" title="External Link: Z80 CTC" target="_blank" rel="noreferrer">CTC</a><!-- /External Link --> to interrupt the printer routine every half second or so with the time. We
+can only interrupt a routine when it is in a safe state, so we need to have saved
+any data resulting from the interrupt before permitting another. Reenabling
+interrupts is done by executing the EI instruction within the interrupt service
+routine. To lock after the problem of signalling to the lower priority device
+that the higher priority device that has interrupted it is finished, and that the
+lower priority unit can now continue with its interrupt service, we have to
+terminate each interrupt service routine with EI (enable interrupts) if we have
+not already used it, and a RETI (RETurn from Interrupt). The EI is not acted upon
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 11 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_21.pdf#page=11" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

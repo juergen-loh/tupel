@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - Oktober/November 1982 - Ausgabe 10/11</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Oktober/November 1982 &middot;</span> <span class="nowrap">Ausgabe 10/11</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/09/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 15 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/12/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2 Spalten: Start --><div class="row"><div class="col-sm-6">
+<pre class="donthyphenate">
+480 IF QM$="?" THEN 2600
+481 IF QM$&lt;&gt;"HELP" THEN 490
+482 X=VAL(N$(L,3))
+484 ON X GOSUB 2300,2310,2320,2330,2350,2370
+485 ON FNG(X-6) GOSUB 2380,2390
+486 GOTO 100
+490 X1=LEN(QM$)
+491 IF X1&lt;3 THEN T$="What?":GOTO 1900
+493 X3=0:FOR X2=3 TO X1:M1$=MID$(QM$,X2,1)
+494 IF M1$=" " THEN X3=X2: X2=X1
+495 NEXT X2: X2=X3:IF X3=0 THEN X2=X1
+500 P$=LEFT$(QM$,3)
+501 IF X2&lt;&gt;X1 AND X2+3&gt;X1 THEN 610
+502 II=-1:FOR I=0 TO 42:IF P$=R$(I) THEN II=I
+503 NEXT:IF II&gt;-1 THEN I=II:GOTO 520
+510 IF X1=X2 THEN T$="What?": GOTO 1900
+511 T$="Sorry, but ya can't "+LEFT$(QM$,X2)
+512 IF X2&lt;X1 THEN T$=T$+RIGHT$(QM$,X1-X2)
+513 T$=T$+".":GOTO 1900
+520 IF I&gt;=8 OR X1&lt;&gt;X2 GOTO 540
+521 W=I
+522 ON W+1 GOSUB 2010,2010,2010,2020,680,2020
+524 ON FNG(W-5) GOSUB1920,2000
+526 GOTO 1900
+540 JJ=-1:M1$=MID$(QM$,X2+1,3)
+541 FOR J=0TO32:IF M1$=LEFT$(O$(J,0),3)THEN JJ=J
+542 NEXT J:J=JJ:IF JJ&gt;-1 THEN 630
+543 IF M1$="IRO" THEN 580
+545 IF I=36 THEN 940
+550 IF N$(L,1)="" THEN 560
+551 Z=1: A=Z: X1=LEN(N$(L,1)): FOR X2=5 TO X1
+552 IF MID$(N$(L,1),X2,1)="."OR X2=X1 GOTO 554
+553 NEXT: GOTO 560
+554 M2$=MID$(N$(L,1),Z,3): IF M2$=M1$ THEN 556
+555 Z=X2+2:A=A+1: NEXT: GOTO 560
+556 X2=X1: NEXT: B=A
+557 IFI=10THENPRINT"Ya see nothin' special.":GOTO160
+558 GOTO 630
+560 FOR X=43 TO 46
+561 IF M1$=R$(X)THEN X=46: NEXT: GOTO 650
+565 NEXT
+570 IF O$(4,3)&lt;&gt;"1" AND O$(6,3)&lt;&gt;"1" GOTO 580
+572 IF I&lt;&gt;23 OR M1$&lt;&gt;"SEL" GOTO 580
+574 PRINT"Ok":PRINT"Yer dead": GOTO 2220
+580 IF I=32 THEN GOSUB 780: GOTO 1900
+590 IF I=33 THEN GOSUB 860: GOTO 1900
+600 T$="I can't tell watcha want.": GOTO 1900
+610 T$="I must be dumb, ya don't make sense"
+612 GOTO 1900
+630 IF I&lt;9 THEN 650
+633 IF J&gt;=33 OR J&lt;=-1 GOTO 636
+634 B=VAL(O$(J,2))
+635 IF B&lt;&gt;L AND B&gt;0 THEN 1890
+636 IF J&gt;32 THEN J=29
+640 W=I
+642 ONFNG(W-8)GOSUB1250,1390,1390,1390,1250,1700
+643 ONFNG(W-14)GOSUB1700,1700,1700,1820,1820,1250
+644 ONFNG(W-20)GOSUB 700,700,1080,1060,1060,920
+645 ONFNG(W-26)GOSUB 1150,1190,1210,730,730,780
+646 ONFNG(W-32)GOSUB 860,1250,900,940,1700,1690
+</pre>
+<!-- 2 Spalten: Spaltenwechsel --></div><div class="col-sm-6">
+<pre class="donthyphenate">
+647 ON FNG(W-38)GOSUB 1320,1340,1820,2500
+650 IF I&gt;=9 GOTO 660
+651 W=I
+652 ON W+1 GOSUB 970,970,970,2220,680,970
+654 ON FNG(W-5) GOSUB 1920,2000,1320
+660 GOTO 1900
+680 IF O$(3,3)&lt;&gt;"1" THEN 1890
+681 PRINT"Ok": FOR I=13 TO 17
+682 IF VAL(O$(I,2))&lt;&gt;-L GOTO685
+683 T$="Eureka! We struck gold?!??"
+684 O$(I,2)=STR$(L):RETURN
+685 NEXT
+686 T$="Dag nab it! Thar's nothin' here!":RETURN
+700 IF J&lt;&gt;23 THEN 1060
+701 IF L=14 THEN O$(23,2)="15": GOTO 120
+702 IF L=15 THEN O$(23,2)="16": GOTO 120
+703 IF L=16 AND U=1 THEN O$(23,2)="17": GOTO 120
+704 IF L=17 THEN O$(23,2)="19": GOTO 120
+705 IF L=19 THEN O$(23,2)="23": O$(23,3)="-3"
+710 GOTO 120
+730 IF J=3 OR J=4 OR J=6 OR J=8 GOTO 740
+731 IF J=9 OR J=11 OR J=12 OR J=13 GOTO 740
+732 IF J=19 OR J=27 OR J=28 GOTO 740
+735 GOTO 1050
+740 IF O$(J,3)="1" THEN IN=IN-1
+750 O$(J,3)="-3":O$(J,2)=STR$(L):GOTO 120
+770 T$="Don't havta.":RETURN
+780 IFL&lt;&gt;16 THEN 800
+783 IF U&lt;&gt;0 THEN 770
+786 IF O$(10,3)="1" THEN U=1:GOTO 120
+788 GOTO 1890
+800 IF L&lt;&gt;26 THEN 820
+803 IF U1&lt;&gt;0 THEN 770
+806 IF O$(10,3)="1" THEN U1=1: RETURN
+808 GOTO 1890
+820 IF O$(1,3)&lt;&gt;"1" THEN 840
+825 IF O$(0,3)&lt;&gt;"2" GOTO 830
+826 O$(0,3)="":O$(0,2)=STR$(L):GOTO 120
+830 GOTO 1050
+840 IF CL=1 AND O$(12,3)="1" THEN CL=0: GOTO 120
+860 IF (L=16 OR L=17) AND U=1 THEN U=0:GOTO 120
+870 IF L=26 AND U1=1 THEN U1=0: GOTO 120
+880 GOTO 1050
+900 T$="Ya hear nothin' speacial.": RETURN
+920 IF L&lt;&gt;11 OR O$(9,3)&lt;&gt;"1" THEN 1320
+930 PRINT"They took the fire water 'n ran."
+931 IN=IN-1:O$(9,2)="":O$(9,3)="":O$(22,2)=""
+932 RETURN
+940 IF M1$&lt;&gt;"YOH" GOTO 950
+941 PRINT"Sorry, yer in the wrong adventure."
+942 T$="Turkey!":GOTO 1900
+950 GOSUB 120
+951 T$=T$+C$+RIGHT$(QM$,X1-X2)+"."
+952 GOTO 1900
+970 IF B=0 THEN 980
+971 L=VAL(N$(L,B+3))
+972 IF O$(1,3)&lt;&gt;"1" GOTO 976
+973 IF NOT(L=1 OR L=6 OR L=15)GOTO 976
+974 T$="He won't go":L=L1:RETURN
+976 IF L=17 AND U=0 THEN L=L1: GOTO 1890
+</pre>
+<!-- 2 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/09/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 15 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/12/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+	<p class="nas-link"><!-- External Link --><a href="http://www.nascomhomepage.com/mbasic/Ldgold.cas" title="Externer Link: Ldgold.cas" target="_blank" rel="noreferrer">Download</a><!-- /External Link -->
+	des Programms von der <!-- External Link --><a href="http://www.nascomhomepage.com/" title="Externer Link" target="_blank" rel="noreferrer">Nascom Home Page</a><!-- /External Link -->.</p>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/82-10.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

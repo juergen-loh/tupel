@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 1 - Number 2 - September 1981</title>
+	<!-- Sun, 30 Jun 2024 16:40:24 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Number 2 &middot;</span> <span class="nowrap">September 1981</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-12 page-25" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+example above for completeness. When writing programs FOR&nbsp;. . NEXT loops be
+sure not to change the value of the loop variable within the loop, or you may find the
+program gets &lsquo;hung up&rsquo; in the loop. When the program exits from a loop the loop
+variable is one STEP greater then the value set by the TO limit. Try entering:
+</p>
+<pre class="center">
+FOR A = 1 to 50:NEXT:PRINT A
+</pre>
+<p class="continued">
+when you will receive the answer 51.
+</p>
+<p>
+Right, we can now analyse the operation of the title printing program. Line 10
+clears the screen, defines Z$ as <span class="uppercase">Program Title</span>, and sets up a loop to scan this
+string letter by letter. Line 30 is merely the NEXT part of this loop. However, line 20
+looks quite complex, and certainly refutes claims that Basic programs bear any
+relationship to simple English.
+</p>
+<p>
+In fact the line consists of a single command of the form POKE X,Y, but here
+both X and Y are complex expressions. The memory location into which data is being
+inserted is 3017 + I + (48 &ndash; LEN(Z$))/2. Now 3017 is one less than the decimal
+address of the start of the top line on the Nascom screen, so as I is increased from 1
+in the loop 3017 + 1 steps through the memory locations at the start of this line. To
+this value an offset (48 &ndash; LEN(Z$))/2 is added. This merely deducts the string length
+from the line length and halves the result, to ensure that the title is centred. If the
+number of characters in the string is odd the offset will not be an integer, but the
+POKE command used only the integral part of the expression, try entering POKE
+2531.7,7.3. Thus as the program cycles round the loop, data is inserted into the
+central LEN(Z$) locations of the top line. The value inserted at the Ith point is
+ASC(MID$(Z$,&#x200b;I,1)), that is, the ASCII code corresponding to the Ith character in the
+string.
+</p>
+<p>
+So one by one the letters of the title appear at the top of the screen. Easy, isn&rsquo;t
+it? Well, perhaps it is too easy that I can be accused of making a simple subject
+complicated, but the point of analysing this short program in such detail is that what
+you learn can be carried over to help you write your next program.
+</p>
+<p>
+Finally, here is a simple program to print out the complete ASCII and graphics
+set, with a space between each character:
+</p>
+<pre class="center">
+10 CLS:FOR A = 1 TO 255:PRINT CHR$(A);:NEXT
+</pre>
+<p>
+In the
+<a href="../../../13/03/text/#article1">next article</a>
+I shall cover further Basic commands, including the double
+PEEK and POKE commands DEEK and DOKE, and examine the syntax and use of
+the PRINT command.
+</p>
+<h3 class="article-stopper">
+* &nbsp; &nbsp; *
+* &nbsp; &nbsp; *
+* &nbsp; &nbsp; *
+* &nbsp; &nbsp; *
+* &nbsp; &nbsp; *
+* &nbsp; &nbsp; *
+* &nbsp; &nbsp; *
+* &nbsp; &nbsp; *
+</h3>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-1-2.pdf#page=27" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - March&ndash;April 1983 - Volume 2 - Issue 2</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">March&ndash;April 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 2</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../45/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 46 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../47/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-22 page-46" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+The circuit is given in Fig.&nbsp;1. To wire up, connect the 74L505 to
+address line A3 through A7 and to IORQ. Common the collectors together using a
+1K5 resistor to form a &lsquo;wired OR&rsquo; gate, and connect this common output to pins
+1, 4 and 5 of IC46 which are lifted out of their socket for the purpose. Pin 6
+of IC46 is also lifted and connected to the (lifted) pin 2 of IC45. So far no
+snags have cropped up in testing, with or without the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm812.htm" title="External Link" target="_blank" rel="noreferrer">IVC</a><!-- /External Link -->
+in either Nascom or CP/M formats.
+</p>
+<!-- Linie --><div class="hline" style="width: 10%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<p>
+Well, as you see all ended well. Mr. Thornton is happy, I&rsquo;m happy
+because that&rsquo;s one more problem solved, and my boss is no less happy than usual
+in that he knows nothing about this episode, and I have spared him the anguish
+and cramp of the wrist he gets when he signs cheques.
+</p>
+<h3>
+<u>Turbo-charged N1</u>
+</h3>
+<p>
+Whilst on the subject of Nascom&nbsp;1&rsquo;s we have recently heard of a turbo
+charged N1 using a Z80B and running at 6MHz. Apparently the main snag of the
+conversion was not any defficiency in the design but the crazy cost of 16 150nS
+2102 RAMs for the work space and video RAMs.
+</p>
+<h3>
+<u>Centronics Interface Nasty</u>
+</h3>
+<p>
+On the subject of problems solved, one 000-nastie which cropped up
+recently which I may have mentioned before but is well worth repeating. This
+concerns the well known Centronics parallel printer connection. Now Centronics
+when they designed the interface very wisely put all the control signals on one
+side of the plug and made the pins on the other side all earths. This is so that
+when ribbon cable is used with insulation displacement type connectors, each
+signal line is separated from the next by an earth line thereby reducing noise.
+Now the Centronics plug has 36 pins, yet there are only thirteen signal lines,
+and appropriately enough, thirteen matching earths. This leaves ten unallocated
+lines. This means that other manufacturers who have adopted the Centronics plug
+convention are free to do as they will with the remaining lines, and believe me,
+they do. Herein lies the danger. It is tempting when wiring a Centronics socket
+to run a continuous earth across all the pins on one side, pins 19 through 36,
+as these are the signal earths as defined, or otherwise are unused. Well watch
+out. Epson in their wisdom have made the printer SELECT line pin 36. That&rsquo;s Ok,
+as it has to be earthed anyway to turn the printer on. But Seikosha have made
+pin 35 a +5&nbsp;volt output for some inexplicable reason, so if it&rsquo;s earthed the
+least it will do is blow the fuses in the printer. NEC go even better, pin 31 is
+the INPUT PRIME, a sort of reset line, Ok it can be earthed, except it will hold
+the printer permanently at reset so it won&rsquo;t work, further pin 32 is the FAULT
+output which is a TTL level open collector output, so earthing it won&rsquo;t do it a
+lot of good. Pin 36 is the INPUT BUSY, a duplicate of pin 11, earth it and the
+handshake doesn&rsquo;t work. Another classic, but this time at the machine end is by
+the makers of that fire breathing Welsh creation (Dragon if you haven&rsquo;t worked
+it out). Because they use a 20 way IDS socket on the computer that means there
+are only 10 lines along the top edge, so what happens to the BUSY signal?
+Simple, they move it to the other edge so it means hand wiring the plug at one
+end or the other. Better still, the Dragon shoves +5&nbsp;volts out of one of the
+other pins on the earthy side. Forget that and connect it to earth as you might
+expect, and you might get more smoke out of the thing than you bargained for.
+Brilliant isn&rsquo;t it!!!
+</p>
+<h3>
+<u>A SYS &lsquo;feature&rsquo;.</u>
+</h3>
+<p>
+Now on to more mundain matters. At a reasonable guess there are a couple
+of hundred of Richard&rsquo;s SYS program out there and most of those must belong to
+readers of this magazine as otherwise how would you have heard about it? Well
+anyway Richard has built a somewhat undesirable feature into the SYSB versions
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../45/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 46 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../47/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_22.pdf#page=46" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

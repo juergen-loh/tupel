@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - Juni 1983 - Ausgabe 6</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Juni 1983</span> &middot; <span class="nowrap">Ausgabe 6</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/05/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 26 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/07/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../27/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<!-- 2 Unter-Spalten: Start --><div class="row"><div class="col-sm-6">
+<pre class="donthyphenate" style="font-size:smaller; ">
+1AB8 0D 17 0C 16 0C 16 0C 16  5C
+1AC0 0C 16 0B 15 0B 15 0B 15  5C
+1AC8 0B 15 0A 14 0A 14 0A 14  5C
+1AD0 0A 14 09 13 09 13 09 12  5B
+1AD8 09 12 08 11 08 11 08 10  57
+1AE0 08 10 07 0F 07 0F 07 0E  53
+1AE8 07 0E 06 0D 06 0D 06 0C  4F
+1AF0 06 0C 05 0B 05 0B 05 0A  4B
+1AF8 05 0A 05 0A 05 0A 04 09  4C
+1B00 04 09 04 09 04 09 04 09  4F
+1B08 04 08 04 08 04 08 04 08  53
+1B10 03 08 02 08 01 07 00 07  4F
+1B18 00 08 01 09 01 0A 02 0B  5D
+1B20 02 0C 03 0D 03 0E 03 0D  7A
+1B28 04 0C 04 0B 05 0A 05 09  7F
+1B30 05 0A 05 09 04 09 03 09  81
+1B38 02 08 02 07 01 07 00 06  74
+1B40 00 06 00 08 00 0A 02 0C  81
+1B48 04 0E 06 10 08 12 0A 14  C3
+1B50 0A 16 08 14 06 12 04 10  D3
+1B58 02 0E 04 10 06 12 08 14  CB
+1B60 0A 16 0C 14 0D 13 0D 13  FB
+1B68 0D 13 0D 13 0D 13 0D 13  03
+1B70 0D 13 0D 13 0D 13 0D 13  0B
+1B78 0D 13 0D 13 0D 13 0D 13  13
+1B80 0D 13 0D 11 0D 13 0D 13  19
+1B88 0D 13 0D 13 0D 13 0D 13  23
+1B90 0D 13 0D 13 0D 13 0D 13  2B
+1B98 0D 13 0D 13 0D 13 0F 13  35
+1BA0 0D 13 0D 13 0D 13 0D 13  3B
+1BA8 0D 13 0D 13 0D 13 0D 13  43
+1BB0 0D 13 0D 13 0D 13 0D 13  4B
+1BB8 0D 13 0D 13 0D 13 0D 13  53
+1BC0 0D 13 0D 11 0D 13 0D 13  59
+1BC8 0D 13 0D 13 0D 13 0D 13  63
+1BD0 0D 13 0D 13 0D 13 0D 13  6B
+1BD8 0D 13 0D 13 0D 13 0D 13  73
+1BE0 0D 13 0F 13 0D 13 0F 13  7F
+1BE8 0D 13 0F 13 0D 13 0F 13  87
+1BF0 0D 13 0F 13 0D 13 0F 13  8F
+1BF8 0D 13 0D 13 0D 13 0D 13  93
+1C00 0D 13 0D 13 0D 13 0D 13  9C
+1C08 0D 13 0D 13 0D 13 0D 13  A4
+1C10 0D 13 0D 13 0D 13 0D 13  AC
+1C18 0D 13 0D 13 0D 13 0D 13  B4
+1C20 0D 13 0F 13 0D 13 0D 13  BE
+1C28 0D 13 0D 13 0D 13 0D 13  C4
+1C30 0D 13 0D 13 0D 13 0D 13  CC
+1C38 0D 13 0D 13 0D 13 0D 13  D4
+</pre>
+<!-- 2 Unter-Spalten: Spaltenwechsel --></div><div class="col-sm-6">
+<p id="nascompl">
+<img class="img-fluid" src="../../Image-26-2.jpeg" alt="NASCOMPL:&#32;&#10;PARDON" width="221" height="197">
+</p>
+<pre class="donthyphenate" style="font-size:smaller; ">
+1C40 0D 13 0D 13 0D 13 0D 13  DC
+1C48 0D 13 0C 12 0B 12 0A 12  DB
+1C50 0A 12 0A 12 0A 12 0A 12  DC
+1C58 0A 12 0A 12 0A 12 0A 12  E4
+1C60 0A 12 0A 12 0A 12 0A 12  EC
+1C68 0A 12 0A 12 0A 12 0A 12  F4
+1C70 0A 12 0A 12 0A 12 0A 12  FC
+1C78 0A 12 0A 12 0A 12 0A 12  04
+1C80 0A 12 0A 12 0A 12 0A 12  0C
+1C88 0A 12 0A 12 0A 12 0A 12  14
+1C90 0A 12 0A 12 0A 12 0A 12  1C
+1C98 0A 12 0A 12 0A 12 0A 12  24
+1CA0 0A 12 0A 12 0A 12 0B 13  2E
+1CA8 0B 13 0C 14 0C 14 0D 16  45
+1CB0 0E 18 0F 1A 10 1C 12 1E  77
+1CB8 14 20 16 22 18 24 1A 26  BC
+1CC0 1C 28 1E 2A 20 2C 22 2E  04
+1CC8 24 2F 25 2F 24 2E 23 2D  2D
+1CD0 22 2C 21 2B 20 2A 1F 29  18
+1CD8 1E 28 1D 27 1C 26 1B 25  00
+1CE0 1A 24 19 23 18 22 17 21  E8
+1CE8 16 20 15 1F 14 1E 13 1D  D0
+1CF0 12 1C 12 1C 12 1C 12 1C  C4
+1CF8 12 1C 11 1B 11 1B 10 1A  C4
+1D00 10 1A 0F 19 0E 19 0D 18  BB
+1D08 0C 18 0B 17 0A 17 09 17  AC
+1D10 09 17 07 15 05 13 16 1E  B5
+1D18 0C 0F 25 10 12 21 0E 0C  D2
+1D20 2D 12 32 14 08 48 49 47  A2
+1D28 48 20 53 43 4F 52 45 3A  63
+1D30 20 30 30 30 30 20 42 59  E8
+1D38 20 4E 4F 42 4F 44 59 20  60
+1D40 20 20 20 20 20 4C 41 53  DD
+1D48 54 20 53 43 4F 52 45 3A  8F
+1D50 20 30 30 30 30 30 30 30  DD
+1D58 30 20 73 65 63 20 20 20  60
+1D60 20 20 20 20 20 20 20 20  7D
+1D68 20 20 20 30 30 30 20 6B  00
+1D70 6D 2F 68 20 20 20 20 20  31
+1D78 20 20 20 20 20 20 20 30  A5
+1D80 30 30 30 20 6D 31 38 30  53
+1D88 30 30 30 30 30 39 39 39  40
+</pre>
+
+<!-- 2 Unter-Spalten: Ende --></div></div>
+<br>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+
+<h1 id="article1">
+MX80-Grafik
+</h1>
+<h3>
+von <span class="uppercase">Jürgen Weiermann</span>
+</h3>
+<p>
+Hier noch etwas Interessantes für die Leser, die einen EPSON MX&nbsp;80
+o. MX 80F/T haben:
+</p>
+<p>
+Um Ihrem Drucker die wohl gepriesene Punktgrafik zu entlocken,
+bedarf es nicht viel. Um genau zu sein, benötigen Sie nur 3
+Eproms des Types
+<!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="Externer Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->,
+in welchen eine Programmerweiterung für
+den 8049 (Drucker-CPU) steht inkl. des Zeichensatzes des 2332.
+Nach Entfernen eines Jumpers und Ausbau des Proms 2332 können die
+3 Eproms eingesetzt werden. Es stehen nun 2 weitere Befehle zur
+Verfügung:
+</p>
+<p>
+1.ESC &bdquo;K&ldquo; m n<br>
+2.ESC &bdquo;L&ldquo; m n
+</p>
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+<p>
+Dies sind nun Ihre Grafik-Befehle, wobei der Drucker durch den ersten
+Befehl veranlaßt wird, die ihm folgenden Bytes im <span class="uppercase">Normal Density</span> Mode
+auszudrucken. Technisch umschrieben heißt das, daß eine Abbildung bis
+maximal 480 dots/&#x200b;line möglich ist.&#x200b;Wem dies nicht genug ist, der sollte
+es mit der zweiten Befehlsform versuchen. Dieser Befehl schaltet den
+<span class="uppercase">Dual Density</span> Mode ein und besagt, daß bis zu 960 dots/&#x200b;line gedruckt
+werden können. Rein rechnerisch würde der Drucker es überhaupt nicht
+schaffen, diese Anzahl von Punkten in eine Zeile zu bekommen. Aber wie
+der Name des Befehls schon verlauten läßt, benutzt hier der Drucker
+eine andere Schreib- bzw. Druckdichte. Die einzelnen Punkte werden
+nicht nebeneinander gedruckt, so daß noch ein wenig Platz zwischen den
+Punkten bleibt, sondern sie werden so gedruckt, daß sie einander
+überlappen. Das erste Druck-Verfahren wird mit <span class="uppercase">Normal Density</span>, das
+zweite Verfahren mit <span class="uppercase">Dual Density</span> bezeichnet. Beiden Befehlen gleich
+sind die Variablen m,n. Diese Werte geben der Drucker-CPU eine
+Information darüber, wieviele von den nun folgenden Bytes sie als
+Grafik interpretieren soll, um dann wieder auf ASCII-Code umzuschalten.
+Eine genaue Berechnung dieser Werte ist sehr wichtig, da der Drucker im
+Grafik-Mode keine Steuerzeichen (mit Ausnahme von Reset) mehr erkennt,
+sondern diese als binären Punktcode behandelt, und dies macht er so
+lange, bis sein interner Grafik-Zähler auf 0 ist oder ein Reset
+erfolgte. Will man nun nach einer bestimmten Anzahl von Bytes aus dem
+Grafik Mode aussteigen, um so z.B. ein CR und LF für diese Zeile
+ausführen zu lassen, so müssen die Werte m,n nur für die Anzahl der
+&bdquo;Grafik&ldquo;-Bytes pro Zeile berechnet sein, wobei sich die Werte
+m,n wie folgt berechnen:
+</p>
+<p>
+m= amount of DATA &ndash; 256<br>
+n= Int(amount of DATA/256)
+</p>
+<p>
+Ein Beispiel: Anzahl der zu übertragenen Zeichen für den Grafik Mode
+pro Zeile soll z.B. 300 sein. Dann berechnen sich m,n wie folgt: m =
+300 &ndash; 256 = 44 (Decimal) = 2C (HEX); n = int(300/256) 1. Die
+Wertangaben für m,n müssen immer <span class="uppercase">Hexadezimal</span> sein. Sollten Sie nun
+richtig gerechnet haben, so müßte es Ihnen jetzt möglich sein, nach
+Beendigung des Grafik Modes die Steuerzeichen für CR und LF an den
+Drucker zu senden und diese zur Ausführung zu bringen. Nach meinen
+Erfahrungen ist es aber noch ein weiter Weg bis zu dem Zeitpunkt, an
+dem auch ein LF und CR nach einer Grafikzeile vom Drucker ausgeführt
+wird. Aber nicht den Kopf hängen lassen, es gibt auch hier noch ein
+paar Hilfsmittel (Siehe ein paar Zeilen tiefer). Sollte dies zuletzt
+genannte für Sie nun kein Problem mehr sein, so werden Sie sicherlich
+sehr bald festellen, daß Ihre Grafik doch noch nicht perfekt ist, denn
+der Drucker läßt zwischen je 2 Grafik-Zeilen eine Zeile frei, wodurch
+eine geschlossene Bildeinheit in Streifen zerlegt wird, und dies sieht
+nicht gerade gut aus. Nun ja, des Rätsels Lösung ist im Operation
+Manual sicherlich zu finden und, siehe da, mit &bdquo;ESC A&ldquo;
+läßt sich das line spacing verändern. Als geeignet erwies sich nun
+folgende Befehlsfolge &bdquo;ESC A 07H&ldquo; (1B,41,07). Und hier nun
+eine Hilfe zur Ausgabe von Grafikblöcken. Bei der Erstellung des
+Programms bin ich davon ausgegangen, daß das Grafik-Bild irgendwo im
+Speicher oder in einem von der CPU direkt adressierbaren
+Bildschirmspeicher liegt. Das Programm PACO erfragt nur noch die
+Anfangsadresse, Endadresse des Speicherbereiches und die Bildbreite.
+Alle Eingaben sind vierstellig zu machen. Nach Eingabe der Bildbreite
+kann noch zwischen <span class="uppercase">Normal Density</span> oder <span class="uppercase">Dual Density</span> entschieden werden,
+und dann legt der Drucker auch schon los. Für diejenigen, die nach dem
+Lotter&rsquo;schen Prinzip ihren UART angezapft haben, sind am Programmanfang
+noch 3 Bytes freigelassen, um hier noch ein Unterprogramm zur Freigabe
+des Bit 7 ueber Port 0, Bit 2 einzufügen. Bei den einzelnen
+Ausgabe-Anweisungen (0F 6F) habe ich jeweils noch ein NOP eingefügt für
+den Fall, daß jemand seinen Drucker nicht über den UART ansteuert. Ich
+hoffe, somit allen Anpassungswünschen gerecht geworden zu sein. Der
+Preis für diesen Umrüstungssatz beträgt im Handel ca. 160,&ndash;&nbsp;DM.
+</p>
+<div id="article2">
+<img class="img-fluid" src="../../Image-26-4.jpeg" alt="" width="235" height="130">
+</div>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/05/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 26 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/07/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../27/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+	<p class="nas-link"><!-- External Link --><a href="http://www.nascomhomepage.com/games/Car_race.nas" title="Externer Link: Car_race.nas" target="_blank" rel="noreferrer">Download</a><!-- /External Link -->
+	des Programms von der <!-- External Link --><a href="http://www.nascomhomepage.com/" title="Externer Link" target="_blank" rel="noreferrer">Nascom Home Page</a><!-- /External Link -->.</p>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-06.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

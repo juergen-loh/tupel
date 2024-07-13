@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - März 1983 - Ausgabe 3</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">März 1983 &middot;</span> <span class="nowrap">Ausgabe 3</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/02/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 31 von 32</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/04/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2 Spalten: Start --><div class="row"><div class="col-sm-6">
+
+<pre style="font-size: 0.8em">
+ED80 1000 12F1
+1000 3E AA 32 EA 12 AF 32 EC 12 01 05 0D 21 AA 0B 11  FF
+1010 19 60 D9 CD 64 10 CD 15 11 11 7A 08 CD 73 10 11  9A
+1020 FA 09 CD 73 10 CD C2 10 CD 96 10 CD 8A 10 CD A2  6B
+1030 10 CD 2A 11 3A EA 12 FE 96 CC 94 11 CD D6 10 FE  44
+1040 11 28 06 FE 03 28 07 18 18 11 7A 08 18 03 11 FA  A8
+1050 09 CD 73 10 3E 20 32 89 0A 3E 20 32 FA 08 CD C2  FD
+1060 10 C3 28 10 EF 0C 00 21 B6 12 11 D5 0B 01 1A 00  6B
+1070 ED B0 C9 21 5D 12 0E 05 C5 01 10 00 ED B0 E5 21  02
+1080 30 00 19 EB E1 C1 0D 20 EF C9 21 C9 09 11 C8 09  20
+1090 01 42 01 ED B0 C9 21 B8 09 11 B9 09 01 40 01 ED  2E
+10A0 B8 C9 21 7A 08 01 05 00 3E 20 77 11 40 00 19 0D  26
+10B0 20 F6 3E 0B BC C8 21 C9 09 18 EA 0E 0C FF 0D 20  DE
+10C0 FC C9 0E 13 C5 CD 96 10 CD 8A 10 CD 2A 11 CD A2  CC
+10D0 10 C1 0D 20 EF C9 C5 3E 20 21 ED 12 47 ED 5F 86  F2
+10E0 38 01 3D 77 90 30 FD 80 3C C1 C9 E5 D5 C5 7B 77  51
+10F0 2B 7A 77 CD 00 11 3E 28 77 23 3C 77 C1 D1 E1 C9  E9
+1100 0E 40 2B 0D 20 FC C9 E5 3E 20 77 2B 77 CD 00 11  B6
+1110 77 23 77 E1 C9 21 AA 0B 0E 05 11 19 19 E5 CD EB  A5
+1120 10 E1 2B 2B 2B 2B 0D 20 F1 C9 3A EC 12 B7 20 16  DA
+1130 CD 38 12 FE 1B 20 02 DF 5B FE 20 28 04 CD BB 10  AF
+1140 C9 3E FF 32 EC 12 D9 CD EB 10 C5 CD 2E 12 CD BB  82
+1150 10 CD 07 11 C1 0D D9 C0 D9 0E 05 C5 CD 00 11 CD  19
+1160 D9 11 C1 FE AA 28 17 00 3E 19 BB 11 27 19 28 03  91
+1170 11 19 60 05 28 02 D9 C9 11 19 19 CD EB 10 11 19  11
+1180 19 3E 00 32 EC 12 06 0D 2A EA 12 2B 2B 2B 2B 22  1F
+1190 EA 12 D9 C9 3E AA 32 EA 12 21 D0 12 CD 6A 10 21  C0
+11A0 10 27 22 EF 12 DF 7D 38 0D 2A EF 12 2B 22 EF 12  25
+11B0 7C B5 28 08 18 EF FE 1B 20 02 DF 5B CD 15 11 21  B2
+11C0 90 01 22 EF 12 21 0A 08 11 0B 08 01 80 00 ED B0  FA
+11D0 CD 67 10 D9 21 AA 0B D9 C9 E5 3E 20 23 BE 20 1A  D4
+11E0 2B 2B 2B BE 20 14 CD 00 11 BE 20 0E 23 BE 20 0A  39
+11F0 23 BE 20 06 23 BE 20 02 E1 C9 E1 CD A2 10 CD C2  A4
+1200 10 11 FA 09 CD 73 10 11 80 0A 21 AD 12 01 09 00  0B
+1210 ED B0 11 40 0A 21 7D 12 01 0A 00 ED B0 21 7D 12  22
+1220 11 FE 09 01 0C 00 ED B0 CD C2 10 3E AA C9 3A 0A  88
+1230 0B FE 20 C8 CD 07 11 C9 E5 D5 C5 DF 7D 38 14 2A  32
+1240 EF 12 2B 7C B5 3E 00 20 05 3E 20 21 90 01 22 EF  33
+1250 12 18 06 21 90 01 22 EF 12 C1 D1 E1 C9 20 20 20  03
+1260 20 20 5F 5F 5F 5F 5F 5F 20 20 20 20 20 20 20 20  EC
+1270 20 2F 20 20 28 29 20 20 04 20 20 20 20 7F 7F 7F  A3
+1280 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F  B2
+1290 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 7F 20 20 20  75
+12A0 0F 20 20 20 20 20 20 20 20 0F 20 20 20 41 4D 42  08
+12B0 55 4C 41 4E 43 45 2A 20 4C 4F 4C 4C 59 50 4F 50  3F
+12C0 20 4C 41 44 59 20 54 52 41 49 4E 45 52 20 2A 20  BB
+12D0 70 72 65 73 73 20 73 70 61 63 65 20 74 6F 20 63  10
+12E0 6F 6E 74 69 6E 75 65 20 20 20 AA 0B 00 F3 00 FB  2E
+12F0 1B 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  1D
+</pre>
+
+<br>
+<p id="article1">
+Suche NAS-DIS<br>
+Hexdump oder Eproms<br>
+K. Mark, ________. ___, __ _____ __
+</p>
+
+<br>
+<p>
+Verkaufe Grafik-Erweiterung<br>
+für MX-80 oder 80FT in 3 Eproms
+<!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="Externer Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->
+mit Dokumentation
+(engl.), &nbsp; 90,&ndash;&nbsp;DM<br>
+Jürgen Weiermann, __ ________ __, ____ ________
+</p>
+
+<br>
+<p>
+Verkaufe Hofer-Interface<br>
+für elektrische Schreibmaschinen incl. Software, VB
+200,&ndash;&nbsp;;G. Kreidl, _____/____<br><br>
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel --></p></div><div class="col-sm-6 justify">
+
+<h1 id="article2" class="uppercase">
+<span id="impressum">
+Impressum
+</span>
+</h1>
+<h4 class="uppercase">
+Herausgeber:
+</h4>
+<p>
+<table style="width: 100%">
+<tr><td>Günter Böhm</td><td style="text-align:right">______________ ___. ___</td></tr>
+<tr><td>__ Karlsruhe</td><td style="text-align:right">Tel. ____/______</td></tr>
+<tr><td colspan=2 style="text-align:right">Redaktion, Layout (Grafik), Versand</td></tr>
+
+<tr><td>Günter Kreidl</td><td style="text-align:right">_________ __</td></tr>
+<tr><td>____ Straelen</td><td style="text-align:right">Tel. _____/____</td></tr>
+<tr><td colspan=2 style="text-align:right">Redaktion,  Layout (Text), Buchhaltung</td></tr>
+</table>
+<h4 class="uppercase">
+Korrespondenten:
+</h4>
+<table style="width: 100%">
+<tr><td>Wolfgang Mayer-Gürr</td><td style="text-align:right">____________ ___ ___</td></tr>
+<tr><td>___ Recklinghausen</td><td style="text-align:right">Tel. _____/_____</td></tr>
+
+<tr><td>Clemens u. Max Ballarin</td><td style="text-align:right">_______ ___. _</td></tr>
+<tr><td>___ Ueberlingen</td><td style="text-align:right">Tel. _____/_____</td></tr>
+
+<tr><td>Michael Bach</td><td style="text-align:right">__ __________ __</td></tr>
+<tr><td>____ Stegen</td><td style="text-align:right">Tel. _____/_____</td></tr>
+
+<tr><td>Peter Brendel</td><td style="text-align:right">__________. __</td></tr>
+<tr><td colspan=2>____ Mannheim</td></tr>
+
+<tr><td>Hans-Jürgen Plath</td><td style="text-align:right">____ _______. _</td></tr>
+<tr><td colspan=2>____ Kiel</td></tr>
+
+<tr><td>Hans Schneider</td><td style="text-align:right">________ ____</td></tr>
+<tr><td colspan=2>____ Esens</td></tr>
+
+<tr><td colspan=2>Oesterreich:</td></tr>
+<tr><td>Gerhard Klement</td><td style="text-align:right">________. ___/_/__</td></tr>
+<tr><td>A-____ Wien</td><td style="text-align:right">Tel. ____/_______</td></tr>
+
+<tr><td colspan=2>Niederlande:</td></tr>
+<tr><td>Eric v.d.Vaart</td><td style="text-align:right">__________ __</td></tr>
+<tr><td colspan=2>NL-____ __ Waddixveen</td></tr>
+
+<tr><td colspan=2>England:</td></tr>
+<tr><td>Frank M. Butler</td><td style="text-align:right">___ ____ ____ ____</td></tr>
+<tr><td colspan=2>Mansfield Woodhouse/&#x200b;Notts</td></tr>
+
+<tr><td colspan=2>Luxemburg:</td></tr>
+<tr><td>Rene Claus</td><td style="text-align:right">_________. __</td></tr>
+<tr><td colspan=2>L-___ Bonneweg</td></tr>
+</table>
+<h4>
+<span class="uppercase">Verlag</span>:
+</h4>
+<table style="width: 100%">
+<tr><td>Günter Kreidl</td><td style="text-align:right">____ Straelen</td></tr>
+</table>
+<h4>
+<span class="uppercase">Vertriebswege</span> und <span class="uppercase">Bezugspreis</span>:
+</h4>
+<table style="width: 100%">
+<tr><td>Einzelheft</td><td>DM</td><td style="text-align:right">5,&ndash;</td></tr>
+<tr><td>Doppelheft</td><td>DM</td><td style="text-align:right">10,&ndash;</td></tr>
+<tr><td>Jahresabonnement &nbsp; In- und Ausland</td><td>DM</td><td style="text-align:right">60,&ndash;</td></tr>
+</table>
+<p>
+Es erscheinen 10 Hefte pro
+Jahr, davon zwei Doppelhefte. Es können jeweils nur ganze Jahrgänge
+abonniert werden. Bei Bestellungen nach dem Erscheinungsdatum des
+ersten Heftes eines Jahrgangs werden die bereits erschienenen Hefte
+nachgeliefert. Die Lieferung von Einzelheften durch den Verlag ist
+nicht möglich. Bitte zahlen Sie direkt bei der Bestellung auf das
+Postscheckkonto:
+</p>
+<table style="width: 100%">
+<tr><td>Günter Kreidl</td><td style="text-align:right">____ __-___ PSchA _____</td></tr>
+</table>
+<h4>
+<span class="uppercase">Haftung</span> und <span class="uppercase">Rechte</span>:
+</h4>
+<p>
+Für Fehler in Texten, Bilder, Programmen und Schaltungen und daraus
+entstehende Schäden kann keine Haftung übernommen werden.
+</p>
+<p>
+Alle Rechte
+verbleiben grundsätzlich bei den Autoren der Beiträge. Die
+Veröffentlichung von Programmen und Schaltungen geschieht nur für den
+persönlichen Gebrauch der Abonnenten des 80-BUS-Journals; jede
+kommerzielle Auswertung ist nur mit Genehmigung des Verfassers erlaubt.
+Beiträge, die nicht mit einem Copyright-Vermerk versehen sind, dürfen
+für nichtkommerzielle Verwendung vervielfältigt werden, wenn als Quelle
+das 80-BUS-Journal und der Verfasser angegeben werden.
+</p>
+
+<!-- 2 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/02/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 31 von 32</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/04/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+	<p class="nas-link"><!-- External Link --><a href="http://www.nascomhomepage.com/games/Lolly.nas" title="Externer Link: Lolly.nas" target="_blank" rel="noreferrer">Download</a><!-- /External Link -->
+	des Programms von der <!-- External Link --><a href="http://www.nascomhomepage.com/" title="Externer Link" target="_blank" rel="noreferrer">Nascom Home Page</a><!-- /External Link -->.</p>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-03.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

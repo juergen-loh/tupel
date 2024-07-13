@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - September 1981 - Ausgabe 9</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">September 1981 &middot;</span> <span class="nowrap">Ausgabe 9</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/08/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 12 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten: Start --><div class="style-multi-column-2">
+
+<table class="donthyphenate">
+<tr><td></td><td>vorher enthält T die 16-Bit-Zahl, nachher den Zeiger auf den Dezimal-String im N-Buffer.</td></tr>
+<tr><td>PROMPT</td><td>:gibt <span class="uppercase">Newline</span> und Promptzeichen aus</td></tr>
+<tr><td>MATCH</td><td>:Stringvergleich; vorher T = Zeiger auf ersten, T-1 auf zweiten String; nachher T = &minus;1 falls gleich, sonst 0, T&minus;1 und T-2 Zeiger auf 1. bzw. 2. String.</td></tr>
+<tr><td>COUT</td><td>:T enthält Zeichen, das ausgegeben wird</td></tr>
+<tr><td>CIN</td><td>:liest Zeichen ein, T enthält nachher das Zeichen</td></tr>
+<tr><td>LOOKUP</td><td>:Sucht im Dictionary nach einem Wort; vorher: T Zeiger auf Dictionary, T&minus;1 Zeiger auf String; nachher: T = &minus;1, falls gefunden, sonst = 0, T-1 enthält Codeadresse, falls gefunden, sonst Zeiger auf String.</td></tr>
+<tr><th colspan=2>Interpreter, Compiler und Verschiedenes</th></tr>
+<tr><td>:</td><td>:ruft den Compiler auf</td></tr>
+<tr><td>ENTER</td><td>:trägt einen neuen Namen ins Dictionary ein, T = Zeiger auf Namen</td></tr>
+<tr><td>CMPLW</td><td>:Compiliert ein Threaded-Code-Wort, T = Code, der eingetragen wird.</td></tr>
+<tr><td>MOVEBYTES</td><td>:Verschiebt T Bytes nach (T-1) von (T-2)</td></tr>
+<tr><td>INTERACT</td><td>:Liest eine Zeile in UPN von der Tastatur ein und ruft sie auf: Benutzer-Interpreter.</td></tr>
+<tr><td>EXECUTE</td><td>:ruft die Routine auf, deren Adresse auf dem Stack liegt.</td></tr>
+<tr><td>CONS</td><td>:gibt die Adresse der CONS-Funktion</td></tr>
+<tr><td>VARBL</td><td>:gibt die Adresse der VARIAB-Funktion (siehe Beispiele unten!)</td></tr>
+<tr><th colspan=2>Constanten und Variablen</th></tr>
+<tr><td>I,&#x200b;J,&#x200b;K</td><td>:geben den Wert der Schleifenvariablen auf den Stack</td></tr>
+<tr><td>NAMES</td><td>:Startadresse des Interpreter-Dict.</td></tr>
+<tr><td>EXEC</td><td>:Die Routine TOP führt in einer endlosen Schleife das Programm aus, dessen Adresse von der Variablenfunktion EXEC auf den Stack gegeben wird. Bei Initialisierung des Systems: <span class="uppercase">Interact</span></td></tr>
+<tr><td>MEMORY</td><td>:Obergrenze RAM</td></tr>
+<tr><td>ONE, ZERO, NEGONE</td><td>:Constanten 1,0,-1</td></tr>
+<tr><th colspan=2>Compiler-Dictionary</th></tr>
+<tr><td>;</td><td>:beendet die Compilierung</td></tr>
+<tr><td>IF ELSE THEN</td><td>:IF testet den Stack; falls T = 0 wird bei ELSE (falls vorhanden) das Programm fortgeführt bzw. bei THEN; Falls T ungleich 0, werden die folgenden Programmschritte ausgeführt bis ELSE</td></tr>
+</table>
+
+<!-- 2 Spalten: Spaltenwechsel -->
+
+<table class="donthyphenate">
+<tr><td></td><td>(dort springt das Programm nach THEN) oder, falls kein ELSE vorhanden, bis THEN. Im Standard-FORTH ist THEN durch ENDIF ersetzt, das klingt wenigstens ein bischen logischer! UPN!</td></tr>
+<tr><td>REPEAT UNTIL LOOP</td><td>:Das ist nicht ganz so schlimm: der Programmteil zwischen REPEAT und LOOP wird so lange wiederholt, bis das dazwischen liegende UNTIL einen Wert ungleich 0 auf dem Stack vorfindet. Dann wird das Programm mit der nächsten Routine hinter LOOP fortgesetzt.</td></tr>
+<tr><td>FOR LOOP</td><td>:Die Schleifenvariable (I,&#x200b;J oder K- von innen nach außen) erhält den Anfangswert T und wird bei jeder Schleifenwiederholung incrementiert, bis sie den Wert T-1 erreicht hat. Außer durch die umgekehrte Eingabe unterscheidet sich das nicht von der For-Next-Schleife in BASIC.</td></tr>
+</table>
+
+<p>
+Eins möchte ich zur Beruhigung und Ermutigung hinzufügen: das liest
+sich alles viel komplizierter als es in der Praxis ist: Ausprobieren!
+</p>
+
+<pre class="donthyphenate">
+E 1000
+
+&ndash; : CR   13 COUT ;
+1905
+&ndash; : GRKL   3111 PEEKB
+                EQZ   IF 1
+                      ELSE 0
+                      THEN
+           3111 POKEB          ;
+1905
+&ndash; : TEXT   RKL  REPEAT
+                  CIN DUP
+                  27 EQ  UNTIL
+                  COUT
+                LOOP
+             POP CR
+          GRKL ;
+1905
+-TEXT
+</pre>
+
+<p>
+Mit E 1000 wurde der Interpreter aufgerufen. Es wurden zunächst 2
+Hilfsfunktionen compiliert:
+</p>
+<p>
+CR = <span class="uppercase">Newline</span> ausgeben<br>
+GRKL = Umschaltung der Tastaturoption von Großauf Kleinschreibung und
+umgekehrt.
+</p>
+<p>
+Dann wurde die Funktion TEXT compiliert. Sie erlaubt mir,
+eben diesen Text, den Sie jetzt lesen, auf den Bildschirm zu schreiben
+und mit der eingeschalteten Druckeroption (U-Befehl) auf der
+Schreibmaschine auszugeben. Das Programm kann mit ESCAPE (Hex 7F)
+verlassen werden. Auf dem <span class="uppercase">Nascom</span>-1 ist das allerdings etwas mühselig:
+da muß man nämlich gleich 3 Tasten betätigen (Control, Shift und /) und
+genau das werde ich jetzt tun!
+</p>
+
+<pre class="donthyphenate">
+1905
+&ndash; : X   GETWORD
+        DUP DUP PEEKB
+        INC + 0 SWAP POKEB
+        INC 3086 POKEW
+        100 NAS-SYS
+        3105 PEEKW ;
+1905
+-TEXT
+</pre>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/08/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 12 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/81-09.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

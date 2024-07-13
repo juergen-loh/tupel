@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">July&ndash;August 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../50/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 51 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-24 page-51" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+attractive. In order to achieve this and still be compatible with previous
+CP/M software, (and also to allow programs to maintain economical 128-byte
+buffers rather than larger ones), some software is interposed between CP/M
+and the disk drivers. This software maintains a physical sector buffer in
+memory (512 bytes in size in our case) through which all the CP/M data
+transfers are passed.&rdquo;
+</p>
+<p>
+Associated with the buffer are some flags, and a record of which sector
+the buffer contains. (Drive number, track number, physical sector number). Let
+us start by considering what happens when the BDOS wants to read a logical
+sector (128 bytes of data). We will totally ignore writing for the moment. The
+BDOS starts by issuing drive, track and sector requests, followed by a Call to
+the BIOS Read routine. The Read routine starts by converting the CP/M logical
+sector number to a physical sector number. (It divides it by 4 as 512/128=4).
+Next it checks a flag to see if there is anything in the buffer. If there
+isn&rsquo;t, it jumps on to do the actual read. If there is, it checks to see if it
+is the same drive/&#x200b;track/&#x200b;sector as the current request. If it is the same, then
+the read can be skipped as there is no point in overwriting the buffer with
+identical data! Once the buffer is full of data, the flag is set to indicate
+valid data is present, and the buffer pointers are updated to the correct
+drive/&#x200b;track/&#x200b;sector combination. Finally the transfer of 128 bytes of data to
+the BDOS follows. To locate which 128 bytes, the logical sector sector number
+is reloaded, and the lower two bits are isolated, (the remainder when divided
+by 4). These are then used as an index into the appropriate quarter of the
+buffer, which is then copied to the requested destination.
+</p>
+<p>
+Writing follows a similar pattern, but has various extra quirks. The main
+one is that before a logical sector can be written into the buffer, the buffer
+must contain the full physical sector. This is because the BDOS Write is only
+modifying one quarter of the sector, and the other three quarters must be
+maintained intact. Thus a Write might actually require a pre-read to load the
+physical sector into the buffer. However the efficiency of the system can be
+increased by defering the physical write, (following the transfer of the 128
+bytes to the buffer), because the odds are that the BDOS is performing a
+sequential Write, and so will be writing to another quarter of the same
+physical sector on the next Call. If the assumption is wrong, then nothing
+will have been lost, but if it is right, then the time taken to do a physical
+Write will have been saved. However a &lsquo;Must Write&rsquo; flag has to be set to say
+that the buffer contains unwritten data in case the next request is a read or
+a write of another physical sector. In fact the code of both the Read and
+Write commands does check this flag, and if necessary Writes the buffer to
+disc before reusing it.
+</p>
+<p>
+The BDOS also passes some additional information in register C to the
+BIOS on every Write Call. If register C is zero, then it is a normal write.
+(i.e. the BIOS handles it in the manner described above). If register C is set
+to 1, then the write is to a sector of the directory. In this case the buffer
+should be immediately re-written to disc, the write must not be defered. (Note
+This is in keeping with the &lsquo;rugged&rsquo; approach of CP/M, in making it difficult
+for you to accidently destroy directories by removing or changing discs at the
+wrong time). If register C is set to 2, then the write is to the first sector
+of a newly allocated block of sectors on the disc. This last one is another
+&lsquo;tweak&rsquo; to improve system performance. When the BDOS is writing a new file out
+to disc, (or extending an existing one), it tells the BIOS (by setting C=2)
+everytime it starts on a new block of sectors. As the BDOS is writing to an
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../50/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 51 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_24.pdf#page=51" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

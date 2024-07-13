@@ -1,0 +1,64 @@
+# /robots.txt / $Date: 2024-03-29 20:00:48 +0100 (Fr, 29. Mrz 2024) $
+
+# Sitemap
+Sitemap: https://tupel.jloh.de/sitemap.txt
+
+# Diese Webcrawler schlieﬂe ich aus
+
+# https://www.seokicks.de/robot.html
+User-Agent: SEOkicks
+Disallow: /
+
+# http://seocompany.store
+User-Agent: adscanner
+Disallow: /
+
+# https://www.semrush.com/bot/
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+# https://moz.com/help/moz-procedures/crawlers/dotbot
+User-agent: dotbot
+Disallow: /
+
+# https://moz.com/help/moz-procedures/crawlers/rogerbot
+User-agent: rogerbot
+Disallow: /
+
+# https://ahrefs.com/robot/
+User-agent: AhrefsBot
+Disallow: /
+
+# http://webmeup-crawler.com/
+User-agent: BLEXBot
+Disallow: /
+
+# https://mj12bot.com/
+User-agent: MJ12bot
+Disallow: /
+
+# https://megaindex.com/crawler
+User-agent: MegaIndex
+Disallow: /
+
+# Diese Verzeichnisse/Dateien sollen nicht durchsucht werden
+User-agent: *
+
+# PDF-Dateien des Nascom Journals sperren
+#Disallow: /nascom/journal/pdf/
+
+# Hyphenator sperren
+#Disallow: /hyphenator/
+
+# Fernwartungsdatei sperren
+Disallow: /jlct.exe
+
+# https://de.wikipedia.org/wiki/Robotergesetze
+Disallow: /harming/humans
+Disallow: /ignoring/human/orders
+Disallow: /harm/to/self
+
+# Allow: /

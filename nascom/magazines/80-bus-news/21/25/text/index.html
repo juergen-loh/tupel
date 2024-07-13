@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-21 page-25" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div class="noindent">
+<p>
+relating to RAM FA00H to FC00H was on the disk, the only possible culprit was the
+COLD BOOT. This little program is only about 50H bytes long and was soon taken to
+pieces and once again a sector counter was found to be responsible. The sector
+count byte at address 0009 had been 11H (17 decimal) and SIMON had already loaded
+the first sector for a total of 18. To make the BOOT load the full 20 I set this
+byte to 13H using a PEEK program on the actual disk. This time, when booted in
+drive A, the system worked, and that is nearly the end of the story. The byte at
+909H in the CPMSYS64.COM file was changed to 13H so that all copies of the BOOT
+LOADER on the System track would now load the full BIOS.
+</p>
+<p>
+(A COLD BOOT modified in this way should NOT be used to load the origional <span class="uppercase">Gemini</span>
+CP/M to a RAM address above D800H. Since the origional CBIOS is just over 2.5K
+jong, the <span class="uppercase">Gemini</span> CP/M would normally start higher in RAM, unless spcifically
+configured for say 63K. If loading were tried to the higher address using the
+modified BOOT, then the HL register pair, that hold the destination address of
+the bytes read in from the disk, would be incremented past 0FFFFH, and would
+overflow back to 0000H. The incoming data would load to low RAM, overwriting the
+BOOT, and soon cause a CRASH.)
+</p>
+<p>
+To complete the job only one or two tasks remained. Richard Beal had included a
+little routine in the Load/&#x200b;Relocate module of SYS which he calls &ldquo;cinit&rdquo;, which
+is there to remove any &lsquo;stray&rsquo; input characters particularly when using Virtual
+Disk. I have successfully run CPMSYS64 without this routine, as SYS 11 does not
+support my
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/map80/MAP80_256.htm" title="External Link: MAP80 256K RAM" target="_blank" rel="noreferrer">MAP RAM</a><!-- /External Link -->
+ card, and I do not use my
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm802.htm" title="External Link: GM802" target="_blank" rel="noreferrer">G802</a><!-- /External Link --> or any
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/nascom/ramb.htm" title="External Link" target="_blank" rel="noreferrer">RAM&nbsp;B</a><!-- /External Link -->&rsquo;s as V.Disk. It
+might be necessary to include it with a later version of SYS that does support my
+MAP RAM though. The other task concerns &lsquo;Sign On&rsquo; messages. The origional CBIOS
+messages have been wiped out by the new BIOS, and since the Load/&#x200b;Relocate Module
+of SYS is not now used, the comprehensive list of features that SYS displays on
+execution has also gone. It is nice to have an impressive list of system Software
+and Hardware features displayed on Cold Boot, to &lsquo;awe&rsquo; the Plastic Box Brigade,
+and some form of Copyright mark should also be shown.
+</p>
+<p>
+There are several places where it is possible to restore &ldquo;signon&rdquo; message
+routines, but &ldquo;cinit&rdquo; should be run by the COLD BOOT, or by SIMON after CP/M is
+in RAM. Since SIMON is overwritten by CP/M in larger size systems though, the
+latter course is not possible directly. There is currently enough room to put
+&ldquo;signon&rdquo; routines and messages into the BIOS area, but this would take up space
+needed for future expansions of SYS, so the BIOS is not the best choice.
+</p>
+<p>
+There are app. 400 bytes free in the first disk sector that might be used for
+initialization routines, since the BOOT is only about 50H bytes long. There is
+another &lsquo;snag&rsquo; though. SIMON loads the first disk sector into high memory, and
+then does a &lsquo;copy&rsquo; to RAM at 0000H before making a jump to location 0002H, to
+start the COLD BOOT. The problem is that only 80H bytes are copied from 0FC2EH to
+0000H so any text messages would be largely left behind in high memory to be
+overwritten by CP/M as it is loaded. This means that to use the free space in the
+first sector, it is necessary to modify SIMON so that the whole of the sector is
+copied to low memory. The boot could then be altered so that it executes &ldquo;signon&rdquo;
+and any other initialization routines before jumping to start CP/M.
+</p>
+<p class="center">
+&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;*****&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;&ndash;
+</p>
+<p>
+If however, SIMON is going to be altered, then the EPROM programming effort might
+as well be made worth while. For convenience my present SIMON and the short
+program that copies SIMON to RAM and pages out the EPROM card are all in a <!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="External Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->
+ROM on the card. There is nearly 1K of space free in the 2716. I decided to use
+up this free space by adding to and by modifying SIMON. The &lsquo;Mods&rsquo; so far are&nbsp;:&ndash;
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_21.pdf#page=25" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

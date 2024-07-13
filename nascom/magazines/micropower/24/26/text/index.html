@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 2 - Number 4 - September 1982</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 4 &middot;</span> <span class="nowrap">September 1982</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 26 of 36</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../nascom-newsletter/25/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../36/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../27/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-24 page-26" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<table class="indent">
+<tr><td>bit 0</td><td>SET &ndash; selects upper 32k block<br>
+		RESET &ndash; selects lower 32K block<br>
+		<span style="padding-left: 2em">(not operative if bit 7 is RESET)</span></td></tr>
+<tr><td>bit 1 )</td><td></td></tr>
+<tr><td>bit 2 )</td><td></td></tr>
+<tr><td>bit 3 )</td><td>selects 64k page</td></tr>
+<tr><td>bit 4 )</td><td style="padding-left: 2em">(bit 5 not used in 32k mode)</td></tr>
+<tr><td class="nowrap">bit 5 )</td><td></td></tr>
+<tr><td>bit 6</td><td>SET &ndash; select upper 32k of page&nbsp;0 as permanent<br>
+		RESET &ndash; select lower 32k of page&nbsp;0 as permanent<br>
+		<span style="padding-left: 2em">(not operative if bit 7 is RESET)</span></td></tr>
+<tr><td>bit 7</td><td>SET &ndash; select 32k mode<br>
+		RESET &ndash; select 64K mode</td></tr>
+</table>
+<p>
+There are 3 modes of operation:<br>
+1) 6K paging &ndash; the memory is set up in 64k blocks which means
+that to change pages, a program must ensure that the Program
+Counter holds the value of the next instruction on the incoming
+page after the O FE XX is executed. Not the easiest of things.<br>
+2) 32K paging &ndash; in this mode each page is divided into two 32k
+pages and the user can then assign either the upper or lower 32k
+of page&nbsp;0 as permanent and then page in any other 32k half page.
+This makes the controlling program much simpler and would be
+very useful for applications where large data files are
+manipulated by small programs.<br>
+3) Memory-mapping &ndash; this is the most powerful mode of all and it
+allows any 4k block from the total RAM to be &lsquo;mapped&rsquo; into any
+4K slot in the Z80 memory map. The &lsquo;source&rsquo; block can be mapped
+into more than one &ldquo;target&rdquo; block.
+</p>
+<p>
+The switching from page to page on the RAM card can become
+very confusing and a memory management program would be very
+useful. This is exactly what M.A.P.-80 have done. If you buy a
+RAM board and send them your CP/M, they will modify the CP/M so
+that it treats any RAM over 64K as a virtual disk. This allows
+CP/M to support its normal disks plus an additional &lsquo;disk&rsquo;, P,
+which is accessed in exactly the same way as the real disks,
+only much faster. &lsquo;Disk&rsquo; P has all the normal features of a CP/M
+disk, including a directory, but doesn&rsquo;t suffer as much from
+diskette wear and tear or head alignment. It makes making
+back-up copies of real disks easy when you can only afford one
+disk drive. Additional 32K blocks of RAM can be reserved from
+the CP/M to enable the user to have more than 6K of RAM.
+</p>
+<p>
+Unfortunately, the board is incompatible with Nascom is but
+I think this is its only negative point on an otherwise well
+designed and supported product. At &pound;150 for the basic 64K board,
+it must be well within the reach of most users. It is purely a
+matter of plugging in the additional memory chips to move up to
+the 256K and beyond barrier.
+</p>
+<p>
+Many thanks to Mr. M. Rothery for delivering the review
+system and showing me how it worked and also to Mr. P. Chance
+and Mr. T. Watkins for their technical help.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 26 of 36</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../nascom-newsletter/25/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../36/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../27/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-2-4.pdf#page=28" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

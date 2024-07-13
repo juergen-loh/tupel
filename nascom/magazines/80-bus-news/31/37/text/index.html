@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 16:39:51 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../36/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 37 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../38/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-31 page-37" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+Next a minor bug but slightly more serious. Old habits die hard, and in some
+C/80 source files I entered a few hexadecimal constants with a trailing &lsquo;H&rsquo;
+(e.g. 0xAH rather than the correct 0xA). The compiler accepted these with out
+comment and interpreted the &lsquo;H&rsquo; as part of the Hex number so I ended up with
+an incorrectly evaluated constant. Finally my latest encounter has been with
+an unforgiveable bug from Microsoft in an 8086 cross assembler. Being
+relatively inexperienced in 8086-assembly language programming my initial
+programs contained some glaring errors like loading a segment register with an
+immediate 16-bit value. (Although you can load normal registers with immediate
+data, the segment registers can only be loaded with data from another
+register, or from memory.) The Microsoft assembler accepted my illegal
+instructions without complaint, and proceeded to generate an opcode for a
+completely different instruction. It was only by manually dis-assembling the
+opcodes on the assembly listing that I found the error. (Luckily, as I was
+just starting to familiarise myself with the 8086, the program was only some
+25 lines long and it didn&rsquo;t long to find the error.)
+</p>
+<p>
+One final comment on this topic &ndash; if you do find a bug <span class="uppercase">Report It</span>, not by
+complaining to your friends, but to the Author. Document the bug thoroughly,
+for example by writing a four or five line program to illustrate it, and send
+the print-outs in with your comments. <span class="uppercase">Don&rsquo;t assume somebody else must have
+already reported it</span>. You might find that your report vanishes into a black
+hole, or, as I did with the Software Toolworks, get a polite note back and
+find the bugs corrected in the next release of the software (C/80 version
+3.0).
+</p>
+<h3>
+Do-it-yourself Electrocution.&#x200b;(<a href="../../../26/29/text/#article1">c.f. Richard Beal in the last issue!</a>)
+</h3>
+<p>
+Next a request from Mr E.Jones for an article covering the general
+principles of converting a domestic TV set to a monitor, and interfacing a
+<span class="uppercase">Nascom</span> to it. These sort of articles tend to be few and far between, and I
+assume that the reason for this is that no magazine editor wishes to be sued
+by the relatives of a late hobbyist who attempted to follow the article.
+<span class="uppercase">voltages inside a tv set or Monitor are lethal</span>. If you do not know what you
+are doing LEAVE THE BACK ON THE SET. If you think you know what you are doing
+I still advise you to leave the back on the set. With the proliferation of
+home computers and video recorders that has occured in recent years it should
+be possible to pick up a cheap black-and-white monitor, or to buy a TV set
+that already has a video input socket on the rear. For those who want to
+progress further I offer the following suggestions/&#x200b;observations.
+</p>
+<p class="noindent">
+(1) Before doing anything buy a copy of the service sheet or service manual
+for the set in question.
+</p>
+<p class="noindent">
+(2) Look at the power supply section of the diagram. Many sets directly
+rectify the mains input and then use the filtered DC supply either directly,
+(old Valved sets), or via a switch-mode step-down power supply (newer
+integrated sets). Certainly in the first case, and possibly in the second, you
+will find that one side of the TV chassis is connected directly to the <span class="uppercase">Neutral</span>
+of the mains supply, (or directly to the LINE side if the plug has been wired
+incorrectly). In this case <span class="uppercase">Do Not Proceed Further</span> unless you can isolate the
+TV supply from the mains, or provide a suitable barrier at the video interface
+into the TV. (A small black-and-white portable offering mains/&#x200b;battery
+operation will almost certainly have a mains transformer providing the
+required isolation.)
+</p>
+<p class="noindent">
+(3) The signal present at the VIDEO pin on the Nascom&nbsp;2 circuit board is a
+convential composite video signal containing a mixture of Video and the
+horizontal and vertical sync pulses. This is similar to the signal present at
+the output of the detector following the IF stages in the TV. I haven&rsquo;t looked
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../36/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 37 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../38/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_31.pdf#page=37" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - Summer 1985 - Volume 4 - Issue 2</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">Summer 1985 &middot; <span class="nowrap">Volume 4 &middot;</span> <span class="nowrap">Issue 2</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../41/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 5 of 31</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../scorpio-news/11/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-42 page-05" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 2(2) columns: start --><div><div class="style-multi-column-2 hyphenate 2">
+<p>
+The original version used a &lsquo;Naughty but nice&rsquo;
+method by which, on exiting to CP/M, the program
+altered the BDOS pointer at 0006H to point to one
+of its own routines. When the CCP gained control
+this routine would intercept all BDOS calls and pass
+them on to the BDOS as normal until a &lsquo;Read
+console string&rsquo; came along (Function 10). When
+this happened the custom routine would immediately
+return having placed the name of the chain
+file or command in the CCP command buffer. This
+let the CCP do all the work which meant that a
+program could be called using a command tail.
+However this program has now been modified, and
+the new version (2.0) uses a method similar to the
+one that I have outlined above.
+</p>
+<p>
+I must admit that I have scratched my head a little
+on where to put the stack pointer before the chain
+program is executed. (Sensible answers only
+please.) Keychain V2.0 places it at 80H, and I have
+put it 1 byte below the BDOS. As the CCP is only
+required to point the SP at an 8 level stack I
+suppose 80H would be OK. But in the case of a
+general purpose chainer the 16 bytes below 80H
+may be occupied with the second filename in the
+command tail and thus confuse the issue. I
+suppose that the ideal answer is to write a chain
+function to suit your particular purpose at the time
+and manage the SP accordingly.
+</p>
+<p>
+And finally, why can&rsquo;t I just read a filename into the
+CCP command buffer and then call the CCP? Both
+Steve and I had a look at this a while back, Steve
+being more conversant with what&rsquo;s what and
+where it is in CP/M. Well we tried it a few ways
+calling both the first and second entry into the CCP
+and neither worked. It seems that the CCP pointer
+to the command buffer start byte is changed during
+the process of reading and executing the program.
+It is not, it seems, restored back to the start of the
+CCP buffer prior to the command being executed.
+Thus, the next command that is read into the buffer
+is either truncated or lost altogether. Regarding this
+concept do not forget that the previous program
+may have overwritten the CCP and so the failure of
+this approach to chaining is guaranteed if this is the
+case.
+</p>
+<h4>
+Program overlays
+</h4>
+<p>
+Program overlays operate on the principle that a
+controlling module is always present in memory,
+this is usually called the Root module. If an overlay
+section is required then the root module will read
+the contents of the overlay file (which is executable
+code) into the memory area allocated for overlays.
+The root module then passes control to the start of
+the overlay code. On completion the overlay
+passes control back to the root module.
+</p>
+<p>
+If, while you are reading all this gumph, you would
+like to refer to the diagram illustrating overlay
+techniques, you may find this text more palatable.
+</p>
+<!-- nowrap Start --><div class="style-nowrap">
+<h4>
+Advantages
+</h4>
+<p class="indent">
+1. &nbsp; Will run faster than a suite of program
+modules chained together.
+</p>
+<p class="indent">
+2. &nbsp; Will allow the overlay routines to access
+common variables and utility routines in the
+root program.
+</p>
+<p class="indent">
+3. &nbsp; You should be able to pass arguments to
+overlay routines.
+</p>
+<p class="indent">
+4. &nbsp; In some cases you are able to nest
+overlay sections.
+</p>
+<p class="indent">
+5. &nbsp; The overlay loaders can also be used to
+load data files into memory if modified.
+</p>
+<!-- nowrap Ende --></div>
+<h4>
+Disadvantages
+</h4>
+<p class="indent">
+1. &nbsp; The initial setting up of the overall
+program is rather complex and can be time
+consuming.
+</p>
+<p class="indent">
+2. &nbsp; The individual modules cannot be run as
+separate programs as chained programs can.
+</p>
+<h4>
+Methods of overlaying
+</h4>
+<p>
+Now this bit can require a little thought. I think that
+an efficient overlaid system should have all the
+common variables and most used utility routines in
+the root module. This means that they are only
+read in once at the beginning. This will keep the
+size of the overlay files down and thus speed up the
+system. So you are going to have to decide what is
+going to go into the root. I know that this has little
+to do with the creation of the files but I put it in to
+emphasize that there is more to it than hacking the
+modules together.
+</p>
+<p>
+Once again I must state that probably the best way
+of doing it is to begin programming in a language
+that supports overlays. However this is not always
+practical and/or efficient. I know of a few languages
+that will do it, namely CIS COBOL, DR PL1 and
+Aztec &lsquo;C&rsquo;. There are certainly more but I have not
+had the pleasure of yet. Overlaying with these is
+just a matter of reading the instructions.
+</p>
+<p>
+Assuming that all the files have to be created by
+hand, and that we are dealing with programs that
+pass through the .REL stage on their way to the
+executable .COM stage, here is how we do it.
+</p>
+<p>
+The whole process depends upon which linking
+loader you are using at the moment. The Microsoft
+LINK-80 (L80) is the most popular, it seems, but
+unless I&rsquo;m wrong it does not allow you to directly
+create overlay files. The equivalent <i>Digital Research</i>
+product which also seems to go under the
+name of LINK-80 does give you this facility.
+</p>
+<p>
+Due to this confusion in names I will call the
+Microsoft product L80 and the DR loader LINK.
+These seem to be the more commonly used
+names.
+</p>
+<!-- 2 columns: end --></div></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../41/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 5 of 31</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../scorpio-news/11/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_42.pdf#page=5" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

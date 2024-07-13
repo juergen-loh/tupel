@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 16:39:08 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 16 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-21 page-16" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+CALL followed by a RET, both can be replaced by a JP (saving one byte) or better
+still a JR (saving two bytes). This saved two bytes from Hangman, and further,
+because I removed a CALL&nbsp;, two bytes of stack space. Further, in CRLF1, where
+CALL SNDTXT and RET have been replaced by JP, this JP can be eliminated
+completely (saving another three bytes). The reduction of a CALL &ndash; RET sequence
+to a JP/JR also works for a relative CALL, but saves nothing with a RST.
+</p>
+<p>
+If you like my random number generator, I can save even more bytes. This
+is based on SEED=((SEED*5)+21) AND 7FH; and produces an even distribution of
+numbers between 0 and 127 (i.e. after 128 CALLs it has produced each number
+once). The sequence cannot be described as truly random as the sequence is always
+the same so I use the R register to provide the initial seed. The call and return
+parameters are identical to those of the one used (i.e. called with A=range, and
+returning with A=0 to range-1).
+</p>
+<p>
+This random number generator uses only 26 bytes plus one byte for
+workspace and four bytes to generate the initial value for seed from the R
+register, which must make it one of the shortest random number generators you
+have ever seen. The numbers 5 and 21 were chosen to get the best result over the
+chosen range and for a different maximum a different pair must be used (I used a
+GEC 4070 to do the calculations, but a Nascom could do it as easily).
+</p>
+<p>
+Yours sincerely, W. H. Turner.
+</p>
+<p>
+Well Mr. Turner you win, I should have my wrists slapped for not thinking
+of that one as it is one of those programming tricks that is lurking at the back
+of my mind, and, as you say, it saves space. As to your random routine, well that
+deserves the prize alone, so I&rsquo;ll be sending you the fiver.
+</p>
+<p>
+Well, the DH bit gets written as and when I feel so inclined, as it is
+now shortly after Christmas, I am more inclined than usual (perhaps Dr. Dark sent
+me some of that West Country gut rot he keeps on about for Christmas). A couple
+of issues back I wrote a piece about data transmission by radio, which to my
+surprise brought rather more letters than I had expected, strangely all from
+radio amateurs. This has identified a new area of the 80BUS readership for me. On
+the basis that I had about half a dozen letters on that one topic, and that
+normally anything else only prompts two or three, I can only judge that radio
+amateurs form a substantial part of the readership, or, alternatively, that they
+are a vociferous minority. Since that article, the Home Office have seen fit to
+issue my licence and I have since discovered (by using my radio) that a lot of
+radio amateurs are also equally knowledgeable about computers, and that a fair
+number own Sinclair ZX8i1s (never mind, they&rsquo;ll learn), Nascoms and Geminis.
+</p>
+<p id="article1">
+All this preamble is a way of getting round to my theme for the next
+issue or so, that of databases, Mbasic and disks. You see, I have written a radio
+log keeping program, which apart from serving its designed purpose, has taught me
+an awful lot about the way to tackle large programs in Basic and something about
+how to handle small databases. &ldquo;All right&rdquo;, I hear you say, &ldquo;What about
+databases, I&rsquo;m not interested in keeping a log book so what use is it to me?&rdquo;.
+&ldquo;Well&rdquo;, I reply, &ldquo;The princples are the same whether you&rsquo;re running a log book or
+keeping a running inventory of the freezer (just in case large mice are
+persistently running off with next weeks Sunday joint).&rdquo;
+</p>
+<p>
+Now what is a &lsquo;<span class="uppercase">Database</span>&rsquo;. Well it&rsquo;s a file stored on tape or disk which
+contains the data you intend to work with, or to modify, or to delete, or what
+have you. The database has been so constructed as to allow easy access to the
+various individual parts of which it is composed. Ok? Not really, that sentence
+is written in the pseudo technical double talk you see in some manuals. Imagine
+your cheque book, it&rsquo;s a book isn&rsquo;t it, odd shape for reading, but a book none
+the less. Let&rsquo;s call that an empty database, it&rsquo;s empty because nothing has been
+written on the cheques, and it&rsquo;s the writing on the cheques we are interested in
+not the cheques themselves. Now the cheque book has a number of individual pages,
+each unique by merit of the serial number stamped on the bottom. Let&rsquo;s call this
+an empty record, again, empty because it&rsquo;s what&rsquo;s written on the cheque that
+matters. Now consider the cheque itself. It has a line for the payee, a couple of
+lines for the amount in writing, and a box for the amount in figures (a different
+form of the same data), it also has a line for your autograph and another for the
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 16 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_21.pdf#page=16" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

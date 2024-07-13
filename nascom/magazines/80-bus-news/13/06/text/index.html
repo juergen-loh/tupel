@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - July&ndash;October 1982 - Volume 1 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">July&ndash;October 1982 &middot; <span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../05/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 6 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-13 page-06" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<h3 id="article1">
+<u>Reading ZEAP Files to Disk</u>
+</h3>
+<p>
+Quite a number of Nascom owners must have by now purchased the Gemini CP/M
+disk system, and no doubt many will want to transfer their ZEAP source files onto
+disk. The &ldquo;Disk Basic Constructor&rdquo; disk has software on it for doing this with tape
+files produced with the Nas-Sys &ldquo;W&rdquo; command, but there appears to be no easy way of
+doing this with ZEAP source files or <!-- External Link --><a href="https://hisoft.co.uk/gp/about-hisoft/1/pgid/4/" title="External Link: HiSOFT" target="_blank" rel="noreferrer">Hisoft</a><!-- /External Link -->
+ Pascal source files.
+</p>
+<p>
+In fact, it is quite simple to read ZEAP tapes via the UART, using the
+command STAT CON:=BAT: which inputs data from the UART instead of from the
+keyboard. The problem is that as soon as the above command is executed the keyboard
+goes dead and you cannot now call up the editor into which the tape is to be read.
+From now on all commands and input have to go in via the UART. To call up the
+editor via the UART, you either record the ASCII command &ldquo;ED filename.xxx&rdquo; on the
+beginning of your ZEAP tape (followed by a CR, a big gap for ED to be loaded and I
+CR), or you have to use a second Nascom and join their UARTs together. Then the
+above command would be typed on the second Nascom and when ED is running the
+cassette deck is switched on.
+</p>
+<p>
+The problem with the first method is that I cannot find an easy way of
+recording direct ASCII onto a tape, and the second one requires another computer.
+If it were possible to change the IOBYTE from within ED the problem would be
+solved.
+</p>
+<p>
+When your ZEAP file is finally on disk you will want to remove the line
+numbers; most assemblers doe not have numbered lines in their source files. The ED
+macro command 0m5d1 will do this by removing the first 5 characters from each line.
+</p>
+<p>
+My Hisoft assembler accepts ZEAP source files (without line numbers )
+without any editing being required at all. Incidentally, it assembles in just 3
+minutes a file on which ZEAP would spend some 22 minutes.
+</p>
+<p>
+The reason for using the rather confusing and cumbersome ED is because it
+works via the BDOS and can therefore be directed via the IOBYTE to look at the
+UART. It also has some very useful macro commands.
+</p>
+<p>
+Finally, does anyone know of a book which explains in detail the internal
+operation of CP/M?
+</p>
+<p class="noindent">
+P. Holy, Worthing.
+</p>
+<h3 id="article2">
+<u>Space Invader &amp; Keyboard Mods.</u>
+</h3>
+<p>
+I enclose information to upgrade the excellent game of
+<a href="../../../../inmc-80-news/02/57/text/#article1">Space Invaders</a>
+as published in INMC80 issue&nbsp;2.
+</p>
+<p>
+I am sure most readers with Nascoms have this on tape and the modifications
+give a more pleasing effect, all that is required is NAS-GRA. Should readers like
+to put in their own solutions for the graphics then ignore the column marked
+&lsquo;Suggested graphic&rsquo;.
+</p>
+<h3>
+<u>The Gun</u>
+</h3>
+<table class="indent" style="width: 100%">
+<colgroup><col style="width: 40%"><col></colgroup>
+<tr><th>Hex location</th><th>Suggested graphic</th></tr>
+<tr><td>1B72</td><td>= 8B (left character)</td></tr>
+<tr><td>1B77</td><td>= AA (centre character)</td></tr>
+<tr><td>1B7C</td><td>= 8A (right character)</td></tr>
+</table>
+<h3>
+<u>The Invaders</u>
+</h3>
+<table class="indent" style="width: 100%">
+<colgroup><col style="width: 40%"><col></colgroup>
+<tr><th>Hex location</th><th>Suggested graphic</th></tr>
+<tr><td>18CB=19E7=18AE=1D8B</td><td>= A6 (top row)</td></tr>
+<tr><td>19EA = 18B3 = 1D8D</td><td>= B4 (next two rows)</td></tr>
+<tr><td>19ED = 18BB = 1D8F</td><td>= BF (bottom two rows)</td></tr>
+</table>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../05/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 6 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_13.pdf#page=6" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

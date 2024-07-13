@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - September 1982 - Ausgabe 9</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">September 1982 &middot;</span> <span class="nowrap">Ausgabe 9</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/07/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 9 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<p>
+Adresse E30H gelegt (weil es sich da gerade an HFORM anschließt und
+noch genügend Platz für die Initialisierungsroutine des Texteditors
+bleibt). Wie das Programm arbeitet, kann man an dieser Ausgabe des
+<span class="uppercase">Nascom</span>-Journals sehen, die damit erstellt wurde.
+</p>
+<h1 id="article1">
+Tips, Tricks + Käfer
+</h1>
+<h4>
+Grundsätzliches
+</h4>
+<p>
+Diese Kolumne soll ein regelmäßiger Bestandteil des Journals werden.
+In ihr sollen alle die nützlichen Hinweise enthalten sein, die keinen
+eigenen Artikel lohnen, aber dem Leser oft eine Menge Ärger ersparen.
+Wo (Zeitschriften, Bücher) findet man welche Programme und wie kriegt
+man sie auf dem <span class="uppercase">Nascom</span> ans Laufen? Wie schließt man systemfremde
+Hardware an?
+</p>
+<p>
+Und natürlich die lieben Käferchen!
+</p>
+<p>
+Jeder Hinweis von den Lesern ist willkommen &ndash; Postkarte oder Anruf
+genügt (für ganz Eilige!).
+</p>
+<h4>
+Wenn sich die PIO aufhängt
+</h4>
+<p>
+Wenn man ein Programm testet, bei dem die <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
+ im Interrupt-Modus
+arbeitet, oder aus einem solchen Programm per RESET aussteigt, kann man
+eine böse Überraschung erleben: Die PIO gibt einfach keine
+Interrupt-Anforderung mehr aus. Hier hilft nur noch das Ausschalten
+des Computers, wenn man nicht den folgenden Trick kennt: Man ruft ein
+Unterprogramm auf, daß nur aus dem Befehl RETI besteht. Die PIO lauert
+nämlich auf diesen Befehl und ist erst dann wieder für einen Interrupt
+bereit, wenn er auf dem Bus erschienen ist. Es gibt auch eine
+Hardwarelösung. RESET wird mit M1 über ein Und-Gatter verknüpft auf den
+M1-Eingang der PIO gegeben. Dann wird die PIO durch RESET zurückgesetzt.
+</p>
+<h4>
+<span class="uppercase">Toolkit</span>
+</h4>
+<p>
+Soll das <span class="uppercase">Toolkit</span> im Ram laufen, müssen die folgenden Bytes auf 00
+gesetzt werden: B020H, B021H, B23EH, B23FH, B247H, B248H.
+</p>
+<h4>
+Disassembler
+</h4>
+<p>
+Die Zeitschrift <!-- External Link --><a href="https://www.kultboy.com/ELCOMP-Zeitschrift/347/" title="Externer Link" target="_blank" rel="noreferrer">ELCOMP</a><!-- /External Link -->
+ hat im
+<!-- External Link --><a href="https://www.kultboy.com/index.php?site=kult/kultmags&km=show&id=7137" title="Externer Link: ELCOMP 2/81" target="_blank" rel="noreferrer">Februar 81</a><!-- /External Link -->
+ einen schönen
+<!-- External Link --><a href="https://archive.org/details/elcomp_1981_02/page/20/mode/2up" title="Externer Link: ELCOMP 2/81, Seite 20" target="_blank" rel="noreferrer">Z80-Disassembler</a><!-- /External Link -->
+ veröffentlicht (er wurde im
+<!-- External Link --><a href="https://www.kultboy.com/index.php?site=kult/kultmags&km=show&id=7139" title="Externer Link: ELCOMP 4/81" target="_blank" rel="noreferrer">Aprilheft</a><!-- /External Link -->
+ noch
+<!-- External Link --><a href="https://archive.org/details/elcomp_1981_04/page/8/mode/2up" title="Externer Link: ELCOMP 4/81, Seite 8" target="_blank" rel="noreferrer">entkäfert</a><!-- /External Link -->!), der auch die
+&bdquo;inoffiziellen&ldquo; Z80-Befehle verarbeiten kann. Mir war das
+Programm jedenfalls sehr
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+nützlich, aber einmal bin ich daran verzweifelt, als ich ein
+Maschinenprogramm rückübersetzen ließ und dann als Vorlage eines neuen
+Assemblerprogramms benutzte: Das Programm wollte einfach nicht laufen.
+Erst nach vielen Mühen kam ich dahinter, daß der Disassembler einen
+Fehler aufweist: die beiden Befehle RLD und RRD werden vertauscht! Im
+Originallisting steht bei 8368H der Wert CCH und bei 836AH der Wert
+D2H. Das muß vertauscht werden und dann läufts!
+</p>
+<h4>
+Hilferuf
+</h4>
+<p>
+Eine Reihe von <span class="uppercase">Nascom</span>-Benutzern versucht bislang vergeblich, die
+<!-- External Link --><a href="https://hschuetz.selfhost.eu/mc-zeitschriften/1981/mc-1981-04.pdf#page=26" title="Externer Link: mc 4/1981, Seite 26" target="_blank" rel="noreferrer">64K-Speicherkarte</a><!-- /External Link -->
+ aus der Zeitschrift
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Mc_%28Zeitschrift%29" title="Externer Link: mc" target="_blank" rel="noreferrer">MC</a><!-- /External Link -->&nbsp;4/81 am <span class="uppercase">Nascom</span> ans Laufen zu
+bringen. Vor allem beim <span class="uppercase">Nascom</span>-1 gibt es da Probleme (Ich gehöre selbst
+auch zu den Betroffenen!). Wer die Karte vielleicht schon erfolgreich
+angeschlossen hat, der möchte sich bitte <span class="uppercase">dringend</span> bei der Redaktion
+melden!
+</p>
+<h4>
+Tippgemeinschaft
+</h4>
+<p>
+Die Rechengenauigkeit des <span class="uppercase">Nascom</span>-Basic reicht für viele Anwendungsfälle
+nicht aus. In seinem Buch
+&bdquo;<!-- External Link --><a href="https://openlibrary.org/works/OL15388892W/Basic-Interpreter" title="Externer Link: Basic-Interpreter" target="_blank" rel="noreferrer">Basic Interpreter</a><!-- /External Link -->&ldquo;
+hat
+<!-- External Link --><a href="https://openlibrary.org/authors/OL1221691A/Rolf-Dieter_Klein" title="Externer Link" target="_blank" rel="noreferrer">Rolf-Dieter Klein</a><!-- /External Link -->
+das 12K-TDL-Basic veröffentlicht, das mit 11 Stellen rechnet und
+auch sonst einige Vorzüge aufweist. Aber 12K eintippen und dabei
+vollständig relozieren!? &ndash; Für einen allein ist das grausam! Wer macht
+bei einer &bdquo;Tippgemeinschaft&ldquo; mit? Interessenten sollen sich
+bitte bei der Redaktion melden.
+</p>
+<p>
+G.K.
+</p>
+
+<br>
+
+<p id="article3" style="text-align:left">
+Verkaufe mein Schachprogramm (Originalkassette) &nbsp; Preis 70,&ndash;&nbsp;DM<br>
+Peter Urban<br>
+__________. __<br>
+____ _______ _<br>
+Tel.: _____/____ ab 18 Uhr
+</p>
+
+<br>
+
+<p id="article2" style="text-align:left">
+Selbstbau-<span class="uppercase">Plotter</span> (siehe Fotos im
+<a href="../../../../81/12/25/text/#article1">Journal 11/12-81</a>)<br>
+-mit zusätzlichen Motoren und Getrieben<br>
+-Software im EPROM<br>
+-Netzteil (2x48V,5V) mit Trafo<br>
+-Software für Plotterschrift und Barcode<br>
+-weitere Programme für Grafik etc.<br>
+-Interface zur Motoransteuerung (<a href="../../../../81/09/23/text/#article1">Pio-Bus</a>)<br>
+-ideal zum Experimentieren (auch für Schacharm etc.)<br>
+-Preis DM&nbsp;900.&ndash; VB<br>
+Günter Böhm ____/______<br>
+______________ ___. __ _<br>
+____ _________
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/07/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 9 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/82-09.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

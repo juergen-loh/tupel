@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1984 - Volume 3 - Issue 6</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 6</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../46/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../35/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 47 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../41/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../48/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-36 page-47" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+memory store REGS. The &lsquo;C&rsquo; register of the Z80 points to the first clock port,
+and they are read in via an &lsquo;INI&rsquo; instruction, which automatically increments
+&lsquo;C&rsquo; and &lsquo;HL&rsquo;, decrements &lsquo;B&lsquo;, and loops until &lsquo;B&rsquo; is Zero. The values read are
+then &lsquo;scanned&rsquo;in turn, and &lsquo;ANDed&rsquo; with 0FH to mask off the four high order
+bits, which are not determined by the R.T.C. chip. The data is then compared
+with 0FH. If it is equal to this value, then the clock register in question
+was updating when it was read. If the clock was updating, then REGS contains
+at least one invalid reading, so the registers are all read again. If the data
+is valid, it is converted to ASCII by adding 30H, and then it is put back into
+the same memory location in REGS again. All bytes in REGS are checked in this
+way. When all data is valid, the program then just has to set the data up in a
+printable form. Unfortunately, the order of the registers as read from the
+clock does not match too well the type of format that we normally use in the
+U.K. How the data is presented is a matter of preference, but I have chosen
+output in the format&nbsp;:&ndash;
+</p>
+<p class="center">
+Sat 25/04/84 18:33:55
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+i.e. &ndash; Day Name &ndash; Date &ndash; Time
+</p>
+<p>
+If the day name is to be processed, the &lsquo;DE&rsquo; register is pointed to the
+start of the name table, &lsquo;BC&rsquo; is set to three, since the names are three
+characters long, and the &lsquo;day of week&rsquo; value stored in REGS is read. The value
+read is then &lsquo;multiplied&rsquo; by three and added to &lsquo;HL&rsquo;. Finally &lsquo;DE&rsquo; is added to
+&lsquo;HL&rsquo; so that the latter points to the correct name. If the value read back is
+either 0 or greater than 7, due to some error, the blank name of DAY0 is used.
+&lsquo;DE&rsquo; is then set to point to the start of STRING, which will hold the
+formatted data for printing. The three byte name is then copied into STRING
+using &lsquo;LDIR&rsquo;, and &lsquo;DE&rsquo; is incremented once more to point to the units of the
+day of the month. (i.e. To STRNG1.)
+</p>
+<p>
+If the day name was not processed however, (i.e. NKBD was TRUE), then
+&lsquo;DE&rsquo; is set to this value as a definite instruction. Two very similar routines
+follow, that move the two byte data values associated with Day of month,
+Month, Hour, Minutes and Seconds into the appropriate place in STRNG1. The
+&lsquo;DE&rsquo; registers act as a pointer into the string, and &lsquo;HL&rsquo; points to the data
+source in REGS. &lsquo;B&rsquo; and &lsquo;C&rsquo; act as counters. The code is commented and fairly
+straightforward, so it will not be described in greater detail here.
+</p>
+<p>
+On completion of this code, the data will be in STRNG1, and possibly also
+STRING, ready to be printed on the screen. Before printing, the cursor must be
+set to the right place. SYS provides a store in its workspace called CURSOR
+that can be used to save the location of the cursor. To play safe, I decided
+to save whatever was in this store before I used it, in case it was holding
+data relevant to some other program that might be running when the clock is
+updated. The data in &lsquo;CURSOR&rsquo; is copied to HL and then &lsquo;PUSH&rsquo;ed on to the
+stack. The current cursor location is then saved, using the &lsquo;SAVCUR&rsquo; routine,
+The cursor is then temporarily turned off, using an
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm812.htm" title="External Link" target="_blank" rel="noreferrer">IVC</a><!-- /External Link -->
+command, to stop it flashing as the clock display is updated.
+</p>
+<p>
+The &lsquo;SETCUR&rsquo; routine is then used to place the cursor at the clock
+display position in the top line of the screen. Thes position depends on
+whether the Day name is to be displayed. The &lsquo;H&rsquo; register holds the row data,
+and &lsquo;L&rsquo; the column. The data is then printed on the screen, using &lsquo;HL&rsquo; to
+point to the source of the data to be printed from STRING/&#x200b;STRNG1, and the SYS
+&lsquo;CRTX&rsquo; routine is used to send each byte to the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm812.htm" title="External Link" target="_blank" rel="noreferrer">IVC</a><!-- /External Link -->.
+The routine stops when it
+finds the &lsquo;0&rsquo; character that is used to mark the end of the output string.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../46/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../35/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 47 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../41/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../48/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_36.pdf#page=47" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

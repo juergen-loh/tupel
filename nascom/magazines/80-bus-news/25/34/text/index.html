@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">September&ndash;October 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 5</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 34 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../35/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-25 page-34" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    29</span>
+
+E7A9 EB         FORFND: EX      DE,HL           ; Code string address to HL
+E7AA 0E08               LD      C,8
+E7AC CD8AE3             CALL    CHKSTK          ; Check for 8 levels of stack
+E7AF E5                 PUSH    HL              ; Save code string address
+E7B0 2AC710             LD      HL,(LOOPST)     ; Get first statement of loop
+E7B3 E3                 EX      (SP),HL         ; Save and restore code string
+E7B4 E5                 PUSH    HL              ; Re-save code string address
+E7B5 2A5C10             LD      HL,(LINEAT)     ; Get current line number
+E7B8 E3                 EX      (SP),HL         ; Save and restore code string
+E7B9 CD44ED             CALL    TSTNUM          ; Make sure it's a number
+E7BC CD90E6             CALL    CHKSYN          ; Make sure "TO" is next
+E7BF A6                 DEFB    ZTO             ; "TO" token
+E7C0 CD41ED             CALL    GETNUM          ; Get "TO" expression value
+E7C3 E5                 PUSH    HL              ; Save code string address
+E7C4 CD5FF8             CALL    BCDEFP          ; Move "TO" value to BCDE
+E7C7 E1                 POP     HL              ; Restore code string address
+E7C8 C5                 PUSH    BC              ; Save "TO" value in block
+E7C9 D5                 PUSH    DE
+E7CA 010081             LD      BC,8100H        ; BCDE - 1 (default STEP)
+E7CD 51                 LD      D,C             ; C=0
+E7CE 5A                 LD      E,D             ; D=0
+E7CF 7E                 LD      A,(HL)          ; Get next byte in code string
+E7D0 FEAB               CP      ZSTEP           ; See if "STEP" is stated
+E7D2 3E01               LD      A,1             ; Sign of step = 1
+E7D4 C2E5E7             JP      NZ,SAVSTP       ; No STEP given - Default to 1
+E7D7 CD36E8             CALL    GETCHR          ; Jump over "STEP" token
+E7DA CD41ED             CALL    GETNUM          ; Get step value
+E7DD E5                 PUSH    HL              ; Save code string address
+E7DE CD5FF8             CALL    BCDEFP          ; Move STEP to BCDE
+E7E1 CD13F8             CALL    TSTSGN          ; Test sign of FPREG
+E7E4 E1                 POP     HL              ; Restore code string address
+E7E5 C5         SAVSTP: PUSH    BC              ; Save the STEP value in block
+E7E6 D5                 PUSH    DE
+E7E7 F5                 PUSH    AF              ; Save sign of STEP
+E7E8 33                 INC     SP              ; Don't save flags
+E7E9 E5                 PUSH    HL              ; Save code string address
+E7EA 2ACE10             LD      HL,(BRKLIN)     ; Get address of index variable
+E7ED E3                 EX      (SP),HL         ; Save and restore code string
+E7EE 0681       PUTFID: LD      B,ZFOR          ; "FOR" block marker
+E7F0 C5                 PUSH    BC              ; Save it
+E7F1 33                 INC     SP              ; Don't save C
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    30</span>
+
+E7F2 CD40FD     RUNCNT: CALL    CHKBRK          ; Execution driver - Test break
+E7F5 B7                 OR      A               ; Break key hit?
+E7F6 C466E8             CALL    NZ,STALL        ; Yes - Pause for a key
+E7F9 22CE10             LD      (BRKLIN),HL     ; Save code address for break
+E7FC 7E                 LD      A,(HL)          ; Get next byte in code string
+E7FD FE3A               CP      ":"             ; Multi statement line?
+E7FF CA16E8             JP      Z,EXCUTE        ; Yes - Execute it
+E802 B7                 OR      A               ; End of line?
+E803 C2ADE3             JP      NZ,SNERR        ; No - Syntax error
+E806 23                 INC     HL              ; Point to address of next line
+E807 7E                 LD      A,(HL)          ; Get LSB of line pointer
+E808 23                 INC     HL
+E809 B6                 OR      (HL)            ; Is it zero (End of prog)?
+E80A CA7AE8             JP      Z,ENDPRG        ; Yes - Terminate execution
+E80D 23                 INC     HL              ; Point to line number
+E80E 5E                 LD      E,(HL)          ; Get LSB of line number
+E80F 23                 INC     HL
+E810 56                 LD      D,(HL)          ; Get MSB of line number
+E811 EB                 EX      DE,HL           ; Line number to HL
+E812 225C10             LD      (LINEAT),HL     ; Save as current line number
+E815 EB                 EX      DE,HL           ; Line number back to DE
+E816 CD36E8     EXCUTE: CALL    GETCHR          ; Get key word
+E819 11F2E7             LD      DE,RUNCNT       ; Where to RETurn to
+E81C D5                 PUSH    DE              ; Save for RETurn
+E81D C8         IFJMP:  RET     Z               ; Go to RUNCNT if end of STMT
+E81E D680       ONJMP:  SUB     ZEND            ; Is it a token?
+E820 DA87EA             JP      C,LET           ; No - try to assign it
+E823 FE25               CP      ZNEW+1-ZEND     ; END to NEW&nbsp;?
+E825 D2ADE3             JP      NC,SNERR        ; Not a key word - ?SN Error
+E828 07                 RLCA                    ; Double it
+E829 4F                 LD      C,A             ; BC = Offset into table
+E82A 0600               LD      B,0
+E82C EB                 EX      DE,HL           ; Save code string address
+E82D 215AE2             LD      HL,WORDTB       ; Keyword address table
+E830 09                 ADD     HL,BC           ; Point to routine address
+E831 4E                 LD      C,(HL)          ; Get LSB of routine address
+E832 23                 INC     HL
+E833 46                 LD      B,(HL)          ; Get MSB of routine address
+E834 C5                 PUSH    BC              ; Save routine address
+E835 EB                 EX      DE,HL           ; Restore code string address
+
+E836 23         GETCHR: INC     HL              ; Point to next character
+E837 7E                 LD      A,(HL)          ; Get next code string byte
+E838 FE3A               CP      ":"             ; Z if ":"
+E83A D0                 RET     NC              ; NC if &gt; "9"
+E83B FE20               CP      " "
+E83D CA36E8             JP      Z,GETCHR        ; Skip over spaces
+E840 FE30               CP      "0"
+E842 3F                 CCF                     ; NC if &lt; "0"
+E843 3C                 INC     A               ; Test for zero - Leave carry
+E844 3D                 DEC     A               ; Z if Null
+E845 C9                 RET
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 34 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../35/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_25.pdf#page=34" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

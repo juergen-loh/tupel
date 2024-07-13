@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+	<link rel="icon" type="image/png" href="../apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../style.css">
+<!-- /navi-head.php -->
+
+	<meta name="keywords" content="PICO Computer, Z80, Projekt">
+	<title>PICO Computer</title>
+	<!-- $Date: 2024-02-19 12:44:03 +0100 (Mo, 19. Feb 2024) $ / Sun, 30 Jun 2024 10:05:41 GMT -->
+
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+<div class="row hyphenate">
+<div class="col-sm-12">
+
+<h1 id="head" class="FirstHeading">PICO</h1>
+
+<div class="style-multi-column-2">
+<p>
+PICO ist ein kleiner
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Zilog_Z80" title="Externer Link" target="_blank" rel="noreferrer">Z80</a><!-- /External Link -->-Computer. Er besteht aus einer CPU-Platine
+im Europakartenformat und einer Display/Anzeige-Platine (&bdquo;Terminal&ldquo;).
+Inspiriert wurde er in Hard- und Software unter anderem vom
+<a href="../z80-kit/">Z80-KIT</a>, dem
+<a href="../nascom/1/">Nascom&nbsp;1</a> und dessen
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Maschinencode-Monitor" title="Externer Link" target="_blank" rel="noreferrer">Monitor</a><!-- /External Link -->
+<a href="../nascom/documents/NASCOM-Betriebssystem-NASSYS.pdf">NAS-SYS&nbsp;1</a>.
+</p>
+</div>
+
+<div id="foto" class="style-foto-frame">
+<figure class="figure">
+	<a href="pics/PICO-Briefcase.jpeg" title="PICO im Koffer"><img src="pics/thumb/PICO-Briefcase.jpeg" class="figure-img img-fluid" alt="PICO im Koffer" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">PICO im Koffer</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-Proto-CPU-BS.jpeg" title="CPU"><img src="pics/thumb/PICO-Proto-CPU-BS.jpeg" class="figure-img img-fluid" alt="CPU" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">CPU</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-Proto-Term-BS.jpeg" title="Terminal"><img src="pics/thumb/PICO-Proto-Term-BS.jpeg" class="figure-img img-fluid" alt="Terminal" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">Terminal</figcaption>
+</figure>
+</div>
+
+<div class="style-multi-column-2">
+<p>
+Auf der CPU-Platine sitzen neben der
+<!-- External Link --><a href="https://www.zilog.com/docs/z80/um0080.pdf" title="Externer Link: Z80 CPU" target="_blank" rel="noreferrer">Z80-CPU</a><!-- /External Link -->
+noch 2K EPROM, 2K RAM, ein
+<!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0181.pdf" title="Externer Link: Z80 CTC" target="_blank" rel="noreferrer">Z80-CTC</a><!-- /External Link -->,
+ein
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Intel_8255" title="Externer Link: i8255" target="_blank" rel="noreferrer">8255</a><!-- /External Link -->
+mit 24 I/O-Leitungen und ein Kassetten-Interface.  Vorgesehen ist auch ein
+Interface zum
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">ECB</a><!-- /External Link -->-Bus,
+über das der PICO erweitert werden kann, allerdings
+funktioniert es in dieser Form nicht vollständig.  Auf den bisher
+realisierten Platinen fehlt es daher.
+</p>
+
+<p>
+In dem EPROM steckt der Monitor
+<a href="#picosys">PICO-SYS</a>, der es ermöglicht, Z80 Maschinenprogramme
+auf dem PICO zu entwickeln.  PICO-SYS kümmert sich sich dabei um die Ansteuerung von Display
+und Tastatur, hat Befehle zur Eingabe und zum Debuggen von Maschinenprogrammen (mit Break&shy;point
+und Single-Step) und kann die fertigen Programme auf einen Kassettenrekorder speichern
+und wieder einlesen.
+</p>
+
+<p>
+Entwickelt habe <a href="../../impressum/">ich</a> den PICO von 1983 bis 1987 als
+Selbstbauprojekt für den <!-- External Link --><a href="https://www.volkshochschule.de/" title="Externer Link: Volkshochschule" target="_blank" rel="noreferrer">Volkshochschul</a><!-- /External Link -->-Kurs,
+in dem ich selbst einige Jahre zuvor den ersten <a href="../z80-kit/">Kontakt</a>
+mit Z80-Mikroprozessoren hatte. Der Prototyp des PICO entstand in
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/F%C3%A4deltechnik" title="Externer Link" target="_blank" rel="noreferrer">Fädeltechnik</a><!-- /External Link -->. Um den Nachbau im Rahmen des
+<!-- External Link --><a href="https://www.volkshochschule.de/" title="Externer Link: Volkshochschule" target="_blank" rel="noreferrer">Volkshochschul</a><!-- /External Link -->-Kurses
+zu erleichtern, entstand in Zusammenarbeit mit dem Kursleiter ein doppelseitiges Layout
+in Klebetechnik, das in kleiner Stückzahl als durchkontaktierte Platine gefertigt wurde.
+</p>
+</div>
+
+<h2>Fotos</h2>
+
+<div class="style-multi-column-2">
+
+<div id="prototyp" class="style-nowrap">
+<figure class="figure">
+	<a href="pics/PICO-Proto-CPU-BS.jpeg" title="PICO Prototyp CPU BS"><img src="pics/thumb/PICO-Proto-CPU-BS.jpeg" class="figure-img img-fluid" alt="PICO Prototyp CPU BS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">Prototyp</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-Proto-CPU-LS.jpeg" title="PICO Prototyp CPU LS"><img src="pics/thumb/PICO-Proto-CPU-LS.jpeg" class="figure-img img-fluid" alt="PICO Prototyp CPU LS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-Proto-Term-BS.jpeg" title="PICO Prototyp Terminal BS"><img src="pics/thumb/PICO-Proto-Term-BS.jpeg" class="figure-img img-fluid" alt="PICO Prototyp Terminal BS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-Proto-Term-LS.jpeg" title="PICO Prototyp Terminal LS"><img src="pics/thumb/PICO-Proto-Term-LS.jpeg" class="figure-img img-fluid" alt="PICO Prototyp Terminal LS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+</div>
+
+<div id="serie" class="style-nowrap">
+<figure class="figure">
+	<a href="pics/PICO-KIT-CPU-BS.jpeg" title="PICO Bausatz CPU BS"><img src="pics/thumb/PICO-KIT-CPU-BS.jpeg" class="figure-img img-fluid" alt="PICO Bausatz CPU BS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">Serienmodell</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-KIT-CPU-LS.jpeg" title="PICO Bausatz LS"><img src="pics/thumb/PICO-KIT-CPU-LS.jpeg" class="figure-img img-fluid" alt="PICO Bausatz LS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-KIT-Term-BS.jpeg" title="PICO Bausatz Terminal BS"><img src="pics/thumb/PICO-KIT-Term-BS.jpeg" class="figure-img img-fluid" alt="PICO Bausatz Terminal BS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-KIT-Term-LS.jpeg" title="PICO Bausatz Terminal LS"><img src="pics/thumb/PICO-KIT-Term-LS.jpeg" class="figure-img img-fluid" alt="PICO Bausatz Terminal LS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+</div>
+
+</div>
+
+<h2 id="picosys">Software</h2>
+
+<div class="style-multi-column-2">
+<p class="style-nowrap">
+<a href=pico.mac>PICO-SYS Quelltext</a> für den Microsoft Z80-Assembler &bdquo;Macro-80&ldquo; auf
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/CP/M" title="Externer Link" target="_blank" rel="noreferrer">CP/M</a><!-- /External Link --></p>
+
+<p class="style-nowrap">
+<a href=pico.prn>PICO-SYS Assembler-Listing</a>, erstellt von Macro-80
+</p>
+
+<p class="style-nowrap">
+<a href=pico.pdf>PICO-SYS Handbuch</a>
+</p>
+</div>
+
+<h2>Hardware</h2>
+<div class="style-multi-column-2">
+
+<div id="cpu" class="style-nowrap">
+<figure class="figure">
+	<a href="pics/PICO-CPU-1.jpeg" title="PCIO CPU Schaltplan Seite 1"><img src="pics/thumb/PICO-CPU-1.jpeg" class="figure-img img-fluid" alt="PCIO CPU Schaltplan Seite 1" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">CPU Schaltplan</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-CPU-2.jpeg" title="PCIO CPU Schaltplan Seite 2"><img src="pics/thumb/PICO-CPU-2.jpeg" class="figure-img img-fluid" alt="PCIO CPU Schaltplan Seite 2" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-CPU-3.jpeg" title="PCIO CPU Schaltplan Seite 3"><img src="pics/thumb/PICO-CPU-3.jpeg" class="figure-img img-fluid" alt="PCIO CPU Schaltplan Seite 3" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+</div>
+
+<div id="terminal" class="style-nowrap">
+<figure class="figure">
+	<a href="pics/PICO-Term-1.jpeg" title="PCIO Terminal Schaltplan Seite 1"><img src="pics/thumb/PICO-Term-1.jpeg" class="figure-img img-fluid" alt="PCIO Terminal Schaltplan Seite 1" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">Terminal Schaltplan</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-Term-2.jpeg" title="PCIO Terminal Schaltplan Seite 2"><img src="pics/thumb/PICO-Term-2.jpeg" class="figure-img img-fluid" alt="PCIO Terminal Schaltplan Seite 2" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+</div>
+
+<div id="cpu-bestueckung" class="style-nowrap">
+<figure class="figure">
+	<a href="pics/PICO-CPU-4.jpeg" title="PCIO CPU Bestückungsplan"><img src="pics/thumb/PICO-CPU-4.jpeg" class="figure-img img-fluid" alt="PCIO CPU Bestückungsplan" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">Bestückungsplan</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-EPLD.jpeg" title="PICO CPU Bussteuerung"><img src="pics/thumb/PICO-EPLD.jpeg" class="figure-img img-fluid" alt="PICO CPU Bussteuerung" width="120" height="84"></a>
+
+	<figcaption class="figure-caption">EPLD</figcaption>
+</figure>
+</div>
+
+<div id="cpu-layout" class="style-nowrap">
+<figure class="figure">
+	<a href="pics/PICO-Layout-BS.jpeg" title="PICO CPU Layout BS"><img src="pics/thumb/PICO-Layout-BS.jpeg" class="figure-img img-fluid" alt="PICO CPU Layout BS" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">CPU Layout</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-Layout-LS.jpeg" title="PICO CPU Layout LS"><img src="pics/thumb/PICO-Layout-LS.jpeg" class="figure-img img-fluid" alt="PICO CPU Layout LS" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-Parts.jpeg" title="PICO CPU Bohrplan"><img src="pics/thumb/PICO-Parts.jpeg" class="figure-img img-fluid" alt="PICO CPU Bohrplan" width="84" height="120"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+</div>
+
+<div id="cpu-platine" class="style-nowrap">
+<figure class="figure">
+	<a href="pics/PICO-PCB-BS.jpeg" title="PICO CPU Platine BS"><img src="pics/thumb/PICO-PCB-BS.jpeg" class="figure-img img-fluid" alt="PICO CPU Platine BS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">CPU Platine</figcaption>
+</figure>
+<figure class="figure">
+	<a href="pics/PICO-PCB-LS.jpeg" title="PICO CPU Platine LS"><img src="pics/thumb/PICO-PCB-LS.jpeg" class="figure-img img-fluid" alt="PICO CPU Platine LS" width="120" height="90"></a>
+
+	<figcaption class="figure-caption">&nbsp;</figcaption>
+</figure>
+</div>
+
+</div>
+
+<h2>Stückliste</h2>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-6">
+
+<h4>CPU-Platine</h4>
+
+<table style="width: 100%">
+<colgroup>
+	<col style="width: 15%">
+	<col style="width: 30%">
+	<col>
+</colgroup>
+<tr><td>J1</td><td>74LS245</td><td>8 x Transceiver</td></tr>
+<tr><td>J2</td><td>74LS244</td><td>8 x Buffer</td></tr>
+<tr><td>J3</td><td>74LS244</td><td>8 x Buffer</td></tr>
+<tr><td>J4</td><td>74LS08</td><td>4 x AND-2</td></tr>
+<tr><td>J5</td><td>74LS32</td><td>4 x OR-2</td></tr>
+<tr><td>J6</td><td>74LS02</td><td>2 x NOR-4</td></tr>
+<tr><td>J7</td><td>74LS244</td><td>8 x Buffer</td></tr>
+<tr><td>J8</td><td colspan=2>Z80-CTC</td></tr>
+<tr><td>J9</td><td colspan=2>Z80-CPU</td></tr>
+<tr><td>J10</td><td>2716</td><td>2k x 8 EPROM</td></tr>
+<tr><td>J11</td><td>74LS74</td><td>2 x D-FF</td></tr>
+<tr><td>J12</td><td>74LS90</td><td>BCD Counter</td></tr>
+<tr><td>J13</td><td>74LS04</td><td>6 x Inverter</td></tr>
+<tr><td>J14</td><td>6116</td><td>2k x 8 RAM</td></tr>
+<tr><td>J15</td><td>74LS139</td><td>2 x 2-to-4 Decoder</td></tr>
+<tr><td>J16</td><td>74HC04</td><td>6 x Inverter</td></tr>
+<tr><td>J17</td><td>8255</td><td>PIO</td></tr>
+<tr><td>J18</td><td>74LS139</td><td>2 x 2-to-4 Decoder</td></tr>
+<tr><td>R1</td><td colspan=2>10k</td></tr>
+<tr><td>R2</td><td colspan=2>10k</td></tr>
+<tr><td>R3</td><td colspan=2>10k</td></tr>
+<tr><td>R4</td><td colspan=2>10k</td></tr>
+<tr><td>R5</td><td colspan=2>10k</td></tr>
+<tr><td>R6</td><td colspan=2>330R</td></tr>
+<tr><td>R7</td><td colspan=2>10k</td></tr>
+<tr><td>R8</td><td colspan=2>100k</td></tr>
+<tr><td>R9</td><td colspan=2>100k</td></tr>
+<tr><td>R10</td><td colspan=2>10k</td></tr>
+<tr><td>R11</td><td colspan=2>330R</td></tr>
+<tr><td>R12</td><td colspan=2>10k</td></tr>
+<tr><td>R13</td><td colspan=2>10k</td></tr>
+<tr><td>R14</td><td colspan=2>100R</td></tr>
+<tr><td>D1</td><td colspan=2>LED rot 3mm</td></tr>
+<tr><td>D2</td><td colspan=2>LED grün 3mm</td></tr>
+<tr><td>D3</td><td colspan=2>1N4148</td></tr>
+<tr><td>D4</td><td colspan=2>1N4148</td></tr>
+<tr><td>SK1</td><td colspan=2>DIP-16</td></tr>
+<tr><td>SK2</td><td colspan=2>DIP-16</td></tr>
+<tr><td>SK3</td><td colspan=2>VG64 a+c</td></tr>
+<tr><td>Q1</td><td colspan=2>5MHz Quartz</td></tr>
+<tr><td>C1</td><td colspan=2>10&micro;F 10V</td></tr>
+<tr><td>C2</td><td colspan=2>22pF ker.</td></tr>
+<tr><td>C3</td><td colspan=2>100nF ker.</td></tr>
+<tr><td>C4</td><td colspan=2>10nF ker.</td></tr>
+</table>
+<br>
+</div>
+<div class="col-sm-6">
+
+<h4>Terminal-Platine</h4>
+
+<table style="width: 100%">
+<colgroup>
+	<col style="width: 15%">
+	<col style="width: 30%">
+	<col>
+</colgroup>
+<tr><td>J1</td><td>75492</td><td>6 x LED Digit Driver</td></tr>
+<tr><td>J2</td><td>75492</td><td>6 x LED Digit Driver</td></tr>
+<tr><td>J3</td><td>75491</td><td>4 x LED Segment Driver</td></tr>
+<tr><td>J4</td><td>75491</td><td>4 x LED Segment Driver</td></tr>
+<tr><td>J5</td><td>74LS273</td><td>8 x D-FF</td></tr>
+<tr><td>J6</td><td>74LS273</td><td>8 x D-FF</td></tr>
+<tr><td>J7</td><td>74LS244</td><td>8 x Buffer</td></tr>
+<tr><td>J8</td><td>74LS75</td><td>4 x D-FF</td></tr>
+<tr><td>SK1</td><td colspan=2>DIP16</td></tr>
+<tr><td>RSIL1</td><td colspan=2>10k x 8</td></tr>
+<tr><td>RSIL2</td><td colspan=2>330R x 4</td></tr>
+<tr><td>RSIL3</td><td colspan=2>100R x 8</td></tr>
+<tr><td>RSIL4</td><td colspan=2>10k x 8</td></tr>
+<tr><td>Cx</td><td colspan=2>10&micro;F 10V</td></tr>
+<tr><td>Cy</td><td colspan=2>100nF ker.</td></tr>
+<tr><td>Reset</td><td colspan=2>Taster</td></tr>
+<tr><td>NMI</td><td colspan=2>Taster</td></tr>
+<tr><td></td><td colspan=2>28 x Taster + 1N4148</td></tr>
+<tr><td></td><td colspan=2>8 x 7-Seg gem. Kathode</td></tr>
+<tr><td></td><td colspan=2>4 x LED rot</td></tr>
+</table>
+<br>
+</div>
+</div>
+
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-sm-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 16:39:08 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 24 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-21 page-24" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div class="noindent">
+<p>disk as it contains a certain ammount of initialized data). So there are now app.
+400H bytes (1K) of RAM free above SYS. The two Buffers take 280H bytes so
+another 180H (384 decimal) bytes of code could be added without pushing the
+Buffers off the top end of RAM. I understand that a new SYS with support for the
+excellent
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/map80/MAP80_256.htm" title="External Link" target="_blank" rel="noreferrer">MAP80 256K RAM</a><!-- /External Link -->
+ card and a number of
+other extra new features might be
+available soon. I use one of the MAP RAM Cards as a Virtual Disk and it certainly
+speeds things up a bit but I miss the extra features of SYS in the support CBIOS.
+</p>
+<p>
+The disk with CPM64.COM on its System track can now be put to use. Boot it up and
+then &lsquo;RUN UP&rsquo; the modified SYS which will self locate over the OLDBIOS. (from
+0EE00H in this case). Then use a BUG program to load a saved copy of CPM64.COM
+into low memory. (e.g. ZSID CPM64.COM (CR).) Remembering the addresses noted
+earlier, copy the active &lsquo;SYS&rsquo; from CP/M in high memory over the old CBIOS
+starting at 2100H. Since 4K is the maximum ammount that can be added, move 4K
+down to make it easy. (e.g. MEE00,&#x200b;FE00,&#x200b;2100 (CR).) will copy it down. Use the &lsquo;D&rsquo;
+command to check at 2100H to see that data has changed and is the same as the
+data at EE00H. This new CP/M can now be saved. For tidyness though, I first
+filled from the end of the workspace to the highest possible end of the CBIOS
+with 00&rsquo;s using the &lsquo;F&rsquo; command. This makes it easier to see the end of the code
+section when using a PEEK program.
+</p>
+<p>
+The next step is to enter G0 (CR) followed by SAVE 48 CPMSYS64.COM. Note the
+changes. The name has been changed to denote the fixed size and the embedded
+&lsquo;SYS&rsquo; function. The ammount to be saved has increased from 43 to 48 Pages. The
+CBIOS started at 2100H and was 4K long (max) so the top address possible is
+3100H. It is thus necessary to save memory from 100H to 3100H which is 48 &ndash; 256
+byte pages. As previously noted SYSGEN will put memory from 900H upwards onto
+disk, but the area 100H &ndash; 8FFH must be preserved to be compatible with SYSGEN.
+</p>
+<p>
+In theory if we put this file on the System Track of a disk and boot, the job
+should be done, since all addresses should be correct, and there is enough room
+on the disk. So a SYSGEN CPMSYS64.COM (CR) command is issued and the new system
+placed on the disk. Then RESET is pressed to try it. <span class="uppercase">Disaster</span>&nbsp;!! &ndash; IT DOES NOT
+WORK.
+</p>
+<p>
+At this stage, I tried a PEEK on the System Track. The BIOS all seemed to be
+there, with code and workspace area ending within a few bytes of the top of
+sector 19. That last sector, number 20 though &ndash; it should have been all 00&rsquo;s as
+the top of the BIOS was filled with 00&rsquo;s before saving it.But here I found F5&rsquo;s
+which is the pattern written to disk during formating so for some reason the
+whole of the CPMSYS64.COM file is not being written to disk. This last sector is
+not needed at the moment as all of the CBIOS was present on previous sectors, but
+I could want it with a new larger &lsquo;SYS&rsquo;, so why was it not written. To solve this
+one I disassembled SYSGEN. Luckily this is a short Program of about 1K, with a
+lot of ASCII text in it, so the task was not too bad. It did not take very long
+so find out that it was the sector counting routine that was responsible for the
+problem. It was Programmed to only put 19 Sectors to disk. The count only needed
+to be &lsquo;upped&rsquo; by one to get all 20 sectors actioned. Locations 01BAH/&#x200b;01BBH in
+my copy were 38 14H. (LD A,14H). I used my BUG program to set this to 15H, and
+saved the altered program as SYSGEN1.COM. The revised program now Reads and
+Writes the whole system track.
+</p>
+<p>
+The SYSGEN mod. did not solve the problem though. I needed to see what was
+getting into RAM. I put the disk back into drive A and RESET. After a few
+seconds, I removed the disk, RESET again and used SIMON to explore memory. The
+bottom of RAM contained the COLD BOOT, unaltered, so CP/M had obviously not got
+going. If it had, the jump vectors and IOBYTE at the low end of the memory would
+have been visible. So I checked high RAM. It soon became apparent that the CBIOS
+was missing from FA00H up. This meant that for some reason two whole sectors had
+not been loaded from the system track to the BIOS RAM. Since the vital sector
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 24 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_21.pdf#page=24" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

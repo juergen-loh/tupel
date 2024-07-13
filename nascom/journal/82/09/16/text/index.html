@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - September 1982 - Ausgabe 9</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">September 1982 &middot;</span> <span class="nowrap">Ausgabe 9</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/07/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 16 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<p>
+ÖENTERÜ, ist es zum Beispiel möglich, mit GRAPH 1 mehrere Befehle
+ausführen zu lassen. Zum Definieren der Zeichenkette springt man zur
+Routine FUNK mit E D20 und gibt die Zeichenkette ein, eingerahmt von
+einem beliebigen Begrenzungszeichen.
+</p>
+<p>
+2. Software Repeat &mdash; Ein gedrücktes Zeichen wird solange wiederholt,
+wie gleichzeitig die ÖCHÜ Taste gedrückt wird. Dieses Prinzip kennt man
+z.B. vom <!-- External Link --><a href="https://de.wikipedia.org/wiki/Apple_II" title="Externer Link: Apple II" target="_blank" rel="noreferrer">Apple II</a><!-- /External Link -->.
+Es funktioniert anders, als der sogenannte
+Auto-Repeat wie man ihn von Schreibmaschinen her gewohnt ist. Eine
+Routine für den letzteren ist von C. Rau im
+<a href="../../../../81/12/11/text/#article2">Nascom Journal 11/12 1981</a>
+veröffentlicht worden.
+</p>
+<p>
+Das Programm wird mit E CC0 initialisiert. Dabei kreiert es einen neuen
+Inputtable. Dies ist schon in dem oben erwähnten Artikel von Christoph
+Rau erklärt.
+</p>
+<p>
+Das <a href="../../24/text/#article1">Programm</a>
+ist für NAS-SYS&nbsp;1 geschrieben, läuft aber auch auf anderen
+Monitoren, die in soweit kompatibel sind, dass sie
+Arbeitsspeicheradressen und Routinennummern gleich benutzen. Es ist 76H
+Bytes lang und kann an beliebiger Stelle im Speicher laufen. Zusätzlich
+braucht es 3 Byte Arbeitsspeicher und Raum für die Zeichenkette. Zur
+Anpassung an sein System kann der Benutzer die im Assemblerlisting
+unter ***<span class="uppercase">Variablen</span>*** stehenden Werte verändern.
+</p>
+
+<h1 id="article1">
+Change
+</h1>
+<h3>
+von Constantin Olbrich
+</h3>
+<p>
+Dieses <a href="../../22/text/#article1">Programm</a>
+ersetzt eine beliebige Zeichenkette im Quellfile des
+ZEAP&nbsp;2.0 durch eine andere Zeichenkette beliebiger Länge. Nach dem
+Aufruf des Programms mit EC80 wird eine Zeile mit folgendem Format
+eingegeben:
+</p>
+<pre class="donthyphenate">
+/String1/String2/  (CR)
+</pre>
+<p>
+wobei &sbquo;/&lsquo; ein beliebiges Zeichen (Delimiter) außer Space ist, sowie
+String1 die zu ersetzende Zeichenkette und String2 die einzusetzende
+Zeichenkette ist. Wer sein ASM ZEAP&nbsp;2:0 mit dem &sbquo;:&lsquo; Befehl versehen
+hat, (beliebiges NAS-SYS Kommando ist nun gültig) arbeitet weiter im
+Assembler, was sicher wesentlich eleganter ist. Übrigens ist das
+Argument vom Execute Befehl &sbquo;0C80&lsquo; nur beim Erstaufruf von CHANGE
+nötig, sonst genügt:
+</p>
+<pre class="donthyphenate">
+&bdquo;:&ldquo; (CR) &bdquo;E&ldquo; (CR)
+</pre>
+<p>
+Falls das erste Zeichen der Eingabezeile ein Leerzeichen ist, erfolgt
+ein Rücksprung (Warmstart) in den ZEAP&nbsp;2.0. Abschluß der Zeile ist
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+CR. Es kann danach sofort eine weitere Eingabe (neuer CHANGE Befehl)
+erfolgen, oder CR beendet mit nun leerer Zeile den CHANGE-Modus.
+</p>
+<p>
+Da sich die Länge des Quellfiles verändern kann, erfolgt automatisch
+eine Korrektur der EOF Marke &sbquo;Free&lsquo; in der Überschriftzeile des ZEAP
+beim Rücksprung. Wichtig zu wissen ist, daß beliebig viele Ersetzungen
+pro Zeile möglieh sind, z.B.:
+</p>
+<pre class="donthyphenate">
+/*/$/
+</pre>
+<p>
+würde alle im File vorkommenden &sbquo;*&lsquo; in Dollars umwandeln. Wird aus
+Versehen der dritte Delimiter vergessen, (was mir häufig passiert)
+geschieht in der Regel gar nichts, es sei denn der eingangs definierte
+Delimiter steht im Video Ram in den nächsten 45 Bytes, was allerdings
+äußerst unwahrscheinlich ist. Weiterhin ist es möglich, den String2
+wegzulassen, um z.B. gezielte Löschungen vorzunehmen, z.B.:
+</p>
+<pre class="donthyphenate">
+/Name//
+</pre>
+<p>
+löscht alle &bdquo;Name&ldquo; im File. Anwendung findet das Programm z.&nbsp;B.
+beim disassemblierten Quellprogramm, um obskuren Labels, wie L1EF9
+einen sinnvollen Namen, z.B. &bdquo;START&ldquo;, zu geben.
+</p>
+<h1 id="article2">
+Rom Basic V. 4.7-
+</h1>
+<h2>
+zwei Versionen
+</h2>
+<h3>
+von Gerhard Wilharm
+</h3>
+<p>
+Die im <span class="uppercase">Nascom</span>-Journal,
+<a href="../../../01/11/text/#article1">Heft 1/82</a>,
+von Günter Böhm diskutierten zwei ROM
+BASIC-Versionen unterscheiden sich dadurch, daß man der
+&bdquo;anderen&ldquo; Version den direkten Sprungbefehl C3 03 E0 (JP
+E003) vorangesetzt hat und sich somit die nachfolgenden Bytes um drei
+Adressen nach hinten verschieben. Warum diesen- scheinbar unsinnigen
+&bdquo;Hopser&ldquo; am Anfang?
+</p>
+<p>
+Die Lösung ist in der Hardware des <span class="uppercase">Nascom</span>-2 zu suchen, und zwar in den
+Schaltungsteil, der die &bdquo;Jump on Reset&ldquo;-Funktion
+bewerkstelligt. Diese Funktion ergibt die Möglichkeit, daß nach einem
+Reset jede beliebige 4K-Grenze des Speicherbereichs den
+&bdquo;Nullpunkt&ldquo; des Systems darstellen kann (einstellbar mit 4
+DIL-Schaltern), also auch unser heißgeliebtes ROM BASIC auf Adresse
+E000. Damit diese Geschichte aber richtig funktioniert, muß das
+Programm, das per Reset angesprochen werden soll, als ersten Befehl
+einen direkten Sprung (also C3 XX XX) aufweisen. Der Programmzähler
+kann sonst nicht richtig &bdquo;einrasten&ldquo; und stürzt nach dem
+ersten Befehl ab. Und wie funktioniert das Ganze&nbsp;?
+</p>
+<p>
+Nach einem Reset macht die CPU das einzig Richtige, sie gibt 0000 auf
+den Adreßbus.
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/07/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 16 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../17/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/82-09.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

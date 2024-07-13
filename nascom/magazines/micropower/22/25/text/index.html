@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 2 - Number 2 - April 1982</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 2 &middot;</span> <span class="nowrap">April 1982</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-22 page-25" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="indent" style="text-align: left">
+742 IFP$(I,J)=""THENPRINT"Old data only!":GOTO735<br>
+745 PRINTP$(I,J)<br>
+750 INPUT"Enter new data";P$(I,J)<br>
+752 IFP$(I,J)&lt;&gt;""THEN756<br>
+753 INPUT"Delete Program";L$<br>
+754 IFL$="Y"THEN775<br>
+755 GOTO750<br>
+756 INPUT"Correct";L$:IFL$&lt;&gt;"Y"THEN750<br>
+760 INPUT"More changes this author";L$<br>
+765 IFL$="Y"THEN700<br>
+770 GOTO50<br>
+775 J=J+1:IFP$(I,J)=""THEN700<br>
+780 P$(I,J-1)=P$(I,J):P$(I,J)="":GOTO775<br>
+800 CLS:PRINTN$(I):PRINT<br>
+805 PRINTA$(I):PRINTB$(I):PRINTC$(I):PRINT:PRINTD$(I):PRINT<br>
+810 INPUT"Amend/Delete Y/N";L$<br>
+815 IFL$="N"THEN50<br>
+820 PRINT"Name ";N$(I)" ";:INPUT"New Data Y/N";L$<br>
+825 IFL$="Y"THENINPUTN$(I)<br>
+826 IFN$(I)&lt;&gt;""THEN830<br>
+827 INPUT"Delete Author";L$<br>
+828 IFL$="Y"THENGOTO900<br>
+829 GOTO820<br>
+830 PRINT"ADDR1 ";A$(I)" ";:INPUT"New Data Y/N";L$<br>
+835 IFL$="Y"THENINPUTA$(I)<br>
+840 PRINT"ADDR2 ";B$(I);" ":INPUT"New Data Y/N";L$<br>
+845 IFL$="Y"THENINPUTB$(I)<br>
+850 PRINT"ADDR3 ";C$(I);" ";:INPUT"New Data Y/N";L$<br>
+855 IFL$="Y"THENINPUTC$(I)<br>
+860 PRINT"Tel. No. ";D$(I); " ";:INPUT"New Data Y/N";L$<br>
+865 IFL$="Y"THENINPUTD$(I)<br>
+875 GOTO50<br>
+900 I=I+1<br>
+905 IFN$(I)=""THEN600<br>
+910 N$(I-1)=N$(I):N$(I)=""<br>
+915 A$(I-1)=A$(I):A$(I)=""<br>
+920 B$(I-1)=B$(I):B$(I)=""<br>
+925 C$(I-1)=C$(I):C$(I)=""<br>
+930 D$(I-1)=D$(I):D$(I)=""<br>
+935 GOTO900<br>
+1000 CLS:X=0:FORI=1TO30:PRINTB$(I);<br>
+1002 IFN$(I)=""THENI=30:GOTO1060<br>
+1005 FORJ=1TO20:PRINTTAB(20);P$(I,J)<br>
+1007 IFP$(I,J)=""THENJ=20:GOTO1055<br>
+1010 INPUT"Enter Price";K(X)<br>
+1015 INPUT"Correct";L$<br>
+1020 IFL$&lt;&gt;"Y"THEN1010<br>
+1025 INPUT"No. Sold";L(X)<br>
+1030 INPUT"Correct";L$<br>
+1035 IFL$&lt;&gt;"Y"THEN1025<br>
+1040 X=X+1:INPUT"More Prices this Program";L$<br>
+1045 IFL$="Y"THEN1010<br>
+1050 K(X)=0:L(X)=0:X=X+1:NEXTJ<br>
+1055 NEXTI<br>
+1060 GOTO50<br>
+1200 DOKE3187,1918:IFPEEK(1910)=0THENDOKE3187,1912<br>
+1205 CLS:WIDTH80:INPUT"Enter Date";M$<br>
+1210 PRINT:INPUT"Correct";L$:IFL$&lt;&gt;"Y"THEN1205
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-2-2.pdf#page=27" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 1/80</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">1/80</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/00/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 7 von 16</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/02/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 1 Spalten: Start --><div class="row"><div class="col-sm-12">
+<h1 id="article1" style="word-spacing: 2em">
+<span class="uppercase">Kalender</span> in <span class="uppercase">Basic</span>
+</h1>
+
+<p>
+Das hier vorgestellte Programm wurde mit einem <span class="uppercase">Nascom&nbsp;1</span>
+geschrieben, der mit der ROM&nbsp;&ndash; Version des 8K&nbsp;&ndash; Basic&nbsp;&ndash;
+In&shy;ter&shy;pre&shy;ters ausgestattet ist. Es Läuft jedoch ohne Änderungen
+auch auf dem <span class="uppercase">Nascom&nbsp;2</span> und kann ohne Mühe auch an andere Systeme
+angepaßt werden.
+</p>
+<p>
+Es bietet folgende Möglichkeiten: Berechnung des
+Wo&shy;chen&shy;ta&shy;ges
+zu einem beliebigen Datum, Berechnung der Anzahl von Tagen
+zwischen zwei gegebenen Daten und Anzeige eines beliebigen Monats
+in Kalenderform. Dabei wird ohne
+Ein&shy;schrän&shy;kung das Auftreten von
+Schaltjahren berücksichtigt.
+</p>
+<p>
+Allerdings überprüft das Programm nicht, ob ein eingegebenes
+Datum auch tatsächlich existiert. Es wäre also möglich, z.B.
+den Wochentag des 29. 2.1981 errechnen zu lassen, obwohl 1981
+kein Schaltjahr ist. Das Programm rechnet auch mit Daten, die vor
+dem Beginn des Gregorianischen Kalenders im 16. Jahrhundert
+liegen.
+</p>
+<p>
+Nun noch einige Erläuterungen zum Listing: Die Zeilen 10 bis
+100 enthalten die Initialisierung und die Auswahl der
+Be&shy;rech&shy;nung.
+Ab Zeile 200 wird die Wochentagsberechnung durchgeführt, die
+Berechnung der Tage zwischen zwei Daten steht ab Zeile 300, der
+etwas kompliziertere Kalenderausdruck erfolgt mit den Zeilen 500
+bis 820. Das Unterprogramm ab Zeile 1000 berechnet für ein
+gegebenes Datum die Anzahl der Tage ab dem Tag 1 des
+Gregorianischen Kalenders, der allerdings in einer Zeit lag, als
+der Gregorianische Kalender noch lange nicht in Gebrauch war.
+</p>
+
+<h4>
+Listing des Kalenderprogramms
+</h4>
+<!-- 1 Spalten: Ende --></div></div>
+
+<!-- 2 Spalten: Start --><div class="row"><div class="col-sm-6">
+<img class="img-fluid" src="../../Image-07-1.gif" alt="" width="268" height="409">
+<!-- 2 Spalten: Spaltenwechsel --></div><div class="col-sm-6">
+<img class="img-fluid" src="../../Image-07-2.gif" alt="" width="275" height="331">
+<!-- 2 Spalten: Ende --></div></div>
+
+<!-- 1 Spalten: Start --><div class="row"><div class="col-sm-12">
+<p style="margin-top: 1em">
+Wenn das Betriebssystem NAS&nbsp;&ndash; SYS benutzt wird, ist
+normalerweise die maximale Länge einer Basic&nbsp;&ndash; Zeile gleich der
+einer Bildschirmzeile. Die Zeile 810 enthält jedoch mehr als
+diese 48 Zeichen. Um diese Zeile trotzdem eingeben zu können,
+geht man wie folgt vor: Eingabe des Programms bis zur Zeile 800,
+danach Rücksprung zum Betriebssystem, X0 ENTER eingeben.
+(Externalbefehl),
+dann mit Z Warmstart des Basic &ndash;
+In&shy;ter&shy;pre&shy;ters. Nun können Basic
+&ndash; Zeilen von bis zu 72 Zeichen eingegeben werden. Allerdings
+verliert man dabei einen Teil der Bildschirm&nbsp;&ndash; Editiermöglichkeiten.
+Übrigens sollte man immer darauf achten, daß beim Editieren von
+Basic&nbsp;&ndash; Pro&shy;gram&shy;men
+keine Zeilen zerstoert werden, die länger als
+48 Zeichen sind.
+</p>
+<!-- 1 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/00/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 7 von 16</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/02/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/80-01.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

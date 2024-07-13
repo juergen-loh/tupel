@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>INMC 80 News - October&ndash;December 1981 - Issue 5</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">INMC 80 News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">October&ndash;December 1981 &middot; <span class="nowrap">Issue 5</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../46/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 47 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80-bus-news/11/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../48/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-inmc-80-news issue-05 page-47" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+Line 4515 tells us we are about to output the low nibble of A.
+</p>
+<p>
+Line 4520. Now the fun really starts. The rotate instructions have left
+a lot of indeterminate garbage in the high nibble. Indeterminate, because we
+niether knew nor cared what the state of the C flag was before the start of the
+rotates. We want to get rid of the high nibble, so we use a logical AND
+instruction. We AND the X5H with 0FH, which like magic gives us 05H. Ok, so how
+is it done? Well I don&rsquo;t intend to go into a discourse on Boolean algebra here,
+save to say that in the middle of the last century a fella called Boole
+(french, I think), proposed a &lsquo;logical&rsquo; method of performing algebraic
+functions which caused a few sniggers at the time. He suggested that there
+shouldn&rsquo;t only be the normal arithmetic operators like, plus, minus, multiply
+and divide, but there should also be what he call logical operators like AND,
+NOT and OR, etc. No-one payed much attention to him and what he had to say
+didn&rsquo;t really become relevant until way after his death. I often wonder what
+would have happened if Boole and Babbage had got together, may be we would have
+had vast steam driven mechanical computing engines to rival Asimov&rsquo;s Multivac,
+and this in the middle of the last century. The nett result of ANDing a logical
+1 with a logical 1 is 1 (and no carry), and of ANDing logical X (either 1 or 0)
+with 0 is 0.
+</p>
+<table style="margin: auto">
+<colgroup><col><col style="width: 20%"><col></colgroup>
+<tr><td>101X1011</td><td></td><td></td></tr>
+<tr><td></td><td></td><td>AND</td></tr>
+<tr><td style="border-bottom: solid; border-bottom-width: 1px">00001111</td><td></td><td></td></tr>
+<tr><td>00001011</td><td></td><td></td></tr>
+</table>
+<p>
+See!! If you don&rsquo;t, then get Boole&rsquo;s book out of the library, it&rsquo;s still in
+print, and his methods will get more important as you progress in this
+business. Clever, what? We&rsquo;ve got rid of the bits we didn&rsquo;t want, and are left
+with those we want. The process has a name, it&rsquo;s called masking. The 0FH is the
+mask, and it allows through what is required, whilst holding back that which is
+note
+</p>
+<p>
+Line 4525. We&rsquo;ve now got to convert the four bits in a into an ASCII
+character which will represent the four bits in HEX. And that&rsquo;s not so easy. We
+start off by filling the high nibble with the binary pattern for 9, 1001, and
+that is achieved by ADDing 90H to A. The ADD instruction is used, as the C flag
+is still indeterminate, and we don&rsquo;t want any spurious carries added to our low
+nibble. We have used the ADD A,90H instruction, because we are going to use a
+Decimal Add Adjust (DAA) instruction next. By having 9 as the high nibble, it
+is our intention to make the high nibble overflow if there is an overflow from
+the low nibble. The ADD instruction also set the &lsquo;Half Carry&rsquo; flag as the A
+register contents are now 9BH, the overflow being to warn that the low nibble
+contains a number greater than (decimal) 9, in case there is a following DAA
+instruction. Please think carefully, I&rsquo;m doing my best.
+</p>
+<p>
+Line 4530. We have 9BH in the A register, and we perform a Decimal Add
+Adjust on it. Now the low nibble was B, which the DAA instruction takes as 11
+(decimal), so it puts 1 in the low nibble. As the low nibble was 11, the
+previous ADD instruction had already set the &lsquo;Half Carry&rsquo; flag, so there is a
+carry through to the high nibble, making it 10 (decimal), so it puts 0 in the
+high nibble, and sets the Carry flag to show there was an overflow. The A
+register now contains 01H, and the C flag has been set to indicate an overflow.
+</p>
+<p>
+Line 4535. We&rsquo;re half way there, all that&rsquo;s needed now is to add the
+ASCII offset to the number in the A register, take account of any carries, and
+we&rsquo;re all but home. Now, the ASCII code for 0 (nought) is 30H, 1 is 31H, upto
+39H for 9. Fortunately for our purposes, the ASCII code for &lsquo;A&rsquo; is 41H, though
+to 46H for &lsquo;F&rsquo;. Let&rsquo;s add (with carry) 40H to the A register.
+</p>
+<table style="margin: auto">
+<colgroup><col><col style="width: 20%"><col></colgroup>
+<tr><td>00000001</td><td class="center">1</td><td></td></tr>
+<tr><td style="border-bottom: solid; border-bottom-width: 1px">01000000</td><td></td><td></td></tr>
+<tr><td>01000010</td><td></td><td>which is 42H</td></tr>
+</table>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../46/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 47 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80-bus-news/11/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../48/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/INMC_80_News_5.pdf#page=47" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

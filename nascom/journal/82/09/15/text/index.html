@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - September 1982 - Ausgabe 9</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">September 1982 &middot;</span> <span class="nowrap">Ausgabe 9</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/07/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 15 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<p>
+wobei XXXX die Länge des Programms (in Hex) ist.
+</p>
+<p>
+Das Programm hat nun wohl eine neue Startadresse, lauffähig ist es hier
+allerdings noch nicht, wenn es direkte Sprünge oder
+Unterprogrammaufrufe enthält. Das Programm muß nun also nach solchen
+Befehlen durchforscht werden. Die Adressen werden in oben beschriebener
+Weise abgewandelt.
+</p>
+<p>
+In unserem Beispielprogramm liegt ein Aufruf bei C68 vor. Das
+Unterprogramm liegt innerhalb des eigentlichen
+Programm-Speicherbereichs und wird folgendermaßen geändert:
+</p>
+<pre>
+1C68  CD 01 1D
+</pre>
+<p>
+Liegt die aufgerufene Adresse außerhalb, so wird (hauptsächlich bei
+T2/&#x200b;T4-Programmen) mit größter Wahrscheinlichkeit ein Unterprogramm aus
+dem Betriebssystem vorliegen. Bei Verwendung des gleichen Systems, kann
+die Adresse stehen bleiben, beim Umschreiben auf einen anderen Monitor
+muß die Adresse geändert werden oder (wie bei <span class="uppercase">Nassys</span>) ein indirekter
+Aufruf eingetragen werden. Mehr zu den monitoreigenen Unterprogrammen
+im nächsten Heft.
+</p>
+<p>
+Die Adressen für direkte Sprünge werden als nächstes modifiziert. So
+wird aus. JP D80 &ndash; JP 1D80 oder aus JP Z F00 &ndash; JP Z 1F00.
+</p>
+<p>
+Wird eine
+Adresse mit einem Wert geladen, so ist auch meist eine Änderung
+notwendig. In unserem Beispiel:
+</p>
+<p>
+1C52&nbsp;: 0F03 liegt innerhalb des Programms und wird geändert (32 03 1F).
+</p>
+<p>
+1C57&nbsp;: 0F07 liegt ebenfalls innerhalb. Die Änderung lautet 32 07 1F.
+</p>
+<p>
+Ebenso verfährt man bei 1C5D. Bei 1C63 liegt wahrscheinlich ein
+Zahlenwert vor, der nicht geändert werden darf, denn 000C liegt nicht
+innerhalb des Programms und auch nicht im Arbeitsspeicher des Monitors
+(hier könnten z.B. die Adressen für ARG1 bis ARG3 mit Werten geladen
+werden).
+</p>
+<p>
+1C60&nbsp;: 0BCA liegt ebenfalls außerhalb des Programms. Es ist eine
+Adresse aus dem Bildwiederholspeicher (Bildschirm 080A bis 0BF9) und
+wird natürlich beibehalten.
+</p>
+<p>
+Man sieht, daß etwas Überlegung dazugehört, um festzustellen, wann es
+sich um Adressen aus dem Programmbereich handelt, die umgeändert werden
+müssen, und wann man es mit festen Werten, Adressen aus dem Monitor
+etc. zu tun hat. Dies ist auch der Grund, warum man kein Programm
+schreiben kann, das Ihnen die lästige Arbeit des Anpassens erspart. Der
+Rechner kann ein Problem eben nicht als Ganzes überblicken.
+</p>
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+<p>
+Das größte Problem dürfte dabei wohl das Erkennen von Tabellen
+innerhalb eines Programms sein, das heißt von Werten, die beim
+Verschieben nicht geändert werden dürfen.
+</p>
+<p>
+In unserem nächsten Beispiel
+ist ab 1F5F der Text für einen Programmtitel abgespeichert. (in 1C5D
+wird darauf hingewiesen). Solche Tabellen erkennt man durch das
+dauernde Erscheinen von ASCII-Codes oder die Folge von Befehlen, die
+einfach keinen Sinn ergeben. So z.B. LD H,D &ndash; LD H,A; allein schon das
+Aufeinandertreffen dieser Codes, von denen der zweite die
+Funktion des ersten aufhebt, macht deutlich,
+daß es sich hier wohl um Werte einer Tabelle
+handelt. (Programmfehler sollten wir einmal
+ausschließen).
+</p>
+<p>
+Vergleichen Sie diese Ausführungen mit den Artikeln im
+<a href="../../../../81/06/12/text/#article1">Journal 6/81</a>
+über den &bdquo;Relocator&ldquo;
+und versuchen Sie einmal, ein Programm anhand
+obiger Tips zu verschieben.
+</p>
+<p>
+Nochmals zusammenfassend eine mögliche Verfahrensweise
+</p>
+<p>
+1. Programmstart und Speicherbereich auf ähnliche
+Adresse verschieben (z.B. durch Addition
+von 1000)
+</p>
+<p>
+2. CALL- und JUMP-Aufrufe untersuchen; wenn
+innerhalb des Programms, dann verändern.
+</p>
+<p>
+3. LOAD-Befehle untersuchen; wenn wahrscheinlich
+Adressen des Programms geladen werden,
+dann verändern.
+</p>
+<p>
+4. Bei obigen 3 Punkten darauf achten, daß
+keine Tabelle vorliegt.
+</p>
+<p>
+Bis zum Erscheinen des nächsten Heftes sind
+Sie sicher schon ganz firm in der Anwendung
+dieser Kniffe. Dann soll es direkt an die
+Anpassung der Programme an die verschiedenen
+Betriebssysteme gehen.
+</p>
+<h1 id="article1">
+Funktionstaste-<br>
+Software Repeat
+</h1>
+<h3>
+von Gustav W. Delius
+</h3>
+<p>
+Der Sinn dieses kleinen <a href="../../24/text/#article1">Programms</a>
+ist es, dem Nascom-Benutzer möglichst
+viel Tipparbeit zu ersparen. Es bedient sich dazu zweier Methoden:
+</p>
+<p>
+1. Funktionstaste &mdash; Wenn GRAPH 1 getippt wird, erscheint nicht das
+übliche Grafikzeichen, sondern eine vorher festgelegte Zeichenkette.
+Diese Zeichenkette wird vorn Nascom so behandelt, als würden die
+Zeichen einzeln auf der Tastatur gedrückt. Da die Zeichenkette jedes
+beliebiege Zeichen enthalten darf, also auch
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/07/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 15 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/82-09.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

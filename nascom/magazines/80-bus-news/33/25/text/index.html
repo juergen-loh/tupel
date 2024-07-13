@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;June 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-33 page-25" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    94</span>
+
+FCC8 CD39FE     CASFFW: CALL    FLPLED          ; Turn on cassette
+FCCB 0600               LD      B,0             ; Set 1 second delay
+FCCD CD9BFD     DELAYB: CALL    DELAY           ; Wait a bit
+FCD0 05                 DEC     B               ; Count
+FCD1 C2CDFC             JP      NZ,DELAYB       ; More delay needed
+FCD4 C9                 RET
+
+FCD5 C339FE     CASFF:  JP      FLPLED          ; Flip tape LED
+
+FCD8 C9         ARET:   RET                     ; A RETurn instruction
+
+FCD9 E5         CONMON: PUSH    HL              ; Output character to screen
+FCDA C5                 PUSH    BC              ;
+FCDB D5                 PUSH    DE              ;
+FCDC F5                 PUSH    AF              ;
+FCDD CD6DFE             CALL    MONTST          ; See if NAS-SYS
+FCE0 C2FBFC             JP      NZ,NASOUT       ; NAS-SYS - Output ASCII
+FCE3 F1                 POP     AF              ; Get character
+FCE4 F5                 PUSH    AF              ; And re-save
+FCE5 FE0A               CP      LF              ; ASCII Line feed?
+FCE7 CA00FD             JP      Z,IGCHR         ; Yes - Ignore it
+FCEA FE08               CP      BKSP            ; ASCII back space?
+FCEC C2F1FC             JP      NZ,CONOT1       ; No - Test for CR
+FCEF 3E1D               LD      A,TBS           ; <span class="uppercase">Nasbug</span> back space
+FCF1 FE0D       CONOT1: CP      CR              ; ASCII CR?
+FCF3 C2FDFC             JP      NZ,OUTCHR       ; No - Output character
+FCF6 3E1F               LD      A,TCR           ; <span class="uppercase">Nasbug</span> CR
+FCF8 C3FDFC             JP      OUTCHR          ; Output it
+
+FCFB F1         NASOUT: POP     AF              ; Get character
+FCFC F5                 PUSH    AF              ; And re-save
+FCFD CD45FE     OUTCHR: CALL    MONOUT          ; Output it
+FD00 F1         IGCHR:  POP     AF              ; Restore character
+FD01 D1                 POP     DE              ;
+FD02 C1                 POP     BC              ;
+FD03 E1                 POP     HL              ;
+FD04 C9                 RET
+
+FD05 E5         GETINP: PUSH    HL              ; Get an input character
+FD06 C5                 PUSH    BC              ;
+FD07 D5                 PUSH    DE              ;
+FD08 CD6DFE             CALL    MONTST          ; See if NAS-SYS
+FD0B CA13FD             JP      Z,GETTIN        ; "T" monitor - Get input
+FD0E DF0B               SCAL    BLINK
+FD10 C319FD             JP      CONVIN          ; Convert to ASCII
+
+FD13 CD4D0C     GETTIN: CALL    TIN             ; "T" input a character
+FD16 D213FD             JP      NC,GETTIN       ; No input - wait
+FD19 FE1D       CONVIN: CP      TBS             ; <span class="uppercase">Nasbug</span> back space?
+FD1B C220FD             JP      NZ,CNVIN1       ; No - Test for break
+FD1E 3E08               LD      A,BKSP          ; ASCII back space
+FD20 FE1C       CNVIN1: CP      TBRK            ; <span class="uppercase">Nasbug</span> break?
+FD22 C227FD             JP      NZ,CNVIN2       ; No - Test for control Z
+FD25 3E03               LD      A,CTRLC         ; Control C
+FD27 FE1A       CNVIN2: CP      CTRLZ           ; ^Z?
+FD29 C22EFD             JP      NZ,CNVIN3       ; No - Test for escape
+FD2C 3E7F               LD      A,DEL           ; Delete
+FD2E FE1B       CNVIN3: CP      ESC             ; "ESC" ?
+FD30 C235FD             JP      NZ,CNVIN4       ; No - Test for CR
+FD33 3E03               LD      A,CTRLC         ; Control C
+FD35 FE1F       CNVIN4: CP      TCR             ; <span class="uppercase">Nasbug</span> CR?
+FD37 C23CFD             JP      NZ,CNVIN5       ; No - Return character
+FD3A 3E0D               LD      A,CR            ; ASCII CR
+FD3C D1         CNVIN5: POP     DE
+FD3D C1                 POP     BC
+FD3E E1                 POP     HL
+FD3F C9                 RET
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    95</span>
+
+FD40 AF         CHKBRK: XOR     A               ; Check for break
+FD41 CD70FD             CALL    SFTENT          ; Test for shift/enter
+FD44 CA50FD             JP      Z,TBRK2         ; Yes - Test for second break
+FD47 3A4D10             LD      A,(BRKFLG)      ; Get break flag
+FD4A B7                 OR      A               ; Break flag set?
+FD4B C250FD             JP      NZ,TBRK2        ; Yes - Test for second break
+FD4E AF                 XOR     A               ; Flag no break
+FD4F C9                 RET
+
+FD50 CD53FE     TBRK2:  CALL    BREAK2          ; Second break?
+FD53 3EFF               LD      A,-1            ; Flag break
+FD55 C9                 RET
+
+FD56 DB02       GUART:  IN      A,(UARTS)       ; Get UART status
+FD58 17                 RLA                     ; Any data ready?
+FD59 D256FD             JP      NC,GUART        ; No - wait until there is
+FD5C DB01               IN      A,(UARTD)       ; Get data from UART
+FD5E C9                 RET
+
+FD5F D301       UARTOT: OUT     (UARTD),A       ; Send data to UART
+FD61 DB02       URTOLP: IN      A,(UARTS)       ; Get status
+FD63 87                 ADD     A,A             ; Byte sent?
+FD64 F8                 RET     M               ; Yes - Return
+FD65 C361FD             JP      URTOLP          ; Keep waiting
+
+FD68 F5         SUART:  PUSH    AF              ; Save A
+FD69 CD5FFD             CALL    UARTOT          ; Send it to UART
+FD6C F1                 POP     AF              ; Restore A
+FD6D C9                 RET
+
+FD6E 00                 NOP
+FD6F 00                 NOP
+
+FD70 E5         SFTENT: PUSH    HL              ; Test for Shift Enter from KBD
+FD71 3E02               LD      A,00000010B     ; Reset KBD counter mask
+FD73 21000C             LD      HL,PORT0        ; Get old contents
+FD76 AE                 XOR     (HL)            ; Toggle bit
+FD77 D300               OUT     (0),A           ; Reset KBD counter
+FD79 EE01               XOR     00000001B       ; Toggle bit
+FD7B D300               OUT     (0),A           ; Next row
+FD7D EE02               XOR     00000010B
+FD7F D300               OUT     (0),A           ; Clear "clear" strobe
+FD81 7E                 LD      A,(HL)          ; Get old value
+FD82 D300               OUT     (0),A           ; Original contents
+FD84 19                 ADD     HL,DE           ; ?? WHAT&nbsp;??
+FD85 E1                 POP     HL              ; Restore HL
+FD86 DB00               IN      A,(0)           ; Read in row
+FD88 E612               AND     00010010B       ; Mask SHIFT and ENTER
+FD8A C9                 RET
+
+FD8B CD6DFE     CLS:    CALL    MONTST          ; See if NAS-SYS
+FD8E CA96FD             JP      Z,TCLS          ; "T" CLS
+FD91 3E0C               LD      A,CS            ; ASCII Clear screen
+FD93 C3D9FC             JP      CONMON          ; Output character
+
+FD96 3E1E       TCLS:   LD      A,TCS           ; <span class="uppercase">Nasbug</span> Clear screen
+FD98 C3D9FC             JP      CONMON          ; Output character
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_33.pdf#page=25" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

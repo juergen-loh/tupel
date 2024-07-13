@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">July&ndash;August 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../27/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 28 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../29/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-24 page-28" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    10</span>
+
+                ; RESERVED WORD TOKEN VALUES
+
+0080            ZEND    EQU     080H            ; END
+0081            ZFOR    EQU     081H            ; FOR
+0083            ZDATA   EQU     083H            ; DATA
+0088            ZGOTO   EQU     088H            ; GOTO
+008C            ZGOSUB  EQU     08CH            ; GOSUB
+008E            ZREM    EQU     08EH            ; REM
+009E            ZPRINT  EQU     09EH            ; PRINT
+00A4            ZNEW    EQU     0A4H            ; NEW
+
+00A5            ZTAB    EQU     0A5H            ; TAB
+00A6            ZTO     EQU     0A6H            ; TO
+00A7            ZFN     EQU     0A7H            ; FN
+00A8            ZSPC    EQU     0A8H            ; SPC
+00A9            ZTHEN   EQU     0A9H            ; THEN
+00AA            ZNOT    EQU     0AAH            ; NOT
+00AB            ZSTEP   EQU     0ABH            ; STEP
+
+00AC            ZPLUS   EQU     0ACH            ; +
+00AD            ZMINUS  EQU     0ADH            ; -
+00AE            ZTIMES  EQU     0AEH            ; *
+00AF            ZDIV    EQU     0AFH            ; /
+00B2            ZOR     EQU     0B2H            ; OR
+00B3            ZGTR    EQU     0B3H            ; &gt;
+00B4            ZEQUAL  EQU     0B4H            ; =
+00B5            ZLTH    EQU     0B5H            ; &lt;
+00B6            ZSGN    EQU     0B6H            ; SGN
+00C7            ZPOINT  EQU     0C7H            ; POINT
+00CD            ZLEFT   EQU     0CDH            ; LEFT$
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    11</span>
+
+                ; ARITHMETIC PRECEDENCE TABLE
+
+E2A4 79         PRITAB: DEFB    79H             ; Precedence value
+E2A5 94F9               DEFW    PADD            ; FPREG = &lt;last&gt; + FPREG
+
+E2A7 79                 DEFB    79H             ; Precedence value
+E2A8 C8F5               DEFW    PSUB            ; FPREG = &lt;last&gt; - FPREG
+
+E2AA 7C                 DEFB    7CH             ; Precedence value
+E2AB 06F7               DEFW    MULT            ; PPREG = &lt;last&gt; * FPREG
+
+E2AD 7C                 DEFB    7CH             ; Precedence value
+E2AE 67F7               DEFW    DIV             ; FPREG = &lt;last&gt; / FPREG
+
+E2B0 7F                 DEFB    7FH             ; Precedence value
+E2B1 B5FA               DEFW    POWER           ; FPREG = &lt;last&gt; ^ FPREG
+
+E2B3 50                 DEFB    50H             ; Precedence value
+E2B4 81EE               DEFW    PAND            ; FPREG = &lt;last&gt; AND FPREG
+
+E2B6 46                 DEFB    46H             ; Precedence value
+E2B7 80EE               DEFW    POR             ; FPREG = &lt;last&gt; OR FPREG
+
+                ; BASIC ERROR CODE LIST
+
+E2B9 4E46       ERRORS: DEFB    "NF"            ; NEXT without FOR
+E2BB 534E               DEFB    "SN"            ; Syntax error
+E2BD 5247               DEFB    "RG"            ; RETURN without GOSUB
+E2BF 4F44               DEFB    "OD"            ; Out of DATA
+E2C1 4643               DEFB    "FC"            ; Illegal function call
+E2C3 4F56               DEFB    "OV"            ; Overflow error
+E2C5 4F4D               DEFB    "OM"            ; Out of memory
+E2C7 554C               DEFB    "UL"            ; Undefined line
+E2C9 4253               DEFB    "BS"            ; Bad subscript
+E2CB 4444               DEFB    "DD"            ; Re-DIMensioned array
+E2CD 2F30               DEFB    "/0"            ; Division by zero
+E2CF 4944               DEFB    "ID"            ; Illegal direct
+E2D1 544D               DEFB    "TM"            ; Type mis-match
+E2D3 4F53               DEFB    "OS"            ; Out of string space
+E2D5 4C53               DEFB    "LS"            ; String too long
+E2D7 5354               DEFB    "ST"            ; String formula too complex
+E2D9 434E               DEFB    "CN"            ; Can't CONTinue
+E2DB 5546               DEFB    "UF"            ; Undefined FN function
+E2DD 4D4F               DEFB    "MO"            ; Missing operand
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../27/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 28 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../29/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_24.pdf#page=28" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

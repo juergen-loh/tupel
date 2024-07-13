@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 1 - Number 3 - November 1981</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Number 3 &middot;</span> <span class="nowrap">November 1981</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 24 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-13 page-24" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<pre>
+1200 FOR I=1 TO 4*H+4
+1210 READ J,K:POKE J,K:NEXT
+1220 IF F=0 THEN 1400
+1230 SCREEN 8,12:PRINT CHR$(23):SCREEN 8,12
+1240 PRINT SPC(17)
+1320 RESTORE 8000
+1330 FOR J=1 TO 44:READ K,L:POKE K,32:NEXT
+1340 POKE 2137,148
+1350 RESTORE 8000
+1360 FOR J=1 TO 44:READ K,L:POKE K+64,L:NEXT
+1370 POKE2264,185:POKE2266,185:POKE2329,0
+1380 POKE2839,157:POKE2840,157
+1390 POKE2842,157:POKE2843,157
+1400 RETURN
+8000 DATA 2137,153,2136,139,2138,138
+8002 DATA 2713,148
+8010 DATA 2199,131,2203,130,2263,130
+8020 DATA 2267,131,2328,157,2329,086
+8030 DATA 2330,157,2198,144,2200,111
+8040 DATA 2202,111,2204,145,2265,095
+8050 DATA 2327,131,2331,130,2390,131
+8060 DATA 2396,130,2453,131,2461,130
+8070 DATA 2455,148,2459,148,2460,130
+8080 DATA 2454,131,2523,148,2519,148
+8090 DATA 2517,079,2525,079,2583,148
+8100 DATA 2587,148,2585,148,2647,148
+8110 DATA 2649,148,2651,148,2710,144
+8120 DATA 2711,147,2715,146
+8130 DATA 2716,145,2392,094,2548,094
+8140 DATA 2520,094,2586,094
+9000 DATA AIREDALE , AUTONOMY , BEFUDDLED
+9002 DATA BOARDINGHOUSE , CAMARADERIE, CAMBER
+9004 DATA FREQUENCY, PROBATION, KNIGHTHOOD
+9010 DATA WATERMELON, BREADFRUIT, SATSUMA
+9020 DATA HAMMER, CHISEL, SCREWDRIVER, PLIERS
+9030 DATA BRADAWL, PLANE, WORKBENCH
+9040 DATA ASPIDISTRA , CLEMATIS, MARIGOLD
+9050 DATA NASTURTIUM, NARCISSUS, DAFFODIL
+9060 DATA JACKET, TROUSERS, RAINCOAT, SOCKS
+9070 DATA CUMMERBUND, CRAVAT, JUMPER, CARDIGAN
+9080 DATA TROMBONE, PIANOFORTE, BASSOON, TUBA
+9090 DATA CELLO, TRUMPET, CYMBAL, GUITAR
+9100 DATA CONSTANTINOPLE , COINCIDENCE
+9110 DATA CIRCUMLOCUTION, PARAPSYCHOLOGY
+9120 DATA CRUMBLE , CHEQUEBOOK , CASSETTE, ENVELOPE
+9130 DATA COMPUTER , ELECTRICITY, CEILING, RADIATOR
+9140 DATA PRINTING, SPECIALITY, FLOWERPOT
+9150 DATA ESTRANGE, ZEPHYR, ZEALOUS, XYLOPHONE
+9160 DATA YASHMAK, WISECRACK , WINDSHIELD, ZIP
+9170 DATA WHEREWITHAL, VIBRATION, VESTIBULE
+9180 DATA VERMICELLI, TRUCULENT, CHROMATIC
+9190 DATA SYNONYM, SYNCHRONIZE, SCYTHE
+9200 DATA PIN, SIT, SET, RACKET , RACECOURSE
+9210 DATA QUOTATION, QUICKSILVER, QUARTERMASTER
+9220 DATA PULP, PUFFBALL, PROXIMITY, PSYCHOTIC
+9230 DATA ILLUSTRATION, PRAGMATISM, POSTMAN
+9240 DATA POLYGON, ARCHITECTURE, ORTHODOX
+9250 DATA ONYX , OMNIBUS , NONCONFORMIST, TRY
+9290 DATA MURMUR, MYOPIC , MEADOWSWEET, MAYOR
+9999 DATA .
+</pre>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 24 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-1-3.pdf#page=26" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,475 @@
+/***************************************************************************/
+/* INMC-80 News */
+/* style.css / $Date: 2024-03-29 20:00:48 +0100 (Fr, 29. Mrz 2024) $ */
+/***************************************************************************/
+
+.mag-inmc-80-news p
+{
+	text-indent: 3em;
+	text-align: justify;
+}
+.mag-inmc-80-news .noindent p,
+.mag-inmc-80-news p.noindent,
+.mag-inmc-80-news p.continued
+{
+	text-indent: 0;
+}
+.mag-inmc-80-news p.indent,
+.mag-inmc-80-news pre.indent,
+.mag-inmc-80-news table.indent,
+.mag-inmc-80-news dl.indent,
+.mag-inmc-80-news ol.indent,
+.mag-inmc-80-news div.indent
+{
+	text-indent: 0;
+	margin-left: 3rem;
+}
+.mag-inmc-80-news h1.indent,
+.mag-inmc-80-news h2.indent
+{
+	text-indent: 0;
+	margin-left: 3rem;
+}
+
+.mag-inmc-80-news p.indent2,
+.mag-inmc-80-news pre.indent2,
+.mag-inmc-80-news table.indent2,
+.mag-inmc-80-news div.indent2
+{
+	text-indent: 0;
+	margin-left: 6rem;
+}
+
+.mag-inmc-80-news p.exdent
+{
+	margin-left: 3em;
+	text-indent: -3em;
+}
+.mag-inmc-80-news p.exdent2
+{
+	margin-left: 6em;
+	text-indent: -6em;
+}
+
+.mag-inmc-80-news table.content
+{
+/*	width: 85%;
+	margin-left: 15%
+*/
+}
+.mag-inmc-80-news table.content td.content-indent
+{
+	padding-left: 3em;
+}
+
+.mag-inmc-80-news .nojustify p
+{
+	text-align: inherit;
+}
+
+.mag-inmc-80-news p.center,
+.mag-inmc-80-news pre.center,
+.mag-inmc-80-news h1.center,
+.mag-inmc-80-news h2.center,
+.mag-inmc-80-news h3.center,
+.mag-inmc-80-news h4.center,
+.mag-inmc-80-news td.center
+{
+	text-indent: 0;
+	margin-left: 0;
+	text-align: center;
+}
+
+.mag-inmc-80-news h1.big-normal
+{
+	font-size: 200%; font-weight: normal;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-80-news dl dd
+{
+	margin-left: 3em;
+}
+
+.mag-inmc-80-news dl.wide dd
+{
+	margin-left: 6em;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-80-news h3.author
+{
+	text-align: right;
+}
+ 
+.mag-inmc-80-news.issue-01.page-01, .mag-inmc-80-news.issue-01.page-02, .mag-inmc-80-news.issue-01.page-51	{	background-color:rgb(180,207,172);	}
+.mag-inmc-80-news.issue-02.page-01, .mag-inmc-80-news.issue-02.page-02, .mag-inmc-80-news.issue-02.page-59	{	background-color:rgb(223,206,128);	}
+.mag-inmc-80-news.issue-03.page-01, .mag-inmc-80-news.issue-03.page-02, .mag-inmc-80-news.issue-03.page-55	{	background-color:rgb(231,117,107);	}
+.mag-inmc-80-news.issue-04.page-01, .mag-inmc-80-news.issue-04.page-02, .mag-inmc-80-news.issue-04.page-71	{	background-color:rgb(216,100,119);	}
+.mag-inmc-80-news.issue-05.page-01, .mag-inmc-80-news.issue-05.page-02, .mag-inmc-80-news.issue-05.page-71	{	background-color:rgb(209,186,168);	}
+
+/***************************************************************************/
+
+.mag-inmc-80-news table.inmc-news-content
+{
+	width: 100%;
+}
+
+.mag-inmc-80-news table.inmc-news-content tr th
+{
+	padding-top: 1em;
+}
+
+.mag-inmc-80-news table.inmc-news-content tr td:last-child
+{
+	text-align: right;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news table.ex-stock-list
+{
+	width: 100%;
+}
+
+.mag-inmc-80-news table.ex-stock-list tr th,
+.mag-inmc-80-news table.ex-stock-list tr td
+{
+	padding-top: 1em;
+}
+
+.mag-inmc-80-news table.ex-stock-list tr td:last-child
+{
+	text-align: right;
+}
+
+.mag-inmc-80-news table.ex-stock-list tr td.ex-stock-list-desc
+{
+	text-align: left;
+	padding-top: 0;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news table.cut-connect
+{
+	width: 100%;
+}
+
+/*.mag-inmc-80-news table.cut-connect tr td:nth-child(1),*/
+.mag-inmc-80-news table.cut-connect tr td:nth-child(2),
+.mag-inmc-80-news table.cut-connect tr th:nth-child(2),
+.mag-inmc-80-news table.cut-connect tr td:nth-child(4),
+.mag-inmc-80-news table.cut-connect tr th:nth-child(4),
+.mag-inmc-80-news table.cut-connect tr td:nth-child(5),
+.mag-inmc-80-news table.cut-connect tr th:nth-child(5),
+.mag-inmc-80-news table.cut-connect tr td:nth-child(6)
+{
+	text-align: right;
+}
+
+.mag-inmc-80-news table.cut-connect tr th:nth-child(3)
+{
+	text-align: center;
+}
+
+.mag-inmc-80-news table.cut-connect tr td:nth-child(1),
+.mag-inmc-80-news table.cut-connect tr td:nth-child(2),
+.mag-inmc-80-news table.cut-connect tr td:nth-child(4),
+.mag-inmc-80-news table.cut-connect tr td:nth-child(5)
+{
+	width: 10%;
+}
+
+.mag-inmc-80-news table.cut-connect tr td:nth-child(3)
+{
+	width: 30%;
+	padding-left: 1em
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news table.switch-setting
+{
+	width: 70%;
+}
+
+.mag-inmc-80-news table.switch-setting tr td
+{
+	width: 15%;
+	text-align: center;
+}
+
+.mag-inmc-80-news table.switch-setting tr td:nth-child(1),
+.mag-inmc-80-news table.switch-setting tr td:nth-child(2)
+{
+	width: auto;
+	text-align: inherit;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news table.either-up-down
+{
+	width: 60%;
+}
+
+.mag-inmc-80-news table.either-up-down tr td
+{
+	text-align: center;
+}
+
+.mag-inmc-80-news table.either-up-down tr td:first-child
+{
+	text-align: inherit;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news table.inmc-back-issues
+{
+	width: 40%;
+	margin-left: 10%;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news.issue-01 table.t4-to-nassys
+{
+	width: 100%;
+}
+
+.mag-inmc-80-news.issue-01 table.t4-to-nassys tr td:nth-child(4),
+.mag-inmc-80-news.issue-01 table.t4-to-nassys tr td:nth-child(5)
+{
+	white-space: nowrap;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news.issue-02.page-23 h2
+{
+	margin-left: 25%;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news.issue-02 table.inmc-mapp tr td:first-child
+{
+/*	text-align: right;*/
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news.issue-02 table.toolkit-compare td:first-child,
+.mag-inmc-80-news.issue-02 table.toolkit-compare th:first-child
+{
+	width: 30%;
+}
+
+.mag-inmc-80-news.issue-02 table.toolkit-compare th
+{
+	font-weight: normal;
+	padding-top: 1em;
+}
+
+.mag-inmc-80-news.issue-02 tr.toolkit-compare-section td
+{
+	font-weight: bold;
+	padding-left: 15%;
+	padding-top: 1em;
+}
+
+.mag-inmc-80-news.issue-02 tr.toolkit-compare-head td
+{
+	padding-top: 1em;
+	font-weight: bold;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news.issue-02 table.watkins-toolkit-functions td:first-child
+{
+	width: 10%;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news.issue-03 table.clubs tr td
+{
+	padding-top: 1em;
+	padding-bottom: 1em;
+	text-align: justify;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news.issue-04 table.bus-80-allocation tr td:first-child
+{
+	text-align: right;
+}
+
+.mag-inmc-80-news.issue-04 table.bus-80-allocation tr td:nth-child(2)
+{
+	text-align: center;
+	width: 3em;
+}
+
+.mag-inmc-80-news.issue-04 table.bus-80-allocation tr td:nth-child(3)
+{
+	width: 8em;
+}
+
+.mag-inmc-80-news.issue-04 table.bits-of-basic
+{
+	width: 70%;
+}
+
+.mag-inmc-80-news.issue-04 table.bits-of-basic tr td:first-child
+{
+	width: 50%;
+}
+
+.mag-inmc-80-news.issue-04 table.useful-routines
+{
+	width: 50%;
+}
+
+.mag-inmc-80-news.issue-04 table.useful-routines tr td:first-child
+{
+	width: 10%;
+}
+
+.mag-inmc-80-news.issue-04 table.useful-routines tr td:nth-child(3)
+{
+	width: 20%;
+	text-align: center;
+}
+
+/***************************************************************************/
+
+.mag-inmc-80-news.issue-05 p.debate-place
+{
+	text-indent: 0;
+	margin-left: 75%;
+}
+
+.mag-inmc-80-news.issue-05 p.debate-sign
+{
+	text-indent: -1em;
+	margin-left: 50%;
+}
+
+.mag-inmc-80-news.issue-05 table.psg
+{
+	width: 95%;
+}
+.mag-inmc-80-news.issue-05 table.psg td:first-child,
+.mag-inmc-80-news.issue-05 table.psg th:first-child
+{
+	width: 8%;
+}
+.mag-inmc-80-news.issue-05 table.psg tr:nth-child(2) td:nth-child(2),
+.mag-inmc-80-news.issue-05 table.psg tr:nth-child(2) th:nth-child(2),
+.mag-inmc-80-news.issue-05 table.psg tr td:nth-child(n+3),
+.mag-inmc-80-news.issue-05 table.psg tr th:nth-child(n+3)
+{
+	text-align: center;
+	width: 8%;
+}
+
+.mag-inmc-80-news.issue-05 table.bdir-bc1
+{
+	width: 70%;
+	margin-left: 3em;
+}
+.mag-inmc-80-news.issue-05 table.bdir-bc1 tr td
+{
+	text-align: center;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-inmc-80-news.issue-05 table.kbd-tab
+{
+	width: 95%;
+}
+.mag-inmc-80-news.issue-05 table.kbd-tab tr:first-child
+{
+	text-align: center;
+}
+.mag-inmc-80-news.issue-05 table.kbd-tab tr td
+{
+	width: 10%;
+}
+.mag-inmc-80-news.issue-05 table.kbd-tab tr td
+{
+	padding: 5px;
+	border-width: 1px;
+	border-style: none;
+}
+.mag-inmc-80-news.issue-05 table.kbd-tab tr:nth-child(n+3) td:nth-child(n+2),
+.mag-inmc-80-news.issue-05 table.kbd-tab tr td:nth-child(2)
+{
+	border-left-style: solid;
+}
+.mag-inmc-80-news.issue-05 table.kbd-tab tr td:first-child
+{
+	border-left-style: solid;
+}
+.mag-inmc-80-news.issue-05 table.kbd-tab tr td:last-child
+{
+	border-right-style: solid;
+}
+.mag-inmc-80-news.issue-05 table.kbd-tab tr:first-child td
+{
+	border-top-style: solid;
+}
+.mag-inmc-80-news.issue-05 table.kbd-tab tr:nth-child(2) td,
+.mag-inmc-80-news.issue-05 table.kbd-tab tr:last-child td
+{
+	border-bottom-style: solid;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-inmc-80-news.issue-05.page-31 table tr td:first-child
+{
+	width: 10em;
+}
+/*
+.mag-inmc-80-news.issue-05.page-32 u,
+.mag-inmc-80-news.issue-05.page-33 u
+{
+	 text-decoration-line: underline;
+	 text-decoration-style: double;
+}
+*/
+.mag-inmc-80-news.issue-05 table.rottab tr td:first-child
+{
+	width: 20%;
+}
+.mag-inmc-80-news.issue-05 table.rottab tr td:nth-child(2)
+{
+	width: 10%;
+}
+.mag-inmc-80-news.issue-05 table.rottab tr td:nth-child(3)
+{
+	width: 5%;
+}
+
+.mag-inmc-80-news.issue-05 table.blstab
+{
+	width: 100%
+}
+.mag-inmc-80-news.issue-05 table.blstab tr td
+{
+	padding-bottom: 1em;
+}
+.mag-inmc-80-news.issue-05 table.blstab tr td:first-child
+{
+	width: 20%
+}
+

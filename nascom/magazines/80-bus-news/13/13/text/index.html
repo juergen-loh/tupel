@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - July&ndash;October 1982 - Volume 1 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">July&ndash;October 1982 &middot; <span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 13 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-13 page-13" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+What the procedure does is print out the contents of the array REPLY.
+in such a way that no words are broken at the edge of the screen. The
+following declarations must be made either globally or in a higher level
+block.
+</p>
+<pre class="indent2">
+CONST
+  WIDTH = 48; {Or 80, if you have an <!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm812.htm" title="External Link: IVC" target="_blank" rel="noreferrer">Ivc</a><!-- /External Link -->
+.}
+VAR
+  REPLY : ARRAY [1..number] OF CHAR;
+</pre>
+<p>
+The value of &ldquo;number&rdquo; must be at least &ldquo;WIDTH&rdquo; characters greater than the
+maximum possible length of the text in REPLY, otherwise a nasty run time error
+will appear. I could have prevented this from happening, but it would have
+made the procedure even longer. Finally, the part of REPLY that is not filled
+with text must be filled with chr(13)&rsquo;s, i.e. carriage returns. This routine
+does, in fact, more or less the same thing as the OUTPUT routine I gave away
+in my
+<a href="../../../12/11/text/#article1">last article</a>.
+You can tell it is a popular thing to want to do because
+the Extended BASIC has the WRAP command to do the same thing&hellip;
+</p>
+<p>
+My conclusion is that this Pascal is a &ldquo;must&rdquo; for the CP/M user,
+although I have no experience of any of its rivals (are there any?) [Ed. &ndash;
+Yes, COM-PAS.]
+</p>
+<h3>
+<u>A few comments on Dave Hunt&rsquo;s last article.</u>
+</h3>
+<p>
+No, it isn&rsquo;t going to be destructive criticism, as that would be
+pretty pointless. I have been enjoying the series, and also marvelling at the
+speed he must be able to type at!
+</p>
+<p>
+One of the things Dave says is that he is
+<a href="../../../12/25/text/#article1">not a believer in flow charts</a>.
+Not much further on in the article, is something that I and the lads
+at D.J.A.I. Systems would both call a flowchart. That highly famous program,
+The Last One, uses flow charts that look just like the summary of the program
+flow shown on page&nbsp;26. I saw a demonstration of The Last One when I went to
+apply for a job there, and it is a really splendid program. Mind you, they did
+not give me a job, so they can&rsquo;t be all that clever!
+</p>
+<p>
+The idea of standardising input and output routines is splendid, and
+is one that I had considered trying to do for this column. What went wrong?
+Well, I found I couldn&rsquo;t remember enough about Nas-Sys to produce the Nas-Sys
+routines to simulate CP/M&rsquo;s more useful routines exactly enough to give
+complete standardisation. Or maybe I never really got used to Nas-Sys before I
+upgraded Marvin again. Dave has approached the idea in what might be a less
+ambitious way, but it does work&hellip;
+</p>
+<p>
+One of the things he has done that is much more naughty than writing
+self modifying code is to use a direct call to B2HEX. Surely, that should have
+been &pound;DF &pound;68 instead of &pound;CD &pound;F2 &pound;0E? There are more of these in there, now
+that I look again. Oh, now I see why! For the benefit of the CP/M machines, of
+course. For a moment, I thought I had found a real naughty&hellip; I will write out
+a hundred times, &ldquo;I must read all of the documentation.&rdquo;
+</p>
+<p>
+There is a small point concerning the part of the program that reads:
+</p>
+<pre class="indent2">
+LD A (TRYS)
+INC A
+DAA
+LD (TRYS) A
+</pre>
+<p>
+The values of TRYS in the program are such that there will be no problems with
+this bit of code, but it is important to note that INC A does not affect the
+carry flag, which will be in the state produced by the last opcode that
+affected it. This can result in DAA appearing to have made a mistake, and
+formed the basis of a competition in a prehistoric precursor of this magazine.
+If you use ADD A 1, you will not get this problem, although you will use one
+extra byte of RAM. (Obviously, if you are doing BCD arithmetic on multi-byte
+numbers, you may use ADC A 1.) I think I really caught you this time, Dave!
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 13 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_13.pdf#page=13" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

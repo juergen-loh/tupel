@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - Juli/Aug. 1983 - Ausgabe 7/8</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Juli/Aug. 1983 &middot;</span> <span class="nowrap">Ausgabe 7/8</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/06/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 10 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/09/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 1.5 Spalten: Start --><div class="row"><div class="col-sm-8">
+
+<h1 id="article1">
+T-FORTH
+</h1>
+<h3>
+von <span class="uppercase">Gerhard Klement</span>
+</h3>
+<p>
+Version 10.02.1983
+</p>
+
+<table lang=en>
+<tr>
+	<td colspan=5><!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+</td>
+</tr>
+<tr>
+	<td></td><td><p>
+		IF<br>
+		THEN<br>
+		ELSE<br>
+		BEGIN<br>
+		UNTIL<br>
+		WHILE<br>
+		LOOP<br>
+		DO</p>
+	</td>
+	<td colspan=3></td>
+</tr>
+<tr>
+	<td colspan=5><!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+</td>
+</tr>
+<tr>
+	<td><p>Ö---- T</p></td>
+	<td><p>Statement</p></td>
+	<td><p>Arg.</p></td>
+	<td><p>Ö--- T</p></td>
+	<td><p>Comment</p></td>
+</tr>
+<tr>
+	<td><p>X</p></td>
+	<td><p>DUP</p></td>
+	<td><p>-</p></td>
+	<td><p>x,x</p></td>
+	<td><p>Duplicate</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>DROP</p></td>
+	<td><p>-</p></td>
+	<td><p>Y</p></td>
+	<td><p>Drop value</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>SWAP</p></td>
+	<td><p>-</p></td>
+	<td><p>X,Y</p></td>
+	<td><p>Swap values</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>OVER</p></td>
+	<td><p>-</p></td>
+	<td><p>Y,X,Y</p></td>
+	<td><p>Get 2nd value down</p></td>
+</tr>
+<tr>
+	<td><p>X,n</p></td>
+	<td><p>PICK</p></td>
+	<td><p>-</p></td>
+	<td><p>X,Val</p></td>
+	<td><p>Get n. Element T=1</p></td>
+</tr>
+<tr>
+	<td><p>Z,Y,X</p></td>
+	<td><p>ROT</p></td>
+	<td><p>-</p></td>
+	<td><p>Y,X,Z</p></td>
+	<td><p>Rotate down</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CLEAR</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Stackpointer to init. val</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>R</p></td>
+	<td><p>-</p></td>
+	<td><p>Val.</p></td>
+	<td><p>Copy from R Stack</p></td>
+</tr>
+<tr>
+	<td><p>X</p></td>
+	<td><p>ÜR</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>X to Rstack</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>RÜ</p></td>
+	<td><p>-</p></td>
+	<td><p>X</p></td>
+	<td><p>X fron Rstack</p></td>
+</tr>
+<tr>
+	<td><p>Adr</p></td>
+	<td><p>&sect;</p></td>
+	<td><p>-</p></td>
+	<td><p>Val</p></td>
+	<td><p>16 Bit load</p></td>
+</tr>
+<tr>
+	<td><p>Adr</p></td>
+	<td><p>C&sect;</p></td>
+	<td><p>-</p></td>
+	<td><p>Val</p></td>
+	<td><p>8 Bit load</p></td>
+</tr>
+<tr>
+	<td><p>Val,Adr</p></td>
+	<td><p>!</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Store 16 bit val.</p></td>
+</tr>
+<tr>
+	<td><p>Val,Adr</p></td>
+	<td><p>C!</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Store 8 bit val.</p></td>
+</tr>
+<tr>
+	<td><p>From,To,Len</p></td>
+	<td><p>CMOVE</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Move</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>'</p></td>
+	<td><p>Name</p></td>
+	<td><p>Adr</p></td>
+	<td><p>Adr. of Constval</p></td>
+</tr>
+<tr>
+	<td><p>Val,Start,Len</p></td>
+	<td><p>FILL</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Fill memory</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>ZERO</p></td>
+	<td><p>-</p></td>
+	<td><p>0</p></td>
+	<td><p>Const.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>ONE</p></td>
+	<td><p>-</p></td>
+	<td><p>1</p></td>
+	<td><p>Const.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>NEGONE</p></td>
+	<td><p>-</p></td>
+	<td><p>-1</p></td>
+	<td><p>Const.</p></td>
+</tr>
+<tr>
+	<td><p>X</p></td>
+	<td><p>MINUS</p></td>
+	<td><p>-</p></td>
+	<td><p>Conplm (X)</p></td>
+	<td><p>Complement of X</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>+</p></td>
+	<td><p>-</p></td>
+	<td><p>Y+X</p></td>
+	<td><p>Sum</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Y-X</p></td>
+	<td><p>Difference</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>*</p></td>
+	<td><p>-</p></td>
+	<td><p>Y*X</p></td>
+	<td><p>Product</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>/</p></td>
+	<td><p>-</p></td>
+	<td><p>Y!X</p></td>
+	<td><p>Quotient</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>MOD</p></td>
+	<td><p>- &bull;</p></td>
+	<td><p>mod(Y/X)</p></td>
+	<td><p>Modulo i.e.remainder</p></td>
+</tr>
+<tr>
+	<td><p>Y,X</p></td>
+	<td><p>/MOD</p></td>
+	<td><p>-</p></td>
+	<td><p>Y/X,mod(X/Y)</p></td>
+	<td><p>Modulo</p></td>
+</tr>
+<tr>
+	<td><p>X</p></td>
+	<td><p>U</p></td>
+	<td><p>-</p></td>
+	<td><p>X+1</p></td>
+	<td><p>Increment</p></td>
+</tr>
+<tr>
+	<td><p>X</p></td>
+	<td><p>1-</p></td>
+	<td><p>-</p></td>
+	<td><p>X-1</p></td>
+	<td><p>Decrement</p></td>
+</tr>
+<tr>
+	<td><p>Val,Adr</p></td>
+	<td><p>+ !</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Add to memory</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>STRING</p></td>
+	<td><p>Nase</p></td>
+	<td><p>Adr</p></td>
+	<td><p>Generate new string</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>STRI</p></td>
+	<td><p>Name</p></td>
+	<td><p>Adr</p></td>
+	<td><p>Genr. string var</p></td>
+</tr>
+<tr>
+	<td><p>Val</p></td>
+	<td></td><td>
+	<p>-</p></td><td>
+	<p>-</p></td><td>
+	<p>ROUT nuneric</p></td>
+</tr>
+<tr>
+	<td><p>Val</p></td>
+	<td><p>EMIT</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT ASCII</p></td>
+</tr>
+<tr>
+	<td><p>X</p></td>
+	<td><p>SGNOUT</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT signed integer</p></td>
+</tr>
+<tr>
+	<td><p>X</p></td>
+	<td><p>OUT&pound;</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT HEX (X)</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CR</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT CR</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CLS</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Clear Screen</p></td>
+</tr>
+<tr>
+	<td><p>Lin,Col</p></td>
+	<td><p>SCREEN</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Set Cursor</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>SPACE</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT blank</p></td>
+</tr>
+<tr>
+	<td><p>Adr</p></td>
+	<td><p>?</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT Value at adr</p></td>
+</tr>
+<tr>
+	<td><p>Poistri</p></td>
+	<td><p>PRINTS</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT String</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>PROMPT</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT Ok stk CR</p></td>
+</tr>
+<tr>
+	<td><p>Val,Port</p></td>
+	<td><p>OUTPORT</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Val to Port</p></td>
+</tr>
+<tr>
+	<td><p>X</p></td>
+	<td><p>CRT</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>Out X to CRT</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>ERROR</p></td>
+	<td><p>-</p></td>
+	<td><p>Adr.errstri</p></td>
+	<td><p>Set poi to err.string</p></td>
+</tr>
+<tr>
+	<td><p>Tab</p></td>
+	<td><p>.R</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>ROUT advance curs.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>KEY</p></td>
+	<td><p>-</p></td>
+	<td><p>Val</p></td>
+	<td><p>RIN blink</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>RIN</p></td>
+	<td><p>-</p></td>
+	<td><p>Val</p></td>
+	<td><p>RIN no blink</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>&pound;IN</p></td>
+	<td><p>HEX Val</p></td>
+	<td><p>Val</p></td>
+	<td><p>Convert HEX to bin</p></td>
+</tr>
+<tr>
+	<td><p>Port</p></td>
+	<td><p>INPORT</p></td>
+	<td><p>-</p></td>
+	<td><p>Val</p></td>
+	<td><p>Get value from port</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CODBEG</p></td>
+	<td><p>-</p></td>
+	<td><p>Adr.codbeg</p></td>
+	<td><p>Constant</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CODEADR</p></td>
+	<td><p>-</p></td>
+	<td><p>Adr.free</p></td>
+	<td><p>Constant</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>NEXTADR</p></td>
+	<td><p>-</p></td>
+	<td><p>Adr.nxtfnct</p></td>
+	<td><p>Constant</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>NADR</p></td>
+	<td><p>Name</p></td>
+	<td><p>Adr.dicnam</p></td>
+	<td><p>Constant</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CONS</p></td>
+	<td><p>-</p></td>
+	<td><p>Adr.consfnct</p></td>
+	<td><p>Constant</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>VARBL</p></td>
+	<td><p>-</p></td>
+	<td><p>Adr.varbfnct</p></td>
+	<td><p>Constant</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CADR</p></td>
+	<td><p>Name</p></td>
+	<td><p>Adr.code</p></td>
+	<td><p>Variable</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>SCODE</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td><p>End TIL start MCODE</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>FORGET</p></td>
+	<td><p>Name</p></td>
+	<td><p>-</p></td>
+	<td><p>Delete incl. name</p></td>
+</tr>
+</table>
+
+<br>
+<!-- 3 Spalten: Spaltenwechsel --></div><div class="col-sm-4">
+<img class="img-fluid" src="../../Image-10-1.jpeg" alt="" width="198" height="915">
+<!-- 3 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/06/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 10 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/09/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+	<p class="nas-link"><!-- External Link --><a href="http://www.nascomhomepage.com/lang/Tforth.nas" title="Externer Link: Tforth.nas" target="_blank" rel="noreferrer">Download</a><!-- /External Link -->
+	des Programms von der <!-- External Link --><a href="http://www.nascomhomepage.com/" title="Externer Link" target="_blank" rel="noreferrer">Nascom Home Page</a><!-- /External Link -->.</p>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-07.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

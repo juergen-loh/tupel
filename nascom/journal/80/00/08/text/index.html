@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 0/80</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">0/80</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 8 von 12</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/01/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten: Start --><div class="style-multi-column-2">
+
+<p>
+<u>3. Was sind die Ursachen&nbsp;?</u>
+</p>
+
+<p>
+Dazu konnten auch die <span class="uppercase">Nascom</span>-Entwicklungsingenieure in
+Chesham nichts genaues sagen. Offenbar treten die Fehler durch
+Schaltspitzen an den Datenbustreibern (DM81LS97) und an
+Adreßmultiplexern
+(SN74157) auf. Dabei gelangen die Störungen über IC2 auf den
+Datenbus, wenn die
+Schalt&shy;schwel&shy;le dieses Bausteines zu tief liegt.
+Durch andere
+Lei&shy;ter&shy;bahn&shy;füh&shy;rung auf der RAM-Karte hätten sich
+diese Fehler möglicherweise vermeiden lassen. Bei der neuen 48k
+&ndash; RAM-Karte (ebenfalls mit dynamischen Speichern vom Typ
+<!-- External Link --><a href="https://console5.com/techwiki/images/8/85/MK4116.pdf" title="Externer Link" target="_blank" rel="noreferrer">4116</a><!-- /External Link -->),
+hat man diese sporadischen Speicherfehler offenbar nicht.
+</p>
+<p>
+Bei den alten <span class="uppercase">Nascom</span>-Grundplatinen (ISS.A und ISS.B) treten
+zusätzlich durch die Grundkarte noch Probleme auf. Diese
+Probleme äußern sich in vermehrtem Rauschen auf den
+Versorgungsleitungen und dem Datenbus. Für Abhilfe siehe unter
+4.)
+</p>
+
+<p>
+<u>4. Wie schafft man Abhilfe&nbsp;?</u>
+</p>
+
+<p>
+Dazu eine Reihe von &bdquo;Rezepten&ldquo;, die in unserer
+Re&shy;pa&shy;ra&shy;tur&shy;pra&shy;xis
+erarbeitet wurden. Führen Sie die erwähnten
+Maß&shy;nah&shy;men
+bitte bei 1. beginnend nacheinander aus. Bringt eine
+Maß&shy;nah&shy;me
+nichts, so gehen Sie bitte zum nächsten Punkt über. Sie sollten
+also keineswegs alle Maßnahmen auf einmal ausprobieren. Auch
+hier gilt: Oberdosis schadet&nbsp;!
+</p>
+
+<ol>
+	<li>Häufiger Fehler: Auf der Speicherkarte sind statt 74157
+		als Multiplexer 74LS157 eingebaut worden. Die &bdquo;LS&ldquo;-Typen
+		sind hier in aller Regel völlig fehl am Platz und führen
+		dazu, daß die Karte nicht richtig funktioniert. Die
+		Ausgangstreiber der LS-Bau&shy;stei&shy;ne sind für diese
+		An&shy;wen&shy;dung nicht leistungsfähig genug.<br><br></li>
+	<li>IC2 auf der Speicherkarte sollte ein DM81LS97 sein (oder
+		DM81LS95), der von <span class="uppercase">National</span>
+		<span class="uppercase">Semiconductors</span> gefertigt
+		wurde. Firmenzeichen: &#x2248;. Die Bausteine von AMD bringen
+		als IC2 verwendet oft viel schlechtere Ergebnisse. Sie
+		haben offenbar einen schlechteren Sig&shy;nal/&#x200b;Rausch-Abstand.
+		Insgesamt haben Sie auf der <span class="uppercase">Nascom</span>-Grundplatine, dem
+		Buffer Bus Board und RAM-Board zusammen sieben Stück DM81LS97.
+		Am besten vertauschen Sie diese ICs reihum, um das beste
+		zu finden.<br><br></li>
+	<li>Kritisch ist oft auch der DM81LS97 auf dem Buffer Bus
+		Board (IC1). Finden Sie auch dafür den besten Baustein,
+		wie unter 2.).</li>
+
+</ol>
+
+<!-- 2 Spalten: Spaltenwechsel -->
+
+<ol start=4>
+	<li>Legen Sie zwischen die Anschlüsse Pin 9 und Pin 14 der
+		IC4 &ndash; 11 je einen 4k7-Widerstand. Und nur an diese ICs&nbsp;!
+		Die andere Reihe von Speicher-ICs sollte unbehelligt
+		bleiben&nbsp;!<br><br></li>
+	<li>Nun können Sie noch dafür sorgen, daß sie auf den
+		Ver&shy;sor&shy;gungs&shy;lei&shy;tun&shy;gen
+		minimales Rauschen haben. Dazu
+		folgende (oft wichtige) Maßnahmen: Verbinden Sie die
+		Ver&shy;sor&shy;gungs&shy;span&shy;nungs&shy;an&shy;schlüs&shy;se,
+		die auf der linken Seite
+		der Platine liegen, mit den entsprechenden Anschlüssen
+		der rechten Seite. Die dicken
+		Ver&shy;sor&shy;gungs&shy;span&shy;nungs&shy;lei&shy;tun&shy;gen
+		konnten aus Platzgründen
+		nicht über die gesamte Platinenfläche geführt werden,
+		sodaß etliche Durch&shy;kon&shy;tak&shy;tie&shy;run&shy;gen
+		nötig wurden.<br><br></li>
+	<li>Um die Impulsform des MREQ-Signales zuverbessern, können
+		Sie anstatt des SN74LS04 auf dem Buffer Bus Board einen
+		SN74S04 einbauen. Auch mit dieser Än&shy;de&shy;rung konnten schon
+		gute Ergebnisse erzielt werden.<br><br></li>
+	<li>Achten Sie darauf, daß die Steckplätze für Buffer
+		Board und RAM-Board nicht viel mehr als 10cm auseinander
+		liegen. Größere Abstände bringen nicht unbedingt, aber
+		evtl. Probleme.<br><br></li>
+	<li>Sind Buffer-Board und RAM-Board sehr nahe beieinander, so
+		kann evtl. eine Abschirmplatte (Aluminium, verzinktes
+		Eisenblech) Abhilfe schaffen. Durch&shy;lö&shy;chern Sie die
+		Platte (10mm-Löcher), um gute Lüftung sicherzustellen.<br><br></li>
+	<li>Haben Sie noch einen älteren <span class="uppercase">Nascom</span>
+		(Pla&shy;ti&shy;nen&shy;be&shy;zeich&shy;nung
+		ISS.A oder ISS.B), dann sollten Sie die +5Volt und
+		Masselinien, die auf gegenüberliegenden Seiten der
+		Pla&shy;ti&shy;ne verlaufen, jeweils untereinander verbinden.
+		Bitte, achten Sie aber darauf, daß Sie nicht
+		versehentlich einen einen Kurzschluß mit einbauen....
+		Diese Maßnahme, ausgeführt mit 5 &ndash; 10 Drähten in Nähe
+		des Steckers, der zum Buffer Board führt, hat schon
+		recht gute Ergebnisse gebracht.<br><br></li>
+	<li>Wenn das alles nichts hilft, dann senden Sie Ihren <span class="uppercase">Nascom</span>
+		inklusive Buffer Bus Board, Motherboard und RAM-Board an:<br>
+<br>
+	<table>
+	<tr><td style="width: 20px"></td><td><span class="uppercase">Nascom</span>-Instandsetzungsservice</td></tr>
+	<tr><td></td><td>c/o M&nbsp;K&nbsp;&ndash; Systemtechnik</td></tr>
+	<tr><td></td><td>__________ __</td></tr>
+	<tr><td></td><td>____ Germersheim</td></tr>
+	</table>
+<br>
+		Wenn Sie noch Garantie auf Ihr Gerät haben (Gerät nicht älter
+		als 6 Monate), dann sollten Sie nicht vergessen, eine Kopie der
+		Rechnung Ihres Händlers beizufügen.</li>
+</ol>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 8 von 12</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/01/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../12/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/80-00.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

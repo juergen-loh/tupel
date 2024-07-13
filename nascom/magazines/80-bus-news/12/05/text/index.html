@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - April&ndash;June 1982 - Volume 1 - Issue 2</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">April&ndash;June 1982 &middot; <span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Issue 2</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 5 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-12 page-05" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="noindent">
+3) Oddities in the handling of REALs far down the Procedure/&#x200b;Function stack.<br>
+4) Faulty handling of ARRAY types in PEEKs. This has been corrected in the later
+versions of the compiler, but here is the correction anyway.
+</p>
+<p>
+First of all, load the compiler master tape, and relocate as usual, using an
+address for the Runtimes routines which is 10 bytes less than normal, and for the
+compiler which is 35 bytes less than normal (at least, in both cases). Before doing
+anything else it is advisable to have pencil and paper to hand. You should be
+familiar with using the A command of the Nas-Sys to calculate hex addresses and the M
+command to modify memory. COMP will indicate the Compiler address, RUN will indicate
+the Runtime address. The appropriate hex values should be substituted for these
+labels.
+</p>
+<p class="noindent">
+1) Calculate RUN + 0CA4H. At this address, you should find CD XX XX (using M
+command). Replace XXXX with RUN + 0FE1H. You are now setting up a jump over the
+runtimes to a patch at their end. At RUN + 0FE1H enter the following code&nbsp;&ndash;
+</p>
+<pre class="indent">
+CB 74 C2 XX XX 26 40 E3 E1 C9
+</pre>
+<p class="noindent">
+where XX XX is RUN + 0DE2H. Remember ALWAYs to enter the low order byte first.
+</p>
+<table>
+<tr><td>2)</td><td>At COMP + 0B6CH change 0C 06 02 to CD YY YY where YYYY COMP + 285FH.<br>
+At COMP + 1E95H change 06 02 EB to CD 22 ZZ where ZZZZ COMP + 285CH.<br>
+At COMP + 1D95H change EB C1 C3 UU UU to 00 Ci C3 W &laquo;VV,<br>
+where VVVV = UUUU + 1.<br>
+At COMP + &pound;285C enter the following code&nbsp;&ndash;</td></tr>
+</table>
+<pre class="indent">
+EB 18 01 0C 06 02 F5 79 32 FE 0C AF 32 FF 0C F1 C9
+</pre>
+<p class="noindent">
+3) At COMP + 1FB2H replace the current three bytes with CD SS SS where SSSS is the
+address of the byte after the C9 in the previous section.<br>
+At that address, add the following code&nbsp;&ndash;
+</p>
+<p>
+DD CB 01 C6 21 TT TT C9 where TTTT = COMP + 1FD5H
+</p>
+<p class="noindent">
+4) At COMP + 1EDEH change bytes from CA NN NN to 28 29 23. If they are already in
+position, then your compiler has had the PEEK bug corrected.
+</p>
+<p>
+Having done all this, now make a tape of the relocated compiler and runtime
+support routines. Remember that the compiler requires four parameters on entry, so
+you can&rsquo;t write a Generate tape. Make allowance for the increased length of the
+compiler and runtimes when saving on tape, and remember that any compilers relocated
+by the master tape will again require the same procedure to be gone through. In all
+cases, the addresses are entered into memory with the low order byte first.
+</p>
+<p>
+I am greatful to the authors of this compiler for details of these fixes, and
+for permission to bring them to you.
+</p>
+<p class="noindent">
+Rory O&rsquo;Farrell, Ireland.
+</p>
+<h3 id="article1">
+<u>PEN &ndash; 1</u>
+</h3>
+<p>
+I run CP/M&nbsp;2.2 on a Nascom&nbsp;2 with Gemini DD/DS drives and an
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm812.htm" title="External Link" target="_blank" rel="noreferrer">IVC</a><!-- /External Link -->.
+When using
+PEN I sometimes suffer from not remembering which case the keyboard is in. The
+differences between &ldquo;d&rdquo; and &ldquo;D&rdquo; can be somewhat frustrating.
+</p>
+<p>
+My original idea was to use the cassette LED to indicate the current case,
+but I found that whenever the keyboard was addressed the LED was put out. Since I
+have an N2 keyboard I have no need for the Control/&#x200b;Backspace toggle provided in the
+BIOS and so I decided to patch the BIOS and use this function to gain positive
+control of the case lock. With the patch below the Control/&#x200b;Backspace input always
+sets the case lock to small letters, the Control/&#x200b;Enter input remains the same &ndash; it
+flips the case lock each time. The last patch causes the case shift to be locked on
+capitals whenever the system is booted from cold.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 5 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_12.pdf#page=5" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

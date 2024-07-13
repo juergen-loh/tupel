@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
+	<!-- Sun, 07 Jul 2024 17:36:26 GMT -->
+	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">INMC 80 News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;September 1981 &middot; <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 32 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../05/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-inmc-80-news issue-04 page-32" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<table class="useful-routines">
+<tr><td colspan=4>Routine to get next non space<br>
+                  character.C flag set if valid</td></tr>
+<tr><td></td><td>ASCII digit</td><td>&ndash;&ndash;</td><td>E836</td></tr>
+<tr><td></td><td>Print HL in decimal</td><td>&ndash;&ndash;</td><td>F9AD</td></tr>
+<tr><td></td><td>Amount of memory</td><td>stored @</td><td>10DA</td></tr>
+<tr><td></td><td>Ctrl &lsquo;0&rsquo; flag</td><td>stored @</td><td>1045</td></tr>
+<tr><td></td><td>End of program</td><td>stored @</td><td>10D6</td></tr>
+<tr><td></td><td>Start of text</td><td>starts @</td><td>10F9</td></tr>
+<tr><td></td><td>Nulls</td><td>stored @</td><td>1041</td></tr>
+<tr><td></td><td>Line length</td><td>stored @</td><td>1042</td></tr>
+<tr><td></td><td>Location of text</td><td>stored @</td><td>1049</td></tr>
+<tr><td></td><td>Line buffer</td><td>stored @</td><td>1048</td></tr>
+</table>
+<p>
+While I was disassembling the BASIC I found a number of things that aren&rsquo;t
+mentioned in the manual such as ctrl &lsquo;O&rsquo;. &ldquo;What is ctrl &lsquo;O&rsquo;?&rdquo;, I hear you ask. It
+suppresses output (long word &lsquo;suppresses&rsquo;). Can I hear shouts of, &ldquo;Useless!&rdquo;? Well its
+not, because a flag is stored in the workspace. Poke the flag and you suppress output,
+useful for passwords and the like. Mind you this only works while the BASIC has
+control of the input buffer. This occurs when the input is in the NAS-SYS or <span class="uppercase">Nasbug</span> X0
+mode, or during an INPUT statement.
+</p>
+<p>
+Ever noticed how slow BASIC is on starting up? Take a look at locations FCCDH
+through to FCD4H these locations form a routine which is simply a delay. At this point
+I will grit my teeth and hope that I&rsquo;m right and that it is all it does.
+</p>
+<p>
+Ever wondered why you can&rsquo;t single step BASIC? It&rsquo;s because it changes the NMI
+jump vector in the workspace. If you want to single step BASIC ignore any calls to
+FEBBH because that&rsquo;s where it changes. Ok so it changes the NMI jump so what does it
+change it to? It changes it to the break function, so if you can generate an NMI you
+can use it as a break key. How do I generate an NMI&nbsp;? Simple connect a push to make
+switch between pin 4 of the keyboard and ground. (Nascom&nbsp;2 only. Ed.)
+</p>
+<!-- 1 column: end --></div>
+<br>
+<!-- 2() columns: start --><div class="row"><div class="col-sm-6">
+<p style="text-align: right">
+Hope that this helps you,<br>
+Nutty Nascom Owner.
+</p>
+<!-- 2 columns: change --></div><div class="col-sm-6">
+<p style="text-align: right">
+Steven Hanselman
+</p>
+<!-- 2 columns: end --></div></div>
+<br>
+<!-- 1 column: start --><div>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<br>
+<table><tr><td>
+<h2 id="article1">
+<u class="double uppercase">Homilies</u>
+</h2>
+</td><td>
+<h3>
+&nbsp; (&ndash; are they legal&nbsp;!?)
+</h3>
+</td></tr></table>
+<p>
+Two little homilies (I&rsquo;ve just looked that up in the dictionary, it said,
+&ldquo;Pedious moralizing discourse.&rdquo;, I didn&rsquo;t know how close my choice of words was). Both
+of these concern the design and/or testing of new equipment, and both are printed here
+for those just on the point of desparation.
+</p>
+<p>
+The first came from my father, who spent a lot of my early childhood
+constructing television sets out of war surplus radar sets. As I remember, they had
+long persistence green screens. When I first cut my teeth on a soldering iron (and
+that hurt), he told me, &ldquo;It will always take so long to build a thing, and then at
+least five times as long to make it work.&rdquo;. That one has always stood me in good stead
+when doubtful homebrew circuits didn&rsquo;t do as expected. I must admit it&rsquo;s preserved my
+sanity, if only in a perverse desire to prove my old man wrong.
+</p>
+<p>
+The origin of the second is more obsure, I may have even invented it myself. I
+certainly use it in the shop when customers present themselves with a handful of dud
+chips. It goes as follows. &ldquo;One dud is too bad, change it, the second is coincdence,
+three is &lsquo;Hmmmm&rsquo;, and four or more, is &lsquo;you&rsquo;ve done something wrong mate&rsquo;.&rdquo; This one
+proved it&rsquo;s worth only yesterday, when a customer came in with no less than eight
+&ldquo;dud&rdquo; CD4028s. Now eight is stretching even my credulity a bit far, so after applying
+the above rule, it turned out that he&rsquo;d forgotten to connect the power rails to any of
+the chips. QED.
+</p>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 32 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../05/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/INMC_80_News_4.pdf#page=32" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

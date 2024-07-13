@@ -1,0 +1,582 @@
+/***************************************************************************/
+/* Micropower */
+/* style.css / $Date: 2024-03-29 20:00:48 +0100 (Fr, 29. Mrz 2024) $ */
+/***************************************************************************/
+
+.mag-micropower .noindent p,
+.mag-micropower p.noindent,
+.mag-micropower p.continued
+{
+	text-indent: 0;
+}
+.mag-micropower p.indent,
+.mag-micropower h4.indent,
+.mag-micropower table.indent,
+.mag-micropower pre.indent,
+.mag-micropower div.indent,
+.mag-micropower ol.indent,
+.mag-micropower ul.indent,
+.mag-micropower dl.indent
+{
+	text-indent: 0;
+	margin-left: 3rem;
+}
+.mag-micropower p.indent2,
+.mag-micropower h4.indent2,
+.mag-micropower ol.indent2,
+.mag-micropower pre.indent2,
+.mag-micropower table.indent2,
+.mag-micropower dl.indent2
+{
+	text-indent: 0;
+	margin-left: 6rem;
+}
+.mag-micropower p.indent3
+{
+	text-indent: 0;
+	margin-left: 9em;
+}
+
+.mag-micropower p.exdent
+{
+	margin-left: 3em;
+	text-indent: -3em;
+}
+
+.mag-micropower p.exdent2
+{
+	margin-left: 6em;
+	text-indent: -6em;
+}
+
+.mag-micropower p.center,
+.mag-micropower pre.center,
+.mag-micropower h1.center,
+.mag-micropower h2.center,
+.mag-micropower h3.center,
+.mag-micropower h4.center,
+.mag-micropower td.center
+{
+	text-indent: 0;
+	margin-left: 0;
+	text-align: center;
+}
+.mag-micropower table.center
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.location-of-bits
+{
+	width: 100%;
+}
+
+.mag-micropower table.location-of-bits tr td:nth-child(3),
+.mag-micropower table.location-of-bits tr th:nth-child(3),
+.mag-micropower table.location-of-bits tr td:nth-child(4),
+.mag-micropower table.location-of-bits tr th:nth-child(4),
+.mag-micropower table.location-of-bits tr td:nth-child(5),
+.mag-micropower table.location-of-bits tr th:nth-child(5)
+{
+	text-align: center;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.tbi-v2
+{
+	width: 100%;
+}
+
+.mag-micropower table.tbi-v2 td
+{
+	text-align: center;
+}
+
+.mag-micropower table.tbi-v2 td:last-child
+{
+	text-align: left;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.for-sale-brian
+{
+	width: 100%;
+}
+
+.mag-micropower table.for-sale-brian tr td:last-child
+{
+	text-align: right;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.prommer-partlist
+{
+	width: 100%;
+	margin-left: 3em;
+}
+
+.mag-micropower table.prommer-partlist tr td
+{
+	padding-left: 3em;
+}
+
+.mag-micropower table.prommer-partlist tr th
+{
+	font-weight: normal;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.magic-hexagon
+{
+	margin: auto;
+}
+
+.mag-micropower table.magic-hexagon tr td
+{
+	text-align: center;
+	padding-left: 0.5em;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.bank-link
+{
+	margin-left: 3em;
+	width: 80%;
+}
+
+.mag-micropower table.bank-link tr td
+{
+	text-align: center;
+	padding-bottom: 1em;
+}
+
+.mag-micropower table.bank-link tr:last-child td
+{
+	padding-bottom: inherit;
+}
+
+.mag-micropower table.bank-link tr td:first-child
+{
+	text-align: inherit;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.mm58174-registers
+{
+	width: 100%;
+}
+
+.mag-micropower table.mm58174-registers tr td
+{
+	text-align: center;
+}
+
+.mag-micropower table.mm58174-registers tr td:nth-child(1),
+.mag-micropower table.mm58174-registers tr td:nth-child(2),
+.mag-micropower table.mm58174-registers tr td:last-child,
+.mag-micropower table.mm58174-registers tr:nth-child(4) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(5) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(6) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(7) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(8) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(9) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(10) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(11) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(13) td:nth-child(3),
+.mag-micropower table.mm58174-registers tr:nth-child(14) td:nth-child(3)
+{
+	text-align: inherit;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.nasbus-connections
+{
+	width: 80%;
+}
+
+.mag-micropower table.nasbus-connections tr td
+{
+	text-align: center;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.leap-year
+{
+//	margin-left: 6em;
+	margin-left: 13.5%;
+}
+
+.mag-micropower table.leap-year tr td
+{
+	text-align: center;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.w-r-wenable
+{
+	margin: auto;
+}
+
+.mag-micropower table.w-r-wenable tr td
+{
+	text-align: center;
+}
+
+.mag-micropower table.w-r-wenable tr td:first-child
+{
+	text-align: right;
+	padding-right: 1em;
+}
+
+.mag-micropower table.w-r-wenable tr:nth-child(2),
+.mag-micropower table.w-r-wenable tr:nth-child(3)
+{
+	vertical-align: middle;
+}
+
+.mag-micropower table.w-r-wenable tr:nth-child(2) td
+{
+	width: 2em;
+	border-width: 1px;
+}
+
+.mag-micropower table.w-r-wenable tr:nth-child(2) td:first-child
+{
+	width: inherit;
+	border-width: inherit;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.port-bit
+{
+	margin-left: 6em;
+}
+
+.mag-micropower table.port-bit tr td:first-child,
+.mag-micropower table.port-bit tr td:first-child
+{
+	text-align: center;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.bit-function-name
+{
+	width: 100%
+}
+
+.mag-micropower table.bit-function-name tr td:first-child,
+.mag-micropower table.bit-function-name tr th:first-child	
+{
+	text-align: center;
+}
+
+.mag-micropower table.bit-function-name tr th:nth-child(2)
+{
+	padding-left: 2em;
+}
+
+/***************************************************************************/
+
+.mag-micropower table.eprom-comp
+{
+	width: 100%;
+}
+
+.mag-micropower table.eprom-comp tr td,
+.mag-micropower table.eprom-comp tr th
+{
+	border-width: 1px;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	width: 20%;
+}
+
+/***************************************************************************/
+
+.mag-micropower h1
+{
+	text-align: center;
+	font-size: 1.2em;
+}
+.mag-micropower h2
+{
+	text-align: center;
+	font-size: 1.1em;
+}
+.mag-micropower h3,
+.mag-micropower table.contentHeading td
+{
+	font-size: 1.0em;
+}
+.mag-micropower h3.author
+{
+	text-align: center;
+}
+
+.mag-micropower p
+{
+	text-indent: 3em;
+	text-align: justify;
+}
+.mag-micropower p.continued
+
+{
+	text-indent: 0;
+}
+.mag-micropower table.content,
+.mag-micropower table.contentHeading
+{
+	width: 100%;
+}
+.mag-micropower table.content th,
+.mag-micropower table.content td
+{
+	padding: 0.4em 0;
+}
+.mag-micropower table.content td:last-child
+{
+	white-space: nowrap;
+}
+
+.mag-micropower table.contentHeading th,
+.mag-micropower table.contentHeading td
+{
+	padding: 0;
+	font-weight: bold;
+}
+.mag-micropower table.contentHeading > tbody > tr > td:nth-child(2)
+{
+	text-align: center;
+}
+.mag-micropower table.contentHeading > tbody > tr > td:last-child
+{
+	text-align: right;
+}
+.mag-micropower.issue-11.page--1, .mag-micropower.issue-11.page-00, .mag-micropower.issue-11.page-33
+{
+	background-color:rgb(255,49,156);
+}
+.mag-micropower.issue-12.page--1, .mag-micropower.issue-12.page-00, .mag-micropower.issue-12.page-33
+{
+	background-color:rgb(255,255,0);
+}
+.mag-micropower.issue-13.page--1, .mag-micropower.issue-13.page-00, .mag-micropower.issue-13.page-33
+{
+	background-color:rgb(165,189,222);
+}
+.mag-micropower.issue-14.page--1, .mag-micropower.issue-14.page-00, .mag-micropower.issue-14.page-33
+{
+	background-color:rgb(195,243,210);
+}
+.mag-micropower.issue-21.page--1, .mag-micropower.issue-21.page-00, .mag-micropower.issue-21.page-37
+{
+	background-color:rgb(255,255,165);
+}
+.mag-micropower.issue-22.page--1, .mag-micropower.issue-22.page-00, .mag-micropower.issue-22.page-37
+{
+	background-color:rgb(197,206,214);
+}
+.mag-micropower.issue-23.page--1, .mag-micropower.issue-23.page-00, .mag-micropower.issue-23.page-37
+{
+	background-color:rgb(140,165,214);
+}
+.mag-micropower.issue-24.page--1, .mag-micropower.issue-24.page-00, .mag-micropower.issue-24.page-36
+{
+	background-color:rgb(181,197,148);
+}
+
+.mag-micropower.page-00 table.pricelist
+{
+	width: 100%;
+	padding: 0;
+}
+.mag-micropower.page-00 table.pricelist > tbody > tr > td:nth-child(2)
+{
+	text-align: right;
+	padding-left: 0.5em;
+}
+.mag-micropower.page-00 table.pricelist h3
+{
+	text-indent: 2em;
+	margin: 0;
+}
+.mag-micropower .article-stopper
+{
+	text-indent: 0;
+	text-align: center;
+}
+.mag-micropower table.lspace-padding > tbody > tr > td
+{
+	padding: 0;
+	padding-left: 2em;
+}
+.mag-micropower table.rspace-padding > tbody > tr > td
+{
+	padding: 0;
+	padding-right: 2em;
+}
+.mag-micropower table.waveform-notes > tbody > tr > td:nth-child(2)
+{
+	text-align: center;
+}
+
+/***************************************************************************/
+
+.mag-micropower.page--1 h1,
+.mag-micropower.page--1 h2,
+.mag-micropower.page--1 div
+{
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.mag-micropower.page--1 table
+{
+	width: 100%;
+}
+
+.mag-micropower.page--1 table tr:nth-child(1) td:nth-child(1)
+{
+	max-width: 100px;
+	min-width: 75px;
+}
+
+.mag-micropower.page--1 table tr:nth-child(1) td:nth-child(2)
+{
+	height: 57px;/*4.5em;*/
+	vertical-align:middle;
+}
+
+.mag-micropower.page--1 table tr td table
+{
+	width: 100%;
+/*	vertical-align: top;
+*/
+}
+
+.mag-micropower.page--1 table tr table tr td
+{
+	text-align: right;
+	vertical-align: middle;
+}
+
+.mag-micropower.page--1 table tr table tr td:nth-child(2) h1
+{
+	text-align: right;
+}
+
+.mag-micropower.page--1 table h1 span:nth-child(2)
+{
+	float: right;
+}
+
+.mag-micropower.page--1 table tr:nth-child(2) td:nth-child(1)
+{
+	height: 29px;/*1.7em;*/
+	border-style: solid none;
+	border-width: 5px;
+}
+
+.mag-micropower.page--1 h2
+{
+	text-align: center;
+}
+
+/***************************************************************************/
+
+.mag-micropower h2.heading-box
+{
+	text-align: left;
+}
+.mag-micropower .heading-box span
+{
+	padding: 0 0.3em;
+/*	width: 100%;*/
+}
+.mag-micropower .heading-box span:last-child
+{
+	float: right;
+}
+
+.mag-micropower .letters-address
+{
+	text-indent: -20%;
+	margin-left: 30%;
+}
+.mag-micropower .other-address
+{
+	text-indent: 0;
+	margin-left: 30%;
+}
+.mag-micropower.issue-12.page-06 table
+{
+	width: 70%;
+	margin-left: 20%;
+}
+.mag-micropower.issue-12.page-06 td
+{
+	padding: 0;
+}
+.mag-micropower.issue-12.page-06 td:last-child
+{
+	padding: 0 1em;
+	width: 20%;
+	vertical-align: bottom;
+}
+
+.mag-micropower.issue-12.page-13 table
+{
+	width: 60%;
+	margin-left: 10%;
+}
+.mag-micropower.issue-12.page-13 td,
+.mag-micropower.issue-12.page-13 th
+{
+	padding: 0;
+	padding-left: 10%;
+}
+.mag-micropower.issue-12.page-13 td:first-child,
+.mag-micropower.issue-12.page-13 th:first-child
+{
+	text-align: center;
+}
+
+.mag-micropower.issue-12.page-16 h4
+{
+	text-align: center;
+}
+.mag-micropower.issue-12.page-16 pre
+{
+	margin-left: 10%;
+}
+.mag-micropower p.indent,
+.mag-micropower ol.indent
+{
+	text-indent: 0;
+	margin-left: 3em;
+}
+.mag-micropower ol.alpha
+{
+	list-style-type: lower-alpha;
+}
+.mag-micropower ol.round-bracket li::before
+{
+	content: ")";
+	float: left;
+	width: 0.8em;
+}

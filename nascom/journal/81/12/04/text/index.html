@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - Dezember 1981 - Ausgabe 11/12</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Dezember 1981 &middot;</span> <span class="nowrap">Ausgabe 11/12</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../03/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/10/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 4 von 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/01/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../05/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<pre class="donthyphenate">
+: READSCR  RFLAG PEEKW DUP 48 EQ
+           IF    POP 13 ONE RFLAG POKEW
+           ELSE  INC RFLAG POKEW
+                 CURSADR PEEKW PEEKB THEN ;
+CADR  READSCR CONSTANT RSCR
+</pre>
+<p>
+Nun kann endlich der EDITOR compiliert werden:
+</p>
+<pre class="donthyphenate">
+: EDITOR  REPEAT CIN DUP 16 EQ UNTIL
+          COUT                  LOOP
+          POP RSCR INVAR POKEW
+          INTERPRETER
+          BLADR INVAR POKEW
+          ONE ONE SCREEN              ;
+</pre>
+<p>
+In den EDITOR-Modus kann man ebenfalls mit ENTRY einsteigen. Man kann
+nun beliebig auf den Bildschirm schreiben und dabei auch die
+Cursor-Befehle des Betriebssystems (NAS-SYS!) benutzen. Dabei sollte
+stets die erste Position einer Zeile freibleiben, ebenso die letzte
+(obwohl man dies vermeiden kann, wenn man in der Definition von READ&shy;SCR
+den Wert 48 durch 49 ersetzt), Mit &bdquo;CTRL P&ldquo; kann der
+<span class="uppercase">Interpreter</span> aufgerufen werden. Der Cursor muß dabei immer am Anfang der
+Zeile stehen, die ausgeführt bzw. compiliert werden soll. Nach
+Ausführung des Befehls kehrt das Programm wieder in die EDITOR-Schleife
+zurück, wobei der Cursor an den Anfang der ersten Zeile gesetzt wird.
+Es kann zwar der ganze Bildschirm benutzt werden, doch man sollte die
+erste Zeile als Kommandozeile freihalten (besonders, wenn man Befehle
+mehrfach ausführen will). Wenn man die 15. Zeile benutzt, wird der
+Bildschirminhalt nach oben geschoben. Wenn das nicht gewollt wird, muß
+man auch diese Zeile freihalten, Nach einiger Uebung kann man mit dem
+EDITOR sehr schnell arbeiten und wird dann kaum noch den
+Interpretermodus benutzen.
+</p>
+<p>
+Die folgenden Ein- und Ausgaberoutinen für
+Cassettenrecorder und Drucker sind auf den EDITOR-Modus abgestimmt.
+Zunächst brauchen wir einige Hilfsroutinen, die teilweise in
+Maschinencode geschrieben sind und auf das Betriebssystem
+zurückgreifen:
+</p>
+<pre class="donthyphenate">
+MCODE OUTC
+XXXX  21 7A 07 22 73 0C.
+MCODE OUTD
+XXXX  21 7E 07 22 73 0C 21 80
+XXXX  0C 22 78 0C.
+</pre>
+<p>
+(Bei C80H liegt bei mir das Treiberprogramm für den Hofer-Drucker)
+</p>
+<pre class="donthyphenate">
+MCODE OUTN
+XXXX  21 7F 07 22 73 0C 21 2F
+</pre>
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+<pre class="donthyphenate">
+XXXX  00 22 78 0C.
+: DELAY   1 FOR LOOP ;
+: MOTOR   95 NAS-SYS 5000 DELAY ;
+CADR NORMIN CONSTANT NIN
+</pre>
+<p>
+Die Verzögerungsroutine DELAY besteht
+aus einer einfachen Schleife und erwartet den Endwert der Schleife auf
+dem Stack. Es sind Verzögerungen bis zu einer halben Minute möglich.
+MOTOR schaltet den Recorder ein oder aus. Für die Ausgabefunktionen
+brauchen wir die Routine OUT&shy;LINES:
+</p>
+<pre class="donthyphenate">
+: OUTLINES  SWAP LINE ONE FOR
+             REPEAT CIN DUP COUT
+                    13 EQ UNTIL
+             LOOP LOOP           ;
+</pre>
+<p>
+Diese Funktion wird folgendermaßen
+aufgerufen: (Startzeile) (Zeilenzahl) OUT&shy;LINES. Nun kann der
+Bildschirminhalt (im EDITOR-Modus!) auf einfache Weise ausgegeben
+werden:
+</p>
+<pre class="donthyphenate">
+: WRITEC  MOTOR OUTC 193 COUT BACKSPACE
+          OUTLINES 197 COUT BACKSPACE
+          OUTN 5000 DELAY MOTOR          ;
+: PRINT   OUTD OUTLINES OUTN             ;
+</pre>
+<p>
+WRITEC schreibt als Startzeichen den Wert des Zeichens &bdquo;A&ldquo; +
+128, d.h. mit gesetztem Bit 7 aufs Band und als Schlußzeichen den Wert
+von &bdquo;E&ldquo; + 128. Ich hatte es erst ohne Startzeichen versucht
+und dabei häufig Lesefehler erhalten, Nun müssen die auf Cassette
+geschriebenen Programme (oder auch Text, wie dieser Artikel) noch
+eingelesen werden können mit der folgenden Funktion:
+</p>
+<pre class="donthyphenate">
+: READC  NIN INVAR POKEW MOTOR
+      REPEAT CIN DUP 193 EQ UNTIL POP LOOP
+      REPEAT COUT CIN DUP 197 EQ UNTIL LOOP
+      COUT CIN COUT MOTOR ;
+</pre>
+<p>
+Was kann man damit anfangen? In den
+bisherigen Beiträgen wurde vor allem der innere Aufbau dieser
+FORTH-Version behandelt. Wir wollen sie nun einmal von der
+Anwenderseite her betrachten. Wenn man das Programm gestartet hat,
+wartet es auf Eingaben. Dies können Zahlen (in unserem Fall
+auschließlich 16-Bit-Integer/&#x200b;Dezimalzahlen) oder Worte sein. Als
+&bdquo;Wort&ldquo; gilt jede Folge von Zeichen, die von Leerzeichen
+eingeschlossen ist. Die Zahlen werden in ihr binäres Äquivalent
+umgewandelt und auf den Stack gegeben. Worte werden im Dictionary
+gesucht. Jedes Wort im Dictionary bezeichnet eine Funktion. (Auch
+Konstante und Variable gelten als Funktion; sie geben den Wert der
+Konstanten bzw. die Adresse des
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../03/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/10/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 4 von 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/01/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../05/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/81-12.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

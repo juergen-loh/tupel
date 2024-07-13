@@ -1,0 +1,1578 @@
+; ***************************************************************
+; *								*
+; *			P I C O - S Y S				*
+; *			Version 1.0/1.1				*
+; *			Datum: 22.09.87				*
+; *								*
+; ***************************************************************
+
+true	equ	1 eq 1
+false	equ	not true
+
+schnell	equ	true		; true = schnelles Kassetteninterface
+mode2	equ	true		; true = Interrupts ein
+test	equ	false		; zum Speichersparen
+				; calc, move
+cass	equ	true		; dto. save/load
+layout	equ	true		; fuer neues Layout auf 'true' setzen
+
+    if schnell
+	title	Pico-Sys V1.1
+	version	equ	11h	; jeweils anpassen!
+    else ; if schnell
+	title	Pico-Sys V1.0
+	version	equ	10h	; jeweils anpassen!
+    endif ; if schnell
+
+; umgesetzt fuer m80 am 14.11.85
+; Interrupt-Anzeigensteuerung 11.01.86
+
+	aseg
+	.z80
+
+rom	equ	0000h
+romtop	equ	rom+2048
+ram	equ	0800h
+sysram	equ	ram+40h
+segment	equ	ram+400h
+ramtop	equ	ram+2048
+
+diszyk	equ	20
+
+pio	equ	00h
+ctc	equ	04h
+j18	equ	08h
+
+free	equ	53
+
+	page	65
+
+	org	ram
+scavdu:	defs	8
+tast:	defs	8
+vdu:	defs	8
+tasfnd:	defs	1
+timeb:	defs	1
+led:	defs	1		; bit 3=SET-Modus
+				; bit 2=Zweitregister
+				; bit 1=Move-Modus
+
+key:	defs	1		; Bit 76 543 210
+				;     cs row col
+cursor:	defs	1
+aufz:	defs	2
+arg1:	defs	2
+arg2:	defs	2
+chsum:	defs	1
+temp:	defs	2
+brkadr:	defs	2
+brkval:	defs	1
+argc:	defs	1
+sptemp:	defs	2
+conflg:	defs	1		; bit 7=go-/step
+				; bit 3=LOAD-error
+				; bit 2=Zweitreg.
+				; bit 1=Zwischensp. f. bit 2
+lcount:	defs	1
+monstk:	defs	free
+stack	equ	$
+raf:	defs	2
+rix:	defs	2
+riy:	defs	2
+rbc:	defs	2
+rde:	defs	2
+rhl:	defs	2
+initr	equ	$
+rsp:	defs	2
+ri:	defs	1
+riff:	defs	1		; Bit 0=iff1
+rpc:	defs	2
+point:	defs	1
+timed:	defs	1
+cnorm:	defs	1
+inttab:	defs	8
+inite	equ	$
+
+tai	equ	10h
+sps	equ	01h
+zes	equ	04h
+les	equ	02h
+brk	equ	80h
+mic	equ	08h
+
+    if layout
+cledoff	equ	brk+tai
+cledon	equ	brk+tai+mic
+    else ; if layout
+cledoff	equ	brk+tai+mic
+cledon	equ	brk+tai
+    endif ; if layout
+
+f1khz	equ	65
+f2khz	equ	31
+mperiod	equ	42
+
+    if schnell
+	one1k	equ	4/2
+	one2k	equ	4/2
+	zero1k	equ	2/2
+	zero2k	equ	8/2
+    else ; if schnell
+	one1k	equ	4
+	one2k	equ	4
+	zero1k	equ	2
+	zero2k	equ	8
+    endif ; if schnell
+
+paout	equ	82h
+pain	equ	92h
+
+shift	equ	00000101b	; Bit: 76 543 210
+ctrl	equ	00111111b	;      00 row col
+
+tabsft	equ	tast+((shift shr 3) and 111b)
+bshift	equ	1 shl (shift and 111b)
+tabctr	equ	tast+((ctrl shr 3) and 111b)
+bctrl	equ	1 shl (ctrl and 111b)
+
+prsend	equ	88h
+
+chkj	macro	?dd
+	  if2
+	    if (?dd-$-1 gt 0007fh) and (?dd-$-1 lt 0ff80h)
+	      .printx	* RCAL Range Error, Label= ?dd *
+	    endif
+	  endif ; if2
+	endm ; chkj
+
+scal	macro	?n
+	defb	0dfh,?n	;$
+	endm ; scal
+
+rcal	macro	?n
+	chkj	?n
+	defb	0d7h,?n-$-1	;$
+	endm ; rcal
+
+
+	org	rom
+start:
+	ld	sp,ramtop
+	rcal	stmon
+	jp	mret
+
+rin:
+	jr	rin1
+prs2:
+	rst	rout
+	jr	prs1
+stmon:
+	jp	strtb
+
+rcal:
+	push	hl
+	push	af
+	scf
+rcal0:
+	ld	hl,8
+	jr	scal0
+
+scal:
+	push	hl
+	push	af
+	and	a
+	jr	rcal0
+scal0:
+	jp	rcsc00
+
+brkpt:
+	di
+	ex	(sp),hl
+	dec	hl
+	ex	(sp),hl
+	jp	trap
+	defb	0		; fill
+
+prs:
+	ex	(sp),hl
+	push	af
+prs1:
+	ld	a,(hl)
+	inc	hl
+	cp	prsend
+	jr	prs3
+
+rout:
+	push	hl
+	push	af
+	ld	hl,vdu
+	jr	rout1
+	defb	0		; fill
+
+rdel:
+	push	af
+	pop	af
+	dec	a
+	jr	nz,rdel
+	ret
+
+prs3:
+	jr	nz,prs2
+	pop	af
+	ex	(sp),hl
+	ret
+
+rout1:
+	ld	a,(cursor)
+	add	a,l
+	ld	l,a
+	pop	af
+	ld	(hl),a
+	pop	hl
+	scal	zcure
+	ret
+
+rcsc00:
+	push	de
+	push	af
+	add	hl,sp
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	inc	de
+	ld	(hl),d
+	dec	hl
+	ld	(hl),e
+	dec	de
+	ex	de,hl
+	pop	af
+	jr	nc,scal1
+; relative call
+	ld	e,(hl)
+	ld	a,e
+	rla
+	sbc	a,a
+	ld	d,a
+	inc	hl
+	add	hl,de
+	jr	rcal4
+
+; Adresse 0066h
+
+    if2
+      if $ ne 0066h
+	.printx	* NMI (0066h) liegt falsch *
+      endif
+    endif ; if2
+
+	jp	trap
+
+rcal4:
+	pop	de
+	pop	af
+	ex	(sp),hl
+	ret
+
+scalj:
+	push	hl
+	push	af
+	push	de
+	ld	hl,argc
+scal1:
+	ld	e,(hl)
+	ld	d,0
+	ld	hl,scalt
+	add	hl,de
+	add	hl,de
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	ex	de,hl
+	jr	rcal4
+
+rin1:
+    if mode2
+	scal	zin
+	ret	c
+	jr	rin1
+    else ; if mode2
+	scal	zin
+	ret	c
+	call	iscan
+	ld	a,diszyk * 4
+	rst	rdel
+	jr	rin1
+    endif ; if mode2
+
+brsto:
+	ld	hl,(brkadr)
+	ld	a,(hl)
+	ld	(brkval),a
+	ret
+brres:
+	ld	hl,(brkadr)
+	ld	a,(brkval)
+	ld	(hl),a
+	ret
+strtb:
+	rcal	brres
+	ld	de,ram
+	ld	b,initr-ram
+	xor	a
+st4:
+	ld	(de),a
+	inc	de
+	djnz	st4
+	ld	hl,initt
+	ld	bc,inite-initr
+	ldir
+	scal	zclear
+	ret
+mret:
+	ld	sp,stack
+	ld	hl,ramtop
+	ld	(rsp),hl
+	ld	hl,inite
+	ld	(rpc),hl
+	scal	zhome
+	rst	prs
+	defb	73h,06h,39h,3fh,40h,6dh,6eh,6dh	; PICO-SYS
+	defb	prsend
+	rcal	brres
+strtd:
+	scal	zdison
+parse:
+	scal	zaintxt
+	cp	19h
+	jr	nc,pars3
+	scal	zdisr
+	jr	parse
+pars3:
+	cp	3bh
+	jr	nc,parerr
+	ld	(argc),a
+	scal	zargs
+	ld	ix,sysram
+	scal	zscalj
+	jr	parse
+parerr:
+	ld	a,98h
+	scal	zerrm
+	jr	parse
+
+argin:
+	scal	zargtr
+	scal	zptran
+aintxt:
+	scal	zvtran
+	rst	rin
+	cp	10h
+	ret	nc
+	scal	zargsh
+	jr	argin
+
+vtran:
+	push	af
+	push	bc
+	push	de
+	push	hl
+	scal	zsync
+	ld	b,8
+	ld	hl,scavdu
+	ld	de,vdu+7
+vtr1:
+	ld	a,(de)
+	ld	(hl),a
+	dec	de
+	inc	hl
+	djnz	vtr1
+	pop	hl
+	pop	de
+	pop	bc
+	pop	af
+	ret
+
+hex:
+	push	af
+	push	hl
+	ld	hl,hextab
+	and	0fh
+	add	a,l
+	ld	l,a
+	ld	a,(hl)
+	rst	rout
+	pop	hl
+	pop	af
+	ret
+
+hex2:
+	rlca
+	rlca
+	rlca
+	rlca
+	scal	zhex
+	rlca
+	rlca
+	rlca
+	rlca
+	jr	hex
+
+hex4:
+	push	af
+	ld	a,h
+	scal	zhex2
+	ld	a,l
+	scal	zhex2
+	pop	af
+	ret
+
+cure:
+	push	af
+	ld	a,(cursor)
+	inc	a
+cure1:
+	and	07h
+	ld	(cursor),a
+	pop	af
+	ret
+
+culi:
+	push	af
+	ld	a,(cursor)
+	dec	a
+	jr	cure1
+
+in:
+	ld	a,(tasfnd)
+	dec	a
+	jr	z,in1
+	and	a
+	ret
+in1:
+	push	hl
+	ld	a,(key)
+	and	3fh
+	ld	hl,keytab
+	add	a,l
+	ld	l,a
+	ld	a,(hl)
+	ld	h,a
+	ld	a,(key)
+	ld	l,a
+	and	40h
+	rrca
+	rrca
+	or	h
+	ld	h,a
+	ld	l,a
+	and	80h
+	or	l
+	ld	h,a
+	scal	zsync
+	xor	a
+	ld	(tasfnd),a
+	ld	a,h
+	pop	hl
+	scf
+	ret
+
+dison:
+
+    if mode2
+	di
+	ld	hl,inttab
+	ld	a,h
+	ld	i,a
+	ld	a,l
+	out	(ctc),a
+	ld	a,010110101b
+	out	(ctc+3),a
+	ld	a,diszyk
+	out	(ctc+3),a
+    endif ; if mode2
+	im	2
+	ei
+	ret
+
+disoff:
+	di
+	push	af
+	push	de
+    if mode2
+	ld	a,00000011b	; reset
+	out	(ctc+3),a
+    endif ; if mode2
+	ld	a,(cnorm)
+	ld	e,a
+	or	sps+zes+les
+	ld	d,a
+	ld	a,paout
+	out	(pio+3),a
+	ld	a,e
+	out	(pio+2),a
+	ld	a,d
+	out	(pio+2),a
+	ld	a,e
+	out	(pio+2),a
+	pop	de
+	pop	af
+	ei
+	ret
+
+args:
+	ld	hl,(arg1)
+	ld	de,(arg2)
+	ret
+
+sync:
+	push	hl
+	ld	hl,timeb
+    if mode2
+	ld	a,(hl)
+sync1:
+	cp	(hl)
+	jr	z,sync1
+    endif ; if mode2
+	ld	a,(hl)
+	pop	hl
+	ret
+
+tdel:
+	push	af
+	push	bc
+	xor	a
+	ld	b,a
+tdel2:
+	rst	rdel
+	djnz	tdel2
+	pop	bc
+	pop	af
+	ret
+
+ptran:
+	push	af
+	push	bc
+	push	hl
+	ld	a,(point)
+	ld	hl,vdu
+	ld	b,8
+ptr1:
+	ld	c,(hl)
+	rl	c
+	rla
+	rr	c
+	ld	(hl),c
+	inc	hl
+	djnz	ptr1
+	pop	hl
+	pop	bc
+	pop	af
+	ret
+
+argtr:
+	scal	zhome
+	ld	hl,(arg1)
+	scal	zhex4
+	ld	a,(point)
+	and	0fh
+	cp	03h
+	jr	z,argtr1
+	ld	hl,(arg2)
+	scal	zhex4
+	ret
+argtr1:
+	rst	prs
+	defb	0,0,prsend
+	ld	a,(arg2)
+	scal	zhex2
+	ret
+
+argsh:
+	ld	c,a
+	ld	a,(point)
+	and	0fh
+	jr	z,argsh1
+	ld	hl,(arg2)
+	rcal	slahl
+	ld	(arg2),hl
+	ret
+argsh1:
+	ld	hl,(arg1)
+	rcal	slahl
+	ld	(arg1),hl
+	ret
+
+slahl:
+	ld	b,4
+slahl1:
+	sla	l
+	rl	h
+	djnz	slahl1
+	ld	a,c
+	and	0fh
+	or	l
+	ld	l,a
+	ret
+
+disr:
+	cp	10h
+	jr	z,disr1
+	rcal	memreg
+disr2:
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	ld	h,d
+	ld	l,e
+	ld	(arg1),hl
+	ld	e,(hl)
+	inc	hl
+	ld	d,(hl)
+	ld	(arg2),de
+chleft:
+	ld	a,0f0h
+ptret:
+	ld	(point),a
+	jp	dis
+disr1:
+	rcal	regswp
+	ret
+
+switch:
+	ld	a,(point)
+	and	0fh
+	jr	z,swtch1
+	jr	chleft
+swtch2:
+	ld	(point),a
+	jp	dis
+swtch1:
+	ld	a,0fh
+	jr	ptret
+
+regswp:
+	di
+	ld	(sptemp),sp
+	ld	sp,stack
+	pop	af
+	pop	ix
+	pop	iy
+	pop	bc
+	pop	de
+	pop	hl
+	exx
+	EX	AF,AF'
+	push	hl
+	push	de
+	push	bc
+	push	iy
+	push	ix
+	push	af
+	ld	sp,(sptemp)
+	ei
+	ld	a,(conflg)
+	xor	00000100b
+	ld	(conflg),a
+	and	00000100b
+	ld	b,a
+	ld	a,(led)
+	and	11111011b
+	or	b
+	ld	(led),a
+	ret
+
+memreg:
+	ld	hl,raf-(11h*2)
+	add	a,a
+	ld	e,a
+	ld	d,0
+	add	hl,de
+	ret
+
+set:
+	set	3,(ix+led-sysram)
+	rst	rin
+	res	3,(ix+led-sysram)
+	or	00010000b	; Shift ignorieren
+	cp	11h
+	ret	c
+	cp	19h
+	ret	nc
+	rcal	memreg
+	ld	de,(arg1)
+	ld	(hl),e
+	inc	hl
+	ld	(hl),d
+	dec	hl
+	jp	disr2
+
+err99:
+	ld	a,99h
+errm:
+	scal	zhome
+	rst	prs
+	defb	79h,50h,50h,5ch,50h,00h	; Error
+	defb	prsend
+	scal	zhex2
+	ret
+
+home:
+	push	af
+	xor	a
+	ld	(cursor),a
+	pop	af
+	ret
+
+clear:
+	scal	zhome
+	rst	prs	
+	defb	0,0,0,0,0,0,0,0,prsend
+	ret
+
+iscan:
+	push	af
+	push	de
+	push	hl
+	push	ix
+	ld	ix,sysram
+	ld	hl,scavdu
+	ld	e,(ix+cnorm-sysram)
+	ld	a,paout
+	out	(pio+3),a
+	ld	a,e
+	out	(pio+2),a
+	ld	a,(timeb)
+	add	a,l
+	ld	l,a
+	xor	a
+	out	(pio),a
+	ld	a,e
+	or	sps
+	ld	d,a
+	out	(pio+2),a
+	ld	a,e
+	out	(pio+2),a
+	ld	a,(hl)
+	out	(pio),a
+	ld	a,e
+	or	zes
+	out	(pio+2),a
+	ld	a,e
+	out	(pio+2),a
+	ld	a,(timed)
+	out	(pio),a
+	ld	a,d
+	out	(pio+2),a
+	ld	a,e
+	ld	a,tast-scavdu
+	add	a,l
+	ld	l,a
+	ld	a,e
+	and	0ffh-tai
+	ld	d,a
+	ld	a,pain
+	out	(pio+3),a
+	ld	a,d
+	out	(pio+2),a
+	in	a,(pio)
+	ld	d,a
+	ld	a,paout
+	out	(pio+3),a
+	ld	a,e
+	out	(pio+2),a
+	ld	a,d
+	cpl
+	or	(hl)
+	ld	(hl),d
+	cpl
+	or	a
+	jr	z,isca2
+	ld	d,a
+	ld	a,(tasfnd)
+	or	a
+	jr	nz,isca2
+	ld	a,d
+	ld	d,-1
+isca1:
+	inc	d
+	rra
+	jr	nc,isca1
+	ld	a,(timeb)
+	rlca
+	rlca
+	rlca
+	and	38h
+	or	d
+	cp	shift
+	jr	z,isca2
+	cp	ctrl
+	jr	z,isca2
+	ld	(key),a
+	ld	(ix+tasfnd-sysram),02h
+isca2:
+	inc	(ix+timeb-sysram)
+	rlc	(ix+timed-sysram)
+	jr	nc,isca6
+	ld	(ix+timeb-sysram),0
+	ld	(ix+timed-sysram),1
+	ld	a,(led)
+	out	(pio),a
+	ld	a,e
+	or	les
+	out	(pio+2),a
+	ld	a,e
+	out	(pio+2),a
+	ld	a,(tasfnd)
+	cp	02h
+	jr	nz,isca6
+	ld	a,(tabsft)
+	and	bshift
+	jr	z,isca4
+	set	6,(ix+key-sysram)
+isca4:
+	ld	a,(tabctr)
+	and	bctrl
+	jr	z,isca5
+	set	7,(ix+key-sysram)
+isca5:
+	ld	(ix+tasfnd-sysram),01h
+isca6:
+	pop	ix
+	pop	hl
+	pop	de
+	pop	af
+	ei
+	reti
+
+rela:
+	inc	hl
+	ex	de,hl
+	and	a
+	sbc	hl,de
+	ld	a,l
+	rla
+	ld	a,h
+	adc	a,0
+	jr	z,rela1
+	ld	a,01h
+	scal	zerrm
+	ret
+rela1:
+	push	hl
+	rcal	lmem
+	pop	hl
+	ld	h,0
+	ld	(arg2),hl
+	jr	dis
+
+lmem:
+	scal	zargs
+mem:
+	ld	a,03h
+	ld	d,h
+	ld	e,l
+	ld	hl,(brkadr)
+	and	a
+	sbc	hl,de
+	jr	nz,mem1
+	or	80h
+mem1:
+	ld	(point),a
+	ld	l,a
+	ld	a,(de)
+	ld	(argc),a
+	cpl
+	ld	(de),a
+	ld	a,(de)
+	cpl
+	ld	h,a
+	ld	a,(argc)
+	ld	(de),a
+	cp	h
+	jr	z,mem2
+	ld	a,l
+	or	10h
+	ld	(point),a
+mem2:
+	ld	a,(de)
+	ld	e,a
+	ld	d,0
+	ld	(arg2),de
+dis:
+	scal	zargtr
+	scal	zptran
+	ret
+
+swap:
+	ld	(arg2),hl
+	ld	(arg1),de
+full:
+	scal	zswitch
+	scal	zswitch
+	jr	dis
+
+plus:
+	rcal	mset
+	ld	(hl),e
+	inc	hl
+	ld	(arg1),hl
+	jr	mem
+
+minus:
+	rcal	mset
+	ld	(hl),e
+	dec	hl
+	ld	(arg1),hl
+	jr	mem
+
+mset:
+	ld	a,(point)
+	and	0fh
+	cp	03h
+	ret	z
+	jp	mem
+
+spc:
+	ld	(rpc),hl
+pc:
+	ld	hl,(rpc)
+	ld	(arg1),hl
+	jp	mem
+
+go:
+	ld	hl,conflg
+	set	7,(hl)
+step:
+	di
+	ld	sp,stack
+	ld	hl,0c9fbh	; ei ! ret
+	ld	a,(riff)
+	bit	0,a
+	jr	nz,step1
+	ld	hl,0c9f3h	; di ! ret
+step1:
+	ld	(temp),hl
+	ld	a,(conflg)
+	bit	2,a
+	jr	z,step2
+	set	1,a
+	ld	(conflg),a
+	scal	zregswp
+	di
+step2:
+	ld	a,(ri)
+	ld	i,a
+	ld	a,(cnorm)
+	and	0ffh-brk
+	ld	b,a
+	ld	c,pio+2
+	pop	af
+	pop	ix
+	pop	iy
+	pop	hl		; eigentlich bc
+	pop	de
+	pop	hl
+	ld	sp,(rsp)
+	ld	hl,(rpc)
+	push	hl
+	out	(c),b
+	ld	bc,(rbc)	; 1.+2.M1
+	ld	hl,(rhl)	;    3.M1
+	ret			;    4.M1
+;				     5.M1 --> nmi
+
+trap:
+	push	af
+	ld	a,(cnorm)
+	or	brk
+	out	(pio+2),a
+	ld	a,(conflg)
+	bit	7,a
+	jr	z,trap1
+	res	7,a
+	ld	(conflg),a
+	push	hl
+	scal	zbrsto
+	ld	(hl),0e7h	; Breakpoint
+	pop	hl
+	pop	af
+	jp	temp		; iff1 setzen/ruecksetzen
+
+trap1:
+	pop	af
+	ld	(rhl),hl
+	pop	hl
+	ld	(arg1),hl
+	ld	(rpc),hl
+	ld	(rsp),sp
+	ld	hl,(rhl)
+	ld	sp,initr
+	push	hl
+	push	de
+	push	bc
+	push	iy
+	push	ix
+	push	af
+	ld	a,i
+	ld	(ri),a
+	ld	a,(riff)
+	res	0,a
+	jp	pe,trap2
+	set	0,a
+trap2:
+	ld	(riff),a
+	ld	a,(conflg)
+	bit	1,a
+	jr	z,trap3
+	res	1,a
+	ld	(conflg),a
+	scal	zregswp
+trap3:
+	scal	zbrres
+	call	lmem
+	jp	strtd
+
+cbpt:
+	ld	hl,0
+	ld	(brkadr),hl
+	jp	lmem
+sbpt:
+	ld	(brkadr),hl
+bpt:
+	ld	hl,(brkadr)
+	ld	(arg1),hl
+	jp	mem
+
+insert:
+	rcal	segchk
+	ret	nz		; error
+	ld	hl,segment-2
+	ld	d,h
+	ld	e,l
+	inc	de
+	lddr
+hlmem:
+	xor	a
+	ld	(de),a
+	jp	lmem
+
+delete:
+	rcal	segchk
+	ret	nz		; error
+	ld	h,d
+	ld	l,e
+	inc	hl
+	ldir
+	jr	hlmem
+
+segchk:
+	ld	a,(point)
+	and	0fh
+	cp	03h
+	jr	z,segc1
+err02:
+	ld	a,02h
+	scal	zerrm
+	ret
+
+segc1:
+	ld	de,inite
+	and	a
+	sbc	hl,de
+	jr	c,segerr
+	ld	hl,(arg1)
+	ld	de,segment-1
+	and	a
+	sbc	hl,de
+	jr	nc,segerr
+	ld	de,(arg1)
+	ld	hl,segment-1
+	and	a		; clear cy
+	sbc	hl,de
+	ld	b,h
+	ld	c,l
+	xor	a		; z=0
+	ret
+segerr:
+	ld	a,05
+	scal	zerrm
+	or	a		; z=1
+	ret
+
+    if cass
+load:
+	scal	zdisoff
+	ld	(ix+lcount-sysram),0
+	ld	a,cledoff+les
+	out	(pio+2),a
+load0:
+	ld	l,255
+load1:
+	call	period
+	jr	nz,load0
+	jr	c,load0
+	dec	l
+	jr	nz,load1
+load2:
+	call	period
+	jr	nc,load2
+	ld	hl,aufz
+	ld	bc,7
+	call	tin
+	jr	nz,load0
+	ld	hl,(arg1)
+	ld	bc,(arg2)
+	call	tin
+	push	af
+	ld	a,0f0h
+	ld	(point),a
+	scal	zdison
+	pop	af
+	jr	nz,lerr1
+	rcal	sumcal
+	ld	h,a
+	ld	a,(chsum)
+	cp	h
+	jr	nz,lerr2
+	jp	dis
+lerr1:
+	ld	a,10h
+	jr	lerrj
+lerr2:
+	ld	a,11h
+lerrj:
+	scal	zerrm
+	ret
+
+tin:
+	res	3,(ix+conflg-sysram)	; kein error
+tin1:
+	call	getbyte
+	ld	(hl),e
+	cpi
+	jp	pe,tin1
+	bit	3,(ix+conflg-sysram)
+	ret
+
+getbyte:
+	push	bc
+	push	hl
+	call	getbit
+	ld	d,8
+gbyte1:
+	call	getbit
+	rr	e
+	dec	d
+	jr	nz,gbyte1
+	inc	(ix+lcount-sysram)
+	ld	a,(lcount)
+	and	00001000b
+	rrca
+	rrca
+	rrca
+	out	(pio),a
+	call	getbit
+	pop	hl
+	pop	bc
+	ret
+
+getbit:
+	ld	hl,0
+gbit1:
+	call	period
+	jr	nz,gbit3
+	jr	c,gbit2
+	dec	l
+	dec	l
+	set	0,h
+	jr	gbit1
+gbit2:
+	inc	l
+	bit	0,h
+	jr	z,gbit1
+	rl	l
+	ret
+gbit3:
+	set	3,(ix+conflg-sysram)	; Lesefehler
+	ret
+
+sumcal:
+	ld	hl,(arg1)
+	ld	bc,(arg2)
+	xor	a
+sumc1:
+	add	a,(hl)
+	cpi
+	ret	po
+	jr	sumc1
+
+period:
+	ld	bc,0
+per1:
+	in	a,(j18)
+	inc	bc
+	rra			; Bit 0 ist EAR
+	jr	c,per1
+	ld	a,98h
+	ld	a,r		; out	(pio+2),a
+per2:
+	in	a,(j18)
+	inc	bc
+	rra
+	jr	nc,per2
+	ld	a,90h
+	ld	a,r		; out	(pio+2),a
+	ld	a,c
+	cp	mperiod
+	inc	b
+	dec	b
+	ret
+
+save:
+	rcal	blockneg
+	inc	hl		; bis einschliesslich
+	ld	(arg2),hl
+	rcal	sumcal
+	ld	(chsum),a
+	scal	zdisoff
+	scal	ztdel
+	ld	e,10000/256
+	ld	l,0		; 256
+savel1:
+	call	tone1k
+	dec	e
+	jr	nz,savel1
+	ld	hl,aufz
+	ld	bc,7
+	call	tout
+	ld	l,0		; 256
+	call	tone2k
+	ld	hl,(arg1)
+	ld	bc,(arg2)
+	call	tout
+	ld	l,0		; 256
+	call	tone2k
+	scal	ztdel
+	scal	zdison
+	jp	dis
+
+tout:
+	ld	e,(hl)
+	call	outbyte
+	cpi
+	ret	po
+	jr	tout
+
+outbyte:
+	push	bc
+	push	hl
+	ld	d,8
+	or	a
+	call	outbit
+obyte1:
+	rr	e
+	call	outbit
+	dec	d
+	jr	nz,obyte1
+	scf
+	call	outbit
+	pop	hl
+	pop	bc
+	ret
+
+outbit:
+	jr	c,obit1
+obit0:
+	ld	l,zero2k*2
+	call	tone2k
+	ld	l,zero1k*2
+	jr	obit3
+obit1:
+	ld	l,one2k*2
+	call	tone2k
+	ld	l,one1k*2
+obit3:
+	call	tone1k
+	ret
+
+blockneg:
+	ld	a,0f0h
+	ld	(point),a
+	ex	de,hl
+	and	a		; clear cy
+	sbc	hl,de
+	ret	nc
+	pop	hl		; ret-adresse weg
+	ld	a,07h		; block negativ
+	jp	errm
+
+tone1k:
+	ld	h,f1khz
+	jr	tone
+tone2k:
+	ld	h,f2khz
+tone:
+	ld	a,(cnorm)
+tone1:
+	out	(pio+2),a
+	ld	b,h
+tonel:
+	djnz	tonel
+	xor	mic
+	dec	l
+	jr	nz,tone1
+	ret
+    else ; if cass
+load:
+save:
+	ret
+    endif ; if cass
+
+move:
+    if not test
+	rcal	blockneg
+	scal	zargs
+	push	de		; arg2
+	push	hl		; arg1
+	set	1,(ix+led-sysram)
+	scal	zargin
+	res	1,(ix+led-sysram)
+	pop	de		; arg1 = blockanfang
+	pop	hl		; arg2 = blockende
+	cp	2ah		; plus
+	jr	nz,move5	; sonst ignorieren
+	and	a		; clear cy
+	sbc	hl,de
+	inc	hl		; bis einschliesslich
+	ld	b,h
+	ld	c,l
+	ld	h,d
+	ld	l,e
+	ld	de,(arg1)	; dest
+	ld	(arg2),hl
+	scal	zimove
+move5:
+	jr	calc1
+
+imove:
+	or	a
+	sbc	hl,de
+	add	hl,de
+	jr	nc,imove4
+	dec	bc
+	ex	de,hl
+	add	hl,bc
+	ex	de,hl
+	add	hl,bc
+	inc	bc
+	lddr
+	ret
+imove4:
+	ldir
+	ret
+    else ; if not test
+imove:
+	ret
+    endif ; if not test
+
+calc:
+    if not test
+	push	hl
+	add	hl,de
+	ld	(arg1),hl	; summe
+	pop	hl
+	and	a		; clear cy
+	sbc	hl,de
+	ld	(arg2),hl	; differenz
+calc1:
+	jp	full
+    else ; if not test
+	ret
+calc1:
+	jp	full
+    endif ; if not test
+
+flags:
+	scal	zhome
+	ld	b,8
+	ld	a,(raf)
+	ld	c,a
+	ld	hl,flgstr
+flags1:
+	ld	a,40h		; -
+	rlc	c
+	jr	nc,flags2
+	ld	a,(hl)
+flags2:
+	rst	rout
+	inc	hl
+	djnz	flags1
+	ld	a,0f0h
+	ld	(point),a
+	ret
+
+search:
+	ld	a,e
+	ld	bc,0
+	inc	hl
+	cpir
+	dec	hl
+	ld	(arg1),hl
+	jp	mem
+
+    if2
+      if $ ge romtop-0e0h
+	.printx	'Sorry, leider zu viel Code'
+      endif
+    endif ; if2
+
+
+	org	romtop-0e0h
+keytab:
+
+;	col:      0    1    2    3    4    5    6    7
+;							  row
+	defb	00dh,00eh,00fh,000h,02ah,02bh,02dh,02ch	;  0
+	defb	00ch,003h,002h,001h,029h,028h,02fh,02eh ;  1
+	defb	00bh,006h,005h,004h,027h,026h,041h,040h ;  2
+	defb	00ah,009h,008h,007h,025h,024h,043h,042h ;  3
+	defb	023h,022h,021h,020h,047h,046h,045h,044h ;  4
+	defb	04fh,04eh,04dh,04ch,04bh,04ah,049h,048h ;  5
+	defb	067h,066h,065h,064h,063h,062h,061h,060h ;  6
+	defb	06fh,06eh,06dh,06ch,06bh,06ah,069h,068h ;  7
+
+initt:
+	defw	ramtop		; rsp
+	defb	08h		; ri
+	defb	1		; riff
+	defw	inite		; rpc
+	defb	0f0h		; point
+	defb	1		; timed
+	defb	cledoff		; cnorm
+	defw	brkpt,brkpt
+	defw	brkpt,iscan	; inttab
+
+
+hextab:
+	defb	3fh,06h,5bh,4fh	; 0..3
+	defb	66h,6dh,7dh,07h	; 4..7
+	defb	7fh,6fh,77h,7ch	; 8..B
+	defb	39h,5eh,79h,71h	; C..F
+
+flgstr:
+	defb	2dh,1bh,0c0h,76h,0c0h,73h,54h,39h
+;		 S   Z   .    H   .    P   N   C
+
+scalt:
+	defw	vtran		; 00h
+	defw	hex
+	defw	hex2
+	defw	hex4
+	defw	cure
+	defw	culi
+	defw	in
+	defw	dison
+	defw	tdel		; 08h
+	defw	scalj
+	defw	ptran
+	defw	mret
+	defw	argtr
+	defw	argsh
+	defw	disr
+	defw	errm
+	defw	home		; 10h
+	defw	clear
+	defw	disoff
+	defw	args
+	defw	sync
+	defw	imove
+	defw	regswp
+	defw	brsto
+	defw	brres		; 18h
+	defw	set
+	defw	search
+	defw	err99
+	defw	err99
+	defw	err99
+	defw	err99
+	defw	flags
+
+	defw	dis		; 20h
+	defw	pc
+	defw	spc
+	defw	switch
+	defw	go
+	defw	swap
+	defw	sbpt
+	defw	mem
+	defw	bpt		; 28h
+	defw	minus
+	defw	plus
+	defw	argin
+	defw	aintxt
+	defw	tin
+	defw	tout
+	defw	err99
+	defw	err99		; 30h
+	defw	load
+	defw	save
+	defw	full
+	defw	step
+	defw	cbpt
+	defw	move
+	defw	rela
+	defw	calc		; 38h
+	defw	delete
+	defw	insert
+
+	defb	version
+
+
+zvtran	equ	00h
+zhex	equ	01h
+zhex2	equ	02h
+zhex4	equ	03h
+zcure	equ	04h
+zculi	equ	05h
+zin	equ	06h
+zdison	equ	07h
+ztdel	equ	08h
+zscalj	equ	09h
+zptran	equ	0ah
+zmret	equ	0bh
+zargtr	equ	0ch
+zargsh	equ	0dh
+zdisr	equ	0eh
+zerrm	equ	0fh
+zhome	equ	10h
+zclear	equ	11h
+zdisoff	equ	12h
+zargs	equ	13h
+zsync	equ	14h
+zimove	equ	15h
+zregswp	equ	16h
+zbrsto	equ	17h
+zbrres	equ	18h
+zargin	equ	2bh
+zaintxt	equ	2ch
+ztin	equ	2dh
+ztout	equ	2eh
+
+zswitch	equ	23h
+zmem	equ	27h
+
+
+; Fehlermeldungen:
+
+; 01	Distanz fuer relativen Sprung zu gross
+; 02	Memory-Modus nicht aktiv
+; 05	INS und DEL ausserhalb 0880h-0BFFh angewendet
+; 07	Blocklaenge negativ
+
+; 10	Bandlesefehler, physikalisch
+; 11	dto, Pruefsummenfehler
+
+; 98	Taste physikalisch nicht definiert
+; 99	Taste logisch nicht definiert
+
+	end	0

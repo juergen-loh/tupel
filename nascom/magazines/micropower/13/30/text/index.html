@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 1 - Number 3 - November 1981</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Number 3 &middot;</span> <span class="nowrap">November 1981</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../29/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 30 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-13 page-30" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+buffer? Wherever you put it, sooner or later you will want to load a program to
+that location. The only solution seems to be to use the screen RAM for temporary
+storage. The program therefore starts by clearing the screen; as it uses the margins
+as well as the &lsquo;visible&rsquo; screen RAM, it also clears the screen at the end of the routine
+to restore the zeroes which the delineate the margins. A tally is kept on the
+screen of blocks which have been read correctly, and when all the blocks have
+been obtained the routine stops.
+</p>
+<p>
+The revised Read incorporates the &lsquo;load offset&rsquo; of Nas-Sys&nbsp;3. A second
+argument can be used to force transfer of data from the buffer to memory, even
+when the checksum is wrong. This ensures that if you only have one copy of a
+program, and a persistent error on the tape, you don&rsquo;t loose the whole block.
+</p>
+<p>
+Because bad data is not written to memory, it is not necessary to use a separate
+verify command. To verify a tape you have just recorded you merely read it back
+with the R command &ndash; if the recording was faulty it will not corrupt the stored
+program. Therefore the routine does not test the value stored at ARGX (&pound;0C2B),
+which is how the standard Nas-Sys routine distinguishes between Read and
+Verify. Consequently unless you change the address for the V command this will
+also read a tape into memory.
+</p>
+<table id="article1" style="width: 100%">
+<tr><td>EF0C00</td><td>READ</td><td>DEFB &pound;EF &pound;0C 00</td><td>; CLEAR SCREEN</td></tr>
+<tr><td>DF5F</td><td></td><td>SCAL ZMFLP</td><td>; TURN ON TAPE LED</td></tr>
+<tr><td>DF77</td><td></td><td>SCAL ZNNOM</td><td>; RESET OUTPUT TABLE ADDRESS</td></tr>
+<tr><td>E5</td><td></td><td>PUSH HL</td><td>; SAVE OLD ADDRESS ON STACK</td></tr>
+<tr><td>DF78</td><td></td><td>SCAL ZNNIM</td><td>; RESET INPUT TABLE ADDRESS</td></tr>
+<tr><td>E5</td><td></td><td>PUSH HL</td><td>; SAVE OLD ADDRESS ON STACK</td></tr>
+<tr><td>0604</td><td>R1</td><td>LD B, 4</td><td>; LOOK FOR 4 CHARS.</td></tr>
+<tr><td>CF</td><td>R2</td><td>RST RIN</td><td>; GET CHARACTER</td></tr>
+<tr><td>3C</td><td></td><td>JR NZ, R1;T44</td><td>; IF NOT, KEEP LOOKING</td></tr>
+<tr><td>10FA</td><td></td><td>DJNZ R2</td><td>; HAVE WE GOT 4 YET?</td></tr>
+<tr><td>CF</td><td></td><td>RST RIN</td><td>; NOW GET HEADER BYTES</td></tr>
+<tr><td>6F</td><td></td><td>LD L, A</td><td>; FIRST BYTE INTO L REG.</td></tr>
+<tr><td>CF</td><td></td><td>RST RIN</td><td>; SECOND BYTE</td></tr>
+<tr><td>67</td><td></td><td>LD H, A</td><td>; INTO L REGISTER</td></tr>
+<tr><td>CF</td><td></td><td>RST RIN</td><td>; THIRD BYTE</td></tr>
+<tr><td>5F</td><td></td><td>LD E, A</td><td>; INTO E REGISTER</td></tr>
+<tr><td>CF</td><td></td><td>RST RIN</td><td>; FOURTH BYTE</td></tr>
+<tr><td>57</td><td></td><td>LD D, A</td><td>; INTO D REGISTER</td></tr>
+<tr><td>EF1B00</td><td></td><td>DEFB &pound;EF &pound;1B 00</td><td>; PUT CURSOR BACK TO START</td></tr>
+<tr><td>4F</td><td></td><td>LD C, A</td><td>; SET C TO ZERO</td></tr>
+<tr><td>DF6C</td><td></td><td>SCAL ZTX1</td><td>; PRINT HL, DE: GET CHECKSUM</td></tr>
+<tr><td>CF</td><td></td><td>RST RIN</td><td>; GET NEXT BYTE</td></tr>
+<tr><td>B9</td><td></td><td>CP C</td><td>; COMPARE WITH CHECKSUM</td></tr>
+<tr><td>20E6</td><td></td><td>JR NZ, R1</td><td>; IF WRONG, START AGAIN</td></tr>
+<tr><td>48</td><td></td><td>LD C, B</td><td>; SET C TO ZERO</td></tr>
+<tr><td>43</td><td></td><td>LD B, E</td><td>; PUT BLOCK LENGTH INTO B</td></tr>
+<tr><td>E5</td><td></td><td>PUSH HL</td><td>; SAVE HL</td></tr>
+<tr><td>21000A</td><td></td><td>LD HL, &pound;0A00</td><td>; SET HL TO BUFFER START</td></tr>
+<tr><td>CF</td><td>R3</td><td>RST RIN</td><td>; GET DATA BYTES</td></tr>
+<tr><td>77</td><td></td><td>LD (HL) A</td><td>; PUT INTO BUFFER</td></tr>
+<tr><td>23</td><td></td><td>INC HL</td><td>; INCREMENT BUFFER ADDRESS</td></tr>
+<tr><td>81</td><td></td><td>ADD A, C</td><td>; CHECKSUM CALCULATION</td></tr>
+<tr><td>4F</td><td></td><td>LD C, A</td><td>; SAVE IN C</td></tr>
+</table>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../29/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 30 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-1-3.pdf#page=32" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

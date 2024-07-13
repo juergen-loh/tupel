@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - März/April 1982 - Ausgabe 3/4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">März/April 1982 &middot;</span> <span class="nowrap">Ausgabe 3/4</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/02/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 8 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/05/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<table>
+<tr>
+	<td><p>Parameter</p></td>
+	<td><p>Funktionsname</p></td>
+	<td><p>Lit.&#x200b;Arg.</p></td>
+	<td><p>Ergebnis</p></td>
+	<td><p>Kommentar</p></td>
+</tr>
+<tr>
+	<td colspan=4></td>
+	<td class="justify"><p>führt das Programm an der Adresse b aus.</p></td>
+</tr>
+<tr>
+	<td>-</td>
+	<td><p>CADR</p></td>
+	<td class="donthyphenate"><p>Funktion</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>a = Startadresse von (Funktion).</p></td>
+</tr>
+<tr>
+	<td>-</td>
+	<td><p>READLINE</p></td>
+	<td>-</td>
+	<td>-</td>
+	<td class="justify"><p>
+		Liest eine Zeile in den Textpuffer ein. Im EDITOR-Modus jeweils
+		eine Bildschirmzeile, sonst von der Tastatur bis <span class="uppercase">Newline</span> mit Echo auf
+		dem Bildschirm.
+	</p></td>
+</tr>
+<tr>
+	<td>-</td>
+	<td><p>GETWORD</p></td>
+	<td><p>Name</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>
+		Holt das nächste Wort aus dem Textpuffer; wenn dieser leer ist, wird
+		READ&shy;LINE aufgerufen. a = Wortadresse
+	</p></td>
+</tr>
+<tr>
+	<td><p>a</p></td>
+	<td><p>FIRST</p></td>
+	<td><p>&bdquo;</p></td>
+	<td><p>b c</p></td>
+	<td class="justify"><p>
+		a muß auf ein Wort im Textpuffer zeigen; c = erstes Byte des Wortes
+		(= Wortlänge), b = Zeiger auf den Rest des Wortes.
+	</p></td>
+</tr>
+<tr>
+	<td>-</td>
+	<td><p>SCAN</p></td>
+	<td>-</td>
+	<td><p>a oder b c</p></td>
+	<td class="justify"><p>
+		Holt das nächste Wort im Textpuffer an den Zeilenanfang; wenn
+		Puffer leer, a = 0 sonst c = 65535 und b = Zeiger auf Wort.
+	</p></td>
+</tr>
+<tr>
+	<td><p>a b</p></td>
+	<td><p>MATCH</p></td>
+	<td><p>-</p></td>
+	<td><p>a b c</p></td>
+	<td class="justify"><p>Stringvergleich; c = 65535, wenn gleich, sonst c = 0.</p></td>
+</tr>
+<tr>
+	<td><p>a b</p></td>
+	<td><p>LOOKUP</p></td>
+	<td>-</td>
+	<td><p>c d</p></td>
+	<td class="justify"><p>
+		Sucht das Wort, auf das a zeigt, im Dictionary, auf das b zeigt; d
+		= 65535, wenn gefunden, und c = Funktionsadresse; sonst d = 0 und c =
+		a.
+	</p></td>
+</tr>
+<tr>
+	<td><p>a</p></td>
+	<td><p>CONAXB</p></td>
+	<td>-</td>
+	<td><p>b c</p></td>
+	<td class="justify"><p>
+		Dezimal-Binär-Umwandlung; a zeigt auf Dezimalstring. Wenn Umwandlung
+		möglich, c = 65535 und b = binärer Wert, sonst c = 0 und b = a.
+	</p></td>
+</tr>
+<tr>
+	<td><p>a</p></td>
+	<td><p>CONBXA</p></td>
+	<td><p>-</p></td>
+	<td><p>b</p></td>
+	<td class="justify"><p>Wandelt a in Dezimalzahl, auf die b zeigt</p></td>
+</tr>
+<tr>
+	<td><p>a</p></td>
+	<td><p>ENTER</p></td>
+	<td>-</td>
+	<td>-</td>
+	<td class="justify"><p>
+		Trägt Funktionsnamen, auf den a zeigt und Adresse der neuen Funktion
+		in das Interpreter-Dictionary ein.
+	</p></td>
+</tr>
+<tr>
+	<td><p>a</p></td>
+	<td><p>CMPLW</p></td>
+	<td><p>-</p></td>
+	<td><p>-</p></td>
+	<td class="justify"><p>Compiliert a (= Adresse einer Funktion).</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>I</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>a = aktueller Wert des innersten Schleifenindex</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>J</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>wie I, aber &bdquo;zweitinnerste Schleife&ldquo;</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>K</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>wie I, aber &bdquo;drittinnerste Schleife&ldquo;</p></td>
+</tr>
+<tr>
+	<td colspan=5><h4><br><span class="uppercase">System-Variablen</span> und <span class="uppercase">Konstanten</span></h4></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>VARBL</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>
+		a = Adresse der VARIAB-Funktion, die die auf sie selbst folgende
+		Adresse gibt.
+	</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CONS</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>
+		a = Adresse der CONS-Funktion (wie VARIAB nur Inhalt der folgenden
+		Adresse)
+	</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>NEGONE</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>a = 65535</p></td>
+</tr><tr>
+	<td><p>-</p></td>
+	<td><p>ONE</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>a = 1</p></td>
+</tr><tr>
+	<td><p>-</p></td>
+	<td><p>ZERO</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>a = 0</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>MEMORY</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>Adresse a enthält Obergrenze des bel. RAM</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>EXEC</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>Adresse a enthält Startadresse der Systemschleife.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>NAMES</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>Adresse a enthält Adresse des Int.-Dict.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CODEADR</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>Adresse a enthält nächste freie Programm= Codeadresse.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>NEXTADR</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>a = Adresse der Funktion NEXT</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CNAMES</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>a = Adresse der Adresse des Comp.-Dict.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>INVAR</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>Adresse a enthält Adresse für COUT.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>OUTVAR</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>Adresse a enthält Adresse für CIN.</p></td>
+</tr>
+<tr>
+	<td><p>-</p></td>
+	<td><p>CURSADR</p></td>
+	<td><p>-</p></td>
+	<td><p>a</p></td>
+	<td class="justify"><p>a = Adresse des Cursorregisters (C29H)</p></td>
+</tr>
+</table>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/02/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 8 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/05/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/82-03.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

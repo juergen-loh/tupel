@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 1 - Number 1 - August 1981</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Number 1 &middot;</span> <span class="nowrap">August 1981</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 27 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-11 page-27" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<h1 id="article1" class="uppercase">
+Rubik Cube Display
+</h1>
+<h2 class="author">
+by J. K. Richardson
+</h2>
+<p class="noindent">
+At nearly all the club meetings I have been to recently someone has been playing
+with a Rubik cube. The program below displays a front and rear view of the cube.
+The program accepts the standard notation for the cube (using Left, Right, Front,
+Back, Up, Down for the faces); thus L1 or L Newline rotates the left face 90 degrees
+clockwise, L2 rotates it 180 degrees, and L3 or L&rsquo; rotates it 270 degrees. You can
+backstep through a sequence of moves with BS, and Jump directly to an
+unscrambled cube with shift/&#x200b;newline. The program is the first step towards a
+program which solves the cube &ndash; I should be pleased to hear from anyone who has
+already written such a program!
+</p>
+<pre>
+TC80 FE0 0 10 1
+0C80 C3 47 0E 55 09 11 09 CD 08 91 08 55 08 99 08 DD 08 19 09 D5 08 94 09 14
+0C98 0A 94 0A 50 0A 0C 0A 8C 09 0C 09 50 09 D0 09 96 09 5A 09 1E 09 9E 09 1E
+0CB0 0A 5A 0A 96 0A 16 0A DA 09 AF 09 F3 09 37 0A 73 0A AF 0A 6B 0A 27 0A EB
+0CC8 09 2F 0A 6E 09 AA 09 E6 09 66 09 E6 08 AA 08 6E 08 EE 08 2A 09 70 09 F0
+0CE0 08 70 08 B4 08 F8 08 78 09 F8 09 B4 09 34 09 02 06 05 03 03 04 06 01 01
+0CF8 05 04 02 06 02 03 05 04 03 01 06 05 01 02 04 55 4C 46 44 52 42 52 55 42
+0D10 49 4B 27 53 20 43 55 42 45 8E 0F 79 D6 03 30 02 C6 06 4F C9 7A CD 35 0D
+0D28 CD 1B 0D E5 06 00 21 07 0D 09 56 E1 C9 E5 21 0C 0D 01 06 00 ED B9 E1 C9
+0D40 21 0A 0B 06 30 22 29 0C 36 20 2C 10 FB C9 DD 7E 00 87 87 87 DD 86 00 87
+0D58 D5 5F 16 00 FD 21 71 0C FD 19 D1 DD 23 C9 79 87 87 87 81 87 16 00 5F DD
+0D70 21 83 0C DD 19 06 08 DD 6E 0C DD 66 0D 56 DD 6E 0E DD 66 0F 5E DD 6E 00
+0D88 DD 66 01 7E 72 53 5F DD 23 DD 23 10 F0 79 87 87 5F 16 00 DD 21 EF 0C DD
+0DA0 19 DD E5 CD 4E 0D FD 6E 00 FD 66 01 56 CD 4E 0D FD 6E 08 FD 66 09 5E 72
+0DB8 CD 4E 0D FD 6E 0C FD 66 0D 56 73 CD 4E 0D FD 6E 04 FD 66 05 5E 72 DD E1
+0DD0 DD E5 CD 4E 0D FD 6E 00 FD 66 01 73 FD 6E 0E FD 66 0F 56 CD 4E 0D FD 6E
+0DE8 06 FD 66 07 5E 72 CD 4E 0D FD 6E 0A FD 66 0B 56 73 CD 4E 0D FD 6E 02 FD
+0E00 66 03 5E 72 DD E1 DD E5 CD 4E 0D FD 6E 0E FD 66 0F 73 FD 6E 0C FD 66 0D
+0E18 56 CD 4E 0D FD 6E 04 FD 66 05 5E 72 CD 4E 0D FD 6E 08 FD 66 09 56 73 CD
+0E30 4E 0D FD 6E 00 FD 66 01 5E 72 DD E1 CD 4E 0D FD 6E 0C FD 66 00 73 C9 EF
+0E48 0C 00 21 8E 0F 22 19 0D 21 0D 0D 11 DC 0B 01 0C 00 ED B0 21 83 0C 0E 06
+0E60 11 07 0D 1A 13 D5 06 09 5E 23 56 23 12 10 F9 D1 0D 20 F0 CD 40 0D EF 4D
+0E78 6F 76 65 3A 20 00 CF 00 00 FE 1B 28 C2 FE 08 20 21 2A 19 0D 2B 11 8E 0F
+0E90 ED 52 19 38 DE 7E CD 35 0D 1E 31 28 06 5F 2B 7E CD 35 0D 57 3E 64 93 5F
+0EA8 18 0D CD 35 0D 20 C4 57 F7 00 00 CF 00 00 5F D5 FE 0D 28 2F FE 31 28 2B
+0EC0 FE 32 28 24 FE 33 28 1D FE 27 28 19 FE 41 20 08 CD 66 0D CD 1B 0D 18 13
+0ED8 FE 53 28 03 D1 18 94 CD 66 0D CD 1B 0D CD 66 0D CD 66 0D CD 66 0D 2A 19
+0EF0 0D D1 D5 11 8E 0F A7 ED 52 19 D1 28 4B 2B 7E CD 35 0D 06 01 28 03 47 2B
+0F08 7E 23 BA 28 06 05 28 38 23 18 35 2B 7B FE 53 28 04 FE 41 20 1B 78 3C E6
+0F20 03 20 0E CD 24 0D 7B 1E 01 FE 41 28 C5 1E 03 18 C1 F6 30 23 77 23 18 EB
+0F38 80 E6 03 2B 28 2A 23 3D 28 26 C6 31 23 77 18 20 72 7B FE 53 20 08 1E 33
+0F50 23 CD 24 0D 18 F2 FE 41 20 04 1E 31 18 F2 E6 03 FE 01 28 04 F6 30 23 77
+0F68 23 11 BE 0F A7 ED 52 19 30 03 22 19 0D 21 4A 0B CD 43 0D 21 8E 0F ED 5B
+0F80 19 0D A7 ED 52 19 CA 73 0E 7E F7 23 18 F4 4C 33 76 69 6E 67 20 74 6F 20
+0F98 74 68 65 20 A0 6C 65 66 74 2E 20 49 6E 20 66 61 63 74 2C 20 74 68 65 20
+0FB0 4E 61 73 2D 73 79 73 20 66 75 6C 6C 2D 73 63 72 65 65 6E 20 65 64 69 74
+0FC8 69 6E 67 20 A0 66 61 63 69 6C 69 74 69 65 73 20 61 72 65 20 65 78 63 65
+</pre>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 27 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-1-1.pdf#page=29" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

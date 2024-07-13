@@ -1,0 +1,362 @@
+/***************************************************************************/
+/* INMC News */
+/* style.css / $Date: 2024-04-14 15:19:02 +0200 (So, 14. Apr 2024) $ */
+/***************************************************************************/
+
+.mag-inmc-news h1
+{
+	font-size: 1.2em;
+}
+.mag-inmc-news h2
+{
+	font-size: 1.1em;
+}
+.mag-inmc-news h3
+{
+/*	font-family: Arial, Helvetica, Verdana, sans-serif;
+*/	font-size: 1.0em;
+/*	font-weight: bold;
+*/
+}
+
+/***************************************************************************/
+
+.mag-inmc-news p
+{
+	text-indent: 3em;
+}
+.mag-inmc-news.issue-09 p,
+.mag-inmc-news .justify p,
+.mag-inmc-news p.justify
+{
+	text-align: justify;
+}
+.mag-inmc-news .noindent p,
+.mag-inmc-news p.noindent,
+.mag-inmc-news p.continued
+{
+	text-indent: 0;
+}
+.mag-inmc-news p.indent,
+.mag-inmc-news pre.indent,
+.mag-inmc-news ol.indent,
+.mag-inmc-news ul.indent,
+.mag-inmc-news dl.indent,
+.mag-inmc-news h4.indent,
+.mag-inmc-news table.indent
+{
+	text-indent: 0;
+	margin-left: 3rem;
+}
+
+.mag-inmc-news p.indent2,
+.mag-inmc-news pre.indent2,
+.mag-inmc-news table.indent2
+{
+	text-indent: 0;
+	margin-left: 6rem;
+}
+
+.mag-inmc-news p.exdent
+{
+	margin-left: 3em;
+	text-indent: -3em;
+}
+.mag-inmc-news p.exdent2
+{
+	margin-left: 6em;
+	text-indent: -6em;
+}
+
+.mag-inmc-news p.center,
+.mag-inmc-news pre.center,
+.mag-inmc-news h1.center,
+.mag-inmc-news h2.center,
+.mag-inmc-news h3.center,
+.mag-inmc-news h4.center,
+.mag-inmc-news td.center
+{
+	text-indent: 0;
+	margin-left: 0;
+	text-align: center;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news dl dd
+{
+	margin-left: 3em;
+}
+
+.mag-inmc-news dl.wide dd
+{
+	margin-left: 6em;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news table.sk2-table
+{
+	width: 100%;
+}
+
+.mag-inmc-news table.sk2-table tr th:last-child,
+.mag-inmc-news table.sk2-table tr td:last-child
+{
+	text-align: center;
+}
+
+.mag-inmc-news table.sk2-table tr:nth-child(2) td:nth-child(2),
+.mag-inmc-news table.sk2-table tr:nth-child(6) td:nth-child(2),
+.mag-inmc-news table.sk2-table tr:nth-child(7) td:nth-child(2),
+.mag-inmc-news table.sk2-table tr:nth-child(9) td:nth-child(2),
+.mag-inmc-news table.sk2-table tr:nth-child(13) td:nth-child(2),
+.mag-inmc-news table.sk2-table tr:nth-child(14) td:nth-child(2)
+{
+	padding-left: 2em;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news table.print-using tr td:last-child
+{
+	text-align: right;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news table.software-library
+{
+	width: 100%;
+}
+
+.mag-inmc-news table.software-library tr td
+{
+	padding-top: 1em;
+}
+
+.mag-inmc-news table.software-library tr td p span
+{
+	float: right;
+}
+
+.mag-inmc-news table.software-library tr th:nth-child(1),
+.mag-inmc-news table.software-library tr td:nth-child(1)
+{
+	width: 20%;
+	text-align: center;
+}
+.mag-inmc-news table.software-library tr td:nth-child(2)
+{
+	width: 60%;
+}
+.mag-inmc-news table.software-library tr th:nth-child(3),
+.mag-inmc-news table.software-library tr td:nth-child(3)
+{
+	width: 20%;
+	text-align: center;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news table.nasbug-assembly-listings
+{
+	width: 100%;
+}
+
+.mag-inmc-news table.nasbug-assembly-listings tr th:first-child,
+.mag-inmc-news table.nasbug-assembly-listings tr td:first-child
+{
+	text-align: center;
+	width: 12%;
+}
+
+.mag-inmc-news table.nasbug-assembly-listings tr th:nth-child(3),
+.mag-inmc-news table.nasbug-assembly-listings tr td:nth-child(3)
+{
+	text-align: right;
+}
+
+.mag-inmc-news table.nasbug-assembly-listings tr td:nth-child(2) span
+{
+	margin-left: 3em;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news table.basic-programs
+{
+	width: 100%;
+}
+
+.mag-inmc-news table.basic-programs tr td:first-child
+{
+	width: 3em;
+}
+
+.mag-inmc-news table.basic-programs tr td:nth-child(3)
+{
+	text-align: right;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news table.nassys-software-library
+{
+	width: 100%;
+}
+
+.mag-inmc-news table.nassys-software-library tr td:first-child
+{
+	width: 3em;
+}
+
+.mag-inmc-news table.nassys-software-library tr td
+{
+	padding-bottom: 1em;
+}
+
+.mag-inmc-news table.nassys-software-library tr.with-desc td
+{
+	padding-bottom: 0;
+}
+
+.mag-inmc-news table.nassys-software-library tr td:nth-child(4)
+{
+	text-align: right;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news .doctor-dark
+{
+	text-indent: 0;
+	text-align: center;
+	font-size: 300%;
+	font-weight: normal;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news.issue-01 p,
+.mag-inmc-news.issue-02 p,
+.mag-inmc-news.issue-03 p
+{
+	text-indent: 0;
+}
+
+.mag-inmc-news table.content
+{
+/*	width: 85%;
+	margin-left: 15%
+*/
+}
+.mag-inmc-news table.content td.content-indent
+{
+	padding-left: 1em;
+}
+
+.mag-inmc-news table.content td:first-child
+{
+	width: 25%;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news.issue-05.page-00 div.col-sm-12
+{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.mag-inmc-news.issue-05.page-00 img
+{
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.mag-inmc-news.issue-05.page-00 div.bgimage
+{
+	background-image: url("05/Image-00-2.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.mag-inmc-news.issue-05.page-00 h4
+{
+	padding-top: 18rem;
+	margin-bottom: 0.8rem;
+	text-decoration: underline;
+	text-align: center;
+}
+
+.mag-inmc-news.issue-05.page-00 div.spacer
+{
+/*	width: 70%;
+	margin: auto;
+*/	padding-bottom: 24.1rem;
+}
+
+.mag-inmc-news.issue-05.page-00 div table
+{
+	margin: auto;
+}
+
+.mag-inmc-news.issue-05.page-00 td.indent
+{
+	width: 15%;
+}
+
+.mag-inmc-news.issue-05.page-00 div table tr td
+{
+	padding: 0;
+	font-size: 0.7rem;
+	line-height: 110%;
+}
+
+.mag-inmc-news.issue-05.page-00 div table tr td:first-child
+{
+	padding-right: 1em;
+/*	font-size: 80%; */
+}
+
+.mag-inmc-news.issue-05.page-00 div table tr td:last-child
+{
+	padding: 0;
+	padding-left: 1em;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news.issue-07.page-37 table.ad tr td:nth-child(3)
+{
+	text-align: right;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news.issue-07.page-38 p span.ad
+{
+	float: left;
+	padding-right: 2em;
+}
+
+/*---------------------------------------------------------------------------*/
+
+.mag-inmc-news.nasbug-nassys table
+{
+	width: 40%;
+}
+
+.mag-inmc-news.nasbug-nassys table tr td
+{
+	white-space: nowrap;
+}
+
+/*---------------------------------------------------------------------------*/
+
+table.text-align-center-10 td
+{
+	text-align: center;
+	width: 10%;
+}

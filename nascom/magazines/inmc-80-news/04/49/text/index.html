@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 16:01:54 GMT -->
+	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">INMC 80 News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;September 1981 &middot; <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../48/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 49 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../05/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../50/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-inmc-80-news issue-04 page-49" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+Then when the Z80 encountered this, the PC would be pointing to 1000H. The Z80 would
+get the first byte and increment the PC. The Z80 then interprets the first byte
+fetched (the op-code), note that the PC is already pointing at l001H. Having decided
+that the instruction is a two byte instruction, it would fetch the second byte (the
+operand), and increment the PC to 1002 by so doing. At this stage the Z80 has all the
+information it requires, and procedes to add the second byte (the operand of the jump
+relative instruction) to the low byte of the <span class="uppercase">Current</span> contents of the PC. Now the PC
+had already been incremented by the action of fetching the op-code and the operand,
+and is now pointing to 1002H, so 1002H + 05H makes the address in the PC 1007H, ie: +5
+relative to the <span class="uppercase">Current</span> PC position, and not +5 relative to the start of the
+instruction as is commonly assumed. It works exactly the same backwards, except that
+the operand supplied is a negative number. The Z80 still adds this to the <span class="uppercase">Current</span>
+contents of the PC, and so the PC ends up pointing back, but two bytes short of where
+you might expect.
+</p>
+<p>
+Now, out of pure cowardice, part 1 didn&rsquo;t contain any information about
+&lsquo;signed binary arithmetic&rsquo; (that&rsquo;s positive and negative numbers to you). I don&rsquo;t
+intend to rectify that omission now, but refer you to any &lsquo;0 level&rdquo; maths text book.
+(Go on, own up to the kids that you don&rsquo;t know it all, and borrow one of theirs;
+either that, or say you want to find out just how ignorant kids are these days, and to
+check that the text books contain information on binary arithmetic in this computer
+age.) Which ever way you go about it, you will find that signed binary arithmetic is a
+bit of a pain, and the designer of NAS-SYS and Nasbug T4, Richard Beal (God bless his
+little cotton socks) has included the &lsquo;A&rsquo; command to ease this problem. Now I&rsquo;m not
+going to waste paper explaining it here, go and read the NAS-SYS or Nasbug manual and
+in the light of what I said above, all should become clear. The only thing I will add
+is that because the operand of a relative jump instruction is restricted to a single
+byte, the maximum range can only be FFH (256 decimal). Now because of the offset of
+two bytes, this means that the effective range of a relative jump is 80H (equivalent
+to 127 decimal steps backwards) to 7FH (equivalent to 129 decimal steps forward). So
+don&rsquo;t get too clever and try jumping all round the memory in relative jumps, &rdquo;cos it
+just won&rsquo;t work.
+</p>
+<p>
+Well, all that means is that lines 90 and 140 can become relative jumps, thus
+saving two bytes of code.
+</p>
+<pre>
+80               JR START       ; Go back to beginning
+140              JR NZ,LOOP     ; If not both 0 then loop again.
+</pre>
+<p>
+Another thing we can have a go at is the delay routine. Now I wrote that
+because at the time I couldn&rsquo;t think of anything better. (As I admitted in part 3,
+what I actually wrote was worse, and I&rsquo;m ashamed to show you exactly what I did.) How
+many of you realised that NAS-SYS and Nasbug both contain a very nice delay routine as
+part of the keyboard scanning routine, whats more, its location was deliberately
+chosen so that users could have ready access to it. Its label is RDEL, and it starts
+at location 0038H. Now the nice thing about that location is that it is one of the Z80
+&lsquo;restart&rsquo; points. To be compatible with the <!-- External Link --><a href="https://en.wikipedia.org/wiki/Intel_8080" title="External Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->, the Z80 included the eight restart
+points from the 8080. Now these are &lsquo;implied CALL&rdquo; locations and are a fixed part of
+the Z80 structure. One specific single byte instruction will cause the Z80 to call
+that location. So here we have a delay routine (its actual delay time varies from
+7.5mS to 2.5mS depending upon it being NAS-SYS or Nasbug, or wether the Nascom is
+running at 2 of 4MHz), accessible by a single byte call. All we have to do is to call
+that a number of times, and there is our delay.
+</p>
+<p>
+So now to learn about another very useful Z80 instruction, the &lsquo;DJNZ loop&rsquo;.
+The &lsquo;DJNZ&rsquo; instruction is translated as &ldquo;Decrement, Jump (relative) if Not Zero&rsquo;, and
+what it does is decrement the B register, test it, and if it&rsquo;s not zero, do a relative
+jump to the location specified by the operand. If B was zero, then it simply &ldquo;drops
+through&rsquo; to the next instruction. To use the DJNZ loop we must decide how long the
+delay is going to be, and because the delay varies between versions of the monitor and
+the Nascom speed, we&rsquo;ll choose 5mS as a good compromise. Two hundred times 5mS is one
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../48/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 49 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../05/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../50/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/INMC_80_News_4.pdf#page=49" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

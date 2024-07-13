@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 1/80</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">1/80</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/00/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 10 von 16</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/02/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2 Spalten: Start --><div class="row"><div class="col-sm-6">
+<pre class="donthyphenate">
+1510 5E 18 36 2C 23 36 50 23
+1518 36 2C 23 36 00 23 01 E2
+1520 09 70 23 71 3E 07 02 16
+1528 15 23 23 36 4F CD 68 15
+1530 15 20 F6 21 E9 0B 06 0C
+1538 11 93 15 1A 77 13 23 10
+1540 FA 3E FF 32 B7 15 C3 4F
+1548 10 21 4D 08 06 0D 11 14
+1550 16 E5 1A 13 FE 40 28 04
+1558 77 23 18 F6 E1 D5 11 40
+1560 00 19 D1 10 EC C9 23 23
+1568 23 23 23 23 C9 2B 2B 2B
+1570 2B 2B C9 01 C0 01 02 C1
+1578 02 04 01 04 08 41 08 10
+1580 40 10 20 3F 20 40 FF 40
+1588 80 BF 80 01 00 5D 10 2B
+1590 04 00 00 53 63 6F 72 65
+1598 20 20 20 20 20 20 30 2A
+15A0 2A 20 50 49 52 41 4E 48
+15A8 41 20 2A 2A 20 20 20 20
+15B0 50 68 61 73 65 20 04 FF
+15B8 2E 00 48 01 05 60 30 0A
+15C0 01 32 C4 15 48 01 05 60
+15C8 30 0A 01 32 48 01 50 5C
+15D0 30 14 04 4B 44 01 48 58
+15D8 2C 1E 07 64 44 01 44 54
+15E0 2C 28 0A 7D 40 02 40 50
+15E8 28 32 0D 96 40 02 3C 4C
+15F0 28 3C 10 AF 38 02 38 48
+15F8 24 46 13 C8 38 02 34 44
+1600 24 50 16 E1 30 04 30 40
+1608 20 5A 19 FA 28 04 28 3C
+1610 20 64 1C FF 59 6F 75 20
+1618 68 61 76 65 20 66 61 6C
+1620 6C 65 6E 20 69 6E 74 6F
+1628 20 74 68 65 20 41 6D 61
+1630 7A 6F 6E 2C 20 61 6E 64
+1638 40 20 6D 75 73 74 20 61
+1640 76 6F 69 64 20 74 68 65
+1648 20 6D 61 6E 2D 65 61 74
+1650 69 6E 67 20 50 69 72 61
+1658 6E 68 61 21 40 50 72 65
+1660 73 73 20 61 6E 79 20 6B
+1668 65 79 20 74 6F 20 73 74
+1670 61 72 74 2C 20 6F 72 20
+1678 30 2D 39 20 74 6F 20 73
+1680 65 74 20 70 68 61 73 65
+1688 2E 40 50 72 65 73 73 20
+1690 48 20 74 6F 20 73 74 6F
+1698 70 2C 20 6F 72 20 74 68
+16A0 65 20 61 64 6A 61 63 65
+16A8 6E 74 20 6B 65 79 73 20
+16B0 74 6F 40 20 6D 6F 76 65
+16B8 20 69 6E 20 61 6E 79 20
+16C0 64 69 72 65 63 74 69 6F
+16C8 6E 2E 20 20 50 72 65 73
+16D0 73 20 6B 65 79 20 74 77
+16D8 69 63 65 40 20 74 6F 20
+16E0 6D 6F 76 65 20 6D 6F 72
+16E8 65 20 71 75 69 63 6B 6C
+16F0 79 2E 40 53 77 69 6D 20
+<!-- 2 Spalten: Spaltenwechsel --></pre></div><div class="col-sm-6"><pre class="donthyphenate">
+16F8 66 72 6F 6D 20 73 69 64
+1700 65 20 74 6F 20 73 69 64
+1708 65 20 66 6F 72 20 62 6F
+1710 6E 75 73 20 70 6F 69 6E
+1718 74 73 2E 40 57 68 65 6E
+1720 20 74 68 65 20 73 63 6F
+1728 72 65 20 69 73 20 6F 76
+1730 65 72 20 31 30 30 30 2C
+1738 20 74 75 72 6E 20 6F 6E
+1740 20 6F 72 40 20 6F 66 66
+1748 20 61 75 74 6F 70 69 6C
+1750 6F 74 20 62 79 20 70 72
+1758 65 73 73 69 6E 67 20 41
+1760 2E 40 50 72 65 73 73 20
+1768 50 20 74 68 65 6E 20 30
+1770 2D 39 20 74 6F 20 73 65
+1778 74 20 70 68 61 73 65 2E
+1780 40 50 72 65 73 73 20 53
+1788 20 66 6F 72 20 6E 65 77
+1790 20 67 61 6D 65 2E 40 50
+1798 72 65 73 73 20 21 20 74
+17A0 6F 20 63 68 61 6E 67 65
+17A8 20 6B 65 79 73 20 75 73
+17B0 65 64 2E 40 50 72 65 73
+17B8 73 20 22 20 74 6F 20 6C
+17C0 65 61 76 65 20 70 72 6F
+17C8 67 72 61 6D 2E 40 00 00
+17D0 64 12 00 10 2C 12 34 12
+17D8 38 12 30 12 3C 12 40 12
+17E0 48 12 44 12 57 12 8D 10
+17E8 5B 12 22 22 21 21 0D 0D
+17F0 13 38 14 32 11 34 12 36
+17F8 5A 37 2F 39 58 31 2E 33
+1800 20 35 50 2E 41 30 4E 65
+1808 77 20 67 61 6D 65 2D 55
+1810 70 2D 44 6F 77 6E 2D 4C
+1818 65 66 74 2D 52 69 67 68
+1820 74 2D 55 70 2C 6C 65 66
+1828 74 2D 55 70 2C 72 69 67
+1830 68 74 2D 44 6F 77 6E 2C
+1838 6C 65 66 74 2D 44 6F 77
+1840 6E 2C 72 69 67 68 74 2D
+1848 48 61 6C 74 2D 50 68 61
+1850 73 65 2D 41 75 74 6F 70
+1858 69 6C 6F 74 2D FF 07 50
+1860 2C 00 09 E2 1A 41 56 C0
+1868 0A E9 E1 4F 52 C0 08 50
+1870 7B 4F 5B C0 08 66 34 4F
+1878 41 40 09 A1 35 4F 4D FF
+1880 09 21 EC 4F 33 01 08 D5
+1888 C6 4F 2E C0 0A 28 6B 4F
+1890 57 C0 09 22 AE 4F 40 40
+1898 09 E1 DE 4F 43 C0 08 61
+18A0 BB 4F 3C FF 08 E8 79 4F
+18A8 2F C0 08 A2 79 4F 25 FF
+18B0 08 E3 79 4F 3E C0 08 63
+18B8 2C 4F 2A FF 09 2C 8E 4F
+18C0 1B 40 09 2A 7F 4F 4F 00
+18C8 08 DF 42 4F 4F 00 09 B4
+18D0 5E 4F 4F 00 FF 4F 5F 4F
+18D8 FF 00 FF 00 5F 4F FF 00
+18E0 FF 00 FF 00 FF 00 FF 00
+</pre>
+<!-- 2 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/00/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 10 von 16</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/02/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+	<p class="nas-link"><!-- External Link --><a href="http://www.nascomhomepage.com/games/Piranha.nas" title="Externer Link: Piranha.nas" target="_blank" rel="noreferrer">Download</a><!-- /External Link -->
+	des Programms von der <!-- External Link --><a href="http://www.nascomhomepage.com/" title="Externer Link" target="_blank" rel="noreferrer">Nascom Home Page</a><!-- /External Link -->.</p>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/80-01.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

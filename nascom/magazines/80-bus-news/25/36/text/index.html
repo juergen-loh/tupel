@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">September&ndash;October 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 5</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../35/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 36 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-25 page-36" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    33</span>
+
+E910 0E04       GETHDR: LD      C,4             ; 4 Bytes to check
+E912 CDB4F4     HDRLP:  CALL    RUART           ; Read byte from UART
+E915 B8                 CP      B               ; Same as header?
+E916 C210E9             JP      NZ,GETHDR       ; No - Wait for another
+E919 0D                 DEC     C               ; Count bytes
+E91A C212E9             JP      NZ,HDRLP        ; More needed
+E91D CD44ED     SNDARY: CALL    TSTNUM          ; Check it's a numerical array
+E920 CD8AE6     ARYLP:  CALL    CPDEHL          ; All array data done
+E923 CA37E9             JP      Z,SUMOFF        ; Yes - Do check sum
+E926 F1                 POP     AF              ; CLOAD* or CSAVE* ?
+E927 F5                 PUSH    AF              ; Re-save flags
+E928 7E                 LD      A,(HL)          ; Get byte
+E929 F4BAF4             CALL    P,WUART         ; CSAVE* - Write byte
+E92C FCB4F4             CALL    M,RUART         ; CLOAD* - Read byte
+E92F 77                 LD      (HL),A          ; Save byte in case of CLOAD*
+E930 CD40E9             CALL    ACCSUM          ; Accumulate check sum
+E933 23                 INC     HL              ; Next byte
+E934 C320E9             JP      ARYLP           ; Repeat
+
+E937 CD4DE9     SUMOFF: CALL    DOSUM           ; Do check sum
+E93A CDD5FC             CALL    CASFF           ; Cassette off
+E93D F1                 POP     AF              ; Not needed any more
+E93E E1                 POP     HL              ; Restore code string address
+E93F C9                 RET
+
+E940 E5         ACCSUM: PUSH    HL              ; Save address in array
+E941 2A4A10             LD      HL,(CHKSUM)     ; Get check sum
+E944 0600               LD      B,0             ; BC - Value of byte
+E946 4F                 LD      C,A
+E947 09                 ADD     HL,BC           ; Add byte to check sum
+E948 224A10             LD      (CHKSUM),HL     ; Re-save check sum
+E94B E1                 POP     HL              ; Restore address in array
+E94C C9                 RET
+
+E94D 3ACE10     DOSUM:  LD      A,(BRKLIN)      ; CLOAD* or CSAVE* ?
+E950 B7                 OR      A
+E951 FA60E9             JP      M,CHSUMS        ; CLOAD* - Check if sums match
+E954 3A4A10             LD      A,(CHKSUM)      ; Get LSB of check sum
+E957 CDBAF4             CALL    WUART           ; Write to UART
+E95A 3A4B10             LD      A,(CHKSUM+1)    ; Get MSB of check sum
+E95D C3BAF4             JP      WUART           ; Write to UART and return
+
+E960 CDB4F4     CHSUMS: CALL    RUART           ; Read LSB of check sum
+E963 F5                 PUSH    AF              ; Save it
+E964 CDB4F4             CALL    RUART           ; Read MSB of check sum
+E967 C1                 POP     BC              ; LSB to B
+E968 58                 LD      E,B             ; LSB to E
+E969 57                 LD      D,A             ; MSB to D
+E96A 2A4A10             LD      HL,(CHKSUM)     ; Get accumulated check sum
+E96D CD8AE6             CALL    CPDEHL          ; Are they the same?
+E970 C8                 RET     Z               ; Yes - End CLOAD*
+E971 CDD5FC             CALL    CASFF           ; Cassette off
+E974 C36BF5             JP      OUTBAD          ; Different - Output "Bad"
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    34</span>
+
+E977 7E         CHKLTR: LD      A,(HL)          ; Get byte
+E978 FE41               CP      "A"             ; &lt; "A" ?
+E97A D8                 RET     C               ; Carry set if not letter
+E97B FE5B               CP      "Z"+1           ; &gt; "Z" ?
+E97D 3F                 CCF
+E97E C9                 RET                     ; Carry set if not letter
+
+E97F CD36E8     FPSINT: CALL    GETCHR          ; Get next character
+E982 CD41ED     POSINT: CALL    GETNUM          ; Get integer 0 to 32767
+E985 CD13F8     DEPINT: CALL    TSTSGN          ; Test sign of FPREG
+E988 FAA0E9             JP      M,FCERR         ; Negative - ?FC Error
+E98B 3AE710     DEINT:  LD      A,(FPEXP)       ; Get integer value to DE
+E98E FE90               CP      80H+16          ; Exponent in range (16 bits)?
+E990 DABBF8             JP      C,FPINT         ; Yes - convert it
+E993 018090             LD      BC,9080H        ; BCDE = -32768
+E996 110000             LD      DE,0000
+E999 E5                 PUSH    HL              ; Save code string address
+E99A CD8EF8             CALL    CMPNUM          ; Compare FPREG with BCDE
+E99D E1                 POP     HL              ; Restore code string address
+E99E 51                 LD      D,C             ; MSB to D
+E99F C8                 RET     Z               ; Return if in range
+E9A0 1E08       FCERR:  LD      E,FC            ; ?FC Error
+E9A2 C3C1E3             JP      ERROR           ; Output error-
+
+E9A5 2B         ATOH:   DEC     HL              ; ASCII number to DE binary
+E9A6 110000     GETLN:  LD      DE,0            ; Get number to DE
+E9A9 CD36E8     GTLNLP: CALL    GETCHR          ; Get next character
+E9AC D0                 RET     NC              ; Exit if not a digit
+E9AD E5                 PUSH    HL              ; Save code string address
+E9AE F5                 PUSH    AF              ; Save digit
+E9AF 219819             LD      HL,65529/10     ; Largest number 65529
+E9B2 CD8AE6             CALL    CPDEHL          ; Number in range?
+E9B5 DAADE3             JP      C,SNERR         ; No - ?SN Error
+E9B8 62                 LD      H,D             ; HL = Number
+E9B9 6B                 LD      L,E
+E9BA 19                 ADD     HL,DE           ; Times 2
+E9BB 29                 ADD     HL,HL           ; Times 4
+E9BC 19                 ADD     HL,DE           ; Times 5
+E9BD 29                 ADD     HL,HL           ; Times 10
+E9BE F1                 POP     AF              ; Restore digit
+E9BF D630               SUB     "0"             ; Make it 0 to 9
+E9C1 5F                 LD      E,A             ; DE = Value of digit
+E9C2 1600               LD      D,0
+E9C4 19                 ADD     HL,DE           ; Add to number
+E9C5 EB                 EX      DE,HL           ; Number to DE
+E9C6 E1                 POP     HL              ; Restore code string address
+E9C7 C3A9E9             JP      GTLNLP          ; Go to next character
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../35/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 36 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_25.pdf#page=36" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

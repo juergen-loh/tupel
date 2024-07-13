@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1984 - Volume 3 - Issue 6</title>
+	<!-- Sun, 30 Jun 2024 16:11:25 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 6</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../35/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 5 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../41/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-36 page-05" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+<span class="uppercase">Polydos</span> ROMs at D000H-D7FFH with the links at LKS1 placing MROM, VRAM and BROM
+as normal. Pin 10 for D000H-DFFFH is connected to both pin 7 (XROM) for the
+<span class="uppercase">Polydos</span> ROMs and pin 4 (BLOCK A) for the RAM chips in sockets IC37 and IC38.
+This all worked with a 64K Gemini RAM Card until the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/nascom/avc_model_b_issue_a.htm" title="External Link" target="_blank" rel="noreferrer">AVC</a><!-- /External Link -->
+was installed. The
+memory card was amended as the AVC manual demanded but I did nothing to the
+N2. As a result (?), there is a gap in memory from D8000H-DFFFH. I suspect
+/RAMDIS is the culprit but am not sure how to use the advice in the AVC manual
+to recover the lost RAM. Eventually, I want to use the spare parallel ports
+on the Gemini
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm816.htm" title="External Link" target="_blank" rel="noreferrer">GM816</a><!-- /External Link -->
+(see below) to handle this linking &ndash; then I could switch
+ROM BASIC in or out.
+</p>
+<p>
+I am sorry about the delay in returning the Questionnaire, but writing
+letters to the Tax Inspector and even editors of computer journals comes a
+long way after programming. Specific answers to most of the questions are
+appended to this letter. In general terms I very much enjoy reading 80-BUS
+News (though inclined at times to mutter about too much of the software stuff
+being CP/M orientated) but am becoming alarmed at the numbers of Nascoms now
+on the second-hand market.
+</p>
+<p>
+Disloyal it might seem, but I have acquired a Sinclair QL so that I can
+get my hands on something closer to a proper operating system and am now
+setting up an RS232 link to the Nascom using a Gemini GM816 and a
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm818.htm" title="External Link" target="_blank" rel="noreferrer">GM818</a><!-- /External Link -->. Does
+this make the QL an expensive printer buffer or the Nascom an extremely
+expensive disk drive?
+</p>
+<p>
+Yours truly, C J Cave, South Croydon, Surrey
+</p>
+<h3>
+<u>Reading the small print</u>
+</h3>
+<p>
+Reaction to layout of
+<a href="../../../33/31/text/#article1">Dave Hunt&rsquo;s ramblings</a>,
+80-BUS News, Vol 3 &ndash; Iss 3:&ndash;
+<b>&ldquo;Aaarrrggghh!&rdquo;.</b> Frantic scrabble for magnifying glass. This layout is not a
+good idea. Reducing the number of pages is also not a good idea. We don&rsquo;t
+want a return to
+<a href="../../../../inmc-news/01/00/text/#page">INMC Issue&nbsp;1</a>.
+Besides, how would you have room to publish
+the design of my 80-BUS Orgone Accumulator, if you cut down the length of the
+magazine.
+</p>
+<p>
+The 80-BUS News has cost &pound;1.50 since January 1982. This is &pound;9.00 a year.
+I must have spent quite a bit more than &pound;300 on my beloved Uriah in the past
+year. Compared to this expense, &pound;9 for 6 issues of 60-odd pages of
+information, including reviews of hardware and software (which could well
+prevent a costly mistake) is nothing. As even 2000AD has had its price put up
+by 20% in the past year, are all the 80-BUS freaks out there REALLY too stingy
+to shell out a few extra quid?
+</p>
+<p>
+I have been trying for more than a year to start a tape circle, but none
+of my offers have yet been published in the 80-BUS News. How do you expect us
+&ldquo;dodos&rdquo; to be anything else if you suppress us?
+</p>
+<p>
+Yours truly, Kevin Wood, Canterbury, Kent
+</p>
+<h3>
+<u>80-BUS &amp; BBCs</u>
+</h3>
+<p>
+About Mr Young, the person who wishes to attach a BBC to the 80-BUS (what
+a repulsive thought!). What does he mean by the 1&nbsp;MHz tube?
+</p>
+<p>
+There is a thing called the 1&nbsp;MHz bus. This buffers the lower 8 bits of
+the address bus out of the BBC and the data bus bi-directionally. There are
+also two select signals provided (which each map the bus onto one page of
+memory, from &pound;FC00 to &pound;D00), reset, the Read/&#x200b;Write line, a 1&nbsp;MHz clock and an
+interrupt line. There is also an input to the BBC&rsquo;s internal amplifier (which
+is responsible for the &ldquo;frying eggs&rdquo; sound of the BBC). The 1&nbsp;MHz bus is
+totally putrid.
+</p>
+<p>
+There is also a thing called &ldquo;The Tube&rdquo;. This is even more putrid, and
+is smothered in registered trade mark signs, although why anyone would want to
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../35/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 5 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../41/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_36.pdf#page=5" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1982 - Volume 1 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1982 &middot; <span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 31 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-14 page-31" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+board chip select, CS, did not float high as expected but remained resolutely at
+about the two volt level. This, despite the inclusion of a 100K pullup resistor
+on the clock board to ensure the CS line remained high. Taking in to account the
+loading effect of the high impedance meter used to measure this voltage, the
+approximate voltage on this line was guessed as being about the 2.5&nbsp;volt level.
+Changing the <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="External Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
+ or the buffer made no difference, it remains a mystery where the
+leakage causing the line to be lower than expected is occurring.
+</p>
+<p>
+However, accepting that this leakage does occur, and as this voltage is
+about the threshold of the board chip select buffer, which is a CMOS device with
+a threshold of about 2.5&nbsp;volts, we thought that any spurious noise on this line,
+and there has to be some, was causing the CMOS buffer on the clock board to
+select the clock chip. This was confirmed with a &rsquo;scope looking at the select pin
+of the clock chip, after the input and power down buffers. A definite short
+glitch was noted on the select pin during a computer reset sequence. The cause,
+like the voltage leakage remains unknown. As the output lines of the PIO are
+directly connected to the clock chip which again is a MOS device, these are also
+susceptible to noise due their high impedance inputs. This appears to cause the
+clock chip write input to open during a computer reset sequence and so to write
+the rubbish on the data lines to the clock chip registers which were being
+addressed by the rubbish on the clock chip address lines, also directly connected
+to the PIO. We were relieved to cure the problem by the simple expedient of
+changing the 100K pullup resistor for a 22K pullup.
+</p>
+<p>
+Unfortunately, this did not remove all the problems, the clock would now
+work correctly whilst the computer was left running, however, on power down and
+subsequent power up the clock was occasionally being corrupted. Having previously
+eliminated the power down and battery backup, this left the power up condition.
+This was confirmed as being the cause by powering down the computer with the
+clock connected, then unplugging the clock and powering the computer up again.
+Reconnecting the clock with the power on and then reading the clock, the clock
+worked correctly. The clock circuitry has a 100K pullup resistor in series with a
+100nF capacitor to stop the CS line becoming active during power up. 100K and
+100nF gives a time constant of 10mS which is the time allowed for the power
+supply rails to settle. This may be adequate for a switch mode power supply, as
+the clock at home had shown no trouble in this respect. However, the works
+computer was fitted with a large conventional power supply. Investigation of the
+power supply start up revealed that the rails did not become stable for at least
+100mS, and during that time the state of the PIO was extremely indeterminate. It
+was obvious then that the 10mS allowed for stabilisation was inadequate for the
+power supply in use, and the 100nF capacitor was changed for a 2uF tantalum,
+giving a 200mS time constant. This cleared the remaining problem.
+</p>
+<p>
+Both the problems noted above could do with further investigation, why
+were these problems not noted on the prototypes, and are the conclusions drawn
+above and the solutions adopted, the correct ones. Our aim at work was to make
+the clock work, not to conduct an investigation into the behaviour of PIOs and
+power supplies at reset and power up. Perhaps Gemini may like to make some
+comment in a future issue.
+</p>
+<p>
+To sum up then, the Gemini
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm822.htm" title="External Link" target="_blank" rel="noreferrer">GM822</a><!-- /External Link -->
+represents a useful addon which is
+simple to construct and easily added to the system. A one evening project with a
+useful end result. Having cured the problems mentioned above, both clocks have
+behaved well. Taking the cost of the competing clock boards into account, the
+Gemini GM822 seems to be about par for the course in terms of value for money and
+facilities provided.
+</p>
+<p>
+I didn&rsquo;t like the software supplied with the clock so I set to and wrote
+some new routines. These used large chunks of the originals and in this case I
+can not credit them as I do not know who wrote them in the first place, however,
+thank you, whoever you are. The routines are listed elsewhere and are written for
+use under CP/M only, but are otherwise Nascom/&#x200b;Gemini compatible although I have
+maintained port 1CH as the clock port. This could easily be changed on
+reassembly. The most important improvement is that they contain error checking of
+the input, making it impossible to program wrong data into the clock. However,
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 31 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_14.pdf#page=35" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 31 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-31 page-31" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    69</span>
+
+                ; &lt;&lt; NO  REFERENCE  TO  THIS  SECTION  OF  CODE &gt;&gt;
+                ; &lt;&lt; Set up another program area (can be in ROM) &gt;&gt;
+
+F495 2A5E10             LD      HL,(BASTXT)     ; Get start of program text
+F498 22D610             LD      (PROGND),HL     ; Set more variable space
+F49B 210080             LD      HL,8000H        ; Address of new program
+F49E 5E                 LD      E,(HL)          ; Get LSB of new RAM end
+F49F 23                 INC     HL
+F4A0 56                 LD      D,(HL)          ; Get MSB of new RAM end
+F4A1 23                 INC     HL
+F4A2 23                 INC     HL              ; Null at start of program
+F4A3 225E10             LD      (BASTXT),HL     ; New program text area 8003H
+F4A6 EB                 EX      DE,HL           ; New RAM end to HL
+F4A7 22AF10             LD      (LSTRAM),HL     ; Set new RAM end
+F4AA 225A10             LD      (STRSPC),HL     ; Clear string space
+F4AD 01F2E7             LD      BC,RUNCNT       ; Execution driver loop
+F4B0 C5                 PUSH    BC              ; Save for return
+F4B1 C3C5E4             JP      RUNFST          ; Clear variables and continue
+
+F4B4 C356FD     RUART:  JP      GUART           ; Get a byte from UART
+
+F4B7 CDBAF4     WUART2: CALL    WUART           ; Send 2 Bytes to UART
+F4BA F5         WUART:  PUSH    AF              ; Save byte
+F4BB C5                 PUSH    BC              ; Save BC
+F4BC 4F                 LD      C,A             ; Byte to C
+F4BD CD68FD             CALL    SUART           ; Send byte to UART
+F4C0 C1                 POP     BC              ; Restore BC
+F4C1 F1                 POP     AF              ; Restore byte
+F4C2 C9                 RET
+
+F4C3 0601       CSAVE:  LD      B,1             ; Flag "CSAVE"
+F4C5 FEAE               CP      ZTIMES          ; "*" token? ("CSAVE*")
+F4C7 CABBE8             JP      Z,ARRSV1        ; Yes - Array save
+F4CA CD5AED             CALL    EVAL            ; Evaluate expression
+F4CD E5                 PUSH    HL              ; Save code string address
+F4CE CD95F3             CALL    GTFLNM          ; Get file name
+F4D1 D5                 PUSH    DE              ; Save file name
+F4D2 CDC8FC             CALL    CASFFW          ; Turn on motor and wait
+F4D5 D1                 POP     DE              ; Restore file name
+F4D6 3ED3               LD      A,11010011B     ; Header byte
+F4D8 CDBAF4             CALL    WUART           ; Send byte to UART
+F4DB CDB7F4             CALL    WUART2          ; Send byte twice more
+F4DE 1A                 LD      A,(DE)          ; Get file name
+F4DF CDBAF4             CALL    WUART           ; Send it to UART
+F4E2 00                 NOP
+F4E3 00                 NOP
+F4E4 00                 NOP
+F4E5 21D610             LD      HL,PROGND       ; Start of program information
+F4E8 220C0C             LD      (ARG1),HL       ; Save for monitor save routine
+F4EB 2AD610             LD      HL,(PROGND)     ; End of program information
+F4EE 220E0C             LD      (ARG2),HL       ; Save for monitor save routine
+F4F1 CD73FE             CALL    SAVE            ; Save program to tape
+F4F4 CDD8FC             CALL    ARET            ; Not much there!
+F4F7 E1                 POP     HL              ; Restore code string address
+F4F8 C9                 RET
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    70</span>
+
+F4F9 7E         CLOAD:  LD      A,(HL)          ; Get byte after "CLOAD"
+F4FA FEAE               CP      ZTIMES          ; "*" token? ("CLOAD*")
+F4FC CAB9E8             JP      Z,ARRLD1        ; Yes - Array load
+F4FF CDD1FF             CALL    SMOTOR          ; Start motor and get "?"
+F502 D69E               SUB     ZPRINT          ; "?" ("PRINT" token) Verify?
+F504 CA09F5             JP      Z,FLGVER        ; Yes - Flag "verify"
+F507 AF                 XOR     A               ; Flag "load"
+F508 01                 DEFB    (LD BC,nn)      ; Skip "CPL" and "INC HL"
+F509 2F         FLGVER: CPL                     ; Flag "verify"
+F50A 23                 INC     HL              ; Skip over "?"
+F50B F5                 PUSH    AF              ; Save verify flag
+F50C 2B                 DEC     HL              ; DEC 'cos GETCHR INCs
+F50D CD36E8             CALL    GETCHR          ; Get next character
+F510 3E00               LD      A,0             ; Any file will do
+F512 CA1CF5             JP      Z,ANYNAM        ; No name given - Any will do
+F515 CD5AED             CALL    EVAL            ; Evaluate expression
+F518 CD95F3             CALL    GTFLNM          ; Get file name
+F51B 1A                 LD      A,(DE)          ; Get first byte of name
+F51C 6F         ANYNAM: LD      L,A             ; Save name to find
+F51D F1                 POP     AF              ; Get verify flag
+F51E F5                 PUSH    AF              ; And re-save
+F51F B7                 OR      A               ; Verify of load?
+F520 67                 LD      H,A
+F521 22E410             LD      (FPREG),HL      ; Save nam of file to find
+F524 CCBAE4             CALL    Z,CLRPTR        ; Load - Clear pointers
+F527 2AE410             LD      HL,(FPREG)      ; Get name of program to find
+F52A EB                 EX      DE,HL           ; Name to DE
+F52B 0603       CLOAD1: LD      B,3             ; 3 Header bytes
+F52D CDB4F4     CLOAD2: CALL    RUART           ; Get a byte from UART
+F530 D6D3               SUB     11010011B       ; Header byte?
+F532 C22BF5             JP      NZ,CLOAD1       ; Look for header
+F535 05                 DEC     B               ; Count header bytes
+F536 C22DF5             JP      NZ,CLOAD2       ; More to find?
+F539 CDB4F4             CALL    RUART           ; Get name of file
+F53C CD74F5             CALL    FILFND          ; Display "file X found"
+F53F 1C                 INC     E               ; Any file name given?
+F540 1D                 DEC     E
+F541 CA48F5             JP      Z,THSFIL        ; No - This file will do
+F544 BB                 CP      E               ; Has file been found?
+F545 C22BF5             JP      NZ,CLOAD1       ; No - Look for another
+F548 00         THSFIL: NOP
+F549 00                 NOP
+F54A 00                 NOP
+F54B F1                 POP     AF              ; Get verify flag
+F54C B7                 OR      A               ; Load or verify?
+F54D C25CF5             JP      NZ,CLOADV       ; Verify program
+F550 CD88FE             CALL    MONLD           ; Use monitor to load program
+F553 2AD610             LD      HL,(PROGND)     ; Get end of program
+F556 CD93E3             CALL    ENFMEM          ; See if enough memory
+F559 C35FF5             JP      CLOADE          ; "Ok" and set up pointers
+
+F55C CDAAFE     CLOADV: CALL    MONVE           ; Use monitor to verify program
+F55F 214BE3     CLOADE: LD      HL,OKMSG        ; "Ok" message
+F562 CD10F2             CALL    PRS             ; Output string
+F565 CDD8FC             CALL    ARET            ; Not a lot there!
+F568 C37CE4             JP      SETPTR          ; Set up line pointers
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 31 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_31.pdf#page=31" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

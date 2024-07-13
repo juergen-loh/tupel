@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 6</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../54/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 55 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-26 page-55" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+transitions, just a continual high or low to the end of the data block.
+This is an invitation to lost sync, particularly if the clock is an integral
+part of the signal, how can this be overcome? The answer is what is called bit
+stuffing, which gives rise to a highly efficient data transmission system
+known as NRZI.
+</p>
+<p>
+First a look at NRZI, it stands for Non Return to Zero Inverted (it is
+actually used on our disk systems but no-one shouts about it). It&rsquo;s not a case
+of high means a 1 and low means a 0. It is a case of change of input state
+means a change of output data state. Lets assume that the input signal is low,
+and the output data state is currently 0. The next input signal transition
+from low to high will cause a change of output state from 0 to 1. No different
+from what we already know, but if the output data state were already high when
+the input low to high transition occurred then the data state would change
+from 1 to 0. It is the input transition edges associated with the transition
+which causes the output to change from one data state to another. Thats where
+the Non Return to Zero bit comes in, an input transition to zero does not
+necessarily mean that the data state returns to 0, it could go to 1. None of
+this matters so long as the decoder knows what is to happen, and knows its
+starting states.
+</p>
+<p>
+It should be obvious that to be a synchronous data transmission system,
+NRZI must have some sort of sychronising mechanism built in to allow clock
+recovery. It must know how many bits have passed between one input transition
+and the next. A continual steam of 1&rsquo;s or 0&rsquo;s is an invite to lost sync. If we
+sent a stream of 010101010.... then it would be no problem to recover the
+clock from the data itself, a simple phase lock would do it. Given the proven
+&lsquo;sample and hold&rsquo; characteristics of phase locks, we could send quite a lot of
+0&rsquo;s before we needed to send a 1 to regain the sync, likewise we could send a
+lot of 1&rsquo;s before we needed to send a 0 to regain sync. This is where the &lsquo;bit
+stuffing&rsquo; technique comes in. The HDLC logic counts the number of similar bits
+sent. If five consecutive 1&rsquo;s are sent, then the logic will &lsquo;stuff in&rsquo; an
+extra 0 in the sixth position to regain the sync. Likewise if five consecutive
+0&rsquo;s are sent, then the logic &lsquo;stuffs in&rsquo; an extra 1 in the sixth position. The
+receiving end knows all about this, and if it sees a transition in the sixth
+position it knows to throw that bit away. Very simple.
+</p>
+<p>
+The only time this &lsquo;bit stuffing&rsquo; does not take place is with the flags.
+So, if there are six consecutive 1&rsquo;s received without the necessary &lsquo;stuffed
+pit&rsquo;, then one of two things has happened. It must be that start or end of a
+packet. If it&rsquo;s the start, then no preceding data is of consequence, already
+having been dealt with. If it&rsquo;s the end of a packet then either a data error
+occurred, in which case the preceding two bytes won&rsquo;t add up to the CRC,
+making the packet invalid. Or the extra bit did indicate the end of the
+packet, in which case the CRC does add up and the packet is valid.
+</p>
+<p>
+Of course with a high speed interface all the HDLC logic must be in
+hardware, no way can you do the &lsquo;bit stuffing&rsquo;, phase lock clock recovery and
+CRC checking in software when the data rate is approaching the cycle time of
+the processors involved. Special chips have been developed to handle this and
+although expensive, they can really shift. Another criteria with very high
+speed links is the clock recovery itself. Phase shifts in the connecting
+circuits can cause delays in the arrival of the transitions. These delays can
+be a substantial part of a &lsquo;bit time&rsquo; when high speeds are considered. This
+one of the advantages of &lsquo;bit stuffing, the clock signal is an integral part
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../54/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 55 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_26.pdf#page=55" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

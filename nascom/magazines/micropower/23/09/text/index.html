@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 2 - Number 3 - July 1982</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 3 &middot;</span> <span class="nowrap">July 1982</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 9 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-23 page-09" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+I was a little concerned about the problem of access time
+for the VDU RAM so the next step was to make absolutely sure
+that this problem was minimised. The most critical cycle,
+timing-wise, is the read cycle because data is read in on the
+falling edge of the last clock of the cycle (T3). With the write
+cycle, data is valid rom the falling edge of T1 until slightly
+after&#x200b;the rising edge of T3 and may be written anywhere between
+the falling edge of T2 and the falling edge of T3. Hence as long
+as the falling edge of the T3 clock is before the rising edge of
+the access slot, there is less chance of a bad read. At 2&nbsp;Mhz
+this is all well and good as the falling edge of the T3 clock
+can be placed about 375ns into the access period. This gives an
+access time somewhere in the region of 375 to 400ns. With the 4&nbsp;Mhz
+clock, things begin to look dodgy because, with the T2 clock
+falling edge just on the falling edge of the access slot, there
+is only 250ns before the falling edge of T3. So access time to
+the VDU RAM must be better than 250ns in order to allow time for
+the address bus multiplexors to change the address bus over and
+let the RAM settle down. By placing the falling edge of the 4&nbsp;Mhz
+on the falling edge of the access period, you are relying on
+the delay time of the gates to maintain a high output long
+enough to terminate the wait state. This is bad practice as the
+main clock only needs to be delayed by a slow gate and the wait
+state may not be terminated.
+</p>
+<p>
+Now it became obvious that Snowdinger 2 would be completely
+different to Snowdinger, due mainly to using the same circuit
+for both 2 and 4&nbsp;Mhz. Using the 1&nbsp;Mhz clock ORed with VRAM a
+gated signal is produced for any access to the VDU RAM, ie VRAM
+is synchronised to the 1&nbsp;Mhz clock. Finding a wait signal for
+the Z80 that would work at 2 and 4&nbsp;Mhz was some what more
+difficult. However the final waveform is the result of ANDing
+the 2&nbsp;Mhz with the 4&nbsp;Mhz clock. For the Z80 to use this wait
+signal, both the clocks need to have there phases changed in
+order to sample the wait gate at the correct times. These phase
+changes are accomplished as follows:
+</p>
+<ol class="parenthesis indent justify">
+<li>
+The 2&nbsp;Mhz clock is shifted back quarter of it&rsquo;s cycle by
+exclusive ORing it with the 4&nbsp;Mhz clock.
+</li>
+<li>
+The 4&nbsp;Mhz clock is shifted back quarter of it&rsquo;s cycle by
+exclusive ORing it with the 8&nbsp;Mhz clock
+</li>
+</ol>
+<p>
+The reason for shifting the 4&nbsp;Mhz clock is, so as to keep
+it&rsquo;s falling edge away from the falling edge of the wait gate
+signal, hence avoiding any static hazards from slow gates, etc.
+This has the disadvantage of reducing the access time for the
+RAM by about 62.5ns, but makes the circuit more reliable. Figure
+1 shows all of the waveforms needed to construct the circuit,
+however I soon discovered that this circuit will only work for a
+Nascom&nbsp;1. A quick look with a 100&nbsp;Mhz oscilloscope confirmed
+that Nascom&nbsp;2s have different phase clocks, Figure 2 shows
+diagrams of the 4,2,1 and the serialiser load clocks for a
+Nascom&nbsp;2.
+</p>
+<p>
+The Nascom&nbsp;2 uses a 74LS193, presettable 4-bit binary
+up/down counter. This circuits clock is positive edge triggered,
+hence all the clock outputs have different phases. At first
+sight this presents no problems, apply the theory to the new
+waveforms and design a new circuit. Unfortunately, changing the
+phases of the clocks also changes the position of the load
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 9 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../10/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-2-3.pdf#page=11" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

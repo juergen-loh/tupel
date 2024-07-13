@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 2 - Number 4 - September 1982</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 4 &middot;</span> <span class="nowrap">September 1982</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 12 of 36</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../nascom-newsletter/25/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../36/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-24 page-12" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<table class="justify">
+<tr><td>
+2)</td><td>/XROME&nbsp;&nbsp;</td><td>When address E000-FFFF is active low and BS2 (Bank
+Select) is low (indicating any bank except 4 is
+selected) then gate 2 ensures that /XROME goes active
+low. It is looped along the /OE pin 20s of the 8 extra
+EPROMS. Whether one of these is actually enabled
+depends on the output of IC&nbsp;46.
+</td></tr>
+<tr><td>
+3)</td><td>/XROMC&nbsp;&nbsp;</td><td>When address C000-E000 is active low and BS2 is low
+(any bank selected except 4) then gate 4 ensures that
+/XROMC goes active low and is looped along link blocks
+1 to 8 (NOT 9) pins 10, to connect to the /OE pin 20s
+of the original EPROMS in the eight Nascom sockets.
+Again, which one is actually selected depends on the
+output of IC&nbsp;46.
+</td></tr>
+<tr><td>
+4)</td><td>/BROM&nbsp;&nbsp;</td><td>When Port 3, Bank 4 is selected, BS2 goes high and
+gate 2 being an &lsquo;OR&rsquo; gate /XROME must be deselected.
+Meanwhile, /BS2 is low and gate 1 is an &lsquo;OR&rsquo; so, as
+long as address is E000+, /BROM is active and BASIC
+occupies bank 4 E000-FFFF.
+</td></tr>
+<tr><td>
+5)</td><td>BS1&nbsp;&amp;&nbsp;&nbsp;<br>
+BS0</td><td>These send binary signals 0, 1, 2 or 3 to IC&nbsp;46 to
+control the bank select. The output is steady
+depending on the last inputs to D0, D1 and D2 of the 3
+flip-flops contained an the 74LS175.
+</td></tr>
+</table>
+<p>
+The reset line connected to pin 1 of the 74LS175 ensures
+that bank 0 is always selected on power-up or reset. Pin 9 may
+be regarded as a chip select pin, enabled by pin 9 of the IN/OUT
+PROM IC&nbsp;26.
+</p>
+<p>
+Construction takes one evening and is easy but painstaking.
+Wire wrap sockets are soldered carefully to the 8 EPROMs that
+are to be selected at C000-DFFF. These go into the eight Nascom
+sockets. The 8 EPROMS to be selected at E000-FFFF have pin 20
+carefully bent out to take a seperate /OE signal. They then
+piggy-back into the 8 new sockets. Wire wrap sockets are not
+essential but give some cooling space between the mated EPROMS.
+I lost no EPROMs doing this.
+</p>
+<p>
+The control board uses a wire wrap socket to plug into LKS1
+in place of the header plug. It therefore holds 4 sockets, 2
+fourteen pin and 2 sixteen pin sockets. It has 10 leads to the
+board. Pins 2 and 13 of IC&nbsp;46 have to be bent out of their
+socket before connection. Do not forget the 5&nbsp;volt and Ground.
+</p>
+<p>
+I cannot claim to have tested the board fully. I cannot
+afford enough EPROMS. I have piggy-backed six <!-- External Link --><a href="https://www.ndr-nkc.de/download/datenbl/2732.pdf" title="External Link" target="_blank" rel="noreferrer">2732</a><!-- /External Link -->s and moved
+them around and can find no faults. Indeed, the board appears to
+work with no wait states at 4&nbsp;Meg. I drew a wiring diagram but
+it was such a mess I thought you would da better without it. I
+have checked the circuit diagram very carefully to ensure it
+contains all necessary information. I can only marvel at the
+flexibility of there fantastic littie computers.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 12 of 36</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../nascom-newsletter/25/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../36/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-2-4.pdf#page=14" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

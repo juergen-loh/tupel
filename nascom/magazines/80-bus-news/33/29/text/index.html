@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;June 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 29 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-33 page-29" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    102</span>
+
+FFB1 09         DIV3EX: ADD     HL,BC           ; Restore number
+FFB2 F1                 POP     AF              ; Restore column and odd/even
+FFB3 B7                 OR      A               ; Set flags (NZ or Z)
+FFB4 7D                 LD      A,L             ; Get remainder from /3
+FFB5 CABAFF             JP      Z,NOREMD        ; No remainder
+FFB8 C603               ADD     A,3             ; Adjust remainder
+FFBA 47         NOREMD: LD      B,A             ; Bit number+1 to B
+FFBB 3E01               LD      A,00000001B     ; Bit to rotate
+FFBD 07         SHFTBT: RLCA                    ; Shift bit left
+FFBE 10FD               DJNZ    SHFTBT          ; Count shifts
+FFC0 1F                 RRA                     ; Restore correct place
+FFC1 C9                 RET
+
+FFC2 C1         ADJCOL: POP     BC              ; Restore return address
+FFC3 F1                 POP     AF              ; Get bit mask
+FFC4 E1                 POP     HL              ; Get column
+FFC5 F5                 PUSH    AF              ; Re-save but mask
+FFC6 7D                 LD      A,L             ; Get column
+FFC7 1F                 RRA                     ; Divide by 2
+FFC8 C601               ADD     A,1             ; Start at column 1
+FFCA E63F               AND     00111111B       ; 0 to 63
+FFCC 67                 LD      H,A             ; Save column in H
+FFCD E5                 PUSH    HL              ; Re-save column
+FFCE C5                 PUSH    BC              ; Put back return
+FFCF 7B                 LD      A,E             ; Get row
+FFD0 C9                 RET
+
+FFD1 CDD5FC     SMOTOR: CALL    CASFF           ; Flip tape drive
+FFD4 7E                 LD      A,(HL)          ; Get byte
+FFD5 C9                 RET
+
+FFD6 3ACE10     JPLDSV: LD      A,(BRKLIN)      ; CLOAD or CSAVE?
+FFD9 FEFF               CP      -1
+FFDB C206E9             JP      NZ,SNDHDR       ; CSAVE - Send header
+FFDE C310E9             JP      GETHDR          ; CLOAD - Get header
+
+FFE1 CD81EB     CRLIN1: CALL    PRNTCR          ; Output CRLF
+FFE4 C3F2E5             JP      GETLIN          ; Get an input line
+
+FFE7 CD81EB     CRLIN:  CALL    PRNTCR          ; Output CRLF
+FFEA C3F2E5             JP      GETLIN          ; Get an input line
+
+FFED F5         TSTBIT: PUSH    AF              ; Save bit mask
+FFEE A0                 AND     B               ; Get common bits
+FFEF C1                 POP     BC              ; Restore bit mask
+FFF0 B8                 CP      B               ; Same bit set?
+FFF1 3E00               LD      A,0             ; Return 0 in A
+FFF3 C9                 RET
+
+FFF4 CD9BE6     OUTNCR: CALL    OUTC            ; Output character in A
+FFF7 C381EB             JP      PRNTCR          ; Output CRLF
+
+FFFA C3DEFD     JJUMP:  JP      JJUMP1          ; "Cool" start
+
+FFFD C3B1E0     ZJUMP:  JP      BRKRET          ; Warm start
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    103</span>
+
+ABPASS  F0F2    ABS     F838    ACCSUM  E940    ACPASS  F0F1    ADD64X  FE35
+ADDEXP  F7D1    ADDIG   F977    ADDPHL  F5BE    ADJCOL  FFC2    ALLFOL  F3C0
+ANTVLU  EC65    ANYNAM  F51C    ARET    FCD8    ARETN   FEE5    ARG1    0C0C
+ARG2    0C0E    ARGN    0C2B    ARLDSV  F012    ARREND  10DA    ARRLD1  E8B9
+ARRLP   F28B    ARRSV1  E8BB    ARYLP   E920    ASC     F391    ASCTFP  F91A
+ASPCS   EBC7    ATN     FC7C    ATN1    FC99    ATNTAB  FCA3    ATOH    E9A5
+BAD     F59D    BADINP  EBEC    BAKSTK  E356    BAKTMP  F371    BASTXT  105E
+BCDEFP  F85F    BFREE   E0B7    BKSP    0008    BNORM   F61E    BNRMLP  F621
+BREAK   FEDE    BREAK2  FE53    BRKFLG  104D    BRKLIN  10CE    BRKMSG  E350
+BRKRET  E0B1    BS      0010    BSERR   F045    BUFFER  1061    BYTSFT  F756
+CASFF   FCD5    CASFFW  FCC8    CFEVAL  EFA8    CHARTY  EF56    CHEKFN  F189
+CHKBRK  FD40    CHKLTR  E977    CHKSTK  E38A    CHKSUM  104A    CHKSYN  E690
+CHKTYP  ED46    CHR     F3A2    CHSUMS  E960    CIN     0C75    CLEAR   E9CA
+CLOAD   F4F9    CLOAD1  F52B    CLOAD2  F52D    CLOADE  F55F    CLOADV  F55C
+CLOTST  E6CC    CLREG   E4DF    CLRPTR  E4BA    CLS     FD8B    CMPFP   F8A8
+CMPLOG  EEBA    CMPNUM  F88E    CMPRES  EEFE    CMPSTR  EEE6    CN      0020
+CNVIN1  FD20    CNVIN2  FD27    CNVIN3  FD2E    CNVIN4  FD35    CNVIN5  FD3C
+CNVNUM  F926    COMMAN  1043    COMPL   F67E    CONCAT  F306    CONEXP  F956
+CONMON  FCD9    CONOT1  FCF1    CONPOS  F61B    CONT    E89E    CONTAD  10D4
+CONVAR  EE22    CONVIN  FD19    COPY    E021    COS     FC00    COUNT   E746
+CPDEHL  E68A    CPYLIT  E5B1    CR      000D    CRARLP  F065    CREARY  F04A
+CRESTR  EAC9    CRLIN   FFE7    CRLIN1  FFE1    CRNCLP  E512    CRTMST  F1C2
+CRTST   F1CE    CRTSTE  F1E4    CRUNCH  E509    CS      000C    CSAVE   F4C3
+CSTART  E012    CTLOFG  1045    CTRLC   0003    CTRLG   0007    CTRLO   000F
+CTRLR   0012    CTRLS   0013    CTRLU   0015    CTRLZ   001A    CUROPR  10C5
+CURPOS  10AB    CURSOR  0C29    DATA    EA70    DATFLG  10AE    DATLIN  10C9
+DATSNR  E3A7    DCBCDE  F8DF    DD      0012    DDERR   E3B6    DEEK    FDBC
+DEF     F106    DEFSIZ  F06D    DEINT   E98B    DEL     007F    DELAY   FD9B
+DELAY1  FD9C    DELAYB  FCCD    DELCHR  E5E1    DEPINT  E985    DETHL4  F86E
+DETHLB  F870    DIGTXT  FA20    DIM     EF28    DIMRET  EF1F    DINPOS  E6BF
+DIV     F767    DIV1    100A    DIV10   F75B    DIV2    100E    DIV3    1012
+DIV3EX  FFB1    DIV3LP  FFA8    DIV4    1015    DIVLP   F78E    DIVSUP  1009
+DOAGN   E4F8    DOCOM   EB98    DODEL   E5C1    DOEBIT  FA60    DOFN    F133
+DOKE    FDC7    DONULL  EB86    DOSPC   EBC2    DOSUM   E94D    DOTAB   EBAF
+DPOINT  F952    DTSTR   F1D2    DVBCDE  F769    DZ      0014    DZERR   E3B0
+ECHDEL  E5D5    EDIGIT  F999    ENDBUF  E5B8    ENDCON  F965    ENDDIM  F0CC
+ENDINP  EB7C    ENDLIN  FEF1    ENDNAM  EF4A    ENDPRG  E87A    ENFMEM  E393
+ERRIN   E3E1    ERRLIN  10D2    ERRMSG  E33F    ERROR   E3C1    ERRORS  E2B9
+ESC     001B    EVAL    ED5A    EVAL1   ED5D    EVAL2   ED66    EVAL3   ED69
+EVLPAR  EE09    EVNOT   EF08    EXCUTE  E816    EXP     FAFA    EXPLP   F944
+EXPTAB  FB3A    EXPTEN  FA72    EXTIG   ECC1    FANDT   ECEB    FC      0008
+FCERR   E9A0    FDTLP   ECD2    FILE    F58E    FILFND  F574    FINDEL  F0A8
+FLGDIF  F81E    FLGREL  F825    FLGVER  F509    FLPLED  FE39    FNARG   10E0
+FNCTAB  E10F    FNDARY  F018    FNDELP  F0AD    FNDEND  E48D    FNDNUM  F481
+FNDTOK  E71B    FNDVAR  EF8F    FNDWRD  E53C    FNOFST  EE33    FNRGNM  10DE
+FNTHR   EF9D    FNVAL   EE5F    FOPRND  ED92    FOR     E779    FORFLG  10CB
+FORFND  E7A9    FORSLP  E78D    FOUND   F594    FPADD   F5CD    FPBCDE  F854
+FPEXP   10E7    FPINT   F8BB    FPMULT  F708    FPREG   10E4    FPROND  F665
+FPSINT  E97F    FPTHL   F86B    FRE     F0D0    FRENUM  F0EC    FRMEVL  EE25
+GARBGE  F253    GARBLP  F256    GETCHR  E836    GETCMD  E405    GETHDR  E910
+GETINP  FD05    GETINT  F484    GETLEN  F386    GETLIN  E5F2    GETLN   E9A6
+GETNUM  ED41    GETNXT  E557    GETSTR  F350    GETTIN  FD13    GETVAR  EF2D
+GETXYA  FF15    GNXARY  F28A    GOFUNC  EE67    GOSUB   EA1C    GOTO    EA2D
+GRBARY  F2AA    GRBDON  F22B    GRBLP   F264    GSTRCU  F353    GSTRDE  F357
+GSTRHL  F356    GTFLNM  F395    GTFNAM  EF32    GTLNLP  E9A9    GTSIXD  F9EA
+GTVLUS  EC3D    GUART   FD56    HALF    FA91    HALFPI  FC4A    HDRLP   E912
+ID      0016    IDTEST  F17B    IF      EAFF    IFGO    EB0D    IFJMP   E81D
+IGCHR   FD00    INCHL   F869    INCLEN  E6BB    INDFND  E370    INEWLN  E455
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 29 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_33.pdf#page=29" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - Juli/Aug. 1983 - Ausgabe 7/8</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Juli/Aug. 1983 &middot;</span> <span class="nowrap">Ausgabe 7/8</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/06/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 24 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/09/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<p>
+werden, andernfalls wird der Befehl ignoriert. Format:
+</p>
+<pre>
+        F     [cr]
+        Y
+</pre>
+<p>
+Den F Befehl kann man durch Drücken der Stop-Taste am Recorder
+frühzeitig beenden (keine Interrupts). Dann dauert es max. eine
+Blocklänge, bis das Band rückgespult wird und die Positionswerte
+geschrieben werden (20 s).
+</p>
+<p>
+Man braucht so nicht das gesamte Band zu formatieren. Nach Ende des
+Cassettenlaufes also bitte Geduld!
+</p>
+<p>
+<u>&sbquo;L&lsquo;oad File:</u>
+</p>
+<p>
+Das Load Kommando liest ein spezifiziertes File ein. Format:
+</p>
+<pre>
+        L &lt;offset&gt; &lt;nocatalog&gt;  [cr]
+        Filename                [cr]
+</pre>
+<p>
+wobei &lt;offset&gt; und &lt;nocatalog&gt; optionale Parameter sind.
+Der &lt;offset&gt; ist dem des Nas-sys&nbsp;3 Kommandos Read &sbquo;R&lsquo; identisch
+und &lt;nocatalog&gt; liest, falls gegeben, nicht den Katalog vom Band,
+sondern benutzt den bereits gespeicherten Katalog im RAM. Der Benutzer
+ist dann über die Richtigkeit des Kataloges selbst verantwortlich.
+</p>
+<p>
+<u>&sbquo;N&lsquo;assys:</u>
+</p>
+<p>
+Dieser Befehl dient zum Verlassen des Casmon 1.3 in das Betriebssystem
+Nas-sys. Format:
+</p>
+<pre>
+        N      [cr]
+</pre>
+<p>
+<u>&sbquo;S&lsquo;ave File:</u>
+</p>
+<p>
+Mit Hilfe dieses Kommandos wird einem File im Speicher eine
+Bandposition zugeordnet und dieses File im Katalog und auf dem Band
+eingetragen. Das Programm ermittelt selbst die erste freie Position für
+das File der spezifizierten Länge. Format:
+</p>
+<pre>
+        S &lt;start&gt; &lt;end&gt; &lt;add. space&gt;  [cr]
+        Filename                      [cr]
+</pre>
+<p>
+Alle Parameter sind optional. Wird Cas-Mon 1.3 von einem übergeordneten
+Programm aufgerufen, darf auf keinen Fall ein Parameter gegeben werden,
+da diese bereits dem Cas-mon bekannt sind und dann von denen des
+Benutzers überschrieben werden. Im Interaktiven Betrieb mit Cas-Mon
+stellt &lt;start&gt; die Anfangsadresse und &lt;end&gt; die Endadresse dar. Mit
+&lt;add. space&gt; können entsprechend viele 4&nbsp;KByte Blöcke zusätzlich
+auf dem Band für dieses File reserviert werden, falls dieses File noch
+wächst. Weiterhin wird beim Schreiben geprüft, ob das File noch auf das
+Band paßt.
+</p>
+<p>
+<u>&sbquo;U&lsquo;pdate a File:</u>
+</p>
+<p>
+Dieser Befehl ist speziell für das Entwikkeln von Programmen gedacht,
+um eine rasche Aktualisierung zu ermöglichen. Format:
+</p>
+<pre>
+        U &lt;start&gt; &lt;end&gt;            [cr]
+        Filename                   [cr]
+</pre>
+<p>
+Existiert das File nicht oder ist es zu groß für die vorhandene Lücke,
+erhält man eine
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+Meldung. Da die Fileposition und der Filename gleich bleiben, wird der
+Katalog nicht neu geschrieben und auch nicht neu gelesen. Er muß also
+schon im RAM sein. Somit spart man Spulzeit.
+</p>
+<p>
+<u>&sbquo;V&lsquo;erify a File:</u>
+</p>
+<p>
+Identisch mit &sbquo;L&lsquo;, aber das File wird nicht in den Speicher übernommen.
+</p>
+<p>
+<u>&sbquo;X&lsquo; Kommando:</u>
+</p>
+<p>
+Das Kommando spult das Band an den Anfang, damit man es aus dem
+Recorder nehmen kann. Format:
+</p>
+<pre>
+        X    [cr]
+</pre>
+<h4>
+Grundsätzliche Arbeitsweise von Cas-Mon 1.3:
+</h4>
+<p>
+Um mit Cas-Mon 1.3 arbeiten zu können, wird eine mit dem &sbquo;F&lsquo; Befehl
+formatierte Cassette benötigt. Eine solche Cassette enthält folgende
+Informationen:
+</p>
+<p>
+Nach dem Vorlaufband steht eine Startposition des Kataloges und danach
+der Katalog, der nach dem Formatieren noch keine Filenamen enthält,
+Jedoch die Anzahl der 4&nbsp;KByte Blöcke des Bandes sowie die absolute
+Position jeder Marke. Da diese Parameter von den Bandgrößen wie
+Bandlänge und Bandstärke abhängen, werden sie über das &sbquo;F&lsquo; Kommando
+individuell bestimmt.
+</p>
+<p>
+Somit ist eine sehr exakte Positionierung des Bandes möglich. Im
+übrigen sind dann nur noch die Marken der 4&nbsp;KByte Blöcke, einzeln
+durchnumeriert und im zeitlich exakten Abstand, auf dem Band.
+</p>
+<p>
+Falls Cas-Mon 1.3 im Betrieb eine solche Marke findet, wird zunächst
+überprüft, ob diese erwartet wurde, Es erfolgt sonst die Meldung &sbquo;Block
+Error&lsquo;, und dann wird im Katalog der absolute Positionswert dieser
+Marke gelesen und der interne Positionszähler eventuell korrigiert.
+Dies hat den Vorteil, daß bei langen Arbeiten mit Cas-Mon 1.3 ohne
+Lesen des Kataloges, also ohne das absolute Positionieren des Bandes
+auf den Anfang, sich keine Fehler aufsummieren können.
+</p>
+<h4>
+Die Softwareschnittstelle:
+</h4>
+<p>
+Die Schnittstelle vom Casmon zum übergeordneten Programm ist nicht
+einfach. Ich habe mich, da meine gesamte Systemsoftware im RAM läuft,
+dazu entschlossen, die Systemsoftware so zu ändern, daß die
+ursprünglichen Cassetten- Befehle erhalten bleiben (z.B CSAVE in Basic).
+</p>
+<p>
+Zunächst definiere ich den SCAL &bdquo;Y&ldquo; als Sprung in den Casmon,
+entweder durch neue SCAL Tabelle im RAM oder durch <span class="uppercase">Nassys</span>&nbsp;3 Änderung.
+Dann kann man alle SCAL &bdquo;R&ldquo;,&bdquo;V&ldquo; und &bdquo;W&ldquo;
+zu SCAL &bdquo;Y&ldquo; ändern. Dies genügt für NASPEN (das ich
+allerdings reassembliert habe, deshalb keine abs. Adresse) und
+Compression ASM. Im Basic muß nun noch der EinByte-Header ignoriert
+werden. Beim Zeap weiß man Anfang und Ende und kann dies eintippen. Für
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Turbo_Pascal#Geschichte" title="Externer Link: Blue Label Software Pascal" target="_blank" rel="noreferrer">BLS</a><!-- /External Link -->-,
+<span class="uppercase">Nascom</span>-,
+<!-- External Link --><a href="https://hisoft.co.uk/gp/about-hisoft/1/pgid/4/" title="Externer Link: HiSOFT" target="_blank" rel="noreferrer">Hisoft</a><!-- /External Link -->
+Pascal, sowie für Hull-Forth sind kleine
+Adaptionsprogramme erforderlich, die ich noch nachliefern werde.
+</p>
+<p>
+Bei allen Pascal Compilern kann man sich für die Variablenspeicherung
+kleine Pascal
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/06/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 24 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/09/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-07.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

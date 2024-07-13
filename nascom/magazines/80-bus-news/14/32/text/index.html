@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1982 - Volume 1 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1982 &middot; <span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 32 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-14 page-32" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+there is still room for improvement, as since writing these I have discovered
+that it is possible for a clock register to become programmed with 0FH as a
+legitimate character, caused by spurious pulses on the <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="External Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
+ lines. Under these
+circumstances the program goes into a permanent loop, thinking that the clock has
+just changed time. Some sort of time-out is required, where say, after having had
+256 goes at reading the clock and failed, the routine returns the register
+contents regardless.
+</p>
+<p>
+Having fitted a real time clock (RTC) some use has to be found to justify
+the clock. In the circles I move in, a couple of people have already found uses
+for the clock. Richard has modified his M80 assembler to include the time and
+date on printed listings, which can be very useful. David has written an elegant
+little utility called INDEX which gives a CP/M directory listing and allows a one
+line comment after each program entry. The date being added to the index created
+at the time of updating. I hope INDEX will see it&rsquo;s way round a larger circle
+goon, although, as it requires the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm822.htm" title="External Link" target="_blank" rel="noreferrer">GM822</a><!-- /External Link -->
+RTC to be hung on a Z80 PIO at port 1CH,
+it does make it a dedicated program, and therefore not universally usable. Note
+that in each instance port 1CH has been used, and it has been mutually agreed
+amongst ourselves that port 1CH will be the clock port. My own interest has been
+to hook the clock into a compiled Basic program.
+</p>
+<p>
+As was mentioned earlier, the MM58174A clock exhibits a peculiar
+characteristic, in that it gains time if access is made to it over too long a
+time frame. I do not have the National data sheet to hand, but if I remember
+correctly, the clock must be accessed within a period of roughly 15mS from
+reading the first register to reading the last. This means that the access
+software has to be very fast. On the other hand, in instances where it is not the
+intention to display the clock on the screen, reading it back at its fastest
+increment of tenths of seconds, this is of little consequence. The software
+provided by Gemini certainly fails in this respect in that it wastes a lot of
+time within the read loop determining whether the clock has changed time, and if
+not, to convert the incoming nibble to ASCII and to save it in the temporary
+workspace. The obvious method to correct for this would be to copy the registers
+&lsquo;as is&rsquo; to the temporary workspace using the tightest possible loop, perhaps
+using an INI instruction or even an INIR instruction if it could be contrived,
+then, having copied the registers to the temporary workspace, to sort them out
+later. I have not given this approach much thought, but it should be possible.
+The later National MM58174AN chip does not suffer from this problem, but is more
+expensive.
+</p>
+<p>
+Making use of the clock to display the time continually. on the screen,
+whilst a nice idea, is not as easy as it sounds. That is, assuming the computer
+is to be used for other things apart from displaying the time. It is not
+difficult to write a program which will continually read the clock and place the
+result on the screen, Gemini have already provided the clock read routines, and a
+simple change to the software could be made to cause the routine restart itself
+instead of making the clock return to the routine which called it. This is a
+massive waste of time as the processor is 100% wrapped up in reading the clock.
+There is no time left for other things. As the clock is capable of creating
+interrupts, one method would be to use the interrupt output connected to the
+strobe input of the PIO to create an interrupt every time the clock changed
+state. The fastest interrupt rate on the MM58174 is one every half a second, this
+could be used to update the clock display every second, whilst causing minimum
+disruption to processing of other things. As it happens, the interrupt output of
+the GM822 was deliberately not returned to the strobe line of the PIO, as this
+could be the cause of some very strange software faults by the creation of
+undesired interrupts when used with disk systems (which must not be interrupted),
+or other interrupt driven auxiliaries elsewhere in the system, where the use of
+the EI and DI instructions could cause other problems. The interrupt output is
+connected to one of the output bits which means it can only be used when mode 3,
+the bit masked interrupt mode of the PIO is selected. This mode, whilst more
+flexible is also more difficult to implement.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 32 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_14.pdf#page=36" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

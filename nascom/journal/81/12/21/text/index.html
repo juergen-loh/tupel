@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - Dezember 1981 - Ausgabe 11/12</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Dezember 1981 &middot;</span> <span class="nowrap">Ausgabe 11/12</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/10/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 21 von 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/01/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../22/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2 Spalten: Start --><div class="row"><div class="col-sm-6">
+<pre class="donthyphenate">
+1940 IFP1&lt;100THENP1=0
+1950 P1=P1/10:P2=P2/10:T1=INT(T1/2):RETURN
+1960 C1=FNR(23):C2=FNR(09)
+1970 IFQ(C1,C2)&lt;&gt;0THEN1960
+1980 RETURN
+1990 ONC9GOTO1992,1991
+1991 C$(C9)="*** RED ***":RETURN
+1992 C$(C9)="** Green **":RETURN
+2020 FORI=1TO23:FORJ=1TO09
+2030 Q(I,J)=0:NEXTJ:NEXTI
+2035 E1=FNR(23):E2=FNR(09)
+2036 Q(E1,E2)=1
+2040 IFG(Q1,Q2)&lt;1000THENG(Q1,Q2)=G(Q1,Q2)+1000
+2050 K=G(Q1,Q2)-1000
+2060 K1=INT(K/100):K=K-K1*100:IFK1=0THEN2080
+2070 GOSUB1960:Q(C1,C2)=2:B1=C1: B2=C2:H2=1:C9=2
+2080 K1=INT(K/10):K=K-K1*10:C9=1:IFK1=0THEN2110
+2090 GOSUB1960
+2095 IFABS(E1-C1)&lt;3THENIFABS(E2-C2)&lt;3THEN2090
+2096 IFABS(B1-C1)&lt;3THENIFABS(B2-C2)&lt;3THEN2090
+2097 K1=C1:K2=C2:Q(K1,K2)=3:C9=2:S8=200*Z8
+2100 IFFNP(1)=1THENS8=S8*2
+2105 IFK=0THENRETURN
+2110 FORI=1TOKSTEP.5:GOSUB1960: Q(C1,C2)=4:NEXTI
+2120 RETURN
+2130 CLS:PRINTTAB(15);"** Galaxy Map **"
+2140 FORJ=Q2+1TOQ2-1STEP-1
+2141 FORI=Q1-1TOQ1+1
+2142 IFG(I,J)&lt;1000THENG(I,J)=G(I,J)+1000
+2143 NEXTI:NEXTJ
+2146 FORJ=11TO1STEP-1
+2147 IFJ&gt;9THENPRINTJ;":";:GOTO2149
+2148 PRINTJ;" :";
+2149 FORI=1TO8
+2150 K=G(I,J)-1000:IFK&lt;0THEN2185
+2160 IFI=Q1THEN2180
+2170 GOTO 2185
+2180 IFJ&lt;&gt;Q2THEN2185
+2184 A$="+ ":GOSUB2193:GOTO2187
+2185 GOSUB2193
+2187 IFI=8THEN2188:PRINTCHR$(17);:A$=":"+A$
+2188 PRINTTAB(I*4+1);A$;:A$=""
+2189 NEXTI:PRINT:NEXTJ
+2190 PRINTTAB(6);"1 __ 2 __ 3 __ 4 __ 5 __ 6 __ 7 __ 8"
+2191 PRINTTAB(5);"( 'b' = 100 P. 'k' = 10 P. '*' = 1P. )"
+2192 GOTO2206
+2193 IFK&lt;0THENA$=A$+"    :":RETURN
+2194 IFLEN(A$)=0THEN2196
+2195 A$=LEFT$(A$,LEN(A$)-1)
+2196 A$=A$+STR$(K)
+2197 IFMID$(A$,2,1)=" "THENA$=LEFT$(A$,1)+RIGHT$(A$,LEN(A$)-2)
+2200 IFK&lt;100THENA$=A$+" "
+2201 IFK&lt;10THENA$=A$+" "
+2203 A$=A$+":":RETURN
+2206 PRINT"Enterprise (^) ='+'";:RETURN
+2209 GOSUB30:GOSUB2340
+2210 H2=0:FORJ=09TO1STEP-1:FORI=1TO23
+2240 ON Q(I,J)GOTO2290,2300,2310,2320,2280
+2280 PRINT" .";:GOTO2330
+2290 PRINT" e";:GOTO2330
+2300 PRINT" b";:H2=1:GOTO2330
+2310 PRINT" k";:GOTO2330
+2320 PRINT" *";
+2330 NEXTI:PRINT:NEXTJ:RETURN
+2340 GOSUB30:PRINT"Quadrant:";Q1;",";Q2;
+2344 PRINTTAB(22)"Condition: ";:GOSUB1990:PRINTC$(C9)
+2350 PRINT"Speed : Warp";V9;
+2360 PRINTTAB(22)"Starbases:";S9;"      "
+2370 PRINT"Screen:";P1;
+2380 PRINTTAB(22)"Engine/Phasers:";P2;"  "
+2390 PRINT"Photon torpedoes:";T1;
+</pre>
+<!-- 2 Spalten: Spaltenwechsel --></div><div class="col-sm-6">
+<pre class="donthyphenate">
+2400 PRINTTAB(22)"Klingons remaining:";K9;"  "
+2420 RETURN
+3265 GOSUB1740:GOSUB1760
+3270 K9=0:S9=0:FORI=1TO8:FORJ=1TO11
+3290 K8=FNR(1)*FNP(8):K7=FNP(Z8*.20)
+3300 G(I,J)=FNR(9)*FNP(9)+K8*10+K7*100
+3310 K9=K9+K8:S9=S9+K7:NEXTJ:NEXTI
+3320 IFS9=0THEN3270
+3330 RETURN
+3900 FORI=1TO14:READX$:NEXTI
+3901 FORI=1TO8:READX$:FORJ=1TOLEN(X$)
+3905 FORT=1TO20:NEXTT
+3910 IFX$="@"THEN220
+3915 PRINTMID$(X$,J,1);:NEXTJ
+3920 PRINT:NEXTI
+3921 A=USR(0):IFA=0THEN3921
+3930 GOTO3901
+4000 DATA"Sie sind Commander der Enterprise und"
+4010 DATA"sollen alle Klingonen in der Galaxis"
+4020 DATA"vernichten.Es stehen Ihnen dazu"
+4030 DATA"Phaser & Photonentorpedos zur"
+4050 DATA"Verfuegung.(Bei den Photonentorpedos"
+4055 DATA"und den Phasern muss der Abschusswinkel"
+4060 DATA"auf 2.5 Grad genau , dem folgendem"
+4070 DATA"Schaubild entsprechend angegeben werden)"
+4080 DATA"          90"
+4090 DATA"          l"
+4100 DATA"   180 &lt;- e -&gt; 0  ( e = Enterprise )"
+4110 DATA"          l"
+4120 DATA"         270"
+4121 DATA"Wenn entlang des Schusswinkels im"
+4122 DATA"Abstand von 2.5 Grad ein Objekt ist &"
+4123 DATA"dies ein '*' ist,wird der Schuss ungueltig"
+4124 DATA"dies ein 'b' ist,wird 'b' getroffen !!"
+4130 DATA"Die Wirkung der Phaser nimmt mit dem"
+4140 DATA"Quadrat der Schussentfernung ab !!!"
+4160 DATA"Einschlagende Phaserstrahlen reduz-"
+4170 DATA"ieren die Restenergie ('fuel')."
+4180 DATA"('fuel'='weapon/engines'+'screens')"
+4210 DATA"Wenn man von einem Quadranten in"
+4220 DATA"einen der naechsten gelangen will,"
+4230 DATA"muss der Wharp-Antrieb benutzt werden"
+4250 DATA"Wharp 2 bringt Sie 2 Quadranten weiter"
+4300 DATA"Kommandos bei'What is your command?':"
+4310 DATA" Wharp :WP      l   ImpulsA. :IM"
+4320 DATA"z.B: MD7 (1-8)  l  z.B: ML4 (1-5)"
+4330 DATA"=move down 7 Q. l  =move left 4"
+4340 DATA"          MR    MD    ML    MU"
+4350 DATA"move    right  down  left   up"
+4360 DATA"BC=Kampfcomputer,liefert"
+4361 DATA"   hauptsaechlich nur den"
+4362 DATA"   Abschusswinkel fuer Phaser,"
+4363 DATA"   derweil der Klingone schon"
+4364 DATA"   angreift ( Sie sollen ja nicht"
+4365 DATA"   nur Vorteile von der Einricht-"
+4366 DATA"   ung des BC haben )"
+4370 DATA"AF=Kraftstoffbereitstellung fuer"
+4380 DATA"   Schutzfelder"
+4390 DATA"DO=Andocken an Starbasis (nur unter"
+4400 DATA"   ImpulsA. & wenn direkt neben der"
+4410 DATA"   Enterprise)"
+4413 DATA"   Starbases dienen zur Generalueber-"
+</pre>
+<!-- 2 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/10/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 21 von 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/01/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../22/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+	<p class="nas-link"><!-- External Link --><a href="http://www.nascomhomepage.com/mbasic/Startrek.cas" title="Externer Link: Startrek.cas" target="_blank" rel="noreferrer">Download</a><!-- /External Link -->
+	des Programms von der <!-- External Link --><a href="http://www.nascomhomepage.com/" title="Externer Link" target="_blank" rel="noreferrer">Nascom Home Page</a><!-- /External Link -->.</p>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/81-12.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

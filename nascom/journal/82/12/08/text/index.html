@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 12/82</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">12/82</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 8 von 24</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/01/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 1 Spalten: Start --><div class="row"><div class="col-sm-12">
+<pre id="article1" class="donthyphenate">
+1002 DIM G(8,8),S(8,8),K(3,3)
+1003 PRINTCHR$(26)
+1004 PRINT TAB(21)"--STARTREK--":PRINT
+1005 PRINT
+1006 INPUT "WHAT IS YOUR SECURITY CLEARANCE NUMBER (1 TO 1000)";T9
+1007 E8=T9
+1008 IF T9&lt;1 OR T9&gt;1000 THEN PRINT AR$;"INVALID!! REENTER!!":GOTO 1006
+1009 FOR A=1 TO T9/2
+1010 R9=RND(1):R9=RND(2)
+1011 NEXT
+1012 CLEAR:PRINTCHR$(26):INPUT"       ENTER RANK     (1=LOW,12=HIGH)";R9
+1013 RR=R9
+1014 X4=R9:R9=R9+1E-03:W1=W1+1E-03
+1015 PRINT CHR$(26)
+1016 PRINT "COMMAND ORDER : STAND BY !"
+1017 PRINT "YOU ARE PRESENTLY BEING ASSIGNED TO A MISSION..."
+1018 PRINT " WITH A FAILURE FACTOR OF"; (RR*20)
+1019 PRINT"       GOOD-BYE, SIR..."
+1020 CX=.017453:AR$=" ---&gt; "
+1021 XA=INT(X4*50):AC=(1/(X4+.1))
+1022 IFX4&gt;=9THEN1379
+1023 E=3000-XA+100:P=10:S9=200
+1024 DEF FND(D)=SQR((K(I,1)-S1)^2+(K(I,2)-S2)^2)
+1025 Q1=INT(RND(1)*8+1):Q2=INT(RND(1)*8+1)
+1026 S1=INT(RND(1)*8+1):S2=INT(RND(1)*8+1)
+1027 DATA WARP ENGINES,SHORT RANGE SENSORS,LONG RANGE SENSORS
+1028 DATA PHASERS, PHOTON TORPEDOES,SHIELD CONTROL
+1029 DATA DAMAGE CONTROL, COMPUTER,DAMAGE REPAIR,COMMUNICATIONS
+1030 FOR A=1TO10:READ D$(A):NEXT A
+1031 A$(0)=" . ":A$(1)=" E ":A$(2)=" * ":A$(3)=" K ":A$(4)=" B "
+1032 F1=.86:F2=.01:F3=.95:F4=.99:K9=0:B9=K9
+1033 FORI=1TO8:FORJ=1TO8:R1=RND(1):R2=RND(1):R3=INT(8*RND(1)+1)
+1034 K3=-(R1&gt;F1-F2*R9)-(R1&gt;F3-F2*R9)-(R1&gt;F4-F2*R9):K9=K9+K3
+1035 B3=-(R2&gt;F3):B9=B9+B3:G(I,J)=100*K3+10*B3+R3:NEXTJ,I
+1036 IF NOT(B9&gt;0ANDK9&gt;0)THEN1032
+1037 PRINT"OBJECTIVE:DESTROY"K9"KLINGONS USING"B9"STARBASE";
+1038 U=K9:Y=B9
+1039 IFB9=1THENPRINT" ";:GOTO1041
+1040 PRINT"S ";
+1041 T9=K9+RND(1)*K9/R9+10-R9:PR=T9/K9:PRINT"IN"T9"STARDAYS."
+1042 GOSUB 1425
+1043 S3=0:B3=S3:K3=B3:FORA=1TO8:FORB=1TO8:S(A,B)=0:NEXTB,A
+1044 FORA=1TO3:FORB=1TO3:K(A,B)=0:NEXTB,A:S(S1,S2)=1
+1045 X=.01*G(Q1,Q2):K3=INT(X):Y=(X-K3)*10:B3=INT(Y)
+1046 S3=G(Q1,Q2)-100*K3-10*B3
+1047 IF K3=0THENFORA=1TO3:FORB=1TO3:K(A,B)=0:NEXTB,A:GOTO1051
+1048 PRINTAR$;"CONDITION RED !!!!!":FORA=1TOK3
+1049 R1=INT(RND(1)*8+1):R2=INT(RND(1)*8+1):IFS(R1,R2)&lt;&gt;0THEN1049
+1050 S(R1,R2)=3:K(A,1)=R1:K(A,2)=R2:K(A,3)=S9:NEXT A:IFB3=0THEN1054
+1051 IFB3=0THEN1054
+1052 R1=INT(RND(1)*8+1):R2=INT(RND(1)*8+1):IFS(R1,R2)&lt;&gt;0THEN1052
+1053 S(R1,R2)=4
+1054 IFS3=0THEN1058
+1055 FORA=1TOS3
+</pre>
+<!-- 1 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 8 von 24</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/01/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/82-12.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Nascom Newsletter - Volume 3 - Number 1 - April 1983</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Nascom News&shy;let&shy;ter</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Number 1 &middot;</span> <span class="nowrap">April 1983</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 14 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/00/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-nascom-newsletter issue-31 page-14" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+It will be simple enough to define certain SCAL numbers for
+specific tasks, and to define the way they pass their
+parameters/&#x200b;results. For example, the RTC might be called using
+whatever SCAL is defined for it with HL pointing to the area
+where the time/&#x200b;date is to be stored. The colour boards such as
+the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/io828.htm" title="External Link" target="_blank" rel="noreferrer">Pluto</a><!-- /External Link -->
+ or
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm837.htm" title="External Link" target="_blank" rel="noreferrer">Climax</a><!-- /External Link -->
+might also avail to the &rsquo;Sys facilities in
+that predefined graphics routines (Draw line, Circle,&#x200b;etc) might
+be assigned &rsquo;Sys numbers.
+</p>
+<p>
+Implementation of each of these elementary functions
+(primitives?) will be system depentant of course. It will be
+necessary for each Nascom owner to do a little bit of work
+building up the library of routines to suit his own system, but
+then that is done, programs can be interchanged between owners
+in the knowledge that they will run on one machine or another
+provided that the host machine has all the facilities required.
+Obviously, one can not expect a program to read Day, Date and
+Time on a machine that has not got a clock fitted, but one could
+expect an error message and a safe return. Consider a Pluto
+owner who sends a program to a Climax owner. Under the old
+machine code system, the Pluto program hasn&rsquo;t a ghost of a
+chance of running on the Climax. Using the suggested Extended
+&rsquo;Sys, the program will be able ta rely on certain standard
+primitives being available. It will not have to concern itself
+with the precise byte by byte structure of those primitives.
+Instead, it will know (and use the word usefully) that
+Circles are drawn by a particular SCAL number and lines by
+another.
+</p>
+<p>
+I hope that this letter will serve to provoke other Nascom
+Users into considering this proposal.
+</p>
+<!-- Linie --><div class="hline" style="width: 30%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<p>
+This is something that has been in the back of my mind for
+quite awhile now and as Mr. O&rsquo;Farrell has put something in
+writing, I would like to take the proposal further. Being the
+editor of this magazine, I get to see a vast amount of ingenious
+software and hardware ideas. Some of it is from professional
+sources but the vast majority of the ideas come from private
+individuals who have applied some ingenuity and imagination to a
+problem. I would life to propose that we set about creating a
+specification for a new standard of operating system for the
+Nascom computer. This would take into account most, if not all,
+of the current hardware available but also leave the doors open
+for further expansion (speech and speech recognition, picture
+recognition, etc). It would need to support page mode Gemini
+boards,
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/map80/MAP80_256.htm" title="External Link: MAP80 256K RAM" target="_blank" rel="noreferrer">MAP-80 256K</a><!-- /External Link -->
+ boards, etc)
+and it would also be nice to
+see the facility to communicate with other machines and possibly
+additional processors.
+</p>
+<p>
+Well, these are my thoughts on the subsect, what are yours?
+Get your pens out and start writing.<br>
+<span style="float: right">IJC</span>
+<br>
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 14 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/00/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../15/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Nascom-Newsletter-3-1.pdf#page=16" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

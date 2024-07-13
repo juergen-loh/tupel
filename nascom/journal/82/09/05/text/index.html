@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - September 1982 - Ausgabe 9</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">September 1982 &middot;</span> <span class="nowrap">Ausgabe 9</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/07/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 5 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<p>
+festgelegt, daß bei Ende des Blocks oder wenn das Match-Byte gefunden
+wurde, ein Interrupt erzeugt wird. Es besteht noch die Möglichkeit,
+einen Interrupt auszulösen, wenn beim <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="Externer Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
+ der RDY-Eingang aktiv wird.
+Eine Busanforderung wird dann noch nicht ausgegeben. Zum Schluß dieser
+Programmsequenz folgt die Ausgabe des Low Byte des Interruptvektors.
+Durch das &bdquo;Status Affect Vector&ldquo; Bit wird, je nach
+Interruptursache die entsprechende Routine angesprungen.
+</p>
+<p>
+In WR5 wird RDY auf aktiv bei High und der CE-Eingang als WAIT
+definiert. Durch Bit 6 kann der DMA veranlaßt werden, die Operation zu
+wiederholen (Auto Restart) oder abzubrechen. Zum Schluß der
+Programmierung folgen nun einige Steuerbefehle aus der WR6-Gruppe.
+Durch C7H wird Port A an das Standard-CPU-Timing angeglichen (ist aber
+hier nicht unbedingt nötig). Die folgenden Befehle bewirken, daß die
+Startadressen intern geladen und die Statusbits gelöscht werden. Nach
+&bdquo;Interrupt Enable&ldquo; und &bdquo;Enable DMA&ldquo; kann der DMA
+aktiv werden. Es sei angenommen, daß ein Block eingelesen wird. Dann
+löst der DMA einen Interrupt aus und die CPU springt die
+Interruptroutine IENDBL an. Es wird nun die Meldung ausgegeben, daß
+sich ein Interrupt durch Blockende ereignet hat. Anschliessend werden
+wieder einige Steuerworte zum DMA ausgegeben. Zuerst werden die
+Statusbits gelöscht, durch das Byte D3H die Blocklänge intern neu
+geladen, während die Adreßzähler aber unverändert bleiben. Die
+Übertragung wird also beim momemtanen Adreßstand fortgesetzt. Zum
+Schluß dieser Kommandosequenz muß dem DMA mitgeteilt werden, daß er
+erst nach dem RETI (Return from Interrupt) wieder aktiv werden darf,
+gefolgt vom &bdquo;Enable DMA&ldquo; Kommando. Diese letzten beiden
+Steuerworte müssen immer am Ende einer Interruptroutine ausgegeben
+werden, um eine ordnungsgemäße Funktion des DMA zu gewährleisten.
+</p>
+<p>
+Der DMA überträgt die weiteren Blöcke, bis das Match Byte gefunden
+wird. In der Interruptroutine IMATCH wird die Meldung ausgegeben, daß
+die EOT-Marke gefunden und übertragen wurde. Der DMA wird nicht mehr
+initialisiert. Die Interruptroutine MATEND wird angesprungen, wenn ein
+Block übertragen und das letzte Byte gleichzeitig das Match Byte ist.
+</p>
+<p>
+Das Programm COPY kopiert einen Speicherbereich in einen anderen Teil
+des verfügbaren Speichers. Dabei wird ab der Adresse D000H ein Block
+der Länge 01F3H ab 4000H im Continuous
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+Mode abgespeichert. Da man bei Übertragungen, die nur auf den Speicher
+zugreifen, kein externes RDY-Signal benötigt, wird diese Bedingung
+durch das Byte B3H (Force RDY Signal) aktiv gesetzt. Das Programm
+SEARCH sucht ab D000H nach einem bestimmten Byte (D8H) und übergibt die
+Adresse, an der das Match Byte gefunden wurde, im Register HL dem
+aufrufenden Programm. Bei Suchoperationen wird nur ein Port benötigt.
+Beide Programme initialisieren den DMA im Continuous Mode und setzen
+das RDY-Signal intern aktiv. Der DMA beginnt nach dem &bdquo;Enable
+DMA&ldquo; Kommando sofort mit der Übertragung bzw. Suche. Lädt das
+aufrufende Programm die Speicherzellen, in denen die Portadressen und
+Blockcounter stehen, mit den aktuellen Parametern, so können diese
+beiden Programme die CPU-Befehle LDIR und CPIR ersetzen.
+</p>
+<p>
+Die CPU kann vom DMA die 7 READ-Register RR0
+&ndash; RR6 lesen, die die aktuellen Adressen für die beiden Port-Counter und
+den Block-Length-Counter enthalten. RR0 ist das Statusbyte, in dem
+der DMA anzeigt, ob RDY aktiv ist, der DMA aktiv war, Interrupts
+anstehen, Blockende übertragen und ein Byte gefunden wurde. Das
+Statusbyte wird ausgelesen vom Programm STATUS, das es in die
+Speicherzelle RR0 lädt, wo es zur weiteren Bearbeitung für die CPU zur
+Verfügung steht. Das Programm PRINT gibt den DMA-Status im Klartext zum
+Bildschirm aus. Das Programm GLOBAL liest sämtliche READ-Register aus
+und speichert die Werte für den Blockcounter nach RR1RR2, Port A
+Counter nach RR3RR4 und Port B Counter nach RR5RR6, wo die CPU diese
+Werte auslesen kann und im Programm LIST die aktuellen Werte der
+DMA-Counter zum Bildschirm ausgibt. Zum Lesen soll noch angemerkt
+werden, daß durch die Read-Maske definiert wird, welche READ-Register
+von der CPU ausgelesen werden sollen.
+</p>
+<h1 id="article1">
+MDCR-Controller Karte
+</h1>
+<h3>
+von H.G. Ingelaat und U. Forke
+</h3>
+<p>
+Die vorliegende
+<a href="../../07/text/#article1">Schaltung</a>
+für MDCR-Benutzer und solche, die es noch
+werden wollen, basiert auf einer
+<a href="../../../../81/03/02/text/#article1">Idee</a>
+von J. C. Lotter. Nachdem ein Programm zur MDCR-Steuerung in einer
+<a href="../../../../81/12/35/text/#article1">Journalausgabe</a>
+des letzten Jahres vorgestellt wurde, folgt hier eine komplette
+Hardwareeinheit, die folgende Vorteile bietet:
+</p>
+<p>
+&ndash; Eigene <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">Pio</a><!-- /External Link --> auf der Karte; der
+<span class="uppercase">Nascom</span>-<a href="../../../../81/09/23/text/#article1">Pio-Bus</a>
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/07/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 5 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/10/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/82-09.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

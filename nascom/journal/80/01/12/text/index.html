@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 1/80</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">1/80</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/00/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 12 von 16</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/02/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 1 Spalten: Start --><div class="row"><div class="col-sm-12">
+<h1 id="article1">
+Arbeiten mit Assembler
+</h1>
+<!-- 1 Spalten: Ende --></div></div>
+
+<!-- 2(2) Spalten: Start --><div class="style-multi-column-2">
+
+<p>
+Ein Assembler ist das wichtigste Hilfsmittel für den
+Pro&shy;gram&shy;mie&shy;rer,
+der Programme in Maschinensprache schreiben will.
+Mit einem Assembler wird ein Mikrocomputer wie der <span class="uppercase">Nascom</span> zu
+einem Entwicklungssytem. Deshalb sollen im <span class="uppercase">Nascom</span>-Journal zwei
+Artikel erscheinen, die sich mit
+As&shy;sem&shy;blern befassen. Im ersten
+Teil wird erklärt, was ein Assembler kann und wie man mit ihm
+umgeht. Außerdem soll gezeigt werden, welche Eigenschaften ein
+Assembler haben soll. Im
+<a href="../../../02/12/text/#article1">zweiten Teil</a>
+werden dann die für den
+<span class="uppercase">Nascom</span> lieferbaren Assembler verglichen und getestet.
+</p>
+<p>
+Zum Betrieb eines Assemblers sind mindestens ein
+<span class="uppercase">Nascom</span>-Grundsystem
+und eine Speichererweiterungskarte nötig. Da derzeit wohl nur
+wenige <span class="uppercase">Nascom</span>-Besitzer eine Floppy-Disc haben, zielt die
+Beschreibung auf &bdquo;speicherresidente&ldquo; Assembler. Dabei sind
+gleichzeitig der Assembler, der Quelltext und der erzeugte Code
+im Speicher, ohne daß während des Betriebs auf externe Medien
+zugegriffen werden muß.
+</p>
+<p>
+Assembler für den <span class="uppercase">Nascom</span> sind lieferbar in EPROMs, dann ist
+der Assembler nach dem Einschalten sofort verfügbar, oder auf
+Kassette, was zunächst ein Einlesen nötig macht (einen
+Assembler in EPROMs kann man natürlich auch nicht versehentlich
+zerstören).
+</p>
+
+<h4>
+<u>Was tut ein Assembler&nbsp;?</u>
+</h4>
+
+<p>
+Die Hauptaufgabe eines Assemblers ist es, ein Programm, das in
+Assemblersprache geschrieben ist, in ausführbaren
+Code zu übersetzen. Ein Assembler nimmt dem
+Pro&shy;gram&shy;mie&shy;rer also
+die &bdquo;Dreckarbeit&ldquo; ab, den hexadezimalen Code für die
+Be&shy;feh&shy;le in einer Tabelle nachzuschlagen. Gibt der
+Pro&shy;gram&shy;mierer z.B.
+folgenden Code ein:
+</p>
+
+<img class="img-fluid mx-auto d-block " src="../../Image-12-1.gif" alt="" width="95" height="53">
+
+<p>
+dann erzeugt der Assembler den zugehörigen Code
+</p>
+
+<img class="img-fluid mx-auto d-block " src="../../Image-12-2.gif" alt="" width="136" height="19">
+
+<p>
+Ein Assembler übernimmt außerdem die Berechnung von Adressen.
+Gibt der Programmierer z.B. folgende Befehle ein:
+</p>
+
+<!-- 2 Spalten: Spaltenwechsel -->
+
+<img class="img-fluid mx-auto d-block " src="../../Image-12-3.gif" alt="" width="143" height="50">
+
+<p>
+dann berechnet der Assembler die Adresse der Zeile, in der die
+Marke &bdquo;NOSET&ldquo; steht und setzt sie in den Code des
+Sprung&shy;be&shy;fehls
+ein. Dies funktioniert bei allen absoluten und
+relativen Sprüngen und bei Unterprogrammaufrufen.
+Be&shy;son&shy;ders
+hilfreich ist das bei relativen Sprüngen, wo die umständliche
+Adressrechnerei entfällt, aber auch dann, wenn ein Programm
+nachträglich geändert werden soll. Muß z.B. zwischen dem
+Sprungbefehl und der angesprungenen Zeile ein weiterer Befehl
+eingefügt werden, so kann man das im Quelltext ohne sonstige Änderungen
+tun. Erstellt man ein Programm dagegen direkt im hexadezimalen
+Code, dann muß man viele, wenn nicht alle Adressen neu
+berechnen, nachdem man einen zusätzlichen Befehl eingefügt hat.
+</p>
+<p>
+Ein Assembler kann in der Regel auch arithmetische
+Ope&shy;ratio&shy;nen
+zur Berechnung von Operanden ausführen:
+</p>
+
+<img class="img-fluid mx-auto d-block " src="../../Image-12-4.gif" alt="" width="191" height="136">
+
+<p>
+Schließlich kann ein Assembler in der Regel auch Klartext in
+ASCII-Code übersetzen:
+</p>
+
+<img class="img-fluid mx-auto d-block " src="../../Image-12-5.gif" alt="" width="127" height="53">
+
+<h4>
+<u>Was erzeugt der Assembler&nbsp;?</u>
+</h4>
+
+<p>
+Der Assenbler dokumentiert seine Arbeit in der Assembler-Liste.
+Auf der nächsten Seite ist ein (nicht sehr sinnvolles) Programm
+aus den Beispielen zusammengesetzt (die Liste wurde von ASM/&#x200b;EPROM
+V1.1 auf einem <span class="uppercase">Nascom</span>-1 erzeugt und mit dem Programmpaket
+&bdquo;<a href="../../../../81/04/22/text/#article1">TTY</a>&ldquo; auf einem
+5-Kanal-Fern&shy;schrei&shy;ber ausgedruckt).
+</p>
+<p>
+Die Assembler-Liste enthält die Programmadressen &#10112; den
+erzeugten Code &#10113; die Zeilennummern des Quelltexts &#10114; und den
+Quelltext &#10115; sowie eventuelle Kommentare &#10116; </p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/00/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 12 von 16</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/02/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/80-01.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

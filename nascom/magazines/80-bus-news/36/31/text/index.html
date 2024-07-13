@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1984 - Volume 3 - Issue 6</title>
+	<!-- Sun, 30 Jun 2024 14:41:00 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 6</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../35/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 31 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../41/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-36 page-31" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+Here we have declared a hundred byte array (0 &ndash; 99) and set up a
+character pointer to the start of it. &lsquo;&amp;arrayx[0]&rsquo; is the syntax used to
+return the address of array[0] which is then placed into the pointer &lsquo;point&rsquo;.
+For &lsquo;C&rsquo; fans everywhere that have noticed that I could have achieved the same
+by saying &lsquo;point = arrayx;&rsquo;, fear not, I realise this but it is a good example
+of &lsquo;C&rsquo;s addressing capability.
+</p>
+<p>
+Pointers to functions are also available and are useful in applications
+that require overlay sections. Executable code is read into an area of memory
+with a known base address and using function pointers control is passed to it.
+You are also capable of passing arguments to this function if required.
+</p>
+<h3>
+<u>&lsquo;C&rsquo; functions</u>
+</h3>
+<p>
+&lsquo;main()&rsquo; is the name given to the controlling function of any program and
+always recieves control when the program is entered. Of course you can do what
+you like as soon as you have entered main, but devotees of structured
+programming will realise that this is where the controlling calls of the
+overall program should reside.
+</p>
+<p>
+In main of the first sample program you can see that 4 functions have
+been called, namely openit, wrt_nums, printf and exit. You can see where the
+first two come from, they are in the source listing, but what about the
+others? Well it may come as a bit of a shock but &lsquo;C&rsquo; contains no IO capability
+of its own, there are no intrinsic functions such as in BASIC or <span class="uppercase">Fortran</span>. What
+this means is that if you compiled this program as it stands into a .COM file
+the linker would declare printf, exit, fopen, fclose, and putw as undefined.
+Pretty useless on its own eh? But this is where &lsquo;C&rsquo; wins over its rivals in
+some respects. The functions such as printf, which is capable of displaying a
+formatted string on the screen, have to be loaded from function libraries
+supplied to you in REL format on your master disk. The required code is
+extracted from these libraries by using the L80 /s option for example and
+linked into your program. This means that the runnable program contains only
+the code necessary and no unused portions.
+</p>
+<p>
+These function libraries are usually pretty extensive and contain not
+only the routines defined by the &lsquo;C&rsquo; standard but also some which have been
+added by the compiler writers to make your life easier. You will have guessed
+from this that you are also able to create your own libraries and place them
+into your programs in a similar fashion. I have in the course of my duties at
+Gemini created function libraries for both the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm832.htm" title="External Link" target="_blank" rel="noreferrer">SVC</a><!-- /External Link -->
+and
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/io828.htm" title="External Link" target="_blank" rel="noreferrer">Pluto</a><!-- /External Link -->
+which are written
+in assembler.
+</p>
+<p>
+As a point of interest the &lsquo;C&rsquo; standard dictates that arguments passed to
+a function are pushed onto the stack in reverse order before the function is
+called. The value of the argument is pushed and not the address of the
+variable ie. pass by value. So from within your custom written assembler
+routine you can retrieve these values from the stack and send them out to your
+SVC or Pluto as data using the Z80 OUT opcode. In practice though, I have
+noticed that the ECO C compiler only passes integer and character arguments by
+value and any arguments longer than 2 bytes are passed by address. There are
+often idiosyncracies involved with the method by which arguments are passed so
+I&rsquo;m afraid that there is no substitute for reading the manual.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../30/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../35/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 31 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../41/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_36.pdf#page=31" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">INMC 80 News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;September 1981 &middot; <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 27 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../05/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-inmc-80-news issue-04 page-27" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<h4>
+Line 5, CLOCK.
+</h4>
+<p>
+This line is important as all the bus timing is derived from it. It should
+spend at least 46% of its time below VOL (0-4V) and at least 46% of is time above VOH
+(2.4V), it has the other 8% spare to go up and down. The clock on the bus should be
+20nS (+/&nbsp; 10nS) ahead of the clock on pin 6 of the Z80.
+</p>
+<h4>
+Line 6, /NMI SW.
+</h4>
+<p>
+Provision has been made on the bus for an NMI switch and this line is to be
+held high by the bus master. Grounding it will initiate a short pulse on line 21 and
+the Z80 /NMI input. Users are cautioned that switch bounce may cause more than one
+NMI.
+</p>
+<h4>
+Line 7, RSFU.
+</h4>
+<p>
+This line is reserved for allocation at a later date, please do not use.
+</p>
+<h4>
+Line 8, AUX CLK.
+</h4>
+<p>
+This line is a new allocation. Many boards (eg disk controllers) require a 1,
+2 or 4&nbsp;MHz signal. This was easily provided when the CPU clock was 2 or 4&nbsp;MHz, however
+the advent of the 6&nbsp;MHz Z80 changes the situation. Any bus master not running at
+either 2 or 4&nbsp;MHz must provide a 4&nbsp;MHz clock on this line. Designers of expansion
+cards should take note of this and provide a link to allow the board to use this line
+instead of line 5.
+</p>
+<h4>
+Line 9, /RAM DIS.
+</h4>
+<p>
+This signal is intended to prioritise memory. Normally this signal would be
+generated by memory on the bus master, an EPROM card or any other high priority memory
+when a memory read took place. A RAM card would normally gate /RAM DIS with the output
+buffer, so that in the event of /RAM DIS being asserted the output buffer would fail
+to be enabled, this would have the effect of &ldquo;overlaying&rdquo; RAM with EPROM/&#x200b;ROM. /RAM DIS
+should not inhibit a write cycle; it should also remain high for any cycle apart from
+a memory read.
+</p>
+<h4>
+Line 10, /RESET SW.
+</h4>
+<p>
+A high to low on this line will initiate a reset cycle. It is intended that a
+switch be connected between this line and ground. The actual RESET line is line 14.
+</p>
+<h4>
+Line 11, /NAS MEM.
+</h4>
+<p>
+This signal is only used by Nascom&nbsp;1 and is asserted when a Nascom memory
+address is detected. It would normally be provided by a memory board and would
+typically be 0000H to 0FFFH or F000H to FFFFH. This is an obsolete signal and no new
+boards that require it should be designed. This line used to be called MEMEXT.
+</p>
+<h4>
+Line 12, /NAS IO.
+</h4>
+<p>
+This line used to be called IOEXT and many people persist in still calling it
+that, even though the two are different. In its original form (note that it was active
+high) it would be taken high to indicate an I/O address external to the Nascom, in its
+current form it is taken low to indicate a Nascom I/O address, that is to say that it
+looks for a Nascom I/O address as opposed to looking for an external address. /NAS IO
+should be taken low within 50nS of a Nascom I/O address and /IORQ, (referenced to the
+bus). In its original form the onboard ports on the Nascom would remain enabled for a
+short fraction of an external I/O cycle (the time taken to detect an external address
+and assert IOEXT) and this was the cause of many obscure problems. If you have
+problems a good test is to write a short machine code routine to continuously write
+80H to port 08H. If the breakpoint register display comes up you have a problem, if
+not you don&rsquo;t. /NAS IO is a obsolete signal utilised by Nascom&nbsp;1 and 2 and all new
+designs should incorporate full I/O decoding.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 27 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../05/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/INMC_80_News_4.pdf#page=27" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

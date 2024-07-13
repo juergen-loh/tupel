@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 8 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-21 page-08" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+interrupt, the Z80 CPU automatically disables interrupts, that is, it won&rsquo;t
+accept any more until it is told to. This has the advantage that you can control
+where your routines are interrupted. Say for example, that you had a disk unit,
+which was driven under interrupt control. Every time it needs data, it interrupts
+for it. Some disk units read data every 25uS, and if the data is not accepted in
+time by the CPU they report an error. In addition to this disk, suppose you have
+a RTC which ticks every 1/10 sec. Each tick is signalled by an interrupt, and the
+CPU writes the time to the corner of the screen.
+</p>
+<p>
+So, you are reading sectors from your disk and your clock is ticking
+away. In the midst of the reading you get another interrupt for a tick, go and
+service that, and return to your reading service routine. Unfortunately, your
+tick service routine takes some 2 or 3 mS, and when you get back to reading,
+you&rsquo;ve missed about 100 bytes so your disk reports a bad read. So you try again.
+Same story. The only way you can deal with this is to let the CPU disable
+interrupts on the first interrupt, and not to reenable them again until the read
+is finished. Fair enough &ndash; a read is so quick that it won&rsquo;t matter if the clock
+on the screen is not updated for a few 1/10s of secs. There is another way to
+deal with the problem &ndash; interrupt priority. This assigns to each device a certain
+priority, and only devices of higher priority than the device under service can
+interrupt. We&rsquo;ll come to this in a moment or two. The <!-- External Link --><a href="https://en.wikipedia.org/wiki/Intel_8080" title="External Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->
+ interrupt response (IM
+0) is automatically invoked after a reset, with interrupts disabled. This mode
+allows (using the restarts) eight different interrupt handling routines. It is
+possible to make a number of devices share common handing routines, or for the
+appropriate routine to be selected for the device by the handler. This means that
+the handler has to identify which device has interrupted, which adds to the time
+overhead. In S100 systems, which were originally 8080 based, interrupt response
+was often obtained by using unintelligent devices. When the peripheral response
+was required, they did nothing. Using open collector bus drivers, the effect of
+the pull up resistors was to make the bus read as high, so the CPU thought that
+there was a byte 0FFH on the bus. This meant that RST 38H was most frequently
+used. This provoked <!-- External Link --><a href="https://www.zilog.com/" title="External Link" target="_blank" rel="noreferrer">Zilog</a><!-- /External Link -->
+ into providing Interrupt Mode 1.
+</p>
+<p>
+IM&nbsp;1 is similar to the NMI response. On interrupt, the CPU executes a
+call to location 0038H. This allows only one interrupt handling routine, but has
+the advantage of hardware simplicity. In a controller, there could be two
+interrupts, the more important one on the NMI line, and the lesser on IM1. The
+lesser interrupt could be disabled by the program at will, and by the NMI
+routine. The NMI routine would always take priority. In IM1, the peripheral
+device need not place any byte on the bus. Use of that mode will automatically
+get you to location 038H on interrupt.
+</p>
+<p>
+The last interrupt mode of the Z80 is IM2. This is at once the most
+interesting and the most baffling interrupt method. What happens is this: in the
+I register, the CPU holds the high byte of an address of a table which points to
+all the interrupt handling routines. On interrupt acknowledgement, the peripheral
+places the low byte of an address on the bus. The CPU reads this byte and builds
+up the address of a line of the table. From this line of the table, it takes the
+address of the appropriate interrupt handling routine. The confusion arises
+because the address built up by the CPU and peripheral is not the address of the
+interrupt handling routine &ndash; it is the location where the address of the
+interrupt handling routine is stored. Further complication is introduced by the
+fact that we have to set up the &lsquo;I&rsquo; register. This cannot know the address of the
+interrupt service table otherwise. We also have to tell the peripheral the
+appropriate line of the Interrupt Service Table. We must not forget also that we
+must construct this table, and all this before we Enable Interrupts. In addition,
+the peripheral, if a Zilog peripheral, is so complex that we have to spend a
+little time letting it know just what we want it to do.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 8 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_21.pdf#page=8" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

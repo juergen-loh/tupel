@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;June 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../29/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 30 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-33 page-30" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    104</span>
+
+INIT    E019    INITAB  E2DF    INITBE  E33F    INITST  FEBB    INLINE  FEE8
+INMSG   E346    INP     F441    INPBIN  EC8F    INPBRK  E877    INPORT  103F
+INPSUB  103E    INPUT   EBFD    INRNG   F9F3    INT     F8E6    INTVAR  E4C9
+INVSGN  F83C    ITMSEP  EC80    JJUMP   FFFA    JJUMP1  FDDE    JPLDSV  FFD6
+JSTZER  FA7C    KILFOR  ED31    KILIN   E5EC    LCRFLG  10AC    LDNMI1  E73C
+LEFT    F3B2    LEN     F382    LET     EA87    LETNUM  EADA    LETSTR  EAA2
+LF      000A    LFRGNM  F437    LINEAT  105C    LINEIN  F9A5    LINES   FDAD
+LINESC  1046    LINESN  1048    LINFND  E43E    LINTBF  FF02    LIST    E6DD
+LISTLP  E6E9    LOADFP  F862    LOG     F6C7    LOGTAB  F6BA    LOKFOR  E35A
+LOOPST  10C7    LS      001C    LSTBIN  10CC    LSTLP2  E709    LSTLP3  E70C
+LSTRAM  10AF    LSTRND  103A    LTSTND  EC9A    LWIDTH  1042    MAKINT  F487
+MAKNUM  FA0F    MANLP   F92E    MATCH   E589    MEMMSG  E103    MFLP    0051
+MID     F3EC    MID1    F3B8    MIDNUM  F43C    MINCDE  F60D    MINUS   EE11
+MKTMST  F1BF    MLDBLP  F907    MLDEBC  F8FF    MLOOP   E049    MLSP10  F7FC
+MO      0024    MONITR  FEA2    MONLD   FE88    MONOUT  FE45    MONSTT  0000
+MONTST  FE6D    MONTYP  008D    MONVE   FEAA    MORDT   ECA6    MORINP  E610
+MOVBUF  E474    MOVDIR  E591    MOVLP   E37F    MOVSTR  E37C    MOVUP   E379
+MRPRNT  EB1F    MSIZE   E036    MUL8LP  F733    MULLN2  F6FF    MULT    F706
+MULT8   F72A    MULTEN  F970    MULVAL  10F6    MVSTPT  EAD1    NASOUT  FCFB
+NEDMOR  EC39    NEGAFT  FAA7    NEW     E4B9    NEXITM  EBD2    NEXT    ECF6
+NEXT1   ECF9    NF      0000    NFERR   E3B3    NMI     0C7E    NMIFLG  104C
+NOCHNG  E581    NOENED  FA7F    NOLIN   E88D    NOMADD  F744    NOMLAD  F915
+NOPMPT  EC17    NOREMD  FFBA    NORES   FF75    NORMAL  F638    NOSPC   E578
+NOSWAP  F5E7    NOTSTR  EF65    NOXOR   F467    NSCFOR  EF75    NULFLG  1044
+NULL    E8B1    NULLP   EB8D    NULLS   1041    NUMASC  F9B8    NXTARY  F02C
+NXTBYT  E567    NXTCHR  E5A8    NXTDAT  10DC    NXTDTA  EA6F    NXTITM  EC31
+NXTOPR  10D0    NXTSTL  EA76    NXTSTT  EA79    OD      0006    OKMSG   E34B
+OM      000C    OMERR   E3A2    ON      EAE1    ONGO    EAF0    ONGOLP  EAF1
+ONJMP   E81E    OPNPAR  ED56    OPRND   EDD1    OS      001A    OTKLN   E5E9
+OTPORT  1007    OUTBAD  F56B    OUTC    E69B    OUTCHR  FCFD    OUTEXP  FA70
+OUTIT   E67C    OUTNBS  E682    OUTNCR  FFF4    OUTSUB  1006    OUTWRD  E725
+OV      000A    OVERR   E3BC    OVTST1  F7EF    OVTST2  F7F4    OVTST3  F7F5
+PADD    F994    PAND    EE81    PASSA   F101    PBUFF   10E9    PEEK    F5A3
+PEND    E872    PHLTFP  F851    PLUCDE  F672    PNORM   F640    POINT   1051
+POINT0  FF91    POINTB  FF79    POINTX  FF87    POKE    F5AA    POPAF   F245
+POPHL   F36F    POPHRT  F754    POPNOK  E3F7    POR     EE80    POR1    EEA3
+PORT0   0C00    POS     F0FE    POSINT  E982    POUT    F44D    POWER   FAB5
+POWER1  FAC5    POWER2  FAE2    POWERS  FA95    PRINT   EB23    PRITAB  E2A4
+PRNTCR  EB81    PRNTHL  F9AD    PRNTLP  EB26    PRNTNB  EB69    PRNTOK  E3F8
+PRNTST  EB6D    PRNUMS  F20F    PROCES  E629    PROGND  10D6    PROGST  10F9
+PROMPT  E4FC    PRS     F210    PRS1    F213    PRSLP   F21A    PSET    1054
+PSUB    F5C8    PTRLP   E481    PUTBIT  FF4B    PUTBUF  E668    PUTCTL  E66D
+PUTFID  E7EE    QTSTLP  F1D5    QTSTR   F1CF    QUARTR  FC4E    READ    EC2C
+READFG  10CD    REDO    EBD9    REM     EA72    RESCSA  FF4C    RESDIV  F7A1
+RESEED  FBEC    RESET   1057    RESETB  FF55    RESTNL  E85B    RESTOR  E846
+RESZER  F633    RETADR  EFDC    RETCTC  FE65    RETINT  F82A    RETLIN  EA6A
+RETNAD  E58D    RETNUL  EFDF    RETNUM  EE1D    RETREL  F81C    RETURN  EA4B
+RG      0004    RIGHT   F3E2    RIGHT1  F3B6    RINPUT  104E    RLTLP   ED76
+RND     FB8B    RND1    FBC7    RND2    FBE3    RNDTAB  FBF4    RNGTST  FA82
+RONDB   F654    RONDUP  F653    ROUND   F5BB    RSCALE  F98E    RSLNBK  E770
+RSTSTR  F405    RUART   F4B4    RUN     EA10    RUNCNT  E7F2    RUNFST  E4C5
+RUNLIN  EA2C    SAVE    FE73    SAVEXP  F634    SAVSTP  E7E5    SAVSTR  F1AA
+SBSCPT  EFEA    SCALE   F692    SCALLP  F694    SCALMI  F959    SCALPL  F96F
+SCNEND  F2E1    SCPTLP  EFF0    SCRADR  FE11    SCREEN  FDE6    SEARCH  E555
+SEED    1017    SETB    FF40    SETIO   F471    SETLIN  E733    SETLIT  E59F
+SETOR   FF50    SETPTR  E47C    SETTOP  E06D    SFTENT  FD70    SFTPRG  E446
+SGN     F822    SGNEXP  EE70    SGNRES  10E8    SHFTBT  FFBD    SHRITE  F6A1
+SHRLP   F6A4    SHRT1   F6A8    SIGNON  E0C5    SIGNS   F879    SIN     FC06
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    105</span>
+
+SIN1    FC36    SINTAB  FC52    SIXDIG  F9D5    SMOTOR  FFD1    SMPVAR  F275
+SMSER1  FB6A    SN      0002    SNDARY  E91D    SNDHDR  E906    SNERR   E3AD
+SPCFST  F9C6    SPCLP   EBCB    SQR     FAAC    SRCHLN  E499    SRCHLP  E49C
+SSTSA   F33D    ST      001E    STACK   1066    STAKFP  F844    STALL   E866
+START   E000    STARTB  E003    STKTHS  EDBA    STLOOK  115D    STMON   000D
+STOP    E870    STORED  E9ED    STPOOL  F2B8    STR     F19A    STRADD  F2BB
+STRBOT  10C3    STRENT  EC83    STRSPC  105A    STTLIN  EB74    SUART   FD68
+SUBCDE  F5CA    SUBPHL  F5C4    SUMLP   FB73    SUMOFF  E937    SUMSER  FB5B
+SUPTLZ  FA54    SVNAM2  EF49    SVSTAD  F1C8    T2DUMP  03D1    T4READ  070C
+T4WR    0400    TAN     FC67    TBRK    001C    TBRK2   FD50    TBS     001D
+TCHINP  FE62    TCLS    FD96    TCR     001F    TCS     001E    TCUR    0C18
+TESTOS  F247    TESTR   F229    THSFIL  F548    TIN     0C4D    TLOAD   FE99
+TM      0018    TMERR   E3BF    TMFLP   FE42    TMNCUR  FE04    TMNOUT  FE4F
+TMPSTR  10BF    TMSTPL  10B3    TMSTPT  10B1    TOPOOL  F3AE    TOSTRA  F346
+TOUT    0C4A    TRYAGN  FA2F    TSALP   F347    TSAVE   FE7F    TSTBIT  FFED
+TSTBRK  E861    TSTMEM  E05B    TSTNUM  ED44    TSTOPL  F1F0    TSTRED  EEA8
+TSTREM  E5A2    TSTSGN  F813    TSTSTR  ED45    TTYLIN  E607    TYPE    10AD
+UARTD   0001    UARTOT  FD5F    UARTS   0002    UF      0022    UFERR   E3B9
+UL      000E    ULERR   EA46    UNITY   F6B6    UPDATA  E85C    URTOLP  FD61
+USR     1003    VAL     F41C    VAREND  10D8    VDU     0800    WAIT    F453
+WAITLP  F468    WARMST  E0AE    WIDTH   FDA5    WORDS   E143    WORDTB  E25A
+WRKSPC  1000    WUART   F4BA    WUART2  F4B7    XYPOS   FF96    ZDATA   0083
+ZDIV    00AF    ZEND    0080    ZEQUAL  00B4    ZERARY  F08B    ZERBYT  E34A
+ZEROLP  EFCE    ZFN     00A7    ZFOR    0081    ZGOSUB  008C    ZGOTO   0088
+ZGTR    00B3    ZJUMP   FFFD    ZLEFT   00CD    ZLTH    00B5    ZMINUS  00AD
+ZNEW    00A4    ZNOT    00AA    ZONELP  EBA6    ZOR     00B2    ZPLUS   00AC
+ZPOINT  00C7    ZPRINT  009E    ZREM    008E    ZSGN    00B6    ZSPC    00A8
+ZSTEP   00AB    ZTAB    00A5    ZTHEN   00A9    ZTIMES  00AE    ZTO     00A6
+
+</pre>
+<!-- Linie --><div class="hline" style="width: 30%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<h2>
+THE END
+</h2>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../29/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 30 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_33.pdf#page=30" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

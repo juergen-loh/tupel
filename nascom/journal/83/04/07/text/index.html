@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - April 1983 - Ausgabe 4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">April 1983 &middot;</span> <span class="nowrap">Ausgabe 4</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/03/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 7 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/05/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<p>
+reservierte Wörter eingefügt wurden (denn diese bestehen aus
+2-Byte-Token), dann die Sonderbehandlung von INPUT und PRINT (weil ja
+in einem Textstring auch Grafikzeichen vorkommen können, die nicht als
+Token interpretiert werden dürfen) dann&hellip; Plötzlich war ein relativ
+umfangreiches Programm daraus geworden.
+</p>
+<p>
+Das X-Tal BASIC hat allerdings
+selbst viel mitgeholfen. So ist es hier nicht notwendig, die Tokens auf
+umständliche Weise selbst aus dem Programmspeicher herauszufinden
+(<a href="../../../../81/10/25/text/#article1">N.Journal&nbsp;10/81</a>
+Wolfgang von Jan&nbsp;; leider ließ er damals die
+Operatoren wie +-* etc. aus). Erstens sind sie im Manual abgedruckt,
+und zweitens liefert die Funktion CMD$(x) die reservierten Wörter für
+die Tokens &bdquo;x&ldquo;. Im Beispiel finden Sie die Befehle und Tokens
+(unterstrichen) für die neuen Statements aus dem ersten Artikel.
+</p>
+
+<!-- Tabelle mit 2 Spalten: Start --><table style="width: 100%"><tr><td>
+<img class="img-fluid" src="../../Image-07-1.jpeg" alt="" width="44" height="93">
+<!-- Tabelle mit 2 Spalten: Spaltenwechsel --></td><td>
+<div class="text-end"><img class="img-fluid" src="../../Image-07-2.jpeg" alt="" width="175" height="116"></div>
+<!-- Tabelle mit 2 Spalten: Ende --></td></tr></table>
+
+<p>
+Die Anwendung des Programme ist vergleichsweise einfach. Zunächst wird
+das Anpassungsprogramm ADAPT geladen, dann das
+Microsoft-BASIC-Programm.
+</p>
+<p>
+Nun wird ADAPT mit E&nbsp;D00 gestartet, und das
+Programm ist umgewandelt. Man sollte sich die Endadresse des Programmes
+in #CB7 (nach dem Editieren!!) anschauen. Sie ist für das Abspeichern
+auf Cassette wichtig, und muß in Zukunft auch manuell in diese Adresse
+geladen werden, wenn das Programm neu für X-Tal eingelesen wird.
+Vielleicht hat ein Leser einen Tip, wie man das eleganter lösen könnte.
+****
+</p>
+<p>
+Nun liest man das X-Tal BASIC ein und startet mit 1002 (wird auf dem
+Bildschirm aufgefordert).
+</p>
+<p>
+Allerdings läßt sich ein Editieren vor dem
+Progranmetart nicht vermeiden (zumindest nicht mit dieser Version). Man
+könnte alle auftretenden Eventualitäten möglicherweise auch per
+Programm umsetzen lassen, aber das war mir einfach zu viel.
+</p>
+<p>
+Beim Editieren sind folgende Satements zu ändern:
+</p>
+<table>
+<tr><td>a</td><td>wird zu Printa</td></tr>
+<tr><td>SET (x,y)</td><td>wird zu SETx,y</td></tr>
+<tr><td>RESET(x,y)&nbsp;&nbsp;</td><td>s.o.</td></tr>
+</table>
+<p>
+INCH tritt bei ursprünglichem USR(X) auf. Falls eine andere
+Maschinenroutine als die Tastaturabfrage gefordert wird, muß CALL
+eingesetzt werden (oder KBD, wenn die Tastatur ohne Warteschleife
+abgefragt werden soll).
+</p>
+<p>
+Sollte ich die eine oder andere Änderung vergessen haben, so wird Sie
+Ihnen beim Programmlauf als spezifische Error-Meldung mitgeteilt und
+kann leicht nachgeholt werden.
+</p>
+<p>
+Denken Sie daran, daß DOKEs für Tastatur-Maschinencodes wegfallen und
+daß andere Maschinenprogramme nur im Bereich E00 bis E7F liegen dürfen;
+der Rest bis 1000 wird vom BASIC benutzt.
+</p>
+<p>
+Das alles klingt wieder einmal sehr kompliziert, sollte Sie aber nicht
+abschrecken. Nach dem Umwandeln Ihres ersten Programms sehen Sie keine
+Schwierigkeiten mehr.
+</p>
+<h4 class="uppercase">
+*** &nbsp; &nbsp; Nachtrag
+</h4>
+<p>
+Das aufwendige Nachschauen, Merken und Nachtragen des Programmendes ist
+nur notwendig, wenn man -wie ich das tue- die Programme auf
+Minicassette abspeichert. Selbstverständlich können sie aber auch mit
+CSAVE und den entsprechenden Variationen, die X-Tal zuläßt, ganz normal
+auf Cassette geschrieben werden, und der oben beschriebene komplizierte
+Vorgang entfällt.
+</p>
+
+<!-- 2 Spalten: Spaltenwechsel -->
+<div id="article1">
+<img class="img-fluid" src="../../Image-07-3.jpeg" alt="" width="278" height="912">
+</div>
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/03/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 7 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/05/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../08/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-04.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

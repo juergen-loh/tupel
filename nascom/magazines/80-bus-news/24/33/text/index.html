@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">July&ndash;August 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 33 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../34/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-24 page-33" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    20</span>
+
+E509 AF         CRUNCH: XOR     A               ; Tokenise line @ HL to BUFFER
+E50A 32AE10             LD      (DATFLG),A      ; Reset literal flag
+E50D 0E05               LD      C,2+3           ; 2 byte number and 3 nulls
+E50F 116110             LD      DE,BUFFER       ; Start of input buffer
+E512 7E         CRNCLP: LD      A,(HL)          ; Get byte
+E513 FE20               CP      " "             ; Is it a space?
+E515 CA91E5             JP      Z,MOVDIR        ; Yes - Copy direct
+E518 47                 LD      B,A             ; Save character
+E519 FE22               CP      '"'             ; Is it a quote?
+E51B CAB1E5             JP      Z,CPYLIT        ; Yes - Copy literal string
+E51E B7                 OR      A               ; Is it end of buffer?
+E51F CAB8E5             JP      Z,ENDBUF        ; Yes - End buffer
+E522 3AAE10             LD      A,(DATFLG)      ; Get data type
+E525 B7                 OR      A               ; Literal?
+E526 7E                 LD      A,(HL)          ; Get byte to copy
+E527 C291E5             JP      NZ,MOVDIR       ; Literal - Copy direct
+E52A FE3F               CP      "?"             ; Is it "?" short for PRINT
+E52C 3E9E               LD      A,ZPRINT        ; "PRINT" token
+E52E CA91E5             JP      Z,MOVDIR        ; Yes - replace it
+E531 7E                 LD      A,(HL)          ; Get byte again
+E532 FE30               CP      "0"             ; Is it less than "0"
+E534 DA3CE5             JP      C,FNDWRD        ; Yes - Look for reserved words
+E537 FE3C               CP      ";"+1           ; Is it "0123456789:;" ?
+E539 DA91E5             JP      C,MOVDIR        ; Yes - copy it direct
+E53C D5         FNDWRD: PUSH    DE              ; Look for reserved words
+E53D 1142E1             LD      DE,WORDS-1      ; Point to table
+E540 C5                 PUSH    BC              ; Save count
+E541 018DE5             LD      BC,RETNAD       ; Where to return to
+E544 C5                 PUSH    BC              ; Save return address
+E545 067F               LD      B,ZEND-1        ; First token value -1
+E547 7E                 LD      A,(HL)          ; Get byte
+E548 FE61               CP      "a"             ; Less than "a" ?
+E54A DA55E5             JP      C,SEARCH        ; Yes - search for words
+E54D FE7B               CP      "z"+1           ; Greater than "z" ?
+E54F D255E5             JP      NC,SEARCH       ; Yes - search for words
+E552 E65F               AND     01011111B       ; Force upper case
+E554 77                 LD      (HL),A          ; Replace byte
+E555 4E         SEARCH: LD      C,(HL)          ; Search for a word
+E556 EB                 EX      DE,HL
+E557 23         GETNXT: INC     HL              ; Get next reserved word
+E558 B6                 OR      (HL)            ; Start of word?
+E559 F257E5             JP      P,GETNXT        ; No - move on
+E55C 04                 INC     B               ; Increment token value
+E55D 7E                 LD      A, (HL)         ; Get byte from table
+E55E E67F               AND     01111111B       ; Strip bit 7
+E560 C8                 RET     Z               ; Return if end of list
+E561 B9                 CP      C               ; Same character as in buffer?
+E562 C257E5             JP      NZ,GETNXT       ; No - get next word
+E565 EB                 EX      DE,HL
+E566 E5                 PUSH    HL              ; Save start of word
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    21</span>
+
+E567 13         NXTBYT: INC     DE              ; Look through rest of word
+E568 1A                 LD      A,(DE)          ; Get byte from table
+E569 B7                 OR      A               ; End of word&nbsp;?
+E56A FA89E5             JP      M,MATCH         ; Yes - Match found
+E56D 4F                 LD      C,A             ; Save it
+E56E 78                 LD      A,B             ; Get token value
+E56F FE88               CP      ZGOTO           ; Is it "GOTO" token&nbsp;?
+E571 C278E5             JP      NZ,NOSPC        ; No - Don't allow spaces
+E574 CD36E8             CALL    GETCHR          ; Get next character
+E577 2B                 DEC     HL              ; Cancel increment from GETCHR
+E578 23         NOSPC:  INC     HL              ; Next byte
+E579 7E                 LD      A,(HL)          ; Get byte
+E57A FE61               CP      "a"             ; Less than "a" ?
+E57C DA81E5             JP      C,NOCHNG        ; Yes - don't change
+E57F E65F               AND     01011111B       ; Make upper case
+E581 B9         NOCHNG: CP      C               ; Same as in buffer&nbsp;?
+E582 CA67E5             JP      Z,NXTBYT        ; Yes - keep testing
+E585 E1                 POP     HL              ; Get back start of word
+E586 C355E5             JP      SEARCH          ; Look at next word
+
+E589 48         MATCH:  LD      C,B             ; Word found - Save token value
+E58A F1                 POP     AF              ; Throw away return
+E58B EB                 EX      DE,HL
+E58C C9                 RET                     ; Return to "RETNAD"
+E58D EB         RETNAD: EX      DE,HL           ; Get address in string
+E58E 79                 LD      A,C             ; Get token value
+E58F C1                 POP     BC              ; Restore buffer length
+E590 D1                 POP     DE              ; Get destination address
+E591 23         MOVDIR: INC     HL              ; Next source in buffer
+E592 12                 LD      (DE),A          ; Put byte in buffer
+E593 13                 INC     DE              ; Move up buffer
+E594 0C                 INC     C               ; Increment length of buffer
+E595 D63A               SUB     ":"             ; End of statement?
+E597 CA9FE5             JP      Z,SETLIT        ; Jump if multi-statement line
+E59A FE49               CP      ZDATA-3AH       ; Is it DATA statement&nbsp;?
+E59C C2A2E5             JP      NZ,TSTREM       ; No - see if REM
+E59F 32AE10     SETLIT: LD      (DATFLG),A      ; Set literal flag
+E5A2 D654       TSTREM: SUB     ZREM-3AH        ; Is it REM?
+E5A4 C212E5             JP      NZ,CRNCLP       ; No - Leave flag
+E5A7 47                 LD      B,A             ; Copy rest of buffer
+E5A8 7E         NXTCHR: LD      A,(HL)          ; Get byte
+E5A9 B7                 OR      A               ; End of line&nbsp;?
+E5AA CAB8E5             JP      Z,ENDBUF        ; Yes - Terminate buffer
+E5AD B8                 CP      B               ; End of statement&nbsp;?
+E5AE CA91E5             JP      Z,MOVDIR        ; Yes - Get next one
+E5B1 23         CPYLIT: INC     HL              ; Move up source string
+E5B2 12                 LD      (DE),A          ; Save in destination
+E5B3 0C                 INC     C               ; Increment length
+E5B4 13                 INC     DE              ; Move up destination
+E5B5 C3A8E5             JP      NXTCHR          ; Repeat
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../23/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 33 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../34/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_24.pdf#page=33" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

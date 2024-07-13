@@ -1,0 +1,1035 @@
+/***************************************************************************/
+/* Scorpio News */
+/* style.css / $Date: 2024-07-07 20:08:28 +0200 (So, 07. Jul 2024) $ */
+/***************************************************************************/
+
+h5
+{
+	font-style: italic;
+	font-weight: bold;
+}
+
+.mag-scorpio-news p
+{
+	text-align: justify;
+}
+.mag-scorpio-news.issue-14 p
+{
+	text-indent: 3em;
+}
+.mag-scorpio-news p.indent,
+.mag-scorpio-news h4.indent,
+.mag-scorpio-news table.indent,
+.mag-scorpio-news pre.indent,
+.mag-scorpio-news div.indent,
+.mag-scorpio-news ol.indent,
+.mag-scorpio-news ul.indent
+{
+	text-indent: 0;
+	margin-left: 3rem;
+}
+.mag-scorpio-news p.indent2,
+.mag-scorpio-news h4.indent2,
+.mag-scorpio-news ol.indent2,
+.mag-scorpio-news ul.indent2,
+.mag-scorpio-news pre.indent2,
+.mag-scorpio-news table.indent2
+{
+	text-indent: 0;
+	margin-left: 6rem;
+}
+.mag-scorpio-news p.indent3
+{
+	text-indent: 0;
+	margin-left: 9em;
+}
+
+.mag-scorpio-news p.exdent
+{
+	margin-left: 3em;
+	text-indent: -3em;
+}
+
+.mag-scorpio-news p.exdent2
+{
+	margin-left: 6em;
+	text-indent: -6em;
+}
+
+.mag-scorpio-news p.center,
+.mag-scorpio-news pre.center,
+.mag-scorpio-news h1.center,
+.mag-scorpio-news h2.center,
+.mag-scorpio-news h3.center,
+.mag-scorpio-news h4.center,
+.mag-scorpio-news td.center
+{
+	text-indent: 0;
+	margin-left: 0;
+	text-align: center;
+}
+.mag-scorpio-news table.center
+{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mag-scorpio-news h1
+{
+	border-bottom: solid;
+	border-width: 1px;
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.mag-scorpio-news h2
+{
+	display: inline-block;
+	border-bottom: solid;
+	border-width: 1px;
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+.mag-scorpio-news h3
+{
+	font-weight: normal;
+}
+.mag-scorpio-news ul
+{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.mag-scorpio-news.issue-11.page-05 p,
+.mag-scorpio-news.issue-11.page-06 p,
+.mag-scorpio-news.issue-11.page-35 p,
+.mag-scorpio-news.issue-11.page-36 p,
+.mag-scorpio-news.issue-11.page-51 p,
+.mag-scorpio-news.issue-11.page-52 p,
+.mag-scorpio-news.issue-11.page-53 p,
+.mag-scorpio-news.issue-11.page-54 p,
+.mag-scorpio-news.issue-11.page-55 p,
+.mag-scorpio-news.issue-11.page-56 p,
+
+.mag-scorpio-news.issue-13.page-11 p,
+.mag-scorpio-news.issue-13.page-12 p,
+.mag-scorpio-news.issue-13.page-13 p,
+.mag-scorpio-news.issue-13.page-14 p,
+.mag-scorpio-news.issue-13.page-15 p,
+.mag-scorpio-news.issue-13.page-16 p,
+.mag-scorpio-news.issue-13.page-17 p,
+.mag-scorpio-news.issue-13.page-18 p,
+.mag-scorpio-news.issue-13.page-42 p,
+.mag-scorpio-news.issue-13.page-43 p,
+.mag-scorpio-news.issue-13.page-44 p,
+.mag-scorpio-news.issue-13.page-45 p,
+.mag-scorpio-news.issue-13.page-56 p,
+.mag-scorpio-news.issue-13.page-57 p,
+.mag-scorpio-news.issue-13.page-58 p,
+.mag-scorpio-news.issue-13.page-59 p,
+.mag-scorpio-news.issue-13.page-60 p,
+.mag-scorpio-news.issue-13.page-61 p,
+.mag-scorpio-news.issue-13.page-62 p,
+.mag-scorpio-news.issue-13.page-63 p,
+.mag-scorpio-news.issue-14 p,
+
+.mag-scorpio-news.issue-31.page-18 p
+{
+	text-indent: 3em;
+}
+
+.mag-scorpio-news .noindent p,
+.mag-scorpio-news p.noindent,
+.mag-scorpio-news p.continued
+{
+	text-indent: 0;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.pascal-bench
+{
+	margin-left: 3em;
+	width: 100%;
+}
+
+.mag-scorpio-news table.pascal-bench tr td:nth-child(2),
+.mag-scorpio-news table.pascal-bench tr td:nth-child(3)
+{
+	text-align: right;
+	padding-right: 2em;
+}
+
+.mag-scorpio-news table.pascal-bench tr td:last-child
+{
+	padding-right: 3em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.lang-bench
+{
+	width: 80%;
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.lang-bench tr th,
+.mag-scorpio-news table.lang-bench tr td
+{
+	padding-bottom: 1em;
+}
+
+.mag-scorpio-news table.lang-bench tr th:nth-child(2),
+.mag-scorpio-news table.lang-bench tr td:nth-child(2),
+.mag-scorpio-news table.lang-bench tr th:nth-child(3),
+.mag-scorpio-news table.lang-bench tr td:nth-child(3),
+.mag-scorpio-news table.lang-bench tr th:nth-child(5),
+.mag-scorpio-news table.lang-bench tr td:nth-child(5)
+{
+	text-align: center;
+}
+
+.mag-scorpio-news table.lang-bench-legend
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.lang-bench-legend tr td:first-child
+{
+	width: 3em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.fdc-lk-links
+{
+	margin-left: 6em;
+}
+
+.mag-scorpio-news table.fdc-lk-links tr td:nth-child(2),
+.mag-scorpio-news table.fdc-lk-links tr td:nth-child(3),
+.mag-scorpio-news table.fdc-lk-links tr td:nth-child(4)
+{
+	text-align: center;
+}
+
+.mag-scorpio-news table.fdc-lk-links tr td:last-child
+{
+	padding-left: 3em;
+}
+
+.mag-scorpio-news table.fdc-lk-links tr:last-child td
+{
+	text-align: inherit;
+	padding-left: inherit;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.z80-et-al-bench
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.z80-et-al-bench tr td:nth-child(2)
+{
+	padding-left: 2em;
+	padding-right: 1em;
+}
+
+.mag-scorpio-news table.z80-et-al-bench tr td:nth-child(3)
+{
+	text-align: right;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.pascal-et-al-bench
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.pascal-et-al-bench tr td:nth-child(2)
+{
+	padding-left: 2em;
+	padding-right: 1em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.z3-mem-layout
+{
+	width: 100%;
+}
+
+.mag-scorpio-news table.z3-mem-layout tr td
+{
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+}
+
+.mag-scorpio-news table.z3-mem-layout tr td:nth-child(1),
+.mag-scorpio-news table.z3-mem-layout tr td:nth-child(2),
+.mag-scorpio-news table.z3-mem-layout tr td:nth-child(4)
+{
+	text-align: center;
+}
+
+.mag-scorpio-news table.z3-mem-layout tr td:nth-child(1),
+.mag-scorpio-news table.z3-mem-layout tr td:nth-child(2)
+{
+	border-right: 1px solid black;
+}
+
+.mag-scorpio-news table.z3-mem-layout tr:nth-child(1) td,
+.mag-scorpio-news table.z3-mem-layout tr:nth-child(10) td,
+.mag-scorpio-news table.z3-mem-layout tr:last-child td
+{
+	border-bottom: 1px solid black;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.pluto-range
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.pluto-range tr td
+{
+	text-align: center;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.pluto-ibm-range
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.pluto-ibm-range tr td:nth-child(3),
+.mag-scorpio-news table.pluto-ibm-range tr td:last-child
+{
+	text-align: right;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.pluto-pennant
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.pluto-pennant tr td:nth-child(2)
+{
+	text-align: center;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.mhz-wait-factor
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.mhz-wait-factor tr td:first-child,
+.mag-scorpio-news table.mhz-wait-factor tr td:last-child
+{
+	text-align: right;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.drivparm-help tr td
+{
+	padding-left: 6em;
+}
+
+.mag-scorpio-news table.drivparm-help tr:nth-child(n+10):nth-child(-n+17) td
+{
+	padding-left: 9em;
+}
+
+.mag-scorpio-news table.drivparm-help tr:nth-child(n+2):nth-child(-n+3) td
+{
+	padding-left: 3em;
+}
+
+.mag-scorpio-news table.drivparm-help tr:first-child td
+{
+	padding-left: inherit;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.gm880-bench
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.gm880-bench tr th,
+.mag-scorpio-news table.gm880-bench tr td
+{
+	padding-left: 1em;
+}
+
+.mag-scorpio-news table.gm880-bench tr th,
+.mag-scorpio-news table.gm880-bench tr:nth-child(n+2):nth-child(-n+4) td
+{
+	padding-bottom: 1em;
+}
+
+/***************************************************************************/
+
+.mag-scorpio-news .noindent p,
+.mag-scorpio-news p.noindent
+{
+	text-indent: 0;
+}
+
+.mag-scorpio-news div.text-indent p,
+.mag-scorpio-news p.text-indent
+{
+	text-indent: 3em;
+}
+
+.mag-scorpio-news .noindent p
+{
+	text-indent: 0;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.fortran-columns
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.fortran-columns tr td:nth-child(1)
+{
+	white-space: nowrap;
+	width: 3em;
+}
+
+.mag-scorpio-news table.fortran-columns tr td:nth-child(2)
+{
+	white-space: nowrap;
+	width: 6em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.for-formats tr td:first-child
+{
+	width: 6em;
+	text-align: right;
+	padding-right: 3em;
+}
+
+.mag-scorpio-news table.format-examples tr td:first-child
+{
+	width: 6em;
+	padding-left: 3em;
+}
+
+.mag-scorpio-news table.control-statements
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.control-statements tr td
+{
+	padding-right: 1em;
+}
+
+.mag-scorpio-news table.fortran-control
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.fortran-control tr td:first-child
+{
+	width: 9em;
+	white-space: nowrap;
+}
+
+.mag-scorpio-news div.relational-operators table
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.logical-expressions
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.logical-expressions tr td:first-child
+{
+	width: 6em;
+	white-space: nowrap;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.fdc-format-data
+{
+/*	margin-left: 3em;	*/
+	width: 100%;
+}
+
+.mag-scorpio-news table.fdc-format-data tr td:nth-child(2),
+.mag-scorpio-news table.fdc-format-data tr th:nth-child(2),
+.mag-scorpio-news table.fdc-format-data tr td:nth-child(3),
+.mag-scorpio-news table.fdc-format-data tr th:nth-child(3),
+.mag-scorpio-news table.fdc-format-data tr td:nth-child(4),
+.mag-scorpio-news table.fdc-format-data tr th:nth-child(4)
+{
+	text-align: center;
+}
+
+.mag-scorpio-news table.fdc-format-legend tr td:first-child
+{
+	width: 3em;
+}
+
+.mag-scorpio-news table.fdc-format-gap
+{
+/*	margin-left: 3em;
+	width: 60%;	*/
+}
+
+.mag-scorpio-news table.fdc-format-gap tr td,
+.mag-scorpio-news table.fdc-format-gap tr th
+{
+	text-align: center;
+	padding-right: 1em;
+}
+
+.mag-scorpio-news table.fdc-format-bytes
+{
+/*	margin-left: 3em;	*/
+	width: 100%;
+}
+
+.mag-scorpio-news table.fdc-format-bytes tr td:nth-child(1)
+{ width: 6em;
+}
+
+.mag-scorpio-news table.fdc-format-bytes tr td:nth-child(1),
+.mag-scorpio-news table.fdc-format-bytes tr th:nth-child(1),
+.mag-scorpio-news table.fdc-format-bytes tr th:nth-child(2),
+.mag-scorpio-news table.fdc-format-bytes tr th:nth-child(3)
+{
+	text-align: center;
+}
+
+.mag-scorpio-news table.fdc-format-bytes tr td:nth-child(3)
+{
+	text-align: right;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.multinet-esc-ctrl
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.multinet-esc-ctrl tr td:last-child
+{
+	padding-left: 3em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.bench-cpm
+{
+	width: 100%;
+}
+
+.mag-scorpio-news table.bench-cpm tr td
+{
+	padding-top: 1em;
+}
+
+.mag-scorpio-news table.bench-cpm tr td:last-child
+{
+	padding-bottom: 0;
+}
+
+.mag-scorpio-news table.bench-parkinson
+{
+	width: 100%;
+}
+
+.mag-scorpio-news table.bench-parkinson tr th
+{
+	padding-bottom: 1em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.bcb-format
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.bcb-format tr td:nth-child(2)
+{
+	padding-left: 2em;
+}
+
+.mag-scorpio-news table.bcb-format tr td:nth-child(3)
+{
+	text-align: right;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.gemini-qdds-dpb
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.gemini-qdds-dpb tr td:nth-child(1),
+.mag-scorpio-news table.gemini-qdds-dpb tr td:nth-child(2)
+{
+	text-align: right;
+	padding-right: 1em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.dec-bin-equivalent
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.dec-bin-equivalent tr th
+{
+	text-align: center;
+}
+
+.mag-scorpio-news table.dec-bin-equivalent tr td:nth-child(1),
+.mag-scorpio-news table.dec-bin-equivalent tr td:nth-child(4),
+.mag-scorpio-news table.dec-bin-equivalent tr td:nth-child(8)
+{
+	text-align: right;
+}
+
+.mag-scorpio-news table.dec-bin-equivalent tr td:nth-child(3),
+.mag-scorpio-news table.dec-bin-equivalent tr td:nth-child(6)
+{
+	padding-right: 2em;
+}
+
+.mag-scorpio-news table.dec-bin-equivalent tr td:nth-child(8)
+{
+	width: 3em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.log10-log2
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.log10-log2 tr td:nth-child(2),
+.mag-scorpio-news table.log10-log2 tr td:nth-child(5)
+{
+	text-align: right;
+}
+
+.mag-scorpio-news table.log10-log2 tr td:nth-child(3)
+{
+	padding-right: 3em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.bls-bsh-blm
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.bls-bsh-blm tr th,
+.mag-scorpio-news table.bls-bsh-blm tr td:nth-child(2)
+{
+	text-align: center;
+}
+
+.mag-scorpio-news table.bls-bsh-blm tr td:nth-child(1),
+.mag-scorpio-news table.bls-bsh-blm tr td:nth-child(3)
+{
+	text-align: right;
+}
+
+.mag-scorpio-news table.bls-bsh-blm tr th:nth-child(1),
+.mag-scorpio-news table.bls-bsh-blm tr th:nth-child(2),
+.mag-scorpio-news table.bls-bsh-blm tr td:nth-child(1),
+.mag-scorpio-news table.bls-bsh-blm tr td:nth-child(2)
+{
+	padding-right: 3em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.cpm3-dpb
+{
+	margin: auto;
+}
+
+.mag-scorpio-news table.cpm3-dpb tr td:nth-child(1),
+.mag-scorpio-news table.cpm3-dpb tr td:nth-child(2)
+{
+	text-align: right;
+}
+
+.mag-scorpio-news table.cpm3-dpb tr th:nth-child(1),
+.mag-scorpio-news table.cpm3-dpb tr th:nth-child(2),
+.mag-scorpio-news table.cpm3-dpb tr td:nth-child(1),
+.mag-scorpio-news table.cpm3-dpb tr td:nth-child(2)
+{
+	padding-right: 1em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.ws33-patch-screen
+{
+	margin-left: 6em;
+}
+
+.mag-scorpio-news table.ws33-patch-screen tr th,
+.mag-scorpio-news table.ws33-patch-screen tr td
+{
+	padding-left: 2em;
+}
+
+.mag-scorpio-news table.ws33-patch-screen tr th:first-child,
+.mag-scorpio-news table.ws33-patch-screen tr td:first-child
+{
+	padding-left: inherit;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.hex-name-keys
+{
+	margin-left: 1em;
+	margin-right: 2em;
+}
+
+.mag-scorpio-news table.hex-name-keys tr th,
+.mag-scorpio-news table.hex-name-keys tr td
+{
+	padding-left: 1em;
+}
+
+.mag-scorpio-news table.hex-name-keys tr td:nth-child(4)
+{
+	padding-left: inherit;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news p.gem-applications
+{
+	text-indent: 0;
+	margin-left: 6em;
+	text-justify: none;
+}
+
+.mag-scorpio-news p.gem-applications span
+{
+	padding-right: 1.5em;
+	white-space: nowrap;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news p.drive-capabilities
+{
+	text-indent: 0;
+	margin-left: 3em;
+	text-justify: none;
+}
+
+.mag-scorpio-news p.drive-capabilities span:nth-child(3),
+.mag-scorpio-news p.drive-capabilities span:nth-child(5),
+.mag-scorpio-news p.drive-capabilities span:nth-child(7),
+.mag-scorpio-news p.drive-capabilities span:nth-child(11),
+.mag-scorpio-news p.drive-capabilities span:nth-child(13),
+.mag-scorpio-news p.drive-capabilities span:nth-child(17)
+{
+	padding-left: 3em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.drivetec-dpb
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.drivetec-dpb tr td
+{
+	padding-right: 2em;
+}
+
+.mag-scorpio-news table.drivetec-dpb tr td:nth-child(4),
+.mag-scorpio-news table.drivetec-dpb tr td:last-child
+{
+	padding-right: inherit;
+}
+
+.mag-scorpio-news table.drivetec-dpb tr td:first-child
+{
+	text-align: right;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.d-u-name
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.d-u-name tr td:nth-child(3),
+.mag-scorpio-news table.d-u-name tr td:nth-child(8)
+{
+	padding-right: 2em;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news table.winchester-comtroller
+{
+	margin-left: 3em;
+}
+
+.mag-scorpio-news table.winchester-comtroller tr td
+{
+	padding-right: 3em;
+}
+
+.mag-scorpio-news table.winchester-comtroller tr td:last-child
+{
+	padding-right: inherit;
+}
+
+.mag-scorpio-news table.winchester-comtroller tr td
+{
+	padding-bottom: 1em;
+}
+
+.mag-scorpio-news table.winchester-comtroller tr:first-child td,
+.mag-scorpio-news table.winchester-comtroller tr:last-child td
+{
+	padding-bottom: inherit;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.mag-scorpio-news h1.essay-heading span
+{
+	font-size: smaller;
+/*	font-weight: normal;
+*/
+}
+
+/***************************************************************************/
+
+.mag-scorpio-news.page-01 table
+{
+	margin: 2em auto;
+}
+
+.mag-scorpio-news.page-01 table td,
+.mag-scorpio-news.page-01 table td p
+{
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 1rem;
+	margin: 0rem;
+	margin-top: 0.5rem;
+}
+
+.mag-scorpio-news.page-01 table td p,
+.mag-scorpio-news.page-01 table tr:last-child td
+{
+	text-align: center;
+}
+
+.mag-scorpio-news.page-01 table tr:first-child td
+{
+	padding-bottom: 3rem;
+}
+
+.mag-scorpio-news.page-01 table tr:nth-child(3) td
+{
+	padding-top: 30rem;
+}
+
+.mag-scorpio-news.page-01 table tr:last-child td
+{
+	padding-top: 2rem;
+}
+
+.mag-scorpio-news.page-01 table tr:first-child td,
+.mag-scorpio-news.page-01 table tr:last-child td
+{
+	font-size: 1.2rem;
+}
+
+.mag-scorpio-news.page-01 table tr:first-child td:last-child
+{
+	text-align: right;
+}
+
+.mag-scorpio-news.page-01 table tr td
+{
+	padding: 0.5rem;
+}
+
+.mag-scorpio-news.page-01 table tr:first-child,
+.mag-scorpio-news.page-01 table tr:nth-child(3)
+{
+	border-color: black;
+	border-width: 0.3em;
+	border-style: solid;
+	background-color:rgb(206,230,222);
+}
+
+.mag-scorpio-news.issue-21.page-01 table tr:first-child td:last-child,
+.mag-scorpio-news.issue-22.page-01 table tr:first-child td:last-child,
+.mag-scorpio-news.issue-23.page-01 table tr:first-child td:last-child,
+.mag-scorpio-news.issue-24.page-01 table tr:first-child td:last-child
+{
+	text-align: center;
+}
+
+.mag-scorpio-news.page-01 table tr:first-child td,
+.mag-scorpio-news.page-01 table tr:nth-child(3) td
+{
+	color: rgb(30,90,66);
+}
+
+.mag-scorpio-news.issue-11.page-01 table tr:first-child td,
+.mag-scorpio-news.issue-11.page-01 table tr:nth-child(3) td,
+.mag-scorpio-news.issue-22.page-01 table tr:first-child td
+{
+	color: black;
+}
+
+/* https://www.w3.org/Style/Examples/007/leaders.en.html */
+/* CSS3
+ul.content {
+	padding: 0;
+	list-style: none
+}
+ul.content span:first-child:after
+{
+	content: leader(dotted)
+}
+*/
+.mag-scorpio-news ul.content {
+/*	max-width: 40em; */
+	padding: 0;
+	overflow-x: hidden;
+	list-style: none;
+/*	padding-left: 3em;
+	max-width: 57em; */
+}
+.mag-scorpio-news ul.content li:after {
+	float: left;
+	width: 0;
+	white-space: nowrap;
+	content:
+		". . . . . . . . . . . . . . . . . . . . "
+		". . . . . . . . . . . . . . . . . . . . "
+		". . . . . . . . . . . . . . . . . . . . "
+		". . . . . . . . . . . . . . . . . . . . "
+		". . . . . . . . . . . . . . . . . . . . "
+}
+.mag-scorpio-news ul.content span:first-child
+{
+	padding-right: 0.33em;
+	background: white
+}
+.mag-scorpio-news ul.content span + span
+{
+	float: right;
+	padding-left: 0.33em;
+	background: white;
+	position: relative;
+	z-index: 1
+}
+.mag-scorpio-news table.content
+{
+/*	width: 85%;
+	margin-left: 15% */
+}
+
+/* issue 1.1-1.4 */
+.mag-scorpio-news.issue-11 h1,
+.mag-scorpio-news.issue-12 h1,
+.mag-scorpio-news.issue-13 h1,
+.mag-scorpio-news.issue-14 h1
+{
+	font-size: 20px;
+	border-bottom: none/*solid*/;
+	border-width: 2px;
+	margin-top: 0.5em/*2em*/;
+	margin-bottom: 0.5em/*2em*/;
+}
+.mag-scorpio-news.issue-11.page-03 h1,
+.mag-scorpio-news.issue-12.page-03 h1,
+.mag-scorpio-news.issue-13.page-03 h1,
+.mag-scorpio-news.issue-14.page-03 h1
+{
+	white-space: nowrap;
+}
+.mag-scorpio-news.issue-11 h2,
+.mag-scorpio-news.issue-12 h2,
+.mag-scorpio-news.issue-13 h2,
+.mag-scorpio-news.issue-14 h2
+{
+/*	font-size: 16px;
+*/	display: auto/*inline-block*/;
+	border-bottom: none/*solid*/;
+/*	border-width: 2px;
+*/	margin-top: 0/*.2em*/;
+	margin-bottom: 1em;
+}
+.mag-scorpio-news h3
+{
+	font-weight: bold;
+}
+/*
+.mag-scorpio-news div.col-sm-8 h1
+{
+	margin-top: 0.5em;
+}
+.mag-scorpio-news div.col-sm-4 h3
+{
+	margin-top: 0.8em;
+	margin-bottom: 0.5em;
+}
+*/
+table.cpm-decrypt
+{
+	text-transform: uppercase;
+}
+table.cpm-decrypt tr td
+{
+	padding-left: 1em;
+	text-align: center;
+}
+table.cpm-decrypt tr td:first-child
+{
+	padding-left: 0;
+	text-align: left;
+}

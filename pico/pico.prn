@@ -1,0 +1,1848 @@
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1
+
+
+                                ; ***************************************************************
+                                ; *								*
+                                ; *			P I C O - S Y S				*
+                                ; *			Version 1.0/1.1				*
+                                ; *			Datum: 22.09.87				*
+                                ; *								*
+                                ; ***************************************************************
+                                
+  FFFF                          true	equ	1 eq 1
+  0000                          false	equ	not true
+                                
+  FFFF                          schnell	equ	true		; true = schnelles Kassetteninterface
+  FFFF                          mode2	equ	true		; true = Interrupts ein
+  0000                          test	equ	false		; zum Speichersparen
+                                				; calc, move
+  FFFF                          cass	equ	true		; dto. save/load
+  FFFF                          layout	equ	true		; fuer neues Layout auf 'true' setzen
+                                
+                                    if schnell
+                                	title	Pico-Sys V1.1
+  0011                          	version	equ	11h	; jeweils anpassen!
+                                    else ; if schnell
+                                	title	Pico-Sys V1.0
+                                	version	equ	10h	; jeweils anpassen!
+                                    endif ; if schnell
+                                
+                                ; umgesetzt fuer m80 am 14.11.85
+                                ; Interrupt-Anzeigensteuerung 11.01.86
+                                
+  0000'                         	aseg
+                                	.z80
+                                
+  0000                          rom	equ	0000h
+  0800                          romtop	equ	rom+2048
+  0800                          ram	equ	0800h
+  0840                          sysram	equ	ram+40h
+  0C00                          segment	equ	ram+400h
+  1000                          ramtop	equ	ram+2048
+                                
+  0014                          diszyk	equ	20
+                                
+  0000                          pio	equ	00h
+  0004                          ctc	equ	04h
+  0008                          j18	equ	08h
+                                
+  0035                          free	equ	53
+                                
+                                	page	65
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-1
+
+
+                                
+                                
+                                	org	ram
+  0800                          scavdu:	defs	8
+  0808                          tast:	defs	8
+  0810                          vdu:	defs	8
+  0818                          tasfnd:	defs	1
+  0819                          timeb:	defs	1
+  081A                          led:	defs	1		; bit 3=SET-Modus
+                                				; bit 2=Zweitregister
+                                				; bit 1=Move-Modus
+                                
+  081B                          key:	defs	1		; Bit 76 543 210
+                                				;     cs row col
+  081C                          cursor:	defs	1
+  081D                          aufz:	defs	2
+  081F                          arg1:	defs	2
+  0821                          arg2:	defs	2
+  0823                          chsum:	defs	1
+  0824                          temp:	defs	2
+  0826                          brkadr:	defs	2
+  0828                          brkval:	defs	1
+  0829                          argc:	defs	1
+  082A                          sptemp:	defs	2
+  082C                          conflg:	defs	1		; bit 7=go-/step
+                                				; bit 3=LOAD-error
+                                				; bit 2=Zweitreg.
+                                				; bit 1=Zwischensp. f. bit 2
+  082D                          lcount:	defs	1
+  082E                          monstk:	defs	free
+  0863                          stack	equ	$
+  0863                          raf:	defs	2
+  0865                          rix:	defs	2
+  0867                          riy:	defs	2
+  0869                          rbc:	defs	2
+  086B                          rde:	defs	2
+  086D                          rhl:	defs	2
+  086F                          initr	equ	$
+  086F                          rsp:	defs	2
+  0871                          ri:	defs	1
+  0872                          riff:	defs	1		; Bit 0=iff1
+  0873                          rpc:	defs	2
+  0875                          point:	defs	1
+  0876                          timed:	defs	1
+  0877                          cnorm:	defs	1
+  0878                          inttab:	defs	8
+  0880                          inite	equ	$
+                                
+  0010                          tai	equ	10h
+  0001                          sps	equ	01h
+  0004                          zes	equ	04h
+  0002                          les	equ	02h
+  0080                          brk	equ	80h
+  0008                          mic	equ	08h
+                                
+                                    if layout
+  0090                          cledoff	equ	brk+tai
+  0098                          cledon	equ	brk+tai+mic
+                                    else ; if layout
+                                cledoff	equ	brk+tai+mic
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-2
+
+
+                                cledon	equ	brk+tai
+                                    endif ; if layout
+                                
+  0041                          f1khz	equ	65
+  001F                          f2khz	equ	31
+  002A                          mperiod	equ	42
+                                
+                                    if schnell
+  0002                          	one1k	equ	4/2
+  0002                          	one2k	equ	4/2
+  0001                          	zero1k	equ	2/2
+  0004                          	zero2k	equ	8/2
+                                    else ; if schnell
+                                	one1k	equ	4
+                                	one2k	equ	4
+                                	zero1k	equ	2
+                                	zero2k	equ	8
+                                    endif ; if schnell
+                                
+  0082                          paout	equ	82h
+  0092                          pain	equ	92h
+                                
+  0005                          shift	equ	00000101b	; Bit: 76 543 210
+  003F                          ctrl	equ	00111111b	;      00 row col
+                                
+  0808                          tabsft	equ	tast+((shift shr 3) and 111b)
+  0020                          bshift	equ	1 shl (shift and 111b)
+  080F                          tabctr	equ	tast+((ctrl shr 3) and 111b)
+  0080                          bctrl	equ	1 shl (ctrl and 111b)
+                                
+  0088                          prsend	equ	88h
+                                
+                                chkj	macro	?dd
+                                	  if2
+                                	    if (?dd-$-1 gt 0007fh) and (?dd-$-1 lt 0ff80h)
+                                	      .printx	* RCAL Range Error, Label= ?dd *
+                                	    endif
+                                	  endif ; if2
+                                	endm ; chkj
+                                
+                                scal	macro	?n
+                                	defb	0dfh,?n	;$
+                                	endm ; scal
+                                
+                                rcal	macro	?n
+                                	chkj	?n
+                                	defb	0d7h,?n-$-1	;$
+                                	endm ; rcal
+                                
+                                
+                                	org	rom
+  0000                          start:
+  0000    31 1000               	ld	sp,ramtop
+                                	rcal	stmon
+  0003    D7 08           +     	defb	0d7h,stmon-$-1	;$
+  0005    C3 00AD               	jp	mret
+                                
+  0008                          rin:
+  0008    18 77                 	jr	rin1
+  000A                          prs2:
+  000A    F7                    	rst	rout
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-3
+
+
+  000B    18 1D                 	jr	prs1
+  000D                          stmon:
+  000D    C3 0096               	jp	strtb
+                                
+  0010                          rcal:
+  0010    E5                    	push	hl
+  0011    F5                    	push	af
+  0012    37                    	scf
+  0013                          rcal0:
+  0013    21 0008               	ld	hl,8
+  0016    18 05                 	jr	scal0
+                                
+  0018                          scal:
+  0018    E5                    	push	hl
+  0019    F5                    	push	af
+  001A    A7                    	and	a
+  001B    18 F6                 	jr	rcal0
+  001D                          scal0:
+  001D    C3 004E               	jp	rcsc00
+                                
+  0020                          brkpt:
+  0020    F3                    	di
+  0021    E3                    	ex	(sp),hl
+  0022    2B                    	dec	hl
+  0023    E3                    	ex	(sp),hl
+  0024    C3 047D               	jp	trap
+  0027    00                    	defb	0		; fill
+                                
+  0028                          prs:
+  0028    E3                    	ex	(sp),hl
+  0029    F5                    	push	af
+  002A                          prs1:
+  002A    7E                    	ld	a,(hl)
+  002B    23                    	inc	hl
+  002C    FE 88                 	cp	prsend
+  002E    18 0E                 	jr	prs3
+                                
+  0030                          rout:
+  0030    E5                    	push	hl
+  0031    F5                    	push	af
+  0032    21 0810               	ld	hl,vdu
+  0035    18 0C                 	jr	rout1
+  0037    00                    	defb	0		; fill
+                                
+  0038                          rdel:
+  0038    F5                    	push	af
+  0039    F1                    	pop	af
+  003A    3D                    	dec	a
+  003B    20 FB                 	jr	nz,rdel
+  003D    C9                    	ret
+                                
+  003E                          prs3:
+  003E    20 CA                 	jr	nz,prs2
+  0040    F1                    	pop	af
+  0041    E3                    	ex	(sp),hl
+  0042    C9                    	ret
+                                
+  0043                          rout1:
+  0043    3A 081C               	ld	a,(cursor)
+  0046    85                    	add	a,l
+  0047    6F                    	ld	l,a
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-4
+
+
+  0048    F1                    	pop	af
+  0049    77                    	ld	(hl),a
+  004A    E1                    	pop	hl
+                                	scal	zcure
+  004B    DF 04           +     	defb	0dfh,zcure	;$
+  004D    C9                    	ret
+                                
+  004E                          rcsc00:
+  004E    D5                    	push	de
+  004F    F5                    	push	af
+  0050    39                    	add	hl,sp
+  0051    5E                    	ld	e,(hl)
+  0052    23                    	inc	hl
+  0053    56                    	ld	d,(hl)
+  0054    13                    	inc	de
+  0055    72                    	ld	(hl),d
+  0056    2B                    	dec	hl
+  0057    73                    	ld	(hl),e
+  0058    1B                    	dec	de
+  0059    EB                    	ex	de,hl
+  005A    F1                    	pop	af
+  005B    30 16                 	jr	nc,scal1
+                                ; relative call
+  005D    5E                    	ld	e,(hl)
+  005E    7B                    	ld	a,e
+  005F    17                    	rla
+  0060    9F                    	sbc	a,a
+  0061    57                    	ld	d,a
+  0062    23                    	inc	hl
+  0063    19                    	add	hl,de
+  0064    18 03                 	jr	rcal4
+                                
+                                ; Adresse 0066h
+                                
+                                    if2
+                                      if $ ne 0066h
+                                	.printx	* NMI (0066h) liegt falsch *
+                                      endif
+                                    endif ; if2
+                                
+  0066    C3 047D               	jp	trap
+                                
+  0069                          rcal4:
+  0069    D1                    	pop	de
+  006A    F1                    	pop	af
+  006B    E3                    	ex	(sp),hl
+  006C    C9                    	ret
+                                
+  006D                          scalj:
+  006D    E5                    	push	hl
+  006E    F5                    	push	af
+  006F    D5                    	push	de
+  0070    21 0829               	ld	hl,argc
+  0073                          scal1:
+  0073    5E                    	ld	e,(hl)
+  0074    16 00                 	ld	d,0
+  0076    21 0789               	ld	hl,scalt
+  0079    19                    	add	hl,de
+  007A    19                    	add	hl,de
+  007B    5E                    	ld	e,(hl)
+  007C    23                    	inc	hl
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-5
+
+
+  007D    56                    	ld	d,(hl)
+  007E    EB                    	ex	de,hl
+  007F    18 E8                 	jr	rcal4
+                                
+  0081                          rin1:
+                                    if mode2
+                                	scal	zin
+  0081    DF 06           +     	defb	0dfh,zin	;$
+  0083    D8                    	ret	c
+  0084    18 FB                 	jr	rin1
+                                    else ; if mode2
+                                	scal	zin
+                                	ret	c
+                                	call	iscan
+                                	ld	a,diszyk * 4
+                                	rst	rdel
+                                	jr	rin1
+                                    endif ; if mode2
+                                
+  0086                          brsto:
+  0086    2A 0826               	ld	hl,(brkadr)
+  0089    7E                    	ld	a,(hl)
+  008A    32 0828               	ld	(brkval),a
+  008D    C9                    	ret
+  008E                          brres:
+  008E    2A 0826               	ld	hl,(brkadr)
+  0091    3A 0828               	ld	a,(brkval)
+  0094    77                    	ld	(hl),a
+  0095    C9                    	ret
+  0096                          strtb:
+                                	rcal	brres
+  0096    D7 F6           +     	defb	0d7h,brres-$-1	;$
+  0098    11 0800               	ld	de,ram
+  009B    06 6F                 	ld	b,initr-ram
+  009D    AF                    	xor	a
+  009E                          st4:
+  009E    12                    	ld	(de),a
+  009F    13                    	inc	de
+  00A0    10 FC                 	djnz	st4
+  00A2    21 0760               	ld	hl,initt
+  00A5    01 0011               	ld	bc,inite-initr
+  00A8    ED B0                 	ldir
+                                	scal	zclear
+  00AA    DF 11           +     	defb	0dfh,zclear	;$
+  00AC    C9                    	ret
+  00AD                          mret:
+  00AD    31 0863               	ld	sp,stack
+  00B0    21 1000               	ld	hl,ramtop
+  00B3    22 086F               	ld	(rsp),hl
+  00B6    21 0880               	ld	hl,inite
+  00B9    22 0873               	ld	(rpc),hl
+                                	scal	zhome
+  00BC    DF 10           +     	defb	0dfh,zhome	;$
+  00BE    EF                    	rst	prs
+  00BF    73 06 39 3F           	defb	73h,06h,39h,3fh,40h,6dh,6eh,6dh	; PICO-SYS
+  00C3    40 6D 6E 6D           
+  00C7    88                    	defb	prsend
+                                	rcal	brres
+  00C8    D7 C4           +     	defb	0d7h,brres-$-1	;$
+  00CA                          strtd:
+                                	scal	zdison
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-6
+
+
+  00CA    DF 07           +     	defb	0dfh,zdison	;$
+  00CC                          parse:
+                                	scal	zaintxt
+  00CC    DF 2C           +     	defb	0dfh,zaintxt	;$
+  00CE    FE 19                 	cp	19h
+  00D0    30 04                 	jr	nc,pars3
+                                	scal	zdisr
+  00D2    DF 0E           +     	defb	0dfh,zdisr	;$
+  00D4    18 F6                 	jr	parse
+  00D6                          pars3:
+  00D6    FE 3B                 	cp	3bh
+  00D8    30 0D                 	jr	nc,parerr
+  00DA    32 0829               	ld	(argc),a
+                                	scal	zargs
+  00DD    DF 13           +     	defb	0dfh,zargs	;$
+  00DF    DD 21 0840            	ld	ix,sysram
+                                	scal	zscalj
+  00E3    DF 09           +     	defb	0dfh,zscalj	;$
+  00E5    18 E5                 	jr	parse
+  00E7                          parerr:
+  00E7    3E 98                 	ld	a,98h
+                                	scal	zerrm
+  00E9    DF 0F           +     	defb	0dfh,zerrm	;$
+  00EB    18 DF                 	jr	parse
+                                
+  00ED                          argin:
+                                	scal	zargtr
+  00ED    DF 0C           +     	defb	0dfh,zargtr	;$
+                                	scal	zptran
+  00EF    DF 0A           +     	defb	0dfh,zptran	;$
+  00F1                          aintxt:
+                                	scal	zvtran
+  00F1    DF 00           +     	defb	0dfh,zvtran	;$
+  00F3    CF                    	rst	rin
+  00F4    FE 10                 	cp	10h
+  00F6    D0                    	ret	nc
+                                	scal	zargsh
+  00F7    DF 0D           +     	defb	0dfh,zargsh	;$
+  00F9    18 F2                 	jr	argin
+                                
+  00FB                          vtran:
+  00FB    F5                    	push	af
+  00FC    C5                    	push	bc
+  00FD    D5                    	push	de
+  00FE    E5                    	push	hl
+                                	scal	zsync
+  00FF    DF 14           +     	defb	0dfh,zsync	;$
+  0101    06 08                 	ld	b,8
+  0103    21 0800               	ld	hl,scavdu
+  0106    11 0817               	ld	de,vdu+7
+  0109                          vtr1:
+  0109    1A                    	ld	a,(de)
+  010A    77                    	ld	(hl),a
+  010B    1B                    	dec	de
+  010C    23                    	inc	hl
+  010D    10 FA                 	djnz	vtr1
+  010F    E1                    	pop	hl
+  0110    D1                    	pop	de
+  0111    C1                    	pop	bc
+  0112    F1                    	pop	af
+  0113    C9                    	ret
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-7
+
+
+                                
+  0114                          hex:
+  0114    F5                    	push	af
+  0115    E5                    	push	hl
+  0116    21 0771               	ld	hl,hextab
+  0119    E6 0F                 	and	0fh
+  011B    85                    	add	a,l
+  011C    6F                    	ld	l,a
+  011D    7E                    	ld	a,(hl)
+  011E    F7                    	rst	rout
+  011F    E1                    	pop	hl
+  0120    F1                    	pop	af
+  0121    C9                    	ret
+                                
+  0122                          hex2:
+  0122    07                    	rlca
+  0123    07                    	rlca
+  0124    07                    	rlca
+  0125    07                    	rlca
+                                	scal	zhex
+  0126    DF 01           +     	defb	0dfh,zhex	;$
+  0128    07                    	rlca
+  0129    07                    	rlca
+  012A    07                    	rlca
+  012B    07                    	rlca
+  012C    18 E6                 	jr	hex
+                                
+  012E                          hex4:
+  012E    F5                    	push	af
+  012F    7C                    	ld	a,h
+                                	scal	zhex2
+  0130    DF 02           +     	defb	0dfh,zhex2	;$
+  0132    7D                    	ld	a,l
+                                	scal	zhex2
+  0133    DF 02           +     	defb	0dfh,zhex2	;$
+  0135    F1                    	pop	af
+  0136    C9                    	ret
+                                
+  0137                          cure:
+  0137    F5                    	push	af
+  0138    3A 081C               	ld	a,(cursor)
+  013B    3C                    	inc	a
+  013C                          cure1:
+  013C    E6 07                 	and	07h
+  013E    32 081C               	ld	(cursor),a
+  0141    F1                    	pop	af
+  0142    C9                    	ret
+                                
+  0143                          culi:
+  0143    F5                    	push	af
+  0144    3A 081C               	ld	a,(cursor)
+  0147    3D                    	dec	a
+  0148    18 F2                 	jr	cure1
+                                
+  014A                          in:
+  014A    3A 0818               	ld	a,(tasfnd)
+  014D    3D                    	dec	a
+  014E    28 02                 	jr	z,in1
+  0150    A7                    	and	a
+  0151    C9                    	ret
+  0152                          in1:
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-8
+
+
+  0152    E5                    	push	hl
+  0153    3A 081B               	ld	a,(key)
+  0156    E6 3F                 	and	3fh
+  0158    21 0720               	ld	hl,keytab
+  015B    85                    	add	a,l
+  015C    6F                    	ld	l,a
+  015D    7E                    	ld	a,(hl)
+  015E    67                    	ld	h,a
+  015F    3A 081B               	ld	a,(key)
+  0162    6F                    	ld	l,a
+  0163    E6 40                 	and	40h
+  0165    0F                    	rrca
+  0166    0F                    	rrca
+  0167    B4                    	or	h
+  0168    67                    	ld	h,a
+  0169    6F                    	ld	l,a
+  016A    E6 80                 	and	80h
+  016C    B5                    	or	l
+  016D    67                    	ld	h,a
+                                	scal	zsync
+  016E    DF 14           +     	defb	0dfh,zsync	;$
+  0170    AF                    	xor	a
+  0171    32 0818               	ld	(tasfnd),a
+  0174    7C                    	ld	a,h
+  0175    E1                    	pop	hl
+  0176    37                    	scf
+  0177    C9                    	ret
+                                
+  0178                          dison:
+                                
+                                    if mode2
+  0178    F3                    	di
+  0179    21 0878               	ld	hl,inttab
+  017C    7C                    	ld	a,h
+  017D    ED 47                 	ld	i,a
+  017F    7D                    	ld	a,l
+  0180    D3 04                 	out	(ctc),a
+  0182    3E B5                 	ld	a,010110101b
+  0184    D3 07                 	out	(ctc+3),a
+  0186    3E 14                 	ld	a,diszyk
+  0188    D3 07                 	out	(ctc+3),a
+                                    endif ; if mode2
+  018A    ED 5E                 	im	2
+  018C    FB                    	ei
+  018D    C9                    	ret
+                                
+  018E                          disoff:
+  018E    F3                    	di
+  018F    F5                    	push	af
+  0190    D5                    	push	de
+                                    if mode2
+  0191    3E 03                 	ld	a,00000011b	; reset
+  0193    D3 07                 	out	(ctc+3),a
+                                    endif ; if mode2
+  0195    3A 0877               	ld	a,(cnorm)
+  0198    5F                    	ld	e,a
+  0199    F6 07                 	or	sps+zes+les
+  019B    57                    	ld	d,a
+  019C    3E 82                 	ld	a,paout
+  019E    D3 03                 	out	(pio+3),a
+  01A0    7B                    	ld	a,e
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-9
+
+
+  01A1    D3 02                 	out	(pio+2),a
+  01A3    7A                    	ld	a,d
+  01A4    D3 02                 	out	(pio+2),a
+  01A6    7B                    	ld	a,e
+  01A7    D3 02                 	out	(pio+2),a
+  01A9    D1                    	pop	de
+  01AA    F1                    	pop	af
+  01AB    FB                    	ei
+  01AC    C9                    	ret
+                                
+  01AD                          args:
+  01AD    2A 081F               	ld	hl,(arg1)
+  01B0    ED 5B 0821            	ld	de,(arg2)
+  01B4    C9                    	ret
+                                
+  01B5                          sync:
+  01B5    E5                    	push	hl
+  01B6    21 0819               	ld	hl,timeb
+                                    if mode2
+  01B9    7E                    	ld	a,(hl)
+  01BA                          sync1:
+  01BA    BE                    	cp	(hl)
+  01BB    28 FD                 	jr	z,sync1
+                                    endif ; if mode2
+  01BD    7E                    	ld	a,(hl)
+  01BE    E1                    	pop	hl
+  01BF    C9                    	ret
+                                
+  01C0                          tdel:
+  01C0    F5                    	push	af
+  01C1    C5                    	push	bc
+  01C2    AF                    	xor	a
+  01C3    47                    	ld	b,a
+  01C4                          tdel2:
+  01C4    FF                    	rst	rdel
+  01C5    10 FD                 	djnz	tdel2
+  01C7    C1                    	pop	bc
+  01C8    F1                    	pop	af
+  01C9    C9                    	ret
+                                
+  01CA                          ptran:
+  01CA    F5                    	push	af
+  01CB    C5                    	push	bc
+  01CC    E5                    	push	hl
+  01CD    3A 0875               	ld	a,(point)
+  01D0    21 0810               	ld	hl,vdu
+  01D3    06 08                 	ld	b,8
+  01D5                          ptr1:
+  01D5    4E                    	ld	c,(hl)
+  01D6    CB 11                 	rl	c
+  01D8    17                    	rla
+  01D9    CB 19                 	rr	c
+  01DB    71                    	ld	(hl),c
+  01DC    23                    	inc	hl
+  01DD    10 F6                 	djnz	ptr1
+  01DF    E1                    	pop	hl
+  01E0    C1                    	pop	bc
+  01E1    F1                    	pop	af
+  01E2    C9                    	ret
+                                
+  01E3                          argtr:
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-10
+
+
+                                	scal	zhome
+  01E3    DF 10           +     	defb	0dfh,zhome	;$
+  01E5    2A 081F               	ld	hl,(arg1)
+                                	scal	zhex4
+  01E8    DF 03           +     	defb	0dfh,zhex4	;$
+  01EA    3A 0875               	ld	a,(point)
+  01ED    E6 0F                 	and	0fh
+  01EF    FE 03                 	cp	03h
+  01F1    28 06                 	jr	z,argtr1
+  01F3    2A 0821               	ld	hl,(arg2)
+                                	scal	zhex4
+  01F6    DF 03           +     	defb	0dfh,zhex4	;$
+  01F8    C9                    	ret
+  01F9                          argtr1:
+  01F9    EF                    	rst	prs
+  01FA    00 00 88              	defb	0,0,prsend
+  01FD    3A 0821               	ld	a,(arg2)
+                                	scal	zhex2
+  0200    DF 02           +     	defb	0dfh,zhex2	;$
+  0202    C9                    	ret
+                                
+  0203                          argsh:
+  0203    4F                    	ld	c,a
+  0204    3A 0875               	ld	a,(point)
+  0207    E6 0F                 	and	0fh
+  0209    28 09                 	jr	z,argsh1
+  020B    2A 0821               	ld	hl,(arg2)
+                                	rcal	slahl
+  020E    D7 0D           +     	defb	0d7h,slahl-$-1	;$
+  0210    22 0821               	ld	(arg2),hl
+  0213    C9                    	ret
+  0214                          argsh1:
+  0214    2A 081F               	ld	hl,(arg1)
+                                	rcal	slahl
+  0217    D7 04           +     	defb	0d7h,slahl-$-1	;$
+  0219    22 081F               	ld	(arg1),hl
+  021C    C9                    	ret
+                                
+  021D                          slahl:
+  021D    06 04                 	ld	b,4
+  021F                          slahl1:
+  021F    CB 25                 	sla	l
+  0221    CB 14                 	rl	h
+  0223    10 FA                 	djnz	slahl1
+  0225    79                    	ld	a,c
+  0226    E6 0F                 	and	0fh
+  0228    B5                    	or	l
+  0229    6F                    	ld	l,a
+  022A    C9                    	ret
+                                
+  022B                          disr:
+  022B    FE 10                 	cp	10h
+  022D    28 19                 	jr	z,disr1
+                                	rcal	memreg
+  022F    D7 61           +     	defb	0d7h,memreg-$-1	;$
+  0231                          disr2:
+  0231    5E                    	ld	e,(hl)
+  0232    23                    	inc	hl
+  0233    56                    	ld	d,(hl)
+  0234    62                    	ld	h,d
+  0235    6B                    	ld	l,e
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-11
+
+
+  0236    22 081F               	ld	(arg1),hl
+  0239    5E                    	ld	e,(hl)
+  023A    23                    	inc	hl
+  023B    56                    	ld	d,(hl)
+  023C    ED 53 0821            	ld	(arg2),de
+  0240                          chleft:
+  0240    3E F0                 	ld	a,0f0h
+  0242                          ptret:
+  0242    32 0875               	ld	(point),a
+  0245    C3 03F3               	jp	dis
+  0248                          disr1:
+                                	rcal	regswp
+  0248    D7 14           +     	defb	0d7h,regswp-$-1	;$
+  024A    C9                    	ret
+                                
+  024B                          switch:
+  024B    3A 0875               	ld	a,(point)
+  024E    E6 0F                 	and	0fh
+  0250    28 08                 	jr	z,swtch1
+  0252    18 EC                 	jr	chleft
+  0254                          swtch2:
+  0254    32 0875               	ld	(point),a
+  0257    C3 03F3               	jp	dis
+  025A                          swtch1:
+  025A    3E 0F                 	ld	a,0fh
+  025C    18 E4                 	jr	ptret
+                                
+  025E                          regswp:
+  025E    F3                    	di
+  025F    ED 73 082A            	ld	(sptemp),sp
+  0263    31 0863               	ld	sp,stack
+  0266    F1                    	pop	af
+  0267    DD E1                 	pop	ix
+  0269    FD E1                 	pop	iy
+  026B    C1                    	pop	bc
+  026C    D1                    	pop	de
+  026D    E1                    	pop	hl
+  026E    D9                    	exx
+  026F    08                    	EX	AF,AF'
+  0270    E5                    	push	hl
+  0271    D5                    	push	de
+  0272    C5                    	push	bc
+  0273    FD E5                 	push	iy
+  0275    DD E5                 	push	ix
+  0277    F5                    	push	af
+  0278    ED 7B 082A            	ld	sp,(sptemp)
+  027C    FB                    	ei
+  027D    3A 082C               	ld	a,(conflg)
+  0280    EE 04                 	xor	00000100b
+  0282    32 082C               	ld	(conflg),a
+  0285    E6 04                 	and	00000100b
+  0287    47                    	ld	b,a
+  0288    3A 081A               	ld	a,(led)
+  028B    E6 FB                 	and	11111011b
+  028D    B0                    	or	b
+  028E    32 081A               	ld	(led),a
+  0291    C9                    	ret
+                                
+  0292                          memreg:
+  0292    21 0841               	ld	hl,raf-(11h*2)
+  0295    87                    	add	a,a
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-12
+
+
+  0296    5F                    	ld	e,a
+  0297    16 00                 	ld	d,0
+  0299    19                    	add	hl,de
+  029A    C9                    	ret
+                                
+  029B                          set:
+  029B    DD CB DA DE           	set	3,(ix+led-sysram)
+  029F    CF                    	rst	rin
+  02A0    DD CB DA 9E           	res	3,(ix+led-sysram)
+  02A4    F6 10                 	or	00010000b	; Shift ignorieren
+  02A6    FE 11                 	cp	11h
+  02A8    D8                    	ret	c
+  02A9    FE 19                 	cp	19h
+  02AB    D0                    	ret	nc
+                                	rcal	memreg
+  02AC    D7 E4           +     	defb	0d7h,memreg-$-1	;$
+  02AE    ED 5B 081F            	ld	de,(arg1)
+  02B2    73                    	ld	(hl),e
+  02B3    23                    	inc	hl
+  02B4    72                    	ld	(hl),d
+  02B5    2B                    	dec	hl
+  02B6    C3 0231               	jp	disr2
+                                
+  02B9                          err99:
+  02B9    3E 99                 	ld	a,99h
+  02BB                          errm:
+                                	scal	zhome
+  02BB    DF 10           +     	defb	0dfh,zhome	;$
+  02BD    EF                    	rst	prs
+  02BE    79 50 50 5C           	defb	79h,50h,50h,5ch,50h,00h	; Error
+  02C2    50 00                 
+  02C4    88                    	defb	prsend
+                                	scal	zhex2
+  02C5    DF 02           +     	defb	0dfh,zhex2	;$
+  02C7    C9                    	ret
+                                
+  02C8                          home:
+  02C8    F5                    	push	af
+  02C9    AF                    	xor	a
+  02CA    32 081C               	ld	(cursor),a
+  02CD    F1                    	pop	af
+  02CE    C9                    	ret
+                                
+  02CF                          clear:
+                                	scal	zhome
+  02CF    DF 10           +     	defb	0dfh,zhome	;$
+  02D1    EF                    	rst	prs	
+  02D2    00 00 00 00           	defb	0,0,0,0,0,0,0,0,prsend
+  02D6    00 00 00 00           
+  02DA    88                    
+  02DB    C9                    	ret
+                                
+  02DC                          iscan:
+  02DC    F5                    	push	af
+  02DD    D5                    	push	de
+  02DE    E5                    	push	hl
+  02DF    DD E5                 	push	ix
+  02E1    DD 21 0840            	ld	ix,sysram
+  02E5    21 0800               	ld	hl,scavdu
+  02E8    DD 5E 37              	ld	e,(ix+cnorm-sysram)
+  02EB    3E 82                 	ld	a,paout
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-13
+
+
+  02ED    D3 03                 	out	(pio+3),a
+  02EF    7B                    	ld	a,e
+  02F0    D3 02                 	out	(pio+2),a
+  02F2    3A 0819               	ld	a,(timeb)
+  02F5    85                    	add	a,l
+  02F6    6F                    	ld	l,a
+  02F7    AF                    	xor	a
+  02F8    D3 00                 	out	(pio),a
+  02FA    7B                    	ld	a,e
+  02FB    F6 01                 	or	sps
+  02FD    57                    	ld	d,a
+  02FE    D3 02                 	out	(pio+2),a
+  0300    7B                    	ld	a,e
+  0301    D3 02                 	out	(pio+2),a
+  0303    7E                    	ld	a,(hl)
+  0304    D3 00                 	out	(pio),a
+  0306    7B                    	ld	a,e
+  0307    F6 04                 	or	zes
+  0309    D3 02                 	out	(pio+2),a
+  030B    7B                    	ld	a,e
+  030C    D3 02                 	out	(pio+2),a
+  030E    3A 0876               	ld	a,(timed)
+  0311    D3 00                 	out	(pio),a
+  0313    7A                    	ld	a,d
+  0314    D3 02                 	out	(pio+2),a
+  0316    7B                    	ld	a,e
+  0317    3E 08                 	ld	a,tast-scavdu
+  0319    85                    	add	a,l
+  031A    6F                    	ld	l,a
+  031B    7B                    	ld	a,e
+  031C    E6 EF                 	and	0ffh-tai
+  031E    57                    	ld	d,a
+  031F    3E 92                 	ld	a,pain
+  0321    D3 03                 	out	(pio+3),a
+  0323    7A                    	ld	a,d
+  0324    D3 02                 	out	(pio+2),a
+  0326    DB 00                 	in	a,(pio)
+  0328    57                    	ld	d,a
+  0329    3E 82                 	ld	a,paout
+  032B    D3 03                 	out	(pio+3),a
+  032D    7B                    	ld	a,e
+  032E    D3 02                 	out	(pio+2),a
+  0330    7A                    	ld	a,d
+  0331    2F                    	cpl
+  0332    B6                    	or	(hl)
+  0333    72                    	ld	(hl),d
+  0334    2F                    	cpl
+  0335    B7                    	or	a
+  0336    28 26                 	jr	z,isca2
+  0338    57                    	ld	d,a
+  0339    3A 0818               	ld	a,(tasfnd)
+  033C    B7                    	or	a
+  033D    20 1F                 	jr	nz,isca2
+  033F    7A                    	ld	a,d
+  0340    16 FF                 	ld	d,-1
+  0342                          isca1:
+  0342    14                    	inc	d
+  0343    1F                    	rra
+  0344    30 FC                 	jr	nc,isca1
+  0346    3A 0819               	ld	a,(timeb)
+  0349    07                    	rlca
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-14
+
+
+  034A    07                    	rlca
+  034B    07                    	rlca
+  034C    E6 38                 	and	38h
+  034E    B2                    	or	d
+  034F    FE 05                 	cp	shift
+  0351    28 0B                 	jr	z,isca2
+  0353    FE 3F                 	cp	ctrl
+  0355    28 07                 	jr	z,isca2
+  0357    32 081B               	ld	(key),a
+  035A    DD 36 D8 02           	ld	(ix+tasfnd-sysram),02h
+  035E                          isca2:
+  035E    DD 34 D9              	inc	(ix+timeb-sysram)
+  0361    DD CB 36 06           	rlc	(ix+timed-sysram)
+  0365    30 36                 	jr	nc,isca6
+  0367    DD 36 D9 00           	ld	(ix+timeb-sysram),0
+  036B    DD 36 36 01           	ld	(ix+timed-sysram),1
+  036F    3A 081A               	ld	a,(led)
+  0372    D3 00                 	out	(pio),a
+  0374    7B                    	ld	a,e
+  0375    F6 02                 	or	les
+  0377    D3 02                 	out	(pio+2),a
+  0379    7B                    	ld	a,e
+  037A    D3 02                 	out	(pio+2),a
+  037C    3A 0818               	ld	a,(tasfnd)
+  037F    FE 02                 	cp	02h
+  0381    20 1A                 	jr	nz,isca6
+  0383    3A 0808               	ld	a,(tabsft)
+  0386    E6 20                 	and	bshift
+  0388    28 04                 	jr	z,isca4
+  038A    DD CB DB F6           	set	6,(ix+key-sysram)
+  038E                          isca4:
+  038E    3A 080F               	ld	a,(tabctr)
+  0391    E6 80                 	and	bctrl
+  0393    28 04                 	jr	z,isca5
+  0395    DD CB DB FE           	set	7,(ix+key-sysram)
+  0399                          isca5:
+  0399    DD 36 D8 01           	ld	(ix+tasfnd-sysram),01h
+  039D                          isca6:
+  039D    DD E1                 	pop	ix
+  039F    E1                    	pop	hl
+  03A0    D1                    	pop	de
+  03A1    F1                    	pop	af
+  03A2    FB                    	ei
+  03A3    ED 4D                 	reti
+                                
+  03A5                          rela:
+  03A5    23                    	inc	hl
+  03A6    EB                    	ex	de,hl
+  03A7    A7                    	and	a
+  03A8    ED 52                 	sbc	hl,de
+  03AA    7D                    	ld	a,l
+  03AB    17                    	rla
+  03AC    7C                    	ld	a,h
+  03AD    CE 00                 	adc	a,0
+  03AF    28 05                 	jr	z,rela1
+  03B1    3E 01                 	ld	a,01h
+                                	scal	zerrm
+  03B3    DF 0F           +     	defb	0dfh,zerrm	;$
+  03B5    C9                    	ret
+  03B6                          rela1:
+  03B6    E5                    	push	hl
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-15
+
+
+                                	rcal	lmem
+  03B7    D7 08           +     	defb	0d7h,lmem-$-1	;$
+  03B9    E1                    	pop	hl
+  03BA    26 00                 	ld	h,0
+  03BC    22 0821               	ld	(arg2),hl
+  03BF    18 32                 	jr	dis
+                                
+  03C1                          lmem:
+                                	scal	zargs
+  03C1    DF 13           +     	defb	0dfh,zargs	;$
+  03C3                          mem:
+  03C3    3E 03                 	ld	a,03h
+  03C5    54                    	ld	d,h
+  03C6    5D                    	ld	e,l
+  03C7    2A 0826               	ld	hl,(brkadr)
+  03CA    A7                    	and	a
+  03CB    ED 52                 	sbc	hl,de
+  03CD    20 02                 	jr	nz,mem1
+  03CF    F6 80                 	or	80h
+  03D1                          mem1:
+  03D1    32 0875               	ld	(point),a
+  03D4    6F                    	ld	l,a
+  03D5    1A                    	ld	a,(de)
+  03D6    32 0829               	ld	(argc),a
+  03D9    2F                    	cpl
+  03DA    12                    	ld	(de),a
+  03DB    1A                    	ld	a,(de)
+  03DC    2F                    	cpl
+  03DD    67                    	ld	h,a
+  03DE    3A 0829               	ld	a,(argc)
+  03E1    12                    	ld	(de),a
+  03E2    BC                    	cp	h
+  03E3    28 06                 	jr	z,mem2
+  03E5    7D                    	ld	a,l
+  03E6    F6 10                 	or	10h
+  03E8    32 0875               	ld	(point),a
+  03EB                          mem2:
+  03EB    1A                    	ld	a,(de)
+  03EC    5F                    	ld	e,a
+  03ED    16 00                 	ld	d,0
+  03EF    ED 53 0821            	ld	(arg2),de
+  03F3                          dis:
+                                	scal	zargtr
+  03F3    DF 0C           +     	defb	0dfh,zargtr	;$
+                                	scal	zptran
+  03F5    DF 0A           +     	defb	0dfh,zptran	;$
+  03F7    C9                    	ret
+                                
+  03F8                          swap:
+  03F8    22 0821               	ld	(arg2),hl
+  03FB    ED 53 081F            	ld	(arg1),de
+  03FF                          full:
+                                	scal	zswitch
+  03FF    DF 23           +     	defb	0dfh,zswitch	;$
+                                	scal	zswitch
+  0401    DF 23           +     	defb	0dfh,zswitch	;$
+  0403    18 EE                 	jr	dis
+                                
+  0405                          plus:
+                                	rcal	mset
+  0405    D7 10           +     	defb	0d7h,mset-$-1	;$
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-16
+
+
+  0407    73                    	ld	(hl),e
+  0408    23                    	inc	hl
+  0409    22 081F               	ld	(arg1),hl
+  040C    18 B5                 	jr	mem
+                                
+  040E                          minus:
+                                	rcal	mset
+  040E    D7 07           +     	defb	0d7h,mset-$-1	;$
+  0410    73                    	ld	(hl),e
+  0411    2B                    	dec	hl
+  0412    22 081F               	ld	(arg1),hl
+  0415    18 AC                 	jr	mem
+                                
+  0417                          mset:
+  0417    3A 0875               	ld	a,(point)
+  041A    E6 0F                 	and	0fh
+  041C    FE 03                 	cp	03h
+  041E    C8                    	ret	z
+  041F    C3 03C3               	jp	mem
+                                
+  0422                          spc:
+  0422    22 0873               	ld	(rpc),hl
+  0425                          pc:
+  0425    2A 0873               	ld	hl,(rpc)
+  0428    22 081F               	ld	(arg1),hl
+  042B    C3 03C3               	jp	mem
+                                
+  042E                          go:
+  042E    21 082C               	ld	hl,conflg
+  0431    CB FE                 	set	7,(hl)
+  0433                          step:
+  0433    F3                    	di
+  0434    31 0863               	ld	sp,stack
+  0437    21 C9FB               	ld	hl,0c9fbh	; ei ! ret
+  043A    3A 0872               	ld	a,(riff)
+  043D    CB 47                 	bit	0,a
+  043F    20 03                 	jr	nz,step1
+  0441    21 C9F3               	ld	hl,0c9f3h	; di ! ret
+  0444                          step1:
+  0444    22 0824               	ld	(temp),hl
+  0447    3A 082C               	ld	a,(conflg)
+  044A    CB 57                 	bit	2,a
+  044C    28 08                 	jr	z,step2
+  044E    CB CF                 	set	1,a
+  0450    32 082C               	ld	(conflg),a
+                                	scal	zregswp
+  0453    DF 16           +     	defb	0dfh,zregswp	;$
+  0455    F3                    	di
+  0456                          step2:
+  0456    3A 0871               	ld	a,(ri)
+  0459    ED 47                 	ld	i,a
+  045B    3A 0877               	ld	a,(cnorm)
+  045E    E6 7F                 	and	0ffh-brk
+  0460    47                    	ld	b,a
+  0461    0E 02                 	ld	c,pio+2
+  0463    F1                    	pop	af
+  0464    DD E1                 	pop	ix
+  0466    FD E1                 	pop	iy
+  0468    E1                    	pop	hl		; eigentlich bc
+  0469    D1                    	pop	de
+  046A    E1                    	pop	hl
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-17
+
+
+  046B    ED 7B 086F            	ld	sp,(rsp)
+  046F    2A 0873               	ld	hl,(rpc)
+  0472    E5                    	push	hl
+  0473    ED 41                 	out	(c),b
+  0475    ED 4B 0869            	ld	bc,(rbc)	; 1.+2.M1
+  0479    2A 086D               	ld	hl,(rhl)	;    3.M1
+  047C    C9                    	ret			;    4.M1
+                                ;				     5.M1 --> nmi
+                                
+  047D                          trap:
+  047D    F5                    	push	af
+  047E    3A 0877               	ld	a,(cnorm)
+  0481    F6 80                 	or	brk
+  0483    D3 02                 	out	(pio+2),a
+  0485    3A 082C               	ld	a,(conflg)
+  0488    CB 7F                 	bit	7,a
+  048A    28 0F                 	jr	z,trap1
+  048C    CB BF                 	res	7,a
+  048E    32 082C               	ld	(conflg),a
+  0491    E5                    	push	hl
+                                	scal	zbrsto
+  0492    DF 17           +     	defb	0dfh,zbrsto	;$
+  0494    36 E7                 	ld	(hl),0e7h	; Breakpoint
+  0496    E1                    	pop	hl
+  0497    F1                    	pop	af
+  0498    C3 0824               	jp	temp		; iff1 setzen/ruecksetzen
+                                
+  049B                          trap1:
+  049B    F1                    	pop	af
+  049C    22 086D               	ld	(rhl),hl
+  049F    E1                    	pop	hl
+  04A0    22 081F               	ld	(arg1),hl
+  04A3    22 0873               	ld	(rpc),hl
+  04A6    ED 73 086F            	ld	(rsp),sp
+  04AA    2A 086D               	ld	hl,(rhl)
+  04AD    31 086F               	ld	sp,initr
+  04B0    E5                    	push	hl
+  04B1    D5                    	push	de
+  04B2    C5                    	push	bc
+  04B3    FD E5                 	push	iy
+  04B5    DD E5                 	push	ix
+  04B7    F5                    	push	af
+  04B8    ED 57                 	ld	a,i
+  04BA    32 0871               	ld	(ri),a
+  04BD    3A 0872               	ld	a,(riff)
+  04C0    CB 87                 	res	0,a
+  04C2    EA 04C7               	jp	pe,trap2
+  04C5    CB C7                 	set	0,a
+  04C7                          trap2:
+  04C7    32 0872               	ld	(riff),a
+  04CA    3A 082C               	ld	a,(conflg)
+  04CD    CB 4F                 	bit	1,a
+  04CF    28 07                 	jr	z,trap3
+  04D1    CB 8F                 	res	1,a
+  04D3    32 082C               	ld	(conflg),a
+                                	scal	zregswp
+  04D6    DF 16           +     	defb	0dfh,zregswp	;$
+  04D8                          trap3:
+                                	scal	zbrres
+  04D8    DF 18           +     	defb	0dfh,zbrres	;$
+  04DA    CD 03C1               	call	lmem
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-18
+
+
+  04DD    C3 00CA               	jp	strtd
+                                
+  04E0                          cbpt:
+  04E0    21 0000               	ld	hl,0
+  04E3    22 0826               	ld	(brkadr),hl
+  04E6    C3 03C1               	jp	lmem
+  04E9                          sbpt:
+  04E9    22 0826               	ld	(brkadr),hl
+  04EC                          bpt:
+  04EC    2A 0826               	ld	hl,(brkadr)
+  04EF    22 081F               	ld	(arg1),hl
+  04F2    C3 03C3               	jp	mem
+                                
+  04F5                          insert:
+                                	rcal	segchk
+  04F5    D7 18           +     	defb	0d7h,segchk-$-1	;$
+  04F7    C0                    	ret	nz		; error
+  04F8    21 0BFE               	ld	hl,segment-2
+  04FB    54                    	ld	d,h
+  04FC    5D                    	ld	e,l
+  04FD    13                    	inc	de
+  04FE    ED B8                 	lddr
+  0500                          hlmem:
+  0500    AF                    	xor	a
+  0501    12                    	ld	(de),a
+  0502    C3 03C1               	jp	lmem
+                                
+  0505                          delete:
+                                	rcal	segchk
+  0505    D7 08           +     	defb	0d7h,segchk-$-1	;$
+  0507    C0                    	ret	nz		; error
+  0508    62                    	ld	h,d
+  0509    6B                    	ld	l,e
+  050A    23                    	inc	hl
+  050B    ED B0                 	ldir
+  050D    18 F1                 	jr	hlmem
+                                
+  050F                          segchk:
+  050F    3A 0875               	ld	a,(point)
+  0512    E6 0F                 	and	0fh
+  0514    FE 03                 	cp	03h
+  0516    28 05                 	jr	z,segc1
+  0518                          err02:
+  0518    3E 02                 	ld	a,02h
+                                	scal	zerrm
+  051A    DF 0F           +     	defb	0dfh,zerrm	;$
+  051C    C9                    	ret
+                                
+  051D                          segc1:
+  051D    11 0880               	ld	de,inite
+  0520    A7                    	and	a
+  0521    ED 52                 	sbc	hl,de
+  0523    38 19                 	jr	c,segerr
+  0525    2A 081F               	ld	hl,(arg1)
+  0528    11 0BFF               	ld	de,segment-1
+  052B    A7                    	and	a
+  052C    ED 52                 	sbc	hl,de
+  052E    30 0E                 	jr	nc,segerr
+  0530    ED 5B 081F            	ld	de,(arg1)
+  0534    21 0BFF               	ld	hl,segment-1
+  0537    A7                    	and	a		; clear cy
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-19
+
+
+  0538    ED 52                 	sbc	hl,de
+  053A    44                    	ld	b,h
+  053B    4D                    	ld	c,l
+  053C    AF                    	xor	a		; z=0
+  053D    C9                    	ret
+  053E                          segerr:
+  053E    3E 05                 	ld	a,05
+                                	scal	zerrm
+  0540    DF 0F           +     	defb	0dfh,zerrm	;$
+  0542    B7                    	or	a		; z=1
+  0543    C9                    	ret
+                                
+                                    if cass
+  0544                          load:
+                                	scal	zdisoff
+  0544    DF 12           +     	defb	0dfh,zdisoff	;$
+  0546    DD 36 ED 00           	ld	(ix+lcount-sysram),0
+  054A    3E 92                 	ld	a,cledoff+les
+  054C    D3 02                 	out	(pio+2),a
+  054E                          load0:
+  054E    2E FF                 	ld	l,255
+  0550                          load1:
+  0550    CD 05F3               	call	period
+  0553    20 F9                 	jr	nz,load0
+  0555    38 F7                 	jr	c,load0
+  0557    2D                    	dec	l
+  0558    20 F6                 	jr	nz,load1
+  055A                          load2:
+  055A    CD 05F3               	call	period
+  055D    30 FB                 	jr	nc,load2
+  055F    21 081D               	ld	hl,aufz
+  0562    01 0007               	ld	bc,7
+  0565    CD 0594               	call	tin
+  0568    20 E4                 	jr	nz,load0
+  056A    2A 081F               	ld	hl,(arg1)
+  056D    ED 4B 0821            	ld	bc,(arg2)
+  0571    CD 0594               	call	tin
+  0574    F5                    	push	af
+  0575    3E F0                 	ld	a,0f0h
+  0577    32 0875               	ld	(point),a
+                                	scal	zdison
+  057A    DF 07           +     	defb	0dfh,zdison	;$
+  057C    F1                    	pop	af
+  057D    20 0C                 	jr	nz,lerr1
+                                	rcal	sumcal
+  057F    D7 64           +     	defb	0d7h,sumcal-$-1	;$
+  0581    67                    	ld	h,a
+  0582    3A 0823               	ld	a,(chsum)
+  0585    BC                    	cp	h
+  0586    20 07                 	jr	nz,lerr2
+  0588    C3 03F3               	jp	dis
+  058B                          lerr1:
+  058B    3E 10                 	ld	a,10h
+  058D    18 02                 	jr	lerrj
+  058F                          lerr2:
+  058F    3E 11                 	ld	a,11h
+  0591                          lerrj:
+                                	scal	zerrm
+  0591    DF 0F           +     	defb	0dfh,zerrm	;$
+  0593    C9                    	ret
+                                
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-20
+
+
+  0594                          tin:
+  0594    DD CB EC 9E           	res	3,(ix+conflg-sysram)	; kein error
+  0598                          tin1:
+  0598    CD 05A6               	call	getbyte
+  059B    73                    	ld	(hl),e
+  059C    ED A1                 	cpi
+  059E    EA 0598               	jp	pe,tin1
+  05A1    DD CB EC 5E           	bit	3,(ix+conflg-sysram)
+  05A5    C9                    	ret
+                                
+  05A6                          getbyte:
+  05A6    C5                    	push	bc
+  05A7    E5                    	push	hl
+  05A8    CD 05C8               	call	getbit
+  05AB    16 08                 	ld	d,8
+  05AD                          gbyte1:
+  05AD    CD 05C8               	call	getbit
+  05B0    CB 1B                 	rr	e
+  05B2    15                    	dec	d
+  05B3    20 F8                 	jr	nz,gbyte1
+  05B5    DD 34 ED              	inc	(ix+lcount-sysram)
+  05B8    3A 082D               	ld	a,(lcount)
+  05BB    E6 08                 	and	00001000b
+  05BD    0F                    	rrca
+  05BE    0F                    	rrca
+  05BF    0F                    	rrca
+  05C0    D3 00                 	out	(pio),a
+  05C2    CD 05C8               	call	getbit
+  05C5    E1                    	pop	hl
+  05C6    C1                    	pop	bc
+  05C7    C9                    	ret
+                                
+  05C8                          getbit:
+  05C8    21 0000               	ld	hl,0
+  05CB                          gbit1:
+  05CB    CD 05F3               	call	period
+  05CE    20 10                 	jr	nz,gbit3
+  05D0    38 06                 	jr	c,gbit2
+  05D2    2D                    	dec	l
+  05D3    2D                    	dec	l
+  05D4    CB C4                 	set	0,h
+  05D6    18 F3                 	jr	gbit1
+  05D8                          gbit2:
+  05D8    2C                    	inc	l
+  05D9    CB 44                 	bit	0,h
+  05DB    28 EE                 	jr	z,gbit1
+  05DD    CB 15                 	rl	l
+  05DF    C9                    	ret
+  05E0                          gbit3:
+  05E0    DD CB EC DE           	set	3,(ix+conflg-sysram)	; Lesefehler
+  05E4    C9                    	ret
+                                
+  05E5                          sumcal:
+  05E5    2A 081F               	ld	hl,(arg1)
+  05E8    ED 4B 0821            	ld	bc,(arg2)
+  05EC    AF                    	xor	a
+  05ED                          sumc1:
+  05ED    86                    	add	a,(hl)
+  05EE    ED A1                 	cpi
+  05F0    E0                    	ret	po
+  05F1    18 FA                 	jr	sumc1
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-21
+
+
+                                
+  05F3                          period:
+  05F3    01 0000               	ld	bc,0
+  05F6                          per1:
+  05F6    DB 08                 	in	a,(j18)
+  05F8    03                    	inc	bc
+  05F9    1F                    	rra			; Bit 0 ist EAR
+  05FA    38 FA                 	jr	c,per1
+  05FC    3E 98                 	ld	a,98h
+  05FE    ED 5F                 	ld	a,r		; out	(pio+2),a
+  0600                          per2:
+  0600    DB 08                 	in	a,(j18)
+  0602    03                    	inc	bc
+  0603    1F                    	rra
+  0604    30 FA                 	jr	nc,per2
+  0606    3E 90                 	ld	a,90h
+  0608    ED 5F                 	ld	a,r		; out	(pio+2),a
+  060A    79                    	ld	a,c
+  060B    FE 2A                 	cp	mperiod
+  060D    04                    	inc	b
+  060E    05                    	dec	b
+  060F    C9                    	ret
+                                
+  0610                          save:
+                                	rcal	blockneg
+  0610    D7 71           +     	defb	0d7h,blockneg-$-1	;$
+  0612    23                    	inc	hl		; bis einschliesslich
+  0613    22 0821               	ld	(arg2),hl
+                                	rcal	sumcal
+  0616    D7 CD           +     	defb	0d7h,sumcal-$-1	;$
+  0618    32 0823               	ld	(chsum),a
+                                	scal	zdisoff
+  061B    DF 12           +     	defb	0dfh,zdisoff	;$
+                                	scal	ztdel
+  061D    DF 08           +     	defb	0dfh,ztdel	;$
+  061F    1E 27                 	ld	e,10000/256
+  0621    2E 00                 	ld	l,0		; 256
+  0623                          savel1:
+  0623    CD 0693               	call	tone1k
+  0626    1D                    	dec	e
+  0627    20 FA                 	jr	nz,savel1
+  0629    21 081D               	ld	hl,aufz
+  062C    01 0007               	ld	bc,7
+  062F    CD 064D               	call	tout
+  0632    2E 00                 	ld	l,0		; 256
+  0634    CD 0697               	call	tone2k
+  0637    2A 081F               	ld	hl,(arg1)
+  063A    ED 4B 0821            	ld	bc,(arg2)
+  063E    CD 064D               	call	tout
+  0641    2E 00                 	ld	l,0		; 256
+  0643    CD 0697               	call	tone2k
+                                	scal	ztdel
+  0646    DF 08           +     	defb	0dfh,ztdel	;$
+                                	scal	zdison
+  0648    DF 07           +     	defb	0dfh,zdison	;$
+  064A    C3 03F3               	jp	dis
+                                
+  064D                          tout:
+  064D    5E                    	ld	e,(hl)
+  064E    CD 0656               	call	outbyte
+  0651    ED A1                 	cpi
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-22
+
+
+  0653    E0                    	ret	po
+  0654    18 F7                 	jr	tout
+                                
+  0656                          outbyte:
+  0656    C5                    	push	bc
+  0657    E5                    	push	hl
+  0658    16 08                 	ld	d,8
+  065A    B7                    	or	a
+  065B    CD 066D               	call	outbit
+  065E                          obyte1:
+  065E    CB 1B                 	rr	e
+  0660    CD 066D               	call	outbit
+  0663    15                    	dec	d
+  0664    20 F8                 	jr	nz,obyte1
+  0666    37                    	scf
+  0667    CD 066D               	call	outbit
+  066A    E1                    	pop	hl
+  066B    C1                    	pop	bc
+  066C    C9                    	ret
+                                
+  066D                          outbit:
+  066D    38 09                 	jr	c,obit1
+  066F                          obit0:
+  066F    2E 08                 	ld	l,zero2k*2
+  0671    CD 0697               	call	tone2k
+  0674    2E 02                 	ld	l,zero1k*2
+  0676    18 07                 	jr	obit3
+  0678                          obit1:
+  0678    2E 04                 	ld	l,one2k*2
+  067A    CD 0697               	call	tone2k
+  067D    2E 04                 	ld	l,one1k*2
+  067F                          obit3:
+  067F    CD 0693               	call	tone1k
+  0682    C9                    	ret
+                                
+  0683                          blockneg:
+  0683    3E F0                 	ld	a,0f0h
+  0685    32 0875               	ld	(point),a
+  0688    EB                    	ex	de,hl
+  0689    A7                    	and	a		; clear cy
+  068A    ED 52                 	sbc	hl,de
+  068C    D0                    	ret	nc
+  068D    E1                    	pop	hl		; ret-adresse weg
+  068E    3E 07                 	ld	a,07h		; block negativ
+  0690    C3 02BB               	jp	errm
+                                
+  0693                          tone1k:
+  0693    26 41                 	ld	h,f1khz
+  0695    18 02                 	jr	tone
+  0697                          tone2k:
+  0697    26 1F                 	ld	h,f2khz
+  0699                          tone:
+  0699    3A 0877               	ld	a,(cnorm)
+  069C                          tone1:
+  069C    D3 02                 	out	(pio+2),a
+  069E    44                    	ld	b,h
+  069F                          tonel:
+  069F    10 FE                 	djnz	tonel
+  06A1    EE 08                 	xor	mic
+  06A3    2D                    	dec	l
+  06A4    20 F6                 	jr	nz,tone1
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-23
+
+
+  06A6    C9                    	ret
+                                    else ; if cass
+                                load:
+                                save:
+                                	ret
+                                    endif ; if cass
+                                
+  06A7                          move:
+                                    if not test
+                                	rcal	blockneg
+  06A7    D7 DA           +     	defb	0d7h,blockneg-$-1	;$
+                                	scal	zargs
+  06A9    DF 13           +     	defb	0dfh,zargs	;$
+  06AB    D5                    	push	de		; arg2
+  06AC    E5                    	push	hl		; arg1
+  06AD    DD CB DA CE           	set	1,(ix+led-sysram)
+                                	scal	zargin
+  06B1    DF 2B           +     	defb	0dfh,zargin	;$
+  06B3    DD CB DA 8E           	res	1,(ix+led-sysram)
+  06B7    D1                    	pop	de		; arg1 = blockanfang
+  06B8    E1                    	pop	hl		; arg2 = blockende
+  06B9    FE 2A                 	cp	2ah		; plus
+  06BB    20 11                 	jr	nz,move5	; sonst ignorieren
+  06BD    A7                    	and	a		; clear cy
+  06BE    ED 52                 	sbc	hl,de
+  06C0    23                    	inc	hl		; bis einschliesslich
+  06C1    44                    	ld	b,h
+  06C2    4D                    	ld	c,l
+  06C3    62                    	ld	h,d
+  06C4    6B                    	ld	l,e
+  06C5    ED 5B 081F            	ld	de,(arg1)	; dest
+  06C9    22 0821               	ld	(arg2),hl
+                                	scal	zimove
+  06CC    DF 15           +     	defb	0dfh,zimove	;$
+  06CE                          move5:
+  06CE    18 1E                 	jr	calc1
+                                
+  06D0                          imove:
+  06D0    B7                    	or	a
+  06D1    ED 52                 	sbc	hl,de
+  06D3    19                    	add	hl,de
+  06D4    30 09                 	jr	nc,imove4
+  06D6    0B                    	dec	bc
+  06D7    EB                    	ex	de,hl
+  06D8    09                    	add	hl,bc
+  06D9    EB                    	ex	de,hl
+  06DA    09                    	add	hl,bc
+  06DB    03                    	inc	bc
+  06DC    ED B8                 	lddr
+  06DE    C9                    	ret
+  06DF                          imove4:
+  06DF    ED B0                 	ldir
+  06E1    C9                    	ret
+                                    else ; if not test
+                                imove:
+                                	ret
+                                    endif ; if not test
+                                
+  06E2                          calc:
+                                    if not test
+  06E2    E5                    	push	hl
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-24
+
+
+  06E3    19                    	add	hl,de
+  06E4    22 081F               	ld	(arg1),hl	; summe
+  06E7    E1                    	pop	hl
+  06E8    A7                    	and	a		; clear cy
+  06E9    ED 52                 	sbc	hl,de
+  06EB    22 0821               	ld	(arg2),hl	; differenz
+  06EE                          calc1:
+  06EE    C3 03FF               	jp	full
+                                    else ; if not test
+                                	ret
+                                calc1:
+                                	jp	full
+                                    endif ; if not test
+                                
+  06F1                          flags:
+                                	scal	zhome
+  06F1    DF 10           +     	defb	0dfh,zhome	;$
+  06F3    06 08                 	ld	b,8
+  06F5    3A 0863               	ld	a,(raf)
+  06F8    4F                    	ld	c,a
+  06F9    21 0781               	ld	hl,flgstr
+  06FC                          flags1:
+  06FC    3E 40                 	ld	a,40h		; -
+  06FE    CB 01                 	rlc	c
+  0700    30 01                 	jr	nc,flags2
+  0702    7E                    	ld	a,(hl)
+  0703                          flags2:
+  0703    F7                    	rst	rout
+  0704    23                    	inc	hl
+  0705    10 F5                 	djnz	flags1
+  0707    3E F0                 	ld	a,0f0h
+  0709    32 0875               	ld	(point),a
+  070C    C9                    	ret
+                                
+  070D                          search:
+  070D    7B                    	ld	a,e
+  070E    01 0000               	ld	bc,0
+  0711    23                    	inc	hl
+  0712    ED B1                 	cpir
+  0714    2B                    	dec	hl
+  0715    22 081F               	ld	(arg1),hl
+  0718    C3 03C3               	jp	mem
+                                
+                                    if2
+                                      if $ ge romtop-0e0h
+                                	.printx	'Sorry, leider zu viel Code'
+                                      endif
+                                    endif ; if2
+                                
+                                
+                                	org	romtop-0e0h
+  0720                          keytab:
+                                
+                                ;	col:      0    1    2    3    4    5    6    7
+                                ;							  row
+  0720    0D 0E 0F 00           	defb	00dh,00eh,00fh,000h,02ah,02bh,02dh,02ch	;  0
+  0724    2A 2B 2D 2C           
+  0728    0C 03 02 01           	defb	00ch,003h,002h,001h,029h,028h,02fh,02eh ;  1
+  072C    29 28 2F 2E           
+  0730    0B 06 05 04           	defb	00bh,006h,005h,004h,027h,026h,041h,040h ;  2
+  0734    27 26 41 40           
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-25
+
+
+  0738    0A 09 08 07           	defb	00ah,009h,008h,007h,025h,024h,043h,042h ;  3
+  073C    25 24 43 42           
+  0740    23 22 21 20           	defb	023h,022h,021h,020h,047h,046h,045h,044h ;  4
+  0744    47 46 45 44           
+  0748    4F 4E 4D 4C           	defb	04fh,04eh,04dh,04ch,04bh,04ah,049h,048h ;  5
+  074C    4B 4A 49 48           
+  0750    67 66 65 64           	defb	067h,066h,065h,064h,063h,062h,061h,060h ;  6
+  0754    63 62 61 60           
+  0758    6F 6E 6D 6C           	defb	06fh,06eh,06dh,06ch,06bh,06ah,069h,068h ;  7
+  075C    6B 6A 69 68           
+                                
+  0760                          initt:
+  0760    1000                  	defw	ramtop		; rsp
+  0762    08                    	defb	08h		; ri
+  0763    01                    	defb	1		; riff
+  0764    0880                  	defw	inite		; rpc
+  0766    F0                    	defb	0f0h		; point
+  0767    01                    	defb	1		; timed
+  0768    90                    	defb	cledoff		; cnorm
+  0769    0020 0020             	defw	brkpt,brkpt
+  076D    0020 02DC             	defw	brkpt,iscan	; inttab
+                                
+                                
+  0771                          hextab:
+  0771    3F 06 5B 4F           	defb	3fh,06h,5bh,4fh	; 0..3
+  0775    66 6D 7D 07           	defb	66h,6dh,7dh,07h	; 4..7
+  0779    7F 6F 77 7C           	defb	7fh,6fh,77h,7ch	; 8..B
+  077D    39 5E 79 71           	defb	39h,5eh,79h,71h	; C..F
+                                
+  0781                          flgstr:
+  0781    2D 1B C0 76           	defb	2dh,1bh,0c0h,76h,0c0h,73h,54h,39h
+  0785    C0 73 54 39           
+                                ;		 S   Z   .    H   .    P   N   C
+                                
+  0789                          scalt:
+  0789    00FB                  	defw	vtran		; 00h
+  078B    0114                  	defw	hex
+  078D    0122                  	defw	hex2
+  078F    012E                  	defw	hex4
+  0791    0137                  	defw	cure
+  0793    0143                  	defw	culi
+  0795    014A                  	defw	in
+  0797    0178                  	defw	dison
+  0799    01C0                  	defw	tdel		; 08h
+  079B    006D                  	defw	scalj
+  079D    01CA                  	defw	ptran
+  079F    00AD                  	defw	mret
+  07A1    01E3                  	defw	argtr
+  07A3    0203                  	defw	argsh
+  07A5    022B                  	defw	disr
+  07A7    02BB                  	defw	errm
+  07A9    02C8                  	defw	home		; 10h
+  07AB    02CF                  	defw	clear
+  07AD    018E                  	defw	disoff
+  07AF    01AD                  	defw	args
+  07B1    01B5                  	defw	sync
+  07B3    06D0                  	defw	imove
+  07B5    025E                  	defw	regswp
+  07B7    0086                  	defw	brsto
+  07B9    008E                  	defw	brres		; 18h
+  07BB    029B                  	defw	set
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-26
+
+
+  07BD    070D                  	defw	search
+  07BF    02B9                  	defw	err99
+  07C1    02B9                  	defw	err99
+  07C3    02B9                  	defw	err99
+  07C5    02B9                  	defw	err99
+  07C7    06F1                  	defw	flags
+                                
+  07C9    03F3                  	defw	dis		; 20h
+  07CB    0425                  	defw	pc
+  07CD    0422                  	defw	spc
+  07CF    024B                  	defw	switch
+  07D1    042E                  	defw	go
+  07D3    03F8                  	defw	swap
+  07D5    04E9                  	defw	sbpt
+  07D7    03C3                  	defw	mem
+  07D9    04EC                  	defw	bpt		; 28h
+  07DB    040E                  	defw	minus
+  07DD    0405                  	defw	plus
+  07DF    00ED                  	defw	argin
+  07E1    00F1                  	defw	aintxt
+  07E3    0594                  	defw	tin
+  07E5    064D                  	defw	tout
+  07E7    02B9                  	defw	err99
+  07E9    02B9                  	defw	err99		; 30h
+  07EB    0544                  	defw	load
+  07ED    0610                  	defw	save
+  07EF    03FF                  	defw	full
+  07F1    0433                  	defw	step
+  07F3    04E0                  	defw	cbpt
+  07F5    06A7                  	defw	move
+  07F7    03A5                  	defw	rela
+  07F9    06E2                  	defw	calc		; 38h
+  07FB    0505                  	defw	delete
+  07FD    04F5                  	defw	insert
+                                
+  07FF    11                    	defb	version
+                                
+                                
+  0000                          zvtran	equ	00h
+  0001                          zhex	equ	01h
+  0002                          zhex2	equ	02h
+  0003                          zhex4	equ	03h
+  0004                          zcure	equ	04h
+  0005                          zculi	equ	05h
+  0006                          zin	equ	06h
+  0007                          zdison	equ	07h
+  0008                          ztdel	equ	08h
+  0009                          zscalj	equ	09h
+  000A                          zptran	equ	0ah
+  000B                          zmret	equ	0bh
+  000C                          zargtr	equ	0ch
+  000D                          zargsh	equ	0dh
+  000E                          zdisr	equ	0eh
+  000F                          zerrm	equ	0fh
+  0010                          zhome	equ	10h
+  0011                          zclear	equ	11h
+  0012                          zdisoff	equ	12h
+  0013                          zargs	equ	13h
+  0014                          zsync	equ	14h
+  0015                          zimove	equ	15h
+  0016                          zregswp	equ	16h
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	1-27
+
+
+  0017                          zbrsto	equ	17h
+  0018                          zbrres	equ	18h
+  002B                          zargin	equ	2bh
+  002C                          zaintxt	equ	2ch
+  002D                          ztin	equ	2dh
+  002E                          ztout	equ	2eh
+                                
+  0023                          zswitch	equ	23h
+  0027                          zmem	equ	27h
+                                
+                                
+                                ; Fehlermeldungen:
+                                
+                                ; 01	Distanz fuer relativen Sprung zu gross
+                                ; 02	Memory-Modus nicht aktiv
+                                ; 05	INS und DEL ausserhalb 0880h-0BFFh angewendet
+                                ; 07	Blocklaenge negativ
+                                
+                                ; 10	Bandlesefehler, physikalisch
+                                ; 11	dto, Pruefsummenfehler
+                                
+                                ; 98	Taste physikalisch nicht definiert
+                                ; 99	Taste logisch nicht definiert
+                                
+                                	end	0
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	S
+
+
+Macros:
+CHKJ            RCAL            SCAL            
+
+Symbols:
+00F1 	AINTXT          081F 	ARG1            0821 	ARG2            
+0829 	ARGC            00ED 	ARGIN           01AD 	ARGS            
+0203 	ARGSH           0214 	ARGSH1          01E3 	ARGTR           
+01F9 	ARGTR1          081D 	AUFZ            0080 	BCTRL           
+0683 	BLOCKNEG        04EC 	BPT             0080 	BRK             
+0826 	BRKADR          0020 	BRKPT           0828 	BRKVAL          
+008E 	BRRES           0086 	BRSTO           0020 	BSHIFT          
+06E2 	CALC            06EE 	CALC1           FFFF 	CASS            
+04E0 	CBPT            0240 	CHLEFT          0823 	CHSUM           
+02CF 	CLEAR           0090 	CLEDOFF         0098 	CLEDON          
+0877 	CNORM           082C 	CONFLG          0004 	CTC             
+003F 	CTRL            0143 	CULI            0137 	CURE            
+013C 	CURE1           081C 	CURSOR          0505 	DELETE          
+03F3 	DIS             018E 	DISOFF          0178 	DISON           
+022B 	DISR            0248 	DISR1           0231 	DISR2           
+0014 	DISZYK          0518 	ERR02           02B9 	ERR99           
+02BB 	ERRM            0041 	F1KHZ           001F 	F2KHZ           
+0000 	FALSE           06F1 	FLAGS           06FC 	FLAGS1          
+0703 	FLAGS2          0781 	FLGSTR          0035 	FREE            
+03FF 	FULL            05CB 	GBIT1           05D8 	GBIT2           
+05E0 	GBIT3           05AD 	GBYTE1          05C8 	GETBIT          
+05A6 	GETBYTE         042E 	GO              0114 	HEX             
+0122 	HEX2            012E 	HEX4            0771 	HEXTAB          
+0500 	HLMEM           02C8 	HOME            06D0 	IMOVE           
+06DF 	IMOVE4          014A 	IN              0152 	IN1             
+0880 	INITE           086F 	INITR           0760 	INITT           
+04F5 	INSERT          0878 	INTTAB          0342 	ISCA1           
+035E 	ISCA2           038E 	ISCA4           0399 	ISCA5           
+039D 	ISCA6           02DC 	ISCAN           0008 	J18             
+081B 	KEY             0720 	KEYTAB          FFFF 	LAYOUT          
+082D 	LCOUNT          081A 	LED             058B 	LERR1           
+058F 	LERR2           0591 	LERRJ           0002 	LES             
+03C1 	LMEM            0544 	LOAD            054E 	LOAD0           
+0550 	LOAD1           055A 	LOAD2           03C3 	MEM             
+03D1 	MEM1            03EB 	MEM2            0292 	MEMREG          
+0008 	MIC             040E 	MINUS           FFFF 	MODE2           
+082E 	MONSTK          06A7 	MOVE            06CE 	MOVE5           
+002A 	MPERIOD         00AD 	MRET            0417 	MSET            
+066F 	OBIT0           0678 	OBIT1           067F 	OBIT3           
+065E 	OBYTE1          0002 	ONE1K           0002 	ONE2K           
+066D 	OUTBIT          0656 	OUTBYTE         0092 	PAIN            
+0082 	PAOUT           00E7 	PARERR          00D6 	PARS3           
+00CC 	PARSE           0425 	PC              05F6 	PER1            
+0600 	PER2            05F3 	PERIOD          0000 	PIO             
+0405 	PLUS            0875 	POINT           0028 	PRS             
+002A 	PRS1            000A 	PRS2            003E 	PRS3            
+0088 	PRSEND          01D5 	PTR1            01CA 	PTRAN           
+0242 	PTRET           0863 	RAF             0800 	RAM             
+1000 	RAMTOP          0869 	RBC             0010 	RCAL            
+0013 	RCAL0           0069 	RCAL4           004E 	RCSC00          
+086B 	RDE             0038 	RDEL            025E 	REGSWP          
+03A5 	RELA            03B6 	RELA1           086D 	RHL             
+0871 	RI              0872 	RIFF            0008 	RIN             
+0081 	RIN1            0865 	RIX             0867 	RIY             
+0000 	ROM             0800 	ROMTOP          0030 	ROUT            
+0043 	ROUT1           0873 	RPC             086F 	RSP             
+0610 	SAVE            0623 	SAVEL1          04E9 	SBPT            
+Pico-Sys V1.1	MACRO-80 3.44	09-Dec-81	PAGE	S-1
+
+
+0018 	SCAL            001D 	SCAL0           0073 	SCAL1           
+006D 	SCALJ           0789 	SCALT           0800 	SCAVDU          
+FFFF 	SCHNELL         070D 	SEARCH          051D 	SEGC1           
+050F 	SEGCHK          053E 	SEGERR          0C00 	SEGMENT         
+029B 	SET             0005 	SHIFT           021D 	SLAHL           
+021F 	SLAHL1          0422 	SPC             0001 	SPS             
+082A 	SPTEMP          009E 	ST4             0863 	STACK           
+0000 	START           0433 	STEP            0444 	STEP1           
+0456 	STEP2           000D 	STMON           0096 	STRTB           
+00CA 	STRTD           05ED 	SUMC1           05E5 	SUMCAL          
+03F8 	SWAP            024B 	SWITCH          025A 	SWTCH1          
+0254 	SWTCH2          01B5 	SYNC            01BA 	SYNC1           
+0840 	SYSRAM          080F 	TABCTR          0808 	TABSFT          
+0010 	TAI             0818 	TASFND          0808 	TAST            
+01C0 	TDEL            01C4 	TDEL2           0824 	TEMP            
+0000 	TEST            0819 	TIMEB           0876 	TIMED           
+0594 	TIN             0598 	TIN1            0699 	TONE            
+069C 	TONE1           0693 	TONE1K          0697 	TONE2K          
+069F 	TONEL           064D 	TOUT            047D 	TRAP            
+049B 	TRAP1           04C7 	TRAP2           04D8 	TRAP3           
+FFFF 	TRUE            0810 	VDU             0011 	VERSION         
+0109 	VTR1            00FB 	VTRAN           002C 	ZAINTXT         
+002B 	ZARGIN          0013 	ZARGS           000D 	ZARGSH          
+000C 	ZARGTR          0018 	ZBRRES          0017 	ZBRSTO          
+0011 	ZCLEAR          0005 	ZCULI           0004 	ZCURE           
+0012 	ZDISOFF         0007 	ZDISON          000E 	ZDISR           
+0001 	ZERO1K          0004 	ZERO2K          000F 	ZERRM           
+0004 	ZES             0001 	ZHEX            0002 	ZHEX2           
+0003 	ZHEX4           0010 	ZHOME           0015 	ZIMOVE          
+0006 	ZIN             0027 	ZMEM            000B 	ZMRET           
+000A 	ZPTRAN          0016 	ZREGSWP         0009 	ZSCALJ          
+0023 	ZSWITCH         0014 	ZSYNC           0008 	ZTDEL           
+002D 	ZTIN            002E 	ZTOUT           0000 	ZVTRAN          
+
+
+
+No Fatal error(s)
+
+

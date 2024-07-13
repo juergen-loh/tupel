@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../42/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 43 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../44/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-21 page-43" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="noindent">
+2. If the stack pointer is in the paged area and you use the stack the paged
+memory will be corrupted. If you depend on the stack contents (such as return
+address) still being there, then the program will crash.
+</p>
+<h3 class="indent">
+<u>MAP Software</u>
+</h3>
+<p>
+Most
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/map80/MAP80_256.htm" title="External Link: MAP80 256K RAM" target="_blank" rel="noreferrer">MAP RAM</a><!-- /External Link -->
+users will probably never want to write their own software for
+controlling the memory paging, so perhaps the information about programming the
+card is not very important. MAP supply a modified version of the Gemini BIOS
+which supports the MAP RAM as a virtual disk of up to 512K, using a
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm811.htm" title="External Link" target="_blank" rel="noreferrer">GM811</a><!-- /External Link -->
+or a
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm813.htm" title="External Link" target="_blank" rel="noreferrer">GM813</a><!-- /External Link -->.
+An alternative is to use a new version of SYS (Version 15.0 or later)
+which now provides support for MAP RAM for Nascom and Gemini computers, with a
+virtual disk of up to 960K bytes. (See
+<a href="../../44/text/#article1">article on SYS</a>
+elsewhere in this issue).
+Most users of additional memory at the moment will want to use it as a virtual
+disk, which can be very useful. (See article on
+<a href="../../47/text/#article1">virtual disks</a>
+elsewhere in this
+issue). However CP/M Version 3, otherwise known as CP/M Plus, is on the way
+(slowly &ndash; horribly complicated), and this requires 96K of memory as a minimum, if
+advantage is to be taken of most of its features. The MAP RAM will then be in
+even greater demand, assuming that CP/M Plus can ever be got to work on it!
+</p>
+<p>
+[Ed.&rsquo;s notes &ndash; from what we have seen so far of CP/M Plus (Gemini have a
+pre-release version running) the MAP RAM board is NOT the best way to provide the
+additional memory that is required, and it looks as though yet another method of
+RAM switching is yet to be born! The main attraction of CP/M Plus is its
+increased speed, gained by keeping various directory and data buffers in
+additional RAM. The way Digital Research have arranged this, it would seem that
+the type of memory switching provided by the MAP board is unsuitable. By the wav,
+there are two versions of CP/M Plus, one running in 64K or less and one running
+in 96K or more, but I wouldn&rsquo;t hold my breath waiting for either as DRI will not
+yet state the anticipated release date of fully debugged versions. Watch this
+nag. for further details.]
+</p>
+<h3 id="article1" class="indent">
+<u>The Great A19 Debate</u>
+</h3>
+<p>
+The MAP manual points out that the GM813 does not bring address line A19 to
+the 80-BUS. While this is quite true, the GM813 was merely following the 80-BUS
+standard, which does not allow for A19 on the BUS. The obvious place for it is
+line 49, which was instead allocated as an additional ground by Nascom some time
+ago. This extra ground line does not appear to be needed, and everyone now seems
+to agree that the 80-BUS specification should have had line 49 as A19. But what
+should be done about it? Without A19 the maximum memory size is limited to 512K
+bytes, and people are already installing systems with a full megabyte. The MAP
+approach has been to unilaterally redefine the 80-BUS and they have used line 49
+for A19. They suggest that anyone with a GM813 who wants to have more than 512K
+should modify it so that it no longer grounds line 49, but connects it to A19
+instead. But if you do this you should be careful to check all the other cards in
+the system, and the motherboard itself, as any of these may have implemented the
+80-BUS specification and grounded this line. It would be nice if Gemini agreed
+that this was a good idea, but I suspect that instead they may feel that it would
+be better to define some other line as A19, in order to keep to the universally
+agreed specification and avoid telling people to mutilate the GM813 [Ed. &ndash; and
+all other Gemini boards and some boards of other manufacturers, including Nascom,
+which as per spec. have this line grounded.] and their motherboards. On your
+system it is probably wisest to follow the recommendations which come with the
+large RAM card you buy, and make a note of what your 80-BUS does. See INMC&nbsp;80
+Issue&nbsp;4 for the
+<a href="../../../../inmc-80-news/04/24/text/#article1">80-BUS specification</a>.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../42/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 43 of 56</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../56/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../44/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_21.pdf#page=43" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

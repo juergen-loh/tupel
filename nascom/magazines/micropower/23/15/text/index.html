@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 2 - Number 3 - July 1982</title>
+	<!-- Sun, 30 Jun 2024 15:26:02 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 3 &middot;</span> <span class="nowrap">July 1982</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 15 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-23 page-15" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+The SAVE command is used to transfer a program or data from
+the computers memory to disc. This command has to be told how
+much of the memory you want it to save, in 256 byte pages. The
+area saved starts at 0100H, and a typical example of the command
+is SAVE 55 SPLAT.COM which would copy the section of RAM from
+0100H to 05FFH onto the disc and give it the file name SPLAT.COM
+in the directory.
+</p>
+<p>
+The final built-in command is TYPE which types out a file.
+It will put it on the screen and if CP/M has been told that the
+printer is on, it will send it there as well.
+</p>
+<p>
+So, how do we tell the system to send its output ta the
+printer? This is acomplished using one of the Control key
+commands mentioned earlier, Control P. There are several of
+these commands besides Control P. Control C will (usually)
+reboot the system, Control H works like the backspace key
+Control M is the same as the enter key and Control S stops and
+starts the console display so that you can read all of the
+directory, for example, when it would otherwise be scrolled off
+screen. All these commands are covered in the two introductory
+books that I suggest new CP/M users buy, in great detail. The
+books are &ldquo;The CP/M Handbook&rdquo; by Rodney Zaks and &ldquo;Using CP/M&rdquo; by
+Judi Fernandez and Ruth Ashley. Of the two, I prefer the first
+but this a matter of taste. If you like the kind of book where
+you are expected to fill in the answers to the questions as you
+go along, then the latter book is excellent too. What neither
+of them tells you, much to my disappointment, is how the machine
+code addict can make use of CP/M in his programs. The
+information is in the CP/M documentation. Sadly, it is terse in
+the extreme and does not make several important points at all
+clearly. In future articles I hope to give an insight into the
+ways in which the routines in CP/M can be used by your
+programs.
+</p>
+<p>
+The description of CP/M that I have given so far does not
+make any mention of how to run a program. It could not be
+simpler, as all you do is type the name of the program and press
+the enter key. The system checks what you have typed and if it
+is not a built-in command, it looks on the disc for a file of
+that name with a .COM extension. Suppose you type <span class="uppercase">Invaders</span> and
+press enter; there is no built-in command with this name, so
+CP/M looks on the disc for a file called INVADERS.COM. If it
+finds it, it loads the file into memory at address 0100H onwards
+and jumps to the start of it. A program of the kind described
+is called a transient program because it is not in memory all
+the time. Several transient programs are supplied with CP/M
+when you buy it, all intended to make the system easier to use.
+The transient programs supplied with the Gemini implementation
+of CP/M that I use, and doubtless supplied with all the other
+implementations of the system are as follows:
+</p>
+<table class="indent justify">
+<tr><td style="width: 7em">ASM.COM</td><td>This is an asembler, more of which later.</td></tr>
+<tr><td>DDT.COM</td><td>This is a debugging aid also mentioned later.</td></tr>
+<tr><td>DUMP.COM</td><td>A program for tabulating files in hex.</td></tr>
+<tr><td>EBASIC.COM</td><td>A compiler for BASIC, not without limitations,
+			as it does not support POKE and PEEK commands.
+			Quite good file handling though.</td></tr>
+<tr><td>ED.COM</td><td>A text file editor I shall malign later.</td></tr>
+<tr><td>ERUN.COM</td><td>The run-time part of the BASIC compiler.</td></tr>
+</table>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../14/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 15 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-2-3.pdf#page=17" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

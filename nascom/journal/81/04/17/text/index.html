@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 4/81 5</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">4/81 5</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../00/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/03/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 17 von 31</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/06/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 1 Spalten im Blocksatz: Start --><div class="row"><div class="col-sm-12 justify">
+<h4 id="article1">
+Integer Pascal Compiler für den Nascom
+</h4>
+
+<p>
+Mittlerweile gibt es zahlreiche Basic Interpreter für die Nascom
+Computer,&#x200b;hier wird zum ersten Mal ein Pascal Compiler vorgestellt.
+</p>
+<p>
+Implementiert ist praktisch das gesamte Standart Pascal, mit einer
+einzigen Ausnahme, wie der Name beinhaltet kann der Compiler nur ganze
+Zahlen im Bereich &minus;32767 bis +32767 verarbeiten (HEX-Integers zwischen
+0000 und FFFF&rsquo;H).
+</p>
+<p>
+Trotz dieser Einschränkung eignet sich dieses Pascal aber besonders gut
+zum Lernen (bis es mit
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/CP/M" title="Externer Link" target="_blank" rel="noreferrer">CP/M</a><!-- /External Link -->
+auf dem Nascom die großen Compiler gibt).
+Der niedrige Preis ermöglicht es sparsamen Computerfans auch ohne
+Anschaffung eines Floppy-Systems diese schnelle Alternative zu BASIC zu
+benutzen. Bei 4MHz CPU Takt besiegte dieses Pascal sogar das
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Apple_II" title="Externer Link: Apple II" target="_blank" rel="noreferrer">APPLE</a><!-- /External Link -->-<span class="uppercase">Pascal</span>&nbsp;!
+</p>
+<p>
+Das gesamte Programmpacket ist genau 8,5K lang,&#x200b;benötigt mindestens 16K
+und läuft auf <span class="uppercase">Nassys1</span>. Es besteht aus einem Command Processor, einem
+Editor, einem 2-pass Compiler und einigen Runtime Routinen.&#x200b;Insgesamt
+gibt es 27 (!) Fehlermeldungen die aus Speicherplatzgründen wie bei
+ZEAP nummerncodiert ausgegeben werden. Die Arbeit mit dem Editor wird
+durch Auto Repeat sehr komfortabel.
+</p>
+<p>
+Im Vergleich zum Standart Pascal gibt es mehrere Erweiterungen,
+z.B. &bdquo;PEEK&ldquo; und &bdquo;POKE&ldquo;, SHL und SHR (shiftbefehle),
+ELSE und andere. Bei Ein- und Ausgabe kann zwischen hexadezimal,&#x200b;dezimal
+und ASCII gewählt werden.
+</p>
+<p>
+Der Editor bietet folgende Kommandos&nbsp;:
+</p>
+
+<table class="donthyphenate">
+	<tr>
+		<td><p>AMMMM DATA</p></td>
+		<td>:</td>
+		<td><p>Füge Souce Zeile hinzu</p></td>
+	</tr>
+	<tr>
+		<td><p>B</p></td>
+		<td>:</td>
+		<td><p>Gehe zum Source Anfang</p></td>
+	</tr>
+	<tr>
+		<td><p>C</p></td>
+		<td>:</td>
+		<td><p>überprüfe Syntax</p></td>
+	</tr>
+	<tr>
+		<td><p>CMMMM</p></td>
+		<td>:</td>
+		<td><p>Compiliere und lege Objekt ab Adresse MMMM ab</p></td>
+	</tr>
+	<tr>
+		<td><p>DMMMM</p></td>
+		<td>:</td>
+		<td><p>Lösche Zeile Nummer MMMM</p></td>
+	</tr>
+	<tr>
+		<td><p>P</p></td>
+		<td>:</td>
+		<td><p>Gebe Source Text auf Printer aus</p></td>
+	</tr>
+	<tr>
+		<td><p>RNNNN DATA</p></td>
+		<td>:</td>
+		<td><p>Ersetze oder verbessere Zeile MMMM</p></td>
+	</tr>
+	<tr>
+		<td><p>S</p></td>
+		<td>:</td>
+		<td><p>Schreibe Source auf Tanband</p></td>
+	</tr>
+	<tr>
+		<td><p>T</p></td>
+		<td>:</td>
+		<td><p>Springe zu <span class="uppercase">Nassys</span></p></td>
+	</tr>
+	<tr>
+		<td><p>Z</p></td>
+		<td>:</td>
+		<td><p>Lösche Source Buffer</p></td>
+	</tr>
+	<tr>
+		<td><p>LMMMM</p></td>
+		<td>:</td>
+		<td><p>gebe Zeile MMMM auf Bildschirm aus</p></td>
+	</tr>
+	<tr>
+		<td><p>NMMMM</p></td>
+		<td><p>:</p></td>
+		<td><p>nummeriere mit Abstand MMMM durch</p></td>
+	</tr>
+</table>
+<p>
+Die nachfolgenden Diagramme erleutern die verfügbare Syntax und den
+Source Aufbau.&#x200b;Das abgedruckte Beispielprogramm liest Zahlen in ein
+ARRAY ein, sortiert sie nach der &bdquo;Qicksort&ldquo;-Methode und gibt
+sie in Achter-Gruppen aus.man beachte besonders die rekursiven Aufrufe
+!!.
+</p>
+<p>
+In den Diagrammen brauchen rechteckig eingerahmte Punkte eine weitere
+Definition, runde keine mehr.
+</p>
+
+<!-- 1 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../00/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/03/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 17 von 31</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../81/06/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/81-04.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

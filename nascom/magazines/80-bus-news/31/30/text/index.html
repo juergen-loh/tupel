@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../29/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 30 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-31 page-30" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    67</span>
+
+F3EC EB         MID:    EX      DE,HL           ; Get code string address
+F3ED 7E                 LD      A,(HL)          ; Get next byte "," or ")"
+F3EE CD3CF4             CALL    MIDNUM          ; Get number supplied
+F3F1 04                 INC     B               ; Is it character zero?
+F3F2 05                 DEC     B
+F3F3 CAA0E9             JP      Z,FCERR         ; Yes - Error
+F3F6 C5                 PUSH    BC              ; Save starting position
+F3F7 1EFF               LD      E,255           ; All of string
+F3F9 FE29               CP      ")"             ; Any length given?
+F3FB CA05F4             JP      Z,RSTSTR        ; No - Rest of string
+F3FE CD90E6             CALL    CHKSYN          ; Make sure "," follows
+F401 2C                 DEFB    ","
+F402 CD84F4             CALL    GETINT          ; Get integer 0-255
+F405 CD90E6     RSTSTR: CALL    CHKSYN          ; Make sure ")" follows
+F408 29                 DEFB    ")"
+F409 F1                 POP     AF              ; Restore starting position
+F40A E3                 EX      (SP),HL         ; Get string,8ave code string
+F40B 01B8F3             LD      BC,MID1         ; Continuation of MID$ routine
+F40E C5                 PUSH    BC              ; Save for return
+F40F 3D                 DEC     A               ; Starting position-1
+F410 BE                 CP      (HL)            ; Compare with length
+F411 0600               LD      B,0             ; Zero bytes length
+F413 D0                 RET     NC              ; Null string if start past end
+F414 4F                 LD      C,A             ; Save starting position-1
+F415 7E                 LD      A,(HL)          ; Get length of string
+F416 91                 SUB     C               ; Subtract start
+F417 BB                 CP      E               ; Enough string for it?
+F418 47                 LD      B,A             ; Save maximum length available
+F419 D8                 RET     C               ; Truncate string if needed
+F41A 43                 LD      B,E             ; Set specified length
+F41B C9                 RET                     ; Go and create string
+
+F41C CD86F3     VAL:    CALL    GETLEN          ; Get length of string
+F41F CA33F6             JP      Z,RESZER        ; Result zero
+F422 5F                 LD      E,A             ; Save length
+F423 23                 INC     HL
+F424 23                 INC     HL
+F425 7E                 LD      A,(HL)          ; Get LSB of address
+F426 23                 INC     HL
+F427 66                 LD      H,(HL)          ; Get MSB of address
+F428 6F                 LD      L,A             ; HL = String address
+F429 E5                 PUSH    HL              ; Save string address
+F42A 19                 ADD     HL,DE
+F42B 46                 LD      B,(HL)          ; Get end of string+1 byte
+F42C 72                 LD      (HL),D          ; Zero it to terminate
+F42D E3                 EX      (SP),HL         ; Save string end,get start
+F42E C5                 PUSH    BC              ; Save end+1 byte
+F42F 7E                 LD      A,(HL)          ; Get starting byte
+F430 CD1AF9             CALL    ASCTFP          ; Convert ASCII string to FP
+F433 C1                 POP     BC              ; Restore end+1 byte
+F434 E1                 POP     HL              ; Restore end+1 address
+F435 70                 LD      (HL),B          ; Put back original byte
+F436 C9                 RET
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    68</span>
+
+F437 EB         LFRGNM: EX      DE,HL           ; Code string address to HL
+F438 CD90E6             CALL    CHKSYN          ; Make sure ")" follows
+F43B 29                 DEFB    ")"
+F43C C1         MIDNUM: POP     BC              ; Get return address
+F43D D1                 POP     DE              ; Get number supplied
+F43E C5                 PUSH    BC              ; Re-save return address
+F43F 43                 LD      B,E             ; Number to B
+F440 C9                 RET
+
+F441 CD87F4     INP:    CALL    MAKINT          ; Make it integer A
+F444 323F10             LD      (INPORT),A      ; Set input port
+F447 CD3E10             CALL    INPSUB          ; Get input from port
+F44A C301F1             JP      PASSA           ; Return integer A
+
+F44D CD71F4     POUT:   CALL    SETIO           ; Set up port number
+F450 C30610             JP      OUTSUB          ; Output data and return
+
+F453 CD71F4     WAIT:   CALL    SETIO           ; Set up port number
+F456 F5                 PUSH    AF              ; Save AND mask
+F457 1E00               LD      E,0             ; Assume zero if none given
+F459 2B                 DEC     HL              ; DEC 'cos GETCHR INCs
+F45A CD36E8             CALL    GETCHR          ; Get next character
+F45D CA67F4             JP      Z,NOXOR         ; No XOR byte given
+F460 CD90E6             CALL    CHKSYN          ; Make sure "," follows
+F463 2C                 DEFB    ","
+F464 CD84F4             CALL    GETINT          ; Get integer 0-255 to XOR with
+F467 C1         NOXOR:  POP     BC              ; Restore AND mask
+F468 CD3E10     WAITLP: CALL    INPSUB          ; Get input
+F46B AB                 XOR     E               ; Flip selected bits
+F46C A0                 AND     B               ; Result non-zero?
+F46D CA68F4             JP      Z,WAITLP        ; No = keep waiting
+F470 C9                 RET
+
+F471 CD84F4     SETIO:  CALL    GETINT          ; Get integer 0-255
+F474 323F10             LD      (INPORT),A      ; Set input port
+F477 320710             LD      (OTPORT),A      ; Set output port
+F47A CD90E6             CALL    CHKSYN          ; Make sure "," follows
+F47D 2C                 DEFB    ","
+F47E C384F4             JP      GETINT          ; Get integer 0-255 and return
+
+F481 CD36E8     FNDNUM: CALL    GETCHR          ; Get next character
+F484 CD41ED     GETINT: CALL    GETNUM          ; Get a number from 0 to 255
+F487 CD85E9     MAKINT: CALL    DEPINT          ; Make sure value 0 - 255
+F48A 7A                 LD      A,D             ; Get MSB of number
+F48B B7                 OR      A               ; Zero?
+F48C C2A0E9             JP      NZ,FCERR        ; No - Error
+F48F 2B                 DEC     HL              ; DEC 'cos GETCHR INCs
+F490 CD36E8             CALL    GETCHR          ; Get next character
+F493 7B                 LD      A,E             ; Get number to A
+F494 C9                 RET
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../29/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 30 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../31/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_31.pdf#page=30" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

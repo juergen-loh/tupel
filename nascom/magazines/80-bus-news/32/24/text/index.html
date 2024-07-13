@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">March&ndash;April 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 2</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 24 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../33/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-32 page-24" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    78</span>
+
+F7A1 C1         RESDIV: POP     BC              ; Restore divisor
+F7A2 E1                 POP     HL
+F7A3 79                 LD      A,C             ; Get MSB of quotient
+F7A4 3C                 INC     A
+F7A5 3D                 DEC     A
+F7A6 1F                 RRA                     ; Bit 0 to bit 7
+F7A7 FA54F6             JP      M,RONDB         ; Done - Normalise result
+F7AA 17                 RLA                     ; Restore carry
+F7AB 7B                 LD      A,E             ; Get LSB of quotient
+F7AC 17                 RLA                     ; Double it
+F7AD 5F                 LD      E,A             ; Put it back
+F7AE 7A                 LD      A,D             ; Get NMSB of quotient
+F7AF 17                 RLA                     ; Double it
+F7B0 57                 LD      D,A             ; Put it back
+F7B1 79                 LD      A,C             ; Get MSB of quotient
+F7B2 17                 RLA                     ; Double it
+F7B3 4F                 LD      C,A             ; Put it back
+F7B4 29                 ADD     HL,HL           ; Double NMSB,LSB of divisor
+F7B5 78                 LD      A,B             ; Get MSB of divisor
+F7B6 17                 RLA                     ; Double it
+F7B7 47                 LD      B,A             ; Put it back
+F7B8 3A1510             LD      A,(DIV4)        ; Get VLSB of quotient
+F7BB 17                 RLA                     ; Double it
+F7BC 321510             LD      (DIV4),A        ; Put it back
+F7BF 79                 LD      A,C             ; Get MSB of quotient
+F7C0 B2                 OR      D               ; Merge NMSB
+F7C1 B3                 OR      E               ; Merge LSB
+F7C2 C28EF7             JP      NZ,DIVLP        ; Not done - Keep dividing
+F7C5 E5                 PUSH    HL              ; Save divisor
+F7C6 21E710             LD      HL,FPEXP        ; Point to exponent
+F7C9 35                 DEC     (HL)            ; Divide by 2
+F7CA E1                 POP     HL              ; Restore divisor
+F7CB C28EF7             JP      NZ,DIVLP        ; Ok - Keep going
+F7CE C3BCE3             JP      OVERR           ; Overflow error
+
+F7D1 78         ADDEXP: LD      A,B             ; Get exponent of dividend
+F7D2 B7                 OR      A               ; Test it
+F7D3 CAF5F7             JP      Z,OVTST3        ; Zero - Result zero
+F7D6 7D                 LD      A,L             ; Get add/subtract flag
+F7D7 21E710             LD      HL,FPEXP        ; Point to exponent
+F7DA AE                 XOR     (HL)            ; Add or subtract it
+F7DB 80                 ADD     A,B             ; Add the other exponent
+F7DC 47                 LD      B,A             ; Save new exponent
+F7DD 1F                 RRA                     ; Test exponent for overflow
+F7DE A8                 XOR     B
+F7DF 78                 LD      A,B             ; Get exponent
+F7E0 F2F4F7             JP      P,OVTST2        ; Positive - Test for overflow
+F7E3 C680               ADD     A,80H           ; Add excess 128
+F7E5 77                 LD      (HL),A          ; Save new exponent
+F7E6 CA54F7             JP      Z,POPHRT        ; Zero - Result zero
+F7E9 CD79F8             CALL    SIGNS           ; Set MSBs and sign of result
+F7EC 77                 LD      (HL),A          ; Save new exponent
+F7ED 2B                 DEC     HL              ; Point to MSB
+F7EE C9                 RET
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    79</span>
+
+F7EF CD13F8     OVTST1: CALL    TSTSGN          ; Test sign of FPREG
+F7F2 2F                 CPL                     ; Invert sign
+F7F3 E1                 POP     HL              ; Clean up stack
+F7F4 B7         OVTST2: OR      A               ; Test if new exponent zero
+F7F5 E1         OVTST3: POP     HL              ; Clear off return address
+F7F6 F233F6             JP      P,RESZER        ; Result zero
+F7F9 C3BCE3             JP      OVERR           ; Overflow error
+
+F7FC CD5FF8     MLSP10: CALL    BCDEFP          ; Move FPREG to BCDE
+F7FF 78                 LD      A,B             ; Get exponent
+F800 B7                 OR      A               ; Is it zero?
+F801 C8                 RET     Z               ; Yes - Result is zero
+F802 C602               ADD     A,2             ; Multiply by 4
+F804 DABCE3             JP      C,OVERR         ; Overflow - ?OV Error
+F807 47                 LD      B,A             ; Re-save exponent
+F808 CDCDF5             CALL    FPADD           ; Add BCDE to FPREG (Times 5)
+F80B 21E710             LD      HL,FPEXP        ; Point to exponent
+F80E 34                 INC     (HL)            ; Double number (Times 10)
+F80F C0                 RET     NZ              ; Ok - Return
+F810 C3BCE3             JP      OVERR           ; Overflow error
+
+F813 3AE710     TSTSGN: LD      A,(FPEXP)       ; Get sign of FPREG
+F816 B7                 OR      A
+F817 C8                 RET     Z               ; RETurn if number is zero
+F818 3AE610             LD      A,(FPREG+2)     ; Get MSB of FPREG
+F81B FE                 DEFB    (CP 2FH         ; Test sign
+F81C 2F         RETREL: CPL                     ; Invert sign
+F81D 17                 RLA                     ; Sign bit to carry
+F81E 9F         FLGDIF: SBC     A,A             ; Carry to all bits of A
+F81F C0                 RET     NZ              ; Return -1 if negative
+F820 3C                 INC     A               ; Bump to +1
+F821 C9                 RET                     ; Positive - Return +1
+
+F822 CD13F8     SGN:    CALL    TSTSGN          ; Test sign of FPREG
+F825 0688       FLGREL: LD      B,80H+8         ; 8 bit integer in exponent
+F827 110000             LD      DE,0            ; Zero NMSB and LSB
+F82A 21E710     RETINT: LD      HL,FPEXP        ; Point to exponent
+F82D 4F                 LD      C,A             ; CDE = MSB,NMSB and LSB
+F82E 70                 LD      (HL),B          ; Save exponent
+F82F 0600               LD      B,0             ; CDE = integer to normalise
+F831 23                 INC     HL              ; Point to sign of result
+F832 3680               LD      (HL),80H        ; Set sign of result
+F834 17                 RLA                     ; Carry = sign of integer
+F835 C31BF6             JP      CONPOS          ; Set sign of result
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 24 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../33/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_32.pdf#page=24" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

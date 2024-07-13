@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 6</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../45/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 46 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../47/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-26 page-46" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+The suggestion made to Richard was to try adding diodes to do this, but
+the same effect can be acheived by using an open-collector AND gate (e.g.
+74LS09), or even an open-collector buffer (e.g. 7417). The input(s) to the
+gate(s) are connected to the drive select lines that do not provide a ready
+line, and the output(s) are connected to the Ready line (see fig&nbsp;3). So, as
+soon as a drive select line connected to one of these added gates goes low,
+the Ready line is also pulled low. N.B. The gate used must be an open-collector
+gate, otherwise it will interfere with the 8&Prime; drive when it attempts
+to drive the ready line. In the approach suggested to Richard the diodes
+provide the required isolation, but as they are passive devices there may be
+problems with voltage drops across various components (as he discovered). The
+74LS09 approach avoids this.
+</p>
+<h3 id="article1">
+How to find your feet on a Nascom&nbsp;2
+</h3>
+<p>
+A letter from Mr Mathison of West Germany has brought the N2 out again.
+He&rsquo;s been chasing the feet of the little men in the N2 character generator,
+put, despite following the suggestions published recently, has had no success. &ndash;
+I&rsquo;ll start by describing the action of the N2 video circuitry before running
+through the solutions. That way any of you who attempt the modifications
+should have some idea of what you&rsquo;re up to. You will need a copy of the N2
+circuit diagram if you want to follow the description below.
+</p>
+<h3>
+How it works
+</h3>
+<p>
+A 1MHz character clock emerges from IC49/13 (IC43 pin 13). This is
+divided down in the six-bit counter formed by IC51/&#x200b;IC52. The outputs of the
+six-bit counter form the address of a character within a display line, and
+address the video RAM via multiplexors IC62/&#x200b;IC63. The address is also decoded
+by IC55/&#x200b;IC60 to provide the blanking signal that frames the active 48
+characters of the display, out of the total of the 64 characters that make up
+a line. (Remember that the Nascom video RAM has 16 unused characters between
+the end of one display line and the start of the next one). The output of
+IC52/13 triggers the monostable IC57 to provide the horizontal sync pulse, and
+also clocks the four-bit counter IC53, whose outputs form the &lsquo;row address&rsquo; to
+the character generator. The character generator ROM address lines are also
+decoded by IC44c which, when the 625 line option is selected, resets the row
+address counter to zero everytime row 14 is reached. Thus only rows 0-13 of
+the character generator are displayed. Every time IC53/11 returns to 0, the
+five-bit counter formed by IC68/&#x200b;IC13b is clocked. The outputs of IC68 address
+the video ram via multiplexor IC64 and form the &lsquo;character line&rsquo; address.
+Finally the IC68/1C13b counter is decoded in the N2V PROM (IC59). There are
+two outputs from this PROM, D1 provides the vertical blanking signal, and the
+D0 output is used to trigger the vertical sync signal (from IC57) and preset
+the five-bit counter IC68/&#x200b;IC13b to 11. (Check the hardwired inputs on IC68 to
+confirm this). The contents of the N2V PROM can be found in the Nascom&nbsp;2
+documentation, and from the listing you should be able to deduce the
+following, starting at the point where IC68/&#x200b;IC13b is reset to 11&hellip;
+</p>
+<table class="indent">
+<tr><td>Counter</td><td>Action</td></tr>
+<tr><td>11-14</td><td>Display is blanked.</td></tr>
+<tr><td>15-30</td><td>Display is unblanked. Display lines go 15,0,1,2,3&hellip;13,14.</td></tr>
+<tr><td>34</td><td>Display is blanked again</td></tr>
+<tr><td>0</td><td>Display is blanked. (Counter wraps round to 0).</td></tr>
+<tr><td>1</td><td>Vertical sync triggered &amp; counter immediately reset to 11.</td></tr>
+</table>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../45/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 46 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../47/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_26.pdf#page=46" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

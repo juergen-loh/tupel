@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 16:39:01 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;June 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 19 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-33 page-19" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+after which it is reset for the next line. If it is still working through one
+of the 25 &lsquo;character&rsquo; lines on the screen then it is reset to N and the
+character generator &lsquo;line&rsquo; address is incremented by one, otherwise it is
+reset to N+80 to select the next line of characters. When the display line
+starts the controller turns ON the &lsquo;display enable&rsquo; signal. This is turned OFF
+after address N+79 is passed. Then, as further pre-programmed character
+positions are passed, the controller generates the Horizontal Sync pulse, and
+finally the internal reset signal for the counter.
+</p>
+<p>
+From the information we have given it the controller thinks it is
+displaying characters N to N+79, but by playing around with the external
+delays we actual display N+1 to N+80, and in the process gain sufficient
+advance warning of an active display line to prevent any unseemly clash
+between the Z80 and the display controller. As the controller has been fooled
+over the start of the display, it also has to be mis-informed about the cursor
+position, a task that the NMI routine carries out as it updates the internal
+registers of the controller.
+</p>
+<h3>
+<span class="uppercase">Interrupts</span>
+</h3>
+<p>
+With the display contention problem solved by hardware, various other
+changes could be made. One was the use of the interrupt system. Previously,
+with the transparent screen access being determined by software loops,
+interrupts could not be used as they could interfere with critical parts of
+the loop. With the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm832.htm" title="External Link" target="_blank" rel="noreferrer">SVC</a><!-- /External Link -->,
+keyboard input is now done under interrupt. Also,
+while the SVC-MON is scrolling the screen (with an LDIR instruction), it
+enables an interrupt routine to collect and buffer incoming characters from
+the Host. Normally the SVC-MON polls for input characters.
+</p>
+<h3>
+<span class="uppercase">Keyboards</span>
+</h3>
+<p>
+An option for a serial keyboard has been included in the SVC. This is an
+either/or option with the parallel keyboard, not an AND one, as they both
+share the same IO port (on the SVC) and some of the interface circuitry. The
+serial keyboard requires fewer wires to interface it, and this leads to lower
+cost. (See the latest Gemini price list &ndash; The multi-core &lsquo;curly-wurly&rsquo; cables
+for the parallel keyboard cost a fair bit! The difference in price solely
+reflects the cabling costs. There is no difference in keyboard costs as the
+change required on it was only a small one in the on-board software. (The
+keyboards use an 8035 single-chip microprocessor to scan the key matrix and
+generate the appropriate ASCII codes.)
+</p>
+<h3>
+NMI
+</h3>
+<p>
+As with the
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm812.htm" title="External Link" target="_blank" rel="noreferrer">IVC</a><!-- /External Link -->,
+on the SVC the vertical sync output of the display
+controller is connected to the NMI input of the on-board Z80. However the SVC
+NMI service routine performs different functions. It no longer scans the
+keyboard as that has been transfered to a conventional interrupt routine (see
+above). It handles the timing of various attributes. The tone generator for
+the on-board bleeper is directly enabled and disabled by the SVC monitor and
+thus the duration (but not the frequency) of the &lsquo;bleep&rsquo; is fixed at an
+integral number of NMIs. Similarly the low frequency waveform used to &lsquo;blink&rsquo;
+characters is also generated by this software. One other feature,
+<a href="../../../32/31/text/#article1">mentioned by Dave Hunt</a>
+in the last issue, is the implementation of a software &lsquo;clock&rsquo;.
+</p>
+<p>
+One point to bear in mind when you start thinking &lsquo;wouldn&rsquo;t be nice If..&rsquo;
+is the fact that the NMI routine is executed once every 20mS. The larger and
+more cumbersome it becomes, the more it is likely to have an impact on the
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 19 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../34/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_33.pdf#page=19" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

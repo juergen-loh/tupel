@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Nascom Newsletter - Volume 2 - Number 5 - November 1982</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Nascom News&shy;let&shy;ter</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 5 &middot;</span> <span class="nowrap">November 1982</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../02/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../micropower/24/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 3 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-nascom-newsletter issue-25 page-03" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+Looking at the bit patterns for the Z80 instruction set
+(they are nicely tabulated in your Nascom manual &hellip; towards the
+back), you will notice that many groups of instructions use the
+middle three bite to represent a register, condition, arithmetic
+operation, or a number from 0 to 7 (for the bitwise
+operations)[r, c, a &amp; n respectively].
+</p>
+<table class="indent" style="width: 60%">
+<tr><th>Bits</th><th>r</th><th>c</th><th>n</th><th>a</th></tr>
+<tr><td>000</td><td>B</td><td>NZ</td><td>0</td><td>ADD A</td></tr>
+<tr><td>001</td><td>C</td><td>Z</td><td>1</td><td>ADC</td></tr>
+<tr><td>010</td><td>D</td><td>NC</td><td>2</td><td>SUB</td></tr>
+<tr><td>011</td><td>E</td><td>C</td><td>3</td><td>SBC A</td></tr>
+<tr><td>100</td><td>H</td><td>PO</td><td>4</td><td>AND</td></tr>
+<tr><td>101</td><td>L</td><td>PE</td><td>5</td><td>XOR</td></tr>
+<tr><td>110</td><td>INDIS</td><td>P</td><td>6</td><td>OR</td></tr>
+<tr><td>111</td><td>A</td><td>M</td><td>7</td><td>CP</td></tr>
+</table>
+<p>
+INDIS represents an index register HL, IX or IY (and the
+displacement if necessary). A similar system operates with
+register pairs.
+</p>
+<table class="indent" style="width: 40%">
+<tr><th>Bits</th><th>ss</th><th>ad</th></tr>
+<tr><td>00</td><td>BC</td><td>BC</td></tr>
+<tr><td>01</td><td>DE</td><td>DE</td></tr>
+<tr><td>10</td><td>IND</td><td>IND</td></tr>
+<tr><td>11</td><td>SP</td><td>AF</td></tr>
+</table>
+<p>
+Where IND represents one of the index registers (HL, IX, IY)
+but with no displacements. Make sure that you understand this,
+because basically disassembley is analysis of bit patterns. I
+did not, and wrote a disassembler so complex even I could not
+make head nor tail of it!! These tables will have to go into
+tables in the computer as they are crucial. You will have to
+define a character to represent INDIS and IND as we don&rsquo;t yet
+know which of the index registers to output!! Remember these as
+if they were arrays, eg. r(0) &ndash; r(7) etc.
+</p>
+<p>
+The disassembler is going to need one vital piece of
+information before it starts. Elementary &ndash; where to start from.
+This can easily be done using the Nas-Sys routine ARGS. Load
+this disassembly address into BC&rsquo; (the alternate registers are
+identified by &rsquo;). This piece of your program is the first
+encountered on a run and is not used again. From now on the
+disassembley address is always in BC&rsquo;. It must be the first byte
+of an instruction or else there will be havoc!! Next thing to
+do is to set STRDIS to an empty string.
+</p>
+<p>
+Now there are two more variables &ndash; held also in the
+alternate registers (use D&rsquo; and E&rsquo;) &ndash; to be initialised. Call
+one INDEX, the print routine will require this. The other call
+TYPE and this holds information as to whether the instruction
+began with &pound;CB, &pound;ED or neither. Set both these to zero. Take a
+deep breath and begin!!!
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../02/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../micropower/24/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 3 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Nascom-Newsletter-2-5.pdf#page=5" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

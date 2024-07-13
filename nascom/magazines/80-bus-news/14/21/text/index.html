@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1982 - Volume 1 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1982 &middot; <span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 21 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../22/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-14 page-21" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+supplied for this. This prevents BASIC from overwriting TOS&rsquo;s workspace when
+cold-started. TOS overlays ROM ZEAP, but it is a simple matter to install a
+switch in the 4K decode line (on the N2) to switch between the two. I of course
+encountered difficulty in this task owing to Blocks A &amp; B on the N2 card being in
+different places to that documented (i.e. for block A read block B, and vice
+versa).
+</p>
+<p>
+The TOS command structure is fairly extensive, with commands being
+entered in the true NAS&shy;SYS fashion, i.e. a single command letter followed by a
+number of arguments. In TOS these arguments are obligatory and are summarised
+below.
+</p>
+<table class="indent">
+<!--colgroup><col style="width: 3em"><col></colgroup-->
+<tr><td>B d</td><td>Save BASIC file on drive d</td></tr>
+<tr><td>C d</td><td>Display catalogue of drive d</td></tr>
+<tr><td>D d nn</td><td>Delete file number nn from drive d</td></tr>
+<tr><td>I</td><td>Initialise a blank tape in drive A</td></tr>
+<tr><td>J</td><td>BASIC cold start</td></tr>
+<tr><td>N</td><td>NAS&shy;SYS cold start</td></tr>
+<tr><td>P d</td><td>Save NASPEN file on drive d</td></tr>
+<tr><td>Q</td><td>NASPEN warm start</td></tr>
+<tr><td>R</td><td>Rewind both tapes, read in catalogues</td></tr>
+<tr><td>R d nn</td><td>Read file nn from drive d</td></tr>
+<tr><td>T d ssss</td><td>Transfer file nn from drive d to the other drive</td></tr>
+<tr><td>W d ssss eeee</td><td>Write file from &pound;ssss to &pound;eeee-1 to drive d</td></tr>
+<tr><td>X</td><td>Rewind both tapes prior to removal</td></tr>
+<tr><td>Z</td><td>BASIC warm start</td></tr>
+</table>
+<p>
+I understand that the latest version of TOS has a multiple-delete
+command, which presumably is of the form D d nn xx yy &hellip; which would delete file
+numbers nn, xx, yy, etc. from the tape in drive d. I have made alterations to TOS
+to include the following (extra) commands:
+</p>
+<table class="indent">
+<colgroup><col style="width: 3em"><col><col></colgroup>
+<tr><td>E xxxx</td><td>&ndash;</td><td>Execute program at address xxxx. Additional arguments
+					may be supplied, as with the NAS&shy;SYS &lsquo;E&rsquo; command.</td></tr>
+<tr><td>R d</td><td>&ndash;</td><td>Rewind the tape &amp; read the catalogue of the specified
+					drive (TOS only does this for both drives at once).</td></tr>
+<tr><td>X d</td><td>&ndash;</td><td>Rewind the specified tape to the start prior to removal.</td></tr>
+<tr><td>Y</td><td>&ndash;</td><td>BASIC warm start.</td></tr>
+<tr><td>Z d</td><td>&ndash;</td><td>Save ZEAP file on the specified drive.</td></tr>
+</table>
+<p>
+When saving a file, TOS prompts for a filename, which may be upto 17
+characters long. This gives ample room for, say, the version number and, in the
+case of machine code files, the execution address. With the Write command TOS
+also prompts for a single-character filetype (BASIC &amp; NASPEN default to B and P
+respectively). No check is made to see if there is already a file of the name you
+have specified. Each file is assigned a file number, and this number is used to
+access the file. This reduces the chance of typing errors, which is quite
+possible if one had to type in 17-character filenames each time. It does mean,
+however, that when loading a file under program control (i.e. from another
+program, e.g. loading a data file into RAM) that the file number be specified.
+While (short) routines are given in the manual for saving a (named) file &amp;
+loading a (numbered) file under program control, no routine is given for loading
+a named file. When you consider that the Delete command can cause the assigned
+filenumbers to change, this is a serious drawback. No source listing is supplied,
+but having disassembled the software, writing such a routine shouldn&rsquo;t be too
+difficult.
+</p>
+<p>
+There were a couple of bugs in TOS, which interfere with the operation of
+the &lsquo;I&rsquo; command, in which the blank catalogue written to the tape isn&rsquo;t really
+blank. If any other reader has found this problem, there are a couple of bytes to
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 21 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../21/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../22/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_14.pdf#page=21" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

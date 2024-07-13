@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>INMC 80 News - September 1980 &ndash; January 1981 - Issue 2</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">INMC 80 News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">September 1980 &ndash; January 1981 &middot; <span class="nowrap">Issue 2</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../01/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 10 of 59</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../59/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-inmc-80-news issue-02 page-10" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div class="noindent">
+<p>
+If the C/B board is connected to the N1 with both clocks to the external clock pin,
+then the output clock will cause the receive clock to slave to its own frequency, and
+one might as well not have a phase locked loop at all. The clocks should be connected
+to the UART by a single pole double throw switch, which is thrown to the receive side
+to receive, and to the transmit side to transmit. Alternately, a bit of surgery on the
+board will allow a track to be cut which joint the two clock pins on the UART, and the
+correct leads attached to each pin. In my cases, I took all the connections I required
+to a connector I mounted on the N1 board, and made a connection through a multiple
+switch to allow either Nascom Tape Standard or 1200 CUTS to be selected. The
+reliability this modification (of seperate clocks) has given is unbelievable &ndash; I&rsquo;ve
+almost forgotten about tape errors.
+</p>
+<p>
+With regard to tape quality, I use Microdigital mostly, and for very large files BASF
+LH60 or FUJI FL30, with no problems at all. If available, use a frequency meter to set
+output clock from 555 to 76.8Hz, and if thought desireable, check the capture range of
+the PLL as described by Mr. Cottis in
+<!-- External Link --><a href="https://worldradiohistory.com/UK/Personal-Computer-World/70s/PCW-1979-12-S-OCR.pdf" title="External Link: Personal Computer World, December 1979" target="_blank" rel="noreferrer">PCW December 1979</a><!-- /External Link -->.
+</p>
+<p>
+Arising from my notes on implementing a Tiny Pascal, I have since optained from LP
+Enterprises a copy of the <!-- External Link --><a href="https://en.wikipedia.org/wiki/Intel_8080" title="External Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->
+ runtime support and P code to machine code converter
+written in Basic. These, bound together with a copy of the three original articles so
+that they form a complete unit, cost 11.95, and would form a good starting point for
+someone wishing to get a Pascal up and running. Also of interest are articles in the
+LSG first four issues on the subject of getting this language running on a O*mm*d*r*
+P*t (I don&rsquo;t use dirty words, unlike Dr Dark). As my own machine has packed up, and is
+currently having a holiday in Nascom&rsquo;s repair Dept, I have not been able to progress
+any further with the development of the Pascal. I have however discovered that there
+is available from Springer Verlag: &ldquo;A Concurrent <span class="uppercase">Pascal</span> Compiler for Minicomputers&rdquo; by
+A.C. Hartman, which describes a seven pass compiler for Concurrent Pascal in detail,
+and from McGraw Hill: &ldquo;&nbsp;the BYTE Book of <span class="uppercase">Pascal</span>&rdquo;, with &ldquo;two versions of a Pascal
+Compiler, one written in BASIC, and the other in 8080 assembly language&rdquo;. I have both
+of these books on order, and will report on them when they arrive.
+</p>
+<h4>
+General Points:
+</h4>
+<p>
+Weller&rsquo;s assembler has a nice feature &ndash; it can read source from a paper tape, and
+assemble it, which is a nice trick for very large programs. I must have a go at that.
+It could be implemented on Zen fairly easily.
+</p>
+<p>
+Has anyone given any thought to the inelligance of designing for the Z80 as if it were
+an 8080 with a few extra instructions? In my view the Z80 is a very different machine
+to the 8080. For example, in the case of a Nascom, which is not running under
+interrupt control in general, the ancillary bank of registers is there and empty most
+of the time. Zeap uses this to good advantage. The indexing instructions are very
+rarely used, and yet they can very easily lead to a nice neat compact solution to a
+problem. The relative jumps can allow position independant code to be written, which
+can have advantages if you run out of memory on a big assembly. The Nascom BASIC seems
+to be an 8080 Basic with input/&#x200b;output patches all over it, which are concerned with
+deciding which monitor is available, and even emulating it (?). I have discussed the
+disassembly with a fellow Nascom fanatic (a trusted associate) and we are of the
+opinion that were it written in Z80 code from the beginning, it could be made about 20
+o/o smaller and about 15 o/o faster. For example, it could on initialisation look to
+see which monitor it had available and set a flag which it would look at each time it
+wanted input or output, instead of doing all the tests it seems to do. As I am working
+towards a Pascal compiler, I am not inclined to have a go at rewriting it &ndash; I think
+I&rsquo;ll save the 35.00 for the XTAL BASIC and put it towards the price of CP/M V2.2 and a
+floppy disc controller. Can anyone help with details on I.B.M. 33FD 8&Prime; floppies &ndash; I
+have two on indefinite loan, and would like to get them running, but have no further
+details other than that they are in working order. I understand them to be single
+sided single density, rather old-fashioned and outmoded really, but still 250K bytes
+on each&nbsp;!
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../01/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 10 of 59</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../59/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/INMC_80_News_2.pdf#page=10" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

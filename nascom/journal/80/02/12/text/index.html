@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - 2/80</title>
+	<!-- Sun, 07 Jul 2024 08:26:12 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi">2/80</h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 12 von 16</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 1 Spalten: Start --><div class="row"><div class="col-sm-12">
+<h1 id="article1">
+Arbeiten mit Assembler
+</h1>
+
+<p>
+Nachdem im <a href="../../../01/12/text/#article1">letzten Heft</a>
+in dem Artikel &bdquo;Arbeiten mit
+Assembler&ldquo; erläutert wurde, wie ein Assembler arbeitet und
+wie man mit ihm umgeht, sollen jetzt die Assembler, die für
+den <span class="uppercase">Nascom</span> lieferbar sind, vorgestellt und verglichen werden.
+</p>
+<p>
+In Deutschland sind folgende Assembler für den <span class="uppercase">Nascom</span> lieferbar:
+</p>
+<p class="indent">
+ZEAP&nbsp;1.1, &nbsp;
+ASM/&#x200b;EPROM V1.0, &nbsp;
+ZEAP&nbsp;2.0, &nbsp;
+ASM/&#x200b;EPROM V2.0
+</p>
+<p>
+ZEAP&nbsp;1.1
+und ZEAP&nbsp;2.0 wurden von der englischen Firma SIGMA Software
+entwickelt, ASM/&#x200b;EPROM V1.0 und V2.0 von dem deutschen Systemhaus
+<!-- External Link --><a href="https://www.eah-jena.de/scitec/personen/bernd-ploss" title="Externer Link: Bernd Ploss" target="_blank" rel="noreferrer">Ploss Datenelektronik&nbsp;&ndash; Systementwicklung</a><!-- /External Link -->.
+ZEAP&nbsp;1.1 und ASM/&#x200b;EPROM
+V1.0 laufen mit den <span class="uppercase">Nascom</span> Monitoren <span class="uppercase">Nasbug</span>&nbsp;T2 und T4, ZEAP&nbsp;2.0
+und ASM/&#x200b;EPROM V2.0 laufen mit NAS-SYS. ZEAP&nbsp;1.1 und 2.0 werden
+auf Kassette geliefert und müssen vor dem Betrieb geladen
+werden, ASM/&#x200b;EPROM V1.0 und V2.0 werden in EPROMs geliefert und
+sind nach dem Einschalten des Systems sofort verfügbar.
+</p>
+<p>
+Wir haben alle Assembler auf Herz und Nieren getestet und haben
+festgestellt, daß sie einwandfrei funktionieren und relativ
+einfach zu bedienen sind. Alle vier Assembler sind also wohl ihr
+Geld wert. Ein ausführlicher Vergleich soll Ihnen die
+Entscheidung erleichtern, welcher Assembler für Sie der
+&bdquo;Richtige&ldquo;
+ist.
+</p>
+<br>
+
+<div class="table-responsive">
+<!--style type="text/css"> td, th { padding-top: 10 }</style-->
+<table class="donthyphenate">
+<colgroup>
+	<col style="width: 20%">
+	<col style="width: 20%">
+	<col style="width: 20%">
+	<col style="width: 20%">
+	<col style="width: 20%">
+</colgroup>
+<tr>
+	<td></td>
+	<td><u>ZEAP&nbsp;1.1</u></td>
+	<td><u>ASM/&#x200b;EPROM V1.0</u></td>
+	<td><u>ZEAP&nbsp;2.0</u></td>
+	<td><u>ASM/&#x200b;EPROM V2.0</u></td>
+</tr>
+<tr>
+	<td>Vertrieb</td>
+	<td>NAS, MKS, PDS<br>
+		+ Distributoren</td>
+	<td>MKS, PDS<br>
+		+ Distributoren</td>
+	<td>NAS, MKS, PDS<br>
+		+ Distributoren</td>
+	<td>MKS, PDS<br>
+		+ Distributoren</td>
+</tr>
+<tr>
+	<td>Entwicklung</td>
+	<td>Sigma</td>
+	<td>PDS</td>
+	<td>Sigma</td>
+	<td>PDS</td>
+</tr>
+<tr>
+	<td>Preis (+MWSt)</td>
+	<td>160.&ndash;&nbsp;DM</td>
+	<td>240.&ndash;&nbsp;DM</td>
+	<td>160.&ndash;&nbsp;DM</td>
+	<td>240.&ndash;&nbsp;DM</td>
+</tr>
+<tr>
+	<td>geliefert in</td>
+	<td>Kassette</td>
+	<td>EPROMs <!-- External Link --><a href="https://deramp.com/downloads/eprom_programmers/TMS2708.pdf" title="Externer Link" target="_blank" rel="noreferrer">2708</a><!-- /External Link --></td>
+	<td>Kassette</td>
+	<td>EPROMs 2708</td>
+</tr>
+<tr>
+	<td>Länge</td>
+	<td>2,7 k</td>
+	<td>3 k</td>
+	<td>4 k</td>
+	<td>3 k</td>
+</tr>
+<tr>
+	<td>Handbuch</td>
+	<td>ausführlich<br>
+		englisch</td>
+	<td>ausführlich<br>
+		deutsch</td>
+	<td>ausführlich<br>
+		englisch</td>
+	<td>ausführlich<br>
+		deutsch</td>
+</tr>
+<tr>
+	<td>läuft unter</td>
+	<td class="uppercase">Nasbug&nbsp;T2, T4</td>
+	<td class="uppercase">Nasbug&nbsp;T2, T4</td>
+	<td>NAS-SYS</td>
+	<td>NAS-SYS</td>
+</tr>
+<tr>
+	<td colspan="5">Speicherbelegung:</td>
+</tr>
+<tr>
+	<td>Assembler</td>
+	<td>0F00 &ndash; 1B10</td>
+	<td>D000 &ndash; DBFF</td>
+	<td>1000 &ndash;1FB4</td>
+	<td>D000 &ndash; DBFF</td>
+</tr>
+<tr>
+	<td>Textpuffer</td>
+	<td>ab 1B11</td>
+	<td>ab 1000</td>
+	<td>ab 2000</td>
+	<td>ab 1000</td>
+</tr>
+<tr>
+	<td>Sonderwünsche, z.B. andere Speicherbelegung</td>
+	<td>nein</td>
+	<td>durch den Hersteller</td>
+	<td>nein</td>
+	<td>durch den Hersteller</td>
+</tr>
+<tr>
+	<td colspan="5"><u>Editor:</u></td>
+</tr>
+<tr>
+	<td>Eingabe einer Zeile</td>
+	<td colspan="2">
+		Zeile wird mit Zeilennummer
+		eingegeben, Zeilennummern können automatisch
+		erzeuht	werden.
+	</td>
+	<td colspan="2">
+		Zeile wird mit Zeilennummer
+		eingegeben, Zeilennummern können automatisch
+		erzeugt	werden.
+		Mit den NAS-SYS Editiermöglichkeiten kann in
+		der eingegebenen Zeile korrigiert werden
+		(Cursorbewegungen, Einfügen/&#x200b;Löschen von
+		Zeichen)
+	</td>
+</tr>
+</table>
+</div>
+
+<!-- 1 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 12 von 16</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/80-02.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

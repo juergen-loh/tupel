@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Scorpio News - April&ndash;June 1987 &ndash; Volume 1. Issue 2.</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Scor&shy;pio News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">April&ndash;June 1987 &ndash; <span class="nowrap">Volume 1.</span> <span class="nowrap">Issue 2.</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 24 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-scorpio-news issue-12 page-24" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+The buffer is (normally) 200 bytes long. Commands like:
+</p>
+<pre class="indent">
+A0&gt;M80 =BIOS;ECHO Linking;L80 BIOS/N,BIOS//E;ECHO Erasing;ERA *.BAK
+</pre>
+<p>
+then become possible which is very useful to the user. The MCB is in fact
+widely utilized by the Z system utilities for maximum power and flexibility. If
+a commend string is found in this buffer on cold boot, the command(s) will be
+executed. Unless the multiple command facility is enabled, the Z system cannot
+function to any real advantage.
+</p>
+<h3>
+Memory Based Named Directory Segment.
+</h3>
+<p>
+As intimated above, I feel that this facility is not of any especial advantage
+on a single user system based on a couple of smallish floppies. On a system
+with several users, especially where a Winchester is used, the situation is
+completely different. If this facility is enabled, up to 14 (Could be extended
+at cost of more memory) Names may be allocated to Drives and USER areas. Thus
+A16: contains HLP files. A15: contains most system utilities, etc. Typical
+name allocations are:
+</p>
+<p class="center">
+A16 &ndash;&ndash; HELP, &nbsp; &nbsp; &nbsp;
+A15 &ndash;&ndash; ROOT, &nbsp; &nbsp; &nbsp;
+A0 &ndash;&ndash; BASE, &nbsp; &nbsp; &nbsp;
+C0 &ndash;&ndash; BAK, &nbsp; &nbsp; &nbsp;
+P0 &ndash;&ndash; MDSK
+</p>
+<p>
+The names allocated are a matter of user preference. I keep Z3 System
+development files in B0, so this I call Z3, and BASIC in A4: so this is called
+BAS. The main benefit of this is that one does not have to remember which DU
+one has allocated to a certain function. The directory name is displayed in the
+prompt:
+</p>
+<p class="center">
+A0:BASE&gt; &nbsp; &nbsp; &nbsp; C0:BAK&gt; &nbsp; &nbsp; &nbsp; B6:PAS&gt; &nbsp; &nbsp; &nbsp; P0:MDSK&gt; etc;
+</p>
+<p>
+To move about one may use either the DU: or DIR: form and so&ndash;
+</p>
+<table class="center">
+<tr><td>A0:BASE&gt;ROOT:</td><td>(enter)</td><td>&ndash;&ndash;&ndash;&ndash;&gt;</td><td>A15:ROOT&gt;</td><td>is a valid as</td></tr>
+<tr><td>A0:BASE&gt;A15:</td><td>(enter)</td><td>&ndash;&ndash;&ndash;&ndash;&gt;</td><td>A15:ROOT&gt;</td><td></td></tr>
+</table>
+<p>
+In addition Z system utilities recognize either DU: or DIR: form so&ndash;
+</p>
+<table class="center">
+<tr><td>MCOPY ROOT:=BAK:THISFILE.BAS</td><td>or
+<tr><td>MCOPY ROOT:=C0:THISFILE.BAS</td><td>or
+<tr><td>MCOPY Al5:=C0:THATFILE.DOC</td><td>or
+<tr><td>MCOPY A15:=BAK:*.*</td><td>
+</table>
+<p>
+are ALL equally valid. Directory names may be up to 8 characters long, and may
+optionally be password protected by a password of up to 8 characters long. For
+more security, the DU: form of access may be disabled, so that password
+protected directories become more secure, especially to non technical user.
+Wheel protection of Disabling of the &lsquo;Peek&rsquo; command, and removal of debug
+utilities would be strictly necessary to give added protection where more
+experienced users were using the system. A moderately secure system is possible
+however, in a multi user environment.
+</p>
+<p>
+One particular point about allowing DIR names and USER areas to be displayed in
+the CCP prompts is that the screen edit feature of most of our BIOS&rsquo;s needs to
+be modified. This Feature starts by looking for the &lsquo;&gt;&rsquo; prompt in the EDIT line
+returned from the Screen, and in both SYS and MAP BIOS&rsquo;s starts at about the 4th
+character out from the start of the line. I have modified this to start out at
+about the 12th character as the extra data before the &lsquo;&gt;&rsquo; can move this prompt
+character well out into the line. If the BIOS source is available this can be
+easily changed, otherwise it becomes a question of asking the supplier to tell
+you which byte changes the start point of this routine, or doing a bit of work
+with a debugger or disassembler. Generally no extra code is needed, (in fact I
+rewrote the routine in my BIOS and saved a number of bytes). &ndash; just a change of
+address to point further into the edit buffer and increase the loop counter.
+e.g. the original code in SYS18 was LD HL,EDBUF+3, LD B,3 and I changed this to
+LD HL,EDBUF+12, LD B,12. EDBUF a a block of about 83 &ndash; 00 characters in a
+system image, and the code to be modified usually lies just before this buffer.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 24 of 51</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../51/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Scorpio_News_1_2.pdf#page=24" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

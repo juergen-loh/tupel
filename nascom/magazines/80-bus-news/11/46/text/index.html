@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;March 1982 - Volume 1 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 16:39:10 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;March 1982 &middot; <span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../45/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../inmc-80-news/05/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 46 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../47/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-11 page-46" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+If you have the assembly listing you can type it in, modify it and reassemble.
+Or you can put a 2 byte JR to the end of the program in place of the LDI, and
+put the new code at the end with conditional and unconditional jumps back to
+the required places. If you adopt the latter course, note that the code proper
+ends at 0D48H with a C9, but the next 2 bytes are used as a store.
+</p>
+<p>
+BASIC IN RAM. This one led to some embarrassment for me because I
+overlooked the cause and made a long distance telephone call to someone who
+kindly pointed out my &lsquo;basic&rsquo; error. When BASIC is executed it asks how much
+RAM to use. If you do not wish to reserve any and press enter, BASIC will
+&lsquo;measure&rsquo; the RAM. If there is no ROM or &lsquo;empty&rsquo; RAM at the top, just below
+BASIC, the <span class="uppercase">Nascom</span> ROM BASIC will corrupt itself as it is not protected against
+this possibility (since it expects to be in ROM). The solution is to enter a
+limit of say 55000 in response to the query SIZE?.
+</p>
+<p id="article1">
+NAS-SYS <span class="uppercase">Handshake</span>. One of my very few &lsquo;hates&rsquo; about <span class="uppercase">Nascom</span> Software
+has been the need to have a number of &lsquo;USER&rsquo; routines, each one marginally
+different, to enable printer handshaking to ZEAP, NASPEN, NAS-SYS etc. Since
+it is now easy to overwrite parts of the firmware on a temporary basis, I have
+included a routine, accessed from my MENU, that provides H/S by altering the
+SRLX routine in NAS-SYS. The SRLX routine is used to send bytes to the serial
+port, so it is used by all devices talking to a serial printer. I use an
+<!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/nascom/imp.htm" title="External Link" target="_blank" rel="noreferrer">IMP</a><!-- /External Link -->
+printer at present, so my routine is written to suit this printer but the
+software can easily be changed if necessary. The space allocated to SRLX is
+not sufficient to allow the modified routine to be put in the same locations,
+and the next routines may be needed by the Programs that are using the
+Printer. One routine that is most unlikely to be required during the execution
+of a program is the &lsquo;M&rsquo; routine. My overwrite routine therefore looks like
+this (NAS-SYS&nbsp;3):
+</p>
+<img class="img-fluid" src="../../Image-46-1.png" alt="" width="601" height="188">
+<p class="continued">
+At the end of the program, a RESET restores NAS-SYS to its unmodified state.
+The same overwrite routine could be used with NS1 but addresses would have to
+be changed.
+</p>
+<p>
+This system has been in use for about three months now and the ability
+to switch rapidly between systems and formats has been very useful. Particular
+advantages over the old <span class="uppercase">Multimapping</span> system have been the ability to use 64K
+of RAM, to load NS firmware and utilities instantly and to overwrite NAS-SYS
+and to restore it at will. It is also very useful to be able to load software
+into memory under one operating system, and to switch to the other system
+although this was also possible with the old MM setup.
+</p>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../45/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../inmc-80-news/05/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 46 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../12/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../47/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_11.pdf#page=46" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

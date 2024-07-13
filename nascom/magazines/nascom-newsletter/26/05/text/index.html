@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Nascom Newsletter - Volume 2 - Number 6 - January 1983</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Nascom News&shy;let&shy;ter</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 6 &middot;</span> <span class="nowrap">January 1983</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 5 of 41</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../41/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-nascom-newsletter issue-26 page-05" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<h3>
+Assembler.
+</h3>
+<p class="indent">
+Symbol tables can be created, sorted alphabetically, saved
+and, more importantly, invoked from a pseudo op as an external
+set of labels on disc in which case there is no check for
+re-definition and that I do lament.
+</p>
+<p class="indent">
+LIST &ndash; has many forms (source listing is done from the Editor
+by CTRL X).
+</p>
+<p class="indent">
+LINES &amp; MARGIN &ndash; control the listing position and length on
+paper (and in fact).
+</p>
+<p class="indent">
+DIR &ndash; directories of your disc can be seen easily but only on
+one disc.
+</p>
+<p class="indent">
+DISC &ndash; allows you to designate a working disc if you want a
+different one so you don&rsquo;t have to specify which disc all the
+time. This is more useful than a limitations.
+</p>
+<p class="indent">
+There are two modes of assembly, one (1) for single origin
+and, my preference, mode 0 for multi-origin assemblies. The
+latter creates file which can dump the code in many absolute
+locations when called via the assembler.
+</p>
+<p class="indent">
+One more lament &ndash; I haven&rsquo;t been able to execute files like
+DEBUG direct from assembler. Perhaps I shouldn&rsquo;t try but I
+would like to have succeeded.
+</p>
+<h3>
+Pseudo Ops.
+</h3>
+<p class="indent">
+PUSH&rsquo;S or POP&rsquo;s &ndash; can be strung on one line &ndash; neat.
+</p>
+<p class="indent">
+NOP 4 &ndash; some mnemonics can be repeated by following them with
+a number. Very mice.
+</p>
+<p class="indent">
+Binary, hex, decimal plus any radix up to 16 can be handled
+using Q. Octal freaks will like this if there are still any
+around.
+</p>
+<p class="indent">
+ENDP &ndash; listings can be thrown to a new page at will.
+</p>
+<p class="indent">
+PAUSE &ndash; nice op to stop assembly. Gives you time to think
+before ploughing on.
+</p>
+<p class="indent">
+COND/&#x200b;ENDC &ndash; gives conditional assembly.
+</p>
+<p class="indent">
+QUERY &ndash; requests a value during assembly. Can be used with
+above to form fancy conditional assemblies.
+</p>
+<p class="indent">
+PRINT &ndash; displays during assembly &ndash; useful.
+</p>
+<p class="indent">
+FOR/&#x200b;NEXT &ndash; creates repetative code with few labels in each
+iteration.
+</p>
+<p class="indent">
+MACR/&#x200b;RPT &ndash; repeats code n+i times &ndash; not as useful as above
+</p>
+<p class="indent">
+INSERT &ndash; allows a side file to be inserted from disc during
+assembly. A good working assembly could be accessed with this.
+</p>
+<p class="indent">
+DEFL &ndash; all the old faithfulls are there plus this one which
+allows a label to be redefined.
+</p>
+<p class="indent">
+ADDR &ndash; reverses the byte order in a word as per 6800. Cross
+assembly is possible by getting other versions of this
+assembler.
+</p>
+<p class="indent">
+EXEC &ndash; allows a machine code routine to be executed. Strange
+one this but I could make good use of it given time.
+</p>
+<p class="indent">
+LRRC, etc &ndash; logical shifts and inverts can be performed on
+labels &ndash; has possibilities.
+</p>
+<p class="indent">
+NAME &ndash; puts the name on every page &ndash; date and time if you need
+and I do minutes as well!
+</p>
+<p class="indent">
+OPCD &ndash; this in a macro but you define the code in hex. The
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 5 of 41</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../41/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../06/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Nascom-Newsletter-2-6.pdf#page=7" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 1 - Number 2 - September 1981</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 1 &middot;</span> <span class="nowrap">Number 2 &middot;</span> <span class="nowrap">September 1981</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 17 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-12 page-17" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<h1 id="article1" class="uppercase">
+Using Pixel Graphics From Assembler
+</h1>
+<h2 class="author">
+By G. N. Evans
+</h2>
+<p>
+The Basic ROM on the Nascom contains plenty of useful routines for the
+assembler programmer. The problem is finding out where they are and, more
+importantly, how to drive them. I have discovered most of the useful routines, and I
+am using many of them in a Basic Compiler which I am currently writing.
+</p>
+<p>
+Below I have given details on how to make use of the pixel graphics routines.
+Should you try to access a non-existent point, then Basic would take over, issue an
+error message, and then remain in Basic. To prevent this I have written a routine,
+CHECK, which tests the validity of the co-ordinates; the carry flag is set on return if
+they are not valid. The routine also converts, the y co-ordinates so that y = 0
+corresponds to the bottom of the screen and y = 47 to the top, which is much more
+logical and convenient than Microsoft&rsquo;s ordering of the y axis.
+</p>
+<p>
+Here is an example of the use of the routines to draw a vertical line through the
+centre of the screen:
+</p>
+<table class="indent" style="width: 90%">
+<tr><td>11 00 18</td><td>VERT</td><td>LD DE, &pound;1800</td><td>POINT (24,0)</td></tr>
+<tr><td>D5</td><td>NEXT</td><td>PUSH DE</td><td>Save current point</td></tr>
+<tr><td>CD 1F 80</td><td></td><td>CALL CHECK</td><td>Legal co-ordinates?</td></tr>
+<tr><td>38 0C</td><td></td><td>JR C, ERROR</td><td>If not, jump</td></tr>
+<tr><td>CD 00 80</td><td></td><td>CALL SETP</td><td>Set point</td></tr>
+<tr><td>D1</td><td></td><td>POP DE</td><td>Recover current point</td></tr>
+<tr><td>1C</td><td></td><td>INC E</td><td>Next point up screen</td></tr>
+<tr><td>7B</td><td></td><td>LD A, E</td><td>Transfer to accumulator</td></tr>
+<tr><td>FE 30</td><td></td><td>CP 48</td><td>Has whole line been set?</td></tr>
+<tr><td>20 F0</td><td></td><td>JR NZ, NEXT</td><td>Repeat if not</td></tr>
+<tr><td>DF 5B</td><td></td><td>SCAL &pound;5B</td><td>Repeat to monitor, etc.</td></tr>
+<tr><td></td><td>ERROR</td><td>&hellip;</td><td>Put error routine here</td></tr>
+</table>
+<h3 class="uppercase">
+Routines To Use The Pixel Graphics
+</h3>
+<table style="width: 90%">
+<tr><td></td><td></td><td></td><td>ORG &pound;8000</td><td></td></tr>
+<tr><td></td><td></td><td></td><td colspan=2>ADDRESSES IN BASIC ROM</td></tr>
+<tr><td></td><td></td><td>BCSPOS</td><td>EQU &pound;FF31</td><td></td></tr>
+<tr><td></td><td></td><td>BSET</td><td>EQU &pound;FF43</td><td></td></tr>
+<tr><td></td><td></td><td>BRESET</td><td>EQU &pound;FF58</td><td></td></tr>
+<tr><td></td><td></td><td>BPOINT</td><td>EQU &pound;FFED</td><td></td></tr>
+<tr><td colspan=5><br></td></tr>
+<tr><td colspan=5><h4>SET (D, E)</h4></td></tr>
+<tr><td>8000</td><td>CD1680</td><td>SETP</td><td>CALL CSPOS</td><td>Calculate screen posn.</td></tr>
+<tr><td>8003</td><td>CD43FF</td><td></td><td>CALL BSET</td><td>Use Basic ROM</td></tr>
+<tr><td>8006</td><td>C9</td><td></td><td>RET</td><td></td></tr>
+<tr><td></td><td></td><td colspan=3><br>All register corrupted (except alternate set)</td></tr>
+</table>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../11/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 17 of 33</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../13/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../33/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-1-2.pdf#page=19" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

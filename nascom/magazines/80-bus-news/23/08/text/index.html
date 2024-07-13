@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;June 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 3</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 8 of 59</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../59/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-23 page-08" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+address lines, but this would mean looking at more than 1 input port, and I was
+already using that for something else.
+</p>
+<p>
+Address lines A4 to A9 can be used to identify which of the 16 character
+lines is being addressed. This brings the pen location resolution to 1 in 14. To
+increase the resolution-we can lock at either all 14 raster lines, or, as the
+minimum sub-pixel is only 4 raster lines, we can look at the address lines that
+relate to the selection of each group of 4 raster lines. The RS lines, RS0 to
+RS3, are used to select the appropriate raster lines for each pixel, and so by
+looking at RS2 and RS3 it becomes possible to identify on which of the
+sub-pixels the pen is resting.
+</p>
+<p>
+A6 to A9 can, therefore, be treated as the Most Significant Bits, and RS2
+and RS3 as the Least Significant Bits, of a six-bit address that can identify a
+location in a column of 48 locations.
+</p>
+<p>
+To tap off these address lines, I soldered 14-pin header-plugs directly on
+to IC68 and ICS3. This method allowed me to solder wires to the plug with ease,
+and gave test-points to see if I had blown the chip by soldering too close to
+it! The six address lines were taken along the board and put on to the bus at
+pins 59 to 64. On the Gemini 80-BUS, these pins are now allocated as interrupt
+request lines, powerfail warning, and backup power, so it might be advisable not
+to put the video address lines on to the bus if you can help it. The Video
+Blanking signal, VBLANK, was also taken to the bus so that the screen data would
+be updated only in the screen blanking period. this prevents screen flicker when
+drawing images on to the screen.
+</p>
+<h3 class="uppercase">
+Other Hard&shy;ware
+</h3>
+<p>
+For certain routines, I wanted to know if the pen was in the same place, or
+whether it had moved from an area of white to an area of black. Unfortunately,
+you can not merely test the pen status. This is because the sub-pixel consists
+of 4 raster lines, each being 64us in duration, and each raster-strike on the
+active area of the pen produces a pulse of 20us duration. As the picture frame
+is re-displayed every 20ms, the sub-pixel will produce a train of four 20us
+pulses every 20ms. It is only through the persistance of vision that the image
+appears to be constantly displayed.
+</p>
+<p>
+It now becomes necessary to build a circuit that will output two pulses.
+One pulse will be of 20us duration, to indicate that the pen has been struck by
+a raster, the other pulse will go high when the pen has been struck, and remain
+high for period of time that is greater than 20ms and will also be kept high
+every time that the pen is struck. By doing this, a high state is output as long
+as the pen remains over the displayed area, even though the area is being
+refreshed every 20ms and being displayed for only 80us.
+</p>
+<p>
+Figure 5 is the circuit diagram for the pen interface. IC1 is an NE555
+timer configured as an astable multivibrator, the frequency of which is adjusted
+by RV1. IC2 is a 7493 Binary counter and IC3 and 4 are 7400 NAND gates and
+74LS126 TRI-STATE buffers.
+</p>
+<p>
+On power-up, the 7493 Q outputs are in a low state and so IC3(a), in
+conjunction with the inverted output of IC2 and the output from the clock
+generator, begins to clock the counter through 16 counts until Q3 goes high. At
+this point, one of the inputs to IC3(a) becomes low and so the clock pulses are
+inhibited and the 7493 ceases to count. The HIGH at Q3 is inverted by IC3(b) and
+buffered by the TRI-STATE buffer IC4(a), the output of which will be enabled
+only when SW1 is closed.
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 8 of 59</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../59/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_23.pdf#page=8" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

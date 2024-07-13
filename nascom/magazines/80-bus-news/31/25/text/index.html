@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-31 page-25" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    57</span>
+
+F0D0 2ADA10     FRE:    LD      HL,(ARREND)     ; Start of free memory
+F0D3 EB                 EX      DE,HL           ; To DE
+F0D4 210000             LD      HL,0            ; End of free memory
+F0D7 39                 ADD     HL,SP           ; Current stack value
+F0D8 3AAD10             LD      A,(TYPE)        ; Dummy argument type
+F0DB B7                 OR      A
+F0DC CAECF0             JP      Z,FRENUM        ; Numeric - Free variable space
+F0DF CD53F3             CALL    GSTRCU          ; Current string to pool
+F0E2 CD53F2             CALL    GARBGE          ; Garbage collection
+F0E5 2A5A10             LD      HL,(STRSPC)     ; Bottom of string space in use
+F0E8 EB                 EX      DE,HL           ; To DE
+F0E9 2AC310             LD      HL,(STRBOT)     ; Bottom of string space
+F0EC 7D         FRENUM: LD      A,L             ; Get LSB of end
+F0ED 93                 SUB     E               ; Subtract LSB of beginning
+F0EE 4F                 LD      C,A             ; Save difference if C
+F0EF 7C                 LD      A,H             ; Get MSB of end
+F0F0 9A                 SBC     A,D             ; Subtract MSB of beginning
+F0F1 41         ACPASS: LD      B,C             ; Return integer AC
+F0F2 50         ABPASS: LD      D,B             ; Return integer AB
+F0F3 1E00               LD      E,0
+F0F5 21AD10             LD      HL,TYPE         ; Point to type
+F0F8 73                 LD      (HL),E          ; Set type to numeric
+F0F9 0690               LD      B,80H+16        ; 16 bit integer
+F0FB C32AF8             JP      RETINT          ; Return the integr
+
+F0FE 3AAB10     POS:    LD      A,(CURPOS)      ; Get cursor position
+F101 47         PASSA:  LD      B,A             ; Put A into AB
+F102 AF                 XOR     A               ; Zero A
+F103 C3F2F0             JP      ABPASS          ; Return integer AB
+
+F106 CD89F1     DEF:    CALL    CHEKFN          ; Get "FN" and name
+F109 CD7BF1             CALL    IDTEST          ; Test for illegal direct
+F10C 0170EA             LD      BC,DATA         ; To get next statement
+F10F C5                 PUSH    BC              ; Save address for RETurn
+F110 D5                 PUSH    DE              ; Save address of function ptr
+F111 CD90E6             CALL    CHKSYN          ; Make sure "(" follows
+F114 28                 DEFB    "("
+F115 CD2DEF             CALL    GETVAR          ; Get argument variable name
+F118 E5                 PUSH    HL              ; Save code string address
+F119 EB                 EX      DE,HL           ; Argument address to HL
+F11A 2B                 DEC     HL
+F11B 56                 LD      D,(HL)          ; Get first byte of arg name
+F11C 2B                 DEC     HL
+F11D 5E                 LD      E,(HL)          ; Get second byte of arg name
+F11E E1                 POP     HL              ; Restore code string address
+F11F CD44ED             CALL    TSTNUM          ; Make sure numeric argument
+F122 CD90E6             CALL    CHKSYN          ; Make sure ")" follows
+F125 29                 DEFB    ")"
+F126 CD90E6             CALL    CHKSYN          ; Make sure "=" follows
+F129 B4                 DEFB    ZEQUAL          ; "=" token
+F12A 44                 LD      B,H             ; Code string address to BC
+F12B 4D                 LD      C,L
+F12C E3                 EX      (SP),HL         ; Save code str&nbsp;, Get FN ptr
+F12D 71                 LD      (HL),C          ; Save LSB of FN code string
+F12E 23                 INC     HL
+F12F 70                 LD      (HL),B          ; Save MSB of FN code string
+F130 C3C8F1             JP      SVSTAD          ; Save address and do function
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    58</span>
+
+F133 CD89F1     DOFN:   CALL    CHEKFN          ; Make sure FN follows
+F136 D5                 PUSH    DE              ; Save function pointer address
+F137 CD09EE             CALL    EVLPAR          ; Evaluate expression in "()"
+F13A CD44ED             CALL    TSTNUM          ; Make sure numeric result
+F13D E3                 EX      (SP),HL         ; Save code str&nbsp;, Get FN ptr
+F13E 5E                 LD      E,(HL)          ; Get LSB of FN code string
+F13F 23                 INC     HL
+F140 56                 LD      D,(HL)          ; Get MSB of FN code string
+F141 23                 INC     HL
+F142 7A                 LD      A,D             ; And function DEFined?
+F143 B3                 OR      E
+F144 CAB9E3             JP      Z,UFERR         ; No - ?UF Error
+F147 7E                 LD      A,(HL)          ; Get LSB of argument address
+F148 23                 INC     HL
+F149 66                 LD      H,(HL)          ; Get MSB of argument address
+F14A 6F                 LD      L,A             ; HL = Arg variable address
+F14B E5                 PUSH    HL              ; Save it
+F14C 2ADE10             LD      HL,(FNRGNM)     ; Get old argument name
+F14F E3                 EX      (SP),HL         ; Save old&nbsp;, Get new
+F150 22DE10             LD      (FNRGNM),HL     ; Set new argument name
+F153 2AE210             LD      HL,(FNARG+2)    ; Get LSB,NLSB of old arg value
+F156 E5                 PUSH    HL              ; Save it
+F157 2AE010             LD      HL,(FNARG)      ; Get MSB,EXP of old arg value
+F15A E5                 PUSH    HL              ; Save it
+F15B 21E010             LD      HL,FNARG        ; HL = Value of argument
+F15E D5                 PUSH    DE              ; Save FN code string address
+F15F CD6BF8             CALL    FPTHL           ; Move FPREG to argument
+F162 E1                 POP     HL              ; Get FN code string address
+F163 CD41ED             CALL    GETNUM          ; Get value from function
+F166 2B                 DEC     HL              ; DEC 'cos GETCHR INCs
+F167 CD36E8             CALL    GETCHR          ; Get next character
+F16A C2ADE3             JP      NZ,SNERR        ; Bad character in FN - Error
+F16D E1                 POP     HL              ; Get MSB,EXP of old arg
+F16E 22E010             LD      (FNARG),HL      ; Restore it
+F171 E1                 POP     HL              ; Get LSB,NLSB of old arg
+F172 22E210             LD      (FNARG+2),HL    ; Restore it
+F175 E1                 POP     HL              ; Get name of old arg
+F176 22DE10             LD      (FNRGNM),HL     ; Restore it
+F179 E1                 POP     HL              ; Restore code string address
+F17A C9                 RET
+
+F17B E5         IDTEST: PUSH    HL              ; Save code string address
+F17C 2A5C10             LD      HL,(LINEAT)     ; Get current line number
+F17F 23                 INC     HL              ; -1 means direct statement
+F180 7C                 LD      A,H
+F181 B5                 OR      L
+F182 E1                 POP     HL              ; Restore code string address
+F183 C0                 RET     NZ              ; Return if in program
+F184 1E16               LD      E,ID            ; ?ID Error
+F186 C3C1E3             JP      ERROR
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../24/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 25 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_31.pdf#page=25" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

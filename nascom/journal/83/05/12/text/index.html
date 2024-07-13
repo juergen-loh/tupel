@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - Mai 1983 - Ausgabe 5</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Mai 1983</span> &middot; <span class="nowrap">Ausgabe 5</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/04/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 12 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/06/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<h1 id="article1">
+16k RAM/&#x200b;EPROM
+</h1>
+<h2>
+ECB-Bus kompatibel
+</h2>
+<h3>
+von J.<span class="uppercase">List</span>/K.<span class="uppercase">Niemann</span>
+</h3>
+<p>
+Ausgangspunkt für die nachfolgend beschriebene Karte war, daß z.B.
+neben ZEAP viele andere Programme auf EPROM&rsquo;s vorlagen und immer wieder
+auch das Problem auftrat, ein Programm auf anderen Rechnern laufen zu
+lassen, ohne erst eine Kopie auf EPROM oder Kassette herstellen zu
+müssen.
+</p>
+<p>
+Ergebnis:Eine Karte mit 8 Steckplätzen, auf denen entweder EPROM&rsquo;s
+<!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="Externer Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->
+oder CMOS-RAM&rsquo;s
+<!-- External Link --><a href="https://sites.ecse.rpi.edu/courses/CStudio/data%20sheets/hm6116.pdf" title="Externer Link" target="_blank" rel="noreferrer">6116</a><!-- /External Link -->
+eingesetzt werden können. Da jeder Platz
+ausblendbar ist, kann man die Karte zur Erweiterung des <span class="uppercase">Nascom</span>&nbsp;I
+benutzen. Die Karte ist bankingfähig. Man kann z.B. auf einer Karte
+ZEAP u.a. und auf einer anderen BASIC einsetzen. (Die Auswahl zwischen
+den beiden Karten erfolgt hier über eine spezielle Umschaltkarte mit
+einem Ausgabeport.)
+</p>
+<p>
+Für die Datensicherung befindet sich auf der Karte ein Akku und ein
+Schreibschutzzschalter.
+</p>
+<p>
+Konzipiert war die Karte ursrünglich für 2MHz. Sie läuft mit einer
+Bestückungsmodifikation aber auch bei 4&nbsp;MHz.
+</p>
+<h4>
+Aufbau und Funktion:
+</h4>
+<p>
+Die Bussignale D0 &ndash; D7, A0 &ndash; A10, A13, A15, RD, WR u. MRQ sind
+gebuffert (D2, D5 und D8). Die Adreßdekodierung erfolgt durch zwei 3&nbsp;:&nbsp;8
+Dekoder (D6 u. D7). Die Kartenadresse wird mit einem Jumper auf X7
+gewählt.
+</p>
+<p>
+Möglich sind die Adressen 0, 16k = 4000H, 32k = 8000H und 48k = C000H.
+</p>
+<p>
+Schalter S1 verbindet Pin 21 der Speicherbausteine wahlweise mit
++5Volt oder über S2 mit WR. Bei Beschaltung mit +5Volt lassen sich
+EPROM&rsquo;s einsetzen. Für RAM-Betrieb muß Pin 21 der jeweiligen
+Speicherplätze mit WE verbunden sein.
+</p>
+<p>
+Bei RAM-Betrieb läßt sich mit S2 in Verbindung mit R23 eine
+Schreibsperre realisieren. In der Stellung s = Sperre wird das
+WR-Signal nicht mehr zum Speicher durchgelassen.
+</p>
+<p>
+D6 hat die Aufgabe, 8 Speicherplätze zu dekodieren. Mit X4, D4 und zwei
+Gattern von D3 besteht die Möglichkeit, jeden Platz auszublenden. Der
+zugeordnete Jumper wird dabei nicht gesteckt. Wenn von der Option
+Ausblendung überhaupt kein Gebrauch gemacht werden soll, braucht D4
+nicht bestückt werden.
+</p>
+<p>
+Beim Auslesen der Karte, d.h. Karte selektiert
+und Rd aktiv, wird über die UND-Verknüpfung V3, V4, R3 und D1 bei
+gestecktem Jumper X6 ein Wait-Zyklus eingefügt. Das kann z.B. beim
+Einsatz langsamer EPROM&rsquo;s erforderlich sein.
+</p>
+<p>
+X3 in Verbindung mit einer der Steuerleitungen MBS 0 &ndash; 7 ermöglicht
+Memory-Paging. Ist kein Jumper auf X3 gesteckt, wird die Kartenadresse
+ausschließlich durch den Jumper auf X7 festgelegt. Befindet sich auf X3
+ein Jumper, muß zusätzlich noch die entsprechende Steuerleitung einen
+aktiv high-Pegel aufweisen.
+</p>
+<p>
+Die Spannungsversorgung im
+Datensicherungsfall erfolgt entweder über den Akku auf der Karte oder,
+bei gestecktem Jumper X5, über den Bus (VCMOS). Bei Versorgung über den
+Bus darf der Akku auf der Karte und R1 nicht montiert sein. Wenn die
+Spannung über den Bus kommt, muß sie kleiner als 5&nbsp;Volt sein.
+</p>
+<p>
+Der Akku
+wird im Normalbetrieb über V1 und R1 gemäß Herstellerangaben
+dauergeladen. An Pin a von X1 und X2 sowie an Pin apf von X9 liegt dann
+annähernd die Versorgungsspannung.
+</p>
+<p>
+Wird die Karte ohne CMOS-RAM betrieben, müssen die Jumper auf X1 und X2
+in Position n gesteckt sein. (V1 kann sonst zerstört werden).
+</p>
+<p>
+Die Jumper dürfen nur bei Einsatz von CMOS-RAM&rsquo;s auf a gesteckt werden.
+</p>
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+<p>
+Fällt die Versorgunsspannung aus, sperrt V1 und V5, V2 schließt R1 kurz
+und schaltet die Akkuspannung auf die Punkte a und apf an X1, X2 und X9.
+</p>
+<p>
+Je nach Netzteil kann das schon ausreichen, um Datenverlust in diesen
+Fällen zu verhindern. Um die Karte definiert abzuschalten, wird ein
+Powerfail-Sigal vom Netzteil (aktiv low) oder einer speziellen
+Baugruppe benötigt (DPR). Wird dies Signal benutzt, muß D6 eine
+CMOS-Version sein.
+</p>
+<p>
+Undefinierte Zugriffe von der CPU kann es dann nicht mehr geben. Bei
+gewolltem Ausschalten der Versorgungsspannung sollte der
+Schreibschutzschalter vorsorglich in die Stellung s gebracht werden.
+</p>
+<p>
+Bei 4&nbsp;MHz-Betrieb müssen D3, D4 und D7 S Versionen sein.
+</p>
+<p>
+Auf der Lötseite sollte zur Vermeidung von Kurzschlüssen eine
+Schutzplatte montiert sein.
+</p>
+<p>
+Die Karte ist doppelseitig, durchkontaktiert und mit einer
+Lötstoppmaske versehen. Bei den Autoren erhältlich für DM&nbsp;90,&ndash; inkl.
+Porto/&#x200b;Verpackung u. Nachnahmegebühren.
+</p>
+<h1 id="article2">
+<span id="senso">
+SENSO
+</span>
+</h1>
+<h3>
+von <a href="../../../../../../impressum/">JÜRGEN LOH</a>
+</h3>
+<p>
+Unter dem Namen
+<!-- External Link --><a href="https://de.wikipedia.org/wiki/Senso_%28Spiel%29" title="Externer Link" target="_blank" rel="noreferrer">SENSO</a><!-- /External Link -->
+wird ein Geraet angeboten, das seinem Bediener
+Farb- und Tonkombinationen vorgibt, die dieser dann nachspielen soll.
+Dieses Spiel gab mir die Anregung zu meinem Programm.
+</p>
+<p>
+Durch die Tatsache, dass mein Nascom weder Farben noch Toene ausgeben
+kann, hat das Spiel in meinem Programm einige Aenderungen erfahren. Der
+Kern der Sache ist jedoch erhalten geblieben.
+</p>
+<p>
+Gestartet wird das Programm mit E0D42. Wenn man dann noch eine Frage
+durch druecken von &bdquo;J&ldquo; beantwortet, erscheint am Anfang der
+naechsten Zeile eine Zahl von 1-8. Hat man diese Zahl getippt,
+erscheint die Zahl nochmals, gefolgt von einer neuen. Die so immer
+laenger werdende Zahlenkolonne muss man sich dabei einpraegen und
+jeweils eintippen. Durch die Kapazitaet einer Bildschirmzeile begrenzt,
+wird das Spiel nach erfolgreichem Nachtippen einer 26-stelligen
+Zahlenkolonne beendet.
+</p>
+<p>
+Falls im Spielverlauf eine andere Taste als die Zahlentasten 1-8
+gedrueckt wird, erscheint eine Meldung auf dem Bildschirm. Die
+jeweilige Zahlenkolonne muss dann nochmals von Anfang an eingetippt
+werden.
+</p>
+
+<!-- Kasten über ganze Spalte: Start --><div style="border-bottom-style: solid; padding-bottom: 10px; border-left-style: solid; padding-left: 10px; border-right-style: solid; padding-right: 10px; border-width: 2px;  width: 100%; ">
+<img class="img-fluid mx-auto d-block " src="../../Image-12-1.jpeg" alt="" width="195" height="341">
+<!-- Kasten: Ende --></div>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../11/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/04/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 12 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/06/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../13/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-05.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

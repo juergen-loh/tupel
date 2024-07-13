@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">September&ndash;October 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 5</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 38 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../39/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-25 page-38" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    37</span>
+
+EA70 013A       DATA:   DEFB    (LD BC,":")     ; ":" End of statement
+EA72 0E00       REM:    LD      C,0             ; 00  End of statement
+EA74 0600               LD      B,0
+EA76 79         NXTSTL: LD      A,C             ; Statement and byte
+EA77 48                 LD      C,B
+EA78 47                 LD      B,A             ; Statement end byte
+EA79 7E         NXTSTT: LD      A,(HL)          ; Get byte
+EA7A B7                 OR      A               ; End of line?
+EA7B C8                 RET     Z               ; Yes - Exit
+EA7C B8                 CP      B               ; End of statement?
+EA7D C8                 RET     Z               ; Yes - Exit
+EA7E 23                 INC     HL              ; Next byte
+EA7F FE22               CP      '"'             ; Literal string?
+EA81 CA76EA             JP      Z,NXTSTL        ; Yes - Look for another '"'
+EA84 C379EA             JP      NXTSTT          ; Keep looking
+
+EA87 CD2DEF     LET:    CALL    GETVAR          ; Get variable name
+EA8A CD90E6             CALL    CHKSYN          ; Make sure "=" follows
+EA8D B4                 DEFB    ZEQUAL          ; "=" token
+EA8E D5                 PUSH    DE              ; Save address of variable
+EA8F 3AAD10             LD      A,(TYPE)        ; Get data type
+EA92 F5                 PUSH    AF              ; Save type
+EA93 CD5AED             CALL    EVAL            ; Evaluate expression
+EA96 F1                 POP     AF              ; Restore type
+EA97 E3                 EX      (SP),HL         ; Save code - Get var addr
+EA98 22CE10             LD      (BRKLIN),HL     ; Save address of variable
+EA9B 1F                 RRA                     ; Adjust type
+EA9C CD46ED             CALL    CHKTYP          ; Check types are the same
+EA9F CADAEA             JP      Z,LETNUM        ; Numeric - Move value
+EAA2 E5         LETSTR: PUSH    HL              ; Save address of string var
+EAA3 2AE410             LD      HL,(FPREG)      ; Pointer to string entry
+EAA6 E5                 PUSH    HL              ; Save it on stack
+EAA7 23                 INC     HL              ; Skip over length
+EAA8 23                 INC     HL
+EAA9 5E                 LD      E,(HL)          ; LSB of string address
+EAAA 23                 INC     HL
+EAAB 56                 LD      D,(HL)          ; MSB of string address
+EAAC 2A5E10             LD      HL,(BASTXT)     ; Point to start of program
+EAAF CD8AE6             CALL    CPDEHL          ; Is string before program?
+EAB2 D2C9EA             JP      NC,CRESTR       ; Yes - Create string entry
+EAB5 2A5A10             LD      HL,(STRSPC)     ; Point to string space
+EAB8 CD8AE6             CALL    CPDEHL          ; Is string literal in program?
+EABB D1                 POP     DE              ; Restore address of string
+EABC D2D1EA             JP      NC,MVSTPT       ; Yes - Set up pointer
+EABF 21BF10             LD      HL,TMPSTR       ; Temporary string pool
+EAC2 CD8AE6             CALL    CPDEHL          ; Is string in temporary pool?
+EAC5 D2D1EA             JP      NC,MVSTPT       ; No - Set up pointer
+EAC8 3E                 DEFB    (LD A,n)        ; Skip "POP DE"
+EAC9 D1         CRESTR: POP     DE              ; Restore address of string
+EACA CD71F3             CALL    BAKTMP          ; Back to last tmp-str entry
+EACD EB                 EX      DE,HL           ; Address of string entry
+EACE CDAAF1             CALL    SAVSTR          ; Save string in string area
+EAD1 CD71F3     MVSTPT: CALL    BAKTMP          ; Back to last tmp-str entry
+EAD4 E1                 POP     HL              ; Get string pointer
+EAD5 CD6EF8             CALL    DETHL4          ; Move string pointer to var
+EAD8 E1                 POP     HL              ; Restore code string address
+EAD9 C9                 RET
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    38</span>
+
+EADA E5         LETNUM: PUSH    HL              ; Save address of variable
+EADB CD6BF8             CALL    FPTHL           ; Move value to variable
+EADE D1                 POP     DE              ; Restore address of variable
+EADF E1                 POP     HL              ; Restore code string address
+EAE0 C9                 RET
+
+EAE1 CD84F4     ON:     CALL    GETINT          ; Get integer 0-255
+EAE4 7E                 LD      A,(HL)          ; Get "GOTO" or "GOSUB" token
+EAE5 47                 LD      B,A             ; Save in B
+EAE6 FE8C               CP      ZGOSUB          ; "GOSUB" token?
+EAE8 CAF0EA             JP      Z,ONGO          ; Yes - Find line number
+EAEB CD90E6             CALL    CHKSYN          ; Make sure it's "GOTO"
+EAEE 88                 DEFB    ZGOTO           ; "GOTO" token
+EAEF 2B                 DEC     HL              ; Cancel increment
+EAF0 4B         ONGO:   LD      C,E             ; Integer of branch value
+EAF1 0D         ONGOLP: DEC     C               ; Count branches
+EAF2 78                 LD      A,B             ; Get "GOTO" or "GOSUB" token
+EAF3 CA1EE8             JP      Z,ONJMP         ; Go to that line if right one
+EAF6 CDA6E9             CALL    GETLN           ; Get line number to DE
+EAF9 FE2C               CP      ","             ; Another line number?
+EAFB C0                 RET     NZ              ; No - Drop through
+EAFC C3F1EA             JP      ONGOLP          ; Yes - loop
+
+EAFF CD5AED     IF:     CALL    EVAL            ; Evaluate expression
+EB02 7E                 LD      A,(HL)          ; Get token
+EB03 FE88               CP      ZGOTO           ; "GOTO" token?
+EB05 CA0DEB             JP      Z,IFGO          ; Yes - Get line
+EB08 CD90E6             CALL    CHKSYN          ; Make sure it's "THEN"
+EB0B A9                 DEFB    ZTHEN           ; "THEN" token
+EB0C 2B                 DEC     HL              ; Cancel increment
+EB0D CD44ED     IFGO:   CALL    TSTNUM          ; Make sure it's numeric
+EB10 CD13F8             CALL    TSTSGN          ; Test state of expression
+EB13 CA72EA             JP      Z,REM           ; False - Drop through
+EB16 CD36E8             CALL    GETCHR          ; Get next character
+EB19 DA2DEA             JP      C,GOTO          ; Number - GOTO that line
+EB1C C31DE8             JP      IFJMP           ; Otherwise do statement
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	Go to <a href="../../../26/31/text/#page">part 4</a> of NASCOM ROM BASIC dis-assembled.
+</p>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 38 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../39/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_25.pdf#page=38" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

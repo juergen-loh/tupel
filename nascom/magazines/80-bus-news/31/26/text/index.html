@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 26 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../27/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-31 page-26" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    59</span>
+
+F189 CD90E6     CHEKFN: CALL    CHKSYN          ; Make sure FN follows
+F18C A7                 DEFB    ZFN             ; "FN" token
+F18D 3E80               LD      A,80H
+F18F 32CB10             LD      (FORFLG),A      ; Flag FN name to find
+F192 B6                 OR      (HL)            ; FN name has bit 7 set
+F193 47                 LD      B,A             ; in first byte of name
+F194 CD32EF             CALL    GTFNAM          ; Get FN name
+F197 C344ED             JP      TSTNUM          ; Make sure numeric function
+
+F19A CD44ED     STR:    CALL    TSTNUM          ; Make sure it's a number
+F19D CDB8F9             CALL    NUMASC          ; Turn number into text
+F1A0 CDCEF1             CALL    CRTST           ; Create string entry for it
+F1A3 CD53F3             CALL    GSTRCU          ; Current string to pool
+F1A6 01AEF3             LD      BC,TOPOOL       ; Save in string pool
+F1A9 C5                 PUSH    BC              ; Save address on stack
+
+F1AA 7E         SAVSTR: LD      A,(HL)          ; Get string length
+F1AB 23                 INC     HL
+F1AC 23                 INC     HL
+F1AD E5                 PUSH    HL              ; Save pointer to string
+F1AE CD29F2             CALL    TESTR           ; See if enough string space
+F1B1 E1                 POP     HL              ; Restore pointer to string
+F1B2 4E                 LD      C,(HL)          ; Get LSB of address
+F1B3 23                 INC     HL
+F1B4 46                 LD      B,(HL)          ; Get MSB of address
+F1B5 CDC2F1             CALL    CRTMST          ; Create string entry
+F1B8 E5                 PUSH    HL              ; Save pointer to MSB of addr
+F1B9 6F                 LD      L,A             ; Length of string
+F1BA CD46F3             CALL    TOSTRA          ; Move to string area
+F1BD D1                 POP     DE              ; Restore pointer to MSB
+F1BE C9                 RET
+
+F1BF CD29F2     MKTMST: CALL    TESTR           ; See if enough string space
+F1C2 21BF10     CRTMST: LD      HL,TMPSTR       ; Temporary string
+F1C5 E5                 PUSH    HL              ; Save it
+F1C6 77                 LD      (HL),A          ; Save length of string
+F1C7 23                 INC     HL
+F1C8 23         SVSTAD: INC     HL
+F1C9 73                 LD      (HL),E          ; Save LSB of address
+F1CA 23                 INC     HL
+F1CB 72                 LD      (HL),D          ; Save MSB of address
+F1CC E1                 POP     HL              ; Restore pointer
+F1CD C9                 RET
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    60</span>
+
+F1CE 2B         CRTST:  DEC     HL              ; DEC - INCed after
+F1CF 0622       QTSTR:  LD      B,'"'           ; Terminating quote
+F1D1 50                 LD      D,B             ; Quote to D
+F1D2 E5         DTSTR:  PUSH    HL              ; Save start
+F1D3 0EFF               LD      C,-1            ; Set counter to -1
+F1D5 23         QTSTLP: INC     HL              ; Move on
+F1D6 7E                 LD      A,(HL)          ; Get byte
+F1D7 0C                 INC     C               ; Count bytes
+F1D8 B7                 OR      A               ; End of line?
+F1D9 CAE4F1             JP      Z,CRTSTE        ; Yes - Create string entry
+F1DC BA                 CP      D               ; Terminator D found?
+F1DD CAE4F1             JP      Z,CRTSTE        ; Yes - Create string entry
+F1E0 B8                 CP      B               ; Terminator B found?
+F1E1 C2D5F1             JP      NZ,QTSTLP       ; No - Keep looking
+F1E4 FE22       CRTSTE: CP      '"'             ; End with '"'?
+F1E6 CC36E8             CALL    Z,GETCHR        ; Yes - Get next character
+F1E9 E3                 EX      (SP),HL         ; Starting quote
+F1EA 23                 INC     HL              ; First byte of string
+F1EB EB                 EX      DE,HL           ; To DE
+F1EC 79                 LD      A,C             ; Get length
+F1ED CDC2F1             CALL    CRTMST          ; Create string entry
+F1F0 11BF10     TSTOPL: LD      DE,TMPSTR       ; Temporary string
+F1F3 2AB110             LD      HL,(TMSTPT)     ; Temporary string pool pointer
+F1F6 22E410             LD      (FPREG),HL      ; Save address of string ptr
+F1F9 3E01               LD      A,1
+F1FB 32AD10             LD      (TYPE),A        ; Set type to string
+F1FE CD6EF8             CALL    DETHL4          ; Move string to pool
+F201 CD8AE6             CALL    CPDEHL          ; Out of string pool?
+F204 22B110             LD      (TMSTPT),HL     ; Save new pointer
+F207 E1                 POP     HL              ; Restore code string address
+F208 7E                 LD      A,(HL)          ; Get next code byte
+F209 C0                 RET     NZ              ; Return if pool OK
+F20A 1E1E               LD      E,ST            ; ?ST Error
+F20C C3C1E3             JP      ERROR           ; String pool overflow
+
+F20F 23         PRNUMS: INC     HL              ; Skip leading space
+F210 CDCEF1     PRS:    CALL    CRTST           ; Create string entry for it
+F213 CD53F3     PRS1:   CALL    GSTRCU          ; Current string to pool
+F216 CD62F8             CALL    LOADFP          ; Move string block to BCDE
+F219 1C                 INC     E               ; Length + 1
+F21A 1D         PRSLP:  DEC     E               ; Count characters
+F21B C8                 RET     Z               ; End of string
+F21C 0A                 LD      A,(BC)          ; Get byte to output
+F21D CD9BE6             CALL    OUTC            ; Output character in A
+F220 FE0D               CP      CR              ; Return?
+F222 CC86EB             CALL    Z,DONULL        ; Yes - Do nulls
+F225 03                 INC     BC              ; Next byte in string
+F226 C31AF2             JP      PRSLP           ; More characters to output
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 26 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../27/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_31.pdf#page=26" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

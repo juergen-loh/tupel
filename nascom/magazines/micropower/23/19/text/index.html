@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 2 - Number 3 - July 1982</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 3 &middot;</span> <span class="nowrap">July 1982</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 19 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-23 page-19" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+So, after this extended introduction, I will proceed to
+enlighten those interested parties on how it is done. It is
+based on using up the 8 EPROM/&#x200b;RAM sockets on the Nascom&nbsp;2 main
+board. The 8 sockets will accomodate most byte wide, 24 pin
+devices and the <!-- External Link --><a href="https://sites.ecse.rpi.edu/courses/CStudio/data%20sheets/hm6116.pdf" title="External Link: 6116" target="_blank" rel="noreferrer">HM6116</a><!-- /External Link -->s fall into this category. For straight
+forward RAM expansion without battery back-up and Write Disable,
+fitting is very similar to fitting 4118s in these positions
+except that a higher order addressing is required to access all
+the available memory. The only additional circuitry is to
+provide RAM-Dis onto the Nascom&nbsp;2 to disable this new RAM if you
+are using external RAM or ROM at the address chosen to locate
+your new RAM. It is suggested that this stage be done first
+anyway. to check that the RAM is operating correctly, before
+introducing the complexities of the power down and Write
+Disables. Refer to the link block diagram in your manual (you
+have got a manual, haven&rsquo;t you!!) and connect pin 8 to pin 4
+(chip select), pin 6 to pin 2 (output enable to read enable),
+pin 5 to pin 1 (write enable) and finally, loop pin 7 (address
+line A10) along each pin 7 and pick up address line A13 off the
+data bus (best done from pin 12 of IC&nbsp;47 (N2MD)). This has the
+effect of addressing through all the lower 1Ks of each chip and
+then through the upper 1Ks of each chip (the upper and lower
+halves of each chip are seperated by 8K) and is the simplest way
+to do it. Finally, to make the whole thing go, connect the
+RAM-gates to the blocks of addresses required eg. D000 to F000
+would give you 16K of RAM starting at D000 and finishing at FFFF
+so, if you are using a CP/M type system, then set your 48K card
+to go from 0000 ta CFFF and you will have 64K on-line by
+connecting either RAM-G1 or RAM-G2 to block address C000 + D000
++ E/F000 strapped together (the last 8K block is normally used
+to enable the BASIC ROM). To provide RAM-Dis onto the p.c.b.
+requires two ICs, one type 74LS32 (quad OR) and one type 74LS04
+(hex inverter) and these devices will be used to provide the
+Write Disable control as well (you might as well go the whole
+hog!). In my system, these are mounted piggy back, on top of two
+other conveniently situated 14 pin ICs close to the link block
+LKS1, to which most of the connections will be made. Remove IC&nbsp;18
+(74LS06), bend up pin 13 and then replace the IC. For the
+remainder of the connections it is best to refer to circuit
+diagram 1 alongside the Nascom&nbsp;2 Memory circuit diagram, top
+left corner, where all the original circuitry will be found. I
+would suggest that you now test, very carefully, the operation
+of your new RAM, both with EPROM cards and other peripheral
+cards occupying the same address space in both enable and
+disable in case there is any interaction. My own system has been
+operating for many months and I have had no problems. NOTE that
+the linking is altered so that the Write Enable is linked to the
+Write Disable switch.
+</p>
+<p>
+Now for the tricky bit, battery back up cooection. It is not
+difficult, just time consuming and some care is necessary to
+ensure that the correct connections have been made. The idea is
+to isolate all of the +5V connections to pin 24 of each chip and
+also, to pin 3 of the associated link blocks. This can be done
+by cutting about five tracks and adding a few wire links. I
+would have included details but it now very difficult to gain
+access to the underside of my N2 card and I have no record of
+what I did &ndash; however, I would be pleased to reinvent the wheel
+if anyone wishes to take the plunge. Otherwise, lifting IC legs
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 19 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../20/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-2-3.pdf#page=21" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

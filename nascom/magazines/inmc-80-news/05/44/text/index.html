@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>INMC 80 News - October&ndash;December 1981 - Issue 5</title>
+	<!-- Sun, 30 Jun 2024 16:40:13 GMT -->
+	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">INMC 80 News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">October&ndash;December 1981 &middot; <span class="nowrap">Issue 5</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../43/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 44 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80-bus-news/11/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../45/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-inmc-80-news issue-05 page-44" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+Now the STACK works like this. When a program is initialized, (that&rsquo;s
+the run up to the start of the program proper), it&rsquo;s normal to set the SP to
+the top address that the STACK will occupy. With the Nascom monitors, this is
+normally set to 1000H for you by the Execute command, but this may be
+inconvenient, and anyway it&rsquo;s good practice to initialize the SP yourself, as
+you may one day play with other computers which aren&rsquo;t so obliging, and which
+leave the SP any old place. So for the sake of argument, we initialize the SP
+to 1000H, the first time we use the STACK by executing a CALL or a PUSH
+instruction (there are some others that use the STACK, but these two are the
+most common), the SP is first decremented by one. So in this instance it will
+point to 0FFFH. It then places the high byte of the two byte data in memory <span class="uppercase">At</span>
+<span class="uppercase">The Location Pointed To By The</span> SP. The SP is the automatically decremented
+again, and it places the low byte <span class="uppercase">At The Location Pointed</span> TO BY THE SP. The SP
+is now pointing at address 0FFEH. Next time something is put on the STACK, the
+first thing the SP will do is to decrement by one, to point at 0FFDH. The
+reverse is true on a RET or POP instruction. The SP will already be at the
+point where the last byte was deposited in memory, so it will restore that data
+first without incrementing, then it will increment and restore the high byte,
+and last it will increment again to point at the low byte of the next data to
+be restored. See how the stack management is both automatic and orderly. The SP
+is always left pointing to the low byte of the previous data, or, looking the
+other way, one byte above the next data. When putting stuff on the STACK, the
+SP is decremented first, when getting stuff off the STACK, the SP is
+incremented last.
+</p>
+<p>
+The STACK is an orderly &lsquo;LAST IN FIRST OUT&rsquo; (LIFO) file, the last thing
+you put on the STACK is the first off the STACK. This normally works well, and
+under normal circumstances, you should never end up in the position where the
+data you wish to retrieve is not the next off the STACK. If you do have this
+sort of problem, then it is best to rethink your program, as manipulating the
+STACK with the INC SP and DEC SP commands is best left to experts. Unless of
+course, you are the masochistic type who goes looking for headaches.
+</p>
+<p>
+One important instruction involved in this version of the B2HEX routine
+is the DAA. Now, the routine uses DAA because of it&rsquo;s properties, and not
+because it is the logical instruction to use. In other words, it&rsquo;s a trick. How
+this particular use of the DAA was discovered, I don&rsquo;t know. But it proves the
+case for knowing exactly HOW and instruction work as opposed to the superficial
+knowledge of what it does. This is what it does and how it does it. The DAA
+instruction is primarily intended for use with &lsquo;packed Binary Coded Decimal&rsquo;
+arithmetic. That&rsquo;s where each nibble represents a separate decimal number, and
+when we add another packed BCD number to it, an adjustment has to made after
+the addition in case the low nibble overflowed (in decimal) and the carry has
+to be subsequently added to the high nibble. Don&rsquo;t forget the addition would
+have been performed in binary, as the Z80 normally doesn&rsquo;t know anything about
+packed BCD arithmetic. But, one thing the Z80 does provide is what is known as
+the &lsquo;Half Carry flag&rsquo; which indicates this very &lsquo;Half Carry&rsquo; overflow condition
+during the various addition or subtraction commands. As far as I know, the DAA
+instruction is the only instruction to MAKE USE OF the &lsquo;Half Carry&rsquo; flag. If
+the high nibble overflows, the DAA instruction causes the C flag to be set to
+indicate that there was an overflow.
+</p>
+<p>
+Now, back to B2HEX. First, lets examine the need for this particular
+routine. A lot of the monitor commands require the the contents of a register
+to be printed out on the screen. For starters, the Tab command uses it to
+display the contents of the memory locations, the Memory command uses it for
+the same purpose. Less directly, the Single Step, Arithmetic, Breakpoint, Print
+registers, Query ports, Read and Write routines all use it for the purpose of
+displaying HEX characters in either single or double byte form. So you see,
+this routine is used an awful lot. Now, why &lsquo;Binary to HEX&rsquo;, well, we discussed
+</p>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../43/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 44 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80-bus-news/11/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../45/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/INMC_80_News_5.pdf#page=44" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

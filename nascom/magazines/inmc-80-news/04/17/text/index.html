@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
+	<!-- Sun, 30 Jun 2024 16:01:54 GMT -->
+	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">INMC 80 News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">May&ndash;September 1981 &middot; <span class="nowrap">Issue 4</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 17 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../05/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-inmc-80-news issue-04 page-17" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+blocks of seperate read and write, or 8K blocks of R/W memory, working on the memory
+decode signals), or to enable banks of memory. In this way, a single card could have
+all 4 banks addressed to the same 16k, and the software would only enable one at a
+time. This would allow programs to use this area as fast disk space. Or as &ldquo;protected&rdquo;
+space for saving back-up copies of programs you have just written but not tested (you
+know &hellip; the ones that write all over memory for you in less time than it takes to hit
+reset).
+</p>
+<h4 class="uppercase">
+System Growth Outstrips Psu
+</h4>
+<p>
+My intention is to go over to a complete RAM system with a disk and an
+operating system. CP/M would be nice but I think the investment too high at the
+moment. I would have to throw away all my current software, unless someone wants to
+make an offer for my firmware. (Cost was about 200.00+VAT).
+</p>
+<p>
+My latest addition has been a 12inch monitor which replaces a borrowed B/W TV
+I used to think was quite good until I got this. I am now thinking of shoe-horning my
+N2 into the box, as there is just room if ..... the whole problem is the noisy fan
+that I must have to keep the smell of burning off the 3A psu which is giving its all.
+If I build a new 5A psu on the back panel then maybe the rest will fit inside and I
+can throw away the noisy fan.
+</p>
+<p>
+One mod I would like to see is an 80 by 24 line screen so that I can see what
+I am getting with NAS-PEN. (Just read this issue, but the snag is a new NAS-PEN. Ed.)
+</p>
+<p>
+Rename the bus, NASty-BUSiness. You could have it on your adds &ndash; writ large,
+so to speak.
+</p>
+<p>
+Keep up the good work, it wouldn&rsquo;t be the same without INMC80 coming out with
+so many goodies.
+</p>
+<p class="continued">
+Richard Bateman.<br>
+Algiers, Algeria.
+</p>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<h1 id="article1">
+<img class="img-fluid" src="../../Image-17-1.png" alt="INMC80" width="112" height="26">
+</h1>
+<h2>
+<u class="double">INMC80 <span class="uppercase">Subscriptions</span></u>
+</h2>
+<p>
+I would like to subscribe to
+<a href="../../../text/#head">INMC80 News</a>
+for 12 months, starting with the
+<a href="../../../05/01/text/#page">INMC80-5 issue</a>.
+I enclose my cheque / postal order / international money order (but
+NOT a French cheque) payable to &ldquo;INMC80&rdquo;, value:
+</p>
+<p class="indent">
+UK Subscriptions: 6.00<br>
+Overseas Subscriptions: 7.50
+</p>
+<!-- 1 column: end --></div>
+<br>
+<!-- 3 columns: start 2 --><div class="row"><div class="col-sm-8">
+<p class="noindent">
+Name&nbsp;:
+</p>
+<p class="noindent">
+Address&nbsp;:
+</p>
+<!-- 3 columns: change --></div><div class="col-sm-4">
+<p class="exdent">
+TO: INMC80 Subscriptions,<br>
+c/o Oakfield Corner,<br>
+________ ____,<br>
+<span class="uppercase">Amersham</span>,<br>
+Bucks. ___ ___.
+</p>
+<!-- 3 columns: end --></div></div>
+<br>
+<!-- 1 column: start --><div>
+<p class="noindent">
+PLEASE NOTE: This address has kindly been &lsquo;loaned&rsquo; to INMC80 as a postbox. It is NOT
+possible to communicate with INMC80 by &ldquo;phoning this address or by calling in person.
+</p>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../16/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../03/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 17 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../05/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../18/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/INMC_80_News_4.pdf#page=17" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

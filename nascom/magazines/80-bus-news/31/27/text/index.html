@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">January&ndash;February 1984 &middot; <span class="nowrap">Volume 3 &middot;</span> <span class="nowrap">Issue 1</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 27 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-31 page-27" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    61</span>
+
+F229 B7         TESTR:  OR      A               ; Test if enough room
+F22A 0E                 DEFB    (LD C,n)        ; No garbage collection done
+F22B F1         GRBDON: POP     AF              ; Garbage collection done
+F22C F5                 PUSH    AF              ; Save status
+F22D 2A5A10             LD      HL,(STRSPC)     ; Bottom of string space in use
+F230 EB                 EX      DE,HL           ; To DE
+F231 2AC310             LD      HL,(STRBOT)     ; Bottom of string area
+F234 2F                 CPL                     ; Negate length (Top down)
+F235 4F                 LD      C,A             ; -Length to BC
+F236 06FF               LD      B,-1            ; BC = -ve length of string
+F238 09                 ADD     HL,BC           ; Add to bottom of space in use
+F239 23                 INC     HL              ; Plus one for 2's complement
+F23A CD8AE6             CALL    CPDEHL          ; Below string RAM area?
+F23D DA47F2             JP      C,TESTOS        ; Tidy up if not done else err
+F240 22C310             LD      (STRBOT),HL     ; Save new bottom of area
+F243 23                 INC     HL              ; Point to first byte of string
+F244 EB                 EX      DE,HL           ; Address to DE
+F245 F1         POPAF:  POP     AF              ; Throw away status push
+F246 C9                 RET
+
+F247 F1         TESTOS: POP     AF              ; Garbage collect been done?
+F248 1E1A               LD      E,OS            ; ?OS Error
+F24A CAC1E3             JP      Z,ERROR         ; Yes - Not enough string apace
+F24D BF                 CP      A               ; Flag garbage collect done
+F24E F5                 PUSH    AF              ; Save status
+F24F 012BF2             LD      BC,GRBDON       ; Garbage collection done
+F252 C5                 PUSH    BC              ; Save for RETurn
+F253 2AAF10     GARBGE: LD      HL,(LSTRAM)     ; Get end of RAM pointer
+F256 22C310     GARBLP: LD      (STRBOT),HL     ; Reset string pointer
+F259 210000             LD      HL,0
+F25C E5                 PUSH    HL              ; Flag no string found
+F25D 2A5A10             LD      HL,(STRSPC)     ; Get bottom of string space
+F260 E5                 PUSH    HL              ; Save bottom of string space
+F261 21B310             LD      HL,TMSTPL       ; Temporary string pool
+F264 EB         GRBLP:  EX      DE,HL
+F265 2AB110             LD      HL,(TMSTPT)     ; Temporary string pool pointer
+F268 EB                 EX      DE,HL
+F269 CD8AE6             CALL    CPDEHL          ; Temporary string pool done?
+F26C 0164F2             LD      BC,GRBLP        ; Loop until string pool done
+F26F C2B8F2             JP      NZ,STPOOL       ; No - See if in string area
+F272 2AD610             LD      HL,(PROGND)     ; Start of simple variables
+F275 EB         SMPVAR: EX      DE,HL
+F276 2AD810             LD      HL,(VAREND)     ; End of simple variables
+F279 EB                 EX      DE,HL
+F27A CD8AE6             CALL    CPDEHL          ; All simple strings done?
+F27D CA8BF2             JP      Z,ARRLP         ; Yes - Do string arrays
+F280 7E                 LD      A,(HL)          ; Get type of variable
+F281 23                 INC     HL
+F282 23                 INC     HL
+F283 B7                 OR      A               ; "S" flag set if string
+F284 CDBBF2             CALL    STRADD          ; See if string in string area
+F287 C375F2             JP      SMPVAR          ; Loop until simple ones done
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    62</span>
+
+F28A C1         GNXARY: POP     BC              ; Scrap address of this array
+F28B EB         ARRLP:  EX      DE,HL
+F28C 2ADA10             LD      HL,(ARREND)     ; End of string arrays
+F28F EB                 EX      DE,HL
+F290 CD8AE6             CALL    CPDEHL          ; All string arrays done?
+F293 CAE1F2             JP      Z,SCNEND        ; Yes - Move string if found
+F296 CD62F8             CALL    LOADFP          ; Get array name to BCDE
+F299 7B                 LD      A,E             ; Get type of array
+F29A E5                 PUSH    HL              ; Save address of num of dim'ns
+F29B 09                 ADD     HL,BC           ; Start of next array
+F29C B7                 OR      A               ; Test type of array
+F29D F28AF2             JP      P,GNXARY        ; Numeric array - Ignore it
+F2A0 22C510             LD      (CUROPR),HL     ; Save address of next array
+F2A3 E1                 POP     HL              ; Get address of num of dim'ns
+F2A4 4E                 LD      C,(HL)          ; BC = Number of dimensions
+F2A5 0600               LD      B,0
+F2A7 09                 ADD     HL,BC           ; Two bytes per dimension size
+F2A8 09                 ADD     HL,BC
+F2A9 23                 INC     HL              ; Plus one for number of dim'ns
+F2AA EB         GRBARY: EX      DE,HL
+F2AB 2AC510             LD      HL,(CUROPR)     ; Get address of next array
+F2AE EB                 EX      DE,HL
+F2AF CD8AE6             CALL    CPDEHL          ; Is this array finished?
+F2B2 CA8BF2             JP      Z,ARRLP         ; Yes - Get next one
+F2B5 01AAF2             LD      BC,GRBARY       ; Loop until array all done
+F2B8 C5         STPOOL: PUSH    BC              ; Save return address
+F2B9 F680               OR      80H             ; Flag string type
+F2BB 7E         STRADD: LD      A,(HL)          ; Get string length
+F2BC 23                 INC     HL
+F2BD 23                 INC     HL
+F2BE 5E                 LD      E,(HL)          ; Get LSB of string address
+F2BF 23                 INC     HL
+F2C0 56                 LD      D,(HL)          ; Get MSB of string address
+F2C1 23                 INC     HL
+F2C2 F0                 RET     P               ; Not a string - Return
+F2C3 B7                 OR      A               ; Set flags on string length
+F2C4 C8                 RET     Z               ; Null string - Return
+F2C5 44                 LD      B,H             ; Save variable pointer
+F2C6 4D                 LD      C,L
+F2C7 2AC310             LD      HL,(STRBOT)     ; Bottom of new area
+F2CA CD8AE6             CALL    CPDEHL          ; String been done?
+F2CD 60                 LD      H,B             ; Restore variable pointer
+F2CE 69                 LD      L,C
+F2CF D8                 RET     C               ; String done - Ignore
+F2D0 E1                 POP     HL              ; Return address
+F2D1 E3                 EX      (SP),HL         ; Lowest available string area
+F2D2 CD8AE6             CALL    CPDEHL          ; String within string area?
+F2D5 E3                 EX      (SP),HL         ; Lowest available string area
+F2D6 E5                 PUSH    HL              ; Re-save return address
+F2D7 60                 LD      H,B             ; Restore variable pointer
+F2D8 69                 LD      L,C
+F2D9 D0                 RET     NC              ; Outside string area - Ignore
+F2DA C1                 POP     BC              ; Get return&nbsp;, Throw 2 away
+F2DB F1                 POP     AF              ;
+F2DC F1                 POP     AF              ;
+F2DD E5                 PUSH    HL              ; Save variable pointer
+F2DE D5                 PUSH    DE              ; Save address of current
+F2DF C5                 PUSH    BC              ; Put back return address
+F2E0 C9                 RET                     ; Go to it
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 27 of 55</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../32/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../55/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_31.pdf#page=27" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

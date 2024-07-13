@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">September&ndash;October 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 5</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 33 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../34/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-25 page-33" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    27</span>
+
+E733 E5         SETLIN: PUSH    HL              ; Set up LINES counter
+E734 2A4810             LD      HL,(LINESN)     ; Get LINES number
+E737 224610             LD      (LINESC),HL     ; Save in LINES counter
+E73A E1                 POP     HL
+E73B C9                 RET
+
+E73C 21DEFE     LDNMI1: LD      HL,BREAK        ; Break routine
+E73F 227E0C             LD      (NMI),HL        ; NMI forces break
+E742 C3F8E3             JP      PRNTOK          ; Go to command mode
+
+E745 FE                 DEFB    (CP n)          ; &lt;&lt;&lt; NO REFERENCE TO HERE &gt;&gt;&gt;
+
+E746 E5         COUNT:  PUSH    HL              ; Save code string address
+E747 D5                 PUSH    DE
+E748 2A4610             LD      HL,(LINESC)     ; Get LINES counter
+E74B 11FFFF             LD      DE,-1
+E74E ED5A               ADC     HL,DE           ; Decrement
+E750 224610             LD      (LINESC),HL     ; Put it back
+E753 D1                 POP     DE
+E754 E1                 POP     HL              ; Restore code string address
+E755 F0                 RET     P               ; Return if more lines to go
+E756 E5                 PUSH    HL              ; Save code string address
+E757 2A4810             LD      HL,(LINESN)     ; Get LINES number
+E75A 224610             LD      (LINESC),HL     ; Reset LINES counter
+E75D 3A4C10             LD      A,(NMIFLG)      ; Break by NMI?
+E760 B7                 OR      A
+E761 C2E5FE             JP      NZ,ARETN        ; Yes - "RETN"
+E764 CD05FD             CALL    GETINP          ; Get input character
+E767 FE03               CP      CTRLC           ; Is it control "C"?
+E769 CA70E7             JP      Z,RSLNBK        ; Yes - Reset LINES an break
+E76C E1                 POP     HL              ; Restore code string address
+E76D C346E7             JP      COUNT           ; Keep on counting
+
+E770 2A4810     RSLNBK: LD      HL,(LINESN)     ; Get LINES number
+E773 224610             LD      (LINESC),HL     ; Reset LINES counter
+E776 C3B1E0             JP      BRKRET          ; Go and output "Break"
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    28</span>
+
+E779 3E64       FOR:    LD      A,64H           ; Flag "FOR" assignment
+E77B 32CB10             LD      (FORFLG),A      ; Save "FOR" flag
+E77E CD87EA             CALL    LET             ; Set up initial index
+E781 C1                 POP     BC              ; Drop RETurn address
+E782 E5                 PUSH    HL              ; Save code string address
+E783 CD70EA             CALL    DATA            ; Get next statement address
+E786 22C710             LD      (LOOPST),HL     ; Save it for start of lo6p
+E789 210200             LD      HL,2            ; Offset for "FOR" block
+E78C 39                 ADD     HL,SP           ; Point to it
+E78D CD5AE3     FORSLP: CALL    LOKFOR          ; Look for existing "FOR" block
+E790 D1                 POP     DE              ; Get code string address
+E791 C2A9E7             JP      NZ,FORFND       ; No nesting found
+E794 09                 ADD     HL,BC           ; Move into "FOR" block
+E795 D5                 PUSH    DE              ; Save code string address
+E796 2B                 DEC     HL
+E797 56                 LD      D,(HL)          ; Get MSB of loop statement
+E798 2B                 DEC     HL
+E799 5E                 LD      E,(HL)          ; Get LSB of loop statement
+E79A 23                 INC     HL
+E79B 23                 INC     HL
+E79C E5                 PUSH    HL              ; Save block address
+E79D 2AC710             LD      HL,(LOOPST)     ; Get address of loop statement
+E7A0 CD8AE6             CALL    CPDEHL          ; Compare the FOR loops
+E7A3 E1                 POP     HL              ; Restore block address
+E7A4 C28DE7             JP      NZ,FORSLP       ; Different FORs - Find another
+E7A7 D1                 POP     DE              ; Restore code string address
+E7A8 F9                 LD      SP,HL           ; Remove all nested loops
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../32/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 33 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../34/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_25.pdf#page=33" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - Februar 1983 - Ausgabe 2</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Februar 1983 &middot;</span> <span class="nowrap">Ausgabe 2</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 8 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2 Spalten: Start --><div class="row"><div class="col-sm-6">
+<pre class="donthyphenate">
+1 REM Aktive Filter
+2 REM Ruediger Maurer 01.10.82
+10 PI=3.14
+100 CLS:PRINT"Aktive Filter 3 Ordnung":PRINT
+110 PRINT"Tiefpass Mehrfach-Gegenkopplung = TG"
+120 PRINT"Tiefpass Einfach -Mittkopplung  = TM"
+130 PRINT"Hochpass Mehrfach-Gegenkopplung = HG"
+140 INPUT"Hochpass Einfach -Mittkopplung  = HM";A$
+150 IFA$&lt;&gt;"TG"ANDA$&lt;&gt;"TM"ANDA$&lt;&gt;"HG"ANDA$&lt;&gt;"HM"GOTO100
+160 IFA$="TG"THENP=1
+170 IFA$="TM"THENP=2
+180 IFA$="HG"THENP=3
+190 IFA$="HM"THENP=4
+200 CLS
+210 ONPGOSUB15000,16000,17000,18000
+220 PRINT:PRINT"Filtertyp:"
+230 PRINT"Bessel .......................... 1"
+240 PRINT"Butterworth ..................... 2"
+250 PRINT"Tschebyscheff 0.5 dB ............ 3"
+260 PRINT"Tschebyscheff 1.0 dB ............ 4"
+270 PRINT"Tschebyscheff 2.0 dB ............ 5"
+280 INPUT"Tschebyscheff 3.0 dB ............ 6";FT
+290 IFFT&lt;1ORFT&gt;6GOTO220
+300 :
+310 PRINT:INPUT"3-dB Eckfrequenz  (Hz)  ";FC
+315 FC=2*PI*FC
+320 IFFC&lt;=0GOTO310
+330 INPUT"C1 (Farad) ";C1:C=C1:PRINT
+340 IFA$="HG"THENC=(C/2)
+350 IFC&lt;=0GOTO200
+500 ONFTGOTO2000,3000,4000,5000,6000,7000
+1999 REM * BESSEL *
+2000 IFLEFT$(A$,1)="H"GOTO2200
+2010 IFRIGHT$(A$,1)="G"THENFK=2.3186:Z=1:GOTO2500
+2020 IFRIGHT$(A$,1)="M"THENFK=0.9914:Z=2:GOTO2500
+2200 IFRIGHT$(A$,1)="G"THENFK=0.2156:Z=3
+2210 IFRIGHT$(A$,1)="M"THENFK=1.0087:Z=4
+2500 K1=1.7556:K2=1.2329:K3=0.3608
+2700 ONZGOSUB10000,11000,12000,13000
+2800 GOTO20000
+2999 REM * BUTTERWORTH *
+3000 IFLEFT$(A$,1)="H"GOTO3200
+3010 IFRIGHT$(A$,1)="G"THENFK=2.5747:Z=1:GOTO3500
+3020 IFRIGHT$(A$,1)="M"THENFK=1.3926:Z=2:GOTO3500
+3200 IFRIGHT$(A$,1)="G"THENFK=0.1942:Z=3
+3210 IFRIGHT$(A$,1)="M"THENFK=0.7181:Z=4
+3500 K1=2:K2=2:K3=1
+3700 ONZGOSUB10000,11000,12000,13000
+3800 GOTO20000
+3999 REM TSCHEBYSCHEFF 0.5 dB *
+4000 IFLEFT$(A$,1)="H"GOTO4200
+4010 IFRIGHT$(A$,1)="G"THENFK=4.0535:Z=1:GOTO4500
+</pre>
+<!-- 2 Spalten: Spaltenwechsel --></div><div class="col-sm-6">
+<pre class="donthyphenate">
+4020 IFRIGHT$(A$,1)="M"THENFK=2.2368:Z=2:GOTO4500
+4200 IFRIGHT$(A$,1)="G"THENFK=0.1233:Z=3
+4210 IFRIGHT$(A$,1)="M"THENFK=0.4471:Z=4
+4500 K1=2.5038:K2=2.3862 :K3=2.2235
+4700 ONZGOSUB10000,11000,12000,13000
+4800 GOTO20000
+4999 REM TSCHEBYSCHEFF 1.0 dB *
+5000 IFLEFT$(A$,1)="H"GOTO5200
+5010 IFRIGHT$(A$,1)="G"THENFK=4.7061:Z=1:GOTO5500
+5020 IFRIGHT$(A$,1)="M"THENFK=2.5669:Z=2:GOTO5500
+5200 IFRIGHT$(A$,1)="G"THENFK=0.1062:Z=3
+5210 IFRIGHT$(A$,1)="M"THENFK=0.3896:Z=4
+5500 K1=2.7598:K2=2.4114 :K3=2.6713
+5700 ONZGOSUB10000,11000,12000,13000
+5800 GOTO20000
+5999 REM TSCHEBYSCHEFF 2.0 dB *
+6000 IFLEFT$(A$,1)="H"GOTO6200
+6010 IFRIGHT$(A$,1)="G"THENFK=5.8147:Z=1:GOTO6500
+6020 IFRIGHT$(A$,1)="M"THENFK=3.1126:Z=2:GOTO6500
+6200 IFRIGHT$(A$,1)="G"THENFK=0.0860:Z=3
+6210 IFRIGHT$(A$,1)="M"THENFK=0.3213:Z=4
+6500 K1=3.2294:K2=2.4073 :K3=3.3694
+6700 ONZGOSUB10000,11000,12000,13000
+6800 GOTO20000
+6999 REM TSCHEBYSCHEFF 3.0 dB *
+7000 IFLEFT$(A$,1)="H"GOTO7200
+7010 IFRIGHT$(A$,1)="G"THENFK=6.8775:Z=1:GOTO7500
+7020 IFRIGHT$(A$,1)="M"THENFK=3.6296:Z=2:GOTO7500
+7200 IFRIGHT$(A$,1)="G"THENFK=0.0727:Z=3
+7210 IFRIGHT$(A$,1)="M"THENFK=0.2755:Z=4
+7500 K1=3.7055:K2=2.3844 :K3=3.9937
+7700 ONZGOSUB10000,11000,12000,13000
+7800 GOTO20000
+9999 REM * BERECHNUNG TG *
+10000 R=FK/(FC*C1):R1=R:R2=R:R3=2*R:R4=2*R
+10100 C2=(6*K3*C1)/(FK*FK*(2*K1-FK))
+10200 C3=C1*((2*K1-FK)/(12*FK))
+10500 RETURN
+10999 REM * BERECHNUNG TM *
+11000 R=FK/(FC*C1):R1=R:R2=R:R3=R
+11100 C2=(C1*3*K3)/(FK*FK*(K1-FK))
+11200 C3=C1*(K1-FK)/(3*FK)
+11500 RETURN
+11999 REM * RERECHNUNG HG *
+12000 R1=FK/(FC*C):C1=2*C:C2=2*C:C3=C:C4=C
+12100 R2=(4*K1*FK-1)/(48*F3*FK*FK*FC*C)
+12200 R3=(12*FK)/((4*K1*FK-1)*FC*C)
+12500 RETURN
+</pre>
+<!-- 2 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../07/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 8 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../09/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+	<p class="nas-link"><!-- External Link --><a href="http://www.nascomhomepage.com/mbasic/Filter.cas" title="Externer Link: Filter.cas" target="_blank" rel="noreferrer">Download</a><!-- /External Link -->
+	des Programms von der <!-- External Link --><a href="http://www.nascomhomepage.com/" title="Externer Link" target="_blank" rel="noreferrer">Nascom Home Page</a><!-- /External Link -->.</p>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-02.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

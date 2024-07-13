@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - Mai 1983 - Ausgabe 5</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Mai 1983</span> &middot; <span class="nowrap">Ausgabe 5</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/04/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 24 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/06/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<h1 id="article1">
+MDCR-Controller
+</h1>
+<h3>
+von <span class="uppercase">Tom D. Rüdebusch</span>
+</h3>
+<p>
+Copyright 1983<br>
+by Tom D. Rüdebusch<br>
+__________ ___ __<br>
+____ Giessen<br>
+Tel. ____/_____
+</p>
+<p>
+Dieses Programm wurde zur Steuerung des
+Philips-MDCR-Laufwerkes erstellt. Es arbeitet mit
+Nas-Sys&nbsp;1 oder Nas-Sys&nbsp;3 und stellt deren
+Editiermöglichkeiten zur Verfügung. Als
+<a href="../../../../81/12/37/text/#article1">Interface</a>
+kann das von Johannes Lotter verwendet
+werden, das WEN-Signal wird jedoch an Port 0
+(Input)/Bit 7 abgefragt. Außerdem werden 2
+KByte Speicher für das Programm und knapp 1
+KByte für den Work&shy;space benötigt.
+</p>
+<table>
+<tr><td colspan=6><h4>Speicherbelegung</h4></td></tr>
+<tr><td colspan=2>Workspace&nbsp;</td><td>:&nbsp;</td><td>443EH &ndash; 4800H</td><td></td><td></td></tr>
+<tr><td colspan=2>Programm</td><td>:</td><td>4800H &ndash; 5000H</td><td></td><td></td></tr>
+<tr><td colspan=2>Drucker-UP&nbsp;</td><td>:</td><td>4FDEH</td><td></td><td></td></tr>
+<tr><td>Start&nbsp;</td><td colspan=3>(initialisiert Nas-Sys)</td><td>:&nbsp;</td><td>4800H</td></tr>
+<tr><td>&nbsp; &nbsp;"</td><td colspan=3>(keine Initialisierung)&nbsp;</td><td>:</td><td>4809H</td></tr>
+</table>
+<p>
+Wird der Quelltext auf einer &bdquo;ganzen&ldquo; Adresse assembliert und
+das ganze im EPROM abgelegt, so meldet sich der Tape Controller bei
+entsprechender Einstellung der Schalter auf der Nascom&nbsp;2-Platine direkt
+nach RESET. Das Programm zeichnet sich durch einige Besonderheiten aus:
+</p>
+<p>
+1.&nbsp;Der Kopf des Recorders bleibt bei der aktuellen Position stehen, die
+im Arbeitsspeicher festgehalten wird. Dadurch lassen sich unnötige
+Spulzeiten vermeiden.
+</p>
+<p>
+2.&nbsp;Um ein Reissen des Bandes möglichst auszuschließen, wird nur bei
+einem Neueintrag in das Inhaltsverzeichnis ganz an den Anfang der
+Cassette zurückgespult, ansonsten stoppt das Laufwerk kurz vor
+Erreichen des Anschlages.
+</p>
+<p>
+3.&nbsp;Es wird nicht in 1&nbsp;KByte-Blöcken aufgezeichnet, sondern byteweise,
+d.&nbsp;h. nur die wirkliche Filelänge. Diese Aufzeichnungsmethode ist
+nicht kompatibel zu
+<a href="../../../../81/12/35/text/#article1">UNICON 1.4</a>.
+</p>
+<p>
+4.&nbsp;Die Directory steht im Workspace, kann also immer eingesehen werden,
+ohne daß deshalb gespult werden muß. Dieses Inhaltsverzeichnis ist
+durch eine Prüfsumme abgesichert; sollte also ein abgestürztes Programm
+den Arbeitsspeicher verändert haben, so liest der Controller
+automatisch das korrekte Verzeichnis von Cassette ein.
+</p>
+<p>
+5.&nbsp;Es handelt sich ausschließlich um ein Steuerprogramm für das
+Mini-Laufwerk und ist nach dem Verlassen vollständig abgeschaltet.
+</p>
+<p>
+6.&nbsp;Leistungsfähige Kommandos, ausführliche Fehlermeldungen und
+Absicherung der Files erhöhen Bedienkomfort und Datensicherheit.
+</p>
+<p>
+7.&nbsp;Schließlich liegt bei 4FDEH noch ein Unterprogramm, das einen
+parallelen Drucker über Port A treibt, das auf Output programmiert
+wird. Die BUSY-Leitung des Druckers wird wie das WEN-Signal über Port 0
+abgefragt; dies ermöglicht ein automatischer Umschalter:
+</p>
+<img class="img-fluid mx-auto d-block " src="../../Image-24-1.jpeg" alt="" width="257" height="73">
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+<p>
+Das DATA&nbsp;STROBE-Signal für den Drucker wird durch den READY-Impuls
+von Port&nbsp;A wie folgt erzeugt:
+</p>
+<img class="img-fluid mx-auto d-block " src="../../Image-24-2.jpeg" alt="" width="292" height="90">
+<p>
+So lassen sich mit einer <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
+ Drucker und Mini-Laufwerk ansteuern. Zu
+beachten ist, daß beim Drucken keine Cassette eingelegt ist (es genügt
+auch Öffnen der Klappe).
+</p>
+<h4 class="uppercase">
+Kommandos:
+</h4>
+<p>
+Das &bdquo;Ü&ldquo;-Zeichen zeigt an, daß der Tape Controller auf
+Kommandos wartet. Da das Programm über eine Befehlsvervollständigung
+verfügt, muß jeweils nur das erste Zeichen eingegeben werden. Filenamen
+können maximal 14 Zeichen lang sein und durch &bdquo;Ü = eckige Klammer
+r.&ldquo; abgekürzt werden. Die Trennung des Namens von den Adressen
+sollte grundsätzlich durch genau ein Leerzeichen erfolgen. Beim
+Schreiben und Lesen sind die laufenden Bytes als ASCII-Zeichen in der
+rechten, oberen Bildschirmecke sichtbar. Es folgt eine Beschreibung der
+Befehle im einzelnen.
+</p>
+<p>
+1. QUIT Rücksprung in den Monitor.
+</p>
+<p>
+2. FORMAT<br>
+Eine neue Cassette wird formatiert, auf die Frage &bdquo;Sure (Y)?&ldquo;
+ist &bdquo;Y&ldquo; einzugeben, wenn es sich wirklich um eine
+unbeschriebene Cassette handelt, da sonst alle eventuell vorhandenen
+Files gelöscht werden.
+</p>
+<p>
+3. INITIALISE<br>
+Dieses Kommando sollte man unbedingt ausführen lassen, wenn die
+Cassette gewechselt wurde. Der Controller holt sich das neue
+Inhaltsverzeichnis von Cassette und gibt es auf dem Bildschirm aus.
+</p>
+<p>
+4. REWIND<br>
+Dieser Befehl dient zum Rückspulen des Bandes. Vor jedem Entfernen der
+Cassette sollte man sicherheitshalber &bdquo;R&ldquo; eintippen, da &ndash;
+falls der Kopf schon in Position 0 steht &ndash; nicht gespult wird und man
+sich sofort wieder im Kommando-Modus befindet.
+</p>
+<p>
+5. DIRECTORY<br>
+Das Inhaltsverzeichnis wird auf dem Schirm ausgegeben. Sollten auf der
+Cassette mehr als 11 Files abgespeichert sein, wird die Ausgabe nach
+dem 11. File unterbrochen. Die Eingabe von &bdquo;ESC&ldquo; bewirkt
+Rückkehr in den Kommando-Modus, jede andere Taste setzt das Auslisten
+der Directory fort.
+</p>
+<p>
+6. SAVE<br>
+Nach Eingabe dieses Befehles wird der Benutzer aufgefordert, Anfangs-,
+End- und Startadresse sowie den Filenamen anzugeben. Einfache Eingabe
+von &bdquo;Ä = eckige Klammer l.&ldquo; und des Filenamens direkt danach
+bewirkt automatisches Eintragen der aktuellen Adressen für ein
+Basic-Programm. Dies erspart umständliches Aus- und Umrechnen.
+</p>
+<p>
+Das Programm wird nun auf Band geschrieben und von dort aus noch einmal
+mit dem entsprechenden Speicherbereich verglichen, wodurch ein
+zusätzlicher &bdquo;Verify&ldquo;-Befehl entfallen kann. Anschließend
+erfolgt ein Eintrag in die
+</p>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../23/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/04/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 24 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/06/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../25/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-05.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

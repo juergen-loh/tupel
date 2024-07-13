@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>Nascom Journal - März/April 1982 - Ausgabe 3/4</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">Nascom Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">März/April 1982 &middot;</span> <span class="nowrap">Ausgabe 3/4</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../38/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/02/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 39 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/05/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../40/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
+
+<p>
+akzeptiert. 0DH wird dabei zum Umschalten zwischen den beiden Zeilen
+benutzt (Ausprobieren!). Alle anderen Codes werden ignoriert.
+</p>
+<p>
+Der erste Programmteil besitzt 2 Einsprungadressen. Ein
+Unterprogrammaufruf (CALL) bei 0C80H gibt das Zeichen, das im
+Accumulator steht, aus. Es entspricht in seiner Funktion der ROUT &ndash;
+Routine des Monitors, nur eben fuer die Riesenbuchstaben. Ein CALL
+bei 0CDAH wirkt genauso wie die PRS&nbsp;&ndash; Routine (RST 28H), d.h. hinter
+dem CALL muss die auszugebende Zeichenkette, abgeschlossen mit 00H,
+folgen.
+</p>
+<p>
+Der dritte Programmteil hat ebenfalls zwei Einsprungadressen. Mit E
+0EB8 vom Monitor aus kann man den ersten Programmteil starten. Es
+erwartet eine Eingabe von der Tastatur und gibt dann das Zeichen in
+Riesenschrift auf dem Bildschirm aus. Mit der Taste GRAPH&nbsp;&ndash; NEW LINE
+und einer anschliessend gedrueckten Zahlentaste kann man den Abstand
+zwischen den einzelnen Zeichen veraendern. Mit ESC (SHIFT&nbsp;&ndash; NEW LINE)
+kann man das Programm verlassen. E 0ED8 vom Monitor aus gibt eine
+Laufschrift aus. Ruecksprung in den Monitor ist nur mit RESET moeglich.
+</p>
+<h4>
+Aenderungen fuer T2/&#x200b;T4
+</h4>
+<p>
+In 0C81H muss 1E, in 0C84 muss CD 3B 01 und in 0C8F muss 1F. Die
+Demonstrationsprogramme ab 0EB8 muessen neu geschrieben werden.
+</p>
+<h4>
+Aenderungen fuer <span class="uppercase">Nascom&nbsp;2</span>
+</h4>
+<p>
+Das Programm verwendet 0AH (Reverses Blank)* als Grafikzeichen NA 2 &ndash;
+Benutzer muessen das in FFH umaendern, und zwar an der Adresse 0CD0.
+</p>
+<p>
+Das Programm belegt im RAM noch die Adressen 0D35H bis 0D38H. In 0D35H
+und 0D36H ist die Adresse des Bildschirms gespeichert, an der das
+naechste Zeichen ausgegeben wird. Sie wird nach jedem NEW LINE oder
+CLEAR SCREEN automatisch neu gesetzt, In 0D37H steht der Wert der
+Verzoegerung, die waehrend der Ausgabe eines Zeichens eingefuegt wird,
+und in 0D38H steht die Anzahl der Zwischenraeume zwischen zwei Zeichen.
+Die letzten beide Speicherstellen muessen, bevor der erste Programmteil
+aufgerufen wird, auf den gewuenschten Wert + 1 gesetzt werden.
+Beispiel: die Befehlsfolge LD HL,0802&nbsp;; LD (0D37),HL setzt die
+Verzoegerung auf 07 und die Zwischenraumbreite auf 01.
+</p>
+<p>
+Zum Schluss noch die Adressen, die beim
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
+
+Verschieben des Programms geaendert werden
+muessen:
+</p>
+<p style="text-align:left">
+0C8B 0C93 0CA5 0CB2 0CB8 0CC5 0CD5 0CE4 0CEE
+0D06 0D14
+</p>
+<p>
+0CA5, 0CB8 und 0CE4 sind CALLs, in 0D14
+steht der Tabellenanfang (0D39).
+In allen anderen Adressen wird auf die 4 RAM
+&ndash; Zellen zugegriffen.
+</p>
+<p>
+*Anm. d. Red.: Das funktioniert nur, wenn per Hardware eine
+Invertierung der Zeichen durch Bit 7 vorgesehen ist (wie in älteren
+Ausgaben des Journals
+<a href="../../../../80/04/08/text/#article2">mehrfach</a>
+<a href="../../../../80/06/05/text/#article2">beschrieben</a>).
+</p>
+
+<!-- Kasten über ganze Spalte: Start --><div style="border-top-style: solid; padding-top: 10px; border-left-style: solid; padding-left: 10px; border-right-style: solid; padding-right: 10px; border-width: 2px;  width: 100%; ">
+<div class="text-end"><img class="img-fluid" src="../../Image-39-1.jpeg" alt="" width="222" height="669"></div>
+<!-- Kasten: Ende --></div>
+
+<!-- 2 Spalten: Ende --></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../38/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/02/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 39 von 52</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../82/05/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../52/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../40/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/82-03.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

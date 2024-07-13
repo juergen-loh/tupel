@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>INMC 80 News - October&ndash;December 1981 - Issue 5</title>
+	<!-- Sun, 30 Jun 2024 15:50:49 GMT -->
+	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">INMC 80 News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">October&ndash;December 1981 &middot; <span class="nowrap">Issue 5</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../39/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 40 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80-bus-news/11/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../41/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-inmc-80-news issue-05 page-40" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+Each directory entry is 32 bytes long. Sixteen bytes for the block
+allocation map (telling CP/M where it put the blocks), and sixteen bytes used
+to store the file name, the extent record and the actual number of sectors
+used for that entry. Most files will have only one extent, but large
+programmes like MBASIC take more than 1. (MBASIC is 24k three times the Nascom
+BASIC).
+</p>
+<h4>
+BIT mapping
+</h4>
+<p>
+CP/M knows for each file which sectors (or strictly each block) that
+has been used, but needs to know how many and which blocks or sectors are
+free. This it does with a bit map. It uses a sector of 128 bytes to store the
+sectors used as 1 bit in each byte. It can then know exactly which and how
+many blocks are used up. A second advantage is that if it wants to set aside a
+portion of disk not to be used it only needs to set the bit map and the system
+will not use them. Clever, eh.
+</p>
+<h4>
+CP/M Commands
+</h4>
+<p>
+There are a number of commands within CP/M, such as DIR (directory),
+ERA (erase), etc. Note that these are single word commands. If CP/M was given
+a single word command, but could not find the name, it assumes it is the name
+of a file ending with the &lsquo;file type&rsquo; .COM and loads that in and executes it,
+so you can add your own commands. Better still!
+</p>
+<p>
+For example if you rename BASIC as RUN.COM and you type RUN <span class="uppercase">Startrek</span>,
+CP/M will load BASIC and then load the basic program <span class="uppercase">Startrek</span>. It is almost
+friendly.!
+</p>
+<p>
+Well so much for this week/&#x200b;month/&#x200b;quarter/&#x200b;year.
+</p>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<h1 id="article1">
+<img class="img-fluid" src="../../Image-40-1.png" alt="SPEECH" width="106" height="22">
+</h1>
+<!-- 1 column: end --></div>
+<!-- 3 columns: start 2 --><div class="row"><div class="col-sm-8">
+<h2>
+<u class="double">Review of the Arfon Speech Synthesis Board</u>
+</h2>
+<!-- 3 columns: change --></div><div class="col-sm-4">
+<h3 class="author">
+by Steven Hanselman
+</h3>
+<!-- 3 columns: end --></div></div>
+<!-- 1 column: start --><div>
+<p>
+The board comes well packed in a cardboard box. The board itself is
+contained in an anti-static treated bag. The board is Nasbus compatible
+although at 8&Prime; x 4&Prime; it is half the size of most Nasbus boards. Input to the
+board is through port F6 (hex) that&rsquo;s 246 (decimal). Output from the board is
+audio through a small but adequate speaker attached to the pcb, or a 3.5mm
+jack socket to an external speaker or amplifier. A status bit is returned via
+port F6 to tell you when the board is ready to accept another word. The speech
+synthesis part contains 144 pre-programmed words contained in two 64k bit
+ROMs. These ROMs are the same type of ROMs as the Nascom Basic ROM, so if you
+plug them into the Basic socket of the Nascom, you could tabulate them and
+probably work out how the speech is stored. Having done that you could
+purchase some more 64k roms (Maplins sell them) and find some way of
+programming your own speech set. (Doubtful but interesting premise. Ed.)
+</p>
+<p>
+The board is exceptionally easy to program in Basic, all that is
+required is that you use the WAIT statement to monitor the busy line until
+free and when free output the value of the next word that you want the board
+to say. Although the ROMs only have a 144 word capacity, it is possible to
+make up almost any word that you want by truncating parts of words and using
+truncated parts to make the new word. This is not ideal, as unfortunately, the
+way the Digitalker produces such good quality speech is by adding emphasis to
+certain characteristics within speech, such as raising the tone near the end
+of the word, and because of this when you put pieces of words together you
+sometimes find the words sounding slightly wrong. Apart from this the
+Digitalker board seems to be good value for money and great fun to use. The
+documentation fs splendid as it reveals everything that you require to know
+about the board, how to use it, and how it works.
+</p>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../39/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 40 of 71</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../80-bus-news/11/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../71/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../41/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/INMC_80_News_5.pdf#page=40" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+
+	<title>80-Bus Journal - Februar 1983 - Ausgabe 2</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td>
+			<h1 class="h1Navi">80-Bus Journal</h1>
+		</td>
+		<td>&nbsp;&nbsp;</td>
+		<td style="vertical-align:top">
+			<h2 class="h2Navi"><span class="nowrap">Februar 1983 &middot;</span> <span class="nowrap">Ausgabe 2</span></h2>
+		</td>
+	</tr>
+</table>
+
+<div id="head"><!-- Navigation oben -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 27 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+</div><!-- /Navigation oben -->
+
+<!-- Die Seite -->
+<div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
+
+<!-- 2 Spalten im Blocksatz: Start --><div class="row"><div class="col-sm-6 justify">
+
+<h1 id="article1" class="donthyphenate">
+<span class="uppercase">Firmware</span> disassembliert
+</h1>
+<h3>
+von <span class="uppercase">Günter Kreidl</span>
+</h3>
+<p>
+<span class="uppercase">Nascom</span>-Besitzer sind Tüftler, die immer genau wissen wollen, wie alles
+funktioniert, sei es die Hardware oder die Software. (Das ist
+jedenfalls mein Eindruck!) Es haben sicherlich schon verschiedene Leute
+die Firmware entschlüsselt, sprich disassembliert. Wir können so etwas
+aus Copyright-Gründen natürlich nicht abdrucken (auch den Platz dafür
+haben wir nicht!), aber wir können Hinweise darauf geben, wie man das
+selber machen kann. Ich möchte hier mit ZEAP den Anfang machen. Wer
+längere Zeit mit dem Assembler gearbeitet hat, der möchte vielleicht
+auch mal wissen, wie er funktioniert. Vielleicht möchte ihn auch jemand
+verändern. Ich habe relativ leicht mit NASDIS ZEAP in ein ZEAP-File
+verwandeln können. Zunächst muß man die Datenbereiche kennen. Es sind
+nur zwei: D006-D009, D00D-D305. Jetzt kann man NASDIS die
+Disassemblierung vornehmen lassen. Der Quellcode muß nun noch ein
+bißchen editiert werden, aber auch das hält sich in Grenzen. Zurächst
+gibt man den Befehl R 4 2 ein. Dann müssen die Zeilen 660 bis 572
+geändert werden, weil es sich bei den Daten hier teilweise um Adressen
+handelt. Je einem Datenbyte folgt eine Adresse als Hilfestellung seien
+hier die Adressen aufgeführt: D2DC, D2E4, D2E8, D3EC, D2F0. Mit Hilfe
+der freien Zwischenzeilen kann man diesen Bereich nun in folgender
+Weise umschreiben:<br>
+xxxx DEFB Datenbyte<br>
+xxxx DEFW Adresse (als Label, also mit vorgestelltem &bdquo;L&ldquo;!).
+Diese Labels müssen jetzt noch im Quelltext an den richtigen Stellen
+(sie liegen am Ende des Datenbereichs!) eingefügt werden. Man kann die
+Stellen mit einer versuchsweisen Assemblierung leicht finden (ORG
+&pound;0000 vorgeben!). In einer der letzten Zeilen des Quelltextes
+steht: LE000 EQU &pound;E000. Das ist zu ändern in: LE000 EQU $. Will
+man feststellen, ob man alles richtig gemacht hat, läßt man jetzt mit
+ORG &pound;0000 und einem Offset assemblieren und vergleicht mit einem
+kleinen Testprogramm Byte für Byte die Originalversion mit der
+assemblierten Version. Sie müssen übereinstimmen. Dann kann man den
+Assembler auch an eine andere Speicherstelle assemblieren und dort
+testen. Wer aber ZEAP nur im Speicher verschieben will, braucht sich
+die Mühe des Disassemblierens nicht zu machen, denn es folgen hier noch
+die Verschiebungsvektoren für
+<a href="../../14/text/#article1">ZEAP</a> und
+<a href="../../13/text/#article1">DEBUG</a>.
+Mit dem im
+<a href="../../../01/26/text/#article1">letzten Heft</a>
+beschriebenen <span class="uppercase">Relocator</span> können beide Programme jetzt an beliebige
+Speicherstellen (Pages!) gelegt werden (bei mir läuft z.B. ZEAP jetzt
+auf F000). DEBUG benötigt NASDIS im direkt anschließenden Speicher. Man
+sollte also nur beide gemeinsam relozieren. Die beiden
+Verschiebungsvektoren können dann zu einem zusammengefaßt werden.<br><br>
+
+<!-- 2 Spalten im Blocksatz: Spaltenwechsel --></p></div><div class="col-sm-6 justify">
+
+<h1 id="article2" class="uppercase">
+<span id="impressum">
+Impressum
+</span>
+</h1>
+<h4 class="uppercase">
+Herausgeber:
+</h4>
+<table style="width: 100%">
+<tr><td>Günter Böhm</td><td style="text-align:right">______________ ___. ___</td></tr>
+<tr><td>__ Karlsruhe</td><td style="text-align:right">Tel. ____/______</td></tr>
+<tr><td colspan=2 style="text-align:right">Redaktion, Layout (Grafik), Versand</td></tr>
+
+<tr><td>Günter Kreidl</td><td style="text-align:right">_________ __</td></tr>
+<tr><td>____ Straelen</td><td style="text-align:right">Tel. _____/____</td></tr>
+<tr><td colspan=2 style="text-align:right">Redaktion, Layout (Text), Buchhaltung</td></tr>
+
+</table>
+
+<h4 class="uppercase">
+Korrespondenten:
+</h4>
+
+<table style="width: 100%">
+<tr><td>Wolfgang Mayer-Gürr</td><td style="text-align:right">____________&nbsp;___&nbsp;___</td></tr>
+<tr><td>___ Recklinghausen</td><td style="text-align:right">Tel. _____/_____</td></tr>
+
+<tr><td>Clemens u. Max Ballarin</td><td style="text-align:right">_______ ___. _</td></tr>
+<tr><td>___ Ueberlingen</td><td style="text-align:right">Tel. _____/_____</td></tr>
+
+<tr><td>Michael Bach</td><td style="text-align:right">__ __________ __</td></tr>
+<tr><td>____ Stegen</td><td style="text-align:right">Tel. _____/_____</td></tr>
+
+<tr><td>Peter Brendel</td><td style="text-align:right">__________. __</td></tr>
+<tr><td colspan=2>____ Mannheim</td></tr>
+
+<tr><td>Hans-Jürgen Plath</td><td style="text-align:right">____ _______. _</td></tr>
+<tr><td colspan=2>____ Kiel</td></tr>
+
+<tr><td>Hans Schneider</td><td style="text-align:right">________ ____</td></tr>
+<tr><td colspan=2>____ Esens</td></tr>
+
+<tr><td colspan=2>Oesterreich:</td></tr>
+<tr><td>Gerhard Klement</td><td style="text-align:right">________. ___/_/__</td></tr>
+<tr><td>A-____ Wien</td><td style="text-align:right">Tel. ____/_______</td></tr>
+
+<tr><td colspan=2>Niederlande:</td></tr>
+<tr><td>Eric v.d.Vaart</td><td style="text-align:right">__________ __</td></tr>
+<tr><td colspan=2>NL-____ __ Waddixveen</td></tr>
+
+<tr><td colspan=2>England:</td></tr>
+<tr><td>Frank M. Butler</td><td style="text-align:right">___ ____ ____ ____</td></tr>
+<tr><td colspan=2>Mansfield Woodhouse/&#x200b;Notts</td></tr>
+
+<tr><td colspan=2>Luxemburg:</td></tr>
+<tr><td>Rene Claus</td><td style="text-align:right">_________. __</td></tr>
+<tr><td colspan=2>L-___ Bonneweg</td></tr>
+</table>
+
+<h4>
+<span class="uppercase">Verlag</span>:
+</h4>
+<table style="width: 100%">
+<tr><td>Günter Kreidl</td><td style="text-align:right">____ Straelen</td></tr>
+</table>
+<h4>
+<span class="uppercase">Vertriebsweise</span> und <span class="uppercase">Bezugspreis</span>:
+</h4>
+<table style="width: 100%">
+<tr><td>Einzelheft</td><td>DM</td><td style="text-align:right">5,&ndash;</td></tr>
+<tr><td>Doppelheft</td><td>DM</td><td style="text-align:right">10,&ndash;</td></tr>
+<tr><td>Jahresabonnement &nbsp; In- und Ausland</td><td>DM</td><td style="text-align:right">60,&ndash;</td></tr>
+</table>
+<p>
+Es erscheinen 10 Hefte pro
+Jahr, davon zwei Doppelhefte. Es können jeweils nur ganze Jahrgänge
+abonniert werden. Bei Bestellungen nach dem Erscheinungsdatum des
+ersten Heftes eines Jaghrgangs werden die bereits erschienenen Hefte
+nachgeliefert. Die Lieferung von Einzelheften durch den Verlag ist
+nicht möglich. Bitte zahlen Sie direkt bei der Bestellung auf das
+Postscheckkonto:
+</p>
+<table style="width: 100%">
+<tr><td>Günter Kreidl</td><td style="text-align:right">____ __-___ PSchA _____</td></tr>
+</table>
+<h4>
+<span class="uppercase">Haftung</span> und <span class="uppercase">Rechte</span>:
+</h4>
+<p>
+Für Fehler in Texten, Bilder, Programmen und Schaltungen und daraus
+entstehende Schäden kann keine Haftung übernommen werden.
+</p>
+<p>
+Alle Rechte
+verbleiben grundsätzlich bei den Autoren der Beiträge. Die
+Veröffentlichung von Programmen und Schaltungen geschieht nur für den
+persönlichen Gebrauch der Abonnenten des 80-BUS-Journals; jede
+kommerzielle Auswertung ist nur mit Genehmigung des Verfassers erlaubt.
+Beiträge, die nicht mit einem Copyright-Vermerk versehen sind, dürfen
+für nichtkommerzielle Verwendung vervielfältigt werden, wenn als Quelle
+das 80-BUS-Journal und der Verfasser angegeben werden.
+</p>
+<div id="nascompl">
+<img class="img-fluid mx-auto d-block " src="../../Image-27-1.jpeg" alt="NASCOMPL" width="87" height="132">
+</div>
+
+<!-- 2 Spalten: Ende --></div></div>
+
+</div></div>
+<!-- /Die Seite -->
+
+<!-- Navigation unten -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../26/text/" title="Seite zurück"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="Erste Seite"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/01/01/text/" title="Heft zurück"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Inhaltsverzeichnis">Seite 27 von 28</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../../83/03/01/text/" title="Heft vor"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Letzte Seite"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../28/text/" title="Seite vor"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- /Navigation unten -->
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<!--a class="sm-fill nav-link disabled">Text</a-->
+		<a class="sm-fill nav-link" href="../">Grafik</a>
+		<a class="sm-fill nav-link" href="../../thumb/text/">Miniatur&shy;bilder</a>
+		<a class="sm-fill nav-link" href="../../../../../../nascom/journal/pdf/83-02.pdf" download>PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Datenschutzerklärung</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Impressum</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

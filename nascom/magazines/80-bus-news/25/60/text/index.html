@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
+	<!-- Sun, 07 Jul 2024 16:47:54 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">September&ndash;October 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 5</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../59/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 60 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../61/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-25 page-60" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p>
+If doing a large program, then it is worthwhile using SUBMIT files with
+parameters to lessen the amount of work. These can remarkably shorten the
+repetitive process of assembly and linking. Unfortunately DISZILOG will not
+work off a SUBMIT file (it doesn&rsquo;t use much buffered console input). If it
+did, it would speed up the process even more. Has anyone tried a mod on it to
+do just that? If so I&rsquo;d be very greatful for details. Minor problems arise.
+One needs to keep track of the sections of the file &ndash; so add an index number,
+as FILE1, FILE2 etc. Some problem may arise with ORG statements needing to be
+deleted from the ASM files or with the linker (if used) inserting unwanted
+jumps to where it thinks entry points ought to be.
+</p>
+<p>
+When all is transmitted, and the receiving machine has a disk full of
+FILE1.HEX, .... FILEn-HEX, one can do two things. Either PIP
+FILE.HEX=FILE1.HEX,&#x200b;FILE2.HEX,&hellip;,&#x200b;FILEn.HEX to concatenate the files into one
+which you then LOAD. Maximum filesize again about 26k &ndash; machine and CP/M
+dependant! or else
+</p>
+<img class="img-fluid" src="../../Image-60-1.png" alt="" width="627" height="155">
+<p>
+This entire process is laborious, but it does work. To get the hang of
+this method, start off with a short ASCII program and get that to transmit.
+This proves that your initialisation, baud rates, connections etc. are all
+O.K. Then try a trivial COM file &ndash; I wrote one under ZSID. 100H bytes of A&rsquo;s,
+100H bytes of B&rsquo;s, 100H of 1A&rsquo;s, 100H of D&rsquo;s, SAVEd 4 FILE.COM, and tried
+disassembling that in 100H blocks. You will become very familiar with your
+Disassembler, your assembler, your linker, and above all, with PIP. Do
+remember that a ^C may reset PUN: and RDR: to other values. Do check them
+after ^C&rsquo;s until you are sure what happens. Remember PIP option [E] to echo
+all transfer operations to the screen. A little bit of experiment, copious
+notes of parameters and options, and you will soon be in meaningful
+communication with the rest of the world.
+</p>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<h2 id="article1" class="uppercase">
+<u>Back Issues</u>
+</h2>
+<p class="noindent">
+Back issues of
+<a href="../../../../inmc-news/text/#head">INMC</a>,
+<a href="../../../../inmc-80-news/text/#head">INMC80</a> and
+<a href="../../../text/#head">80-BUS News</a>
+are available from Interface Data
+at the address shown on the inside front cover. The following issues are
+currently available:
+</p>
+<ul class="dottened-right">
+<li><span>INMC Special Compilation Issue</span> <span>&pound;2.50</span></li>
+<li><span>
+	<a href="../../../../inmc-news/text/#head">INMC80 Issues</a>
+	<a href="../../../../inmc-news/01/00/text/#page">1</a>,
+	<a href="../../../../inmc-news/03/00/text/#page">3</a>,
+	<a href="../../../../inmc-news/04/00/text/#page">4,</a>
+	<a href="../../../../inmc-news/05/00/text/#page">5</a></span>
+	<span>(each) . &pound;1.50</span></li>
+<li><span>
+	<a href="../../../text/#head">80-BUS News</a> Volume 1, Issues
+	<a href="../../../11/01/text/#page">1</a>,
+	<a href="../../../12/01/text/#page">2</a>,
+	<a href="../../../13/01/text/#page">3</a>,
+	<a href="../../../14/01/text/#page">4</a></span>
+	<span>(each) . &pound;1.50</span></li>
+<li><span>
+	<a href="../../../text/#head">80-BUS News</a> Volume 2, Issues
+	<a href="../../../21/01/text/#page">1</a>,
+	<a href="../../../22/01/text/#page">2</a>,
+	<a href="../../../23/01/text/#page">3</a>,
+	<a href="../../../24/01/text/#page">4</a></span>
+	<span>(each) . &pound;1.50</span></li>
+</ul>
+<h3>
+<u>Postage.</u>
+</h3>
+<table class="postage">
+<tr><td>UK.</td><td>Add</td><td>25p</td><td>for</td><td>one</td><td>issue,</td><td>20p</td><td>for</td><td>each</td><td>additional</td><td>issue</td><td>.</td></tr>
+<tr><td class="uppercase">Overseas.</td><td>"</td><td>40p</td><td>"</td><td>"</td><td>"</td><td>25p</td><td>"</td><td>"</td><td>"</td><td>"</td><td>.</td></tr>
+</table>
+<p></p>
+<!-- Linie --><div class="hline" style="width: 20%; margin:auto;  border-top:1px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../59/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 60 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../26/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../61/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_25.pdf#page=60" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

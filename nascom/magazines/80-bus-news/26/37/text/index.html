@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">80-Bus News</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi">November&ndash;December 1983 &middot; <span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Issue 6</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../36/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 37 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../38/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-80-bus-news issue-26 page-37" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    50</span>
+
+EEBA BCEE       CMPLOG: DEFW    CMPLG1          ; Compare two values / strings
+EEBC 79         CMPLG1: LD      A,C             ; Get data type
+EEBD B7                 OR      A
+EEBE 1F                 RRA
+EEBF C1                 POP     BC              ; Get last expression to BCDE
+EEC0 D1                 POP     DE
+EEC1 F5                 PUSH    AF              ; Save status
+EEC2 CD46ED             CALL    CHKTYP          ; Check that types match
+EEC5 21FEEE             LD      HL,CMPRES       ; Result to comparison
+EEC8 E5                 PUSH    HL              ; Save for RETurn
+EEC9 CA8EF8             JP      Z,CMPNUM        ; Compare values if numeric
+EECC AF                 XOR     A               ; Compare two strings
+EECD 32AD10             LD      (TYPE),A        ; Set type to numeric
+EED0 D5                 PUSH    DE              ; Save string name
+EED1 CD53F3             CALL    GSTRCU          ; Get current string
+EED4 7E                 LD      A,(HL)          ; Get length of string
+EED5 23                 INC     HL
+EED6 23                 INC     HL
+EED7 4E                 LD      C,(HL)          ; Get LSB of address
+EED8 23                 INC     HL
+EED9 46                 LD      B,(HL)          ; Get MSB of address
+EEDA D1                 POP     DE              ; Restore string name
+EEDB C5                 PUSH    BC              ; Save address of string
+EEDC F5                 PUSH    AF              ; Save length of string
+EEDD CD57F3             CALL    GSTRDE          ; Get second string
+EEE0 CD62F8             CALL    LOADFP          ; Get address of second string
+EEE3 F1                 POP     AF              ; Restore length of string 1
+EEE4 57                 LD      D,A             ; Length to D
+EEE5 E1                 POP     HL              ; Restore address of string 1
+EEE6 7B         CMPSTR: LD      A,E             ; Bytes of string 2 to do
+EEE7 B2                 OR      D               ; Bytes of string 1 to do
+EEE8 C8                 RET     Z               ; Exit if all bytes compared
+EEE9 7A                 LD      A,D             ; Get bytes of string 1 to do
+EEEA D601               SUB     1
+EEEC D8                 RET     C               ; Exit if end of string 1
+EEED AF                 XOR     A
+EEEE BB                 CP      E               ; Bytes of string 2 to do
+EEEF 3C                 INC     A
+EEF0 D0                 RET     NC              ; Exit if end of string 2
+EEF1 15                 DEC     D               ; Count bytes in string 1
+EEF2 1D                 DEC     E               ; Count bytes in string 2
+EEF3 0A                 LD      A,(BC)          ; Byte in string 2
+EEF4 BE                 CP      (HL)            ; Compare to byte in string 1
+EEF5 23                 INC     HL              ; Move up string 1
+EEF6 03                 INC     BC              ; Move up string 2
+EEF7 CAE6EE             JP      Z,CMPSTR        ; Same - Try next bytes
+EEFA 3F                 CCF                     ; Flag difference ("&gt;" or "&lt;")
+EEFB C31EF8             JP      FLGDIF          ; "&lt;" gives -1 , "&gt;" gives +1
+
+EEFE 3C         CMPRES: INC     A               ; Increment current value
+EEFF 8F                 ADC     A,A             ; Double plus carry
+EF00 C1                 POP     BC              ; Get other value
+EF01 A0                 AND     B               ; Combine them
+EF02 C6FF               ADD     A,-1            ; Carry set if different
+EF04 9F                 SBC     A,A             ; 00 - Equal&nbsp;, FF - Different
+EF05 C325F8             JP      FLGREL          ; Set current value & continue
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    51</span>
+
+EF08 165A       EVNOT:  LD      D,5AH           ; Precedence value for "NOT"
+EF0A CD5DED             CALL    EVAL1           ; Eval until precedence break
+EF0D CD44ED             CALL    TSTNUM          ; Make sure it's a number
+EF10 CD8BE9             CALL    DEINT           ; Get integer -32768 - 32767
+EF13 7B                 LD      A,E             ; Get LSB
+EF14 2F                 CPL                     ; Invert LSB
+EF15 4F                 LD      C,A             ; Save "NOT" of LSB
+EF16 7A                 LD      A,D             ; Get MSB
+EF17 2F                 CPL                     ; Invert MSB
+EF18 CDF1F0             CALL    ACPASS          ; Save AC as current
+EF1B C1                 POP     BC              ; Clean up stack
+EF1C C369ED             JP      EVAL3           ; Continue evaluation
+
+EF1F 2B         DIMRET: DEC     HL              ; DEC 'cos GETCHR INCs
+EF20 CD36E8             CALL    GETCHR          ; Get next character
+EF23 C8                 RET     Z               ; End of DIM statement
+EF24 CD90E6             CALL    CHKSYN          ; Make sure "," follows
+EF27 2C                 DEFB    ","
+EF28 011FEF     DIM:    LD      BC,DIMRET       ; Return to "DIMRET"
+EF2B C5                 PUSH    BC              ; Save on stack
+EF2C F6                 DEFB    (OR n)          ; Flag "Create" variable
+EF2D AF         GETVAR: XOR     A               ; Find variable address,to DE
+EF2E 32AC10             LD      (LCRFLG),A      ; Set locate / create flag
+EF31 46                 LD      B,(HL)          ; Get First byte of name
+EF32 CD77E9     GTFNAM: CALL    CHKLTR          ; See if a letter
+EF35 DAADE3             JP      C,SNERR         ; ?SN Error if not a letter
+EF38 AF                 XOR     A
+EF39 4F                 LD      C,A             ; Clear second byte of name
+EF3A 32AD10             LD      (TYPE),A        ; Set type to numeric
+EF3D CD36E8             CALL    GETCHR          ; Get next character
+EF40 DA49EF             JP      C,SVNAM2        ; Numeric - Save in name
+EF43 CD77E9             CALL    CHKLTR          ; See if a letter
+EF46 DA56EF             JP      C,CHARTY        ; Not a letter - Check type
+EF49 4F         SVNAM2: LD      C,A             ; Save second byte of name
+EF4A CD36E8     ENDNAM: CALL    GETCHR          ; Get next character
+EF4D DA4AEF             JP      C,ENDNAM        ; Numeric - Get another
+EF50 CD77E9             CALL    CHKLTR          ; See if a letter
+EF53 D24AEF             JP      NC,ENDNAM       ; Letter - Get another
+EF56 D624       CHARTY: SUB     "$"             ; String variable?
+EF58 C265EF             JP      NZ,NOTSTR       ; No - Numeric variable
+EF5B 3C                 INC     A               ; A = 1 (string type)
+EF5C 32AD10             LD      (TYPE),A        ; Set type to string
+EF5F 0F                 RRCA                    ; A = 80H&nbsp;, Flag for string
+EF60 81                 ADD     A,C             ; 2nd byte of name has bit 7 on
+EF61 4F                 LD      C,A             ; Resave second byte on name
+EF62 CD36E8             CALL    GETCHR          ; Get next character
+EF65 3ACB10     NOTSTR: LD      A,(FORFLG)      ; Array name needed&nbsp;?
+EF68 3D                 DEC     A
+EF69 CA12F0             JP      Z,ARLDSV        ; Yes - Get array name
+EF6C F275EF             JP      P,NSCFOR        ; No array with "FOR" or "FN"
+EF6F 7E                 LD      A,(HL)          ; Get byte again
+EF70 D628               SUB     "("             ; Subscripted variable?
+EF72 CAEAEF             JP      Z,SBSCPT        ; Yes - Sort out subscript
+</pre>
+<!-- 1 column: end --></div>
+</div>
+</div>
+</div>
+<p>
+	NASCOM ROM BASIC dis-assembled is available in <a href="../../../files/8kbasic.asm">ASM</a>
+	and <a href="../../../files/8kbasic.lst">LST</a> file format.
+</p>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../36/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../25/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 37 of 67</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../31/01/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../67/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../38/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/80bus_news_26.pdf#page=37" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->

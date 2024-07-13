@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="de">
+
+<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<link rel="shortcut icon" type="image/x-icon" href="../../../../../../nascom/nascom.ico">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="../../../../../../nascom/apple-touch-icon.png" sizes="96x96">
+	<link rel="apple-touch-icon" sizes="180x180" href="../../../../../../nascom/apple-touch-icon.png">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="../../../../../../cdn/bootstrap/css/bootstrap.min.css">
+
+	<!--font awesome-->
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+<!-- /navi-head.php -->
+
+	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+
+	<title>Micropower - Volume 2 - Number 3 - July 1982</title>
+	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
+	<link rel="stylesheet" type="text/css" href="../../../style.css">
+<!-- navi-body.php -->
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-light bg-light style-navbar-top" id="top">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="https://jloh.de/">
+			<img src="../../../../../../favicon.ico" width="32" height="32" alt="JL" title="Homepage von Jürgen Loh">
+		</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse robots-nocontent" id="navbarSupportedContent">
+			<ul class="navbar-nav md-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../z80-kit/">Z80-KIT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/1/">Nascom 1</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../nascom/">Nascom Journal</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" href="../../../../../../nascom/magazines/issues/">Nascom Magazines</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../pico/">PICO</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../cpm-plus/">CP/M</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../../../../../../">Tupel BBS</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</nav>
+
+	<div class="container" style="max-width: 750px; color: #000; padding: 0 15px 0; background-color: #FFF">
+
+<!--********************************************************************************-->
+
+<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<table class="style-table-zeropadding" style="width: 100%">
+<tr>
+<td>
+<h1 class="h1Navi">Micro&shy;power</h1>
+</td>
+<td>&nbsp;&nbsp;</td>
+<td style="vertical-align:top">
+<h2 class="h2Navi"><span class="nowrap">Volume 2 &middot;</span> <span class="nowrap">Number 3 &middot;</span> <span class="nowrap">July 1982</span></h2>
+</td>
+</tr>
+</table>
+<!-- Navigation top -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../02/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 3 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+<!-- The page -->
+<div class="row" lang="en">
+<div class="col-sm-12 mag-micropower issue-23 page-03" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
+<!-- 1 column: start --><div>
+<p class="continued">
+A6=1, A5=0, A4=0 and A7=0, giving access to the 16 registers
+from address 40H to 4FH (hex). The data-out, in BCD form, is
+present on the data lines D0-D5. R/W signals are directly
+connected to the control BUS of your Nascom.
+</p>
+<p>
+IC&nbsp;3 is only required by the &ldquo;sporty&rdquo; Nascoms running at 4&nbsp;Mhz.
+(You mean all Nascoms don&rsquo;t run at 4&nbsp;Mhz??-Ed). It provides
+a Wait signal of approxiamately 1uS to allow the MM 58174 time
+to output data to the Data Bus. The DBDR signal is not needed by
+the Nascom&nbsp;2&rsquo;s and I am not too sure if it is in fact needed by
+all versions of Nascom 1&rsquo;s. (see Nascom Doc)
+</p>
+<p>
+As previously mentioned, 2 Ni-Cad batteries are used to keep
+power on during computer &ldquo;days off&rdquo;. These are kept charged via
+T1 and R1 when 5V is applied to the circuit. In &ldquo;stand-by&rdquo; made,
+the diode D1 ensures that the 2.2V powers the MM&nbsp;58174. It is
+necessary, when 5V operations cease, that the /WR, pin 3, is
+kept at a sufficiently high potential to stop any random writing
+to the MM&nbsp;58174 registers. R4 provides this potential and the 2
+NOR gates, connected in series, provide the necessary isolation
+from the computers Control Bus. Finally, the variable capacitor
+VC1 allows accurate callibration.
+</p>
+<h3>
+List of Components
+</h3>
+<div class="table-responsive nowrap">
+<table style="margin-left: 13.5%; width: 80%">
+<tr><td>R1</td><td>15&nbsp;Kohm</td><td>R2</td><td>1&nbsp;Kohm</td><td>R3</td><td>4.7&nbsp;Kohm</td></tr>
+<tr><td>R4</td><td>1&nbsp;Kohm</td><td>R5</td><td>240&nbsp;ohm</td><td>R6</td><td>500&nbsp;ohm</td></tr>
+<tr><td>R7</td><td>1&nbsp;Kohm</td><td>R8</td><td>1&nbsp;Kohm</td><td></td><td></td></tr>
+<tr><td>C1</td><td>68 pF</td><td>C2</td><td>100uF</td><td>VC1</td><td>50 pF</td></tr>
+<tr><td>T1</td><td>2N2222</td><td>T2</td><td>2N2369</td><td>D1</td><td>1N4148</td></tr>
+<tr><td>X1</td><td colspan=5>Quartz 32,768&nbsp;Khz</td></tr>
+<tr><td>IC&nbsp;1</td><td>MM 58174</td><td>IC&nbsp;2</td><td>74LS138</td><td>IC&nbsp;3</td><td>74121</td></tr>
+<tr><td>IC&nbsp;4</td><td>7433</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Batt.</td><td colspan=5>2 rechargeable Ni-Cad batteries</td></tr>
+</table>
+</div>
+<h3>
+Construction
+</h3>
+<p>
+I think anyone attempting to build the clock will already
+have sufficient skill to work out a simple Vero board layout. In
+view of the small number of components, it should not be
+difficult. Myself, I used a 10cm x 12cm wire wrap board. There
+was enough space for all the components and the Ni-Cad batteries
+housed in a plastic container (transistor radio type). As I have
+a &ldquo;home built&rdquo; case for my Nascom, I found no difficulty
+installing the board, wiring it directly into the Nascom Bus.
+</p>
+<h3>
+NasBus Connections
+</h3>
+<table class="nasbus-connections">
+<tr><td>NAS-BUS<br>PIN</td><td>SIGNAL</td><td>NAS-BUS<br>PIN</td><td>SIGNAL</td></tr>
+<tr><td>1</td><td>Ground</td><td>13</td><td>/DBDR(N1s only)</td></tr>
+<tr><td>23</td><td>Wait (4Mhz only)</td><td>26</td><td>IORQ</td></tr>
+<tr><td>29</td><td>/Read</td><td>30</td><td>A0</td></tr>
+<tr><td>31</td><td>A1</td><td>32</td><td>A2</td></tr>
+<tr><td>33</td><td>A3</td><td>34</td><td>A4</td></tr>
+<tr><td>35</td><td>A5</td><td>38</td><td>A6</td></tr>
+<tr><td>37</td><td>A7</td><td>50</td><td>D0</td></tr>
+<tr><td>51</td><td>D1</td><td>52</td><td>D2</td></tr>
+<tr><td>53</td><td>D3</td><td>78</td><td>+5V</td></tr>
+</table>
+<!-- 1 column: end --></div>
+
+</div>
+</div>
+<!-- /The page -->
+<!-- Navigation bottom -->
+<table class="robots-nocontent style-table-zeropadding" style="width: 100%">
+	<tr>
+		<td class="navi-button">
+			<a style="display: block" href="../../02/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../../22/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+		</td>
+		<th class="navi-button">
+			<a style="display: block" href="../../text/" title="Table of Contents">Page 3 of 37</a>
+		</th>
+		<td class="navi-button">
+			<a style="display: block" href="../../../24/-1/text/" title="Next issue"><span class="fas fa-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../37/text/" title="Last page"><span class="fas fa-fast-forward" aria-hidden=true></span></a>
+		</td>
+		<td class="navi-button">
+			<a style="display: block" href="../../04/text/" title="Next page"><span class="fas fa-play" aria-hidden=true></span></a>
+		</td>
+	</tr>
+</table>
+
+<!-- navi-footer.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+
+<!--********************************************************************************-->
+
+	</div>
+
+	<nav class="nav flex-column flex-md-row style-navbar-bottom robots-nocontent"> <!--nav-pills-->
+		<a class="sm-fill nav-link" href="#top"><span title="Nach oben" class="fa fa-chevron-up" aria-hidden=true></span></a>
+		<a class="sm-fill nav-link" href="../">Graphic</a>
+		<a class="sm-fill nav-link" href="https://80bus.co.uk.mirror.jloh.de/publications/magazines/Micropower-2-3.pdf#page=5" target="_blank">PDF</a>
+		<a class="sm-fill nav-link" href="../../../../../../datenschutzerklaerung/">Privacy Statement</a>
+		<a class="sm-fill nav-link" href="../../../../../../impressum/">Imprint</a>
+	</nav>
+
+	<!--bootstrap-->
+	<script src="../../../../../../cdn/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- /navi-footer.php -->
+</html>
+
+<!-- /page.php -->
