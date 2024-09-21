@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus Journal - Juli/Aug. 1983 - Ausgabe 7/8</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 01 Sep 2024 17:21:34 GMT -->
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-08-17 20:22:45 +0200 (Sa, 17. Aug 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -130,7 +130,7 @@ ECB-FDC
 <h3>
 von A.ZIPPEL/D.OBERLE
 </h3>
-<h4 class="donthyphenate" style="text-align: left">
+<h4 class="donthyphenate">
 <u>Floppydiskcontrollerkarte,</u>
 <u><!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">ECB</a><!-- /External Link -->-Bus</u>
 <u>kompatibel,</u> <u>gemischter</u> <u>Betrieb</u>
@@ -139,18 +139,18 @@ von A.ZIPPEL/D.OBERLE
 <p>
 von A. Zippel und D.Oberle
 </p>
-<p class="uppercase">
+<p class="uppercase donthyphenate" style="text-align: left">
 Universität Karlsruhe Rechenzentrum
 </p>
 <h4>
 <u>Hardwarebeschreibung</u> <u>des</u> <u>FDC</u>
 </h4>
-<p>
+<p class="first-indent">
 Die Karte übernimmt die Steuerung der
 Laufwerke, die Aufbereitung der Daten und den
 Transport der Daten zwischen Rechner und Laufwerk.
 </p>
-<p>
+<p class="first-indent">
 Das Herz der Karte ist der Kontrollerbaustein
 <!-- External Link --><a href="https://www.retrotechnology.com/herbs_stuff/WD179X.PDF" title="Externer Link: Siehe Seite 73 (PDF-Seite 83)" target="_blank" rel="noreferrer">WD&nbsp;1793</a><!-- /External Link -->
 der wegen seiner leichten und universellen Handhabung dem
@@ -170,11 +170,11 @@ angegebenen Werte haben eine Wartezeit bis zum Readysignal von ungefähr
 800 ms und eine Laufdauer der Laufwerke von ungefähr 3 Sekunden zur
 Folge.
 </p>
-<p>
+<p class="first-indent">
 Der 16&nbsp;MHz Oszillator ersetzt den nicht funktionstüchtigen Oszillator
 des FDC&nbsp;9229&nbsp;B.
 </p>
-<p>
+<p class="first-indent">
 Die Datenübergabe kann auf zwei Arten erfolgen. Zum Einen können die
 Daten über NMI&rsquo;s übertragen werden (Jumper J3 geschlossen)&nbsp;, oder aber
 die
@@ -185,16 +185,15 @@ mit Treibern wird bestückt und übernimmt den Tansfer
 
 (Jumper J3 offen&nbsp;!!)
 </p>
-<p>
+<p class="first-indent">
 An Jumper J1 kann die Precompensation ab Spur 43 eingestellt werden.
 </p>
-<p>
+<p class="first-indent">
 An Jumper J2 kann die Readyerzeugung für jedes Laufwerk getrennt
 aktiviert werden (schließen des entsprechenden Jumpers).
 </p>
-<p>
-Die
-<!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">Z80&nbsp;PIO</a><!-- /External Link -->
+<p class="first-indent">
+Die <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">Z80&nbsp;PIO</a><!-- /External Link -->
 übernimmt die Selektion der Laufwerke, die Abfrage der
 Statussignale, die Seitenauswahl und die Interrupterzeugung bei einer
 Diskoperation (ausgelöst durch INTR des
@@ -203,14 +202,14 @@ Die PIO muß in der
 Betriebsart Bit-ein-ausgabe betrieben werden. Folgende Bits sind als
 Eingänge zu programmieren&nbsp;:
 </p>
-<p>
+<p class="indent">
 von Port A&nbsp;: 7 und 6<br>
 von Port B&nbsp;: 7, 6, 5, 4
 </p>
 <p>
 die anderen Bits sind als Ausgänge zu programmieren.
 </p>
-<p>
+<p class="first-indent">
 Der DMA Baustein und die Addresstreiber sind optional und können bei
 4&nbsp;MHz
 <!-- External Link --><a href="https://de.wikipedia.org/wiki/Zilog_Z80" title="Externer Link" target="_blank" rel="noreferrer">Z80</a><!-- /External Link -->
@@ -227,7 +226,7 @@ Zustände entstehen können. Wenn die DMA die erste in der Kette (oder
 die einzige) ist, muß an Jumper J4 B mit C verbunden werden (sonst A
 mit B).
 </p>
-<p>
+<p class="first-indent">
 Die Steuerung der Buszugriffe und die Bausteinauswahl wird durch
 bipolare 256*4 Prom&rsquo;s vorgenommen. Das Prom P1 ist für die
 Bausteinauswahl und die Interruptacknowlegde zuständig. Prom P2

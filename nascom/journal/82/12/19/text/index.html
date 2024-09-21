@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Journal - 12/82</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Wed, 04 Sep 2024 08:09:55 GMT -->
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-08-17 20:22:45 +0200 (Sa, 17. Aug 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -163,7 +163,7 @@ einer zweiten CPU ausgelöst, das Signal <!-- inverted signal --><span class="st
 ihre Ausgänge, bis auf wenige Ausnahmen in Tri-State Zustand über, und
 der verursachende IC hat die volle Kontrolle über den Bus. Vorher führt
 sie aber noch den gerade angefangenen Befehl zuende und gibt dann durch
-Low-Pegel auf Signal <!-- inverted signal --><span class="style-inverted-signal">BUSACK</span>dem den Bus anfordernden Baustein zu
+Low-Pegel auf Signal <!-- inverted signal --><span class="style-inverted-signal">BUSACK</span> dem den Bus anfordernden Baustein zu
 verstehen, daß er den Bus jetzt haben kann. Gerade weil das
 Anforderungssignal <!-- inverted signal --><span class="style-inverted-signal">BUSRQ</span> mitten in einen Maschinenbefehl hineinplatzen
 kann, wird es bei der Abschaltung der Buffer-ICs
@@ -173,7 +173,7 @@ kann, wird es bei der Abschaltung der Buffer-ICs
 wahrscheinlich Ärger geben. Wenn die CPU, um den angefangenen Befehl zu
 Ende zu führen, noch Schreib- oder Lesezyklen ausführen muß, geht die
 Sache mit bereits abgeschalteten Puffern &bdquo;voll in die Hose&ldquo;.
-Bei Abschaltung auf <!-- inverted signal --><span class="style-inverted-signal">BUSACK</span>kann sowas nicht passieren, weil da die CPU
+Bei Abschaltung auf <!-- inverted signal --><span class="style-inverted-signal">BUSACK</span> kann sowas nicht passieren, weil da die CPU
 bereits fertig ist.
 </p>
 <p>

@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus Journal - Juli/Aug. 1983 - Ausgabe 7/8</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Tue, 27 Aug 2024 15:32:39 GMT -->
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-08-17 20:22:45 +0200 (Sa, 17. Aug 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -129,7 +129,7 @@ auf, es ist jedoch nur ein Port in der
 <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="Externer Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
 vorhanden (bei den anderen Bausteinen sind es 4 Port&rsquo;s).
 </p>
-<p>
+<p class="first-indent">
 Die Karte benötigt dank des
 <!-- External Link --><a href="https://www.cpcwiki.eu/imgs/9/97/FDC9229BT_Datasheet.pdf" title="Externer Link: FDC9229" target="_blank" rel="noreferrer">FDC&nbsp;9229&nbsp;B</a><!-- /External Link -->
 keinen Abgleich. Es sollten
@@ -139,7 +139,7 @@ und der Verwendung des Typ&rsquo;s
 <!-- External Link --><a href="https://www.retrotechnology.com/restore/hm7602.pdf" title="Externer Link: HM7611" target="_blank" rel="noreferrer">HM&nbsp;7611</a><!-- /External Link -->
 (von Harris) ein brauchbarer Kompromiss.
 </p>
-<p>
+<p class="first-indent">
 Die Karte hat im Gegensatz zu anderen Karten eine 25 polige
 Canonbuchse. Dies wurde vorgesehen, um bei modularen Systemen den
 Kabelsalat an den Frontplatten im erträglichen Rahmen zu halten. Mit
@@ -151,13 +151,13 @@ wie gewohnt direkt an die Platine geführt werden können.
 <h4>
 <u>Hinweise</u> <u>zum</u> <u>Aufbau</u> <u>der</u> <u>Karte</u>
 </h4>
-<p>
+<p class="first-indent">
 Die beschriebene Karte wurde von uns bisher in einer Prototypenversion
 aufgebaut und erprobt. Im Augenblick werden noch Korrekturen am Layout
 vorgenommen, sodaß sich unter Umständen die Zuordnung der einzelnen
 Gatteranschlüße noch geringfügig ändern wird.
 </p>
-<p>
+<p class="first-indent">
 Wir hoffen das Layout bis Ende dieses Monates endgültig fertigstellen
 zu können. Weiter folgt in einem der nächsten Hefte eine Sammlung von
 Unterprogrammen zum Betrieb der FDC-Karte in einem
@@ -166,18 +166,18 @@ Unterprogrammen zum Betrieb der FDC-Karte in einem
 System. Ein
 komplettes BIOS für CP/M 3.0 kann leider nicht vorgestellt werden.
 </p>
-<p>
+<p class="first-indent">
 Die Leerkarten werden dann voraussichtlich mit den erforderlichen
 Steuerproms ausgeliefert.
 </p>
-<p>
+<p class="first-indent">
 Den Inhalt und die Programmierung der Steuerproms entnehmen Sie bitte
 den folgenden Tabellen.
 </p>
 
 <!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
 
-<p>
+<p class="first-indent">
 Die abgedruckte Stückliste und der noch mit dem Layout
 fertigzustellende Bestückungsplan ermöglichen dann den fehlerfreien
 Aufbau der Karte.
@@ -185,15 +185,15 @@ Aufbau der Karte.
 <h4>
 <u>Bauteileliste</u>
 </h4>
-<p>
+<p class="nojustify donthyphenate">
 2 * 256*4 Prom (z.B. HM 7611&nbsp;, MM 6301)<br>
 3 * 74 LS 245 (&nbsp;2 sind optional für DMA Betrieb)<br>
-1 * 74 IS 241<br>
+1 * 74 LS 241<br>
 2 * 7406<br>
-2 * 74 IS 14<br>
-1 * 74 IS 04<br>
+2 * 74 LS 14<br>
+1 * 74 LS 04<br>
 1 * 7438<br>
-1 * 74 IS 123<br>
+1 * 74 LS 123<br>
 1 * FDC 9229 B (&nbsp;B für doppelte Dichte)<br>
 1 * WD 1793-02<br>
 1 * Z80 <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">Pio</a><!-- /External Link -->
@@ -223,7 +223,7 @@ Aufbau der Karte.
 <h4>
 <u>Inhalt</u> <u>der</u> <u>Steuerproms</u>
 </h4>
-<p>
+<p class="first-indent">
 Prom1 übernimmt die Addressdekodierung. Die Bausteine haben bei der
 obigen Programmierung folgende Addressen&nbsp;:
 </p>
