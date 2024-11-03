@@ -1,6 +1,6 @@
 /***************************************************************************/
 /* 80-Bus News */
-/* style.css / $Date: 2024-03-29 20:00:48 +0100 (Fr, 29. Mrz 2024) $ */
+/* style.css / $Date: 2024-10-25 22:46:22 +0200 (Fr, 25. Okt 2024) $ */
 /***************************************************************************/
 
 h5
@@ -784,19 +784,22 @@ h5
 	white-space: nowrap;
 }
 
-.mag-80-bus-news.issue-36.page-13 table tr:nth-child(2)  td:nth-child(3),
-.mag-80-bus-news.issue-36.page-13 table tr:nth-child(20) td:nth-child(3),
-.mag-80-bus-news.issue-36.page-13 table tr td:nth-child(2)
-{
-	text-align: center;
-	width: 2em;
-}
 
+
+.mag-80-bus-news.issue-36.page-13 table tr               td:nth-child(1),
 .mag-80-bus-news.issue-36.page-13 table tr:nth-child(2)  td:nth-child(2),
 .mag-80-bus-news.issue-36.page-13 table tr:nth-child(20) td:nth-child(2)
 {
-	text-align: left;
+	text-align: center;
+	width: 2em;
 	padding-left: 0
+}
+
+.mag-80-bus-news.issue-36.page-13 table tr:nth-child(2)  td:nth-child(1),
+.mag-80-bus-news.issue-36.page-13 table tr:nth-child(20) td:nth-child(1)
+{
+	text-align: left;
+	width: 0;
 }
 
 /*---------------------------------------------------------------------------*/
