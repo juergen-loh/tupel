@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - April&ndash;June 1982 - Volume 1 - Issue 2</title>
-	<!-- Sun, 30 Jun 2024 16:39:10 GMT -->
+	<!-- Sun, 15 Dec 2024 13:34:10 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../45/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../11/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../11/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 46 of 55</a>
@@ -122,12 +122,12 @@
 <div class="col-sm-12 mag-80-bus-news issue-12 page-46" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div class="noindent">
 <p>
-LIST &ndash; XBASIC now prints graphics characters and not keywords when you list a
+LIST&nbsp;&ndash; XBASIC now prints graphics characters and not keywords when you list a
 program. It is able to distinguish between keywords and graphics characters you type
 in.
 </p>
 <p>
-REDUCE &ndash; This removes accessory material from the program i.e. spaces and REM
+REDUCE&nbsp;&ndash; This removes accessory material from the program i.e. spaces and REM
 statements. There are three modes of action:&ndash;<br>
 a) removes spaces except those in REM statements DATA statements and within quotes<br>
 b) removes REM statements (if the REM statement is at the beginning of a line then the
@@ -135,16 +135,16 @@ text is removed but the REM remains so you still have to delete those line numbe
 c) combines a) and b).
 </p>
 <p>
-<span class="uppercase">Renumber</span> &ndash; Renumbers a line from the specified start and increments each subsequent
+<span class="uppercase">Renumber</span>&nbsp;&ndash; Renumbers a line from the specified start and increments each subsequent
 line as specified. A CHECK is performed first and other safeguards are included so
 that the program is not corrupted.
 </p>
 <p>
-FIND &ndash; This finds the lines where the following string argument occurs, scrolling them
+FIND&nbsp;&ndash; This finds the lines where the following string argument occurs, scrolling them
 up from the bottom of the screen.
 </p>
 <p>
-TRACE &ndash; This is another of those commands you only dream about!! The command is turned
+TRACE&nbsp;&ndash; This is another of those commands you only dream about!! The command is turned
 on by the argument 1 and off by the argument 0. The variables you want displaying are
 stored in a subsequent string expression&nbsp;, you can have up to 20, i.e. the number you
 can squeeze onto a line!!! Following RUN you single step through the program using
@@ -154,49 +154,49 @@ becomes so easy!! Alternatively, instead of having to hold down the ENTER key,
 argument 1 can be replaced with &lsquo;n&rsquo; where &lsquo;n&rsquo; is a delay of about &lsquo;n&rsquo;msec.
 </p>
 <p>
-XLIST &ndash; This lists a single specified line followed by the numbers of lines making
+XLIST&nbsp;&ndash; This lists a single specified line followed by the numbers of lines making
 references to it. Another very useful little thing.
 </p>
 <p>
-XREF &ndash; As XLIST but the specified line is not listed.
+XREF&nbsp;&ndash; As XLIST but the specified line is not listed.
 </p>
 <p>
-DEC &ndash; This converts a hexadecimal number to a decimal number.
+DEC&nbsp;&ndash; This converts a hexadecimal number to a decimal number.
 </p>
 <p>
-HEX &ndash; This converts a decimal number to a hexadecimal number.
+HEX&nbsp;&ndash; This converts a decimal number to a hexadecimal number.
 </p>
 <p>
-CALL &ndash; This calls a machine code subroutine. The first argument is the subroutine&rsquo;s
+CALL&nbsp;&ndash; This calls a machine code subroutine. The first argument is the subroutine&rsquo;s
 address in decimal. Using subsequent arguments it is possible to pass values to the
 subroutine.
 </p>
 <p>
-GET &ndash; This returns the ASCII value of the next key pressed, or if no key is pressed it
+GET&nbsp;&ndash; This returns the ASCII value of the next key pressed, or if no key is pressed it
 returns 0. No more mucking around with machine code subroutines using DOKEs and DEEKs.
 </p>
 <p>
-INKEY &ndash; As for GET but the keyboard is scanned until the next key is pressed and its
+INKEY&nbsp;&ndash; As for GET but the keyboard is scanned until the next key is pressed and its
 ASCII value is returned.
 </p>
 <p>
-INLIN &ndash; This returns an entire screen line containing the cursor after ENTER. This can
+INLIN&nbsp;&ndash; This returns an entire screen line containing the cursor after ENTER. This can
 be used instead of INPUT as it allows the use of the cusor keys to edit the line while
 waiting for ENTER.
 </p>
 <p>
-TEST &ndash; This tests to see whether a specifed key is pressed down, returning a value 0
+TEST&nbsp;&ndash; This tests to see whether a specifed key is pressed down, returning a value 0
 if not and 1 if it is. The code specifying the key to be tested is NOT the ASCII
 value, but a hardware generated number related to the keyboard wiring. A full table is
 supplied in the manual&rsquo;s appendices.
 </p>
 <p>
-LINE &ndash; Yet another superb command. This uses the Nas Graph &lsquo;pixels&rsquo; to draw a line
+LINE&nbsp;&ndash; Yet another superb command. This uses the Nas Graph &lsquo;pixels&rsquo; to draw a line
 between two points X1,Y1 and X2,Y2. The argument 0 resets the line, 1 sets it and 2
 inverts it. It&rsquo;s very fast!!
 </p>
 <p>
-PLOT &ndash; This sets, resets or inverts the point X,Y.
+PLOT&nbsp;&ndash; This sets, resets or inverts the point X,Y.
 </p>
 <!-- 1 column: end --></div>
 
@@ -210,10 +210,10 @@ PLOT &ndash; This sets, resets or inverts the point X,Y.
 			<a style="display: block" href="../../45/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../11/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../11/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 46 of 55</a>

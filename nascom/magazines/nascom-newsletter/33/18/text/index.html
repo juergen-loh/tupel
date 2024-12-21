@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Newsletter - Volume 3 - Number 3 - August 1983</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 15 Dec 2024 13:35:57 GMT -->
 	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../17/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../32/00/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../32/00/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 18 of 37</a>
@@ -122,51 +122,51 @@
 <div class="col-sm-12 mag-nascom-newsletter issue-33 page-18" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <h1 id="article1">
-A REVIEW OF WAIT &ndash; GATE
+A REVIEW OF WAIT&nbsp;&ndash; GATE
 </h1>
 <h2 class="author">
 by M.S. Smith
 </h2>
 <p>
-&ldquo;What is WAIT &ndash; GATE&rdquo;&nbsp;? I hear you all ask. Well, you should
-have a good idea if you have studied memory &ldquo;&nbsp;WAIT &ndash; STATES&nbsp;&rdquo; in
+&ldquo;What is WAIT&nbsp;&ndash; GATE&rdquo;&nbsp;? I hear you all ask. Well, you should
+have a good idea if you have studied memory &ldquo;&nbsp;WAIT&nbsp;&ndash; STATES&nbsp;&rdquo; in
 general, or in particualar, for Nascoms. For those of you who
 have not done so, I will now try and explain.
 </p>
 <p>
 The Nascom&nbsp;2/3 has facilities for driving RAMs and ROMs of
-varying access time. This entails providing WAIT &ndash; STATES by the
+varying access time. This entails providing WAIT&nbsp;&ndash; STATES by the
 use of the Z80 control line WAIT. The effect of WAIT is to
 give extended memory access cycles, allowing the use of slower
 memory devices. On the Nascom with WAIT enabled, this is done to
 every memory access cycle, ROM, or RAM, of the CPU.
 </p>
 <p>
-Now for the important bit &ndash; what the WAIT &ndash; GATE can and
-cannot do for you, and how all this is achieved. With the WAIT &ndash;
+Now for the important bit&nbsp;&ndash; what the WAIT&nbsp;&ndash; GATE can and
+cannot do for you, and how all this is achieved. With the WAIT&nbsp;&ndash;
 GATE the following are provided: an explanatory booklet / user
 manual, and benchmark test programs, the results of which will
 follow later. The first section of the manual explains how the
 device works, and what it will provide. It then goes on to
 describe the fitting, testing, and operation, finally concluding
 with a section on how to use it to best advantage. The clearly
-written manual and neat, well designed WAIT &ndash; GATE are easy to
+written manual and neat, well designed WAIT&nbsp;&ndash; GATE are easy to
 understand&nbsp;, and almost foolproof. Anyway, I didn&rsquo;t find any
 information lacking or failure in the device.
 </p>
 <p>
-Basically, the WAIT &ndash; GATE works by selecting how long a
+Basically, the WAIT&nbsp;&ndash; GATE works by selecting how long a
 WAIT is necessary for both RAMs and ROMs. That is, if your
 memory devices do not require the full amount of WAIT, (ie. less
 than 525ns access time), which for RAM is usually the case these
 days. Or, if your RAM and ROM work at different speeds, the gate
-can be hardware &ndash; selected to vary the length of WAIT for each.
+can be hardware&nbsp;&ndash; selected to vary the length of WAIT for each.
 Not every memory device needs wither no WAIT or full WAIT, but
-for 300 &ndash; 400ns devices, a WAIT on M1 cycles will suffice.
+for 300&nbsp;&ndash; 400ns devices, a WAIT on M1 cycles will suffice.
 </p>
 <p>
 Fitting the device requires the removal of two IC&rsquo;s (8 &amp; 18)
-from the Nascom main board. The WAIT &ndash; GATE has two wire &ndash; wrap
+from the Nascom main board. The WAIT&nbsp;&ndash; GATE has two wire&nbsp;&ndash; wrap
 sockets for insertion into the now vacant sockets, in a. &ldquo;piggy
 back&rdquo; arrangement. The means that a gap above IC8 and IC18 of a
 sockets&rsquo; width should be available. The usual set up for Nascoms
@@ -174,7 +174,7 @@ that I have met, is for the main board to be uppermost, so this
 should be no problem at all. Once in place testing can begin.
 </p>
 <p>
-The WAIT &ndash; GATE has a &ldquo;four DIP&rdquo; switch and associated
+The WAIT&nbsp;&ndash; GATE has a &ldquo;four DIP&rdquo; switch and associated
 selector to choose which WAIT states are implemented. The RAM
 and ROM sections can be individually selected for either M1 and
 R/W (full) or M1 only; or for neither WAIT, as required. This
@@ -192,10 +192,10 @@ dives all the combinations of WAIT.
 			<a style="display: block" href="../../17/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../32/00/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../32/00/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 18 of 37</a>

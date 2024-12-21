@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 15 Dec 2024 13:34:46 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../40/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 41 of 51</a>
@@ -122,12 +122,12 @@
 <div class="col-sm-12 mag-80-bus-news issue-32 page-41" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <p class="noindent">
-OFF EOF &ndash; As for OFF ERR, turns off above command. The OFF commands are not
+OFF EOF&nbsp;&ndash; As for OFF ERR, turns off above command. The OFF commands are not
 required if the program ends normally as both modes are automatically turned
 off.
 </p>
 <p class="noindent">
-DIR &ndash; Displays the directory of the currently logged disk drive. This is shown
+DIR&nbsp;&ndash; Displays the directory of the currently logged disk drive. This is shown
 in a different format to when displayed under Nas-Dos. Each file name is shown
 with the type of file (XBS for XBASIC, OBJ for object code, ASC for ASCII type
 files or how you wish to suffix them!) Nas-Dos object code files and ROM
@@ -136,7 +136,7 @@ an asterisk in front of the filename and the size of each file is given after
 the name to the nearest 1k above its actual size.
 </p>
 <p class="noindent">
-LOAD &ndash; Followed by a filename loads a file from tape or disk. e.g.
+LOAD&nbsp;&ndash; Followed by a filename loads a file from tape or disk. e.g.
 LOAD"TEST" will load the XBASIC program called TEST from the current logged
 drive, disk or tape. Any program in memory is lost but variables are not
 destroyed. LOAD"B:TEST.OBJ" will load the object code file called TEST from
@@ -144,30 +144,30 @@ disk drive B (irrespective of the current logged drive) into memory starting
 at the location reserved for it by the CLEAR command.
 </p>
 <p class="noindent">
-SAVE &ndash; Similar in operation to LOAD command above only, of course, saves the
+SAVE&nbsp;&ndash; Similar in operation to LOAD command above only, of course, saves the
 file to disk or tape. Three types of file may be saved with this direct
-command &ndash;XBASIC programs, object code and a program as an ASCII file. If the
+command&nbsp;&ndash;XBASIC programs, object code and a program as an ASCII file. If the
 filename is already present on disk then the file with that name will be
 erased before saving the current program!
 </p>
 <p class="noindent">
-ERA &ndash; Followed by a filename will erase the disk file of that name from the
+ERA&nbsp;&ndash; Followed by a filename will erase the disk file of that name from the
 directory.
 </p>
 <p class="noindent">
-LOCK &ndash; Followed by a filename will lock the file so any attempt to erase or
+LOCK&nbsp;&ndash; Followed by a filename will lock the file so any attempt to erase or
 save a file of the same name will produce an error message. UNLOCK removes the
 facility.
 </p>
 <p class="noindent">
-REN &ndash; Followed by two filenames will rename one file for the other.
+REN&nbsp;&ndash; Followed by two filenames will rename one file for the other.
 </p>
 <p class="noindent">
-VERIFY &ndash; Followed by a filename will verify the file, reporting any checksum
+VERIFY&nbsp;&ndash; Followed by a filename will verify the file, reporting any checksum
 error as a Bad Data Error.
 </p>
 <p class="noindent">
-CHAIN &ndash; Followed by a filename will load and execute a program whilst
+CHAIN&nbsp;&ndash; Followed by a filename will load and execute a program whilst
 preserving variables. Particularly useful when used in conjunction with the
 HOLD command such that common subroutines at the beginning of a program may be
 &ldquo;held&rdquo; and then another program CHAINed from disk, an automatic MGE being
@@ -176,16 +176,16 @@ performed, the resulting program then being able to make use of the previously
 use of a common set of routines. I find this command most useful.
 </p>
 <p class="noindent">
-CREATE &ndash; Followed by a valid filename will create a file for subsequent data
+CREATE&nbsp;&ndash; Followed by a valid filename will create a file for subsequent data
 torage using the PRINT# command. Random or sequential access are both catered
 for.
 </p>
 <p class="noindent">
-OPEN &ndash; Followed by a filename will open a previously created file for
+OPEN&nbsp;&ndash; Followed by a filename will open a previously created file for
 subsequent writing (PRINT#) or reading (INPUT#).
 </p>
 <p class="noindent">
-APPEND &ndash; Followed by a filename will open the file for subsequent writing
+APPEND&nbsp;&ndash; Followed by a filename will open the file for subsequent writing
 (PRINT#) or reading (INPUT#).
 </p>
 <!-- 1 column: end --></div>
@@ -200,10 +200,10 @@ APPEND &ndash; Followed by a filename will open the file for subsequent writing
 			<a style="display: block" href="../../40/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 41 of 51</a>

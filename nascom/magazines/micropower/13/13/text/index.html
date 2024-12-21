@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 1 - Number 3 - November 1981</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 15 Dec 2024 13:35:38 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../12/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../12/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../12/-1/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 13 of 33</a>
@@ -142,14 +142,14 @@
 <tr><td>0CE3</td><td>DB04</td><td>0730</td><td></td><td>IN A, (04)</td><td>; READ PORT</td></tr>
 <tr><td>0CE5</td><td>EEFF</td><td>0740</td><td></td><td>XOR &pound;FF</td><td>; INVERT IT</td></tr>
 <tr><td>0CE7</td><td>1F</td><td>0750</td><td></td><td>RRA</td><td>; ROTATE TO CARRY</td></tr>
-<tr><td>0CE8</td><td>3804</td><td>0760</td><td></td><td>JR C, GOT</td><td>; PULSE FOUND &ndash; CHECK</td></tr>
+<tr><td>0CE8</td><td>3804</td><td>0760</td><td></td><td>JR C, GOT</td><td>; PULSE FOUND&nbsp;&ndash; CHECK</td></tr>
 <tr><td>0CEA</td><td>10F6</td><td>0770</td><td></td><td>DJNZ LP3</td><td>; NO PULSE, LOOK AGAIN</td></tr>
 <tr><td>0CEC</td><td>181C</td><td>0780</td><td></td><td>JR NOGOT</td><td>; WINDOW EXPIRED</td></tr>
 <tr><td>0CEE</td><td>DB04</td><td>0790</td><td>GOT</td><td>IN A, (4)</td><td>; CHECK AGAIN</td></tr>
 <tr><td>0CF0</td><td>EEFF</td><td>0800</td><td></td><td>XOR &pound;FF</td><td></td></tr>
 <tr><td>0CF2</td><td>1F</td><td>0810</td><td></td><td>RRA</td><td>; ROTATE TO CARRY</td></tr>
 <tr><td>0CF3</td><td>3804</td><td>0820</td><td></td><td>JR C, GOTONE</td><td>; DEFINATELY A 1</td></tr>
-<tr><td>0CF5</td><td>10EB</td><td>0830</td><td></td><td>DJNZ LP3</td><td>; TRANSIENT &ndash; TRY AGAIN</td></tr>
+<tr><td>0CF5</td><td>10EB</td><td>0830</td><td></td><td>DJNZ LP3</td><td>; TRANSIENT&nbsp;&ndash; TRY AGAIN</td></tr>
 <tr><td>0CF7</td><td>1811</td><td>0840</td><td></td><td>JR NOGOT</td><td>; STILL IN WINDOW?</td></tr>
 <tr><td>0CF9</td><td>F1</td><td>0850</td><td>GOTONE</td><td>POP AF</td><td>; RETORE REGS</td></tr>
 <tr><td>0CFA</td><td>00</td><td>0860</td><td>END</td><td>NOP</td><td>; TO END WINDOW</td></tr>
@@ -161,7 +161,7 @@
 <tr><td>0D00</td><td>00</td><td>0920</td><td></td><td>NOP</td><td></td></tr>
 <tr><td>0D01</td><td>00</td><td>0930</td><td></td><td>NOP</td><td></td></tr>
 <tr><td>0D02</td><td>10F6</td><td>0940</td><td></td><td>DJNZ END</td><td>; STILL IN WINDOW?</td></tr>
-<tr><td>0D04</td><td>C1</td><td>0950</td><td></td><td>POP BC</td><td>; END &ndash; RESTORE REGS</td></tr>
+<tr><td>0D04</td><td>C1</td><td>0950</td><td></td><td>POP BC</td><td>; END&nbsp;&ndash; RESTORE REGS</td></tr>
 <tr><td>0D05</td><td>07</td><td>0960</td><td></td><td>RLCA</td><td>; SHIFT ACCUMULATOR</td></tr>
 <tr><td>0D06</td><td>CB87</td><td>0970</td><td></td><td>RES 0, A</td><td>; ZERO AND</td></tr>
 <tr><td>0D08</td><td>3C</td><td>0980</td><td></td><td>INC A</td><td>; SET BIT 0 TO 1</td></tr>
@@ -193,10 +193,10 @@
 			<a style="display: block" href="../../12/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../12/-1/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../12/-1/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 13 of 33</a>

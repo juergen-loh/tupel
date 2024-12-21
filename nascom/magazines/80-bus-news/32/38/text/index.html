@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 30 Jun 2024 16:39:01 GMT -->
+	<!-- Sun, 15 Dec 2024 13:34:46 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../37/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 38 of 51</a>
@@ -122,33 +122,33 @@
 <div class="col-sm-12 mag-80-bus-news issue-32 page-38" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <p class="noindent">
-RUN &ndash; Programs may be run direct from disk by just entering RUN followed by
+RUN&nbsp;&ndash; Programs may be run direct from disk by just entering RUN followed by
 the name of the program as stored in the disk directory. e.g. RUN"TEST" will
 load the program TEST from disk and proceed to run it.
 </p>
 <p class="noindent">
-TAB &ndash; As for ROM BASIC except that when additionally followed by two values
+TAB&nbsp;&ndash; As for ROM BASIC except that when additionally followed by two values
 will print characters specified by the second value until the print head
 reaches the column specified by the first value. e.g. PRINT TAB(20,46)
 assuming the cursor is placed on the first column of a line, will print twenty
 full stops.
 </p>
 <p class="noindent">
-WIDTH &ndash; Sets the width of the current output device when an automatic CRLF is
+WIDTH&nbsp;&ndash; Sets the width of the current output device when an automatic CRLF is
 generated. Set by default to 0 when no automatic CRLF is generated.
 </p>
 <p class="noindent">
-LOG &ndash; Followed by a suitable number returns the base 10 logarithm. The ROM
+LOG&nbsp;&ndash; Followed by a suitable number returns the base 10 logarithm. The ROM
 BASIC LOG command returns the natural (base e) logarithm.
 </p>
 <p class="noindent">
-LN &ndash; Followed by a suitable number returns the natural logarithm!
+LN&nbsp;&ndash; Followed by a suitable number returns the natural logarithm!
 </p>
 <h4>
 And now the exclusive command set:
 </h4>
 <p class="noindent">
-AUTO &ndash; Followed by up to two values. An automatic line numbering whilst
+AUTO&nbsp;&ndash; Followed by up to two values. An automatic line numbering whilst
 entering programs facility. e.g. AUTO 100,5 will start auto numbering from
 line 100 in steps of 5. Default values are from line 10 in steps of 10.
 Unfortunately you can fool this command by editing another line whilst in the
@@ -160,17 +160,17 @@ abort the auto mode by ESC and then issuing a new AUTO command. Absolutely
 essential to program writing though!
 </p>
 <p class="noindent">
-CALL &ndash; Followed by a suitable expression will call a machine code routine at
+CALL&nbsp;&ndash; Followed by a suitable expression will call a machine code routine at
 the address specified. The routine should normally end with a RET instruction.
 e.g. CALL &amp;C800 will call the machine code routine located at C800H.
 </p>
 <p class="noindent">
-DEL &ndash; Followed by two values will delete the XBASIC program lines between the
+DEL&nbsp;&ndash; Followed by two values will delete the XBASIC program lines between the
 lines specified. e.g. DEL100,200 will delete all lines from 100 to 200
 inclusive.
 </p>
 <p class="noindent">
-DRIVE &ndash; The default drive in the disk version is the disk drive A (logical
+DRIVE&nbsp;&ndash; The default drive in the disk version is the disk drive A (logical
 drive 0) and this may be altered with the DRIVE command. Any read or write
 commands after this will default to the drive specified unless specified
 otherwise in the command (see later disk commands). e.g. DRIVEB will now
@@ -178,14 +178,14 @@ default to the second disk drive. DRIVET will now read and write data to and
 from tape when required.
 </p>
 <p class="noindent">
-ELSE IF ..... THEN ..... : ELSE &ndash; need anymore be said?
+ELSE IF ..... THEN ..... : ELSE&nbsp;&ndash; need anymore be said?
 </p>
 <p class="noindent">
-EVAL &ndash; I&rsquo;m afraid the usefulness of this command escapes me. The command will
+EVAL&nbsp;&ndash; I&rsquo;m afraid the usefulness of this command escapes me. The command will
 evaluate text in a string expression. e.g. A$="1+X&ndash;EXP(X/3)":Y=EVAL(A$).
 </p>
 <p class="noindent">
-FMT &ndash; Requires a lot of words to explain its detailed use but suffice to say
+FMT&nbsp;&ndash; Requires a lot of words to explain its detailed use but suffice to say
 it is a <span class="uppercase">Printusing</span> type of command which can specify the number of figures to
 </p>
 <!-- 1 column: end --></div>
@@ -200,10 +200,10 @@ it is a <span class="uppercase">Printusing</span> type of command which can spec
 			<a style="display: block" href="../../37/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../31/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 38 of 51</a>

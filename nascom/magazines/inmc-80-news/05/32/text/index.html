@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>INMC 80 News - October&ndash;December 1981 - Issue 5</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 15 Dec 2024 13:35:18 GMT -->
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../31/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 32 of 71</a>
@@ -139,7 +139,7 @@ E. P. T. Anderson
 <p>
 The <span class="uppercase">Nascom&nbsp;2</span> is equipped with eight 24 pin sockets intended for 2K static RAMs or
 1K EPROMS of the <!-- External Link --><a href="https://deramp.com/downloads/eprom_programmers/TMS2708.pdf" title="External Link" target="_blank" rel="noreferrer">2708</a><!-- /External Link -->
- type. Although the initial literature &ndash; and advertising &ndash; stated
+ type. Although the initial literature&nbsp;&ndash; and advertising&nbsp;&ndash; stated
 that the use of these sockets was very flexible, it omitted to state how to use them
 for the now economical and hence popular 2516/<!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="External Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->
  2K EPROMS. Furthermore the
@@ -154,21 +154,21 @@ as suitably enabling the EPROMS it is also necessary to enable IC44 and this is 
 by the addition of simple diode gating.
 </p>
 <h4>
-<u class="double">STEP 1</u> (Solder side of board &ndash; see fig&nbsp;4)
+<u class="double">STEP 1</u> (Solder side of board&nbsp;&ndash; see fig&nbsp;4)
 </h4>
 <p>
 Wire all sockets to A10. This is done by strapping all pins 19 to A10 which is available
 on Pin 19 of the monitor ROM (IC&nbsp;34)
 </p>
 <h4>
-<u class="double">STEP 2</u> (Solder side of board &ndash; see Fig&nbsp;4)
+<u class="double">STEP 2</u> (Solder side of board&nbsp;&ndash; see Fig&nbsp;4)
 </h4>
 <p>
 For EPROMS which are to be operated on the lower 2K of a 4K block wire pin 18 to
 A11 which is available on Pin 18 of the BASIC ROM (IC&nbsp;43)
 </p>
 <h4>
-<u class="double">STEP 3</u> (Solder side of board &ndash; see Figs&nbsp;2 &amp; 4)
+<u class="double">STEP 3</u> (Solder side of board&nbsp;&ndash; see Figs&nbsp;2 &amp; 4)
 </h4>
 <p>
 For EPROMS which are to be operated on the upper 2K of a 4K block wire pin 18 to
@@ -183,17 +183,17 @@ must be strapped to the now vacant pin 8 of the socket for the 0v line.
 </p>
 <p>
 From Fig.&nbsp;2 it can be seen that the five spare inverters on the 7404 are not loading
-any circuits &ndash; the majority of the connections going to the link blocks adjacent to the
+any circuits&nbsp;&ndash; the majority of the connections going to the link blocks adjacent to the
 EPROMS.
 </p>
 <h4>
-<u class="double">STEP 4</u> (Solder side of board &ndash; see Fig&nbsp;4)
+<u class="double">STEP 4</u> (Solder side of board&nbsp;&ndash; see Fig&nbsp;4)
 </h4>
 <p>
 Connect pin 21 of all EPROM sockets to +5 which is present on pin 24.
 </p>
 <h4>
-<u class="double">STEP 5</u> (Component side of board &ndash; see Fig&nbsp;1)
+<u class="double">STEP 5</u> (Component side of board&nbsp;&ndash; see Fig&nbsp;1)
 </h4>
 <p>
 Wire the appropriate 4K block pulse available on pins 9 to 16 of LKSI to pin 20 of the
@@ -203,9 +203,9 @@ appropriate EPROM via the link block pin.
 Generally you will use:
 </p>
 <table style="width: 40%">
-<tr><td>D4</td><td>B000 &ndash; BFFF</td><td>Pin 12</td></tr>
-<tr><td>D5</td><td>C000 &ndash; CFFF</td><td>Pin 11</td></tr>
-<tr><td>D6</td><td>D000 &ndash; DFFF</td><td>Pin 10</td></tr>
+<tr><td>D4</td><td>B000&nbsp;&ndash; BFFF</td><td>Pin 12</td></tr>
+<tr><td>D5</td><td>C000&nbsp;&ndash; CFFF</td><td>Pin 11</td></tr>
+<tr><td>D6</td><td>D000&nbsp;&ndash; DFFF</td><td>Pin 10</td></tr>
 </table>
 <!-- 1 column: end --></div>
 
@@ -219,10 +219,10 @@ Generally you will use:
 			<a style="display: block" href="../../31/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../04/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 32 of 71</a>

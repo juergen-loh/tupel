@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 15 Dec 2024 13:34:17 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../07/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 8 of 56</a>
@@ -139,9 +139,9 @@ tick service routine takes some 2 or 3 mS, and when you get back to reading,
 you&rsquo;ve missed about 100 bytes so your disk reports a bad read. So you try again.
 Same story. The only way you can deal with this is to let the CPU disable
 interrupts on the first interrupt, and not to reenable them again until the read
-is finished. Fair enough &ndash; a read is so quick that it won&rsquo;t matter if the clock
+is finished. Fair enough&nbsp;&ndash; a read is so quick that it won&rsquo;t matter if the clock
 on the screen is not updated for a few 1/10s of secs. There is another way to
-deal with the problem &ndash; interrupt priority. This assigns to each device a certain
+deal with the problem&nbsp;&ndash; interrupt priority. This assigns to each device a certain
 priority, and only devices of higher priority than the device under service can
 interrupt. We&rsquo;ll come to this in a moment or two. The <!-- External Link --><a href="https://en.wikipedia.org/wiki/Intel_8080" title="External Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->
  interrupt response (IM
@@ -177,7 +177,7 @@ places the low byte of an address on the bus. The CPU reads this byte and builds
 up the address of a line of the table. From this line of the table, it takes the
 address of the appropriate interrupt handling routine. The confusion arises
 because the address built up by the CPU and peripheral is not the address of the
-interrupt handling routine &ndash; it is the location where the address of the
+interrupt handling routine&nbsp;&ndash; it is the location where the address of the
 interrupt handling routine is stored. Further complication is introduced by the
 fact that we have to set up the &lsquo;I&rsquo; register. This cannot know the address of the
 interrupt service table otherwise. We also have to tell the peripheral the
@@ -198,10 +198,10 @@ little time letting it know just what we want it to do.
 			<a style="display: block" href="../../07/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../14/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 8 of 56</a>

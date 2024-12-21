@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - July&ndash;October 1982 - Volume 1 - Issue 3</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 15 Dec 2024 13:34:13 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../41/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../12/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../12/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 42 of 51</a>
@@ -124,10 +124,10 @@
 <p>
 The relevant parts of the 1797 data sheet are the boxes READ ENABLE TIMING on page
 19, and WRITE ENABLE TIMING on page&nbsp;20. Each contains a footnote in minute print in
-the bottom left-hand corner &ndash; there is a &ldquo;worst case service time&rdquo;. The data may be
+the bottom left-hand corner&nbsp;&ndash; there is a &ldquo;worst case service time&rdquo;. The data may be
 coming at the nominal rate of one byte every 16us, but when reading, the byte must
 be read within 13.5us (54 T states) of the DRQ signal appearing, and when writing,
-the next byte must be supplied within 11.5us (46 T states) of the DRQ request &ndash;
+the next byte must be supplied within 11.5us (46 T states) of the DRQ request&nbsp;&ndash;
 which is even worse! The code developed above does not meet these figures, so how
 can it be compressed further?
 </p>
@@ -145,11 +145,11 @@ there is a connection to the &ldquo;Motor on&rdquo; monostable, (which should pr
 during normal disk I/O), and that the remaining lines are connected to 0V. Turning
 to the I/O instructions in the Z80 data sheets it can be seen that while the <!-- External Link --><a href="https://en.wikipedia.org/wiki/Intel_8080" title="External Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->
 compatible IN A,(n) does not affect any of the bits in the flag register, the extra
-Z80 instructions &ndash; IN r,(C) where the port address is held in register C &ndash; does set
+Z80 instructions&nbsp;&ndash; IN r,(C) where the port address is held in register C&nbsp;&ndash; does set
 the flags as a result of this operation. So if one of these instructions is used,
 the &ldquo;Input and Test&rdquo; operation can be completed in one go, and a very tight polling
 loop will result. However note that this can only be done if the &ldquo;Wait&rdquo; condition
-sets the flags suitably &ndash; this is why it is necessary to use a special port for the
+sets the flags suitably&nbsp;&ndash; this is why it is necessary to use a special port for the
 DRQ and IRQ inputs, as the internal Status register of the 1797 contains a variety
 of other bits which would prevent this happening. Adding the &ldquo;Motor on&rdquo; signal to
 the same port ensures that, if for some reason neither IRQ or DRQ occur, then the
@@ -179,10 +179,10 @@ this point should be remembered.
 			<a style="display: block" href="../../41/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../12/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../12/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 42 of 51</a>

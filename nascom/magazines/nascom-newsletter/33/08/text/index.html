@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Newsletter - Volume 3 - Number 3 - August 1983</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 15 Dec 2024 13:35:57 GMT -->
 	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../07/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../32/00/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../32/00/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 8 of 37</a>
@@ -146,7 +146,7 @@ The main changes are as follows:
 The &ldquo;conditional eject&rdquo; facility is useful but I found that
 I very often needed to know how many lines there were remaining
 on a particular page so that I could decide whether to include
-an extra paragraph or not. Lines 660 &ndash; 1210 encode a routine
+an extra paragraph or not. Lines 660&nbsp;&ndash; 1210 encode a routine
 which outputs the current page being processed and how many
 lines remain on that page. The right hand side of the top screen
 line is used during the process phase. Simply put a &ldquo;halt&rdquo; at
@@ -159,7 +159,7 @@ Support for Epson MX&nbsp;80 printer.
 For quite some time I used an ancient Olivetti terminal
 printer that did not respond to &ldquo;escape&rdquo; sequences in the way
 that more modern printers do. When I started to use an Epson I
-found several problems &ndash; I could switch underline on, but not
+found several problems&nbsp;&ndash; I could switch underline on, but not
 off again! The justification option in the processor was taking
 note of the printer control codes so that a line with an
 underlined word would be justified to a right margin 6 columns
@@ -167,12 +167,12 @@ in.
 </p>
 <p>
 The other problem arose when processing printer control codes on
-the screen via Port1 &ndash; the escape sequences tended to mess up
-the screen display. Lines 1700 &ndash; 1930 trap all control-U codes
+the screen via Port1&nbsp;&ndash; the escape sequences tended to mess up
+the screen display. Lines 1700&nbsp;&ndash; 1930 trap all control-U codes
 and increment a second line-length counter which is subsequently
 used for the justification process. There are several patches
 which are needed to reinstate the correct value at the start of
-each new line. Lines 3250 &ndash;3420 and 1270 &ndash; 1370 trap the
+each new line. Lines 3250&nbsp;&ndash;3420 and 1270&nbsp;&ndash; 1370 trap the
 output via Port1 and Port2 and modify being output. Output to
 Port1 (screen) has a table of control codes (&lt;20H) and any of
 these have Bit 7 set so they are output as graphics characters.
@@ -201,10 +201,10 @@ It is sometimes necessary to be able to put in &ldquo;hard spaces&rsquo;
 			<a style="display: block" href="../../07/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../-1/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../-1/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../32/00/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../32/00/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 8 of 37</a>

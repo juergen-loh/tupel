@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>INMC 80 News - February&ndash;April 1981 - Issue 3</title>
-	<!-- Sun, 30 Jun 2024 10:05:41 GMT -->
+	<!-- Sun, 15 Dec 2024 13:35:10 GMT -->
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../28/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../02/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../02/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 29 of 55</a>
@@ -152,7 +152,7 @@ i)</dt><dd>The Basic ROM is completely disabled.
 ii)</dt><dd>Any block of RAM in the area E000H to EFFFH will now function.
 </dd>
 <dt>
-iii)</dt><dd>Decodes F000H and F800H are ORed together to select any IC&rsquo;s in sockets IC39 &ndash;
+iii)</dt><dd>Decodes F000H and F800H are ORed together to select any IC&rsquo;s in sockets IC39&nbsp;&ndash;
 IC42 inclusive (CP/M ROM&rsquo;s and possibly D-DOS ROM&rsquo;s).<br>
 (If necessary S2 could be changed to a 3 pole type, and the third pole used
 to select D-DOS in another IC block, if D-DOS is still at B000H to B7FFH.
@@ -175,16 +175,16 @@ can be 4K of dynamic RAM on an 8K RAM (A) board.
 iii)</dt><dd>The video and workspace RAM IC&rsquo;s are selected to the F800H decode.
 </dd>
 <dt>
-iv)</dt><dd>The F800H decode is removed from IC&rsquo;s 39 &ndash; 42, effectively disconnecting the
+iv)</dt><dd>The F800H decode is removed from IC&rsquo;s 39&nbsp;&ndash; 42, effectively disconnecting the
 D-DOS ROM&rsquo;s.
 </dd>
 <dt>
-v)</dt><dd>The F000H decode is routed to IC&rsquo;s 39 &ndash; 42, so the CP/M BIOS and BOOT will be
+v)</dt><dd>The F000H decode is routed to IC&rsquo;s 39&nbsp;&ndash; 42, so the CP/M BIOS and BOOT will be
 operative.
 </dd>
 <dt>
 vi)</dt><dd>The &lsquo;Power on Reset Jump&rsquo; is changed to F000H, due to Sid allowing the diodes
-to &lsquo;float&rsquo;; ie, IC2 pins 3, 6, 10 and 13 go &lsquo;high&rsquo;, equivalent to LSW1 1 &ndash; 4
+to &lsquo;float&rsquo;; ie, IC2 pins 3, 6, 10 and 13 go &lsquo;high&rsquo;, equivalent to LSW1 1&nbsp;&ndash; 4
 being down.
 </dd>
 </dl>
@@ -192,12 +192,12 @@ being down.
 In the author&rsquo;s Nascom&nbsp;2
 </h4>
 <table class="indent">
-<tr><td>IC35 &ndash; 38</td><td>=</td><td>4 x MK4118N-4 static RAM (switched as described).</td></tr>
+<tr><td>IC35&nbsp;&ndash; 38</td><td>=</td><td>4 x MK4118N-4 static RAM (switched as described).</td></tr>
 <tr><td>IC39, 40</td><td>=</td><td>CP/M <!-- External Link --><a href="https://deramp.com/downloads/eprom_programmers/TMS2708.pdf" title="External Link" target="_blank" rel="noreferrer">2708</a><!-- /External Link -->
- ROM&rsquo;s for F000H &ndash; F7FFH (switched as described).</td></tr>
-<tr><td>IC42, 42</td><td>=</td><td>D-DOS 2708 ROM&rsquo;s (altered) F800H &ndash; FFFFH (switched as described).</td></tr>
-<tr><td>Main RAM</td><td>=</td><td>48K RAM (B) 1000H &ndash; CFFFH (not switched)</td></tr>
-<tr><td>Aux. RAM</td><td>=</td><td>8K RAM (A) D000H &ndash; EFFFH (not switched)</td></tr>
+ ROM&rsquo;s for F000H&nbsp;&ndash; F7FFH (switched as described).</td></tr>
+<tr><td>IC42, 42</td><td>=</td><td>D-DOS 2708 ROM&rsquo;s (altered) F800H&nbsp;&ndash; FFFFH (switched as described).</td></tr>
+<tr><td>Main RAM</td><td>=</td><td>48K RAM (B) 1000H&nbsp;&ndash; CFFFH (not switched)</td></tr>
+<tr><td>Aux. RAM</td><td>=</td><td>8K RAM (A) D000H&nbsp;&ndash; EFFFH (not switched)</td></tr>
 </table>
 <p></p>
 <table>
@@ -236,10 +236,10 @@ ammount of data to fill FFH sectors occupies 32K of RAM (128 x 256 bytes). In fa
 			<a style="display: block" href="../../28/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../02/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../02/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 29 of 55</a>

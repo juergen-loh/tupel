@@ -21,10 +21,10 @@
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2024-06-16 15:50:29 +0200 (So, 16. Jun 2024) $ -->
+	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - July&ndash;August 1984 - Volume 3 - Issue 4</title>
-	<!-- Sun, 30 Jun 2024 16:11:26 GMT -->
+	<!-- Sun, 15 Dec 2024 13:34:52 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-06-30 12:05:40 +0200 (So, 30. Jun 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -98,10 +98,10 @@
 			<a style="display: block" href="../../36/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../33/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../33/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 37 of 43</a>
@@ -130,31 +130,31 @@ former gives you 35122 bytes of ram, the latter only 27105 bytes&nbsp;! I won&rs
 retramp the areas covered by Roger Dowling, just get straight into the disk
 handling stuff. Well, it&rsquo;s really a bit of a mess, but somehow Lucas Logic
 came out with some twists to almost make up for it. I think they&rsquo;ve gone down
-the road of &ndash; wait for it &ndash; BBC BASIC (sorry, quick, drink a glass of water,
+the road of&nbsp;&ndash; wait for it&nbsp;&ndash; BBC BASIC (sorry, quick, drink a glass of water,
 or something a bit stonger). I&rsquo;ve used MBASIC on a Superbrain and it was quite
 nice. XBASIC lost me three days figuring out how to use the random access
-files without screwing up. The relevant commands are &ndash;
+files without screwing up. The relevant commands are&nbsp;&ndash;
 </p>
 <p class="exdent">
-DRIVE &lt;letter&gt; &ndash; selects which drive to be logged in, &lsquo;A&rsquo; is drive 0.
+DRIVE &lt;letter&gt;&nbsp;&ndash; selects which drive to be logged in, &lsquo;A&rsquo; is drive 0.
 </p>
 <p class="exdent">
-CREATE &lt;F&gt;,&lt;SV&gt;,&lt;I&gt; &ndash; creates a file with name &lsquo;F&rsquo;, &lsquo;SV&rsquo; sets up buffer space
+CREATE &lt;F&gt;,&lt;SV&gt;,&lt;I&gt;&nbsp;&ndash; creates a file with name &lsquo;F&rsquo;, &lsquo;SV&rsquo; sets up buffer space
 and system variables, &lsquo;I&rsquo; determines how long the random record length
 is. The range of &lsquo;I&rsquo; is 0-65535. If &lsquo;I&rsquo; is not specified or 0, then the
 file is deemed for sequential access only. Any existing file with the
 same name is first deleted and an empty one then created.
 </p>
 <p class="exdent">
-OPEN &lt;F&gt;,&lt;SV&gt;,&lt;I&gt; &ndash; this is the same as for CREATE, If the file doesn&rsquo;t exist
+OPEN &lt;F&gt;,&lt;SV&gt;,&lt;I&gt;&nbsp;&ndash; this is the same as for CREATE, If the file doesn&rsquo;t exist
 then you get a &lsquo;No File error&rsquo;.
 </p>
 <p class="exdent">
-CLOSE &lt;SVl..n&gt; &ndash; closes the named files. CLOSE alone will close ALL open
+CLOSE &lt;SVl..n&gt;&nbsp;&ndash; closes the named files. CLOSE alone will close ALL open
 files.
 </p>
 <p class="exdent">
-APPEND &lt;F&gt;,&lt;SV&gt; &ndash; this is useful for sticking data onto the end of sequential
+APPEND &lt;F&gt;,&lt;SV&gt;&nbsp;&ndash; this is useful for sticking data onto the end of sequential
 files without having to read to the end first, so saving a lot of time.
 It doesn&rsquo;t work with random files as you can specify which record you
 want to go to any way.
@@ -164,13 +164,13 @@ Now comes the daft bit, or B**b method. To get data in and out of files you
 have to direct the computer with the following&nbsp;&ndash;
 </p>
 <p class="exdent">
-PRINT&nbsp;&pound; &lt;SV&gt;,&lt;I&gt;;&lt;variable(s)&gt; &ndash; the variable(s) are output to the opened file
+PRINT&nbsp;&pound; &lt;SV&gt;,&lt;I&gt;;&lt;variable(s)&gt;&nbsp;&ndash; the variable(s) are output to the opened file
 with system variable name &lsquo;SV&rsquo;. ANY output from now on until otherwise
 redefined will go to that file. So if you forget the drive purrs away
 quite oblivious to the fact that it&rsquo;s just ruined an evenings work.
 </p>
 <p class="exdent">
-INPUT&nbsp;&pound; &lt;SV&gt;,&lt;I&gt;;&lt;variable(s)&gt; &ndash; this is the opposite of PRINT&nbsp;&pound; (why they
+INPUT&nbsp;&pound; &lt;SV&gt;,&lt;I&gt;;&lt;variable(s)&gt;&nbsp;&ndash; this is the opposite of PRINT&nbsp;&pound; (why they
 couldn&rsquo;t have used DISCIN and DISCOUT or similar is beyond my logical
 brain). Like PRINT&nbsp;&pound; if you forget to redefine the input you get one hell
 of a mess. To redefine you can CLOSE &lt;SV&gt;, or do another PRINT&nbsp;&pound; &lt;SV&gt;,&lt;I&gt;
@@ -199,10 +199,10 @@ input the file you run out of string space as the whole file is dragged
 			<a style="display: block" href="../../36/text/" title="Previous page"><span class="mirror-horizontal fas fa-play" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../01/text/" title="First page"><span class="fas fa-fast-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../01/text/" title="First page"><span class="mirror-horizontal fas fa-fast-forward" aria-hidden=true></span></a>
 		</td>
 		<td class="navi-button">
-			<a style="display: block" href="../../../33/01/text/" title="Previous issue"><span class="fas fa-backward" aria-hidden=true></span></a>
+			<a style="display: block" href="../../../33/01/text/" title="Previous issue"><span class="mirror-horizontal fas fa-forward" aria-hidden=true></span></a>
 		</td>
 		<th class="navi-button">
 			<a style="display: block" href="../../text/" title="Table of Contents">Page 37 of 43</a>
