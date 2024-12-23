@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Journal - Februar 1982 - Ausgabe 2</title>
-	<!-- Sun, 15 Dec 2024 13:31:40 GMT -->
+	<!-- Sun, 22 Dec 2024 13:05:56 GMT -->
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -125,7 +125,7 @@
 <!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
 
 <h1 id="article1">
-PIO Erweiterung
+PIO Erweiterung<br>
 für <span class="uppercase">Nascom&nbsp;1</span>
 </h1>
 <img class="img-fluid" src="../../Image-22-1.jpeg" alt="" width="303" height="268">
@@ -133,16 +133,64 @@ für <span class="uppercase">Nascom&nbsp;1</span>
 Folgende Leitungen der <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
  sind noch mit dem NASBUS zu verbinden:
 </p>
+
+<table><tr><td>
+
+<table class="pinbezeichnung">
+<tr><td>PIN</td><td>Bezeichnung</td></tr>
+<tr><td>23</td><td>INT</td></tr>
+<tr><td>36</td><td>IORQ</td></tr>
+<tr><td>37</td><td>M1</td></tr>
+<tr><td>35</td><td>RD</td></tr>
+<tr><td>25</td><td>0</td></tr>
+<tr><td>19</td><td>D0</td></tr>
+<tr><td>20</td><td>D1</td></tr>
+<tr><td>1</td><td>D2</td></tr>
+<tr><td>40</td><td>D3</td></tr>
+<tr><td>39</td><td>D4</td></tr>
+<tr><td>38</td><td>D5</td></tr>
+<tr><td>3</td><td>D6</td></tr>
+<tr><td>2</td><td>D7</td></tr>
+<tr><td>4</td><td>A0</td></tr>
+<tr><td>5</td><td>A1</td></tr>
+<tr><td>26</td><td>+5V</td></tr>
+<tr><td>24</td><td>+5V</td></tr>
+<tr><td>11</td><td>Masse</td></tr>
+</table>
+
+</td><td>
+
 <p>
-<img class="img-fluid" src="../../Image-22-2.jpeg" alt="" width="287" height="222"><br><br>
+Die PIO hat dann folgende Steuerworte:
 </p>
+<table style="width: 100%">
+<tr><td>PORT</td><td>1A</td><td>PORT</td><td>1B</td></tr>
+<tr><td>CONT</td><td>12</td><td>13</td><td></td></tr>
+<tr><td>DATA</td><td>10</td><td>11</td><td>(HEX)</td></tr>
+</table>
 <p>
-<img class="img-fluid" src="../../Image-22-3.jpeg" alt="" width="285" height="299"><br><br>
+Achtung: IC 46a PIN 2 auf
+dem NASCOM1 &ndash; Board ist
+direkt an A2 der CPU
+anzuschließen, und die Brücke
+IO auf EXT zu schalten.
+</p>
+
+</td></tr></table>
+<br>
+
+<img class="img-fluid" src="../../Image-22-3.jpeg" alt="" width="285" height="299">
+
 <br>
 
 <!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
 
-<img class="img-fluid" src="../../Image-22-4.jpeg" alt="" width="244" height="89">
+<div class="style-nowrap">
+<p>
+Steuerworte für die PIOs
+</p>
+<img class="img-fluid" src="../../Image-22-4.png" alt="" width="244" height="71">
+</div>
 
 <p>
 Ich habe meine Schaltung frei verdrahtet, sodaß kein Lay Out existiert.
@@ -150,9 +198,11 @@ Ich habe meine Schaltung frei verdrahtet, sodaß kein Lay Out existiert.
 <p style="text-align:right">
 <span class="uppercase">Rüdiger Maurer</span>
 </p>
-<br>
+
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <br>
+
 <p>
 Mit drei ICs (ca.8.&ndash;DM) läßt sich der <span class="uppercase">Nascom&nbsp;1</span> schon in der
 Grundversion um einen Eingabe- und einen Ausgabeport erweitern. Auf der

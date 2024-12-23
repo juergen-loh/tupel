@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Journal - Februar 1982 - Ausgabe 2</title>
-	<!-- Sun, 15 Dec 2024 13:32:49 GMT -->
+	<!-- Sun, 22 Dec 2024 12:07:50 GMT -->
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -128,11 +128,22 @@
 <p>
 Umrechnung für die Druckroutine:
 </p>
+<table class="extintport">
+<tr><td>ext.Port</td><td>int.Port</td></tr>
+<tr><td>10</td><td>4</td></tr>
+<tr><td>11</td><td>5</td></tr>
+<tr><td>12</td><td>6</td></tr>
+<tr><td>13</td><td>7</td></tr>
+</table>
+<pre class="uppercase">
+1 Folgende Zeilen sind im Menueprogramm
+2 zu aendern bzw. zu ergaenzen, damit keine
+3 Probleme auftreten, wenn unter der MDCR-
+4 Routine die Druckroutine aufgerufen wird
+5 .
+</pre>
 <p>
-<img class="img-fluid" src="../../Image-16-2.jpeg" alt="" width="169" height="63">
-</p>
-<p>
-<img class="img-fluid" src="../../Image-16-3.jpeg" alt="" width="263" height="141">
+<img class="img-fluid" src="../../Image-16-3.png" alt="" width="253" height="83">
 </p>
 <h1 id="article1">
 AD-Wandlung
@@ -150,7 +161,7 @@ im Analog Devices
 <!-- External Link --><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/AD7581.pdf" title="Externer Link" target="_blank" rel="noreferrer">AD7581</a><!-- /External Link -->
 (8 Kanäle a 8 Bit, DM&nbsp;50.&ndash;) verwirklicht ist:
 der ADC wandelt ständig der Reihe nach die Spannungen aller Kanäle um
-und schreibt sie in ein 2-Port-Ram (mit im IO, das nach Bedarf vom
+und schreibt sie in ein 2-Port-Ram (mit im IC), das nach Bedarf vom
 Rechner ausgelesen wird (8 I/O-Adressen). Dieser Wert ist nie älter als
 0,7ms. Damit spart man sich den ganzen Aufwand für Start Conversion,
 Warten oder gar Interrupt. Für ganz schnelle Anwendungen natürlich

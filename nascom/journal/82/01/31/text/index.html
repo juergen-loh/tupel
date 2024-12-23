@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Journal - Januar 1982 - Ausgabe 1</title>
-	<!-- Sun, 15 Dec 2024 13:31:40 GMT -->
+	<!-- Sat, 21 Dec 2024 19:11:51 GMT -->
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -170,29 +170,29 @@ werden müssen.
 <!-- nowrap Start --><div class="style-nowrap">
 <!-- Kasten über ganze Spalte: Start --><div style="border-style: solid; padding: 10px; border-width: 2px;  width: 100%; ">
 
-<pre class="donthyphenate">
-PORT A
-Contr.Mode o    o    o    o  o
-BIT        4    3    2    1  0
-VSP        LDA1 LDA0 CCLK C1 C0  HEX
-RESET      1    1    1    1  1   1F
-TEST BUSY  1    1    1    0  0   1C
-LDA1       0    1    1    0  0   0C
-LDA0       1    0    1    0  0   14
-TALK       1    1    1    1  0   1E
-</pre>
+<h4>PORT A</h4>
+<table>
+<tr><td>Contr.Mode</td><td> o   </td><td> o   </td><td> o   </td><td> o </td><td> o </td><td>     </td></tr>
+<tr><td>BIT       </td><td> 4   </td><td> 3   </td><td> 2   </td><td> 1 </td><td> 0 </td><td>     </td></tr>
+<tr><td>VSP       </td><td> LDA1</td><td> LDA0</td><td> CCLK</td><td> C1</td><td> C0</td><td>  HEX</td></tr>
+<tr><td>RESET     </td><td> 1   </td><td> 1   </td><td> 1   </td><td> 1 </td><td> 1 </td><td>  1F </td></tr>
+<tr><td>TEST BUSY </td><td> 1   </td><td> 1   </td><td> 1   </td><td> 0 </td><td> 0 </td><td>  1C </td></tr>
+<tr><td>LDA1      </td><td> 0   </td><td> 1   </td><td> 1   </td><td> 0 </td><td> 0 </td><td>  0C </td></tr>
+<tr><td>LDA0      </td><td> 1   </td><td> 0   </td><td> 1   </td><td> 0 </td><td> 0 </td><td>  14 </td></tr>
+<tr><td>TALK      </td><td> 1   </td><td> 1   </td><td> 1   </td><td> 1 </td><td> 0 </td><td>  1E </td></tr>
+</table>
 <p>
 CCLK Impulse entstehen durch jeweiliges Rücksetzen und setzen von Bit 2
 </p>
-<p>
+<h4>
 Steuerworte für PORT MODE
-</p>
-<pre class="donthyphenate">
-PORT B OUTPUT  0F
-
-PORT A CONTROL CF
-Controlword    20
-</pre>
+</h4>
+<table>
+<tr><td>PORT B OUTPUT </td><td> 0F</td></tr>
+<tr><td colspan=2><br></td></tr>
+<tr><td>PORT A CONTROL</td><td> CF</td></tr>
+<tr><td>Controlword   </td><td> 20</td></tr>
+</table>
 
 <!-- Kasten: Ende --></div>
 <!-- nowrap Ende --></div>

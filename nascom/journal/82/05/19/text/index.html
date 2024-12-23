@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Journal - Mai 1982 - Ausgabe 5</title>
-	<!-- Sun, 15 Dec 2024 13:32:56 GMT -->
+	<!-- Mon, 23 Dec 2024 11:09:47 GMT -->
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -134,12 +134,12 @@ von W. Mayer-Gürr
 Höhere Programmiersprachen und das<br>
 Acht Damen Problem
 </h4>
-<p>
+<p class="first-indent">
 Am Beispiel des Acht Damen Problems soll einmal auf die verschiedenen
 Konzepte einiger Programmiersprachen, die auf dem Nascom laufen,
 eingegangen werden.
 </p>
-<p>
+<p class="first-indent">
 Die älteste problemorientierte Sprache ist Fortran (&nbsp;FORmula
 TRANslation&nbsp;). Sie wurde 1954 von J. Backus entworfen und dann in
 mehreren Versionen weiter entwickelt. Zu diesem Zeitpunkt war die
@@ -157,7 +157,7 @@ Zeilennumerierung ist nicht erforderlich. Ist der eigentliche
 Befehlsteil länger als 66 Zeichen, wird auf der nächsten Karte in der
 6. Stelle ein Fortsetzungszeichen gesetzt.
 </p>
-<p>
+<p class="first-indent">
 Die Sprache war hauptsächlich für die Lösung mathematischer Probleme
 gedacht. Daraus erklärt sich die stiefmütterliche Behandlung bei der
 Bearbeitung von Texten und die die umständliche Formatierung bei der
@@ -165,20 +165,19 @@ Ausgabe. Flexible ist dagegen die Möglichket über eine externe
 Bibliothek mathematische Routinen, die bereits früher einmal
 geschrieben wurden, in ein Programm einzubinden.
 </p>
-<p>
+<p class="first-indent">
 Die Fortranversion von Microsoft, die auf dem Nascom mit CLD-DOS läuft,
 ist ein echter Compiler, d.h. aus dem Quellcode wird über 2 Stufen
 reiner Maschinencode erzeugt. Dieser kann ausgeführt werden, ohne daß
 dabei im Rechner andere Hilfsprogramme&nbsp;&ndash; außer dem DOS&nbsp;&ndash; im Rechner
 präsent sein müssen.
 </p>
-<p>
+<p class="first-indent">
 In der 1. Stufe wird durch den Compiler ein relocierbarer Code erzeugt.
 In der 2. Stufe werden dann durch den Linker Routinen, die in der
 Library enthalten sind, angebunden und ausführbare
 <!-- External Link --><a href="https://de.wikipedia.org/wiki/Zilog_Z80" title="Externer Link" target="_blank" rel="noreferrer">Z80</a><!-- /External Link -->
-(bzw.
-<!-- External Link --><a href="https://de.wikipedia.org/wiki/Intel_8080" title="Externer Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->)
+ (bzw. <!-- External Link --><a href="https://de.wikipedia.org/wiki/Intel_8080" title="Externer Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->)
 Codes generiert. Allerdings ist die Länge des fertigen Programms
 relativ groß. Im
 <a href="../../../../80/03/14/text/#article1">Nascom Journal 3/80</a>
@@ -186,7 +185,7 @@ hat Herr L.Bayer eine Lösung des
 Acht Damen Problems in Maschinensprache vorgestellt, die nur 1/4&nbsp;K
 Speicher belegt. Die Fortran Version dagegen belegt fast 8&nbsp;K.
 </p>
-<p>
+<p class="first-indent">
 Obwohl Basic als reine Interpretersprache konzipiert ist, wird bei den
 Microsoft Dialekten ein komprimierter Zwischencode erzeugt, also
 teilweise compiliert. Dabei wird jeweils ein Befehl zu einem 1 Byte
@@ -196,7 +195,7 @@ ist das gesetzte 8.&nbsp;Bit.
 
 <!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
 
-<p>
+<p class="first-indent">
 Die Verwandtschaft zum Fortran zeigt sich in den GOTO Befehlen, die
 Sprünge auf ein Label (Zeilennummer) zulassen. Da bei Fortran
 definitionsgemäß alle Variablen, die mit den Buchstaben I bis N
@@ -205,37 +204,36 @@ die Variable I eingebürgert. Schaut man sich fertige Basic Programme
 an, so stellt man fest, daß als Schleifenzähler meist auch hier I
 benutzt wird. Der Mensch ist halt ein Gewohnheitstier.
 </p>
-<p>
+<p class="first-indent">
 Über die Vor- und Nachteile von Basic ist schon genug geschrieben
 worden. Die Sprache ist leicht zu erlernen, komplexe Programme dagegen
 sind schwer zu lesen und zu warten. Als Interpretersprache ist Basic
 natürlich relativ langsam.
 </p>
-<p>
+<p class="first-indent">
 Das Acht Damen Problem läßt sich bei dem Beispielprogramm auch für
 größere Felder lösen. Es ist dabei lediglich Zeile 120 zu ändern.
 </p>
-<p>
+<p class="first-indent">
 Das Pascalsystem besteht aus zwei Teilen. Durch den Compiler wird aus
 dem Quelltext ein kompakter Zwischencode, der P-Code, erzeugt. Dieser
 Code gilt für einen hypothetischen Stackrechner. Das Prizip dazu ist
 ähnlich wie bei der Programmsprache FORTH. Die
 <!-- External Link --><a href="https://en.wikipedia.org/wiki/Pascal_MicroEngine" title="Externer Link: Pascal MicroEngine" target="_blank" rel="noreferrer">Microengine</a><!-- /External Link -->
-von Western
-Digital kann einen solchen Code (aber auch nur diesen) direkt
+von Western Digital kann einen solchen Code (aber auch nur diesen) direkt
 ausführen. Microcomputer wie der Nascom müssen den P-Code über einen
 Interpreter umsetzen. Für andere Rechner gibt es auch Pascal Compiler
 (z.B. <!-- External Link --><a href="https://en.wikipedia.org/wiki/Pascal/MT%2B" title="Externer Link: Pascal/MT+" target="_blank" rel="noreferrer">Pascal/M</a><!-- /External Link -->),
 die Maschinencode erzeugen. Allerdings ist hier der
 Speicherbedarf viel größer, was die Programmlänge sehr einschränkt.
 </p>
-<p>
+<p class="first-indent">
 Bei meinem Pascal besteht jeder P-Code aus 4 Bytes. Es gibt auch andere
 Konzepte, die Interpretation ist dann aber aufwendiger. Das 1. Byte
 enthält den OP-Code, die restlichen 3 entweder Bedingungen, Zeiger auf
 Adressen oder auch Konstante.
 </p>
-<p>
+<p class="first-indent">
 Die Laufzeiten für die Beispielprogramme lassen deutlich werden, wie
 die Sprachen aufgebaut sind. Der Maschinencode des Fortranprogramms
 wird in 60 Sekunden ausgeführt, die Interpretation des P-Codes beim
