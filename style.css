@@ -1,4 +1,4 @@
-/* /style.css / $Date: 2024-12-22 14:20:43 +0100 (So, 22. Dez 2024) $ */
+/* /style.css / $Date: 2024-12-23 15:50:40 +0100 (Mo, 23. Dez 2024) $ */
 
 html,
 body,
@@ -1319,6 +1319,23 @@ table.pinbezeichnung > tbody > tr > td
 {
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+/*----------------------------*/
+
+table.bildadr
+{
+	width: 80%;
+}
+
+table.bildadr > tbody > tr > td:last-child
+{
+	text-align: right;
+}
+
+table.bildadr > tbody > tr > td:first-child
+{
+	text-align: left;
 }
 
 /*----------------------------*/
