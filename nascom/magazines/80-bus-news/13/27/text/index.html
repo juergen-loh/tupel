@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - July&ndash;October 1982 - Volume 1 - Issue 3</title>
-	<!-- Sun, 15 Dec 2024 13:34:12 GMT -->
+	<!-- Thu, 26 Dec 2024 17:09:17 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-26 18:09:16 +0100 (Do, 26. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -147,7 +147,9 @@ C12 changed to 300pF
 I now had to switch two different clock rates to the UART, 62.5KHz for tape and
 153.6KHz for the printer, this was achieved by using the circuit in fig.&nbsp;5., and
 remotely controlling the change over by the state of the &lsquo;tape LED&rsquo;. The control
-signal should be taken from pin 3 of G1 of the Computing Today tape controller, or
+signal should be taken from pin 3 of G1 of the
+<!-- External Link --><a href="https://archive.org/details/computing-today-1980/ComputingToday198002/page/24/mode/2up" title="External Link: Computing Today, February 1980, Page 24" target="_blank" rel="noreferrer">Computing Today tape controller</a><!-- /External Link -->,
+or
 from pin 12 of IC41 if the former is not installed. When the tape LED is active,
 during a Read, Write, Verify, CSAVE or CLOAD command, the clock rate is switched to
 62.5KHz, at all other times it is switched to 153.6KHz.
