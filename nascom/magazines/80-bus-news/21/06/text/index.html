@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
-	<!-- Sun, 15 Dec 2024 13:34:17 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -152,7 +152,7 @@ will examine.
 <p>
 By way of an aside, let me remark that a dedicated controller is no great
 deal. Consider a minimum Z80 system. This could comprise a similar configuration
-to that shown in Section 9 of the Mostek manual&nbsp;&ndash; a Z80, an EPROM, some RAM and a
+to that shown in Section 9 of the Mostek manual &ndash; a Z80, an EPROM, some RAM and a
 <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="External Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->. It would also need an oscillator to provide a system clock. A minimum system
 of this nature would not need any buffering, and could possibly be expanded with
 another PIO or two before that became necessary. Such a system could be wired up
@@ -170,11 +170,11 @@ system might do is to control a dot matrix printer, such as the
 </p>
 <p>
 As computer enthusiasts, we are concerned always with the finer points of
-Z80 usage. We have two problems&nbsp;&ndash; to get the hardware to work and to get the
+Z80 usage. We have two problems &ndash; to get the hardware to work and to get the
 software written and debugged. These two problems are complementary and depend to
 a certain extent one on the other. In these notes, I will deal only with the
 software side of matters and will assume that the hardware is taken for granted
-and assumed correct&nbsp;&ndash; that all signals are clean, bounce free, and of the correct
+and assumed correct &ndash; that all signals are clean, bounce free, and of the correct
 voltage levels. This is not always so!
 </p>
 <p>
@@ -191,7 +191,7 @@ current instruction is prolonged and never reaches an end. In consequence the NM
 test is never reached. Such a condition is hardly likely to arise in serious use
 of a Nascom or Gemini, as the dynamic memory would not be refreshed, and the
 program lost. It might happen in use of a Z80 based controller, where the machine
-was executing Wait states, waiting for a very slow peripheral to react&nbsp;&ndash; said
+was executing Wait states, waiting for a very slow peripheral to react &ndash; said
 peripheral having perhaps gone on the blink! The other failure to see an NMI is
 if /BUSRQ is active, i.e. if something like a <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
  chip has control of the bus.

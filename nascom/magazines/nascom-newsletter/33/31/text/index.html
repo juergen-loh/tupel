@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Newsletter - Volume 3 - Number 3 - August 1983</title>
-	<!-- Sun, 15 Dec 2024 13:35:57 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -128,7 +128,7 @@ program a line
 POKE&#x200b;3360,n
 </p>
 <p>
-where n represents the disc number&nbsp;&ndash; either a constant or a
+where n represents the disc number &ndash; either a constant or a
 variable.
 </p>
 <p>
@@ -141,9 +141,9 @@ handled the appropriate ones must be opened before access is
 attempted. There are three forms of file opening command:
 </p>
 <p>
-USR(11),FN$&nbsp;&ndash; opens a file for reading.<br>
-USR(12),FN$&nbsp;&ndash; opens an existing file for output.<br>
-USR(13),FN$&nbsp;&ndash; opens a new output file.
+USR(11),FN$ &ndash; opens a file for reading.<br>
+USR(12),FN$ &ndash; opens an existing file for output.<br>
+USR(13),FN$ &ndash; opens a new output file.
 </p>
 <p>
 Note that in the case of a new output file the length of this
@@ -156,21 +156,21 @@ sectors the maximum available space will be used.
 FN$ is the file name to be used, and must be a string variable
 (not an array) of length 8 characters. If the name is less than
 8 characters long you MUST include extra spaces in declaring the
-name&nbsp;&ndash; eg
+name &ndash; eg
 </p>
 <p>
 FN$="MIKE&nbsp;&nbsp;&nbsp;&nbsp;"
 </p>
 <p>
 NAS-DOS returns in the function an indication of whether the
-file name specified existed&nbsp;&ndash; a non-zero result indicates that
+file name specified existed &ndash; a non-zero result indicates that
 the file name did not exist. Your program should check this
 error condition and trap any error before any further file
 access is attempted.
 </p>
 <p>
 Note that NAS-DUS organises disc file so that all the contents
-of a file must be contiguous&nbsp;&ndash; ie the file is not divided and
+of a file must be contiguous &ndash; ie the file is not divided and
 spread over the disc. Thus it is possible to delete a lot of
 small files spread around the disc and have an apparently large
 amount of disc space available, but as this is not contiguous it

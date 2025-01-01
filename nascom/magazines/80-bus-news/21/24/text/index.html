@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
-	<!-- Sun, 15 Dec 2024 13:34:18 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -151,21 +151,21 @@ The next step is to enter G0 (CR) followed by SAVE 48 CPMSYS64.COM. Note the
 changes. The name has been changed to denote the fixed size and the embedded
 &lsquo;SYS&rsquo; function. The ammount to be saved has increased from 43 to 48 Pages. The
 CBIOS started at 2100H and was 4K long (max) so the top address possible is
-3100H. It is thus necessary to save memory from 100H to 3100H which is 48&nbsp;&ndash; 256
+3100H. It is thus necessary to save memory from 100H to 3100H which is 48 &ndash; 256
 byte pages. As previously noted SYSGEN will put memory from 900H upwards onto
-disk, but the area 100H&nbsp;&ndash; 8FFH must be preserved to be compatible with SYSGEN.
+disk, but the area 100H &ndash; 8FFH must be preserved to be compatible with SYSGEN.
 </p>
 <p>
 In theory if we put this file on the System Track of a disk and boot, the job
 should be done, since all addresses should be correct, and there is enough room
 on the disk. So a SYSGEN CPMSYS64.COM (CR) command is issued and the new system
-placed on the disk. Then RESET is pressed to try it. <span class="uppercase">Disaster</span>&nbsp;!!&nbsp;&ndash; IT DOES NOT
+placed on the disk. Then RESET is pressed to try it. <span class="uppercase">Disaster</span>&nbsp;!! &ndash; IT DOES NOT
 WORK.
 </p>
 <p>
 At this stage, I tried a PEEK on the System Track. The BIOS all seemed to be
 there, with code and workspace area ending within a few bytes of the top of
-sector 19. That last sector, number 20 though&nbsp;&ndash; it should have been all 00&rsquo;s as
+sector 19. That last sector, number 20 though &ndash; it should have been all 00&rsquo;s as
 the top of the BIOS was filled with 00&rsquo;s before saving it.But here I found F5&rsquo;s
 which is the pattern written to disk during formating so for some reason the
 whole of the CPMSYS64.COM file is not being written to disk. This last sector is

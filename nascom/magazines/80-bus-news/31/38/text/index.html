@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sun, 15 Dec 2024 13:34:43 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -178,7 +178,7 @@ Use Mode 2. There is nothing mysterious about it, it just needs a little
 thought as there are two levels of indirection to go through before you arrive
 at your service routine which can be anywhere in memory. If you must use mode
 1 why not use NMI instead of INT? In response to an NMI, Nas-Sys&nbsp;3 vectors via
-a JP stored in RAM at 0C7D. (i.e. At address 66&nbsp;&ndash; the NMI execution address&nbsp;&ndash;
+a JP stored in RAM at 0C7D. (i.e. At address 66 &ndash; the NMI execution address &ndash;
 Nas-Sys has a JP 0C7D. It intialises 0C7D to a JP &lt;register display routine&gt;.)
 Thus anyone wanting to use the NMI for another purpose can change the JP
 stored in the workspace area so that control passes to their routine, rather

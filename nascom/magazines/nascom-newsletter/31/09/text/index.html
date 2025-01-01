@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Newsletter - Volume 3 - Number 1 - April 1983</title>
-	<!-- Sun, 15 Dec 2024 13:35:52 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -128,11 +128,11 @@ Disassembler Part II
 by M. Reed
 </h2>
 <p>
-Welcome to Part II&nbsp;&ndash; I hope that you managed to struggle through
+Welcome to Part II &ndash; I hope that you managed to struggle through
 <a href="../../../25/02/text/#article1">Part I</a>
 alright, but don&rsquo;t worry, it can only get worse.
 By now you should have your print routine working to your
-satisfaction&nbsp;&ndash; called PRDIS.
+satisfaction &ndash; called PRDIS.
 </p>
 <p>
 Now there are 9 subroutines to write, yes 9! and also a lot
@@ -157,7 +157,7 @@ point to the next piece of valuable data.
 ii)</dt><dd>Bits 3, 4 and 5 may contain data that the called
 subroutine will need, though not the only data it may
 need. Consequently the data byte [ie (HL&rsquo;) before
-incrementing!!] must be put somewhere&nbsp;&ndash; just in case.
+incrementing!!] must be put somewhere &ndash; just in case.
 </dd>
 <dt>
 iii)</dt><dd>Bit 7 of this data byte is used as a sort of &lsquo;stop&rsquo; flag.
@@ -172,7 +172,7 @@ Obviously HL&rdquo; must contain the correct address. This is
 achieved by creating a table of twelve addresses, corresponding
 to the 12 combinations of TYPE and F. Let me explain, TYPE
 represents whether the instruction to be disassembled began with
-&pound;ED, &pound;CB or neither. It can only have 3 possible values&nbsp;&ndash; use 0,
+&pound;ED, &pound;CB or neither. It can only have 3 possible values &ndash; use 0,
 1 and 2 because life is so much easier. F will hold bits 6 and 7
 of the instruction being disassembled. Therefore, it has 4
 possible values. Hence 12 combinations. There should be an

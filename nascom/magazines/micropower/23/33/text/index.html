@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 2 - Number 3 - July 1982</title>
-	<!-- Sun, 15 Dec 2024 13:35:46 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -122,17 +122,18 @@
 <div class="col-sm-12 mag-micropower issue-23 page-33" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <p class="continued">
-small table&nbsp;&ndash; it rarely exceeds 4K. Of course, you never get
+small table &ndash; it rarely exceeds 4K. Of course, you never get
 anything for nothing. The software to follow the evolution
 of the colony is much more complicated&nbsp;; you have to search
 the table for adjacent cells, count them, and them apply the
 rules to build up a coordinate table for the next
 generation. In addition, you have to write a routine to map
 the coordinate table to the screen. However, you only have
-to scan the cells in the table; in the more usual life
+to scan the cells in the table; in the more usual
+<!-- External Link --><a href="https://en.wikipedia.org/wiki/Conway's_Game_of_Life" title="External Link: Conway's Game of Life" target="_blank" rel="noreferrer">life</a><!-- /External Link -->
 program all cells, alive and dead, are scanned. The result
 is that this version of life is much faster for small
-colonies&nbsp;&ndash; in fact you have to slow it down if there are
+colonies &ndash; in fact you have to slow it down if there are
 less than 20 cells, or you can&rsquo;t follow the changes. The
 break even point seems to be a population of 100, when the
 program runs at 6 generations a second with a 4Mhz Z80,
@@ -146,8 +147,8 @@ various workspace parameters are initialised, and the screen
 header is written to the top line. One of the subroutines
 called in the initialisation procedure is SETPIX, &pound;12F3.
 This writes the Nascom&nbsp;2 pixel set to a programmable
-character generator. My PCG sits from &pound;0000&nbsp;&ndash; &pound;07FF, so the
-address where the pixels are situated is &pound;0400&nbsp;&ndash; &pound;07FF; if
+character generator. My PCG sits from &pound;0000 &ndash; &pound;07FF, so the
+address where the pixels are situated is &pound;0400 &ndash; &pound;07FF; if
 you have a PCG at a different address, just change &pound;12F4 to
 the necessary value. If you still use characters in ROM,
 SETPIX should not affect your system, unless you have RAM
@@ -178,7 +179,7 @@ small patterns initially.
 </p>
 <p>
 To help you there are several patterns stored in the
-program&nbsp;&ndash; you can make these appear at the cursor by
+program &ndash; you can make these appear at the cursor by
 entering SHIFT/A&nbsp;&ndash;&nbsp;Z. You can enter these standard patterns
 at several different positions. You can also rotate and
 reflect the whole screen by pressing R and F. By combining

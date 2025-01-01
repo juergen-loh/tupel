@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>INMC 80 News - June/July/August 1980 - Issue 1</title>
-	<!-- Sun, 15 Dec 2024 13:35:04 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -137,16 +137,16 @@ screen, when the file is loaded under ZEAP&nbsp;1.1. Call this
 value TTTT.</td></tr>
 <tr><td>2.</td><td>Load the file and copy it to the new location by entering:<br>
 I 1B0D 2002 8000</td></tr>
-<tr><td>3.</td><td>Examine the address at 2002&nbsp;&ndash; 2003. Call this LLLL. (Remember
+<tr><td>3.</td><td>Examine the address at 2002 &ndash; 2003. Call this LLLL. (Remember
 low order byte is stored first.)</td></tr>
-<tr><td>4.</td><td>Calculate TTTT&nbsp;&ndash; LLLL by entering:<br>
+<tr><td>4.</td><td>Calculate TTTT &ndash; LLLL by entering:<br>
 A LLLL TTTT<br>
 and looking at the second value displayed. This gives the
-symbol table area. Put this value at 2002&nbsp;&ndash; 2003.</td></tr>
+symbol table area. Put this value at 2002 &ndash; 2003.</td></tr>
 <tr><td>5.</td><td>Calculate LLLL + E4F5 by entering:<br>
 A LLLL E4F5<br>
 and looking at the first value displayed. This gives the file
-length. Put this value at 2000&nbsp;&ndash; 2001.</td></tr>
+length. Put this value at 2000 &ndash; 2001.</td></tr>
 <tr><td>6.</td><td>Enter I 2000 0C80 6 (to store the start of the file).</td></tr>
 <tr><td>7.</td><td>Load ZEAP&nbsp;2.0, and execute it by entering:<br>
 E 1000 8000 2000<br>

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 1 - Number 3 - November 1981</title>
-	<!-- Sun, 15 Dec 2024 13:35:39 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -139,9 +139,9 @@ line is terminated by a carriage return. As the tape is read the data is display
 the screen; when the end of the line is reached (detected by the carriage return)
 the data is read into the workspace by the same routine which reads the arguments
 supplied with commands. Thus the loading address is read into ARG1 (&pound;0C0C,
-&pound;0C0D), the eight data bytes into ARG2&nbsp;&ndash; ARG9 (&pound;0C0E to &pound;0C1D), and the
+&pound;0C0D), the eight data bytes into ARG2 &ndash; ARG9 (&pound;0C0E to &pound;0C1D), and the
 checksum into ARG10 (&pound;0C1E, &pound;0C1F). The routine then totals the values stored
-in ARG1&nbsp;&ndash; ARG9 and compares the result with the checksum. If the values are
+in ARG1 &ndash; ARG9 and compares the result with the checksum. If the values are
 identical the eight data bytes are copied from the workspace to the appropriate
 memory location, the cursor is reset to the beginning of the line, and the next block
 is read in, overwriting the last line. if a checksum error is detected, or if invalid
@@ -153,7 +153,7 @@ Data can be written to a paper tape punch in the correct format by routing the
 output of the Tabulate command to the serial port by means of the External (X)
 command. However, in Nas-Sys&nbsp;3 the Load command has been dropped; the
 address stored in the subroutine table for command L (at &pound;0798) is &pound;0366, the Error
-subroutine. Because the Nas-Sys&nbsp;3 tabulate command is not restricted to the&nbsp;&ndash;
+subroutine. Because the Nas-Sys&nbsp;3 tabulate command is not restricted to the &ndash;
 format of a Load command it has been made more versatile in the line lengths it can
 produce, and also no longer gives a checksum byte.
 </p>
@@ -171,7 +171,7 @@ bytes being separated by one or more spaces. When the newline key is pressed the
 monitor interprets the current line; the first number on the line is taken as the
 address at which data storage is to start. If the first group of characters on the line
 is not a valid hexadecimal number, that is, does not consist only of the ASCII
-characters 0&nbsp;&ndash; 9 and A&nbsp;&ndash; F representing a hexadecimal number between 0 and
+characters 0 &ndash; 9 and A &ndash; F representing a hexadecimal number between 0 and
 FFFF the word &lsquo;Error&rsquo; is printed, and the routine restarts at the last valid address.
 </p>
 <!-- 1 column: end --></div>

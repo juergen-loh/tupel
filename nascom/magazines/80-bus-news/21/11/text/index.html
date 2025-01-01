@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
-	<!-- Sun, 15 Dec 2024 13:34:17 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -129,7 +129,7 @@ condition occurs while disabled, the <!-- External Link --><a href="https://www.
  latches it, and interrupts as soon as
 Port interrupts are re-enabled. If we don&rsquo;t want this to happen, then we can set
 Bit 4 in the Interrupt Control Word to reset the pending interrupt condition.
-Bits 4&nbsp;&ndash; 6 are used in Mode 3. If Bit 6 = 1, then selected lines are monitored
+Bits 4 &ndash; 6 are used in Mode 3. If Bit 6 = 1, then selected lines are monitored
 for AND condition, i.e. they must all be active for interrupts. If bit 7 = 0,
 then any one of them can be active and cause an interrupt. Bit 5 =1 indicates
 that they should be monitored for High level, = 0 for low level. Bit 4 = 1
@@ -170,13 +170,13 @@ PIO. Now we have to consider what the Interrupt handling routine is to do.
 Obviously, without knowing the precise form of your peripheral, this is something
 I can&rsquo;t deal with in particular, but there are a few points to draw to your
 attention. First of all, an interrupt automatically disables any further
-interrupts&nbsp;&ndash; not just from the same device, but over the whole Machine, except
+interrupts &ndash; not just from the same device, but over the whole Machine, except
 for the NMI. It is at your discretion when to reenable them. This action will
 allow higher priority devices to interrupt the service routine currently running.
 As a rough rule of thumb, timer and floppy disk interrupts are usually accorded
 higher priority than simple input/&#x200b;output devices. So, suppose your parallel
 printer is connected up to a port, and interrupts for more data. Usually a
-printer has a buffer within it, and a print rate of 60&nbsp;&ndash; 120 chars per sec. So
+printer has a buffer within it, and a print rate of 60 &ndash; 120 chars per sec. So
 long as the printer has about 100 chars in its buffer, it won&rsquo;t need any further
 attention for about a second. This means that we could, for example, allow our
 <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0181.pdf" title="External Link: Z80 CTC" target="_blank" rel="noreferrer">CTC</a><!-- /External Link --> to interrupt the printer routine every half second or so with the time. We

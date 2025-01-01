@@ -23,8 +23,8 @@
 
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
-	<title>INMC 80 News - September 1980&ndash; January 1981 - Issue 2</title>
-	<!-- Sun, 15 Dec 2024 13:35:08 GMT -->
+	<title>INMC 80 News - September 1980 &ndash; January 1981 - Issue 2</title>
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -87,7 +87,7 @@
 </td>
 <td>&nbsp;&nbsp;</td>
 <td style="vertical-align:top">
-<h2 class="h2Navi">September 1980&nbsp;&ndash; January 1981 &middot; <span class="nowrap">Issue 2</span></h2>
+<h2 class="h2Navi">September 1980 &ndash; January 1981 &middot; <span class="nowrap">Issue 2</span></h2>
 </td>
 </tr>
 </table>
@@ -125,13 +125,13 @@
 The compiler contains the run time support routines, which reside from 2D63H to 318AH,
 and a table of the various addresses for these routines is stored at 318BH to 3200H.
 It would be possible to move these routines into EPROM, having made any necessary
-changes to addresses, and to change the position of the address table&nbsp;&ndash; I&rsquo;ll have a go
+changes to addresses, and to change the position of the address table &ndash; I&rsquo;ll have a go
 in about a months time.
 </p>
 <p>
 The compiler supports only Pascal reserved words in capitals, which I feel to be a
 pity, as the program is harder to read. It has a number of extensions to &ldquo;Standard&rdquo;
-Pascal such as &ldquo;CALL&rdquo; to call a machine language routine at a specified address&nbsp;&ndash;
+Pascal such as &ldquo;CALL&rdquo; to call a machine language routine at a specified address &ndash;
 &ldquo;MEM[I]&rdquo; to access the value of the byte stored at I, and also&#x200b;to store a byte at that
 address, and an &ldquo;ELSE&rdquo; addition to the &ldquo;&nbsp;CASE&rdquo; statement.
 </p>
@@ -141,7 +141,7 @@ HEX, and a " indicates that the ASCII character having that value is to be print
 These are departures from standard Pascal, and as such ought probably to be frowned
 upon, but I feel that they have been introduced with some justification. After all, on
 a micro computer, the ability to specify addresses in HEX is something we all take for
-granted&nbsp;&ndash; it&rsquo;s the way addresses come&nbsp;! Basic please copy&nbsp;!&nbsp;&ndash; and the MEM[I] is the
+granted &ndash; it&rsquo;s the way addresses come&nbsp;! Basic please copy&nbsp;! &ndash; and the MEM[I] is the
 equivalent of the Basic PEEK and POKE.
 </p>
 <p>
@@ -152,7 +152,7 @@ hospitalisation in Nascom&rsquo;s repair dept.
 </p>
 <p>
 The parentage of the compiler would appear to be the Yuen and Chung TINY <span class="uppercase">Pascal</span>
-published in BYTE. It offers one considerable advantage over that implementation&nbsp;&ndash;
+published in BYTE. It offers one considerable advantage over that implementation &ndash;
 SPEED! and MEMORY. The Chung and Yuen takes about 16K of memory for the first pass,
 plus whatever the source program takes up, and about 9k for the second pass, plus
 whatever the object program takes up, in addition to the basic interpreter. Because it
@@ -166,15 +166,15 @@ commands, and giving syntax diagrams, a sample program and a Hex listing. It cou
 with rewriting and considerable extension and elaboration. It would also be a good
 idea if there were given a source listing for the runtime routines, and instructions
 on how to relocate them to allow them to be blown in EPROM. This would obviate having
-to load a compiled code from tape at an address&nbsp;&ndash; say 8000H,&nbsp;&ndash; and the runtime
+to load a compiled code from tape at an address &ndash; say 8000H, &ndash; and the runtime
 routines at 2D63H to 318H. The other problem with this compiler is that it doesn&rsquo;t
-allow you to use certain areas&nbsp;&ndash; for example 1000H to 3200H, or the location of the
-source buffer, to store the object code it creates&nbsp;&ndash; and it is not possible to place
+allow you to use certain areas &ndash; for example 1000H to 3200H, or the location of the
+source buffer, to store the object code it creates &ndash; and it is not possible to place
 the object code on tape, and then reload it after you have finished with the compiler.
 </p>
 <p>
 Conclusions: An interesting if rather expensive introduction to Pascal, which could do
-with attention to a few points&nbsp;&ndash; tidy up the editor and extend the documentation in
+with attention to a few points &ndash; tidy up the editor and extend the documentation in
 particular.
 </p>
 <p>
@@ -207,7 +207,7 @@ CALL(&hellip;)
 <!-- 2 columns: end --></div></div>
 
 <p>
-Integer arithmetic operations are available but with no precedence ordering&nbsp;&ndash; strictly
+Integer arithmetic operations are available but with no precedence ordering &ndash; strictly
 left to right evaluation.
 </p>
 <!-- 1 column: end --></div>

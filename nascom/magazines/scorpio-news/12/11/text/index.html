@@ -23,8 +23,8 @@
 
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
-	<title>Scorpio News - April&ndash;June 1987&ndash; Volume 1. Issue 2.</title>
-	<!-- Sun, 15 Dec 2024 13:36:11 GMT -->
+	<title>Scorpio News - April&ndash;June 1987 &ndash; Volume 1. Issue 2.</title>
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -87,7 +87,7 @@
 </td>
 <td>&nbsp;&nbsp;</td>
 <td style="vertical-align:top">
-<h2 class="h2Navi">April&ndash;June 1987&nbsp;&ndash; <span class="nowrap">Volume 1.</span> <span class="nowrap">Issue 2.</span></h2>
+<h2 class="h2Navi">April&ndash;June 1987 &ndash; <span class="nowrap">Volume 1.</span> <span class="nowrap">Issue 2.</span></h2>
 </td>
 </tr>
 </table>
@@ -124,16 +124,16 @@
 <table>
 <tr><td>D4&nbsp;=&nbsp;1&nbsp;&nbsp;&nbsp;&ndash;</td><td>In timer mode, positive edge starts timer.<br>
 		In counter mode, positive edge decrements counter.</td></tr>
-<tr><td>D4 = 0 &nbsp;&nbsp;&ndash;</td><td>In timer mode, negative edge starts timer.<br>
+<tr><td>D4 = 0 &nbsp; &ndash;</td><td>In timer mode, negative edge starts timer.<br>
 		In counter mode, negative edge decrements counter.<br><br></td></tr>
-<tr><td>D3 = 1 &nbsp;&nbsp;&ndash;</td><td>is defined in timer mode only. Timer starts immediately (well, almost)</td></tr>
-<tr><td>D3 = 0 &nbsp;&nbsp;&ndash;</td><td>defined in timer mode only. Timer starts after time constant has been
+<tr><td>D3 = 1 &nbsp; &ndash;</td><td>is defined in timer mode only. Timer starts immediately (well, almost)</td></tr>
+<tr><td>D3 = 0 &nbsp; &ndash;</td><td>defined in timer mode only. Timer starts after time constant has been
 		loaded.<br><br></td></tr>
-<tr><td>D2 = 1 &nbsp;&nbsp;&ndash;</td><td>Time constant word is next word to be written to this channel.</td></tr>
-<tr><td>D2 = 0 &nbsp;&nbsp;&ndash;</td><td>No tine constant will follow (use the existing one)<br><br></td></tr>
-<tr><td>D1 = 1 &nbsp;&nbsp;&ndash;</td><td>Reset channel. Channel stops counting or timing.</td></tr>
-<tr><td>D1 = 0 &nbsp;&nbsp;&ndash;</td><td>Continue current operation.<br><br></td></tr>
-<tr><td>D0 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&ndash;</td><td>Always 1 for control byte.</td></tr>
+<tr><td>D2 = 1 &nbsp; &ndash;</td><td>Time constant word is next word to be written to this channel.</td></tr>
+<tr><td>D2 = 0 &nbsp; &ndash;</td><td>No tine constant will follow (use the existing one)<br><br></td></tr>
+<tr><td>D1 = 1 &nbsp; &ndash;</td><td>Reset channel. Channel stops counting or timing.</td></tr>
+<tr><td>D1 = 0 &nbsp; &ndash;</td><td>Continue current operation.<br><br></td></tr>
+<tr><td>D0 &nbsp; &nbsp; &nbsp; &nbsp; &ndash;</td><td>Always 1 for control byte.</td></tr>
 </table>
 <p>
 To disable a <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0181.pdf" title="External Link: Z80 CTC" target="_blank" rel="noreferrer">CTC</a><!-- /External Link --> channel from causing an interrupt, the code is simple. Just

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 2 - Number 4 - September 1982</title>
-	<!-- Sun, 15 Dec 2024 13:35:48 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -122,33 +122,33 @@
 <div class="col-sm-12 mag-micropower issue-24 page-26" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <table class="indent">
-<tr><td>bit 0</td><td>SET&nbsp;&ndash; selects upper 32k block<br>
-		RESET&nbsp;&ndash; selects lower 32K block<br>
+<tr><td>bit 0</td><td>SET &ndash; selects upper 32k block<br>
+		RESET &ndash; selects lower 32K block<br>
 		<span style="padding-left: 2em">(not operative if bit 7 is RESET)</span></td></tr>
 <tr><td>bit 1 )</td><td></td></tr>
 <tr><td>bit 2 )</td><td></td></tr>
 <tr><td>bit 3 )</td><td>selects 64k page</td></tr>
 <tr><td>bit 4 )</td><td style="padding-left: 2em">(bit 5 not used in 32k mode)</td></tr>
 <tr><td class="nowrap">bit 5 )</td><td></td></tr>
-<tr><td>bit 6</td><td>SET&nbsp;&ndash; select upper 32k of page&nbsp;0 as permanent<br>
-		RESET&nbsp;&ndash; select lower 32k of page&nbsp;0 as permanent<br>
+<tr><td>bit 6</td><td>SET &ndash; select upper 32k of page&nbsp;0 as permanent<br>
+		RESET &ndash; select lower 32k of page&nbsp;0 as permanent<br>
 		<span style="padding-left: 2em">(not operative if bit 7 is RESET)</span></td></tr>
-<tr><td>bit 7</td><td>SET&nbsp;&ndash; select 32k mode<br>
-		RESET&nbsp;&ndash; select 64K mode</td></tr>
+<tr><td>bit 7</td><td>SET &ndash; select 32k mode<br>
+		RESET &ndash; select 64K mode</td></tr>
 </table>
 <p>
 There are 3 modes of operation:<br>
-1) 6K paging&nbsp;&ndash; the memory is set up in 64k blocks which means
+1) 6K paging &ndash; the memory is set up in 64k blocks which means
 that to change pages, a program must ensure that the Program
 Counter holds the value of the next instruction on the incoming
 page after the O FE XX is executed. Not the easiest of things.<br>
-2) 32K paging&nbsp;&ndash; in this mode each page is divided into two 32k
+2) 32K paging &ndash; in this mode each page is divided into two 32k
 pages and the user can then assign either the upper or lower 32k
 of page&nbsp;0 as permanent and then page in any other 32k half page.
 This makes the controlling program much simpler and would be
 very useful for applications where large data files are
 manipulated by small programs.<br>
-3) Memory-mapping&nbsp;&ndash; this is the most powerful mode of all and it
+3) Memory-mapping &ndash; this is the most powerful mode of all and it
 allows any 4k block from the total RAM to be &lsquo;mapped&rsquo; into any
 4K slot in the Z80 memory map. The &lsquo;source&rsquo; block can be mapped
 into more than one &ldquo;target&rdquo; block.

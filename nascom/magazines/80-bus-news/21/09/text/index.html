@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
-	<!-- Sun, 15 Dec 2024 13:34:17 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -148,7 +148,7 @@ peripheral device family. These devices are specialised microcomputers, which ar
 set up to be input/&#x200b;output devices of astonishing complexity! I propose to deal
 only with the PIO and CTC at present, as these are the only two devices on which
 I can claim any experience. The SIO and DART I may be able to deal with in the
-future as Gemini have an SIO board in design. [Ed.&nbsp;&ndash; using SCCs from the 8500
+future as Gemini have an SIO board in design. [Ed. &ndash; using SCCs from the 8500
 family, I believe, not SIOs.] The DMA chip presents problems when using an N1
 with Nascom bufferboard, as it becomes necessary to modify the buffer board to
 allow the DMA to reach into the 4k block of the standard Nascom.
@@ -170,13 +170,13 @@ working in a similar way. These two modes can be set up on ports A or B, but mod
 2 differs. Mode 2 sets up port A to handle bidirectional data. As it now needs
 two hand shakes, one for in data and one for out data, we steal the handshake
 lines from Port B. So Port B can only be set to Mode 3 if port A is in Mode 2.
-Either or both ports can be set to mode 3 at any time&nbsp;&ndash; it is not necessary to
+Either or both ports can be set to mode 3 at any time &ndash; it is not necessary to
 have a port in Mode 2. Mode three is the Bit Mode. It allows the eight lines from
 the Port to be configured as any combination of Input and Output lines you
 require. As well, we may instruct the port to interrupt on simple logical
 combination (AND or OR) of some of these lines. We don&rsquo;t have to use them all for
 the interrupt, and can also define whether they should cause an interrupt when
-high or when low. There is one restriction&nbsp;&ndash; all interrupting lines must be at
+high or when low. There is one restriction &ndash; all interrupting lines must be at
 the same level.
 </p>
 <p>

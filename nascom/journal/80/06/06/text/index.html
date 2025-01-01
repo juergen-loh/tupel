@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Journal - 6/80 7/80</title>
-	<!-- Sun, 15 Dec 2024 13:31:40 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -136,15 +136,17 @@ Digitalisierung erfolgt nach dem Zählverfahren.
 <p>
 Der augenblicklichen Stellung des Joysticks wird direkt eine
 Bildschirmadresse zugeordnet. Im Gegensatz zu digitalen Joysticks kann
-hier nach einem &bdquo;CALL <span class="uppercase">Joystick</span>&ldquo; dem Hauptprogramm die
+hier nach einem &bdquo;CALL JOYSTICK&ldquo; dem Hauptprogramm die
 aktuelle Cursoradresse direkt im HL-Register übergeben werden.
 </p>
 <p>
 Die Bilder 1 und 2 zeigen den Hardwareaufwand und den Anschluß an den
-<span class="uppercase">Nascom</span>. Die relokatierbar Subroutine &bdquo;<span class="uppercase">Joystick</span>&ldquo; ist ab 0D00H
+<span class="uppercase">Nascom</span>. Die relokatierbar Subroutine
+&bdquo;JOYSTICK&ldquo; ist ab 0D00H
 einzugeben. Nach dem Start des Testprogramms ab DD36 H sind die Trimmer
 P1 und P3 so abzugleichen, daß beider Joystickbewegung:
-<img src="../../Image-06-5.jpeg" alt="" width="40" height="32">der Cursor&#x200b;&bdquo;&CircleDot;&ldquo; exakt dieser Bewegung nachkommt.&#x200b;Bei
+<img src="../../Image-06-5.jpeg" alt="" width="40" height="32">der Cursor&#x200b;&bdquo;&CircleDot;&ldquo; exakt
+dieser Bewegung nachkommt.&#x200b;Bei
 Bauteiletoleranzen und Abweichungen in der
 Versorgungsspannung kann ein Feinabgleich von C4 und C6 nötig sein.
 </p>
@@ -154,7 +156,8 @@ Joystick läßt sich dann eine &bdquo;Schlange&ldquo; aus max. 63 Elementen
 zeichnen, die sich bei einer Fortsetzung automatisch am Ende verkürzt.
 </p>
 <p>
-Werden die Potis P2 und/&#x200b;oder P4 durch NTC-, LDR-Bauelemente ersetzt,
+Werden die Potis P2 und/&#x200b;oder P4 durch
+NTC-, LDR-Bauelemente ersetzt,
 ergibt sich ein breites Experimentierfeld.
 </p>
 <p style="text-align:right">

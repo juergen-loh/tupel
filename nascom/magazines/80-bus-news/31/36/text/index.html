@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sun, 15 Dec 2024 13:34:42 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -136,7 +136,7 @@ adjust their algorithms accordingly. This means that the instruction in line
 B=1.999999999..... then they are not equal in the eyes of the computer
 although an engineer would happily accept them as such. (Mind you a Scientist
 may not, but that leads on to the old joke&hellip;) Therefore line 60 has to be
-rephrased as&nbsp;&ndash; IF A EQUALS B FOR ALL PRACTICAL PURPOSES THEN .... This can
+rephrased as &ndash; IF A EQUALS B FOR ALL PRACTICAL PURPOSES THEN .... This can
 best be done by coding it as IF ABS(A-B)&lt;1E-4 THEN.... Here we have said if
 the two values are within 1/10,000 of each other then take them as equal.
 After making this change the program above will run successfully.
@@ -145,8 +145,8 @@ After making this change the program above will run successfully.
 Alternatively the program can be recoded to make the calculation more
 accurate. By recoding line 40 as &hellip; N1*N1*N1 + N2*N2.... we replace the
 approximation by an accurate calculation. (Accurate in this case as we are
-dealing with reasonably sized <span class="uppercase">Integers</span>. In other circumstances&nbsp;&ndash; e.g. N1 etc
-being REAL numbers like 2.345 and 7.916&nbsp;&ndash; there would be rounding errors and
+dealing with reasonably sized <span class="uppercase">Integers</span>. In other circumstances &ndash; e.g. N1 etc
+being REAL numbers like 2.345 and 7.916 &ndash; there would be rounding errors and
 possible dynamic range problems affecting the accuracy of the result.) This
 change also has the side effect of speeding up the program as the two
 multiplications are faster than the ^ function. In making this change to line
@@ -160,7 +160,7 @@ While we are on the topic of computer accuracy I&rsquo;ll just mention one
 other point. Computers that use binary arithmetic cannot hold most decimal
 fractions accurately. (e.g. 2.67 might be held as &ldquo;a number very close to
 2.67&rsquo;.) This is why any serious financial program always uses BCD (Binary
-Coded Decimal) arithmetic&nbsp;&ndash; where 2.67 IS 2.67&nbsp;&ndash; rather than pure binary
+Coded Decimal) arithmetic &ndash; where 2.67 IS 2.67 &ndash; rather than pure binary
 arithmetic. That way the books generally balance exactly rather than
 approximately as the arithmetic exactly matches the human &lsquo;pencil &amp; paper&rsquo;
 mode. Details of BCD algorithms can be found in

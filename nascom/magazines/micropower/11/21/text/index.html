@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 1 - Number 1 - August 1981</title>
-	<!-- Sun, 15 Dec 2024 13:35:34 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -123,7 +123,7 @@
 <!-- 1 column: start --><div>
 <p>
 3) Another hardware solution. The display logic accesses the V.D.U. RAM once
-per microsecond&nbsp;&ndash; it is just possible to arrange for two accesses in every
+per microsecond &ndash; it is just possible to arrange for two accesses in every
 microsecond, and hand over alternate ones to the processor when it needs
 them. Wait state logic can then be used to synchronize the processor with these
 time slots.
@@ -150,23 +150,23 @@ make Z-80s Jump through hoops.
 A solution to approach (3) is presented here. It too has its disadvantages:
 early Nascom&nbsp;1&rsquo;s may have V.D.U. RAMs which are too slow to permit two
 accesses per microsecond. As it is, the modification is so simple that it is worth
-trying anyway&nbsp;&ndash; if the result produces spurious display misbehaviour then your RAMs
+trying anyway &ndash; if the result produces spurious display misbehaviour then your RAMs
 are too slow, in which case have a go at approach (2) (if you do, be sure that you
 completely understand the display mechanism, prepare careful timing diagrams,
 and study the Z-80 manual on T-states and access cycles),
 </p>
 <p>
 Another disadvantage is that the Z-80 will no longer be able to execute code
-from the V.D.U. RAM&nbsp;&ndash; which is a daft thing to want to do anyway. (This quirk
-occurs because, for reasons best known to the chip designers, M1 cycles&nbsp;&ndash; code
-accesses&nbsp;&ndash; have a different timing requirement to all others. This already creates all
+from the V.D.U. RAM &ndash; which is a daft thing to want to do anyway. (This quirk
+occurs because, for reasons best known to the chip designers, M1 cycles &ndash; code
+accesses &ndash; have a different timing requirement to all others. This already creates all
 sorts of problems on Nascoms, such as the need for wait-states to access
 EPROMS on 4MHz machines.)
 </p>
 <p>
 The advantages of approach (3) are, however, persuasive. Unlike (2), the
-maximum wait of the processor is one microsecond&nbsp;&ndash; undetectable in practice. It is
-extremely simple&nbsp;&ndash; there is little more logic involved than was required for
+maximum wait of the processor is one microsecond &ndash; undetectable in practice. It is
+extremely simple &ndash; there is little more logic involved than was required for
 the &ldquo;snowplough&rdquo;. The 2MHz and 4MHz versions are similar enough to permit a
 speed selection switch, for those of you whose reflexes are not up to landing a
 moon-rocket at 4&nbsp;MHz, and don&rsquo;t want to modify software.
@@ -174,7 +174,7 @@ moon-rocket at 4&nbsp;MHz, and don&rsquo;t want to modify software.
 <p>
 The waveform diagrams contain all of the theory of operation. One very
 important point to realise is that the processor clock is the inverse of that used
-by an unmodified Nascom&nbsp;&ndash; there is an extra inverter in the signal path. This is
+by an unmodified Nascom &ndash; there is an extra inverter in the signal path. This is
 essential to ensure that the &ldquo;wait state&rdquo; generator is sampled by the Z-80 at the only
 </p>
 <!-- 1 column: end --></div>

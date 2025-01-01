@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 1 - Number 2 - September 1981</title>
-	<!-- Sun, 15 Dec 2024 13:35:37 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -146,11 +146,11 @@ you can continue to single step through a program merely by pressing <span class
 </p>
 <p>
 If the line does not start with a space the first character is tested to find if it is
-an upper case letter; for any character outside the range A&nbsp;&ndash; Z an error message is
+an upper case letter; for any character outside the range A &ndash; Z an error message is
 produced, and INLIN is then recalled. When an upper case letter is found this is
 stored at ARGX and also at &pound;0C0A (ARGC), and the monitor proceeds to read any
 hexadecimal values entered on the line, storing them in the workspace in ten
-locations, ARG1&nbsp;&ndash; ARG10. the number of values found is stored at &pound;0C0B (ARGN). If
+locations, ARG1 &ndash; ARG10. the number of values found is stored at &pound;0C0B (ARGN). If
 any of the values found are invalid (contain illegal characters, or too many character),
 or if more than 10 values are entered, once again an error message is produced and
 INLIN is recalled.
@@ -159,7 +159,7 @@ INLIN is recalled.
 If all the tests are passed, the first three hexadecimal values on the input line
 are loaded into HL, DE and BC, HL is saved on the stack, and the location of the
 subroutine address is calculated by adding twice the value of the ASCII code for the
-command letter to the command table base address&nbsp;&ndash; &pound;0706 for Nas-Sys&nbsp;1, &pound;700 for
+command letter to the command table base address &ndash; &pound;0706 for Nas-Sys&nbsp;1, &pound;700 for
 Nas-Sys&nbsp;3. Thus for command A (ASCII &pound;41) the routine address is stored in the two
 bytes &pound;0788, &pound;0789 for Nas-Sys&nbsp;1, and at &pound;0782, &pound;0783 for Nas-Sys&nbsp;3. As usual, the
 low byte of the address is stored in the first location, the high byte in the second. The
@@ -172,7 +172,7 @@ with any hexadecimal values specified in the workspace&nbsp;, and the first thre
 HL, DE and BC.
 </p>
 <p>
-You should note that on RESET the region of the workspace ARG1&nbsp;&ndash; ARG10 is
+You should note that on RESET the region of the workspace ARG1 &ndash; ARG10 is
 set to zero. When you enter a command with a given number of arguments only
 these argument locations are changed; the remainder are unaltered. Thus if you
 </p>

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 2 - Number 1 - February 1982</title>
-	<!-- Sun, 15 Dec 2024 13:35:42 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -122,14 +122,14 @@
 <div class="col-sm-12 mag-micropower issue-21 page-32" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <p class="continued">
-The solution is simple&nbsp;&ndash; after testing the argument the routine should reset ARG1
+The solution is simple &ndash; after testing the argument the routine should reset ARG1
 to zero. Alternatively, you can POKE the value to zero from Basic.
 That brings us to the end of the Nas-Sys commands, but there are many more
-addresses in the subroutine call table&nbsp;&ndash; 34 in Nas-Sys&nbsp;1 and 37 in Nas-Sys&nbsp;3. These
+addresses in the subroutine call table &ndash; 34 in Nas-Sys&nbsp;1 and 37 in Nas-Sys&nbsp;3. These
 SCALs cannot be accessed directly from the keyboard like the command letters.
 Many of them correspond to lower case letters, but if you try to enter them as
 commands you will just get an error message, because the routine which accepts
-commands test the input character to see if it lies in the range A&nbsp;&ndash; Z. Of course they
+commands test the input character to see if it lies in the range A &ndash; Z. Of course they
 are there to be used in programs.
 </p>
 <h3>
@@ -141,7 +141,7 @@ resets the monitor and user stacks, prints the monitor message (&mdash; NAS-SYS&
 whatever you have substituted) on the screen, restores the byte replaced by any
 breakpoint that has been set, and then waits for an input. The screen is not cleared,
 and the monitor message will appear at whatever point the cursor was left by the
-program&nbsp;&ndash; for tidyness you should shift the cursor to the left of the screen by a
+program &ndash; for tidyness you should shift the cursor to the left of the screen by a
 carriage return if it has been moved. If you want to clear the screen on return
 to the monitor you can use RST 0 (&pound;C7); this will re-initialise the workspace and
 clear the screen before jumping to MRET.

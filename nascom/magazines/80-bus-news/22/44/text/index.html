@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - March&ndash;April 1983 - Volume 2 - Issue 2</title>
-	<!-- Sun, 15 Dec 2024 13:34:23 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -136,7 +136,7 @@ Anyway, as I have about as much experience with the ZX81 as I have at
 piloting a 747 (a real one that is, no I can&rsquo;t land the natty Sinclair Spectrum
 Flight Simulation program either, and that&rsquo;s supposed to be a light plane
 although a couple of experienced pilots who have tried it assure me it&rsquo;s more
-like a 747), this was all Dutch to me [Ed.&nbsp;&ndash; apologies to our readers in
+like a 747), this was all Dutch to me [Ed. &ndash; apologies to our readers in
 Holland!]. It seemed to me somewhat unlikely that the ZX81 I/O connector was
 controlled by some sort of latched I/O device, and I guess it is nothing more
 than a partially decoded address/&#x200b;data bus. However, he assured me that he could
@@ -146,18 +146,18 @@ that a glimmer dawned. The ZX81 in it&rsquo;s text display mode under its own BA
 about as fast as a superannuated snail, so if anything was happening to the LEDs
 it was probably the speed (or rather the lack of) at which the program ran which
 allowed anything to be visible. I suggested that he take his BASIC program and
-introduce a FOR&nbsp;&ndash; NEXT delay loop to see if the rate of flashing the LEDs was
+introduce a FOR &ndash; NEXT delay loop to see if the rate of flashing the LEDs was
 reduced, and he went away to try it. A day or so later we came across each other
-again, and he confirmed that the FOR&nbsp;&ndash; NEXT delay did indeed slow down the LEDs,
+again, and he confirmed that the FOR &ndash; NEXT delay did indeed slow down the LEDs,
 so how to do this in machine code.
 </p>
 <p>
-I explained that the BASIC FOR&nbsp;&ndash; NEXT loop simply made the processor
+I explained that the BASIC FOR &ndash; NEXT loop simply made the processor
 waste time by counting, and so it is the same in machine code. The only
 difference is that whereas the BASIC loop may only be counting a hundred or so
 for a delay of about a minute (see what I mean, brother is the ZX81 slow), at
 the machine code level, the few hundreds have to be considered as a few millions
-instead. All he wanted now was a machine code equivalent to the BASIC FOR&nbsp;&ndash; NEXT
+instead. All he wanted now was a machine code equivalent to the BASIC FOR &ndash; NEXT
 delay loop. So I gave him the very simple counting loop shown in program 2
 (adjacent). Now I know it&rsquo;s simple, but there are many around who still haven&rsquo;t
 mastered (or even tried) the machine code end of the business, so I offer it

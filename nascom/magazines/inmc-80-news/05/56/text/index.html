@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>INMC 80 News - October&ndash;December 1981 - Issue 5</title>
-	<!-- Sun, 15 Dec 2024 13:35:20 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -135,7 +135,7 @@ of the routine in USRLOC at 1004H, using the M command, before calling it.
 But there is only one entry point though which the machine code routines
 must pass; however, the parameter of the USR function can be accessed from
 machine code by calling a routine called DEINT whose address is contained
-in E00B, which turns out to be located at E98BH&nbsp;&ndash; this provides the clue
+in E00B, which turns out to be located at E98BH &ndash; this provides the clue
 as to how to differentiate between the different functions. The answer is
 to produce a jump table of addresses of the routines to be accessed from
 BASIC and use the parameter passed through DE to determine which one to
@@ -146,7 +146,7 @@ The ZEAP listing below shows how this can be done. The first few
 bytes poke the starting address of the jump-table routine into USRLOC; in
 this example I used 0C80. Then you collect the USR parameter from DE by
 calling E98BH, and first make sure that it is not greater than the number
-of subroutines available&nbsp;&ndash; if it is, you print an error message and return
+of subroutines available &ndash; if it is, you print an error message and return
 to BASIC. If the value contained in DE is within range, it is doubled
 (because the addresses are two bytes long) and added to the address of the
 start of the table. The contents of that address are then jumped to and
@@ -162,7 +162,7 @@ course, use as many as you like.
 Incidentally, if you are using ZEAP to develop the USR routines it
 is worth moving the edit buffer away from 1000H since BASIC will overwrite
 it, and this can be very frustrating. The buffer can be moved, for
-example, by calling ZEAP from NAS&shy;SYS by the command&nbsp;&ndash; E D000 3000 2000,
+example, by calling ZEAP from NAS&shy;SYS by the command &ndash; E D000 3000 2000,
 which puts the buffer between 2000 and 3000H.
 </p>
 <img class="img-fluid mx-auto d-block " src="../../Image-56-1.png" alt="" width="416" height="350">

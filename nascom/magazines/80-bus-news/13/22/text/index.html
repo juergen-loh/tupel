@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - July&ndash;October 1982 - Volume 1 - Issue 3</title>
-	<!-- Sun, 15 Dec 2024 13:34:12 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -123,11 +123,11 @@
 <!-- 1 column: start --><div>
 <p>
 Refer to the link block diagram in your manual (you have got a manual, haven&rsquo;t
-you?) and on each link block, LKB1-8, connect pin 8 to pin 4 (chip select)&nbsp;&ndash; pin 6 to
-pin 2 (output enable to read enable)&nbsp;&ndash; pin 5 to pin 1 (write enable). Finally loop pin
+you?) and on each link block, LKB1-8, connect pin 8 to pin 4 (chip select) &ndash; pin 6 to
+pin 2 (output enable to read enable) &ndash; pin 5 to pin 1 (write enable). Finally loop pin
 7 (address line A10) along to the next pin 7 on the next link block, and so on, so
 that all eight pin 7&rsquo;s are connected together, and pick up address line A13 off the
-bus&nbsp;&ndash; best done on pin 12 of IC47 (N2MD). This has the affect of addressing through
+bus &ndash; best done on pin 12 of IC47 (N2MD). This has the affect of addressing through
 all the lower 1K&rsquo;s of each chip and then through the upper 1K&rsquo;s (the upper and lower
 halves of each chip are then separated by 8K, not a very clever idea for EPROM, but as
 it&rsquo;s RAM it doesn&rsquo;t matter), it&rsquo;s the simplest method. Finally, to make the whole

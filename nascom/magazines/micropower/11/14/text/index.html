@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 1 - Number 1 - August 1981</title>
-	<!-- Sun, 15 Dec 2024 13:35:34 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -137,7 +137,7 @@ The pixels are not stored in the graphics section of the ROM, but are printed,
 as blocks of 3 x 4 dots, by a special routine in the operating system. To print
 pixels the machine does two passes per line, and also prints in one direction only, so
 it is four times as slow as the bidirectional printing of ASCII characters. If you
-program your own characters into the machine, you can access them as codes &pound;80&nbsp;&ndash;
+program your own characters into the machine, you can access them as codes &pound;80 &ndash;
 &pound;BF and design your output routine so that when it receives a character in this
 range it prefixes ESCAPE/5, while a pixel character is prefixed by ESCAPE/4;
 both characters should then be converted to the range that the printer is selected to
@@ -148,7 +148,7 @@ The printer has quite a range of control codes with which you can select the
 print size, print density, line spacing, form length, and horizontal and vertical tabs.
 Using pixels in the &lsquo;condensed print&rsquo; mode you have a resolution of 264 points
 across the 8 inch printing width of the Epson. However, there is a high-resolution
-graphics version of this printer&nbsp;&ndash; the MX80 F/T 2. The software for this version is
+graphics version of this printer &ndash; the MX80 F/T 2. The software for this version is
 contained in three <!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="External Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->s, the third one replacing the 8049&rsquo;s internal ROM! To do
 this a single wire link is cut on the P.C.B., which pulls pin 7 of the 8049, the
 External Access pin, to +5v. This forces the 8049 to ignore the internal ROM and
@@ -167,10 +167,10 @@ no pixel characters. It would be nice to have a machine with the best features o
 both versions without having to swap ROMs.
 </p>
 <p>
-The MX80 is a very well designed machine&nbsp;&ndash; a great improvement in
+The MX80 is a very well designed machine &ndash; a great improvement in
 appearance and performance on the TX 80. In fact the most serious faults I can
 find are the DIP selection switches, which are only accessible by removing the
-whole upper case, and the buzzer which indicates that the printer is out of paper&nbsp;&ndash;
+whole upper case, and the buzzer which indicates that the printer is out of paper &ndash;
 this goes on for a full 30 seconds, and it can be infuriating (this fault has been
 rectified on the F/T 2).
 </p>

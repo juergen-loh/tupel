@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Micropower - Volume 1 - Number 1 - August 1981</title>
-	<!-- Sun, 15 Dec 2024 13:35:34 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -135,7 +135,7 @@ machine by fitting the &ldquo;snow plough&rdquo; suggested in the
 <a href="../../../../inmc-news/01/02/text/#article2">first</a>
 <a href="../../../../inmc-news/02/03/text/#article1">two</a>
 issues of INMC
-news, or you may have a Nascom&nbsp;2 (or a Video Genie, an Atom, etc.,&nbsp;&ndash; they all seem
+news, or you may have a Nascom&nbsp;2 (or a Video Genie, an Atom, etc., &ndash; they all seem
 to have similar problems). In that case you will still notice on-screen disturbances
 in the form of short black lines chopping up the displayed information. On a mainly
 black screen this can just about be tolerated, but with any sort of graphics
@@ -150,14 +150,14 @@ of Nascom owners in my local club (even O.N.J. managed it).
 </p>
 <p>
 The disturbances are, of course, caused by the need for two functionally
-independent units&nbsp;&ndash; the display logic and the processor&nbsp;&ndash; to access the same
+independent units &ndash; the display logic and the processor &ndash; to access the same
 memory area: the V.D.U. RAM. The display logic cannot be kept waiting for the
 obvious reason that that the televison line scan just keeps right on going, so in the
 Nascom designs (and many others) the processor grabs the address and data
 busses to make its access, and whatever the display logic is trying to do at that
 time is simply not done. Either, with an unmodified Nascom&nbsp;1, it is fooled
 completely, and proceeds as if the data that the processor has just accessed is the
-data that it was itself trying to access&nbsp;&ndash; in which case it looks up in the character
+data that it was itself trying to access &ndash; in which case it looks up in the character
 generator ROM an &ldquo;appropriate&rdquo; bit pattern for the line currently being displayed,
 and merrily puts that up on the screen -or, with a Nascom&nbsp;2 or a &ldquo;snowplough&rdquo;, it
 blanks out any information from the display for a period covering the disturbance,
@@ -165,7 +165,7 @@ which is fine if nothing is supposed to be displayed at that position on screen,
 not otherwise.
 </p>
 <p>
-So, what approaches can be taken to provide a final solution&nbsp;&ndash; a good, clean
+So, what approaches can be taken to provide a final solution &ndash; a good, clean
 display with no disturbances whatsoever? Three solutions come to mind, all based
 on the principle that if the display logic must not be disturbed, then the processor
 will have to be.

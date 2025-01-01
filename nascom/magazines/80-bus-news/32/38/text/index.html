@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 15 Dec 2024 13:34:46 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -122,33 +122,33 @@
 <div class="col-sm-12 mag-80-bus-news issue-32 page-38" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <p class="noindent">
-RUN&nbsp;&ndash; Programs may be run direct from disk by just entering RUN followed by
+RUN &ndash; Programs may be run direct from disk by just entering RUN followed by
 the name of the program as stored in the disk directory. e.g. RUN"TEST" will
 load the program TEST from disk and proceed to run it.
 </p>
 <p class="noindent">
-TAB&nbsp;&ndash; As for ROM BASIC except that when additionally followed by two values
+TAB &ndash; As for ROM BASIC except that when additionally followed by two values
 will print characters specified by the second value until the print head
 reaches the column specified by the first value. e.g. PRINT TAB(20,46)
 assuming the cursor is placed on the first column of a line, will print twenty
 full stops.
 </p>
 <p class="noindent">
-WIDTH&nbsp;&ndash; Sets the width of the current output device when an automatic CRLF is
+WIDTH &ndash; Sets the width of the current output device when an automatic CRLF is
 generated. Set by default to 0 when no automatic CRLF is generated.
 </p>
 <p class="noindent">
-LOG&nbsp;&ndash; Followed by a suitable number returns the base 10 logarithm. The ROM
+LOG &ndash; Followed by a suitable number returns the base 10 logarithm. The ROM
 BASIC LOG command returns the natural (base e) logarithm.
 </p>
 <p class="noindent">
-LN&nbsp;&ndash; Followed by a suitable number returns the natural logarithm!
+LN &ndash; Followed by a suitable number returns the natural logarithm!
 </p>
 <h4>
 And now the exclusive command set:
 </h4>
 <p class="noindent">
-AUTO&nbsp;&ndash; Followed by up to two values. An automatic line numbering whilst
+AUTO &ndash; Followed by up to two values. An automatic line numbering whilst
 entering programs facility. e.g. AUTO 100,5 will start auto numbering from
 line 100 in steps of 5. Default values are from line 10 in steps of 10.
 Unfortunately you can fool this command by editing another line whilst in the
@@ -160,17 +160,17 @@ abort the auto mode by ESC and then issuing a new AUTO command. Absolutely
 essential to program writing though!
 </p>
 <p class="noindent">
-CALL&nbsp;&ndash; Followed by a suitable expression will call a machine code routine at
+CALL &ndash; Followed by a suitable expression will call a machine code routine at
 the address specified. The routine should normally end with a RET instruction.
 e.g. CALL &amp;C800 will call the machine code routine located at C800H.
 </p>
 <p class="noindent">
-DEL&nbsp;&ndash; Followed by two values will delete the XBASIC program lines between the
+DEL &ndash; Followed by two values will delete the XBASIC program lines between the
 lines specified. e.g. DEL100,200 will delete all lines from 100 to 200
 inclusive.
 </p>
 <p class="noindent">
-DRIVE&nbsp;&ndash; The default drive in the disk version is the disk drive A (logical
+DRIVE &ndash; The default drive in the disk version is the disk drive A (logical
 drive 0) and this may be altered with the DRIVE command. Any read or write
 commands after this will default to the drive specified unless specified
 otherwise in the command (see later disk commands). e.g. DRIVEB will now
@@ -178,14 +178,14 @@ default to the second disk drive. DRIVET will now read and write data to and
 from tape when required.
 </p>
 <p class="noindent">
-ELSE IF ..... THEN ..... : ELSE&nbsp;&ndash; need anymore be said?
+ELSE IF ..... THEN ..... : ELSE &ndash; need anymore be said?
 </p>
 <p class="noindent">
-EVAL&nbsp;&ndash; I&rsquo;m afraid the usefulness of this command escapes me. The command will
+EVAL &ndash; I&rsquo;m afraid the usefulness of this command escapes me. The command will
 evaluate text in a string expression. e.g. A$="1+X&ndash;EXP(X/3)":Y=EVAL(A$).
 </p>
 <p class="noindent">
-FMT&nbsp;&ndash; Requires a lot of words to explain its detailed use but suffice to say
+FMT &ndash; Requires a lot of words to explain its detailed use but suffice to say
 it is a <span class="uppercase">Printusing</span> type of command which can specify the number of figures to
 </p>
 <!-- 1 column: end --></div>

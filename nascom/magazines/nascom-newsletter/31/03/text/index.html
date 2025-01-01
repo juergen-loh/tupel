@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Newsletter - Volume 3 - Number 1 - April 1983</title>
-	<!-- Sun, 15 Dec 2024 13:35:52 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -142,10 +142,10 @@ Broken but not interrupted
 </h3>
 <p>
 With Gemini, the sign of twins, there was no suprise in a
-second problem&nbsp;&ndash; a broken IEI track. The symptom to that was a
+second problem &ndash; a broken IEI track. The symptom to that was a
 totally upredictable interrupt vector, not easily distinguished.
 By filling an INT RAM block with 10, 10, 11, 11, 12, 12, 13, 13,
-etc, then filling all lower RAM with E7 (Break point&nbsp;&ndash; BRKPT)
+etc, then filling all lower RAM with E7 (Break point &ndash; BRKPT)
 and the I register with the INT block address, it soon became
 obvious that the INT vector was coming from anywhere in the
 black including odd addresses. With pull-ups on the data bus,
@@ -162,7 +162,7 @@ The problem also showed how to break a program without
 &lsquo;Resetting&rsquo; and re-entering any start up data like registers. In
 Basic you can escape but in assembler what can you do? Add fancy
 routines which take as long to debug as the program itself. Or,
-you could hit the NMI. The result is the same as a Breakpoint&nbsp;&ndash;
+you could hit the NMI. The result is the same as a Breakpoint &ndash;
 the registers are displayed but to continue, only &lsquo;E&rsquo; need to be
 typed. To invoke NMI there is a debounced input an pin 6 of the
 Nasbus or pin 4 of the ribbon connector to the keyboard. A

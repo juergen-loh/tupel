@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 15 Dec 2024 13:34:46 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -122,11 +122,11 @@
 <div class="col-sm-12 mag-80-bus-news issue-32 page-40" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <p class="noindent">
-POP&nbsp;&ndash; Removes one address off the stack of GOSUB addresses so the next RETURN
+POP &ndash; Removes one address off the stack of GOSUB addresses so the next RETURN
 ill branch one statement beyond the second most recently executed GOSUB.
 </p>
 <p class="noindent">
-PTR&nbsp;&ndash; Followed by two values allows the setting of selected scratch pad
+PTR &ndash; Followed by two values allows the setting of selected scratch pad
 locations without using POKE or DOKE. The advantage of this is that the XBASIC
 workspace area is different for various implementations. For example the
 worksp-ace locations in the Nas-Dos version starts at 1006H but in the CP/M
@@ -135,51 +135,51 @@ implementation, it is at 0100H. Thus some compatability is achieved. There are
 end of the XBASIC program currently in memory into variable A.
 </p>
 <p class="noindent">
-SCRN$&nbsp;&ndash; Followed by a number which must be less than the number of rows on the
+SCRN$ &ndash; Followed by a number which must be less than the number of rows on the
 screen (16 on a standard Nascom), returns the string of characters from this
 row number, the length of which will always be equal to the number of columns
 on the screen (48 on a standard Nascom).
 </p>
 <p class="noindent">
-SEP&nbsp;&ndash; Followed by an ASCII value alters the seperator found in input
-statements&nbsp;&ndash; normally a comma. e.g. SEP 47 makes / the seperator. SEP 0 allows
-any characters to be input in INPUT statements including commas&nbsp;&ndash; although in
+SEP &ndash; Followed by an ASCII value alters the seperator found in input
+statements &ndash; normally a comma. e.g. SEP 47 makes / the seperator. SEP 0 allows
+any characters to be input in INPUT statements including commas &ndash; although in
 this case, only one input at a time would be allowed.
 </p>
 <p class="noindent">
-SIZE&nbsp;&ndash; Returns the current space available for program use. As for FRE(0) in
+SIZE &ndash; Returns the current space available for program use. As for FRE(0) in
 ROM BASIC.
 </p>
 <p class="noindent">
-SPEED&nbsp;&ndash; Followed by a number from 0 to 255 sets a delay in the character
+SPEED &ndash; Followed by a number from 0 to 255 sets a delay in the character
 output to the current output device. 0 is very slow whilst 255 is normal
 speed.
 </p>
 <p class="noindent">
-SWAP&nbsp;&ndash; Followed by two variables swaps the contents of the variables which may
+SWAP &ndash; Followed by two variables swaps the contents of the variables which may
 be numeric or string types. Saves a lot of space in sort routines.
 </p>
 <p class="noindent">
-ZONE&nbsp;&ndash; Followed by two numbers sets the print zone (tab) width and the largest
+ZONE &ndash; Followed by two numbers sets the print zone (tab) width and the largest
 column for which printing to the next zone will stay on the same line. Default
 values for a standard Nascom are 14 and 36 respectively.
 </p>
 <p class="noindent">
-ON ERR&nbsp;&ndash; Errors can be trapped and dealt with as you desire. It is possible to
+ON ERR &ndash; Errors can be trapped and dealt with as you desire. It is possible to
 deal with certain errors only and then continue in the program whilst
 unexpected errors will still break out of the program. The function ERL
 returns the line number where the error occurred, ERR returns the number of
-the type of error&nbsp;&ndash;there is a list in the manual, ERRS$ returns the error
+the type of error &ndash;there is a list in the manual, ERRS$ returns the error
 string message without the word &ldquo;error&rdquo;.
 </p>
 <p class="noindent">
-OFF ERR&nbsp;&ndash; Turns off the ON ERR command. An ON ERR command will turn off anyway
+OFF ERR &ndash; Turns off the ON ERR command. An ON ERR command will turn off anyway
 after an error has occurred in case the error routine has an error in it(!)
 but the error dealing routine can always turn it back on again at the end of
 the routine.
 </p>
 <p class="noindent">
-ON EOF&nbsp;&ndash; As for ON ERR except that this deals specifically with the encounter
+ON EOF &ndash; As for ON ERR except that this deals specifically with the encounter
 of an end of file when reading disk or tape data files and which would
 normally cause an End of Text Error. If ON ERR and ON EOF are both in force
 then the latter takes precedence if an end of file condition is sensed. The

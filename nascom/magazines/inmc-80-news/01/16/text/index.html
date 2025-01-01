@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>INMC 80 News - June/July/August 1980 - Issue 1</title>
-	<!-- Sun, 15 Dec 2024 13:35:02 GMT -->
+	<!-- Wed, 01 Jan 2025 19:19:14 GMT -->
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2024-12-15 14:31:39 +0100 (So, 15. Dez 2024) $ -->
+<!-- /navi-body.php / $Date: 2024-12-30 14:10:13 +0100 (Mo, 30. Dez 2024) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -146,14 +146,14 @@ ROM is a 2K device, hence has 11 address lines. Essentially what
 happens is that the hardware scans the video RAM which in turn produces
 48 sequential addresses representing the 48 characters to be displayed
 on that row. 7 address lines are used for this, known as the Character
-Selects (CS0&nbsp;&ndash; 6). Each address is applied to the character ROM causing
+Selects (CS0 &ndash; 6). Each address is applied to the character ROM causing
 a data byte to be output from the character ROM which is latched into a
 &lsquo;parallel in/serial out&rsquo; shift register, and a clock shifts the data
 byte out bit by bit producing a pattern of 1s and 0s which represent
 white and black dots (respectively) on the screen. A row of characters
 is actually composed of 16 TV lines (14 on a Nascom&nbsp;2, but it only
 skips that last two), and the remaining 4 address lines, known as the
-Row Selects (RS0&nbsp;&ndash; 3), tell the character ROM which TV line it is on.
+Row Selects (RS0 &ndash; 3), tell the character ROM which TV line it is on.
 Enough of this, it takes a fair amount of study of the circuits to
 understand it properly, and it&rsquo;s not really important to the matter of
 programming a character set.
