@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2023-03-11 15:22:20 +0100 (Sa, 11. Mrz 2023) $ -->
+<!-- navi-head.php / $Date: 2025-01-05 17:13:18 +0100 (So, 05. Jan 2025) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -19,12 +19,13 @@
 	<link rel="stylesheet" href="../../../../../../cdn/fontawesome/css/solid.min.css">
 
 	<link rel="stylesheet" type="text/css" href="../../../../../../style.css">
+	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/81/04/06/text/">
 <!-- /navi-head.php -->
 
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>Nascom Journal - 4/81 5</title>
-	<!-- Sat, 04 Jan 2025 15:18:37 GMT -->
+	<!-- Sun, 05 Jan 2025 16:13:18 GMT -->
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -136,15 +137,14 @@ Anschlusses des Nascom an ein anderes Bussystem zu überdenken.
 Überall werden einem zur Zeit preisgünstige Platinen für den
 <!-- External Link --><a href="https://www.elzet80.de/" title="Externer Link: ELZET80" target="_blank" rel="noreferrer">ELZET 80</a><!-- /External Link -->
 oder
-<span class="uppercase"><!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">Kontron Bus</a><!-- /External Link -->
-</span>
+<span class="uppercase"><!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">Kontron Bus</a><!-- /External Link --></span>
 angeboten, seien es RAM, EPROM oder I/O Platinen, so
 dass eine Erweiterung durch dieses System günstig erscheint.
 </p>
 <p>
-Seit einiger Zeit arbeitet mein <span class="uppercase">Nascom&nbsp;1</span> nun erfolgreich mit einer
-<span class="uppercase"><!-- External Link --><a href="https://www.kontron.com/de" title="Externer Link" target="_blank" rel="noreferrer">Kontron</a><!-- /External Link -->
-</span>
+Seit einiger Zeit arbeitet mein <span class="uppercase">Nascom&nbsp;1</span>
+nun erfolgreich mit einer
+<span class="uppercase"><!-- External Link --><a href="https://www.kontron.com/de" title="Externer Link" target="_blank" rel="noreferrer">Kontron</a><!-- /External Link --></span>
 16k Eprom-Karte und einer RAM Erweiterung von 4k, die ich
 demnächst noch zu vergrössern gedenke. In die Epromkarte habe ich die
 8k Basic des <span class="uppercase">Nascom</span> eingesteckt, die bis jetzt auch einwandfrei
@@ -154,15 +154,15 @@ arbeiten.
 Die Erweiterung war nicht weiters schwierig: Eine Busplatine für ca. 10
 Platinensteckplätze ist ohne weiteres zu haben, ein Netzgerät für die
 erforderlichen Spannungen ist auch schnell selbst gestrickt, bleibt
-nur noch ein Adapter, der den <span class="uppercase">Nascom</span> Bus auf ein anderes Steckersystem
-umlegt. Diesen Adapter möchte ich natürlich vorstellen.
+nur noch ein Adap&shy;ter, der den <span class="uppercase">Nascom</span> Bus auf ein anderes Steckersystem
+umlegt. Diesen Adap&shy;ter möchte ich natürlich vorstellen.
 </p>
 <p>
-Bild 1 zeigt die Platinenanschlüsse des <span class="uppercase">Nascom</span>, an die ich einfach ein
+<a href="../../07/text/#page">Bild 1</a> zeigt die Platinenanschlüsse des
+<span class="uppercase">Nascom</span>, an die ich einfach ein
 mehrfarbiges 43poliges Flachbandkabel angelötet habe, und die
 Anschlüsse des 64poligen
-<span class="uppercase"><!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">Kontron</a><!-- /External Link -->
-</span>
+<span class="uppercase"><!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">Kontron</a><!-- /External Link --></span>
 Steckers.
 </p>
 <p>
@@ -171,8 +171,7 @@ Man sieht, dass nur die Adressleitungen und
 <!-- inverted signal --><span class="style-inverted-signal">MRQ</span> Signale
 gepuffert sind, die Datenleitungen und übrigen Steuersignale gehen
 direkt an den
-<span class="uppercase"><!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">Kontron</a><!-- /External Link -->
-</span> Bus,
+<span class="uppercase"><!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">Kontron</a><!-- /External Link --></span> Bus,
 d.h. die Litzen werden direkt an die
 Steckeranschlüsse angelötet.
 </p>
@@ -189,7 +188,7 @@ die RAMs auf der Platine nur angesprochen, wenn die oberen 4 Adressen
 0 sind. (0&nbsp;0&nbsp;0&nbsp;0 bis C&nbsp;F&nbsp;F&nbsp;)
 </p>
 <p>
-Bild 2 zeigt die Bestückungsseite und die Leiterbahnseite der
+<a href="../../08/text/#page">Bild 2</a> zeigt die Bestückungsseite und die Leiterbahnseite der
 Adapterplatine.&#x200b;Vorsicht ist geboten bei den Leitungen, die genau
 durch den 64pol. Stecker gehen, hier gibt es beim Löten leicht
 Kurzschlüsse.
