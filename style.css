@@ -1,4 +1,4 @@
-/* /style.css / $Date: 2024-12-23 15:50:40 +0100 (Mo, 23. Dez 2024) $ */
+/* /style.css / $Date: 2025-01-13 22:45:16 +0100 (Mo, 13. Jan 2025) $ */
 
 html,
 body,
@@ -980,7 +980,8 @@ h1.indent,
 h4.indent,
 div.indent,
 p.indent,
-pre.indent
+pre.indent,
+table.indent
 {
 	margin-left: 3em;
 	text-indent: 0;
@@ -1339,3 +1340,8 @@ table.bildadr > tbody > tr > td:first-child
 }
 
 /*----------------------------*/
+
+table.toolkitRam > tbody > tr > td
+{
+	text-align: center;
+}
