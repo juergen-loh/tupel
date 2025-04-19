@@ -25,7 +25,7 @@
 	<!-- page.php / $Date: 2024-07-13 18:55:41 +0200 (Sa, 13. Jul 2024) $ -->
 
 	<title>80-Bus Journal - Februar 1983 - Ausgabe 2</title>
-	<!-- Sun, 16 Mar 2025 14:14:42 GMT -->
+	<!-- Sat, 05 Apr 2025 13:04:57 GMT -->
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-03-16 15:14:42 +0100 (So, 16. Mrz 2025) $ -->
+<!-- /navi-body.php / $Date: 2025-03-22 17:02:11 +0100 (Sa, 22. Mrz 2025) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -123,60 +123,61 @@
 <!-- Die Seite -->
 <div class="row" id="page"><div class="col-sm-12 hyphenate" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;">
 
-<!-- Kasten über ganze Spalte: Start --><div style="border-style: solid; padding: 10px; border-width: 2px;  width: 100%; ">
-<table class="table-responsive" style="margin: auto"><tr><td>
-<pre class="donthyphenate">
-<span class="uppercase">Nasbug</span>  T4       NAME  <span class="uppercase">Nassys3</span>  FUNCTION         MOD. REGISTER
-------------+-------------------------------------------------
-CD 3E 00    | RIN   CF       ;Input Keyb./UART
-CD 4A 0C      ROUT  F7       ;Ausg. Bildschirm
-CD 3B 01    |  "     "
-EF....00      PRS   EF....00 ;STRING auf Bildsch A
-D7 ..       | RCAL  D7 ..    ;Relativer CALL
-CD 35 00      RDEL  FF       ;relat.Verzögerung  A
-E7          | BRKPT E7       ;Breakpoint
-C7            START C7       ;Reset
-C3 86 02    | MRET  DF 5B    ;Zurück zu Monitor
-C3 4A 00      FFLP  DF 5E    ;FLIP/FLOP Port0    A
-CD 51 00    | MFLP  DF 5F    ;FLIP DRIVE-LED     A
-CD 97 06      ARGS  DF 60    ;Argum.1-3 in Reg.  HL DE BC
-CD 4D 0C    | IN    DF 62    ;Keyb.-Abfrage
-CD 69 00       "      "
-CD 5A 02    | NUM   DF 64    ;ASCII-Binär        HL DE A
-CD 32 02      TBCD3 DF 66    ;HL in ASCII ausg.  A C
-CD 2B 02    | TBCD2 DF 67    ;A in ASCII ausg.   A C
-CD 44 0a      B2HEX DF 68    ;A als Hexz. ausg.  A
-CD 3C 02    | SPACE DF 69    ;Space ausgeben     A
-CD 40 02      CRLF  DF 6A    ;Wagenrücklauf      A
-CD 5B 04    | TX1   DF 6C    ;HL,Sp,DE,Sp ausg.  A C
-CD CC 06      SOUT  DF 6D    ;String an UART     HL BC A
-CD 5D 00    | SRLX  DF 6F    ;Zeichen an UART    A
-CD 4D 02      B1HEX DF 7A    ;LSB v. A in ASCII  A
-Alle wei-   | SCAL  DF ..    ;CALL <span class="uppercase">Nassys</span> ROUT.
-teren Unter-  TDEL  DF 5D    ;1 sec. Verz.(4MHz) A B
-programme   | INLIN DF 63    ;Zeileneingabe      DE A
-tauchen in    ERRM  DF 6B    ;Ausg."ERROR NL"    A
-<span class="uppercase">Nasbug</span> T4   | RLIN  DF 79    ;10 Argum. absp.    HL DE BC A
-nicht auf.    BLINK DF 7B    ;Warte auf Keyb.    HL DE A
-            | CPOS  DF 7C    ;Zeilenanfang       HL A
-              SCALJ DF 5C    ;Spezialaufruf
-            | SP2   DF 7E    ;2 Spaces           A
-              SCALI DF 7F    ;Spezialaufruf      E
-            | NOM   DF 71    ;OUT-Tab.ändern     HL
-              NIM   DF 72    ;INP-Tab.ändern     HL
-            | NNOM  DF 77    ;OUT-Tab.normal     HL
-              NNIM  DF 78    ;INP-Tab.normal     HL
-            | KBD   DF 61    ;auf Keyb.warten
-              RKBD  DF 7D    ;""" + repeat
-            | SRLIN DF 70    ;auf UART warten
-              XKBD  DF 74    ;extern.Keyb.
-            | UIN   DF 76    ;auf USER warten
-              CRT   DF 65    ;Ausgabe:Bildsch.
-            | BRLX  DF 6F    ;       :UART
-              XOUT  DF 6E    ;       :Terminal
-            | UOUT  DF 75    ;       :USER
-</pre>
-</td></tr></table>
+<!-- Kasten über ganze Spalte: Start --><div class="table-responsive" style="border-style: solid; padding: 10px; border-width: 2px;  width: 100%; ">
+<table class="donthyphenate" style="margin: auto">
+<tr class="uppercase">
+    <td style="width: 5em">
+        Nasbug&nbsp;T4</td><td>Name </td><td>Nassys3 </td><td>Function           </td><td>Mod. Register</td></tr>
+<tr><td>------------  </td><td>-----</td><td>--------</td><td>-------------------</td><td>-------------</td></tr>
+<tr><td>CD 3E 00      </td><td>RIN  </td><td>CF      </td><td>;Input Keyb./UART  </td><td>             </td></tr>
+<tr><td>CD 4A 0C      </td><td>ROUT </td><td>F7      </td><td>;Ausg. Bildschirm  </td><td>             </td></tr>
+<tr><td>CD 3B 01      </td><td> "   </td><td> "      </td><td>                   </td><td>             </td></tr> 
+<tr><td>EF....00      </td><td>PRS  </td><td>EF....00</td><td>;STRING auf Bildsch</td><td>A            </td></tr>
+<tr><td>D7 ..         </td><td>RCAL </td><td>D7 ..   </td><td>;Relativer CALL    </td><td>             </td></tr>
+<tr><td>CD 35 00      </td><td>RDEL </td><td>FF      </td><td>;relat.Verzögerung </td><td>A            </td></tr>
+<tr><td>E7            </td><td>BRKPT</td><td>E7      </td><td>;Breakpoint        </td><td>             </td></tr>
+<tr><td>C7            </td><td>START</td><td>C7      </td><td>;Reset             </td><td>             </td></tr>
+<tr><td>C3 86 02      </td><td>MRET </td><td>DF 5B   </td><td>;Zurück zu Monitor </td><td>             </td></tr>
+<tr><td>C3 4A 00      </td><td>FFLP </td><td>DF 5E   </td><td>;FLIP/FLOP Port0   </td><td>A            </td></tr>
+<tr><td>CD 51 00      </td><td>MFLP </td><td>DF 5F   </td><td>;FLIP DRIVE-LED    </td><td>A            </td></tr>
+<tr><td>CD 97 06      </td><td>ARGS </td><td>DF 60   </td><td>;Argum.1-3 in Reg. </td><td>HL DE BC     </td></tr>
+<tr><td>CD 4D 0C      </td><td>IN   </td><td>DF 62   </td><td>;Keyb.-Abfrage     </td><td>             </td></tr>
+<tr><td>CD 69 00      </td><td> "   </td><td>  "     </td><td>                   </td><td>             </td></tr>
+<tr><td>CD 5A 02      </td><td>NUM  </td><td>DF 64   </td><td>;ASCII-Binär       </td><td>HL DE A      </td></tr>
+<tr><td>CD 32 02      </td><td>TBCD3</td><td>DF 66   </td><td>;HL in ASCII ausg. </td><td>A C          </td></tr>
+<tr><td>CD 2B 02      </td><td>TBCD2</td><td>DF 67   </td><td>;A in ASCII ausg.  </td><td>A C          </td></tr>
+<tr><td>CD 44 02      </td><td>B2HEX</td><td>DF 68   </td><td>;A als Hexz. ausg. </td><td>A            </td></tr>
+<tr><td>CD 3C 02      </td><td>SPACE</td><td>DF 69   </td><td>;Space ausgeben    </td><td>A            </td></tr>
+<tr><td>CD 40 02      </td><td>CRLF </td><td>DF 6A   </td><td>;Wagenrücklauf     </td><td>A            </td></tr>
+<tr><td>CD 5B 04      </td><td>TX1  </td><td>DF 6C   </td><td>;HL,Sp,DE,Sp ausg. </td><td>A C          </td></tr>
+<tr><td>CD CC 06      </td><td>SOUT </td><td>DF 6D   </td><td>;String an UART    </td><td>HL BC A      </td></tr>
+<tr><td>CD 5D 00      </td><td>SRLX </td><td>DF 6F   </td><td>;Zeichen an UART   </td><td>A            </td></tr>
+<tr><td>CD 4D 02      </td><td>B1HEX</td><td>DF 7A   </td><td>;LSB v. A in ASCII </td><td>A            </td></tr>
+<tr><td rowspan=22 style="hyphens: auto">
+        Alle weiteren Unterprogramme tauchen in NASBUG T4 nicht auf.
+                      </td><td>SCAL </td><td>DF ..   </td><td>;CALL NASSYS ROUT. </td><td>             </td></tr>
+<tr>                       <td>INLIN</td><td>DF 63   </td><td>;Zeileneingabe     </td><td>DE A         </td></tr>
+<tr>                       <td>ERRM </td><td>DF 6B   </td><td>;Ausg."ERROR NL"   </td><td>A            </td></tr>
+<tr>                       <td>RLIN </td><td>DF 79   </td><td>;10 Argum. absp.   </td><td>HL DE BC A   </td></tr>
+<tr>                       <td>BLINK</td><td>DF 7B   </td><td>;Warte auf Keyb.   </td><td>HL DE A      </td></tr>
+<tr>                       <td>CPOS </td><td>DF 7C   </td><td>;Zeilenanfang      </td><td>HL A         </td></tr>
+<tr>                       <td>SCALJ</td><td>DF 5C   </td><td>;Spezialaufruf     </td><td>             </td></tr>
+<tr>                       <td>SP2  </td><td>DF 7E   </td><td>;2 Spaces          </td><td>A            </td></tr>
+<tr>                       <td>SCALI</td><td>DF 7F   </td><td>;Spezialaufruf     </td><td>E            </td></tr>
+<tr>                       <td>NOM  </td><td>DF 71   </td><td>;OUT-Tab.ändern    </td><td>HL           </td></tr>
+<tr>                       <td>NIM  </td><td>DF 72   </td><td>;INP-Tab.ändern    </td><td>HL           </td></tr>
+<tr>                       <td>NNOM </td><td>DF 77   </td><td>;OUT-Tab.normal    </td><td>HL           </td></tr>
+<tr>                       <td>NNIM </td><td>DF 78   </td><td>;INP-Tab.normal    </td><td>HL           </td></tr>
+<tr>                       <td>KBD  </td><td>DF 61   </td><td>;auf Keyb.warten   </td><td>             </td></tr>
+<tr>                       <td>RKBD </td><td>DF 7D   </td><td>;""" + repeat      </td><td>             </td></tr>
+<tr>                       <td>SRLIN</td><td>DF 70   </td><td>;auf UART warten   </td><td>             </td></tr>
+<tr>                       <td>XKBD </td><td>DF 74   </td><td>;extern.Keyb.      </td><td>             </td></tr>
+<tr>                       <td>UIN  </td><td>DF 76   </td><td>;auf USER warten   </td><td>             </td></tr>
+<tr>                       <td>CRT  </td><td>DF 65   </td><td>;Ausgabe:Bildsch.  </td><td>             </td></tr>
+<tr>                       <td>BRLX </td><td>DF 6F   </td><td>;       :UART      </td><td>             </td></tr>
+<tr>                       <td>XOUT </td><td>DF 6E   </td><td>;       :Terminal  </td><td>             </td></tr>
+<tr>                       <td>UOUT </td><td>DF 75   </td><td>;       :USER      </td><td>             </td></tr>
+</table>
 <!-- Kasten: Ende --></div>
 
 <br>
