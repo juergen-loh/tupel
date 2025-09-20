@@ -1,4 +1,4 @@
-/* /style.css / $Date: 2025-01-13 22:45:16 +0100 (Mo, 13. Jan 2025) $ */
+/* /style.css / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ */
 
 html,
 body,
@@ -1126,6 +1126,20 @@ table.content-navi > tbody > tr > td > a
 	transform: scaleY(-1);
 }
 
+ .svg-arrow-scale
+ {
+	-moz-transform: scaleY(1.2);
+	-webkit-transform: scaleY(1.2);
+	transform: scale(1.2);
+ }
+ 
+ .svg-arrow-scale-mirror
+ {
+	-moz-transform: scaleY(-1.2);
+	-webkit-transform: scaleY(-1.2);
+	transform: scale(-1.2);
+ }
+ 
 /*----------------------------*/
 
 table.port-adressen tr td:first-child
