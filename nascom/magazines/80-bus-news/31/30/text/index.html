@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/31/30/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,7 +138,7 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    67</span>
 
-F3EC EB         MID:    EX      DE,HL           ; Get code string address
+<span id="F3EC">F3EC EB         MID:    EX      DE,HL           ; Get code string address</span>
 F3ED 7E                 LD      A,(HL)          ; Get next byte "," or ")"
 F3EE CD3CF4             CALL    MIDNUM          ; Get number supplied
 F3F1 04                 INC     B               ; Is it character zero?
@@ -170,7 +170,7 @@ F419 D8                 RET     C               ; Truncate string if needed
 F41A 43                 LD      B,E             ; Set specified length
 F41B C9                 RET                     ; Go and create string
 
-F41C CD86F3     VAL:    CALL    GETLEN          ; Get length of string
+<span id="F41C">F41C CD86F3     VAL:    CALL    GETLEN          ; Get length of string</span>
 F41F CA33F6             JP      Z,RESZER        ; Result zero
 F422 5F                 LD      E,A             ; Save length
 F423 23                 INC     HL
@@ -205,15 +205,15 @@ F43E C5                 PUSH    BC              ; Re-save return address
 F43F 43                 LD      B,E             ; Number to B
 F440 C9                 RET
 
-F441 CD87F4     INP:    CALL    MAKINT          ; Make it integer A
+<span id="F441">F441 CD87F4     INP:    CALL    MAKINT          ; Make it integer A</span>
 F444 323F10             LD      (INPORT),A      ; Set input port
 F447 CD3E10             CALL    INPSUB          ; Get input from port
 F44A C301F1             JP      PASSA           ; Return integer A
 
 F44D CD71F4     POUT:   CALL    SETIO           ; Set up port number
-F450 C30610             JP      OUTSUB          ; Output data and return
+<span id="F450">F450 C30610             JP      OUTSUB          ; Output data and return</span>
 
-F453 CD71F4     WAIT:   CALL    SETIO           ; Set up port number
+<span id="F453">F453 CD71F4     WAIT:   CALL    SETIO           ; Set up port number</span>
 F456 F5                 PUSH    AF              ; Save AND mask
 F457 1E00               LD      E,0             ; Assume zero if none given
 F459 2B                 DEC     HL              ; DEC 'cos GETCHR INCs

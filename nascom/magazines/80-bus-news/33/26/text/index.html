@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/26/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -147,18 +147,18 @@ FDA0 3D                 DEC     A               ; Count delays
 FDA1 C29CFD             JP      NZ,DELAY1       ; More delay
 FDA4 C9                 RET
 
-FDA5 CD84F4     WIDTH:  CALL    GETINT          ; Get integer 0-255
+<span id="FDA5">FDA5 CD84F4     WIDTH:  CALL    GETINT          ; Get integer 0-255</span>
 FDA8 7B                 LD      A,E             ; Width to A
 FDA9 324210             LD      (LWIDTH),A      ; Set width
 FDAC C9                 RET
 
-FDAD CD41ED     LINES:  CALL    GETNUM          ; Get a number
+<span id="FDAD">FDAD CD41ED     LINES:  CALL    GETNUM          ; Get a number</span>
 FDB0 CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
 FDB3 ED534610           LD      (LINESC),DE     ; Set lines counter
 FDB7 ED534810           LD      (LINESN),DE     ; Set lines number
 FDBB C9                 RET
 
-FDBC CD8BE9     DEEK:   CALL    DEINT           ; Get integer -32768 to 32767
+<span id="FDBC">FDBC CD8BE9     DEEK:   CALL    DEINT           ; Get integer -32768 to 32767</span>
 FDBF D5                 PUSH    DE              ; Save number
 FDC0 E1                 POP     HL              ; Number to HL
 FDC1 46                 LD      B,(HL)          ; Get LSB of contents
@@ -166,7 +166,7 @@ FDC2 23                 INC     HL
 FDC3 7E                 LD      A,(HL)          ; Get MSB of contents
 FDC4 C3F2F0             JP      ABPASS          ; Return integer AB
 
-FDC7 CD41ED     DOKE:   CALL    GETNUM          ; Get a number
+<span id="FDC7">FDC7 CD41ED     DOKE:   CALL    GETNUM          ; Get a number</span>
 FDCA CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
 FDCD D5                 PUSH    DE              ; Save address
 FDCE CD90E6             CALL    CHKSYN          ; Make sure "," follows
@@ -188,7 +188,7 @@ FDE3 C312E0             JP      CSTART          ; Go and initialise
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    97</span>
 
-FDE6 CD84F4     SCREEN: CALL    GETINT          ; Get integer 0 to 255
+<span id="FDE6">FDE6 CD84F4     SCREEN: CALL    GETINT          ; Get integer 0 to 255</span>
 FDE9 F5                 PUSH    AF              ; Save column
 FDEA CD90E6             CALL    CHKSYN          ; Make sure "," follows
 FDED 2C                 DEFB    ","

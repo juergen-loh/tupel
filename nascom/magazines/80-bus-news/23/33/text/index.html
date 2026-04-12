@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/23/33/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -140,17 +140,17 @@
 
 <tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p>PAGE 12</p></th></tr>
 
-<tr><td><p>END</p></td><td><p>E872</p></td><td colspan=2><p>
+<tr><td><p>END</p></td><td><p><a href="../../../25/35/text/#E872">E872</a></p></td><td colspan=2><p>
 END routine. Flag &ldquo;END&rdquo;.<br>
 Save address of break and set continue address and line.
 If from STOP or break then output &ldquo;Break&rdquo; message and if not
 a direct statement then output line number also.
 </p></td></tr>
-<tr><td><p>CONT</p></td><td><p>E89E</p></td><td colspan=2><p>
+<tr><td><p>CONT</p></td><td><p><a href="../../../25/35/text/#E89E">E89E</a></p></td><td colspan=2><p>
 CONT routine. Get continue address, if it is zero then output
 &ldquo;?ON Error&rdquo; else set address and line as current and continue.
 </p></td></tr>
-<tr><td><p>NULL</p></td><td><p>E8B1</p></td><td colspan=2><p>
+<tr><td><p>NULL</p></td><td><p><a href="../../../25/35/text/#E8B1">E8B1</a></p></td><td colspan=2><p>
 NULL routine. Set number of nulls to be output after CRLF.
 </p></td></tr>
 <tr><td><p>CHKLTR</p></td><td><p>E977</p></td><td colspan=2><p>
@@ -172,42 +172,42 @@ Test for integer &minus;32768 to 32767 and leave it in DE.
 <tr><td><p>ATOH</p></td><td><p>E9A5</p></td><td colspan=2><p>
 Read an ASCII integer 0 to 65529 into DE from code string.
 </p></td></tr>
-<tr><td><p>CLEAR</p></td><td><p>E9CA</p></td><td colspan=2><p>
+<tr><td><p>CLEAR</p></td><td><p><a href="../../../25/37/text/#E9CA">E9CA</a></p></td><td colspan=2><p>
 CLEAR routine. &ldquo;CLEAR&rdquo; Clear variables,<br>
 &ldquo;CLEAR s&rdquo; also reserves string space (where t is 0 to 32767),<br>
 &ldquo;CLEAR,t&rdquo; sets top of memory (where t is 0 to 32767),<br>
 &ldquo;CLEAR s,t&rdquo; reserves string space and sets RAM top.
 </p></td></tr>
-<tr><td><p>RUN</p></td><td><p>EA10</p></td><td colspan=2><p>
+<tr><td><p>RUN</p></td><td><p><a href="../../../25/37/text/#EA10">EA10</a></p></td><td colspan=2><p>
 RUN routine. &ldquo;RUN&rdquo; run from start of program, &ldquo;RUN n&rdquo; run from
 specified line.
 </p></td></tr>
-<tr><td><p>GOSUB</p></td><td><p>EA1C</p></td><td colspan=2><p>
+<tr><td><p>GOSUB</p></td><td><p><a href="../../../25/37/text/#EA1C">EA1C</a></p></td><td colspan=2><p>
 GOSUB routine. Create a GOSUB block on the stack and GOTO
 specified line.
 </p></td></tr>
-<tr><td><p>GOTO</p></td><td><p>EA2D</p></td><td colspan=2><p>
+<tr><td><p>GOTO</p></td><td><p><a href="../../../25/37/text/#EA2D">EA2D</a></p></td><td colspan=2><p>
 GOTO routine. Get ASCII line number and continue execution
 from that line.
 </p></td></tr>
-<tr><td><p>RETURN</p></td><td><p>EA4B</p></td><td colspan=2><p>
+<tr><td><p>RETURN</p></td><td><p><a href="../../../25/37/text/#EA4B">EA4B</a></p></td><td colspan=2><p>
 RETURN routine. Look back through stack for a GOSUB block
 and if one is found POP line number and address in line and
 continue execution from there. Otherwise &ldquo;?RG Error&rdquo; occurs.
 </p></td></tr>
-<tr><td><p>DATA</p></td><td><p>EA70</p></td><td colspan=2><p>
+<tr><td><p>DATA</p></td><td><p><a href="../../../25/38/text/#EA70">EA70</a></p></td><td colspan=2><p>
 DATA routine. Flag DATA and drop through to common code.
 </p></td></tr>
-<tr><td><p>REM</p></td><td><p>EA72</p></td><td colspan=2><p>
+<tr><td><p>REM</p></td><td><p><a href="../../../25/38/text/#EA72">EA72</a></p></td><td colspan=2><p>
 REM routine. Flag REM and look for end of statement, DATA
 statement ends with &ldquo;:&rdquo; or null, REM statement ends only with
 null (End of line).
 </p></td></tr>
-<tr><td><p>LET</p></td><td><p>EA87</p></td><td colspan=2><p>
+<tr><td><p>LET</p></td><td><p><a href="../../../25/38/text/#EA87">EA87</a></p></td><td colspan=2><p>
 LET routine. Get variable name, make sure &ldquo;=&rdquo; follows, evaluate
 expression and assign it to the variable.
 </p></td></tr>
-<tr><td><p>ON</p></td><td><p>EAE1</p></td><td colspan=2><p>
+<tr><td><p>ON</p></td><td><p><a href="../../../25/38/text/#EAE1">EAE1</a></p></td><td colspan=2><p>
 ON GOTO / ON GOSUB routine. Get integer expression (0 to 255).
 Look through list of ASCII line numbers until the Nth value
 is found. If value N exists GOTO or GOSUB that line. Otherwise
@@ -222,21 +222,21 @@ drop through to next statement.
 
 <tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p>PAGE 13</p></th></tr>
 
-<tr><td><p>IF</p></td><td><p>EAFF</p></td><td colspan=2><p>
+<tr><td><p>IF</p></td><td><p><a href="../../../25/38/text/#EAFF">EAFF</a></p></td><td colspan=2><p>
 IF routine. Evaluate expression. If it is zero then dop through
 to the next line. Otherwise GOTO line number if specified else
 go to execute the statement.
 </p></td></tr>
-<tr><td><p>PRINT</p></td><td><p>EB23</p></td><td colspan=2><p>
+<tr><td><p>PRINT</p></td><td><p><a href="../../../26/31/text/#EB23">EB23</a></p></td><td colspan=2><p>
 PRINT routine.
 </p></td></tr>
-<tr><td><p>INPUT</p></td><td><p>EBFD</p></td><td colspan=2><p>
+<tr><td><p>INPUT</p></td><td><p><a href="../../../26/32/text/#EBFD">EBFD</a></p></td><td colspan=2><p>
 INPUT routine. Test for direct mode, if in direct mode then
 no INPUT allowed (&ldquo;?ID Error&rdquo;). Otherwise output prompt string
 if one is given, Get an input line and join READ routine to
 assign values to variables.
 </p></td></tr>
-<tr><td><p>READ</p></td><td><p>EC2C</p></td><td colspan=2><p>
+<tr><td><p>READ</p></td><td><p><a href="../../../26/32/text/#EC2C">EC2C</a></p></td><td colspan=2><p>
 READ routine. Get address of next DATA item and flag READ.
 Read in items an assign to variables (used for INPUT and READ).
 If any errors occur use READFG to see if:&ndash;<BR>
@@ -246,7 +246,7 @@ If any errors occur use READFG to see if:&ndash;<BR>
 <tr><td><p>FDTLP</p></td><td><p>ECD2</p></td><td colspan=2><p>
 Find next DATA statement.
 </p></td></tr>
-<tr><td><p>NEXT</p></td><td><p>ECF6</p></td><td colspan=2><p>
+<tr><td><p>NEXT</p></td><td><p><a href="../../../26/34/text/#ECF6">ECF6</a></p></td><td colspan=2><p>
 NEXT routine. Look back through stack for a matching FOR block.
 If one is found then add STEP to index variable and compare
 it with the TO value. If the loop has not been completed then

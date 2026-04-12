@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/24/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -149,9 +149,9 @@ FBF4 68B14668   RNDTAB: DEFB    068H,0B1H,046H,068H     ; Table used by RND
 FBF8 99E99269           DEFB    099H,0E9H,092H,069H
 FBFC 10D17568           DEFB    010H,0D1H,075H,068H
 
-FC00 214AFC     COS:    LD      HL,HALFPI       ; Point to PI/2
+<span id="FC00">FC00 214AFC     COS:    LD      HL,HALFPI       ; Point to PI/2</span>
 FC03 CDBEF5             CALL    ADDPHL          ; Add it to PPREG
-FC06 CD44F8     SIN:    CALL    STAKFP          ; Put angle on stack
+<span id="FC06">FC06 CD44F8     SIN:    CALL    STAKFP          ; Put angle on stack</span>
 FC09 014983             LD      BC,8349H        ; BCDE = 2 PI
 FC0C 11DB0F             LD      DE,0FDBH
 FC0F CD54F8             CALL    FPBCDE          ; Move 2 PI to FPREG
@@ -195,7 +195,7 @@ FC63 DA0F4983           DEFB    0DAH,00FH,049H,083H     ;  6.2832
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    93</span>
 
-FC67 CD44F8     TAN:    CALL    STAKFP          ; Put angle on stack
+<span id="FC67">FC67 CD44F8     TAN:    CALL    STAKFP          ; Put angle on stack</span>
 FC6A CD06FC             CALL    SIN             ; Get SIN of angle
 FC6D C1                 POP     BC              ; Restore angle
 FC6E E1                 POP     HL
@@ -205,7 +205,7 @@ FC73 CD54F8             CALL    FPBCDE          ; Angle to FPREG
 FC76 CD00FC             CALL    COS             ; Get COS of angle
 FC79 C367F7             JP      DIV             ; TAN = SIN / COS
 
-FC7C CD13F8     ATN:    CALL    TSTSGN          ; Test sign of value
+<span id="FC7C">FC7C CD13F8     ATN:    CALL    TSTSGN          ; Test sign of value</span>
 FC7F FCA7FA             CALL    M,NEGAFT        ; Negate result after if -ve
 FC82 FC3CF8             CALL    M,INVSGN        ; Negate value if -ve
 FC85 3AE710             LD      A,(FPEXP)       ; Get exponent

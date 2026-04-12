@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/24/24/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -141,7 +141,7 @@
                 ; BASIC WORK SPACE LOCATIONS
 
 1000            WRKSPC  EQU     1000H           ; BASIC Work space
-1003            USR     EQU     1003H           ; "USR (x)" jump
+<span id="1003">1003            USR     EQU     1003H           ; "USR (x)" jump</span>
 1006            OUTSUB  EQU     1006H           ; "OUT p,n"
 1007            OTPORT  EQU     1007H           ; Port (p)
 1009            DIVSUP  EQU     1009H           ; Division support routine
@@ -153,18 +153,18 @@
 103A            LSTRND  EQU     103AH           ; Last random number
 103E            INPSUB  EQU     103EH           ; #INP (x)" Routine
 103F            INPORT  EQU     103FH           ; PORT (x)
-1041            NULLS   EQU     1041H           ; Number of nulls
-1042            LWIDTH  EQU     1042H           ; Terminal width
+<span id="1041">1041            NULLS   EQU     1041H           ; Number of nulls</span>
+<span id="1042">1042            LWIDTH  EQU     1042H           ; Terminal width</span>
 1043            COMMAN  EQU     1043H           ; Width for commas
 1044            NULFLG  EQU     1044H           ; Null after input byte flag
-1045            CTLOFG  EQU     1045H           ; Control "O" flag
+<span id="1045">1045            CTLOFG  EQU     1045H           ; Control "O" flag</span>
 1046            LINESC  EQU     1046H           ; Lines counter
-1048            LINESN  EQU     1048H           ; Lines number
-104A            CHKSUM  EQU     104AH           ; Array load/save check sum
+<span id="1048">1048            LINESN  EQU     1048H           ; Lines number</span>
+<span id="104A">104A            CHKSUM  EQU     104AH           ; Array load/save check sum</span>
 104C            NMIFLG  EQU     104CH           ; Flag for NMI break routine
 104D            BRKFLG  EQU     104DH           ; Break flag
 104E            RINPUT  EQU     104EH           ; Input reflection
-1051            POINT   EQU     1051H           ; "POINT" reflection (unused)
+<span id="1051">1051            POINT   EQU     1051H           ; "POINT" reflection (unused)</span>
 1054            PSET    EQU     1054H           ; "SET"   reflection
 1057            RESET   EQU     1057H           ; "RESET" reflection
 105A            STRSPC  EQU     105AH           ; Bottom of string space
@@ -196,9 +196,9 @@
 10D0            NXTOPR  EQU     10D0H           ; Next operator in EVAL
 10D2            ERRLIN  EQU     10D2H           ; Line of error
 10D4            CONTAD  EQU     10D4H           ; Where to CONTinue
-10D6            PROGND  EQU     10D6H           ; End of program
+<span id="10D6">10D6            PROGND  EQU     10D6H           ; End of program</span>
 10D8            VAREND  EQU     10D8H           ; End of variables
-10DA            ARREND  EQU     10DAH           ; End of arrays
+<span id="10DA">10DA            ARREND  EQU     10DAH           ; End of arrays</span>
 10DC            NXTDAT  EQU     10DCH           ; Next data item
 10DE            FNRGNM  EQU     10DEH           ; Name of FN argument
 10E0            FNARG   EQU     10E0H           ; FN argument value
@@ -207,7 +207,7 @@
 10E8            SGNRES  EQU     10E8H           ; Sign of result
 10E9            PBUFF   EQU     10E9H           ; Number print buffer
 10F6            MULVAL  EQU     10F6H           ; Multiplier
-10F9            PROGST  EQU     10F9H           ; Start of program text area
+<span id="10F9">10F9            PROGST  EQU     10F9H           ; Start of program text area</span>
 115D            STLOOK  EQU     115DH           ; Start of memory test
 
                 ; BASIC ERROR CODE VALUES

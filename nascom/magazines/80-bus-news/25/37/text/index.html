@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/25/37/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,7 +138,7 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    35</span>
 
-E9CA CAC9E4     CLEAR:  JP      Z,INTVAR        ; Just "CLEAR" Keep parameters
+<span id="E9CA">E9CA CAC9E4     CLEAR:  JP      Z,INTVAR        ; Just "CLEAR" Keep parameters</span>
 E9CD CD82E9             CALL    POSINT          ; Get integer 0 to 32767 to DE
 E9D0 2B                 DEC     HL              ; Cancel increment
 E9D1 CD36E8             CALL    GETCHR          ; Get next character
@@ -179,12 +179,12 @@ EA0D C3C9E4             JP      INTVAR          ; Initialise variables
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    36</span>
 
-EA10 CAC5E4     RUN:    JP      Z,RUNFST        ; RUN from start if just RUN
+<span id="EA10">EA10 CAC5E4     RUN:    JP      Z,RUNFST        ; RUN from start if just RUN</span>
 EA13 CDC9E4             CALL    INTVAR          ; Initialise variables
 EA16 01F2E7             LD      BC,RUNCNT       ; Execution driver loop
 EA19 C32CEA             JP      RUNLIN          ; RUN from line number
 
-EA1C 0E03       GOSUB:  LD      C,3             ; 3 Levels of stack needed
+<span id="EA1C">EA1C 0E03       GOSUB:  LD      C,3             ; 3 Levels of stack needed</span>
 EA1E CD8AE3             CALL    CHKSTK          ; Check for 3 levels of stack
 EA21 C1                 POP     BC              ; Get return address
 EA22 E5                 PUSH    HL              ; Save code string for RETURN
@@ -196,7 +196,7 @@ EA2A F5                 PUSH    AF              ; Save token
 EA2B 33                 INC     SP              ; Don't save flags
 
 EA2C C5         RUNLIN: PUSH    BC              ; Save return address
-EA2D CDA5E9     GOTO:   CALL    ATOH            ; ASCII number to DE binary
+<span id="EA2D">EA2D CDA5E9     GOTO:   CALL    ATOH            ; ASCII number to DE binary</span>
 EA30 CD72EA             CALL    REM             ; Get end of line
 EA33 E5                 PUSH    HL              ; Save end of line
 EA34 2A5C10             LD      HL,(LINEAT)     ; Get current line
@@ -212,7 +212,7 @@ EA45 D8                 RET     C               ; Line found
 EA46 1E0E       ULERR:  LD      E,UL            ; ?UL Error
 EA48 C3C1E3             JP      ERROR           ; Output error message
 
-EA4B C0         RETURN: RET     NZ              ; Return if not just RETURN
+<span id="EA4B">EA4B C0         RETURN: RET     NZ              ; Return if not just RETURN</span>
 EA4C 16FF               LD      D,-1            ; Flag "GOSUB" search
 EA4E CD56E3             CALL    BAKSTK          ; Look "GOSUB" block
 EA51 F9                 LD      SP,HL           ; Kill all FORs in subroutine

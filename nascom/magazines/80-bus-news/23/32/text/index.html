@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/23/32/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -218,7 +218,7 @@ BASIC line then move it to the program text area.
 Search for line number in register DE.
 </p></td></tr>
 
-<tr><td><p>NEW</p></td><td><p></p>E4B9</td><td colspan=2><p>
+<tr><td><p>NEW</p></td><td><p></p><a href="../../../24/32/text/#E4B9">E4B9</a></td><td colspan=2><p>
 Set PROGND to start of program text area to effectively remove
 program from memory and execute the null program to clear all
 the other pointers.
@@ -248,7 +248,7 @@ Reset stack to top of memory, clear out temporary strings,
 disable CONTinue and execute program.
 </p></td></tr>
 
-<tr><td><p>PROMPT</p></td><td><p>E4FC</p></td><td colspan=2><p>
+<tr><td><p>PROMPT</p></td><td><p><a href="../../../24/32/text/#E4FC">E4FC</a></p></td><td colspan=2><p>
 Output &ldquo;?&nbsp;&rdquo; prompt for INPUT and go to get input line.
 </p></td></tr>
 
@@ -265,7 +265,7 @@ Mark the end of BUFFER with three nulls.
 Get an input line from monitor.
 </p></td></tr>
 
-<tr><td><p>TTYLIN</p></td><td><p>E607</p></td><td colspan=2><p>
+<tr><td><p>TTYLIN</p></td><td><p><a href="../../../24/34/text/#E607">E607</a></p></td><td colspan=2><p>
 Get an input line by character and save it in BUFFER.
 </p></td></tr>
 
@@ -279,7 +279,7 @@ Make sure the next byte in the code string is the same as the
 byte following the &ldquo;CALL CHKSYN&rdquo;. If not &ndash; output &ldquo;?SN Error&rdquo;.
 </p></td></tr>
 
-<tr><td><p>OUTC</p></td><td><p>E69B</p></td><td colspan=2><p>
+<tr><td><p>OUTC</p></td><td><p><a href="../../../25/32/text/#E69B">E69B</a></p></td><td colspan=2><p>
 Output character in the A register to the terminal and output a
 CRLF if the current terminal width is exceeded. Character is
 not output if CTLOFG is set.
@@ -289,7 +289,7 @@ not output if CTLOFG is set.
 Get an input character and flip CTLOFG if it is control &ldquo;O&rdquo;.
 </p></td></tr>
 
-<tr><td><p>LIST</p></td><td><p>E6DD</p></td><td colspan=2><p>
+<tr><td><p>LIST</p></td><td><p><a href="../../../25/32/text/#E6DD">E6DD</a></p></td><td colspan=2><p>
 LIST BASIC program from start (or specified line number) LINESN
 lines at a time. It does not take into account that graphics
 may appear in quotes, DATA or REM statements so the graphic
@@ -297,7 +297,7 @@ character is treated as a reserved word token and expanded to
 the complete word.
 </p></td></tr>
 
-<tr><td><p>FOR</p></td><td><p>E779</p></td><td colspan=2><p>
+<tr><td><p>FOR</p></td><td><p><a href="../../../25/33/text/#E779">E779</a></p></td><td colspan=2><p>
 Assign the initial value to the index variable and then set up
 a FOR block on the stack.
 </p></td></tr>
@@ -314,13 +314,13 @@ letter then call LET to try to assign a variable. Otherwise
 generate &ldquo;?SN Error&rdquo;.
 </p></td></tr>
 
-<tr><td><p>GETCHR</p></td><td><p>E836</p></td><td colspan=2><p>
+<tr><td><p>GETCHR</p></td><td><p><a href="../../../25/34/text/#E836">E836</a></p></td><td colspan=2><p>
 Get next character in code string and return flags:&ndash;<br>
 Z &ndash; End of statement (&ldquo;:&rdquo; or null)<br>
 C &ndash; Character is a digit otherwise NC.
 </p></td></tr>
 
-<tr><td><p>RESTOR</p></td><td><p>E846</p></td><td colspan=2><p>
+<tr><td><p>RESTOR</p></td><td><p><a href="../../../25/35/text/#E846">E846</a></p></td><td colspan=2><p>
 <span class="uppercase">Restore</span> routine. Set DATA pointer to start of program or
 to specified line if a line number is given.
 </p></td></tr>
@@ -331,7 +331,7 @@ If another break pressed then stop execution and output break
 message.
 </p></td></tr>
 
-<tr><td><p>STOP</p></td><td><p>E870</p></td><td colspan=2><p>
+<tr><td><p>STOP</p></td><td><p><a href="../../../25/35/text/#E870">E870</a></p></td><td colspan=2><p>
 STOP routine. Flag &ldquo;STOP&rdquo; an join END.
 </p></td></tr>
 <!--

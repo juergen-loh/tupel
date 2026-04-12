@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/nascom-newsletter/26/04/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>Nascom Newsletter - Volume 2 - Number 6 - January 1983</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -168,10 +168,10 @@ into the program, what a strange device!
 If, like me, you wish to assign any variable with one byte
 for INT vectors then the LET will let (ha) you &ndash; eventually.
 </p>
-<dl class="indent2" style="text-justify: none">
-<dt>LET</dt><dd>LOBYTE=INTLAB &amp; 0FFH &nbsp; &nbsp; &nbsp; ;easy</dd>
-<dt>LET</dt><dd>HIBYTE=((INTLAB &amp; 0FF00H)/256) &amp; 0FFH &nbsp; ;phew</dd>
-</dl>
+<table class="indent2" style="text-justify: none">
+<tr><td>LET</td><td style="padding-left: 2em">LOBYTE=INTLAB &amp; 0FFH &nbsp; &nbsp; &nbsp; ;easy</td></tr>
+<tr><td>LET</td><td style="padding-left: 2em">HIBYTE=((INTLAB &amp; 0FF00H)/256) &amp; 0FFH &nbsp; ;phew</td></tr>
+</table>
 <p>
 Points to remember are that division rounds off after and
 puts F&rsquo;s in the high byte hence the &amp; 0FFH

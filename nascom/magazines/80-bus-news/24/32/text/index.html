@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/24/32/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -169,7 +169,7 @@ E4B6 C39CE4             JP      SRCHLP          ; Keep looking
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    19</span>
 
-E4B9 C0         NEW:    RET     NZ              ; Return if any more on line
+<span id="E4B9">E4B9 C0         NEW:    RET     NZ              ; Return if any more on line</span>
 E4BA 2A5E10     CLRPTR: LD      HL,(BASTXT)     ; Point to start of program
 E4BD AF                 XOR     A               ; Set program area to empty
 E4BE 77                 LD      (HL),A          ; Save LSB = 00
@@ -206,7 +206,7 @@ E4F7 C5                 PUSH    BC              ; Put back return
 E4F8 2ACE10     DOAGN:  LD      HL,(BRKLIN)     ; Get address of code to RUN
 E4FB C9                 RET                     ; Return to execution driver
 
-E4FC 3E3F       PROMPT: LD      A,"?"           ; "?"
+<span id="E4FC">E4FC 3E3F       PROMPT: LD      A,"?"           ; "?"</span>
 E4FE CD9BE6             CALL    OUTC            ; Output character
 E501 3E20               LD      A," "           ; Space
 E503 CD9BE6             CALL    OUTC            ; Output character
