@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/24/25/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -152,7 +152,7 @@ E012 210010     CSTART: LD      HL,WRKSPC       ; Start of workspace RAM
 E015 F9                 LD      SP,HL           ; Set up a temporary stack
 E016 C3BBFE             JP      INITST          ; Go to initialise
 
-E019 11DFE2     INIT:   LD      DE,INITAB       ; Initialise workspace
+<span id="E019">E019 11DFE2     INIT:   LD      DE,INITAB       ; Initialise workspace</span>
 E01C 0663               LD      B,INITBE-INITAB+3; Bytes to copy
 E01E 210010             LD      HL,WRKSPC       ; Into workspace RAM
 E021 1A         COPY:   LD      A,(DE)          ; Get source
@@ -166,7 +166,7 @@ E02A CDDFE4             CALL    CLREG           ; Clear registers and stack
 E02D CD81EB             CALL    PRNTCR          ; Output CRLF
 E030 32AA10             LD      (BUFFER+72+1),A ; Mark end of buffer
 E033 32F910             LD      (PROGST),A      ; Initialise program area
-E036 2103E1     MSIZE:  LD      HL,MEMMSG       ; Point to message
+<span id="E036">E036 2103E1     MSIZE:  LD      HL,MEMMSG       ; Point to message</span>
 E039 CD10F2             CALL    PRS             ; Output "Memory size"
 E03C CDFCE4             CALL    PROMPT          ; Get input with "?"
 E03F CD36E8             CALL    GETCHR          ; Get next character
@@ -190,7 +190,7 @@ E058 C36DE0             JP      SETTOP          ; Top of RAM found
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    5</span>
 
-E05B CDA5E9     TSTMEM: CALL    ATOH            ; Get high memory into DE
+<span id="E05B">E05B CDA5E9     TSTMEM: CALL    ATOH            ; Get high memory into DE</span>
 E05E B7                 OR      A               ; Set flags on last byte
 E05F C2ADE3             JP      NZ,SNERR        ; ?SN Error if bad character
 E062 EB                 EX      DE,HL           ; Address into HL
@@ -202,7 +202,7 @@ E068 BE                 CP      (HL)            ; RAM there if same
 E069 70                 LD      (HL),B          ; Restore old contents
 E06A C236E0             JP      NZ,MSIZE        ; Ask again if no RAM
 
-E06D 2B         SETTOP: DEC     HL              ; Back one byte
+<span id="E06D">E06D 2B         SETTOP: DEC     HL              ; Back one byte</span>
 E06E 115C11             LD      DE,STLOOK-1     ; See if enough RAM
 E071 CD8AE6             CALL    CPDEHL          ; Compare DE with HL
 E074 DA36E0             JP      C,MSIZE         ; Ask again if not enough RAM
@@ -238,7 +238,7 @@ E0A5 CDADF9             CALL    PRNTHL          ; Output amount of free memory
 E0A8 21B7E0             LD      HL,BFREE        ; " Bytes free" message
 E0AB CD10F2             CALL    PRS             ; Output string
 
-E0AE 316610     WARMST: LD      SP,STACK        ; Temporary stack
+<span id="E0AE">E0AE 316610     WARMST: LD      SP,STACK        ; Temporary stack</span>
 E0B1 CDDFE4     BRKRET: CALL    CLREG           ; Clear registers and stack
 E0B4 C3F8E3             JP      PRNTOK          ; Go to get command line
 </pre>

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -143,7 +143,7 @@
 <tr><td><p>DIM</p></td><td><p><a href="../../../26/37/text/#EF28">EF28</a></p></td><td colspan=2><p>
 DIM routine. Flag &ldquo;create&rdquo; variable and join common.
 </p></td></tr>
-<tr><td><p>GETVAR</p></td><td><p>EF2D</p></td><td colspan=2><p>
+<tr><td><p>GETVAR</p></td><td><p><a href="../../../26/37/text/#EF2D">EF2D</a></p></td><td colspan=2><p>
 Look for specified variable. Use FORFLG to:&ndash;<br>
 1. Not allow subscripted FOR loops.<br>
 2. Look for an FN function definition.<br>
@@ -159,52 +159,52 @@ of unused bytes in the string area.
 <tr><td><p>POS</p></td><td><p><a href="../../../31/25/text/#F0FE">F0FE</a></p></td><td colspan=2><p>
 POS(X) routine. Return the current cursor position (CURPOS).
 </p></td></tr>
-<tr><td><p>DEF</p></td><td><p>F106</p></td><td colspan=2><p>
+<tr><td><p>DEF</p></td><td><p><a href="../../../31/25/text/#F106">F106</a></p></td><td colspan=2><p>
 DEF FN routine. Define a user defined function.<br>
 This is not legal in direct mode.
 </p></td></tr>
-<tr><td><p>DQFN</p></td><td><p>F133</p></td><td colspan=2><p>
+<tr><td><p>DQFN</p></td><td><p><a href="../../../31/25/text/#F133">F133</a></p></td><td colspan=2><p>
 Call an FN function. Save any previous argument name and value
 on the stack, Evaluate the function an then restore the
 previous argument name and value.
 </p></td></tr>
-<tr><td><p>TDTEST</p></td><td><p>F17B</p></td><td colspan=2><p>
+<tr><td><p>TDTEST</p></td><td><p><a href="../../../31/25/text/#F17B">F17B</a></p></td><td colspan=2><p>
 If in direct mode then output &ldquo;?ID Error&rdquo; else return.
 </p></td></tr>
-<tr><td><p>CHEKFN</p></td><td><p>F189</p></td><td colspan=2><p>
+<tr><td><p>CHEKFN</p></td><td><p><a href="../../../31/26/text/#F189">F189</a></p></td><td colspan=2><p>
 Make sure &ldquo;FN&rdquo; follows and flag find FN function definition.
 </p></td></tr>
 <tr><td><p>STR</p></td><td><p><a href="../../../31/26/text/#F19A">F19A</a></p></td><td colspan=2><p>
 STR$ routine. Convert current numeric value to ASCII and create
 a temporary string for it.
 </p></td></tr>
-<tr><td><p>SAVSTR</p></td><td><p>F1AA</p></td><td colspan=2><p>
+<tr><td><p>SAVSTR</p></td><td><p><a href="../../../31/26/text/#F1AA">F1AA</a></p></td><td colspan=2><p>
 Save current string in string area.
 </p></td></tr>
-<tr><td><p>MKTMST</p></td><td><p>F1BF</p></td><td colspan=2><p>
+<tr><td><p>MKTMST</p></td><td><p><a href="../../../31/26/text/#F1BF">F1BF</a></p></td><td colspan=2><p>
 Make a temporary string.
 </p></td></tr>
-<tr><td><p>PRNUMS</p></td><td><p>F20F</p></td><td colspan=2><p>
+<tr><td><p>PRNUMS</p></td><td><p><a href="../../../31/26/text/#F20F">F20F</a></p></td><td colspan=2><p>
 Print number string at HL.
 </p></td></tr>
-<tr><td><p>PRS</p></td><td><p>F210</p></td><td colspan=2><p>
+<tr><td><p>PRS</p></td><td><p><a href="../../../31/26/text/#F210">F210</a></p></td><td colspan=2><p>
 Print string at HL.
 </p></td></tr>
-<tr><td><p>TESTR</p></td><td><p>F229</p></td><td colspan=2><p>
+<tr><td><p>TESTR</p></td><td><p><a href="../../../31/27/text/#F229">F229</a></p></td><td colspan=2><p>
 Test if enough string space. If insufficient then GRBAGE
 collect and test again. If still insufficient space then
 output &ldquo;?0S Error&rdquo;.
 </p></td></tr>
-<tr><td><p>GRBAGE</p></td><td><p>F253</p></td><td colspan=2><p>
+<tr><td><p>GRBAGE</p></td><td><p><a href="../../../31/27/text/#F253">F253</a></p></td><td colspan=2><p>
 Do a &ldquo;Garbage collection&rdquo; on string area.<br>
 Scan through all string variables and shift all active strings
 to the top of the string area thus leaving the free space in
 one block.
 </p></td></tr>
-<tr><td><p>CONCAT</p></td><td><p>F306</p></td><td colspan=2><p>
+<tr><td><p>CONCAT</p></td><td><p><a href="../../../31/28/text/#F306">F306</a></p></td><td colspan=2><p>
 Concatenate two strings (Eg A$+B$).
 </p></td></tr>
-<tr><td><p>GETSTR</p></td><td><p>F350</p></td><td colspan=2><p>
+<tr><td><p>GETSTR</p></td><td><p><a href="../../../31/28/text/#F350">F350</a></p></td><td colspan=2><p>
 Get a string routine.
 </p></td></tr>
 <tr><td><p>LEN</p></td><td><p><a href="../../../31/29/text/#F382">F382</a></p></td><td colspan=2><p>
@@ -243,7 +243,7 @@ VAL(X$) routine.
 INP(X) routine. Set up port number in work space and call
 INPSUB skeleton. Return value from port.
 </p></td></tr>
-<tr><td><p>POUT</p></td><td><p>F44D</p></td><td colspan=2><p>
+<tr><td><p>POUT</p></td><td><p><a href="../../../31/30/text/#F44D">F44D</a></p></td><td colspan=2><p>
 OUT P,N routine. Set up port number in work space and call
 OUTSUB skeleton to output value to the port.
 </p></td></tr>
@@ -253,7 +253,7 @@ INPSUB to get byte, XOR value with X if X is supplied and then
 AND the value with A. If this value is zero then go back to
 WAITLP until value is non-zero.
 </p></td></tr>
-<tr><td><p>FNDNUM</p></td><td><p>F481</p></td><td colspan=2><p>
+<tr><td><p>FNDNUM</p></td><td><p><a href="../../../31/30/text/#F481">F481</a></p></td><td colspan=2><p>
 Get next number from code string.
 </p></td></tr>
 <tr><td><p>CSAVE</p></td><td><p><a href="../../../31/31/text/#F4C3">F4C3</a></p></td><td colspan=2><p>
@@ -272,37 +272,37 @@ PEEK(X) routine.
 <tr><td><p>POKE</p></td><td><p><a href="../../../31/32/text/#F5AA">F5AA</a></p></td><td colspan=2><p>
 POKE A,V routine.
 </p></td></tr>
-<tr><td><p>ROUND</p></td><td><p>F5BB</p></td><td colspan=2><p>
+<tr><td><p>ROUND</p></td><td><p><a href="../../../31/32/text/#F5BB">F5BB</a></p></td><td colspan=2><p>
 Round number up by adding 0.5 to it.
 </p></td></tr>
-<tr><td><p>ADDPHL</p></td><td><p>F5BE</p></td><td colspan=2><p>
+<tr><td><p>ADDPHL</p></td><td><p><a href="../../../31/32/text/#F5BE">F5BE</a></p></td><td colspan=2><p>
 Add floating point number at HL to the current value in FPREG.
 </p></td></tr>
-<tr><td><p>SUBPHL</p></td><td><p>F5C4</p></td><td colspan=2><p>
+<tr><td><p>SUBPHL</p></td><td><p><a href="../../../31/32/text/#F5C4">F5C4</a></p></td><td colspan=2><p>
 Subtract the current value from the value at HL and leave the
 result in FPREG.
 </p></td></tr>
-<tr><td><p>PSUB</p></td><td><p>F5C8</p></td><td colspan=2><p>
+<tr><td><p>PSUB</p></td><td><p><a href="../../../31/32/text/#F5C8">F5C8</a></p></td><td colspan=2><p>
 Subtract FPREG from the value on the stack and leave the result
 in PPREG.
 </p></td></tr>
-<tr><td><p>SUBCDE</p></td><td><p>F5CA</p></td><td colspan=2><p>
+<tr><td><p>SUBCDE</p></td><td><p><a href="../../../31/32/text/#F5CA">F5CA</a></p></td><td colspan=2><p>
 Subtract FPREG from the value in BCDE and leave the result in
 FPREG.
 </p></td></tr>
-<tr><td><p>FPADD</p></td><td><p>F5CD</p></td><td colspan=2><p>
+<tr><td><p>FPADD</p></td><td><p><a href="../../../31/32/text/#F5CD">F5CD</a></p></td><td colspan=2><p>
 Add the value in BCDE to the value in FPREG.
 </p></td></tr>
-<tr><td><p>MINCDE</p></td><td><p>F60D</p></td><td colspan=2><p>
+<tr><td><p>MINCDE</p></td><td><p><a href="../../../31/32/text/#F60D">F60D</a></p></td><td colspan=2><p>
 Subtract value in FPREG from value in BCDE.
 </p></td></tr>
-<tr><td><p>NORMAL</p></td><td><p>F638</p></td><td colspan=2><p>
+<tr><td><p>NORMAL</p></td><td><p><a href="../../../31/33/text/#F638">F638</a></p></td><td colspan=2><p>
 Normalise value in BCDE.
 </p></td></tr>
-<tr><td><p>PLUCDE</p></td><td><p>F672</p></td><td colspan=2><p>
+<tr><td><p>PLUCDE</p></td><td><p><a href="../../../31/33/text/#F672">F672</a></p></td><td colspan=2><p>
 Add value in FPREG to value in BCDE.
 </p></td></tr>
-<tr><td><p>COMPL</p></td><td><p>F67E</p></td><td colspan=2><p>
+<tr><td><p>COMPL</p></td><td><p><a href="../../../31/33/text/#F67E">F67E</a></p></td><td colspan=2><p>
 Complement value in BCDE.
 </p></td></tr>
 

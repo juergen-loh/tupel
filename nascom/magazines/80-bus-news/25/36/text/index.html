@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/25/36/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -196,18 +196,18 @@ E974 C36BF5             JP      OUTBAD          ; Different - Output "Bad"
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    34</span>
 
-E977 7E         CHKLTR: LD      A,(HL)          ; Get byte
+<span id="E977">E977 7E         CHKLTR: LD      A,(HL)          ; Get byte</span>
 E978 FE41               CP      "A"             ; &lt; "A" ?
 E97A D8                 RET     C               ; Carry set if not letter
 E97B FE5B               CP      "Z"+1           ; &gt; "Z" ?
 E97D 3F                 CCF
 E97E C9                 RET                     ; Carry set if not letter
 
-E97F CD36E8     FPSINT: CALL    GETCHR          ; Get next character
-E982 CD41ED     POSINT: CALL    GETNUM          ; Get integer 0 to 32767
-E985 CD13F8     DEPINT: CALL    TSTSGN          ; Test sign of FPREG
+<span id="E97F">E97F CD36E8     FPSINT: CALL    GETCHR          ; Get next character</span>
+<span id="E982">E982 CD41ED     POSINT: CALL    GETNUM          ; Get integer 0 to 32767</span>
+<span id="E985">E985 CD13F8     DEPINT: CALL    TSTSGN          ; Test sign of FPREG</span>
 E988 FAA0E9             JP      M,FCERR         ; Negative - ?FC Error
-E98B 3AE710     DEINT:  LD      A,(FPEXP)       ; Get integer value to DE
+<span id="E98B">E98B 3AE710     DEINT:  LD      A,(FPEXP)       ; Get integer value to DE</span>
 E98E FE90               CP      80H+16          ; Exponent in range (16 bits)?
 E990 DABBF8             JP      C,FPINT         ; Yes - convert it
 E993 018090             LD      BC,9080H        ; BCDE = -32768
@@ -220,7 +220,7 @@ E99F C8                 RET     Z               ; Return if in range
 E9A0 1E08       FCERR:  LD      E,FC            ; ?FC Error
 E9A2 C3C1E3             JP      ERROR           ; Output error-
 
-E9A5 2B         ATOH:   DEC     HL              ; ASCII number to DE binary
+<span id="E9A5">E9A5 2B         ATOH:   DEC     HL              ; ASCII number to DE binary</span>
 E9A6 110000     GETLN:  LD      DE,0            ; Get number to DE
 E9A9 CD36E8     GTLNLP: CALL    GETCHR          ; Get next character
 E9AC D0                 RET     NC              ; Exit if not a digit

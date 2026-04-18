@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/31/33/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -157,7 +157,7 @@ F633 AF         RESZER: XOR     A               ; Result is zero
 F634 32E710     SAVEXP: LD      (FPEXP),A       ; Save result as zero
 F637 C9                 RET
 
-F638 05         NORMAL: DEC     B               ; Count bits
+<span id="F638">F638 05         NORMAL: DEC     B               ; Count bits</span>
 F639 29                 ADD     HL,HL           ; Shift HL left
 F63A 7A                 LD      A,D             ; Get NMSB
 F63B 17                 RLA                     ; Shift left with last bit
@@ -203,7 +203,7 @@ F66D 34                 INC     (HL)            ; Increment exponent
 F66E C0                 RET     NZ              ; Return if ok
 F66F C3BCE3             JP      OVERR           ; Overflow error
 
-F672 7E         PLUCDE: LD      A,(HL)          ; Get LSB of FPREG
+<span id="F672">F672 7E         PLUCDE: LD      A,(HL)          ; Get LSB of FPREG</span>
 F673 83                 ADD     A,E             ; Add LSB of BCDE
 F674 5F                 LD      E,A             ; Save LSB of BCDE
 F675 23                 INC     HL
@@ -216,7 +216,7 @@ F67B 89                 ADC     A,C             ; Add MSB of BCDE
 F67C 4F                 LD      C,A             ; Save MSB of BCDE
 F67D C9                 RET
 
-F67E 21E810     COMPL:  LD      HL,SGNRES       ; Sign of result
+<span id="F67E">F67E 21E810     COMPL:  LD      HL,SGNRES       ; Sign of result</span>
 F681 7E                 LD      A,(HL)          ; Get sign of result
 F682 2F                 CPL                     ; Negate it
 F683 77                 LD      (HL),A          ; Put it back

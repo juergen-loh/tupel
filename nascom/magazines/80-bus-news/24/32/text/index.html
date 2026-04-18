@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -138,7 +138,7 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    18</span>
 
-E499 2A5E10     SRCHLN: LD      HL,(BASTXT)     ; Start of program text
+<span id="E499">E499 2A5E10     SRCHLN: LD      HL,(BASTXT)     ; Start of program text</span>
 E49C 44         SRCHLP: LD      B,H             ; BC = Address to look at
 E49D 4D                 LD      C,L
 E49E 7E                 LD      A,(HL)          ; Get address of next line
@@ -178,10 +178,10 @@ E4C0 77                 LD      (HL),A          ; Save MSB = 00
 E4C1 23                 INC     HL
 E4C2 22D610             LD      (PROGND),HL     ; Set program end
 
-E4C5 2A5E10     RUNFST: LD      HL,(BASTXT)     ; Clear all variables
+<span id="E4C5">E4C5 2A5E10     RUNFST: LD      HL,(BASTXT)     ; Clear all variables</span>
 E4C8 2B                 DEC     HL
 
-E4C9 22CE10     INTVAR: LD      (BRKLIN),HL     ; Initialise RUN variables
+<span id="E4C9">E4C9 22CE10     INTVAR: LD      (BRKLIN),HL     ; Initialise RUN variables</span>
 E4CC 2AAF10             LD      HL,(LSTRAM)     ; Get end of RAM
 E4CF 22C310             LD      (STRBOT),HL     ; Clear string space
 E4D2 AF                 XOR     A
@@ -190,7 +190,7 @@ E4D6 2AD610             LD      HL,(PROGND)     ; Get end of program
 E4D9 22D810             LD      (VAREND),HL     ; Clear variables
 E4DC 22DA10             LD      (ARREND),HL     ; Clear arrays
 
-E4DF C1         CLREG:  POP     BC              ; Save return address
+<span id="E4DF">E4DF C1         CLREG:  POP     BC              ; Save return address</span>
 E4E0 2A5A10             LD      HL,(STRSPC)     ; Get end of working RAN
 E4E3 F9                 LD      SP,HL           ; Set stack
 E4E4 21B310             LD      HL,TMSTPL       ; Temporary string pool

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -168,7 +168,7 @@ F101 47         PASSA:  LD      B,A             ; Put A into AB
 F102 AF                 XOR     A               ; Zero A
 F103 C3F2F0             JP      ABPASS          ; Return integer AB
 
-F106 CD89F1     DEF:    CALL    CHEKFN          ; Get "FN" and name
+<span id="F106">F106 CD89F1     DEF:    CALL    CHEKFN          ; Get "FN" and name</span>
 F109 CD7BF1             CALL    IDTEST          ; Test for illegal direct
 F10C 0170EA             LD      BC,DATA         ; To get next statement
 F10F C5                 PUSH    BC              ; Save address for RETurn
@@ -200,7 +200,7 @@ F130 C3C8F1             JP      SVSTAD          ; Save address and do function
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    58</span>
 
-F133 CD89F1     DOFN:   CALL    CHEKFN          ; Make sure FN follows
+<span id="F133">F133 CD89F1     DOFN:   CALL    CHEKFN          ; Make sure FN follows</span>
 F136 D5                 PUSH    DE              ; Save function pointer address
 F137 CD09EE             CALL    EVLPAR          ; Evaluate expression in "()"
 F13A CD44ED             CALL    TSTNUM          ; Make sure numeric result
@@ -241,7 +241,7 @@ F176 22DE10             LD      (FNRGNM),HL     ; Restore it
 F179 E1                 POP     HL              ; Restore code string address
 F17A C9                 RET
 
-F17B E5         IDTEST: PUSH    HL              ; Save code string address
+<span id="F17B">F17B E5         IDTEST: PUSH    HL              ; Save code string address</span>
 F17C 2A5C10             LD      HL,(LINEAT)     ; Get current line number
 F17F 23                 INC     HL              ; -1 means direct statement
 F180 7C                 LD      A,H

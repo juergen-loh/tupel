@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/32/23/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -139,13 +139,13 @@
 <span class="uppercase">Nascom</span><br>
 ROM<br>
 BASIC<br>
-Dis&ndash;Assembled
+Dis&mdash;Assembled
 </h1>
 <h2>
 PART 6
 </h2>
 <h3 class="author uppercase">
-By Carl Lloyd&ndash;Parker
+By Carl Lloyd&mdash;Parker
 </h3>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
@@ -156,9 +156,9 @@ F75E 012084             LD      BC,8420H        ; BCDE = 10.
 F761 110000             LD      DE,0000H
 F764 CD54F8             CALL    FPBCDE          ; Move 10 to FPREG
 
-F767 C1         DIV:    POP     BC              ; Get number from stack
+<span id="F767">F767 C1         DIV:    POP     BC              ; Get number from stack</span>
 F768 D1                 POP     DE
-F769 CD13F8     DVBCDE: CALL    TSTSGN          ; Test sign of FPREG
+<span id="F769">F769 CD13F8     DVBCDE: CALL    TSTSGN          ; Test sign of FPREG</span>
 F76C CAB0E3             JP      Z,DZERR         ; Error if division by zero
 F76F 2EFF               LD      L,-1            ; Flag subtract exponents
 F771 CDD1F7             CALL    ADDEXP          ; Subtract exponents

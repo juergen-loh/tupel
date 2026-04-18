@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -140,73 +140,73 @@
 
                 ; BASIC WORK SPACE LOCATIONS
 
-1000            WRKSPC  EQU     1000H           ; BASIC Work space
+<span id="1000">1000            WRKSPC  EQU     1000H           ; BASIC Work space</span>
 <span id="1003">1003            USR     EQU     1003H           ; "USR (x)" jump</span>
-1006            OUTSUB  EQU     1006H           ; "OUT p,n"
+<span id="1006">1006            OUTSUB  EQU     1006H           ; "OUT p,n"</span>
 1007            OTPORT  EQU     1007H           ; Port (p)
-1009            DIVSUP  EQU     1009H           ; Division support routine
+<span id="1009">1009            DIVSUP  EQU     1009H           ; Division support routine</span>
 100A            DIV1    EQU     100AH           ; &lt;- Values
 100E            DIV2    EQU     100EH           ; &lt;-   to
 1012            DIV3    EQU     1012H           ; &lt;-   be
 1015            DIV4    EQU     1015H           ; &lt;-inserted
-1017            SEED    EQU     1017H           ; Random number seed
-103A            LSTRND  EQU     103AH           ; Last random number
-103E            INPSUB  EQU     103EH           ; #INP (x)" Routine
+<span id="1017">1017            SEED    EQU     1017H           ; Random number seed</span>
+<span id="103A">103A            LSTRND  EQU     103AH           ; Last random number</span>
+<span id="103E">103E            INPSUB  EQU     103EH           ; #INP (x)" Routine</span>
 103F            INPORT  EQU     103FH           ; PORT (x)
 <span id="1041">1041            NULLS   EQU     1041H           ; Number of nulls</span>
 <span id="1042">1042            LWIDTH  EQU     1042H           ; Terminal width</span>
-1043            COMMAN  EQU     1043H           ; Width for commas
-1044            NULFLG  EQU     1044H           ; Null after input byte flag
+<span id="1043">1043            COMMAN  EQU     1043H           ; Width for commas</span>
+<span id="1044">1044            NULFLG  EQU     1044H           ; Null after input byte flag</span>
 <span id="1045">1045            CTLOFG  EQU     1045H           ; Control "O" flag</span>
-1046            LINESC  EQU     1046H           ; Lines counter
+<span id="1046">1046            LINESC  EQU     1046H           ; Lines counter</span>
 <span id="1048">1048            LINESN  EQU     1048H           ; Lines number</span>
 <span id="104A">104A            CHKSUM  EQU     104AH           ; Array load/save check sum</span>
-104C            NMIFLG  EQU     104CH           ; Flag for NMI break routine
-104D            BRKFLG  EQU     104DH           ; Break flag
-104E            RINPUT  EQU     104EH           ; Input reflection
+<span id="104C">104C            NMIFLG  EQU     104CH           ; Flag for NMI break routine</span>
+<span id="104D">104D            BRKFLG  EQU     104DH           ; Break flag</span>
+<span id="104E">104E            RINPUT  EQU     104EH           ; Input reflection</span>
 <span id="1051">1051            POINT   EQU     1051H           ; "POINT" reflection (unused)</span>
-1054            PSET    EQU     1054H           ; "SET"   reflection
-1057            RESET   EQU     1057H           ; "RESET" reflection
-105A            STRSPC  EQU     105AH           ; Bottom of string space
-105C            LINEAT  EQU     105CH           ; Current line number
-105E            BASTXT  EQU     105EH           ; Pointer to start of program
-1061            BUFFER  EQU     1061H           ; Input buffer
+<span id="1054">1054            PSET    EQU     1054H           ; "SET"   reflection</span>
+<span id="1057">1057            RESET   EQU     1057H           ; "RESET" reflection</span>
+<span id="105A">105A            STRSPC  EQU     105AH           ; Bottom of string space</span>
+<span id="105C">105C            LINEAT  EQU     105CH           ; Current line number</span>
+<span id="105E">105E            BASTXT  EQU     105EH           ; Pointer to start of program</span>
+<span id="1061">1061            BUFFER  EQU     1061H           ; Input buffer</span>
 1066            STACK   EQU     1066H           ; Initial stack
-10AB            CURPOS  EQU     10ABH           ; Character position on line
-10AC            LCRFLG  EQU     10ACH           ; Locate/Create flag
-10AD            TYPE    EQU     10ADH           ; Data type flag
-10AE            DATFLG  EQU     10AEH           ; Literal statement flag
-10AF            LSTRAM  EQU     10AFH           ; Last available RAM
-10B1            TMSTPT  EQU     10B1H           ; Temporary string pointer
-10B3            TMSTPL  EQU     10B3H           ; Temporary string pool
-10BF            TMPSTR  EQU     10BFH           ; Temporary string
-10C3            STRBOT  EQU     10C3H           ; Bottom of string space
-10C5            CUROPR  EQU     10C5H           ; Current operator in EVAL
+<span id="10AB">10AB            CURPOS  EQU     10ABH           ; Character position on line</span>
+<span id="10AC">10AC            LCRFLG  EQU     10ACH           ; Locate/Create flag</span>
+<span id="10AD">10AD            TYPE    EQU     10ADH           ; Data type flag</span>
+<span id="10AE">10AE            DATFLG  EQU     10AEH           ; Literal statement flag</span>
+<span id="10AF">10AF            LSTRAM  EQU     10AFH           ; Last available RAM</span>
+<span id="10B1">10B1            TMSTPT  EQU     10B1H           ; Temporary string pointer</span>
+<span id="10B3">10B3            TMSTPL  EQU     10B3H           ; Temporary string pool</span>
+<span id="10BF">10BF            TMPSTR  EQU     10BFH           ; Temporary string</span>
+<span id="10C3">10C3            STRBOT  EQU     10C3H           ; Bottom of string space</span>
+<span id="10C5">10C5            CUROPR  EQU     10C5H           ; Current operator in EVAL</span>
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    3</span>
 
-10C7            LOOPST  EQU     10C7H           ; First statement of loop
-10C9            DATLIN  EQU     10C9H           ; Line of current DATA item
-10CB            FORFLG  EQU     10CBH           ; "FOR" loop flag
-10CC            LSTBIN  EQU     10CCH           ; Last byte entered
-10CD            READFG  EQU     10CDH           ; Read/Input flag
-10CE            BRKLIN  EQU     10CEH           ; Line of break
-10D0            NXTOPR  EQU     10D0H           ; Next operator in EVAL
-10D2            ERRLIN  EQU     10D2H           ; Line of error
-10D4            CONTAD  EQU     10D4H           ; Where to CONTinue
+<span id="10C7">10C7            LOOPST  EQU     10C7H           ; First statement of loop</span>
+<span id="10C9">10C9            DATLIN  EQU     10C9H           ; Line of current DATA item</span>
+<span id="10CB">10CB            FORFLG  EQU     10CBH           ; "FOR" loop flag</span>
+<span id="10CC">10CC            LSTBIN  EQU     10CCH           ; Last byte entered</span>
+<span id="10CD">10CD            READFG  EQU     10CDH           ; Read/Input flag</span>
+<span id="10CE">10CE            BRKLIN  EQU     10CEH           ; Line of break</span>
+<span id="10D0">10D0            NXTOPR  EQU     10D0H           ; Next operator in EVAL</span>
+<span id="10D2">10D2            ERRLIN  EQU     10D2H           ; Line of error</span>
+<span id="10D4">10D4            CONTAD  EQU     10D4H           ; Where to CONTinue</span>
 <span id="10D6">10D6            PROGND  EQU     10D6H           ; End of program</span>
-10D8            VAREND  EQU     10D8H           ; End of variables
+<span id="10D8">10D8            VAREND  EQU     10D8H           ; End of variables</span>
 <span id="10DA">10DA            ARREND  EQU     10DAH           ; End of arrays</span>
-10DC            NXTDAT  EQU     10DCH           ; Next data item
-10DE            FNRGNM  EQU     10DEH           ; Name of FN argument
-10E0            FNARG   EQU     10E0H           ; FN argument value
-10E4            FPREG   EQU     10E4H           ; Floating point register
+<span id="10DC">10DC            NXTDAT  EQU     10DCH           ; Next data item</span>
+<span id="10DE">10DE            FNRGNM  EQU     10DEH           ; Name of FN argument</span>
+<span id="10E0">10E0            FNARG   EQU     10E0H           ; FN argument value</span>
+<span id="10E4">10E4            FPREG   EQU     10E4H           ; Floating point register</span>
 10E7            FPEXP   EQU     FPREG+3         ; Floating point exponent
-10E8            SGNRES  EQU     10E8H           ; Sign of result
-10E9            PBUFF   EQU     10E9H           ; Number print buffer
-10F6            MULVAL  EQU     10F6H           ; Multiplier
+<span id="10E8">10E8            SGNRES  EQU     10E8H           ; Sign of result</span>
+<span id="10E9">10E9            PBUFF   EQU     10E9H           ; Number print buffer</span>
+<span id="10F6">10F6            MULVAL  EQU     10F6H           ; Multiplier</span>
 <span id="10F9">10F9            PROGST  EQU     10F9H           ; Start of program text area</span>
 115D            STLOOK  EQU     115DH           ; Start of memory test
 

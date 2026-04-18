@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/31/27/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,7 +138,7 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    61</span>
 
-F229 B7         TESTR:  OR      A               ; Test if enough room
+<span id="F229">F229 B7         TESTR:  OR      A               ; Test if enough room</span>
 F22A 0E                 DEFB    (LD C,n)        ; No garbage collection done
 F22B F1         GRBDON: POP     AF              ; Garbage collection done
 F22C F5                 PUSH    AF              ; Save status
@@ -165,7 +165,7 @@ F24D BF                 CP      A               ; Flag garbage collect done
 F24E F5                 PUSH    AF              ; Save status
 F24F 012BF2             LD      BC,GRBDON       ; Garbage collection done
 F252 C5                 PUSH    BC              ; Save for RETurn
-F253 2AAF10     GARBGE: LD      HL,(LSTRAM)     ; Get end of RAM pointer
+<span id="F253">F253 2AAF10     GARBGE: LD      HL,(LSTRAM)     ; Get end of RAM pointer</span>
 F256 22C310     GARBLP: LD      (STRBOT),HL     ; Reset string pointer
 F259 210000             LD      HL,0
 F25C E5                 PUSH    HL              ; Flag no string found

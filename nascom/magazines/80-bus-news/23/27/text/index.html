@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -139,13 +139,13 @@
 <span class="uppercase">Nascom</span><br>
 ROM<br>
 BASIC<br>
-Dis&ndash;Assembled
+Dis&mdash;Assembled
 </h1>
 <h2>
 PART 1
 </h2>
 <h3 class="author uppercase">
-By Carl Lloyd&ndash;Parker
+By Carl Lloyd&mdash;Parker
 </h3>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <table>
@@ -167,25 +167,25 @@ By Carl Lloyd&ndash;Parker
 <u>What is it used for</u>
 </h4></td></tr>
 
-<tr><td><p>WRKSPC</p></td><td><p>1000</p></td><td colspan=2><p>
+<tr><td><p>WRKSPC</p></td><td><p><a href="../../../24/24/text/#1000">1000</a></p></td><td colspan=2><p>
 Jump to warm start BASIC
 </p></td></tr>
 <tr><td><p>USR</p></td><td><p><a href="../../../24/24/text/#1003">1003</a></p></td><td colspan=2><p>
 Jump for user defined function &ldquo;USR(X)&rdquo;.<br>
 This is initialised to give &ldquo;?FC Error&rdquo;.
 </p></td></tr>
-<tr><td><p>OUTSUB</p></td><td><p>1006</p></td><td colspan=2><p>
+<tr><td><p>OUTSUB</p></td><td><p><a href="../../../24/24/text/#1006">1006</a></p></td><td colspan=2><p>
 Skeleton for output to port &ldquo;n&rdquo; as the <!-- External Link --><a href="https://en.wikipedia.org/wiki/Intel_8080" title="External Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->
  does not have the
 &ldquo;OUT (C),r&rdquo; instruction. The port &ldquo;n&rdquo; is loaded into 1007.
 </p></td></tr>
-<tr><td><p>DIVSUP</p></td><td><p>1009</p></td><td colspan=2><p>
+<tr><td><p>DIVSUP</p></td><td><p><a href="../../../24/24/text/#1009">1009</a></p></td><td colspan=2><p>
 Skeleton subtraction routine for division. The dividend,
 divisor and quotient cannot all be held in the registers
 therefore the divisor is loaded into this routine so that
 there are sufficient registers for the dividend and quotient.
 </p></td></tr>
-<tr><td><p>SEED</p></td><td><p>1017</p></td><td colspan=2><p>
+<tr><td><p>SEED</p></td><td><p><a href="../../../24/24/text/#1017">1017</a></p></td><td colspan=2><p>
 3 byte seed for random number generator.
 </p></td></tr>
 <tr><td><p></p></td><td><p>101A</p></td><td colspan=2><p>
@@ -193,10 +193,10 @@ Table of floating point values used by RND.<br>
 The seed is used to find which value of the eight to multiply
 the last random number by.
 </p></td></tr>
-<tr><td><p>LSTRND</p></td><td><p>103A</p></td><td colspan=2><p>
+<tr><td><p>LSTRND</p></td><td><p><a href="../../../24/24/text/#103A">103A</a></p></td><td colspan=2><p>
 Where the last random number &ldquo;RND(0)&rdquo; is kept.
 </p></td></tr>
-<tr><td><p>INPSUB</p></td><td><p>103E</p></td><td colspan=2><p>
+<tr><td><p>INPSUB</p></td><td><p><a href="../../../24/24/text/#103E">103E</a></p></td><td colspan=2><p>
 Skeleton for input from port &ldquo;n&rdquo; as the 8080 does not have the
 &ldquo;IN r,(C)&rdquo; instruction. The port &ldquo;n&rdquo; is loaded into 103F.
 </p></td></tr>
@@ -207,7 +207,7 @@ set by the &ldquo;NULLS n&rdquo; command.
 <tr><td><p>LWIDTH</p></td><td><p><a href="../../../24/24/text/#1042">1042</a></p></td><td colspan=2><p>
 Width of terminal. This is set by &ldquo;WIDTH n&rdquo; command.
 </p></td></tr>
-<tr><td><p>COMMAN</p></td><td><p>1043</p></td><td colspan=2><p>
+<tr><td><p>COMMAN</p></td><td><p><a href="../../../24/24/text/#1043">1043</a></p></td><td colspan=2><p>
 Width of terminal for printing with commas.<br>
 Why this has to be a seperate byte I don&rsquo;t know, however, the
 &ldquo;WIDTH n&rdquo; command sets LWIDTH but does NOT set this value,
@@ -217,7 +217,7 @@ and trying to have more than three columns using commas in
 more than three columns! This can be overcome in a simple way:
 &ldquo;POKE 4163,252&rdquo; &ndash; This makes &ldquo;WIDTH&rdquo; work correctly.
 </p></td></tr>
-<tr><td><p>NULFLG</p></td><td><p>1044</p></td><td colspan=2><p>
+<tr><td><p>NULFLG</p></td><td><p><a href="../../../24/24/text/#1044">1044</a></p></td><td colspan=2><p>
 Nulls after input byte flag.<br>
 This is a flag that is examined and then zeroed by the teletype
 line input routine (TTYLIN). If the character input routine

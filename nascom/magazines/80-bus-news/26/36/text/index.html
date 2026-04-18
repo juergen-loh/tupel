@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/26/36/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,7 +138,7 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    48</span>
 
-EE33 0600       FNOFST: LD      B,0             ; Get address of function
+<span id="EE33">EE33 0600       FNOFST: LD      B,0             ; Get address of function</span>
 EE35 07                 RLCA                    ; Double function offset
 EE36 4F                 LD      C,A             ; BC = Offset in function table
 EE37 C5                 PUSH    BC              ; Save adjusted token value
@@ -174,7 +174,7 @@ EE6D 66                 LD      H,(HL)          ; Get MSB of address
 EE6E 69                 LD      L,C             ; Address to HL
 EE6F E9                 JP      (HL)            ; Jump to function
 
-EE70 15         SGNEXP: DEC     D               ; Dee to flag negative exponent
+<span id="EE70">EE70 15         SGNEXP: DEC     D               ; Dee to flag negative exponent</span>
 EE71 FEAD               CP      ZMINUS          ; "-" token&nbsp;?
 EE73 C8                 RET     Z               ; Yes - Return
 EE74 FE2D               CP      "-"             ; "-" ASCII&nbsp;?

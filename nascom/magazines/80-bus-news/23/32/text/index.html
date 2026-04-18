@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -148,19 +148,19 @@
 <u>What the routine does</u>
 </h4></td></tr>
 
-<tr><td><p>INIT</p></td><td><p>E019</p></td><td colspan=2><p>
+<tr><td><p>INIT</p></td><td><p><a href="../../../24/25/text/#E019">E019</a></p></td><td colspan=2><p>
 Copy the initial work space conditions into the work space RAM
 at 1000 to 105F.
 </p></td></tr>
 
-<tr><td><p>MSIZE</p></td><td><p>E036</p></td><td colspan=2><p>
+<tr><td><p>MSIZE</p></td><td><p><a href="../../../24/25/text/#E036">E036</a></p></td><td colspan=2><p>
 Output &ldquo;Memory size&rdquo; prompt and get response from user.
 If a number is given jump to TSTMEM otherwise start at the
 beginning of RAM and test each successive byte until the end
 of RAM is found. When the end has been found jump to SETTOP.
 </p></td></tr>
 
-<tr><td><p>TSTMEM</p></td><td><p>E05B</p></td><td colspan=2><p>
+<tr><td><p>TSTMEM</p></td><td><p><a href="../../../24/25/text/#E05B">E05B</a></p></td><td colspan=2><p>
 Get supplied address.<br>
 If any bad characters output &ldquo;?SN Error&rdquo; and re-initialise
 otherwise try to write a D0H byte into that address. If D9H
@@ -169,7 +169,7 @@ to MSIZE to ask again. If D0H is read back then drop through
 to SETTOP.
 </p></td></tr>
 
-<tr><td><p>SETTOP</p></td><td><p>E06D</p></td><td colspan=2><p>
+<tr><td><p>SETTOP</p></td><td><p><a href="../../../24/25/text/#E06D">E06D</a></p></td><td colspan=2><p>
 Test for minimum memory requirement and if not enough jump to
 MSIZE to ask again otherwise save this address as the highest
 available memory location, allocate 50 bytes for string space
@@ -177,21 +177,22 @@ and output the sign on message and the number of bytes free.
 Then drop through to WARMST.
 </p></td></tr>
 
-<tr><td><p>WARMST</p></td><td><p>E0AE</p></td><td colspan=2><p>
+<tr><td><p>WARMST</p></td><td><p><a href="../../../24/25/text/#E0AE">E0AE</a></p></td><td colspan=2><p>
 Clear run-time registers and jump to PRNTOK.
 </p></td></tr>
 
-<tr><td><p>BAKSTK</p></td><td><p>E356</p></td><td colspan=2><p>
+<tr><td><p>BAKSTK</p></td><td><p><a href="../../../24/25/text/#E356">E356</a></p></td><td colspan=2><p>
 Look back through stack for FOR or GOSUB blocks and exit with
 HL pointing to the block.
 </p></td></tr>
 
-<tr><td><p>CHKSTK</p></td><td><p>E38A</p></td><td colspan=2><p>
+<tr><td><p>CHKSTK</p></td><td><p><a href="../../../24/25/text/#E38A">E38A</a></p></td><td colspan=2><p>
 Check for &ldquo;C&rdquo; levels of stack space and output &ldquo;?0M Error&rdquo;
 if not enough stack space.
 </p></td></tr>
 
-<tr><td><p>DATSUR<br>TMERR</p></td><td><p>E3A7 to<br>E3BF</p></td><td colspan=2><p>
+<tr><td><p>DATSNR<br>TMERR</p></td><td><p><a href="../../../24/30/text/#E3A7">E3A7</a>
+	to<br><a href="../../../24/30/text/#E3BF">E3BF</a></p></td><td colspan=2><p>
 <br>
 I like this section of code because you jump into the routine
 at one of the entry points, this loads the &ldquo;E&rdquo; register with
@@ -199,22 +200,22 @@ the error number and the &ldquo;LD BC,nn&rdquo; opcode (01H) skips all
 the following &ldquo;LD E,n&rdquo; instructions. It is very efficient.
 </p></td></tr>
 
-<tr><td><p>ERROR</p></td><td><p>E3C1</p></td><td colspan=2><p>
+<tr><td><p>ERROR</p></td><td><p><a href="../../../24/30/text/#E3C1">E3C1</a></p></td><td colspan=2><p>
 Output error code for error number in the E register, output
 the line number if needed and drop through to PRNTOK.
 </p></td></tr>
 
-<tr><td><p>PRNTOK</p></td><td><p>E3F8</p></td><td colspan=2><p>
+<tr><td><p>PRNTOK</p></td><td><p><a href="../../../24/31/text/#E3F8">E3F8</a></p></td><td colspan=2><p>
 Output &ldquo;Ok&rdquo; message and drop through to GETCMD.
 </p></td></tr>
 
-<tr><td><p>GETCMD</p></td><td><p>E405</p></td><td colspan=2><p>
+<tr><td><p>GETCMD</p></td><td><p><a href="../../../24/31/text/#E405">E405</a></p></td><td colspan=2><p>
 Get a direct statement or BASIC line, CRUNCH the text and if
 it is a direct statement go to EXCUTE to execute it. If it is a
 BASIC line then move it to the program text area.
 </p></td></tr>
 
-<tr><td><p>SRCHLN</p></td><td><p>E499</p></td><td colspan=2><p>
+<tr><td><p>SRCHLN</p></td><td><p><a href="../../../24/32/text/#E499">E499</a></p></td><td colspan=2><p>
 Search for line number in register DE.
 </p></td></tr>
 
@@ -224,11 +225,11 @@ program from memory and execute the null program to clear all
 the other pointers.
 </p></td></tr>
 
-<tr><td><p>RUNSFT</p></td><td><p>E4C5</p></td><td colspan=2><p>
+<tr><td><p>RUNSFT</p></td><td><p><a href="../../../24/32/text/#E4C5">E4C5</a></p></td><td colspan=2><p>
 Execute program from first statement.
 </p></td></tr>
 
-<tr><td><p>INTVAR</p></td><td><p>E4C9</p></td><td colspan=2><p>
+<tr><td><p>INTVAR</p></td><td><p><a href="../../../24/32/text/#E4C9">E4C9</a></p></td><td colspan=2><p>
 Clear out variables and string space an reset DATA pointer.
 </p></td></tr>
 <!--
@@ -243,7 +244,7 @@ Clear out variables and string space an reset DATA pointer.
 
 <tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p>PAGE 11</p></th></tr>
 
-<tr><td><p>CLREG</p></td><td><p>E4DF</p></td><td colspan=2><p>
+<tr><td><p>CLREG</p></td><td><p><a href="../../../24/32/text/#E4DF">E4DF</a></p></td><td colspan=2><p>
 Reset stack to top of memory, clear out temporary strings,
 disable CONTinue and execute program.
 </p></td></tr>
@@ -252,16 +253,16 @@ disable CONTinue and execute program.
 Output &ldquo;?&nbsp;&rdquo; prompt for INPUT and go to get input line.
 </p></td></tr>
 
-<tr><td><p>CRUNCH</p></td><td><p>E509</p></td><td colspan=2><p>
+<tr><td><p>CRUNCH</p></td><td><p><a href="../../../24/33/text/#E509">E509</a></p></td><td colspan=2><p>
 Move text string from HL to BUFFER crunching reserved words
 into tokens as you go.
 </p></td></tr>
 
-<tr><td><p>ENDBUF</p></td><td><p>E5B8</p></td><td colspan=2><p>
+<tr><td><p>ENDBUF</p></td><td><p><a href="../../../24/34/text/#E5B8">E5B8</a></p></td><td colspan=2><p>
 Mark the end of BUFFER with three nulls.
 </p></td></tr>
 
-<tr><td><p>GETLIN</p></td><td><p>E5F2</p></td><td colspan=2><p>
+<tr><td><p>GETLIN</p></td><td><p><a href="../../../24/34/text/#E5F2">E5F2</a></p></td><td colspan=2><p>
 Get an input line from monitor.
 </p></td></tr>
 
@@ -269,12 +270,12 @@ Get an input line from monitor.
 Get an input line by character and save it in BUFFER.
 </p></td></tr>
 
-<tr><td><p>CPDEHL</p></td><td><p>E68A</p></td><td colspan=2><p>
+<tr><td><p>CPDEHL</p></td><td><p><a href="../../../25/31/text/#E68A">E68A</a></p></td><td colspan=2><p>
 Compare the DE register with the HL register returning flags:&ndash;<br>
 Z &ndash; Registers are equal, C &ndash; DE &gt; HL and NC- DE &lt;= HL
 </p></td></tr>
 
-<tr><td><p>CHKSYN</p></td><td><p>E690</p></td><td colspan=2><p>
+<tr><td><p>CHKSYN</p></td><td><p><a href="../../../25/31/text/#E690">E690</a></p></td><td colspan=2><p>
 Make sure the next byte in the code string is the same as the
 byte following the &ldquo;CALL CHKSYN&rdquo;. If not &ndash; output &ldquo;?SN Error&rdquo;.
 </p></td></tr>
@@ -285,7 +286,7 @@ CRLF if the current terminal width is exceeded. Character is
 not output if CTLOFG is set.
 </p></td></tr>
 
-<tr><td><p>CLOTST</p></td><td><p>E6CC</p></td><td colspan=2><p>
+<tr><td><p>CLOTST</p></td><td><p><a href="../../../25/32/text/#E6CC">E6CC</a></p></td><td colspan=2><p>
 Get an input character and flip CTLOFG if it is control &ldquo;O&rdquo;.
 </p></td></tr>
 
@@ -302,12 +303,12 @@ Assign the initial value to the index variable and then set up
 a FOR block on the stack.
 </p></td></tr>
 
-<tr><td><p>RUNCNT</p></td><td><p>E7F2</p></td><td colspan=2><p>
+<tr><td><p>RUNCNT</p></td><td><p><a href="../../../25/34/text/#E7F2">E7F2</a></p></td><td colspan=2><p>
 Main execution driver loop. This gets the next statement
 (May be after &ldquo;:&rdquo; or on next line) and gives it to EXCUTE.
 </p></td></tr>
 
-<tr><td><p>EXCUTE</p></td><td><p>E816</p></td><td colspan=2><p>
+<tr><td><p>EXCUTE</p></td><td><p><a href="../../../25/34/text/#E816">E816</a></p></td><td colspan=2><p>
 Test current statement. If it is a key word then find the
 address of the routine from WORDTB and call it. If it is a
 letter then call LET to try to assign a variable. Otherwise
@@ -325,7 +326,7 @@ C &ndash; Character is a digit otherwise NC.
 to specified line if a line number is given.
 </p></td></tr>
 
-<tr><td><p>TSTBRK</p></td><td><p>E861</p></td><td colspan=2><p>
+<tr><td><p>TSTBRK</p></td><td><p><a href="../../../25/35/text/#E861">E861</a></p></td><td colspan=2><p>
 Test for break key. If pressed test for control &ldquo;S&rdquo; (pause).
 If another break pressed then stop execution and output break
 message.

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -210,7 +210,7 @@ F444 323F10             LD      (INPORT),A      ; Set input port
 F447 CD3E10             CALL    INPSUB          ; Get input from port
 F44A C301F1             JP      PASSA           ; Return integer A
 
-F44D CD71F4     POUT:   CALL    SETIO           ; Set up port number
+<span id="F44D">F44D CD71F4     POUT:   CALL    SETIO           ; Set up port number</span>
 <span id="F450">F450 C30610             JP      OUTSUB          ; Output data and return</span>
 
 <span id="F453">F453 CD71F4     WAIT:   CALL    SETIO           ; Set up port number</span>
@@ -236,7 +236,7 @@ F47A CD90E6             CALL    CHKSYN          ; Make sure "," follows
 F47D 2C                 DEFB    ","
 F47E C384F4             JP      GETINT          ; Get integer 0-255 and return
 
-F481 CD36E8     FNDNUM: CALL    GETCHR          ; Get next character
+<span id="F481">F481 CD36E8     FNDNUM: CALL    GETCHR          ; Get next character</span>
 F484 CD41ED     GETINT: CALL    GETNUM          ; Get a number from 0 to 255
 F487 CD85E9     MAKINT: CALL    DEPINT          ; Make sure value 0 - 255
 F48A 7A                 LD      A,D             ; Get MSB of number

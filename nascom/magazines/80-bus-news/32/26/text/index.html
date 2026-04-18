@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,7 +138,7 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    82</span>
 
-F8BB 47         FPINT:  LD      B,A             ; &lt;- Move
+<span id="F8BB">F8BB 47         FPINT:  LD      B,A             ; &lt;- Move</span>
 F8BC 4F                 LD      C,A             ; &lt;- exponent
 F8BD 57                 LD      D,A             ; &lt;- to all
 F8BE 5F                 LD      E,A             ; &lt;- bits
@@ -206,7 +206,7 @@ F915 3D         NOMLAD: DEC     A               ; Count bits
 F916 C207F9             JP      NZ,MLDBLP       ; More
 F919 C9                 RET
 
-F91A FE2D       ASCTFP: CP      "-"             ; Negative?
+<span id="F91A">F91A FE2D       ASCTFP: CP      "-"             ; Negative?</span>
 F91C F5                 PUSH    AF              ; Save it and flags
 F91D CA26F9             JP      Z,CNVNUM        ; Yes - Convert number
 F920 FE2B               CP      "+"             ; Positive?

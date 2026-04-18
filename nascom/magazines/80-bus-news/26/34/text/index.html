@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -183,10 +183,10 @@ ED3E CDF9EC             CALL    NEXT1           ; Re-enter NEXT routine
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    45</span>
 
-ED41 CD5AED     GETNUM: CALL    EVAL            ; Get a numeric expression
-ED44 F6         TSTNUM: DEFB    (OR n)          ; Clear carry (numeric)
-ED45 37         TSTSTR: SCF                     ; Set carry (string)
-ED46 3AAD10     CHKTYP: LD      A,(TYPE)        ; Check types match
+<span id="ED41">ED41 CD5AED     GETNUM: CALL    EVAL            ; Get a numeric expression</span>
+<span id="ED44">ED44 F6         TSTNUM: DEFB    (OR n)          ; Clear carry (numeric)</span>
+<span id="ED45">ED45 37         TSTSTR: SCF                     ; Set carry (string)</span>
+<span id="ED46">ED46 3AAD10     CHKTYP: LD      A,(TYPE)        ; Check types match</span>
 ED49 8F                 ADC     A,A             ; Expected + actual
 ED4A B7                 OR      A               ; Clear carry&nbsp;, set parity
 ED4B E8                 RET     PE              ; Even parity - Types match
@@ -200,7 +200,7 @@ ED53 C35AED             JP      EVAL            ; Evaluate expression
 
 ED56 CD90E6     OPNPAR: CALL    CHKSYN          ; Make sure "(" follows
 ED59 28                 DEFB    "("
-ED5A 2B         EVAL:   DEC     HL              ; Evaluate expression & save
+<span id="ED5A">ED5A 2B         EVAL:   DEC     HL              ; Evaluate expression & save</span>
 ED5B 1600               LD      D,0             ; Precedence value
 ED5D D5         EVAL1:  PUSH    DE              ; Save precedence
 ED5E 0E01               LD      C,1

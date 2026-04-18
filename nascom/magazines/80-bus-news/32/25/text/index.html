@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -146,7 +146,7 @@ F840 EE80               XOR     80H             ; Invert sign of mantissa
 F842 77                 LD      (HL),A          ; Re-save sign of mantissa
 F843 C9                 RET
 
-F844 EB         STAKFP: EX      DE,HL           ; Save code string address
+<span id="F844">F844 EB         STAKFP: EX      DE,HL           ; Save code string address</span>
 F845 2AE410             LD      HL,(FPREG)      ; LSB,NLSB of FPREG
 F848 E3                 EX      (SP),HL         ; Stack them,get return
 F849 E5                 PUSH    HL              ; Re-save return
@@ -156,8 +156,8 @@ F84E E5                 PUSH    HL              ; Re-save return
 F84F EB                 EX      DE,HL           ; Restore code string address
 F850 C9                 RET
 
-F851 CD62F8     PHLTFP: CALL    LOADFP          ; Number at HL to BCDE
-F854 EB         FPBCDE: EX      DE,HL           ; Save code string address
+<span id="F851">F851 CD62F8     PHLTFP: CALL    LOADFP          ; Number at HL to BCDE</span>
+<span id="F854">F854 EB         FPBCDE: EX      DE,HL           ; Save code string address</span>
 F855 22E410             LD      (FPREG),HL      ; Save LSB,NLSB of number
 F858 60                 LD      H,B             ; Exponent of number
 F859 69                 LD      L,C             ; MSB of number
@@ -165,8 +165,8 @@ F85A 22E610             LD      (FPREG+2),HL    ; Save MSB and exponent
 F85D EB                 EX      DE,HL           ; Restore code string address
 F85E C9                 RET
 
-F85F 21E410     BCDEFP: LD      HL,FPREG        ; Point to FPREG
-F862 5E         LOADFP: LD      E,(HL)          ; Get LSB of number
+<span id="F85F">F85F 21E410     BCDEFP: LD      HL,FPREG        ; Point to FPREG</span>
+<span id="F862">F862 5E         LOADFP: LD      E,(HL)          ; Get LSB of number</span>
 F863 23                 INC     HL
 F864 56                 LD      D,(HL)          ; Get NMSB of number
 F865 23                 INC     HL
@@ -176,7 +176,7 @@ F868 46                 LD      B,(HL)          ; Get exponent of number
 F869 23         INCHL:  INC     HL              ; Used for conditional "INC HL"
 F86A C9                 RET
 
-F86B 11E410     FPTHL:  LD      DE,FPREG        ; Point to FPREG
+<span id="F86B">F86B 11E410     FPTHL:  LD      DE,FPREG        ; Point to FPREG</span>
 F86E 0604       DETHL4: LD      B,4             ; 4 bytes to move
 F870 1A         DETHLB: LD      A,(DE)          ; Get source
 F871 77                 LD      (HL),A          ; Save destination
@@ -190,7 +190,7 @@ F878 C9                 RET
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    81</span>
 
-F879 21E610     SIGNS:  LD      HL,FPREG+2      ; Point to MSB of FPREG
+<span id="F879">F879 21E610     SIGNS:  LD      HL,FPREG+2      ; Point to MSB of FPREG</span>
 F87C 7E                 LD      A,(HL)          ; Get MSB
 F87D 07                 RLCA                    ; Old sign to carry
 F87E 37                 SCF                     ; Set MSBit
@@ -210,7 +210,7 @@ F88B 1F                 RRA
 F88C AE                 XOR     (HL)            ; New sign of result
 F88D C9                 RET
 
-F88E 78         CMPNUM: LD      A,B             ; Get exponent of number
+<span id="F88E">F88E 78         CMPNUM: LD      A,B             ; Get exponent of number</span>
 F88F B7                 OR      A
 F890 CA13F8             JP      Z,TSTSGN        ; Zero - Test sign of FPREG
 F893 211CF8             LD      HL,RETREL       ; Return relation routine
