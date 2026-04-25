@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -151,39 +151,39 @@ By Carl Lloyd&mdash;Parker
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    54</span>
 
-F012 E5         ARLDSV: PUSH    HL              ; Save code string address
+<span id="F012">F012</span> E5         <span id="ARLDSV"><a href="#ARLDSV">ARLDSV</a></span>: PUSH    HL              ; Save code string address
 F013 F5                 PUSH    AF              ; A = 00 , Flags set = Z,N
-F014 2AD810             LD      HL,(VAREND)     ; Start of arrays
+F014 2AD810             LD      HL,(<a href="../../../24/24/text/#VAREND">VAREND</a>)     ; Start of arrays
 F017 3E                 DEFB    (LD A,n)        ; Skip "ADD HL,DE"
-F018 19         FNDARY: ADD     HL,DE           ; Move to next array start
+<span id="F018">F018</span> 19         <span id="FNDARY"><a href="#FNDARY">FNDARY</a></span>: ADD     HL,DE           ; Move to next array start
 F019 EB                 EX      DE,HL
-F01A 2ADA10             LD      HL,(ARREND)     ; End of arrays
+F01A 2ADA10             LD      HL,(<a href="../../../24/24/text/#ARREND">ARREND</a>)     ; End of arrays
 F01D EB                 EX      DE,HL           ; Current array pointer
-F01E CD8AE6             CALL    CPDEHL          ; End of arrays found?
-F021 CA4AF0             JP      Z,CREARY        ; Yes - Create array
+F01E CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; End of arrays found?
+F021 CA4AF0             JP      Z,<a href="../../../31/24/text/#CREARY">CREARY</a>        ; Yes - Create array
 F024 7E                 LD      A,(HL)          ; Get second byte of name
 F025 B9                 CP      C               ; Compare with name given
 F026 23                 INC     HL              ; Move on
-F027 C22CF0             JP      NZ,NXTARY       ; Different - Find next array
+F027 C22CF0             JP      NZ,<a href="../../../31/23/text/#NXTARY">NXTARY</a>       ; Different - Find next array
 F02A 7E                 LD      A,(HL)          ; Get first byte of name
 F02B B8                 CP      B               ; Compare with name given
-F02C 23         NXTARY: INC     HL              ; Move on
+<span id="F02C">F02C</span> 23         <span id="NXTARY"><a href="#NXTARY">NXTARY</a></span>: INC     HL              ; Move on
 F02D 5E                 LD      E,(HL)          ; Get LSB of next array address
 F02E 23                 INC     HL
 F02F 56                 LD      D,(HL)          ; Get MSB of next array address
 F030 23                 INC     HL
-F031 C218F0             JP      NZ,FNDARY       ; Not found - Keep looking
-F034 3AAC10             LD      A,(LCRFLG)      ; Found Locate or Create it?
+F031 C218F0             JP      NZ,<a href="../../../31/23/text/#FNDARY">FNDARY</a>       ; Not found - Keep looking
+F034 3AAC10             LD      A,(<a href="../../../24/24/text/#LCRFLG">LCRFLG</a>)      ; Found Locate or Create it?
 F037 B7                 OR      A
-F038 C2B6E3             JP      NZ,DDERR        ; Create - ?DD Error
+F038 C2B6E3             JP      NZ,<a href="../../../24/30/text/#DDERR">DDERR</a>        ; Create - ?<a href="../../../24/24/text/#DD">DD</a> Error
 F03B F1                 POP     AF              ; Locate - Get number of dim'ns
 F03C 44                 LD      B,H             ; BC Points to array dim'ns
 F03D 4D                 LD      C,L
-F03E CA54F7             JP      Z,POPHRT        ; Jump if array load/save
+F03E CA54F7             JP      Z,<a href="../../../31/34/text/#POPHRT">POPHRT</a>        ; Jump if array load/save
 F041 96                 SUB     (HL)            ; Same number of dimensions?
-F042 CAA8F0             JP      Z,FINDEL        ; Yes - Find element
-F045 1E10       BSERR:  LD      E,BS            ; ?BS Error
-F047 C3C1E3             JP      ERROR           ; Output error
+F042 CAA8F0             JP      Z,<a href="../../../31/24/text/#FINDEL">FINDEL</a>        ; Yes - Find element
+<span id="F045">F045</span> 1E10       <span id="BSERR"><a href="#BSERR">BSERR</a></span>:  LD      E,<a href="../../../24/24/text/#BS">BS</a>            ; ?BS Error
+F047 C3C1E3             JP      <a href="../../../24/30/text/#ERROR">ERROR</a>           ; Output error
 </pre>
 <!-- 1 column: end --></div>
 </div>

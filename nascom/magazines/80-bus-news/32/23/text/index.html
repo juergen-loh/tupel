@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -151,43 +151,43 @@ By Carl Lloyd&mdash;Parker
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    77</span>
 
-F75B CD44F8     DIV10:  CALL    STAKFP          ; Save FPREG on stack
+<span id="F75B">F75B</span> CD44F8     <span id="DIV10"><a href="#DIV10">DIV10</a></span>:  CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Save <a href="../../../24/24/text/#FPREG">FPREG</a> on stack
 F75E 012084             LD      BC,8420H        ; BCDE = 10.
 F761 110000             LD      DE,0000H
-F764 CD54F8             CALL    FPBCDE          ; Move 10 to FPREG
+F764 CD54F8             CALL    <a href="../../../32/25/text/#FPBCDE">FPBCDE</a>          ; Move 10 to <a href="../../../24/24/text/#FPREG">FPREG</a>
 
-<span id="F767">F767 C1         DIV:    POP     BC              ; Get number from stack</span>
-F768 D1                 POP     DE
-<span id="F769">F769 CD13F8     DVBCDE: CALL    TSTSGN          ; Test sign of FPREG</span>
-F76C CAB0E3             JP      Z,DZERR         ; Error if division by zero
+<span id="F767">F767</span> C1         <span id="DIV"><a href="#DIV">DIV</a></span>:    POP     BC              ; Get number from stack
+<span id="F768">F768</span> D1                 POP     DE
+<span id="F769">F769</span> CD13F8     <span id="DVBCDE"><a href="#DVBCDE">DVBCDE</a></span>: CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
+F76C CAB0E3             JP      Z,<a href="../../../24/30/text/#DZERR">DZERR</a>         ; Error if division by zero
 F76F 2EFF               LD      L,-1            ; Flag subtract exponents
-F771 CDD1F7             CALL    ADDEXP          ; Subtract exponents
+F771 CDD1F7             CALL    <a href="../../../32/24/text/#ADDEXP">ADDEXP</a>          ; Subtract exponents
 F774 34                 INC     (HL)            ; Add 2 to exponent to adjust
 F775 34                 INC     (HL)
 F776 2B                 DEC     HL              ; Point to MSB
 F777 7E                 LD      A,(HL)          ; Get MSB of dividend
-F778 321210             LD      (DIV3),A        ; Save for subtraction
+F778 321210             LD      (<a href="../../../24/24/text/#DIV3">DIV3</a>),A        ; Save for subtraction
 F77B 2B                 DEC     HL
 F77C 7E                 LD      A,(HL)          ; Get NMSB of dividend
-F77D 320E10             LD      (DIV2),A        ; Save for subtraction
+F77D 320E10             LD      (<a href="../../../24/24/text/#DIV2">DIV2</a>),A        ; Save for subtraction
 F780 2B                 DEC     HL
 F781 7E                 LD      A,(HL)          ; Get MSB of dividend
-F782 320A10             LD      (DIV1),A        ; Save for subtraction
+F782 320A10             LD      (<a href="../../../24/24/text/#DIV1">DIV1</a>),A        ; Save for subtraction
 F785 41                 LD      B,C             ; Get MSB
 F786 EB                 EX      DE,HL           ; NMSB,LSB to HL
 F787 AF                 XOR     A
 F788 4F                 LD      C,A             ; Clear MSB of quotient
 F789 57                 LD      D,A             ; Clear NMSB of quotient
 F78A 5F                 LD      E,A             ; Clear LSB of quotient
-F78B 321510             LD      (DIV4),A        ; Clear overflow count
-F78E E5         DIVLP:  PUSH    HL              ; Save divisor
+F78B 321510             LD      (<a href="../../../24/24/text/#DIV4">DIV4</a>),A        ; Clear overflow count
+<span id="F78E">F78E</span> E5         <span id="DIVLP"><a href="#DIVLP">DIVLP</a></span>:  PUSH    HL              ; Save divisor
 F78F C5                 PUSH    BC
 F790 7D                 LD      A,L             ; Get LSB of number
-F791 CD0910             CALL    DIVSUP          ; Subt' divisor from dividend
+F791 CD0910             CALL    <a href="../../../24/24/text/#DIVSUP">DIVSUP</a>          ; Subt' divisor from dividend
 F794 DE00               SBC     A,0             ; Count for overflows
 F796 3F                 CCF
-F797 D2A1F7             JP      NC,RESDIV       ; Restore divisor if borrow
-F79A 321510             LD      (DIV4),A        ; Re-save overflow count
+F797 D2A1F7             JP      NC,<a href="../../../32/24/text/#RESDIV">RESDIV</a>       ; Restore divisor if borrow
+F79A 321510             LD      (<a href="../../../24/24/text/#DIV4">DIV4</a>),A        ; Re-save overflow count
 F79D F1                 POP     AF              ; Scrap divisor
 F79E F1                 POP     AF
 F79F 37                 SCF                     ; Set carry to

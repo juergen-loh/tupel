@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,95 +138,95 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    44</span>
 
-<span id="ECF6">ECF6 110000     NEXT:   LD      DE,0            ; In case no index given</span>
-ECF9 C42DEF     NEXT1:  CALL    NZ,GETVAR       ; Get index address
-ECFC 22CE10             LD      (BRKLIN),HL     ; Save code string address
-ECFF CD56E3             CALL    BAKSTK          ; Look for "FOR" block
-ED02 C2B3E3             JP      NZ,NFERR        ; No "FOR" - ?NF Error
+<span id="ECF6">ECF6</span> 110000     <span id="NEXT"><a href="#NEXT">NEXT</a></span>:   LD      DE,0            ; In case no index given
+<span id="ECF9">ECF9</span> C42DEF     <span id="NEXT1"><a href="#NEXT1">NEXT1</a></span>:  CALL    NZ,<a href="../../../26/37/text/#GETVAR">GETVAR</a>       ; Get index address
+ECFC 22CE10             LD      (<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>),HL     ; Save code string address
+ECFF CD56E3             CALL    <a href="../../../24/29/text/#BAKSTK">BAKSTK</a>          ; Look for "<a href="../../../25/33/text/#FOR">FOR</a>" block
+ED02 C2B3E3             JP      NZ,<a href="../../../24/30/text/#NFERR">NFERR</a>        ; No "<a href="../../../25/33/text/#FOR">FOR</a>" - ?<a href="../../../24/24/text/#NF">NF</a> Error
 ED05 F9                 LD      SP,HL           ; Clear nested loops
 ED06 D5                 PUSH    DE              ; Save index address
 ED07 7E                 LD      A,(HL)          ; Get sign of STEP
 ED08 23                 INC     HL
 ED09 F5                 PUSH    AF              ; Save sign of STEP
 ED0A D5                 PUSH    DE              ; Save index address
-ED0B CD51F8             CALL    PHLTFP          ; Move index value to FPREG
+ED0B CD51F8             CALL    <a href="../../../32/25/text/#PHLTFP">PHLTFP</a>          ; Move index value to <a href="../../../24/24/text/#FPREG">FPREG</a>
 ED0E E3                 EX      (SP),HL         ; Save address of TO value
 ED0F E5                 PUSH    HL              ; Save address of index
-ED10 CDBEF5             CALL    ADDPHL          ; Add STEP to index value
+ED10 CDBEF5             CALL    <a href="../../../31/32/text/#ADDPHL">ADDPHL</a>          ; Add STEP to index value
 ED13 E1                 POP     HL              ; Restore address of index
-ED14 CD6BF8             CALL    FPTHL           ; Move value to index variable
+ED14 CD6BF8             CALL    <a href="../../../32/25/text/#FPTHL">FPTHL</a>           ; Move value to index variable
 ED17 E1                 POP     HL              ; Restore address of TO value
-ED18 CD62F8             CALL    LOADFP          ; Move TO value to BCDE
-ED1B E5                 PUSH    HL              ; Save address of line of FOR
-ED1C CD8EF8             CALL    CMPNUM          ; Compare index with TO value
+ED18 CD62F8             CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; Move TO value to BCDE
+ED1B E5                 PUSH    HL              ; Save address of line of <a href="../../../25/33/text/#FOR">FOR</a>
+ED1C CD8EF8             CALL    <a href="../../../32/25/text/#CMPNUM">CMPNUM</a>          ; Compare index with TO value
 ED1F E1                 POP     HL              ; Restore address of line num
 ED20 C1                 POP     BC              ; Address of sign of STEP
 ED21 90                 SUB     B               ; Compare with expected sign
-ED22 CD62F8             CALL    LOADFP          ; BC = Loop stmt,DE = Line num
-ED25 CA31ED             JP      Z,KILFOR        ; Loop finished - Terminate it
+ED22 CD62F8             CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; BC = Loop stmt,DE = Line num
+ED25 CA31ED             JP      Z,<a href="../../../26/34/text/#KILFOR">KILFOR</a>        ; Loop finished - Terminate it
 ED28 EB                 EX      DE,HL           ; Loop statement line number
-ED29 225C10             LD      (LINEAT),HL     ; Set loop line number
+ED29 225C10             LD      (<a href="../../../24/24/text/#LINEAT">LINEAT</a>),HL     ; Set loop line number
 ED2C 69                 LD      L,C             ; Set code string to loop
 ED2D 60                 LD      H,B
-ED2E C3EEE7             JP      PUTFID          ; Put back "FOR" and continue
+ED2E C3EEE7             JP      <a href="../../../25/34/text/#PUTFID">PUTFID</a>          ; Put back "<a href="../../../25/33/text/#FOR">FOR</a>" and continue
 
-ED31 F9         KILFOR: LD      SP,HL           ; Remove "FOR" block
-ED32 2ACE10             LD      HL,(BRKLIN)     ; Code string after "NEXT"
+<span id="ED31">ED31</span> F9         <span id="KILFOR"><a href="#KILFOR">KILFOR</a></span>: LD      SP,HL           ; Remove "<a href="../../../25/33/text/#FOR">FOR</a>" block
+ED32 2ACE10             LD      HL,(<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>)     ; Code string after "<a href="../../../26/34/text/#NEXT">NEXT</a>"
 ED35 7E                 LD      A,(HL)          ; Get next byte in code string
-ED36 FE2C               CP      ","             ; More NEXTs&nbsp;?
-ED38 C2F2E7             JP      NZ,RUNCNT       ; No - Do next statement
-ED3B CD36E8             CALL    GETCHR          ; Position to index name
-ED3E CDF9EC             CALL    NEXT1           ; Re-enter NEXT routine
-                ; &lt; will not RETurn to here&nbsp;, Exit to RUNCNT or Loop &gt;
+ED36 FE2C               CP      ","             ; More NEXTs ?
+ED38 C2F2E7             JP      NZ,<a href="../../../25/34/text/#RUNCNT">RUNCNT</a>       ; No - Do next statement
+ED3B CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Position to index name
+ED3E CDF9EC             CALL    <a href="../../../26/34/text/#NEXT1">NEXT1</a>           ; Re-enter <a href="../../../26/34/text/#NEXT">NEXT</a> routine
+                ; &lt; will not RETurn to here , Exit to <a href="../../../25/34/text/#RUNCNT">RUNCNT</a> or Loop &gt;
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    45</span>
 
-<span id="ED41">ED41 CD5AED     GETNUM: CALL    EVAL            ; Get a numeric expression</span>
-<span id="ED44">ED44 F6         TSTNUM: DEFB    (OR n)          ; Clear carry (numeric)</span>
-<span id="ED45">ED45 37         TSTSTR: SCF                     ; Set carry (string)</span>
-<span id="ED46">ED46 3AAD10     CHKTYP: LD      A,(TYPE)        ; Check types match</span>
+<span id="ED41">ED41</span> CD5AED     <span id="GETNUM"><a href="#GETNUM">GETNUM</a></span>: CALL    <a href="../../../26/34/text/#EVAL">EVAL</a>            ; Get a numeric expression
+<span id="ED44">ED44</span> F6         <span id="TSTNUM"><a href="#TSTNUM">TSTNUM</a></span>: DEFB    (OR n)          ; Clear carry (numeric)
+<span id="ED45">ED45</span> 37         <span id="TSTSTR"><a href="#TSTSTR">TSTSTR</a></span>: SCF                     ; Set carry (string)
+<span id="ED46">ED46</span> 3AAD10     <span id="CHKTYP"><a href="#CHKTYP">CHKTYP</a></span>: LD      A,(<a href="../../../24/24/text/#TYPE">TYPE</a>)        ; Check types match
 ED49 8F                 ADC     A,A             ; Expected + actual
-ED4A B7                 OR      A               ; Clear carry&nbsp;, set parity
+ED4A B7                 OR      A               ; Clear carry , set parity
 ED4B E8                 RET     PE              ; Even parity - Types match
-ED4C C3BFE3             JP      TMERR           ; Different types - Error
+ED4C C3BFE3             JP      <a href="../../../24/30/text/#TMERR">TMERR</a>           ; Different types - Error
 
                 ; &lt;&lt;&lt; NO REFERENCE TO HERE &gt;&gt;&gt;
 
-ED4F CD90E6             CALL    CHKSYN          ; Make sure "=" follows
-ED52 B4                 DEFB    ZEQUAL          ; "="
-ED53 C35AED             JP      EVAL            ; Evaluate expression
+ED4F CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "=" follows
+ED52 B4                 DEFB    <a href="../../../24/28/text/#ZEQUAL">ZEQUAL</a>          ; "="
+ED53 C35AED             JP      <a href="../../../26/34/text/#EVAL">EVAL</a>            ; Evaluate expression
 
-ED56 CD90E6     OPNPAR: CALL    CHKSYN          ; Make sure "(" follows
+<span id="ED56">ED56</span> CD90E6     <span id="OPNPAR"><a href="#OPNPAR">OPNPAR</a></span>: CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "(" follows
 ED59 28                 DEFB    "("
-<span id="ED5A">ED5A 2B         EVAL:   DEC     HL              ; Evaluate expression & save</span>
+<span id="ED5A">ED5A</span> 2B         <span id="EVAL"><a href="#EVAL">EVAL</a></span>:   DEC     HL              ; Evaluate expression & save
 ED5B 1600               LD      D,0             ; Precedence value
-ED5D D5         EVAL1:  PUSH    DE              ; Save precedence
+<span id="ED5D">ED5D</span> D5         <span id="EVAL1"><a href="#EVAL1">EVAL1</a></span>:  PUSH    DE              ; Save precedence
 ED5E 0E01               LD      C,1
-ED60 CD8AE3             CALL    CHKSTK          ; Check for 1 level of stack
-ED63 CDD1ED             CALL    OPRND           ; Get next expression value
-ED66 22D010     EVAL2:  LD      (NXTOPR),HL     ; Save address of next operator
-ED69 2AD010     EVAL3:  LD      HL,(NXTOPR)     ; Restore address of next opr
+ED60 CD8AE3             CALL    <a href="../../../24/30/text/#CHKSTK">CHKSTK</a>          ; Check for 1 level of stack
+ED63 CDD1ED             CALL    <a href="../../../26/35/text/#OPRND">OPRND</a>           ; Get next expression value
+<span id="ED66">ED66</span> 22D010     <span id="EVAL2"><a href="#EVAL2">EVAL2</a></span>:  LD      (<a href="../../../24/24/text/#NXTOPR">NXTOPR</a>),HL     ; Save address of next operator
+<span id="ED69">ED69</span> 2AD010     <span id="EVAL3"><a href="#EVAL3">EVAL3</a></span>:  LD      HL,(<a href="../../../24/24/text/#NXTOPR">NXTOPR</a>)     ; Restore address of next opr
 ED6C C1                 POP     BC              ; Precedence value and operator
 ED6D 78                 LD      A,B             ; Get precedence value
 ED6E FE78               CP      78H             ; "AND" or "OR" ?
-ED70 D444ED             CALL    NC,TSTNUM       ; No - Make sure it's a number
+ED70 D444ED             CALL    NC,<a href="../../../26/34/text/#TSTNUM">TSTNUM</a>       ; No - Make sure it's a number
 ED73 7E                 LD      A,(HL)          ; Get next operator / function
 ED74 1600               LD      D,0             ; Clear Last relation
-ED76 D6B3       RLTLP:  SUB     ZGTR            ; ">" Token
-ED78 DA92ED             JP      C,FOPRND        ; + - * / ^ AND OR - Test it
-ED7B FE03               CP      ZLTH+1-ZGTR     ; &lt; = &gt;
-ED7D D292ED             JP      NC,FOPRND       ; Function - Call it
-ED80 FE01               CP      ZEQUAL-ZGTR     ; "="
+<span id="ED76">ED76</span> D6B3       <span id="RLTLP"><a href="#RLTLP">RLTLP</a></span>:  SUB     <a href="../../../24/28/text/#ZGTR">ZGTR</a>            ; ">" Token
+ED78 DA92ED             JP      C,<a href="../../../26/35/text/#FOPRND">FOPRND</a>        ; + - * / ^ AND OR - Test it
+<span id="ED7B">ED7B</span> FE03               CP      <a href="../../../24/28/text/#ZLTH">ZLTH</a>+1-<a href="../../../24/28/text/#ZGTR">ZGTR</a>     ; &lt; = &gt;
+ED7D D292ED             JP      NC,<a href="../../../26/35/text/#FOPRND">FOPRND</a>       ; Function - Call it
+ED80 FE01               CP      <a href="../../../24/28/text/#ZEQUAL">ZEQUAL</a>-<a href="../../../24/28/text/#ZGTR">ZGTR</a>     ; "="
 ED82 17                 RLA                     ; &lt;- Test for legal
 ED83 AA                 XOR     D               ; &lt;- combinations of &lt; = &gt;
 ED84 BA                 CP      D               ; &lt;- by combining last token
 ED85 57                 LD      D,A             ; &lt;- with current one
-ED86 DAADE3             JP      C,SNERR         ; Error if "&lt;&lt;" "==" or "&gt;&gt;"
-ED89 22C510             LD      (CUROPR),HL     ; Save address of current token
-ED8C CD36E8             CALL    GETCHR          ; Get next character
-ED8F C376ED             JP      RLTLP           ; Treat the two as one
+ED86 DAADE3             JP      C,<a href="../../../24/30/text/#SNERR">SNERR</a>         ; Error if "&lt;&lt;" "==" or "&gt;&gt;"
+ED89 22C510             LD      (<a href="../../../24/24/text/#CUROPR">CUROPR</a>),HL     ; Save address of current token
+ED8C CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+ED8F C376ED             JP      <a href="../../../26/34/text/#RLTLP">RLTLP</a>           ; Treat the two as one
 </pre>
 <!-- 1 column: end --></div>
 </div>

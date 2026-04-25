@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -141,56 +141,56 @@
                 ; &lt;&lt; NO  REFERENCE  TO  THIS  SECTION  OF  CODE &gt;&gt;
                 ; &lt;&lt; Set up another program area (can be in ROM) &gt;&gt;
 
-F495 2A5E10             LD      HL,(BASTXT)     ; Get start of program text
-F498 22D610             LD      (PROGND),HL     ; Set more variable space
+F495 2A5E10             LD      HL,(<a href="../../../24/24/text/#BASTXT">BASTXT</a>)     ; Get start of program text
+F498 22D610             LD      (<a href="../../../24/24/text/#PROGND">PROGND</a>),HL     ; Set more variable space
 F49B 210080             LD      HL,8000H        ; Address of new program
 F49E 5E                 LD      E,(HL)          ; Get LSB of new RAM end
 F49F 23                 INC     HL
 F4A0 56                 LD      D,(HL)          ; Get MSB of new RAM end
 F4A1 23                 INC     HL
 F4A2 23                 INC     HL              ; Null at start of program
-F4A3 225E10             LD      (BASTXT),HL     ; New program text area 8003H
+F4A3 225E10             LD      (<a href="../../../24/24/text/#BASTXT">BASTXT</a>),HL     ; New program text area 8003H
 F4A6 EB                 EX      DE,HL           ; New RAM end to HL
-F4A7 22AF10             LD      (LSTRAM),HL     ; Set new RAM end
-F4AA 225A10             LD      (STRSPC),HL     ; Clear string space
-F4AD 01F2E7             LD      BC,RUNCNT       ; Execution driver loop
+F4A7 22AF10             LD      (<a href="../../../24/24/text/#LSTRAM">LSTRAM</a>),HL     ; Set new RAM end
+F4AA 225A10             LD      (<a href="../../../24/24/text/#STRSPC">STRSPC</a>),HL     ; Clear string space
+F4AD 01F2E7             LD      BC,<a href="../../../25/34/text/#RUNCNT">RUNCNT</a>       ; Execution driver loop
 F4B0 C5                 PUSH    BC              ; Save for return
-F4B1 C3C5E4             JP      RUNFST          ; Clear variables and continue
+F4B1 C3C5E4             JP      <a href="../../../24/32/text/#RUNFST">RUNFST</a>          ; Clear variables and continue
 
-F4B4 C356FD     RUART:  JP      GUART           ; Get a byte from UART
+<span id="F4B4">F4B4</span> C356FD     <span id="RUART"><a href="#RUART">RUART</a></span>:  JP      <a href="../../../33/25/text/#GUART">GUART</a>           ; Get a byte from UART
 
-F4B7 CDBAF4     WUART2: CALL    WUART           ; Send 2 Bytes to UART
-F4BA F5         WUART:  PUSH    AF              ; Save byte
+<span id="F4B7">F4B7</span> CDBAF4     <span id="WUART2"><a href="#WUART2">WUART2</a></span>: CALL    <a href="../../../31/31/text/#WUART">WUART</a>           ; Send 2 Bytes to UART
+<span id="F4BA">F4BA</span> F5         <span id="WUART"><a href="#WUART">WUART</a></span>:  PUSH    AF              ; Save byte
 F4BB C5                 PUSH    BC              ; Save BC
 F4BC 4F                 LD      C,A             ; Byte to C
-F4BD CD68FD             CALL    SUART           ; Send byte to UART
+F4BD CD68FD             CALL    <a href="../../../33/25/text/#SUART">SUART</a>           ; Send byte to UART
 F4C0 C1                 POP     BC              ; Restore BC
 F4C1 F1                 POP     AF              ; Restore byte
 F4C2 C9                 RET
 
-<span id="F4C3">F4C3 0601       CSAVE:  LD      B,1             ; Flag "CSAVE"</span>
-F4C5 FEAE               CP      ZTIMES          ; "*" token? ("CSAVE*")
-F4C7 CABBE8             JP      Z,ARRSV1        ; Yes - Array save
-F4CA CD5AED             CALL    EVAL            ; Evaluate expression
+<span id="F4C3">F4C3</span> 0601       <span id="CSAVE"><a href="#CSAVE">CSAVE</a></span>:  LD      B,1             ; Flag "<a href="../../../31/31/text/#CSAVE">CSAVE</a>"
+F4C5 FEAE               CP      <a href="../../../24/28/text/#ZTIMES">ZTIMES</a>          ; "*" token? ("<a href="../../../31/31/text/#CSAVE">CSAVE</a>*")
+F4C7 CABBE8             JP      Z,<a href="../../../25/35/text/#ARRSV1">ARRSV1</a>        ; Yes - Array save
+F4CA CD5AED             CALL    <a href="../../../26/34/text/#EVAL">EVAL</a>            ; Evaluate expression
 F4CD E5                 PUSH    HL              ; Save code string address
-F4CE CD95F3             CALL    GTFLNM          ; Get file name
+F4CE CD95F3             CALL    <a href="../../../31/29/text/#GTFLNM">GTFLNM</a>          ; Get file name
 F4D1 D5                 PUSH    DE              ; Save file name
-F4D2 CDC8FC             CALL    CASFFW          ; Turn on motor and wait
+F4D2 CDC8FC             CALL    <a href="../../../33/25/text/#CASFFW">CASFFW</a>          ; Turn on motor and wait
 F4D5 D1                 POP     DE              ; Restore file name
 F4D6 3ED3               LD      A,11010011B     ; Header byte
-F4D8 CDBAF4             CALL    WUART           ; Send byte to UART
-F4DB CDB7F4             CALL    WUART2          ; Send byte twice more
+F4D8 CDBAF4             CALL    <a href="../../../31/31/text/#WUART">WUART</a>           ; Send byte to UART
+F4DB CDB7F4             CALL    <a href="../../../31/31/text/#WUART2">WUART2</a>          ; Send byte twice more
 F4DE 1A                 LD      A,(DE)          ; Get file name
-F4DF CDBAF4             CALL    WUART           ; Send it to UART
+F4DF CDBAF4             CALL    <a href="../../../31/31/text/#WUART">WUART</a>           ; Send it to UART
 F4E2 00                 NOP
 F4E3 00                 NOP
 F4E4 00                 NOP
-F4E5 21D610             LD      HL,PROGND       ; Start of program information
-F4E8 220C0C             LD      (ARG1),HL       ; Save for monitor save routine
-F4EB 2AD610             LD      HL,(PROGND)     ; End of program information
-F4EE 220E0C             LD      (ARG2),HL       ; Save for monitor save routine
-F4F1 CD73FE             CALL    SAVE            ; Save program to tape
-F4F4 CDD8FC             CALL    ARET            ; Not much there!
+F4E5 21D610             LD      HL,<a href="../../../24/24/text/#PROGND">PROGND</a>       ; Start of program information
+F4E8 220C0C             LD      (<a href="../../../24/23/text/#ARG1">ARG1</a>),HL       ; Save for monitor save routine
+F4EB 2AD610             LD      HL,(<a href="../../../24/24/text/#PROGND">PROGND</a>)     ; End of program information
+F4EE 220E0C             LD      (<a href="../../../24/23/text/#ARG2">ARG2</a>),HL       ; Save for monitor save routine
+F4F1 CD73FE             CALL    <a href="../../../33/27/text/#SAVE">SAVE</a>            ; Save program to tape
+F4F4 CDD8FC             CALL    <a href="../../../33/25/text/#ARET">ARET</a>            ; Not much there!
 F4F7 E1                 POP     HL              ; Restore code string address
 F4F8 C9                 RET
 </pre>
@@ -198,62 +198,62 @@ F4F8 C9                 RET
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    70</span>
 
-<span id="F4F9">F4F9 7E         CLOAD:  LD      A,(HL)          ; Get byte after "CLOAD"</span>
-F4FA FEAE               CP      ZTIMES          ; "*" token? ("CLOAD*")
-F4FC CAB9E8             JP      Z,ARRLD1        ; Yes - Array load
-F4FF CDD1FF             CALL    SMOTOR          ; Start motor and get "?"
-F502 D69E               SUB     ZPRINT          ; "?" ("PRINT" token) Verify?
-F504 CA09F5             JP      Z,FLGVER        ; Yes - Flag "verify"
+<span id="F4F9">F4F9</span> 7E         <span id="CLOAD"><a href="#CLOAD">CLOAD</a></span>:  LD      A,(HL)          ; Get byte after "CLOAD"
+F4FA FEAE               CP      <a href="../../../24/28/text/#ZTIMES">ZTIMES</a>          ; "*" token? ("<a href="../../../31/31/text/#CLOAD">CLOAD</a>*")
+F4FC CAB9E8             JP      Z,<a href="../../../25/35/text/#ARRLD1">ARRLD1</a>        ; Yes - Array load
+F4FF CDD1FF             CALL    <a href="../../../33/29/text/#SMOTOR">SMOTOR</a>          ; Start motor and get "?"
+F502 D69E               SUB     <a href="../../../24/28/text/#ZPRINT">ZPRINT</a>          ; "?" ("<a href="../../../26/31/text/#PRINT">PRINT</a>" token) Verify?
+F504 CA09F5             JP      Z,<a href="../../../31/31/text/#FLGVER">FLGVER</a>        ; Yes - Flag "verify"
 F507 AF                 XOR     A               ; Flag "load"
 F508 01                 DEFB    (LD BC,nn)      ; Skip "CPL" and "INC HL"
-F509 2F         FLGVER: CPL                     ; Flag "verify"
+<span id="F509">F509</span> 2F         <span id="FLGVER"><a href="#FLGVER">FLGVER</a></span>: CPL                     ; Flag "verify"
 F50A 23                 INC     HL              ; Skip over "?"
 F50B F5                 PUSH    AF              ; Save verify flag
-F50C 2B                 DEC     HL              ; DEC 'cos GETCHR INCs
-F50D CD36E8             CALL    GETCHR          ; Get next character
+F50C 2B                 DEC     HL              ; DEC 'cos <a href="../../../25/34/text/#GETCHR">GETCHR</a> INCs
+F50D CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
 F510 3E00               LD      A,0             ; Any file will do
-F512 CA1CF5             JP      Z,ANYNAM        ; No name given - Any will do
-F515 CD5AED             CALL    EVAL            ; Evaluate expression
-F518 CD95F3             CALL    GTFLNM          ; Get file name
+F512 CA1CF5             JP      Z,<a href="../../../31/31/text/#ANYNAM">ANYNAM</a>        ; No name given - Any will do
+F515 CD5AED             CALL    <a href="../../../26/34/text/#EVAL">EVAL</a>            ; Evaluate expression
+F518 CD95F3             CALL    <a href="../../../31/29/text/#GTFLNM">GTFLNM</a>          ; Get file name
 F51B 1A                 LD      A,(DE)          ; Get first byte of name
-F51C 6F         ANYNAM: LD      L,A             ; Save name to find
+<span id="F51C">F51C</span> 6F         <span id="ANYNAM"><a href="#ANYNAM">ANYNAM</a></span>: LD      L,A             ; Save name to find
 F51D F1                 POP     AF              ; Get verify flag
 F51E F5                 PUSH    AF              ; And re-save
 F51F B7                 OR      A               ; Verify of load?
 F520 67                 LD      H,A
-F521 22E410             LD      (FPREG),HL      ; Save nam of file to find
-F524 CCBAE4             CALL    Z,CLRPTR        ; Load - Clear pointers
-F527 2AE410             LD      HL,(FPREG)      ; Get name of program to find
+F521 22E410             LD      (<a href="../../../24/24/text/#FPREG">FPREG</a>),HL      ; Save nam of file to find
+F524 CCBAE4             CALL    Z,<a href="../../../24/32/text/#CLRPTR">CLRPTR</a>        ; Load - Clear pointers
+F527 2AE410             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; Get name of program to find
 F52A EB                 EX      DE,HL           ; Name to DE
-F52B 0603       CLOAD1: LD      B,3             ; 3 Header bytes
-F52D CDB4F4     CLOAD2: CALL    RUART           ; Get a byte from UART
+<span id="F52B">F52B</span> 0603       <span id="CLOAD1"><a href="#CLOAD1">CLOAD1</a></span>: LD      B,3             ; 3 Header bytes
+<span id="F52D">F52D</span> CDB4F4     <span id="CLOAD2"><a href="#CLOAD2">CLOAD2</a></span>: CALL    <a href="../../../31/31/text/#RUART">RUART</a>           ; Get a byte from UART
 F530 D6D3               SUB     11010011B       ; Header byte?
-F532 C22BF5             JP      NZ,CLOAD1       ; Look for header
+F532 C22BF5             JP      NZ,<a href="../../../31/31/text/#CLOAD1">CLOAD1</a>       ; Look for header
 F535 05                 DEC     B               ; Count header bytes
-F536 C22DF5             JP      NZ,CLOAD2       ; More to find?
-F539 CDB4F4             CALL    RUART           ; Get name of file
-F53C CD74F5             CALL    FILFND          ; Display "file X found"
+F536 C22DF5             JP      NZ,<a href="../../../31/31/text/#CLOAD2">CLOAD2</a>       ; More to find?
+F539 CDB4F4             CALL    <a href="../../../31/31/text/#RUART">RUART</a>           ; Get name of file
+F53C CD74F5             CALL    <a href="../../../31/32/text/#FILFND">FILFND</a>          ; Display "file X found"
 F53F 1C                 INC     E               ; Any file name given?
 F540 1D                 DEC     E
-F541 CA48F5             JP      Z,THSFIL        ; No - This file will do
+F541 CA48F5             JP      Z,<a href="../../../31/31/text/#THSFIL">THSFIL</a>        ; No - This file will do
 F544 BB                 CP      E               ; Has file been found?
-F545 C22BF5             JP      NZ,CLOAD1       ; No - Look for another
-F548 00         THSFIL: NOP
+F545 C22BF5             JP      NZ,<a href="../../../31/31/text/#CLOAD1">CLOAD1</a>       ; No - Look for another
+<span id="F548">F548</span> 00         <span id="THSFIL"><a href="#THSFIL">THSFIL</a></span>: NOP
 F549 00                 NOP
 F54A 00                 NOP
 F54B F1                 POP     AF              ; Get verify flag
 F54C B7                 OR      A               ; Load or verify?
-F54D C25CF5             JP      NZ,CLOADV       ; Verify program
-F550 CD88FE             CALL    MONLD           ; Use monitor to load program
-F553 2AD610             LD      HL,(PROGND)     ; Get end of program
-F556 CD93E3             CALL    ENFMEM          ; See if enough memory
-F559 C35FF5             JP      CLOADE          ; "Ok" and set up pointers
+F54D C25CF5             JP      NZ,<a href="../../../31/31/text/#CLOADV">CLOADV</a>       ; Verify program
+F550 CD88FE             CALL    <a href="../../../33/27/text/#MONLD">MONLD</a>           ; Use monitor to load program
+F553 2AD610             LD      HL,(<a href="../../../24/24/text/#PROGND">PROGND</a>)     ; Get end of program
+F556 CD93E3             CALL    <a href="../../../24/30/text/#ENFMEM">ENFMEM</a>          ; See if enough memory
+F559 C35FF5             JP      <a href="../../../31/31/text/#CLOADE">CLOADE</a>          ; "Ok" and set up pointers
 
-F55C CDAAFE     CLOADV: CALL    MONVE           ; Use monitor to verify program
-F55F 214BE3     CLOADE: LD      HL,OKMSG        ; "Ok" message
-F562 CD10F2             CALL    PRS             ; Output string
-F565 CDD8FC             CALL    ARET            ; Not a lot there!
-F568 C37CE4             JP      SETPTR          ; Set up line pointers
+<span id="F55C">F55C</span> CDAAFE     <span id="CLOADV"><a href="#CLOADV">CLOADV</a></span>: CALL    <a href="../../../33/27/text/#MONVE">MONVE</a>           ; Use monitor to verify program
+<span id="F55F">F55F</span> 214BE3     <span id="CLOADE"><a href="#CLOADE">CLOADE</a></span>: LD      HL,<a href="../../../24/29/text/#OKMSG">OKMSG</a>        ; "Ok" message
+F562 CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output string
+F565 CDD8FC             CALL    <a href="../../../33/25/text/#ARET">ARET</a>            ; Not a lot there!
+F568 C37CE4             JP      <a href="../../../24/31/text/#SETPTR">SETPTR</a>          ; Set up line pointers
 </pre>
 <!-- 1 column: end --></div>
 </div>

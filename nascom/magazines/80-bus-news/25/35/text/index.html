@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,61 +138,61 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    31</span>
 
-<span id="E846">E846 EB         RESTOR: EX      DE,HL           ; Save code string address</span>
-E847 2A5E10             LD      HL,(BASTXT)     ; Point to start of program
-E84A CA5BE8             JP      Z,RESTNL        ; Just RESTORE - reset pointer
+<span id="E846">E846</span> EB         <span id="RESTOR"><a href="#RESTOR">RESTOR</a></span>: EX      DE,HL           ; Save code string address
+E847 2A5E10             LD      HL,(<a href="../../../24/24/text/#BASTXT">BASTXT</a>)     ; Point to start of program
+E84A CA5BE8             JP      Z,<a href="../../../25/35/text/#RESTNL">RESTNL</a>        ; Just RESTORE - reset pointer
 E84D EB                 EX      DE,HL           ; Restore code string address
-E84E CDA5E9             CALL    ATOH            ; Get line number to DE
+E84E CDA5E9             CALL    <a href="../../../25/36/text/#ATOH">ATOH</a>            ; Get line number to DE
 E851 E5                 PUSH    HL              ; Save code string address
-E852 CD99E4             CALL    SRCHLN          ; Search for line number in DE
+E852 CD99E4             CALL    <a href="../../../24/32/text/#SRCHLN">SRCHLN</a>          ; Search for line number in DE
 E855 60                 LD      H,B             ; HL = Address of line
 E856 69                 LD      L,C
 E857 D1                 POP     DE              ; Restore code string address
-E858 D246EA             JP      NC,ULERR        ; ?UL Error if not found
-E85B 2B         RESTNL: DEC     HL              ; Byte before DATA statement
-E85C 22DC10     UPDATA: LD      (NXTDAT),HL     ; Update DATA pointer
+E858 D246EA             JP      NC,<a href="../../../25/37/text/#ULERR">ULERR</a>        ; ?<a href="../../../24/24/text/#UL">UL</a> Error if not found
+<span id="E85B">E85B</span> 2B         <span id="RESTNL"><a href="#RESTNL">RESTNL</a></span>: DEC     HL              ; Byte before <a href="../../../25/38/text/#DATA">DATA</a> statement
+<span id="E85C">E85C</span> 22DC10     <span id="UPDATA"><a href="#UPDATA">UPDATA</a></span>: LD      (<a href="../../../24/24/text/#NXTDAT">NXTDAT</a>),HL     ; Update DATA pointer
 E85F EB                 EX      DE,HL           ; Restore code string address
 E860 C9                 RET
 
-E861 CD40FD     TSTBRK: CALL    CHKBRK          ; Test for interrupts
+<span id="E861">E861</span> CD40FD     <span id="TSTBRK"><a href="#TSTBRK">TSTBRK</a></span>: CALL    <a href="../../../33/25/text/#CHKBRK">CHKBRK</a>          ; Test for interrupts
 E864 B7                 OR      A
 E865 C8                 RET     Z               ; Return if no key pressed
-E866 CDCCE6     STALL:  CALL    CLOTST          ; Get input and test for ^O
-E869 FE13               CP      CTRLS           ; Is it control "S"
-E86B CCCCE6             CALL    Z,CLOTST        ; Yes - Get another character
-E86E FE03               CP      CTRLC           ; Return if not control "C"
-<span id="E870">E870 C0         STOP:   RET     NZ              ; Exit if anything else</span>
-E871 F6                 DEFB    (OR n)          ; Flag "STOP"
-<span id="E872">E872 C0         PEND:   RET     NZ              ; Exit if anything else</span>
-E873 22CE10             LD      (BRKLIN),HL     ; Save point of break
+<span id="E866">E866</span> CDCCE6     <span id="STALL"><a href="#STALL">STALL</a></span>:  CALL    <a href="../../../25/32/text/#CLOTST">CLOTST</a>          ; Get input and test for ^O
+E869 FE13               CP      <a href="../../../24/23/text/#CTRLS">CTRLS</a>           ; Is it control "S"
+E86B CCCCE6             CALL    Z,<a href="../../../25/32/text/#CLOTST">CLOTST</a>        ; Yes - Get another character
+E86E FE03               CP      <a href="../../../24/23/text/#CTRLC">CTRLC</a>           ; Return if not control "C"
+<span id="E870">E870</span> C0         <span id="STOP"><a href="#STOP">STOP</a></span>:   RET     NZ              ; Exit if anything else
+E871 F6                 DEFB    (OR n)          ; Flag "<a href="../../../25/35/text/#STOP">STOP</a>"
+<span id="E872">E872</span> C0         <span id="PEND"><a href="#PEND">PEND</a></span>:   RET     NZ              ; Exit if anything else
+E873 22CE10             LD      (<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>),HL     ; Save point of break
 E876 21                 DEFB    (LD HL,nn)      ; Skip "OR 11111111B"
-E877 F6FF       INPBRK: OR      11111111B       ; Flag "Break" wanted
+<span id="E877">E877</span> F6FF       <span id="INPBRK"><a href="#INPBRK">INPBRK</a></span>: OR      11111111B       ; Flag "Break" wanted
 E879 C1                 POP     BC              ; Return not needed and more
-E87A 2A5C10     ENDPRG: LD      HL,(LINEAT)     ; Get current line number
-E87D F5                 PUSH    AF              ; Save STOP / END status
+<span id="E87A">E87A</span> 2A5C10     <span id="ENDPRG"><a href="#ENDPRG">ENDPRG</a></span>: LD      HL,(<a href="../../../24/24/text/#LINEAT">LINEAT</a>)     ; Get current line number
+E87D F5                 PUSH    AF              ; Save <a href="../../../25/35/text/#STOP">STOP</a> / END status
 E87E 7D                 LD      A,L             ; Is it direct break?
 E87F A4                 AND     H
 E880 3C                 INC     A               ; Line is -1 if direct break
-E881 CA8DE8             JP      Z,NOLIN         ; Yes - No line number
-E884 22D210             LD      (ERRLIN),HL     ; Save line of break
-E887 2ACE10             LD      HL,(BRKLIN)     ; Get point of break
-E88A 22D410             LD      (CONTAD),HL     ; Save point to CONTinue
-E88D AF         NOLIN:  XOR     A
-E88E 324510             LD      (CTLOFG),A      ; Enable output
-E891 CD74EB             CALL    STTLIN          ; Start a new line
-E894 F1                 POP     AF              ; Restore STOP / END status
-E895 2150E3             LD      HL,BRKMSG       ; "Break" message
-E898 C2E1E3             JP      NZ,ERRIN        ; "in line" wanted?
-E89B C3F8E3             JP      PRNTOK          ; Go to command mode
+E881 CA8DE8             JP      Z,<a href="../../../25/35/text/#NOLIN">NOLIN</a>         ; Yes - No line number
+E884 22D210             LD      (<a href="../../../24/24/text/#ERRLIN">ERRLIN</a>),HL     ; Save line of break
+E887 2ACE10             LD      HL,(<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>)     ; Get point of break
+E88A 22D410             LD      (<a href="../../../24/24/text/#CONTAD">CONTAD</a>),HL     ; Save point to CONTinue
+<span id="E88D">E88D</span> AF         <span id="NOLIN"><a href="#NOLIN">NOLIN</a></span>:  XOR     A
+E88E 324510             LD      (<a href="../../../24/24/text/#CTLOFG">CTLOFG</a>),A      ; Enable output
+E891 CD74EB             CALL    <a href="../../../26/31/text/#STTLIN">STTLIN</a>          ; Start a new line
+E894 F1                 POP     AF              ; Restore <a href="../../../25/35/text/#STOP">STOP</a> / END status
+E895 2150E3             LD      HL,<a href="../../../24/29/text/#BRKMSG">BRKMSG</a>       ; "Break" message
+E898 C2E1E3             JP      NZ,<a href="../../../24/30/text/#ERRIN">ERRIN</a>        ; "in line" wanted?
+E89B C3F8E3             JP      <a href="../../../24/31/text/#PRNTOK">PRNTOK</a>          ; Go to command mode
 
-<span id="E89E">E89E 2AD410     CONT:   LD      HL,(CONTAD)     ; Get CONTinue address</span>
+<span id="E89E">E89E</span> 2AD410     <span id="CONT"><a href="#CONT">CONT</a></span>:   LD      HL,(<a href="../../../24/24/text/#CONTAD">CONTAD</a>)     ; Get CONTinue address
 E8A1 7C                 LD      A,H             ; Is it zero?
 E8A2 B5                 OR      L
-E8A3 1E20               LD      E,CN            ; ?CN Error
-E8A5 CAC1E3             JP      Z,ERROR         ; Yes - output "?CN Error"
+E8A3 1E20               LD      E,<a href="../../../24/24/text/#CN">CN</a>            ; ?CN Error
+E8A5 CAC1E3             JP      Z,<a href="../../../24/30/text/#ERROR">ERROR</a>         ; Yes - output "?CN Error"
 E8A8 EB                 EX      DE,HL           ; Save code string address
-E8A9 2AD210             LD      HL,(ERRLIN)     ; Get line of last break
-E8AC 225C10             LD      (LINEAT),HL     ; Set up current line number
+E8A9 2AD210             LD      HL,(<a href="../../../24/24/text/#ERRLIN">ERRLIN</a>)     ; Get line of last break
+E8AC 225C10             LD      (<a href="../../../24/24/text/#LINEAT">LINEAT</a>),HL     ; Set up current line number
 E8AF EB                 EX      DE,HL           ; Restore code string address
 E8B0 C9                 RET                     ; CONTinue where left off
 </pre>
@@ -200,29 +200,29 @@ E8B0 C9                 RET                     ; CONTinue where left off
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    32</span>
 
-<span id="E8B1">E8B1 CD84F4     NULL:   CALL    GETINT          ; Get integer 0-255</span>
+<span id="E8B1">E8B1</span> CD84F4     <span id="NULL"><a href="#NULL">NULL</a></span>:   CALL    <a href="../../../31/30/text/#GETINT">GETINT</a>          ; Get integer 0-255
 E8B4 C0                 RET     NZ              ; Return if bad value
-E8B5 324110             LD      (NULLS),A       ; Set nulls number
+E8B5 324110             LD      (<a href="../../../24/24/text/#NULLS">NULLS</a>),A       ; Set nulls number
 E8B8 C9                 RET
 
-E8B9 06FF       ARRLD1: LD      B,-1            ; Flag array load
-E8BB CD36E8     ARRSV1: CALL    GETCHR          ; Skip "*"
-E8BE 78                 LD      A,B             ; CLOAD* or CSAVE*
-E8BF 32CE10             LD      (BRKLIN),A      ; Save it
+<span id="E8B9">E8B9</span> 06FF       <span id="ARRLD1"><a href="#ARRLD1">ARRLD1</a></span>: LD      B,-1            ; Flag array load
+<span id="E8BB">E8BB</span> CD36E8     <span id="ARRSV1"><a href="#ARRSV1">ARRSV1</a></span>: CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Skip "*"
+E8BE 78                 LD      A,B             ; <a href="../../../31/31/text/#CLOAD">CLOAD</a>* or <a href="../../../31/31/text/#CSAVE">CSAVE</a>*
+E8BF 32CE10             LD      (<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>),A      ; Save it
 E8C2 3E01               LD      A,1             ; It's an array
-E8C4 32CB10             LD      (FORFLG),A      ; Flag array name
-E8C7 CD2DEF             CALL    GETVAR          ; Get address of array name
+E8C4 32CB10             LD      (<a href="../../../24/24/text/#FORFLG">FORFLG</a>),A      ; Flag array name
+E8C7 CD2DEF             CALL    <a href="../../../26/37/text/#GETVAR">GETVAR</a>          ; Get address of array name
 E8CA E5                 PUSH    HL              ; Save code string address
-E8CB 32CB10             LD      (FORFLG),A      ; Clear flag
+E8CB 32CB10             LD      (<a href="../../../24/24/text/#FORFLG">FORFLG</a>),A      ; Clear flag
 E8CE 60                 LD      H,B             ; Address of array to HL
 E8CF 69                 LD      L,C
 E8D0 0B                 DEC     BC              ; Back space
 E8D1 0B                 DEC     BC              ;  to point
 E8D2 0B                 DEC     BC              ;  to the
 E8D3 0B                 DEC     BC              ; array name
-E8D4 3ACE10             LD      A,(BRKLIN)      ; CLOAD* or CSAVE* ?
+E8D4 3ACE10             LD      A,(<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>)      ; <a href="../../../31/31/text/#CLOAD">CLOAD</a>* or <a href="../../../31/31/text/#CSAVE">CSAVE</a>* ?
 E8D7 B7                 OR      A
-E8D8 F5                 PUSH    AF              ; Save CLOAD* / CSAVE* status
+E8D8 F5                 PUSH    AF              ; Save <a href="../../../31/31/text/#CLOAD">CLOAD</a>* / <a href="../../../31/31/text/#CSAVE">CSAVE</a>* status
 E8D9 EB                 EX      DE,HL           ; Array data length
 E8DA 19                 ADD     HL,DE           ; End of data
 E8DB EB                 EX      DE,HL           ; To DE
@@ -234,27 +234,27 @@ E8E1 23                 INC     HL              ; Over number of dimensions
 E8E2 E5                 PUSH    HL              ; Address of array data
 E8E3 D5                 PUSH    DE              ; End of array data
 E8E4 C5                 PUSH    BC              ; Number of dimensions
-E8E5 3ACE10             LD      A,(BRKLIN)      ; CLOAD* or CSAVE* ?
+E8E5 3ACE10             LD      A,(<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>)      ; <a href="../../../31/31/text/#CLOAD">CLOAD</a>* or <a href="../../../31/31/text/#CSAVE">CSAVE</a>* ?
 E8E8 FEFF               CP      -1
-E8EA CCD5FC             CALL    Z,CASFF         ; CLOAD* - Cassette on
-E8ED 3ACE10             LD      A,(BRKLIN)      ; CLOAD* or CSAVE* ?
+E8EA CCD5FC             CALL    Z,<a href="../../../33/25/text/#CASFF">CASFF</a>         ; <a href="../../../31/31/text/#CLOAD">CLOAD</a>* - Cassette on
+E8ED 3ACE10             LD      A,(<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>)      ; <a href="../../../31/31/text/#CLOAD">CLOAD</a>* or <a href="../../../31/31/text/#CSAVE">CSAVE</a>* ?
 E8F0 FEFF               CP      -1
-E8F2 C4C8FC             CALL    NZ,CASFFW       ; CSAVE* - Cassette on and wait
+E8F2 C4C8FC             CALL    NZ,<a href="../../../33/25/text/#CASFFW">CASFFW</a>       ; <a href="../../../31/31/text/#CSAVE">CSAVE</a>* - Cassette on and wait
 E8F5 00                 NOP
 E8F6 00                 NOP
 E8F7 00                 NOP
 E8F8 210000             LD      HL,0
-E8FB 224A10             LD      (CHKSUM),HL     ; Zero check sum
+E8FB 224A10             LD      (<a href="../../../24/24/text/#CHKSUM">CHKSUM</a>),HL     ; Zero check sum
 E8FE C1                 POP     BC              ; Number of dimensions
 E8FF D1                 POP     DE              ; End of array data
 E900 E1                 POP     HL              ; Address of array data
 E901 06D2               LD      B,11010010B     ; Header byte
-E903 C3D6FF             JP      JPLDSV          ; CSAVE-SNDHDR&nbsp;, CLOAD-GETHDR
+E903 C3D6FF             JP      <a href="../../../33/29/text/#JPLDSV">JPLDSV</a>          ; <a href="../../../31/31/text/#CSAVE">CSAVE</a>-<a href="../../../25/35/text/#SNDHDR">SNDHDR</a>&nbsp;, <a href="../../../31/31/text/#CLOAD">CLOAD</a>-<a href="../../../25/36/text/#GETHDR">GETHDR</a>
 
-E906 78         SNDHDR: LD      A,B             ; Get header byte
-E907 CDB7F4             CALL    WUART2          ; Send 2 bytes to UART
-E90A CDB7F4             CALL    WUART2          ; Send 2 bytes to UART
-E90D C31DE9             JP      SNDARY          ; Send array data
+<span id="E906">E906</span> 78         <span id="SNDHDR"><a href="#SNDHDR">SNDHDR</a></span>: LD      A,B             ; Get header byte
+E907 CDB7F4             CALL    <a href="../../../31/31/text/#WUART2">WUART2</a>          ; Send 2 bytes to UART
+E90A CDB7F4             CALL    <a href="../../../31/31/text/#WUART2">WUART2</a>          ; Send 2 bytes to UART
+E90D C31DE9             JP      <a href="../../../25/36/text/#SNDARY">SNDARY</a>          ; Send array data
 </pre>
 <!-- 1 column: end --></div>
 </div>

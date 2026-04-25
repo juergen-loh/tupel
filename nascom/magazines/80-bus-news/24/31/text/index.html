@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,69 +138,69 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    16</span>
 
-<span id="E3F8">E3F8 AF         PRNTOK: XOR     A               ; Output "Ok" and get command</span>
-E3F9 324510             LD      (CTLOFG),A      ; Enable output
-E3FC CD74EB             CALL    STTLIN          ; Start new line
-E3FF 214BE3             LD      HL,OKMSG        ; "Ok" message
-E402 CD10F2             CALL    PRS             ; Output "Ok"
-<span id="E405">E405 21FFFF     GETCMD: LD      HL,-1           ; Flag direct mode</span>
-E408 225C10             LD      (LINEAT),HL     ; Save as current line
-E40B CDF2E5             CALL    GETLIN          ; Get an input line
-E40E DA05E4             JP      C,GETCMD        ; Get line again if break
-E411 CD36E8             CALL    GETCHR          ; Get first character
+<span id="E3F8">E3F8</span> AF         <span id="PRNTOK"><a href="#PRNTOK">PRNTOK</a></span>: XOR     A               ; Output "Ok" and get command
+E3F9 324510             LD      (<a href="../../../24/24/text/#CTLOFG">CTLOFG</a>),A      ; Enable output
+E3FC CD74EB             CALL    <a href="../../../26/31/text/#STTLIN">STTLIN</a>          ; Start new line
+E3FF 214BE3             LD      HL,<a href="../../../24/29/text/#OKMSG">OKMSG</a>        ; "Ok" message
+E402 CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output "Ok"
+<span id="E405">E405</span> 21FFFF     <span id="GETCMD"><a href="#GETCMD">GETCMD</a></span>: LD      HL,-1           ; Flag direct mode
+E408 225C10             LD      (<a href="../../../24/24/text/#LINEAT">LINEAT</a>),HL     ; Save as current line
+E40B CDF2E5             CALL    <a href="../../../24/34/text/#GETLIN">GETLIN</a>          ; Get an input line
+E40E DA05E4             JP      C,<a href="../../../24/31/text/#GETCMD">GETCMD</a>        ; Get line again if break
+E411 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get first character
 E414 3C                 INC     A               ; Test if end of line
 E415 3D                 DEC     A               ; Without affecting Carry
-E416 CA05E4             JP      Z,GETCMD        ; Nothing entered - Get another
+E416 CA05E4             JP      Z,<a href="../../../24/31/text/#GETCMD">GETCMD</a>        ; Nothing entered - Get another
 E419 F5                 PUSH    AF              ; Save Carry status
-E41A CDA5E9             CALL    ATOH            ; Get line number into DE
+E41A CDA5E9             CALL    <a href="../../../25/36/text/#ATOH">ATOH</a>            ; Get line number into DE
 E41D D5                 PUSH    DE              ; Save line number
-E41E CD09E5             CALL    CRUNCH          ; Tokenise rest of line
+E41E CD09E5             CALL    <a href="../../../24/33/text/#CRUNCH">CRUNCH</a>          ; Tokenise rest of line
 E421 47                 LD      B,A             ; Length of tokenised line
 E422 D1                 POP     DE              ; Restore line number
 E423 F1                 POP     AF              ; Restore Carry
-E424 D216E8             JP      NC,EXCUTE       ; No line number - Direct mode
+E424 D216E8             JP      NC,<a href="../../../25/34/text/#EXCUTE">EXCUTE</a>       ; No line number - Direct mode
 E427 D5                 PUSH    DE              ; Save line number
 E428 C5                 PUSH    BC              ; Save length of tokenised line
 E429 AF                 XOR     A
-E42A 32CC10             LD      (LSTBIN),A      ; Clear last byte input
-E42D CD36E8             CALL    GETCHR          ; Get next character
+E42A 32CC10             LD      (<a href="../../../24/24/text/#LSTBIN">LSTBIN</a>),A      ; Clear last byte input
+E42D CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
 E430 B7                 OR      A               ; Set flags
 E431 F5                 PUSH    AF              ; And save them
-E432 CD99E4             CALL    SRCHLN          ; Search for line number in DE
-E435 DA3EE4             JP      C,LINFND        ; Jump if line found
+E432 CD99E4             CALL    <a href="../../../24/32/text/#SRCHLN">SRCHLN</a>          ; Search for line number in DE
+E435 DA3EE4             JP      C,<a href="../../../24/31/text/#LINFND">LINFND</a>        ; Jump if line found
 E438 F1                 POP     AF              ; Get status
 E439 F5                 PUSH    AF              ; And re-save
-E43A CA46EA             JP      Z,ULERR         ; Nothing after number - Error
+E43A CA46EA             JP      Z,<a href="../../../25/37/text/#ULERR">ULERR</a>         ; Nothing after number - Error
 E43D B7                 OR      A               ; Clear Carry
-E43E C5         LINFND: PUSH    BC              ; Save address of line in prog
-E43F D255E4             JP      NC,INEWLN       ; Line not found - Insert new
+<span id="E43E">E43E</span> C5         <span id="LINFND"><a href="#LINFND">LINFND</a></span>: PUSH    BC              ; Save address of line in prog
+E43F D255E4             JP      NC,<a href="../../../24/31/text/#INEWLN">INEWLN</a>       ; Line not found - Insert new
 E442 EB                 EX      DE,HL           ; Next line address in DE
-E443 2AD610             LD      HL,(PROGND)     ; End of program
-E446 1A         SFTPRG: LD      A,(DE)          ; Shift rest of program down
+E443 2AD610             LD      HL,(<a href="../../../24/24/text/#PROGND">PROGND</a>)     ; End of program
+<span id="E446">E446</span> 1A         <span id="SFTPRG"><a href="#SFTPRG">SFTPRG</a></span>: LD      A,(DE)          ; Shift rest of program down
 E447 02                 LD      (BC),A
 E448 03                 INC     BC              ; Next destination
 E449 13                 INC     DE              ; Next source
-E44A CD8AE6             CALL    CPDEHL          ; All done?
-E44D C246E4             JP      NZ,SFTPRG       ; More to do
+E44A CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; All done?
+E44D C246E4             JP      NZ,<a href="../../../24/31/text/#SFTPRG">SFTPRG</a>       ; More to do
 E450 60                 LD      H,B             ; HL - New end of program
 E451 69                 LD      L,C
-E452 22D610             LD      (PROGND),HL     ; Update end of program
+E452 22D610             LD      (<a href="../../../24/24/text/#PROGND">PROGND</a>),HL     ; Update end of program
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    17</span>
 
-E455 D1         INEWLN: POP     DE              ; Get address of line,
+<span id="E455">E455</span> D1         <span id="INEWLN"><a href="#INEWLN">INEWLN</a></span>: POP     DE              ; Get address of line,
 E456 F1                 POP     AF              ; Get status
-E457 CA7CE4             JP      Z,SETPTR        ; No text - Set up pointers
-E45A 2AD610             LD      HL,(PROGND)     ; Get end of program
+E457 CA7CE4             JP      Z,<a href="../../../24/31/text/#SETPTR">SETPTR</a>        ; No text - Set up pointers
+E45A 2AD610             LD      HL,(<a href="../../../24/24/text/#PROGND">PROGND</a>)     ; Get end of program
 E45D E3                 EX      (SP),HL         ; Get length of input line
 E45E C1                 POP     BC              ; End of program to BC
 E45F 09                 ADD     HL,BC           ; Find new end
 E460 E5                 PUSH    HL              ; Save new end
-E461 CD79E3             CALL    MOVUP           ; Make space for line
+E461 CD79E3             CALL    <a href="../../../24/29/text/#MOVUP">MOVUP</a>           ; Make space for line
 E464 E1                 POP     HL              ; Restore new end
-E465 22D610             LD      (PROGND),HL     ; Update end of program pointer
+E465 22D610             LD      (<a href="../../../24/24/text/#PROGND">PROGND</a>),HL     ; Update end of program pointer
 E468 EB                 EX      DE,HL           ; Get line to move up in HL
 E469 74                 LD      (HL),H          ; Save MSB
 E46A D1                 POP     DE              ; Get new line number
@@ -210,34 +210,34 @@ E46D 73                 LD      (HL),E          ; Save LSB of line number
 E46E 23                 INC     HL
 E46F 72                 LD      (HL),D          ; Save MSB of line number
 E470 23                 INC     HL              ; To first byte in line
-E471 116110             LD      DE,BUFFER       ; Copy buffer to program
-E474 1A         MOVBUF: LD      A,(DE)          ; Get source
+E471 116110             LD      DE,<a href="../../../24/24/text/#BUFFER">BUFFER</a>       ; Copy buffer to program
+<span id="E474">E474</span> 1A         <span id="MOVBUF"><a href="#MOVBUF">MOVBUF</a></span>: LD      A,(DE)          ; Get source
 E475 77                 LD      (HL),A          ; Save destinations
 E476 23                 INC     HL              ; Next source
 E477 13                 INC     DE              ; Next destination
 E478 B7                 OR      A               ; Done?
-E479 C274E4             JP      NZ,MOVBUF       ; No - Repeat
-E47C CDC5E4     SETPTR: CALL    RUNFST          ; Set line pointers
+E479 C274E4             JP      NZ,<a href="../../../24/31/text/#MOVBUF">MOVBUF</a>       ; No - Repeat
+<span id="E47C">E47C</span> CDC5E4     <span id="SETPTR"><a href="#SETPTR">SETPTR</a></span>: CALL    <a href="../../../24/32/text/#RUNFST">RUNFST</a>          ; Set line pointers
 E47F 23                 INC     HL              ; To LSB of pointer
 E480 EB                 EX      DE,HL           ; Address to DE
-E481 62         PTRLP:  LD      H,D             ; Address to HL
+<span id="E481">E481</span> 62         <span id="PTRLP"><a href="#PTRLP">PTRLP</a></span>:  LD      H,D             ; Address to HL
 E482 6B                 LD      L,E
 E483 7E                 LD      A,(HL)          ; Get LSB of pointer
 E484 23                 INC     HL              ; To MSB of pointer
 E485 B6                 OR      (HL)            ; Compare with MSB pointer
-E486 CA05E4             JP      Z,GETCMD        ; Get command line if end
+E486 CA05E4             JP      Z,<a href="../../../24/31/text/#GETCMD">GETCMD</a>        ; Get command line if end
 E489 23                 INC     HL              ; To LSB of line number
 E48A 23                 INC     HL              ; Skip line number
 E48B 23                 INC     HL              ; Point to first byte in line
 E48C AF                 XOR     A               ; Looking for 00 byte
-E48D BE         FNDEND: CP      (HL)            ; Found end of line?
+<span id="E48D">E48D</span> BE         <span id="FNDEND"><a href="#FNDEND">FNDEND</a></span>: CP      (HL)            ; Found end of line?
 E48E 23                 INC     HL              ; Move to next byte
-E48F C28DE4             JP      NZ,FNDEND       ; No - Keep looking
+E48F C28DE4             JP      NZ,<a href="../../../24/31/text/#FNDEND">FNDEND</a>       ; No - Keep looking
 E492 EB                 EX      DE,HL           ; Next line address to HL
 E493 73                 LD      (HL),E          ; Save LSB of pointer
 E494 23                 INC     HL
 E495 72                 LD      (HL),D          ; Save MSB of pointer
-E496 C381E4             JP      PTRLP           ; Do next line
+E496 C381E4             JP      <a href="../../../24/31/text/#PTRLP">PTRLP</a>           ; Do next line
 </pre>
 <!-- 1 column: end --></div>
 </div>

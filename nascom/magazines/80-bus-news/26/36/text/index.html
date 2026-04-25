@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,35 +138,35 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    48</span>
 
-<span id="EE33">EE33 0600       FNOFST: LD      B,0             ; Get address of function</span>
+<span id="EE33">EE33</span> 0600       <span id="FNOFST"><a href="#FNOFST">FNOFST</a></span>: LD      B,0             ; Get address of function
 EE35 07                 RLCA                    ; Double function offset
 EE36 4F                 LD      C,A             ; BC = Offset in function table
 EE37 C5                 PUSH    BC              ; Save adjusted token value
-EE38 CD36E8             CALL    GETCHR          ; Get next character
+EE38 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
 EE3B 79                 LD      A,C             ; Get adjusted token value
-EE3C FE22               CP      2*(ZPOINT-ZSGN) ; Adjusted "POINT" token?
-EE3E CA79FF             JP      Z,POINTB        ; Yes - Do "POINT" (not POINTB)
-EE41 FE2D               CP      2*(ZLEFT-ZSGN)-1; Adj' LEFT$,RIGHT$ or MID$ ?
-EE43 DA5FEE             JP      C,FNVAL         ; No - Do function
-EE46 CD56ED             CALL    OPNPAR          ; Evaluate expression  (X,...
-EE49 CD90E6             CALL    CHKSYN          ; Make sure "," follows
+EE3C FE22               CP      2*(<a href="../../../24/28/text/#ZPOINT">ZPOINT</a>-<a href="../../../24/28/text/#ZSGN">ZSGN</a>) ; Adjusted "<a href="../../../24/24/text/#POINT">POINT</a>" token?
+EE3E CA79FF             JP      Z,<a href="../../../33/28/text/#POINTB">POINTB</a>        ; Yes - Do "<a href="../../../24/24/text/#POINT">POINT</a>" (not <a href="../../../33/28/text/#POINTB">POINTB</a>)
+EE41 FE2D               CP      2*(<a href="../../../24/28/text/#ZLEFT">ZLEFT</a>-<a href="../../../24/28/text/#ZSGN">ZSGN</a>)-1; Adj' <a href="../../../31/29/text/#LEFT">LEFT</a>$,<a href="../../../31/29/text/#RIGHT">RIGHT</a>$ or <a href="../../../31/30/text/#MID">MID</a>$ ?
+EE43 DA5FEE             JP      C,<a href="../../../26/36/text/#FNVAL">FNVAL</a>         ; No - Do function
+EE46 CD56ED             CALL    <a href="../../../26/34/text/#OPNPAR">OPNPAR</a>          ; Evaluate expression  (X,...
+EE49 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "," follows
 EE4C 2C                 DEFB    ","
-EE4D CD45ED             CALL    TSTSTR          ; Make sure it's a string
+EE4D CD45ED             CALL    <a href="../../../26/34/text/#TSTSTR">TSTSTR</a>          ; Make sure it's a string
 EE50 EB                 EX      DE,HL           ; Save code string address
-EE51 2AE410             LD      HL,(FPREG)      ; Get address of string
+EE51 2AE410             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; Get address of string
 EE54 E3                 EX      (SP),HL         ; Save address of string
 EE55 E5                 PUSH    HL              ; Save adjusted token value
 EE56 EB                 EX      DE,HL           ; Restore code string address
-EE57 CD84F4             CALL    GETINT          ; Get integer 0-255
+EE57 CD84F4             CALL    <a href="../../../31/30/text/#GETINT">GETINT</a>          ; Get integer 0-255
 EE5A EB                 EX      DE,HL           ; Save code string address
 EE5B E3                 EX      (SP),HL         ; Save integer,HL = adj' token
-EE5C C367EE             JP      GOFUNC          ; Jump to string function
+EE5C C367EE             JP      <a href="../../../26/36/text/#GOFUNC">GOFUNC</a>          ; Jump to string function
 
-EE5F CD09EE     FNVAL:  CALL    EVLPAR          ; Evaluate expression
+<span id="EE5F">EE5F</span> CD09EE     <span id="FNVAL"><a href="#FNVAL">FNVAL</a></span>:  CALL    <a href="../../../26/35/text/#EVLPAR">EVLPAR</a>          ; Evaluate expression
 EE62 E3                 EX      (SP),HL         ; HL = Adjusted token value
-EE63 111DEE             LD      DE,RETNUM       ; Return number from function
+EE63 111DEE             LD      DE,<a href="../../../26/35/text/#RETNUM">RETNUM</a>       ; Return number from function
 EE66 D5                 PUSH    DE              ; Save on stack
-EE67 010FE1     GOFUNC: LD      BC,FNCTAB       ; Function routine addresses
+<span id="EE67">EE67</span> 010FE1     <span id="GOFUNC"><a href="#GOFUNC">GOFUNC</a></span>: LD      BC,<a href="../../../24/26/text/#FNCTAB">FNCTAB</a>       ; Function routine addresses
 EE6A 09                 ADD     HL,BC           ; Point to right address
 EE6B 4E                 LD      C,(HL)          ; Get LSB of address
 EE6C 23                 INC     HL              ;
@@ -174,55 +174,55 @@ EE6D 66                 LD      H,(HL)          ; Get MSB of address
 EE6E 69                 LD      L,C             ; Address to HL
 EE6F E9                 JP      (HL)            ; Jump to function
 
-<span id="EE70">EE70 15         SGNEXP: DEC     D               ; Dee to flag negative exponent</span>
-EE71 FEAD               CP      ZMINUS          ; "-" token&nbsp;?
+<span id="EE70">EE70</span> 15         <span id="SGNEXP"><a href="#SGNEXP">SGNEXP</a></span>: DEC     D               ; Dee to flag negative exponent
+EE71 FEAD               CP      <a href="../../../24/28/text/#ZMINUS">ZMINUS</a>          ; "-" token&nbsp;?
 EE73 C8                 RET     Z               ; Yes - Return
-EE74 FE2D               CP      "-"             ; "-" ASCII&nbsp;?
+EE74 FE2D               CP      "-"             ; "-" ASCII ?
 EE76 C8                 RET     Z               ; Yes - Return
 EE77 14                 INC     D               ; Inc to flag positive exponent
-EE78 FE2B               CP      "+"             ; "+" ASCII&nbsp;?
+EE78 FE2B               CP      "+"             ; "+" ASCII ?
 EE7A C8                 RET     Z               ; Yes - Return
-EE7B FEAC               CP      ZPLUS           ; "+" token&nbsp;?
+EE7B FEAC               CP      <a href="../../../24/28/text/#ZPLUS">ZPLUS</a>           ; "+" token ?
 EE7D C8                 RET     Z               ; Yes - Return
-EE7E 2B                 DEC     HL              ; DEC 'cos GETCHR INCs
+EE7E 2B                 DEC     HL              ; DEC 'cos <a href="../../../25/34/text/#GETCHR">GETCHR</a> INCs
 EE7F C9                 RET                     ; Return "NZ"
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    49</span>
 
-EE80 F6         POR:    DEFB    (OR n)          ; Flag "OR"
-EE81 AF         PAND:   XOR     A               ; Flag "AND"
+<span id="EE80">EE80</span> F6         <span id="POR"><a href="#POR">POR</a></span>:    DEFB    (OR n)          ; Flag "OR"
+<span id="EE81">EE81</span> AF         <span id="PAND"><a href="#PAND">PAND</a></span>:   XOR     A               ; Flag "AND"
 EE82 F5                 PUSH    AF              ; Save "AND" / "OR" flag
-EE83 CD44ED             CALL    TSTNUM          ; Make sure it's a number
-EE86 CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
+EE83 CD44ED             CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure it's a number
+EE86 CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
 EE89 F1                 POP     AF              ; Restore "AND" / "OR" flag
 EE8A EB                 EX      DE,HL           ; &lt;- Get last
 EE8B C1                 POP     BC              ; &lt;-  value
 EE8C E3                 EX      (SP),HL         ; &lt;-  from
 EE8D EB                 EX      DE,HL           ; &lt;-  stack
-EE8E CD54F8             CALL    FPBCDE          ; Move last value to FPREG
+EE8E CD54F8             CALL    <a href="../../../32/25/text/#FPBCDE">FPBCDE</a>          ; Move last value to <a href="../../../24/24/text/#FPREG">FPREG</a>
 EE91 F5                 PUSH    AF              ; Save "AND" / "OR" flag
-EE92 CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
+EE92 CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
 EE95 F1                 POP     AF              ; Restore "AND" / "OR" flag
 EE96 C1                 POP     BC              ; Get value
 EE97 79                 LD      A,C             ; Get LSB
-EE98 21F1F0             LD      HL,ACPASS       ; Address of save AC as current
-EE9B C2A3EE             JP      NZ,POR1         ; Jump if OR
+EE98 21F1F0             LD      HL,<a href="../../../31/25/text/#ACPASS">ACPASS</a>       ; Address of save AC as current
+EE9B C2A3EE             JP      NZ,<a href="../../../26/36/text/#POR1">POR1</a>         ; Jump if OR
 EE9E A3                 AND     E               ; "AND" LSBs
 EE9F 4F                 LD      C,A             ; Save LSB
 EEA0 78                 LD      A,B             ; Get MBS
 EEA1 A2                 AND     D               ; "AND" MSBs
-EEA2 E9                 JP      (HL)            ; Save AC as current (ACPASS)
+EEA2 E9                 JP      (HL)            ; Save AC as current (<a href="../../../31/25/text/#ACPASS">ACPASS</a>)
 
-EEA3 B3         POR1:   OR      E               ; "OR" LSBs
+<span id="EEA3">EEA3</span> B3         <span id="POR1"><a href="#POR1">POR1</a></span>:   OR      E               ; "OR" LSBs
 EEA4 4F                 LD      C,A             ; Save LSB
 EEA5 78                 LD      A,B             ; Get MSB
 EEA6 B2                 OR      D               ; "OR" MSBs
-EEA7 E9                 JP      (HL)            ; Save AC as current (ACPASS)
+EEA7 E9                 JP      (HL)            ; Save AC as current (<a href="../../../31/25/text/#ACPASS">ACPASS</a>)
 
-EEA8 21BAEE     TSTRED: LD      HL,CMPLOG       ; Logical compare routine
-EEAB 3AAD10             LD      A,(TYPE)        ; Get data type
+<span id="EEA8">EEA8</span> 21BAEE     <span id="TSTRED"><a href="#TSTRED">TSTRED</a></span>: LD      HL,<a href="../../../26/37/text/#CMPLOG">CMPLOG</a>       ; Logical compare routine
+EEAB 3AAD10             LD      A,(<a href="../../../24/24/text/#TYPE">TYPE</a>)        ; Get data type
 EEAE 1F                 RRA                     ; Carry set = string
 EEAF 7A                 LD      A,D             ; Get last precedence value
 EEB0 17                 RLA                     ; Times 2 plus carry
@@ -231,7 +231,7 @@ EEB2 1664               LD      D,64H           ; Relational precedence
 EEB4 78                 LD      A,B             ; Get current precedence
 EEB5 BA                 CP      D               ; Compare with last
 EEB6 D0                 RET     NC              ; Eval if last was rel' or log'
-EEB7 C3BAED             JP      STKTHS          ; Stack this one and get next
+EEB7 C3BAED             JP      <a href="../../../26/35/text/#STKTHS">STKTHS</a>          ; Stack this one and get next
 </pre>
 <!-- 1 column: end --></div>
 </div>

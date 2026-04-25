@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,61 +138,61 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    4</span>
 
-E000 C303E0     START:  JP      STARTB          ; Jump for restart jump
-E003 F3         STARTB: DI                      ; No interrupts
+<span id="E000">E000</span> C303E0     <span id="START"><a href="#START">START</a></span>:  JP      <a href="../../../24/25/text/#STARTB">STARTB</a>          ; Jump for restart jump
+<span id="E003">E003</span> F3         <span id="STARTB"><a href="#STARTB">STARTB</a></span>: DI                      ; No interrupts
 E004 DD210000           LD      IX,0            ; Flag cold start
-E008 C312E0             JP      CSTART          ; Jump to initialise
+E008 C312E0             JP      <a href="../../../24/25/text/#CSTART">CSTART</a>          ; Jump to initialise
 
-E00B 8BE9               DEFW    DEINT           ; Get integer -32768 to 32767
-E00D F2F0               DEFW    ABPASS          ; Return integer in AB
+E00B 8BE9               DEFW    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
+E00D F2F0               DEFW    <a href="../../../31/25/text/#ABPASS">ABPASS</a>          ; Return integer in AB
 
-E00F C33CE7             JP      LDNMI1          ; &lt;&lt; NO REFERENCE TO HERE &gt;&gt;
+E00F C33CE7             JP      <a href="../../../25/33/text/#LDNMI1">LDNMI1</a>          ; &lt;&lt; NO REFERENCE TO HERE &gt;&gt;
 
-E012 210010     CSTART: LD      HL,WRKSPC       ; Start of workspace RAM
+<span id="E012">E012</span> 210010     <span id="CSTART"><a href="#CSTART">CSTART</a></span>: LD      HL,<a href="../../../24/24/text/#WRKSPC">WRKSPC</a>       ; Start of workspace RAM
 E015 F9                 LD      SP,HL           ; Set up a temporary stack
-E016 C3BBFE             JP      INITST          ; Go to initialise
+E016 C3BBFE             JP      <a href="../../../33/27/text/#INITST">INITST</a>          ; Go to initialise
 
-<span id="E019">E019 11DFE2     INIT:   LD      DE,INITAB       ; Initialise workspace</span>
-E01C 0663               LD      B,INITBE-INITAB+3; Bytes to copy
-E01E 210010             LD      HL,WRKSPC       ; Into workspace RAM
-E021 1A         COPY:   LD      A,(DE)          ; Get source
+<span id="E019">E019</span> 11DFE2     <span id="INIT"><a href="#INIT">INIT</a></span>:   LD      DE,<a href="../../../24/29/text/#INITAB">INITAB</a>       ; Initialise workspace
+E01C 0663               LD      B,<a href="../../../24/29/text/#INITBE">INITBE</a>-<a href="../../../24/29/text/#INITAB">INITAB</a>+3; Bytes to copy
+E01E 210010             LD      HL,<a href="../../../24/24/text/#WRKSPC">WRKSPC</a>       ; Into workspace RAM
+<span id="E021">E021</span> 1A         <span id="COPY"><a href="#COPY">COPY</a></span>:   LD      A,(DE)          ; Get source
 E022 77                 LD      (HL),A          ; To destination
 E023 23                 INC     HL              ; Next destination
 E024 13                 INC     DE              ; Next source
 E025 05                 DEC     B               ; Count bytes
-E026 C221E0             JP      NZ,COPY         ; More to move
+E026 C221E0             JP      NZ,<a href="../../../24/25/text/#COPY">COPY</a>         ; More to move
 E029 F9                 LD      SP,HL           ; Temporary stack
-E02A CDDFE4             CALL    CLREG           ; Clear registers and stack
-E02D CD81EB             CALL    PRNTCR          ; Output CRLF
-E030 32AA10             LD      (BUFFER+72+1),A ; Mark end of buffer
-E033 32F910             LD      (PROGST),A      ; Initialise program area
-<span id="E036">E036 2103E1     MSIZE:  LD      HL,MEMMSG       ; Point to message</span>
-E039 CD10F2             CALL    PRS             ; Output "Memory size"
-E03C CDFCE4             CALL    PROMPT          ; Get input with "?"
-E03F CD36E8             CALL    GETCHR          ; Get next character
+E02A CDDFE4             CALL    <a href="../../../24/32/text/#CLREG">CLREG</a>           ; Clear registers and stack
+E02D CD81EB             CALL    <a href="../../../26/32/text/#PRNTCR">PRNTCR</a>          ; Output CRLF
+E030 32AA10             LD      (<a href="../../../24/24/text/#BUFFER">BUFFER</a>+72+1),A ; Mark end of buffer
+E033 32F910             LD      (<a href="../../../24/24/text/#PROGST">PROGST</a>),A      ; Initialise program area
+<span id="E036">E036</span> 2103E1     <span id="MSIZE"><a href="#MSIZE">MSIZE</a></span>:  LD      HL,<a href="../../../24/26/text/#MEMMSG">MEMMSG</a>       ; Point to message
+E039 CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output "Memory size"
+E03C CDFCE4             CALL    <a href="../../../24/32/text/#PROMPT">PROMPT</a>          ; Get input with "?"
+E03F CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
 E042 B7                 OR      A               ; Set flags
-E043 C25BE0             JP      NZ,TSTMEM       ; If number - Test if RAM there
-E046 215D11             LD      HL,STLOOK       ; Point to start of RAM
-E049 23         MLOOP:  INC     HL              ; Next byte
-E04A 7C                 LD      A,H             ; Above address FFFF&nbsp;?
+E043 C25BE0             JP      NZ,<a href="../../../24/25/text/#TSTMEM">TSTMEM</a>       ; If number - Test if RAM there
+E046 215D11             LD      HL,<a href="../../../24/24/text/#STLOOK">STLOOK</a>       ; Point to start of RAM
+<span id="E049">E049</span> 23         <span id="MLOOP"><a href="#MLOOP">MLOOP</a></span>:  INC     HL              ; Next byte
+E04A 7C                 LD      A,H             ; Above address FFFF ?
 E04B B5                 OR      L
-E04C CA6DE0             JP      Z,SETTOP        ; Yes - 64K RAM
+E04C CA6DE0             JP      Z,<a href="../../../24/25/text/#SETTOP">SETTOP</a>        ; Yes - 64K RAM
 E04F 7E                 LD      A,(HL)          ; Get contents
 E050 47                 LD      B,A             ; Save it
 E051 2F                 CPL                     ; Flip all bits
 E052 77                 LD      (HL),A          ; Put it back
 E053 BE                 CP      (HL)            ; RAM there if same
 E054 70                 LD      (HL),B          ; Restore old contents
-E055 CA49E0             JP      Z,MLOOP         ; If RAM - test next byte
-E058 C36DE0             JP      SETTOP          ; Top of RAM found
+E055 CA49E0             JP      Z,<a href="../../../24/25/text/#MLOOP">MLOOP</a>         ; If RAM - test next byte
+E058 C36DE0             JP      <a href="../../../24/25/text/#SETTOP">SETTOP</a>          ; Top of RAM found
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    5</span>
 
-<span id="E05B">E05B CDA5E9     TSTMEM: CALL    ATOH            ; Get high memory into DE</span>
+<span id="E05B">E05B</span> CDA5E9     <span id="TSTMEM"><a href="#TSTMEM">TSTMEM</a></span>: CALL    <a href="../../../25/36/text/#ATOH">ATOH</a>            ; Get high memory into DE
 E05E B7                 OR      A               ; Set flags on last byte
-E05F C2ADE3             JP      NZ,SNERR        ; ?SN Error if bad character
+E05F C2ADE3             JP      NZ,<a href="../../../24/30/text/#SNERR">SNERR</a>        ; ?<a href="../../../24/24/text/#SN">SN</a> Error if bad character
 E062 EB                 EX      DE,HL           ; Address into HL
 E063 2B                 DEC     HL              ; Back one byte
 E064 3ED9               LD      A,11011001B     ; Test byte
@@ -200,12 +200,12 @@ E066 46                 LD      B,(HL)          ; Get old contents
 E067 77                 LD      (HL),A          ; Load test byte
 E068 BE                 CP      (HL)            ; RAM there if same
 E069 70                 LD      (HL),B          ; Restore old contents
-E06A C236E0             JP      NZ,MSIZE        ; Ask again if no RAM
+E06A C236E0             JP      NZ,<a href="../../../24/25/text/#MSIZE">MSIZE</a>        ; Ask again if no RAM
 
-<span id="E06D">E06D 2B         SETTOP: DEC     HL              ; Back one byte</span>
-E06E 115C11             LD      DE,STLOOK-1     ; See if enough RAM
-E071 CD8AE6             CALL    CPDEHL          ; Compare DE with HL
-E074 DA36E0             JP      C,MSIZE         ; Ask again if not enough RAM
+<span id="E06D">E06D</span> 2B         <span id="SETTOP"><a href="#SETTOP">SETTOP</a></span>: DEC     HL              ; Back one byte
+E06E 115C11             LD      DE,<a href="../../../24/24/text/#STLOOK">STLOOK</a>-1     ; See if enough RAM
+E071 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Compare DE with HL
+E074 DA36E0             JP      C,<a href="../../../24/25/text/#MSIZE">MSIZE</a>         ; Ask again if not enough RAM
 E077 00                 NOP
 E078 00                 NOP
 E079 00                 NOP
@@ -216,14 +216,14 @@ E07D 00                 NOP
 E07E 00                 NOP
 E07F 00                 NOP
 E080 11CEFF             LD      DE,0-50         ; 50 Bytes string space
-E083 22AF10             LD      (LSTRAM),HL     ; Save last available RAM
+E083 22AF10             LD      (<a href="../../../24/24/text/#LSTRAM">LSTRAM</a>),HL     ; Save last available RAM
 E086 19                 ADD     HL,DE           ; Allocate string space
-E087 225A10             LD      (STRSPC),HL     ; Save string space
-E08A CDBAE4             CALL    CLRPTR          ; Clear program area
-E08D 2A5A10             LD      HL,(STRSPC)     ; Get end of memory
+E087 225A10             LD      (<a href="../../../24/24/text/#STRSPC">STRSPC</a>),HL     ; Save string space
+E08A CDBAE4             CALL    <a href="../../../24/32/text/#CLRPTR">CLRPTR</a>          ; Clear program area
+E08D 2A5A10             LD      HL,(<a href="../../../24/24/text/#STRSPC">STRSPC</a>)     ; Get end of memory
 E090 11EFFF             LD      DE,0-17         ; Offset for free bytes
 E093 19                 ADD     HL,DE           ; Adjust HL
-E094 11F910             LD      DE,PROGST       ; Start of program text
+E094 11F910             LD      DE,<a href="../../../24/24/text/#PROGST">PROGST</a>       ; Start of program text
 E097 7D                 LD      A,L             ; Get LSB
 E098 93                 SUB     E               ; Adjust it
 E099 6F                 LD      L,A             ; Re-save
@@ -231,16 +231,16 @@ E09A 7C                 LD      A,H             ; Get MSB
 E09B 9A                 SBC     A,D             ; Adjust it
 E09C 67                 LD      H,A             ; Re-save
 E09D E5                 PUSH    HL              ; Save bytes free
-E09E 21C5E0             LD      HL,SIGNON       ; Sign-on message
-E0A1 CD10F2             CALL    PRS             ; Output string
+E09E 21C5E0             LD      HL,<a href="../../../24/26/text/#SIGNON">SIGNON</a>       ; Sign-on message
+E0A1 CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output string
 E0A4 E1                 POP     HL              ; Get bytes free back
-E0A5 CDADF9             CALL    PRNTHL          ; Output amount of free memory
-E0A8 21B7E0             LD      HL,BFREE        ; " Bytes free" message
-E0AB CD10F2             CALL    PRS             ; Output string
+E0A5 CDADF9             CALL    <a href="../../../32/27/text/#PRNTHL">PRNTHL</a>          ; Output amount of free memory
+E0A8 21B7E0             LD      HL,<a href="../../../24/26/text/#BFREE">BFREE</a>        ; " Bytes free" message
+E0AB CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output string
 
-<span id="E0AE">E0AE 316610     WARMST: LD      SP,STACK        ; Temporary stack</span>
-E0B1 CDDFE4     BRKRET: CALL    CLREG           ; Clear registers and stack
-E0B4 C3F8E3             JP      PRNTOK          ; Go to get command line
+<span id="E0AE">E0AE</span> 316610     <span id="WARMST"><a href="#WARMST">WARMST</a></span>: LD      SP,<a href="../../../24/24/text/#STACK">STACK</a>        ; Temporary stack
+<span id="E0B1">E0B1</span> CDDFE4     <span id="BRKRET"><a href="#BRKRET">BRKRET</a></span>: CALL    <a href="../../../24/32/text/#CLREG">CLREG</a>           ; Clear registers and stack
+E0B4 C3F8E3             JP      <a href="../../../24/31/text/#PRNTOK">PRNTOK</a>          ; Go to get command line
 </pre>
 <!-- 1 column: end --></div>
 </div>

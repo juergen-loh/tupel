@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,7 +138,7 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    63</span>
 
-F2E1 D1         SCNEND: POP     DE              ; Addresses of strings
+<span id="F2E1">F2E1</span> D1         <span id="SCNEND"><a href="#SCNEND">SCNEND</a></span>: POP     DE              ; Addresses of strings
 F2E2 E1                 POP     HL              ;
 F2E3 7D                 LD      A,L             ; HL = 0 if no more to do
 F2E4 B4                 OR      H
@@ -158,8 +158,8 @@ F2F2 59                 LD      E,C
 F2F3 2B                 DEC     HL              ; Last byte in string
 F2F4 44                 LD      B,H             ; Address to BC
 F2F5 4D                 LD      C,L
-F2F6 2AC310             LD      HL,(STRBOT)     ; Current bottom of string area
-F2F9 CD7CE3             CALL    MOVSTR          ; Move string to new address
+F2F6 2AC310             LD      HL,(<a href="../../../24/24/text/#STRBOT">STRBOT</a>)     ; Current bottom of string area
+F2F9 CD7CE3             CALL    <a href="../../../24/29/text/#MOVSTR">MOVSTR</a>          ; Move string to new address
 F2FC E1                 POP     HL              ; Restore variable address
 F2FD 71                 LD      (HL),C          ; Save new LSB of address
 F2FE 23                 INC     HL
@@ -167,42 +167,42 @@ F2FF 70                 LD      (HL),B          ; Save new MSB of address
 F300 69                 LD      L,C             ; Next string area+1 to HL
 F301 60                 LD      H,B
 F302 2B                 DEC     HL              ; Next string area address
-F303 C356F2             JP      GARBLP          ; Look for more strings
+F303 C356F2             JP      <a href="../../../31/27/text/#GARBLP">GARBLP</a>          ; Look for more strings
 
-<span id="F306">F306 C5         CONCAT: PUSH    BC              ; Save prec' opr & code string</span>
+<span id="F306">F306</span> C5         <span id="CONCAT"><a href="#CONCAT">CONCAT</a></span>: PUSH    BC              ; Save prec' opr & code string
 F307 E5                 PUSH    HL              ;
-F308 2AE410             LD      HL,(FPREG)      ; Get first string
+F308 2AE410             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; Get first string
 F30B E3                 EX      (SP),HL         ; Save first string
-F30C CDD1ED             CALL    OPRND           ; Get second string
+F30C CDD1ED             CALL    <a href="../../../26/35/text/#OPRND">OPRND</a>           ; Get second string
 F30F E3                 EX      (SP),HL         ; Restore first string
-F310 CD45ED             CALL    TSTSTR          ; Make sure it's a string
+F310 CD45ED             CALL    <a href="../../../26/34/text/#TSTSTR">TSTSTR</a>          ; Make sure it's a string
 F313 7E                 LD      A,(HL)          ; Get length of second string
 F314 E5                 PUSH    HL              ; Save first string
-F315 2AE410             LD      HL,(FPREG)      ; Get second string
+F315 2AE410             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; Get second string
 F318 E5                 PUSH    HL              ; Save second string
 F319 86                 ADD     A,(HL)          ; Add length of second string
-F31A 1E1C               LD      E,LS            ; ?LS Error
-F31C DAC1E3             JP      C,ERROR         ; String too long - Error
-F31F CDBFF1             CALL    MKTMST          ; Make temporary string
+F31A 1E1C               LD      E,<a href="../../../24/24/text/#LS">LS</a>            ; ?<a href="../../../24/24/text/#LS">LS</a> Error
+F31C DAC1E3             JP      C,<a href="../../../24/30/text/#ERROR">ERROR</a>         ; String too long - Error
+F31F CDBFF1             CALL    <a href="../../../31/26/text/#MKTMST">MKTMST</a>          ; Make temporary string
 F322 D1                 POP     DE              ; Get second string to DE
-F323 CD57F3             CALL    GSTRDE          ; Move to string pool if needed
+F323 CD57F3             CALL    <a href="../../../31/28/text/#GSTRDE">GSTRDE</a>          ; Move to string pool if needed
 F326 E3                 EX      (SP),HL         ; Get first string
-F327 CD56F3             CALL    GSTRHL          ; Move to string pool if needed
+F327 CD56F3             CALL    <a href="../../../31/28/text/#GSTRHL">GSTRHL</a>          ; Move to string pool if needed
 F32A E5                 PUSH    HL              ; Save first string
-F32B 2AC110             LD      HL,(TMPSTR+2)   ; Temporary string address
+F32B 2AC110             LD      HL,(<a href="../../../24/24/text/#TMPSTR">TMPSTR</a>+2)   ; Temporary string address
 F32E EB                 EX      DE,HL           ; To DE
-F32F CD3DF3             CALL    SSTSA           ; First string to string area
-F332 CD3DF3             CALL    SSTSA           ; Second string to string area
-F335 2166ED             LD      HL,EVAL2        ; Return to evaluation loop
+F32F CD3DF3             CALL    <a href="../../../31/28/text/#SSTSA">SSTSA</a>           ; First string to string area
+F332 CD3DF3             CALL    <a href="../../../31/28/text/#SSTSA">SSTSA</a>           ; Second string to string area
+F335 2166ED             LD      HL,<a href="../../../26/34/text/#EVAL2">EVAL2</a>        ; Return to evaluation loop
 F338 E3                 EX      (SP),HL         ; Save return,get code string
 F339 E5                 PUSH    HL              ; Save code string address
-F33A C3F0F1             JP      TSTOPL          ; To temporary string to pool
+F33A C3F0F1             JP      <a href="../../../31/26/text/#TSTOPL">TSTOPL</a>          ; To temporary string to pool
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    64</span>
 
-F33D E1         SSTSA:  POP     HL              ; Return address
+<span id="F33D">F33D</span> E1         <span id="SSTSA"><a href="#SSTSA">SSTSA</a></span>:  POP     HL              ; Return address
 F33E E3                 EX      (SP),HL         ; Get string block,save return
 F33F 7E                 LD      A,(HL)          ; Get length of string
 F340 23                 INC     HL
@@ -211,19 +211,19 @@ F342 4E                 LD      C,(HL)          ; Get LSB of string address
 F343 23                 INC     HL
 F344 46                 LD      B,(HL)          ; Get MSB of string address
 F345 6F                 LD      L,A             ; Length to L
-F346 2C         TOSTRA: INC     L               ; INC - DECed after
-F347 2D         TSALP:  DEC     L               ; Count bytes moved
+<span id="F346">F346</span> 2C         <span id="TOSTRA"><a href="#TOSTRA">TOSTRA</a></span>: INC     L               ; INC - DECed after
+<span id="F347">F347</span> 2D         <span id="TSALP"><a href="#TSALP">TSALP</a></span>:  DEC     L               ; Count bytes moved
 F348 C8                 RET     Z               ; End of string - Return
 F349 0A                 LD      A,(BC)          ; Get source
 F34A 12                 LD      (DE),A          ; Save destination
 F34B 03                 INC     BC              ; Next source
 F34C 13                 INC     DE              ; Next destination
-F34D C347F3             JP      TSALP           ; Loop until string moved
+F34D C347F3             JP      <a href="../../../31/28/text/#TSALP">TSALP</a>           ; Loop until string moved
 
-<span id="F350">F350 CD45ED     GETSTR: CALL    TSTSTR          ; Make sure it's a string</span>
-F353 2AE410     GSTRCU: LD      HL,(FPREG)      ; Get current string
-F356 EB         GSTRHL: EX      DE,HL           ; Save DE
-F357 CD71F3     GSTRDE: CALL    BAKTMP          ; Was it last tmp-str?
+<span id="F350">F350</span> CD45ED     <span id="GETSTR"><a href="#GETSTR">GETSTR</a></span>: CALL    <a href="../../../26/34/text/#TSTSTR">TSTSTR</a>          ; Make sure it's a string
+<span id="F353">F353</span> 2AE410     <span id="GSTRCU"><a href="#GSTRCU">GSTRCU</a></span>: LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; Get current string
+<span id="F356">F356</span> EB         <span id="GSTRHL"><a href="#GSTRHL">GSTRHL</a></span>: EX      DE,HL           ; Save DE
+<span id="F357">F357</span> CD71F3     <span id="GSTRDE"><a href="#GSTRDE">GSTRDE</a></span>: CALL    <a href="../../../31/28/text/#BAKTMP">BAKTMP</a>          ; Was it last tmp-str?
 F35A EB                 EX      DE,HL           ; Restore DE
 F35B C0                 RET     NZ              ; No - Return
 F35C D5                 PUSH    DE              ; Save string
@@ -231,25 +231,25 @@ F35D 50                 LD      D,B             ; String block address to DE
 F35E 59                 LD      E,C
 F35F 1B                 DEC     DE              ; Point to length
 F360 4E                 LD      C,(HL)          ; Get string length
-F361 2AC310             LD      HL,(STRBOT)     ; Current bottom of string area
-F364 CD8AE6             CALL    CPDEHL          ; Last one in string area?
-F367 C26FF3             JP      NZ,POPHL        ; No - Return
+F361 2AC310             LD      HL,(<a href="../../../24/24/text/#STRBOT">STRBOT</a>)     ; Current bottom of string area
+F364 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Last one in string area?
+F367 C26FF3             JP      NZ,<a href="../../../31/28/text/#POPHL">POPHL</a>        ; No - Return
 F36A 47                 LD      B,A             ; Clear B (A=0)
 F36B 09                 ADD     HL,BC           ; Remove string from str' area
-F36C 22C310             LD      (STRBOT),HL     ; Save new bottom of str' area
-F36F E1         POPHL:  POP     HL              ; Restore string
+F36C 22C310             LD      (<a href="../../../24/24/text/#STRBOT">STRBOT</a>),HL     ; Save new bottom of str' area
+<span id="F36F">F36F</span> E1         <span id="POPHL"><a href="#POPHL">POPHL</a></span>:  POP     HL              ; Restore string
 F370 C9                 RET
 
-F371 2AB110     BAKTMP: LD      HL,(TMSTPT)     ; Get temporary string pool top
+<span id="F371">F371</span> 2AB110     <span id="BAKTMP"><a href="#BAKTMP">BAKTMP</a></span>: LD      HL,(<a href="../../../24/24/text/#TMSTPT">TMSTPT</a>)     ; Get temporary string pool top
 F374 2B                 DEC     HL              ; Back
 F375 46                 LD      B,(HL)          ; Get MSB of address
 F376 2B                 DEC     HL              ; Back
 F377 4E                 LD      C,(HL)          ; Get LSB of address
 F378 2B                 DEC     HL              ; Back
 F379 2B                 DEC     HL              ; Back
-F37A CD8AE6             CALL    CPDEHL          ; String last in string pool?
+F37A CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; String last in string pool?
 F37D C0                 RET     NZ              ; Yes - Leave it
-F37E 22B110             LD      (TMSTPT),HL     ; Save new string pool top
+F37E 22B110             LD      (<a href="../../../24/24/text/#TMSTPT">TMSTPT</a>),HL     ; Save new string pool top
 F381 C9                 RET
 </pre>
 <!-- 1 column: end --></div>

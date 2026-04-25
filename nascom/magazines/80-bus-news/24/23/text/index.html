@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -153,49 +153,49 @@ By Carl Lloyd&mdash;Parker
 
                 ; GENERAL EQUATES
 
-0001            UARTD   EQU     01H             ; UART data port
-0002            UARTS   EQU     02H             ; UART status port
-0003            CTRLC   EQU     03H             ; Control "C"
-0007            CTRLG   EQU     07H             ; Control "G"
-0008            BKSP    EQU     08H             ; Back space
-000A            LF      EQU     0AH             ; Line feed
-000C            CS      EQU     0CH             ; Clear screen
-000D            CR      EQU     0DH             ; Carriage return
-000F            CTRLO   EQU     0FH             ; Control "O"
-0012            CTRLR   EQU     12H             ; Control "R"
-0013            CTRLS   EQU     13H             ; Control "S"
-0015            CTRLU   EQU     15H             ; Control "U"
-001A            CTRLZ   EQU     1AH             ; Control "Z"
-001B            ESC     EQU     1BH             ; Escape
-001C            TBRK    EQU     1CH             ; "T" monitor break
-001D            TBS     EQU     1DH             ; "T" monitor back space
-001E            TCS     EQU     1EH             ; "T" monitor clear screen
-001F            TCR     EQU     1FH             ; "T" monitor carriage return
-007F            DEL     EQU     7FH             ; Delete
+<span id="0001">0001</span>            <span id="UARTD"><a href="#UARTD">UARTD</a></span>   EQU     01H             ; UART data port
+<span id="0002">0002</span>            <span id="UARTS"><a href="#UARTS">UARTS</a></span>   EQU     02H             ; UART status port
+<span id="0003">0003</span>            <span id="CTRLC"><a href="#CTRLC">CTRLC</a></span>   EQU     03H             ; Control "C"
+<span id="0007">0007</span>            <span id="CTRLG"><a href="#CTRLG">CTRLG</a></span>   EQU     07H             ; Control "G"
+<span id="0008">0008</span>            <span id="BKSP"><a href="#BKSP">BKSP</a></span>    EQU     08H             ; Back space
+<span id="000A">000A</span>            <span id="LF"><a href="#LF">LF</a></span>      EQU     0AH             ; Line feed
+<span id="000C">000C</span>            <span id="CS"><a href="#CS">CS</a></span>      EQU     0CH             ; Clear screen
+<span id="000D-CR">000D</span>            <span id="CR"><a href="#CR">CR</a></span>      EQU     0DH             ; Carriage return
+<span id="000F">000F</span>            <span id="CTRLO"><a href="#CTRLO">CTRLO</a></span>   EQU     0FH             ; Control "O"
+<span id="0012">0012</span>            <span id="CTRLR"><a href="#CTRLR">CTRLR</a></span>   EQU     12H             ; Control "R"
+<span id="0013">0013</span>            <span id="CTRLS"><a href="#CTRLS">CTRLS</a></span>   EQU     13H             ; Control "S"
+<span id="0015">0015</span>            <span id="CTRLU"><a href="#CTRLU">CTRLU</a></span>   EQU     15H             ; Control "U"
+<span id="001A">001A</span>            <span id="CTRLZ"><a href="#CTRLZ">CTRLZ</a></span>   EQU     1AH             ; Control "Z"
+<span id="001B">001B</span>            <span id="ESC"><a href="#ESC">ESC</a></span>     EQU     1BH             ; Escape
+<span id="001C">001C</span>            <span id="TBRK"><a href="#TBRK">TBRK</a></span>    EQU     1CH             ; "T" monitor break
+<span id="001D">001D</span>            <span id="TBS"><a href="#TBS">TBS</a></span>     EQU     1DH             ; "T" monitor back space
+<span id="001E">001E</span>            <span id="TCS"><a href="#TCS">TCS</a></span>     EQU     1EH             ; "T" monitor clear screen
+<span id="001F">001F</span>            <span id="TCR"><a href="#TCR">TCR</a></span>     EQU     1FH             ; "T" monitor carriage return
+<span id="007F">007F</span>            <span id="DEL"><a href="#DEL">DEL</a></span>     EQU     7FH             ; Delete
 
                 ; MONITOR LOCATIONS
 
-0000            MONSTT  EQU     0000H           ; Start of monitor
-000D            STMON   EQU     000DH           ; NAS-SYS initialisation
-0051            MFLP    EQU     0051H           ; Flip tape LED ("T")
-008D            MONTYP  EQU     008DH           ; Type of "T" monitor
-03D1            T2DUMP  EQU     03D1H           ; "T2" Dump routine
-0400            T4WR    EQU     0400H           ; "T4" Write routine
-070C            T4READ  EQU     070CH           ; "T4" Read routine
-0800            VDU     EQU     0800H           ; <span class="uppercase">Nascom</span> Video RAM base
+<span id="0000">0000</span>            <span id="MONSTT"><a href="#MONSTT">MONSTT</a></span>  EQU     0000H           ; Start of monitor
+<span id="000D">000D</span>            <span id="STMON"><a href="#STMON">STMON</a></span>   EQU     000DH           ; NAS-SYS initialisation
+<span id="0051">0051</span>            <span id="MFLP"><a href="#MFLP">MFLP</a></span>    EQU     0051H           ; Flip tape LED ("T")
+<span id="008D">008D</span>            <span id="MONTYP"><a href="#MONTYP">MONTYP</a></span>  EQU     008DH           ; Type of "T" monitor
+<span id="03D1">03D1</span>            <span id="T2DUMP"><a href="#T2DUMP">T2DUMP</a></span>  EQU     03D1H           ; "T2" Dump routine
+<span id="0400">0400</span>            <span id="T4WR"><a href="#T4WR">T4WR</a></span>    EQU     0400H           ; "T4" Write routine
+<span id="070C">070C</span>            <span id="T4READ"><a href="#T4READ">T4READ</a></span>  EQU     070CH           ; "T4" Read routine
+<span id="0800">0800</span>            <span id="VDU"><a href="#VDU">VDU</a></span>     EQU     0800H           ; <span class="uppercase">Nascom</span> Video RAM base
 
                 ; MONITOR WORK SPACE LOCATIONS
 
-0C00            PORT0   EQU     0C00H           ; Copy of output port 0
-0C0C            ARG1    EQU     0C0CH           ; Argument 1
-0C0E            ARG2    EQU     0C0EH           ; Argument 2
-0C18            TCUR    EQU     0C18H           ; "T" monitor cursor
-0C29            CURSOR  EQU     0C29H           ; NAS-SYS Cursor
-0C2B            ARGN    EQU     0C2BH           ; Number of ARGS
-0C4A            TOUT    EQU     0C4AH           ; "T" Output reflection
-0C4D            TIN     EQU     0C4DH           ; "T" Input reflection
-0C75            CIN     EQU     0C75H           ; NAS-SYS Input table
-0C7E            NMI     EQU     0C7EH           ; NAS-SYS NMI Jum
+<span id="0C00">0C00</span>            <span id="PORT0"><a href="#PORT0">PORT0</a></span>   EQU     0C00H           ; Copy of output port 0
+<span id="0C0C">0C0C</span>            <span id="ARG1"><a href="#ARG1">ARG1</a></span>    EQU     0C0CH           ; Argument 1
+<span id="0C0E">0C0E</span>            <span id="ARG2"><a href="#ARG2">ARG2</a></span>    EQU     0C0EH           ; Argument 2
+<span id="0C18">0C18</span>            <span id="TCUR"><a href="#TCUR">TCUR</a></span>    EQU     0C18H           ; "T" monitor cursor
+<span id="0C29">0C29</span>            <span id="CURSOR"><a href="#CURSOR">CURSOR</a></span>  EQU     0C29H           ; NAS-SYS Cursor
+<span id="0C2B">0C2B</span>            <span id="ARGN"><a href="#ARGN">ARGN</a></span>    EQU     0C2BH           ; Number of ARGS
+<span id="0C4A">0C4A</span>            <span id="TOUT"><a href="#TOUT">TOUT</a></span>    EQU     0C4AH           ; "T" Output reflection
+<span id="0C4D">0C4D</span>            <span id="TIN"><a href="#TIN">TIN</a></span>     EQU     0C4DH           ; "T" Input reflection
+<span id="0C75">0C75</span>            <span id="CIN"><a href="#CIN">CIN</a></span>     EQU     0C75H           ; NAS-SYS Input table
+<span id="0C7E">0C7E</span>            <span id="NMI"><a href="#NMI">NMI</a></span>     EQU     0C7EH           ; NAS-SYS <a href="../../../24/23/text/#NMI">NMI</a> Jum
 </pre>
 <!-- 1 column: end --></div>
 </div>

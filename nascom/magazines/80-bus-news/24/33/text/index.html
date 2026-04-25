@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,54 +138,54 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    20</span>
 
-<span id="E509">E509 AF         CRUNCH: XOR     A               ; Tokenise line @ HL to BUFFER</span>
-E50A 32AE10             LD      (DATFLG),A      ; Reset literal flag
+<span id="E509">E509</span> AF         <span id="CRUNCH"><a href="#CRUNCH">CRUNCH</a></span>: XOR     A               ; Tokenise line @ HL to <a href="../../../24/24/text/#BUFFER">BUFFER</a>
+E50A 32AE10             LD      (<a href="../../../24/24/text/#DATFLG">DATFLG</a>),A      ; Reset literal flag
 E50D 0E05               LD      C,2+3           ; 2 byte number and 3 nulls
-E50F 116110             LD      DE,BUFFER       ; Start of input buffer
-E512 7E         CRNCLP: LD      A,(HL)          ; Get byte
+E50F 116110             LD      DE,<a href="../../../24/24/text/#BUFFER">BUFFER</a>       ; Start of input buffer
+<span id="E512">E512</span> 7E         <span id="CRNCLP"><a href="#CRNCLP">CRNCLP</a></span>: LD      A,(HL)          ; Get byte
 E513 FE20               CP      " "             ; Is it a space?
-E515 CA91E5             JP      Z,MOVDIR        ; Yes - Copy direct
+E515 CA91E5             JP      Z,<a href="../../../24/33/text/#MOVDIR">MOVDIR</a>        ; Yes - Copy direct
 E518 47                 LD      B,A             ; Save character
 E519 FE22               CP      '"'             ; Is it a quote?
-E51B CAB1E5             JP      Z,CPYLIT        ; Yes - Copy literal string
+E51B CAB1E5             JP      Z,<a href="../../../24/33/text/#CPYLIT">CPYLIT</a>        ; Yes - Copy literal string
 E51E B7                 OR      A               ; Is it end of buffer?
-E51F CAB8E5             JP      Z,ENDBUF        ; Yes - End buffer
-E522 3AAE10             LD      A,(DATFLG)      ; Get data type
+E51F CAB8E5             JP      Z,<a href="../../../24/34/text/#ENDBUF">ENDBUF</a>        ; Yes - End buffer
+E522 3AAE10             LD      A,(<a href="../../../24/24/text/#DATFLG">DATFLG</a>)      ; Get data type
 E525 B7                 OR      A               ; Literal?
 E526 7E                 LD      A,(HL)          ; Get byte to copy
-E527 C291E5             JP      NZ,MOVDIR       ; Literal - Copy direct
-E52A FE3F               CP      "?"             ; Is it "?" short for PRINT
-E52C 3E9E               LD      A,ZPRINT        ; "PRINT" token
-E52E CA91E5             JP      Z,MOVDIR        ; Yes - replace it
+E527 C291E5             JP      NZ,<a href="../../../24/33/text/#MOVDIR">MOVDIR</a>       ; Literal - Copy direct
+E52A FE3F               CP      "?"             ; Is it "?" short for <a href="../../../26/31/text/#PRINT">PRINT</a>
+E52C 3E9E               LD      A,<a href="../../../24/28/text/#ZPRINT">ZPRINT</a>        ; "<a href="../../../26/31/text/#PRINT">PRINT</a>" token
+E52E CA91E5             JP      Z,<a href="../../../24/33/text/#MOVDIR">MOVDIR</a>        ; Yes - replace it
 E531 7E                 LD      A,(HL)          ; Get byte again
 E532 FE30               CP      "0"             ; Is it less than "0"
-E534 DA3CE5             JP      C,FNDWRD        ; Yes - Look for reserved words
+E534 DA3CE5             JP      C,<a href="../../../24/33/text/#FNDWRD">FNDWRD</a>        ; Yes - Look for reserved words
 E537 FE3C               CP      ";"+1           ; Is it "0123456789:;" ?
-E539 DA91E5             JP      C,MOVDIR        ; Yes - copy it direct
-E53C D5         FNDWRD: PUSH    DE              ; Look for reserved words
-E53D 1142E1             LD      DE,WORDS-1      ; Point to table
+E539 DA91E5             JP      C,<a href="../../../24/33/text/#MOVDIR">MOVDIR</a>        ; Yes - copy it direct
+<span id="E53C">E53C</span> D5         <span id="FNDWRD"><a href="#FNDWRD">FNDWRD</a></span>: PUSH    DE              ; Look for reserved words
+E53D 1142E1             LD      DE,<a href="../../../24/26/text/#WORDS">WORDS</a>-1      ; Point to table
 E540 C5                 PUSH    BC              ; Save count
-E541 018DE5             LD      BC,RETNAD       ; Where to return to
+E541 018DE5             LD      BC,<a href="../../../24/33/text/#RETNAD">RETNAD</a>       ; Where to return to
 E544 C5                 PUSH    BC              ; Save return address
-E545 067F               LD      B,ZEND-1        ; First token value -1
+E545 067F               LD      B,<a href="../../../24/28/text/#ZEND">ZEND</a>-1        ; First token value -1
 E547 7E                 LD      A,(HL)          ; Get byte
 E548 FE61               CP      "a"             ; Less than "a" ?
-E54A DA55E5             JP      C,SEARCH        ; Yes - search for words
+E54A DA55E5             JP      C,<a href="../../../24/33/text/#SEARCH">SEARCH</a>        ; Yes - search for words
 E54D FE7B               CP      "z"+1           ; Greater than "z" ?
-E54F D255E5             JP      NC,SEARCH       ; Yes - search for words
+E54F D255E5             JP      NC,<a href="../../../24/33/text/#SEARCH">SEARCH</a>       ; Yes - search for words
 E552 E65F               AND     01011111B       ; Force upper case
 E554 77                 LD      (HL),A          ; Replace byte
-E555 4E         SEARCH: LD      C,(HL)          ; Search for a word
+<span id="E555">E555</span> 4E         <span id="SEARCH"><a href="#SEARCH">SEARCH</a></span>: LD      C,(HL)          ; Search for a word
 E556 EB                 EX      DE,HL
-E557 23         GETNXT: INC     HL              ; Get next reserved word
+<span id="E557">E557</span> 23         <span id="GETNXT"><a href="#GETNXT">GETNXT</a></span>: INC     HL              ; Get next reserved word
 E558 B6                 OR      (HL)            ; Start of word?
-E559 F257E5             JP      P,GETNXT        ; No - move on
+E559 F257E5             JP      P,<a href="../../../24/33/text/#GETNXT">GETNXT</a>        ; No - move on
 E55C 04                 INC     B               ; Increment token value
 E55D 7E                 LD      A, (HL)         ; Get byte from table
 E55E E67F               AND     01111111B       ; Strip bit 7
 E560 C8                 RET     Z               ; Return if end of list
 E561 B9                 CP      C               ; Same character as in buffer?
-E562 C257E5             JP      NZ,GETNXT       ; No - get next word
+E562 C257E5             JP      NZ,<a href="../../../24/33/text/#GETNXT">GETNXT</a>       ; No - get next word
 E565 EB                 EX      DE,HL
 E566 E5                 PUSH    HL              ; Save start of word
 </pre>
@@ -193,56 +193,56 @@ E566 E5                 PUSH    HL              ; Save start of word
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    21</span>
 
-E567 13         NXTBYT: INC     DE              ; Look through rest of word
+<span id="E567">E567</span> 13         <span id="NXTBYT"><a href="#NXTBYT">NXTBYT</a></span>: INC     DE              ; Look through rest of word
 E568 1A                 LD      A,(DE)          ; Get byte from table
-E569 B7                 OR      A               ; End of word&nbsp;?
-E56A FA89E5             JP      M,MATCH         ; Yes - Match found
+E569 B7                 OR      A               ; End of word ?
+E56A FA89E5             JP      M,<a href="../../../24/33/text/#MATCH">MATCH</a>         ; Yes - Match found
 E56D 4F                 LD      C,A             ; Save it
 E56E 78                 LD      A,B             ; Get token value
-E56F FE88               CP      ZGOTO           ; Is it "GOTO" token&nbsp;?
-E571 C278E5             JP      NZ,NOSPC        ; No - Don't allow spaces
-E574 CD36E8             CALL    GETCHR          ; Get next character
-E577 2B                 DEC     HL              ; Cancel increment from GETCHR
-E578 23         NOSPC:  INC     HL              ; Next byte
+E56F FE88               CP      <a href="../../../24/28/text/#ZGOTO">ZGOTO</a>           ; Is it "<a href="../../../25/37/text/#GOTO">GOTO</a>" token ?
+E571 C278E5             JP      NZ,<a href="../../../24/33/text/#NOSPC">NOSPC</a>        ; No - Don't allow spaces
+E574 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+E577 2B                 DEC     HL              ; Cancel increment from <a href="../../../25/34/text/#GETCHR">GETCHR</a>
+<span id="E578">E578</span> 23         <span id="NOSPC"><a href="#NOSPC">NOSPC</a></span>:  INC     HL              ; Next byte
 E579 7E                 LD      A,(HL)          ; Get byte
 E57A FE61               CP      "a"             ; Less than "a" ?
-E57C DA81E5             JP      C,NOCHNG        ; Yes - don't change
+E57C DA81E5             JP      C,<a href="../../../24/33/text/#NOCHNG">NOCHNG</a>        ; Yes - don't change
 E57F E65F               AND     01011111B       ; Make upper case
-E581 B9         NOCHNG: CP      C               ; Same as in buffer&nbsp;?
-E582 CA67E5             JP      Z,NXTBYT        ; Yes - keep testing
+<span id="E581">E581</span> B9         <span id="NOCHNG"><a href="#NOCHNG">NOCHNG</a></span>: CP      C               ; Same as in buffer ?
+E582 CA67E5             JP      Z,<a href="../../../24/33/text/#NXTBYT">NXTBYT</a>        ; Yes - keep testing
 E585 E1                 POP     HL              ; Get back start of word
-E586 C355E5             JP      SEARCH          ; Look at next word
+E586 C355E5             JP      <a href="../../../24/33/text/#SEARCH">SEARCH</a>          ; Look at next word
 
-E589 48         MATCH:  LD      C,B             ; Word found - Save token value
+<span id="E589">E589</span> 48         <span id="MATCH"><a href="#MATCH">MATCH</a></span>:  LD      C,B             ; Word found - Save token value
 E58A F1                 POP     AF              ; Throw away return
 E58B EB                 EX      DE,HL
-E58C C9                 RET                     ; Return to "RETNAD"
-E58D EB         RETNAD: EX      DE,HL           ; Get address in string
+E58C C9                 RET                     ; Return to "<a href="../../../24/33/text/#RETNAD">RETNAD</a>"
+<span id="E58D">E58D</span> EB         <span id="RETNAD"><a href="#RETNAD">RETNAD</a></span>: EX      DE,HL           ; Get address in string
 E58E 79                 LD      A,C             ; Get token value
 E58F C1                 POP     BC              ; Restore buffer length
 E590 D1                 POP     DE              ; Get destination address
-E591 23         MOVDIR: INC     HL              ; Next source in buffer
+<span id="E591">E591</span> 23         <span id="MOVDIR"><a href="#MOVDIR">MOVDIR</a></span>: INC     HL              ; Next source in buffer
 E592 12                 LD      (DE),A          ; Put byte in buffer
 E593 13                 INC     DE              ; Move up buffer
 E594 0C                 INC     C               ; Increment length of buffer
 E595 D63A               SUB     ":"             ; End of statement?
-E597 CA9FE5             JP      Z,SETLIT        ; Jump if multi-statement line
-E59A FE49               CP      ZDATA-3AH       ; Is it DATA statement&nbsp;?
-E59C C2A2E5             JP      NZ,TSTREM       ; No - see if REM
-E59F 32AE10     SETLIT: LD      (DATFLG),A      ; Set literal flag
-E5A2 D654       TSTREM: SUB     ZREM-3AH        ; Is it REM?
-E5A4 C212E5             JP      NZ,CRNCLP       ; No - Leave flag
+E597 CA9FE5             JP      Z,<a href="../../../24/33/text/#SETLIT">SETLIT</a>        ; Jump if multi-statement line
+E59A FE49               CP      <a href="../../../24/28/text/#ZDATA">ZDATA</a>-3AH       ; Is it <a href="../../../25/38/text/#DATA">DATA</a> statement ?
+E59C C2A2E5             JP      NZ,<a href="../../../24/33/text/#TSTREM">TSTREM</a>       ; No - see if <a href="../../../25/38/text/#REM">REM</a>
+<span id="E59F">E59F</span> 32AE10     <span id="SETLIT"><a href="#SETLIT">SETLIT</a></span>: LD      (<a href="../../../24/24/text/#DATFLG">DATFLG</a>),A      ; Set literal flag
+<span id="E5A2">E5A2</span> D654       <span id="TSTREM"><a href="#TSTREM">TSTREM</a></span>: SUB     <a href="../../../24/28/text/#ZREM">ZREM</a>-3AH        ; Is it <a href="../../../25/38/text/#REM">REM</a>?
+E5A4 C212E5             JP      NZ,<a href="../../../24/33/text/#CRNCLP">CRNCLP</a>       ; No - Leave flag
 E5A7 47                 LD      B,A             ; Copy rest of buffer
-E5A8 7E         NXTCHR: LD      A,(HL)          ; Get byte
-E5A9 B7                 OR      A               ; End of line&nbsp;?
-E5AA CAB8E5             JP      Z,ENDBUF        ; Yes - Terminate buffer
-E5AD B8                 CP      B               ; End of statement&nbsp;?
-E5AE CA91E5             JP      Z,MOVDIR        ; Yes - Get next one
-E5B1 23         CPYLIT: INC     HL              ; Move up source string
+<span id="E5A8">E5A8</span> 7E         <span id="NXTCHR"><a href="#NXTCHR">NXTCHR</a></span>: LD      A,(HL)          ; Get byte
+E5A9 B7                 OR      A               ; End of line ?
+E5AA CAB8E5             JP      Z,<a href="../../../24/34/text/#ENDBUF">ENDBUF</a>        ; Yes - Terminate buffer
+E5AD B8                 CP      B               ; End of statement ?
+E5AE CA91E5             JP      Z,<a href="../../../24/33/text/#MOVDIR">MOVDIR</a>        ; Yes - Get next one
+<span id="E5B1">E5B1</span> 23         <span id="CPYLIT"><a href="#CPYLIT">CPYLIT</a></span>: INC     HL              ; Move up source string
 E5B2 12                 LD      (DE),A          ; Save in destination
 E5B3 0C                 INC     C               ; Increment length
 E5B4 13                 INC     DE              ; Move up destination
-E5B5 C3A8E5             JP      NXTCHR          ; Repeat
+E5B5 C3A8E5             JP      <a href="../../../24/33/text/#NXTCHR">NXTCHR</a>          ; Repeat
 </pre>
 <!-- 1 column: end --></div>
 </div>

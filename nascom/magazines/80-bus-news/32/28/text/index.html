@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,27 +138,27 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    86</span>
 
-FA0F 3D         MAKNUM: DEC     A               ; Adjust for digits to do
+<span id="FA0F">FA0F</span> 3D         <span id="MAKNUM"><a href="#MAKNUM">MAKNUM</a></span>: DEC     A               ; Adjust for digits to do
 FA10 3D                 DEC     A
 FA11 E1                 POP     HL              ; Restore buffer address
 FA12 F5                 PUSH    AF              ; Save count
-FA13 1195FA             LD      DE,POWERS       ; Powers of ten
+FA13 1195FA             LD      DE,<a href="../../../32/28/text/#POWERS">POWERS</a>       ; Powers of ten
 FA16 05                 DEC     B               ; Count digits before point
-FA17 C220FA             JP      NZ,DIGTXT       ; Not zero - Do number
+FA17 C220FA             JP      NZ,<a href="../../../32/28/text/#DIGTXT">DIGTXT</a>       ; Not zero - Do number
 FA1A 362E               LD      (HL),"."        ; Save point
 FA1C 23                 INC     HL              ; Move on
 FA1D 3630               LD      (HL),"0"        ; Save zero
 FA1F 23                 INC     HL              ; Move on
-FA20 05         DIGTXT: DEC     B               ; Count digits before point
+<span id="FA20">FA20</span> 05         <span id="DIGTXT"><a href="#DIGTXT">DIGTXT</a></span>: DEC     B               ; Count digits before point
 FA21 362E               LD      (HL),"."        ; Save point in case
-FA23 CC69F8             CALL    Z,INCHL         ; Last digit - move on
+FA23 CC69F8             CALL    Z,<a href="../../../32/25/text/#INCHL">INCHL</a>         ; Last digit - move on
 FA26 C5                 PUSH    BC              ; Save digits before point
 FA27 E5                 PUSH    HL              ; Save buffer address
 FA28 D5                 PUSH    DE              ; Save powers of ten
-FA29 CD5FF8             CALL    BCDEFP          ; Move FPREG to BCDE
+FA29 CD5FF8             CALL    <a href="../../../32/25/text/#BCDEFP">BCDEFP</a>          ; Move <a href="../../../24/24/text/#FPREG">FPREG</a> to BCDE
 FA2C E1                 POP     HL              ; Powers of ten table
 FA2D 062F               LD      B, "0"-1        ; ASCII "0" - 1
-FA2F 04         TRYAGN: INC     B               ; Count subtractions
+<span id="FA2F">FA2F</span> 04         <span id="TRYAGN"><a href="#TRYAGN">TRYAGN</a></span>: INC     B               ; Count subtractions
 FA30 7B                 LD      A,E             ; Get LSB
 FA31 96                 SUB     (HL)            ; Subtract LSB
 FA32 5F                 LD      E,A             ; Save LSB
@@ -172,77 +172,77 @@ FA39 9E                 SBC     A,(HL)          ; Subtract MSB
 FA3A 4F                 LD      C,A             ; Save MSB
 FA3B 2B                 DEC     HL              ; Point back to start
 FA3C 2B                 DEC     HL
-FA3D D22FFA             JP      NC,TRYAGN       ; No overflow - Try again
-FA40 CD72F6             CALL    PLUCDE          ; Restore number
+FA3D D22FFA             JP      NC,<a href="../../../32/28/text/#TRYAGN">TRYAGN</a>       ; No overflow - Try again
+FA40 CD72F6             CALL    <a href="../../../31/33/text/#PLUCDE">PLUCDE</a>          ; Restore number
 FA43 23                 INC     HL              ; Start of next number
-FA44 CD54F8             CALL    FPBCDE          ; Move BCDE to FPREG
+FA44 CD54F8             CALL    <a href="../../../32/25/text/#FPBCDE">FPBCDE</a>          ; Move BCDE to <a href="../../../24/24/text/#FPREG">FPREG</a>
 FA47 EB                 EX      DE,HL           ; Save point in table
 FA48 E1                 POP     HL              ; Restore buffer address
 FA49 70                 LD      (HL),B          ; Save digit in buffer
 FA4A 23                 INC     HL              ; And move on
 FA4B C1                 POP     BC              ; Restore digit count
 FA4C 0D                 DEC     C               ; Count digits
-FA4D C220FA             JP      NZ,DIGTXT       ; More - Do them
+FA4D C220FA             JP      NZ,<a href="../../../32/28/text/#DIGTXT">DIGTXT</a>       ; More - Do them
 FA50 05                 DEC     B               ; Any decimal part?
-FA51 CA60FA             JP      Z,DOEBIT        ; No - Do "E" bit
-FA54 2B         SUPTLZ: DEC     HL              ; Move back through buffer
+FA51 CA60FA             JP      Z,<a href="../../../32/28/text/#DOEBIT">DOEBIT</a>        ; No - Do "E" bit
+<span id="FA54">FA54</span> 2B         <span id="SUPTLZ"><a href="#SUPTLZ">SUPTLZ</a></span>: DEC     HL              ; Move back through buffer
 FA55 7E                 LD      A,(HL)          ; Get character
 FA56 FE30               CP      "0"             ; "0" character?
-FA58 CA54FA             JP      Z,SUPTLZ        ; Yes - Look back for more
+FA58 CA54FA             JP      Z,<a href="../../../32/28/text/#SUPTLZ">SUPTLZ</a>        ; Yes - Look back for more
 FA5B FE2E               CP      "."             ; A decimal point?
-FA5D C469F8             CALL    NZ,INCHL        ; Move back over digit
+FA5D C469F8             CALL    NZ,<a href="../../../32/25/text/#INCHL">INCHL</a>        ; Move back over digit
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    87</span>
 
-FA60 F1         DOEBIT: POP     AF              ; Get "E" flag
-FA61 CA7FFA             JP      Z,NOENED        ; No "E" needed - End buffer
+<span id="FA60">FA60</span> F1         <span id="DOEBIT"><a href="#DOEBIT">DOEBIT</a></span>: POP     AF              ; Get "E" flag
+FA61 CA7FFA             JP      Z,<a href="../../../32/28/text/#NOENED">NOENED</a>        ; No "E" needed - End buffer
 FA64 3645               LD      (HL),"E"        ; Put "E" in buffer
 FA66 23                 INC     HL              ; And move on
 FA67 362B               LD      (HL),"+"        ; Put '+' in buffer
-FA69 F270FA             JP      P,OUTEXP        ; Positive - Output exponent
+FA69 F270FA             JP      P,<a href="../../../32/28/text/#OUTEXP">OUTEXP</a>        ; Positive - Output exponent
 FA6C 362D               LD      (HL),"-"        ; Put "-" in buffer
 FA6E 2F                 CPL                     ; Negate exponent
 FA6F 3C                 INC     A
-FA70 062F       OUTEXP: LD      B,"0"-1         ; ASCII "0" - 1
-FA72 04         EXPTEN: INC     B               ; Count subtractions
+<span id="FA70">FA70</span> 062F       <span id="OUTEXP"><a href="#OUTEXP">OUTEXP</a></span>: LD      B,"0"-1         ; ASCII "0" - 1
+<span id="FA72">FA72</span> 04         <span id="EXPTEN"><a href="#EXPTEN">EXPTEN</a></span>: INC     B               ; Count subtractions
 FA73 D60A               SUB     10              ; Tens digit
-FA75 D272FA             JP      NC,EXPTEN       ; More to do
+FA75 D272FA             JP      NC,<a href="../../../32/28/text/#EXPTEN">EXPTEN</a>       ; More to do
 FA78 C63A               ADD     A,"0"+10        ; Restore and make ASCII
 FA7A 23                 INC     HL              ; Move on
 FA7B 70                 LD      (HL),B          ; Save MSB of exponent
-FA7C 23         JSTZER: INC     HL              ;
+<span id="FA7C">FA7C</span> 23         <span id="JSTZER"><a href="#JSTZER">JSTZER</a></span>: INC     HL              ;
 FA7D 77                 LD      (HL),A          ; Save LSB of exponent
 FA7E 23                 INC     HL
-FA7F 71         NOENED: LD      (HL),C          ; Mark end of buffer
+<span id="FA7F">FA7F</span> 71         <span id="NOENED"><a href="#NOENED">NOENED</a></span>: LD      (HL),C          ; Mark end of buffer
 FA80 E1                 POP     HL              ; Restore code string address
 FA81 C9                 RET
 
-FA82 017494     RNGTST: LD      BC,9474H        ; BCDE = 999999.
+<span id="FA82">FA82</span> 017494     <span id="RNGTST"><a href="#RNGTST">RNGTST</a></span>: LD      BC,9474H        ; BCDE = 999999.
 FA85 11F723             LD      DE,23F7H
-FA88 CD8EF8             CALL    CMPNUM          ; Compare numbers
+FA88 CD8EF8             CALL    <a href="../../../32/25/text/#CMPNUM">CMPNUM</a>          ; Compare numbers
 FA8B B7                 OR      A
 FA8C E1                 POP     HL              ; Return address to HL
-FA8D E2EAF9             JP      PO,GTSIXD       ; Too big - Divide by ten
+FA8D E2EAF9             JP      PO,<a href="../../../32/27/text/#GTSIXD">GTSIXD</a>       ; Too big - Divide by ten
 FA90 E9                 JP      (HL)            ; Otherwise return to caller
 
-FA91 00000080   HALF:   DEFB    00H,00H,00H,80H ; 0.5
+<span id="FA91">FA91</span> 00000080   <span id="HALF"><a href="#HALF">HALF</a></span>:   DEFB    00H,00H,00H,80H ; 0.5
 
-FA95 A08601     POWERS: DEFB    0A0H,086H,001H  ; 100000
+<span id="FA95">FA95</span> A08601     <span id="POWERS"><a href="#POWERS">POWERS</a></span>: DEFB    0A0H,086H,001H  ; 100000
 FA98 102700             DEFB    010H,027H,000H  ;  10000
 FA9B E80300             DEFB    0E8H,003H,000H  ;   1000
 FA9E 640000             DEFB    064H,000H,000H  ;    100
 FAA1 0A0000             DEFB    00AH,000H,000H  ;     10
 FAA4 010000             DEFB    001H,000H,000H  ;      1
 
-FAA7 213CF8     NEGAFT: LD  HL,INVSGN           ; Negate result
+<span id="FAA7">FAA7</span> 213CF8     <span id="NEGAFT"><a href="#NEGAFT">NEGAFT</a></span>: LD  HL,<a href="../../../32/25/text/#INVSGN">INVSGN</a>           ; Negate result
 FAAA E3                 EX      (SP),HL         ; To be done after caller
 FAAB E9                 JP      (HL)            ; Return to caller
 
-<span id="FAAC">FAAC CD44F8     SQR:    CALL    STAKFP          ; Put value on stack</span>
-FAAF 2191FA             LD      HL,HALF         ; Set power to 1/2
-FAB2 CD51F8             CALL    PHLTFP          ; Move 1/2 to FPREG
+<span id="FAAC">FAAC</span> CD44F8     <span id="SQR"><a href="#SQR">SQR</a></span>:    CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Put value on stack
+FAAF 2191FA             LD      HL,<a href="../../../32/28/text/#HALF">HALF</a>         ; Set power to 1/2
+FAB2 CD51F8             CALL    <a href="../../../32/25/text/#PHLTFP">PHLTFP</a>          ; Move 1/2 to <a href="../../../24/24/text/#FPREG">FPREG</a>
 </pre>
 <!-- 1 column: end --></div>
 </div>

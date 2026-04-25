@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,10 +138,10 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    100</span>
 
-FF02 D5         LINTBF: PUSH    DE              ; Line length to BC
+<span id="FF02">FF02</span> D5         <span id="LINTBF"><a href="#LINTBF">LINTBF</a></span>: PUSH    DE              ; Line length to BC
 FF03 C1                 POP     BC
 FF04 03                 INC     BC              ; Length +1
-FF05 116110             LD      DE,BUFFER       ; Input buffer
+FF05 116110             LD      DE,<a href="../../../24/24/text/#BUFFER">BUFFER</a>       ; Input buffer
 FF08 E1                 POP     HL              ; Line start
 FF09 C5                 PUSH    BC              ; Save length
 FF0A EDB0               LDIR                    ; Move line to buffer
@@ -149,87 +149,87 @@ FF0C 3E00               LD      A,0
 FF0E 12                 LD      (DE),A          ; Mark end of buffer with 00
 FF0F C1                 POP     BC              ; Restore buffer length
 FF10 41                 LD      B,C             ; Length returned in B
-FF11 216010             LD      HL,BUFFER-1     ; Point to start of buffer-1
+FF11 216010             LD      HL,<a href="../../../24/24/text/#BUFFER">BUFFER</a>-1     ; Point to start of buffer-1
 FF14 C9                 RET
 
-<span id="FF15">FF15 CD90E6     GETXYA: CALL    CHKSYN          ; Make sure "(" follows</span>
+<span id="FF15">FF15</span> CD90E6     <span id="GETXYA"><a href="#GETXYA">GETXYA</a></span>: CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "(" follows
 FF18 28                 DEFB    "("
-FF19 CD41ED             CALL    GETNUM          ; Get a number
-FF1C CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
+FF19 CD41ED             CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get a number
+FF1C CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
 FF1F D5                 PUSH    DE              ; Save "X"
-FF20 CD90E6             CALL    CHKSYN          ; Make sure "," follows
+FF20 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "," follows
 FF23 2C                 DEFB    ","
-FF24 CD41ED             CALL    GETNUM          ; Get a number
-FF27 CD90E6             CALL    CHKSYN          ; Make sure ")" follows
+FF24 CD41ED             CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get a number
+FF27 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure ")" follows
 FF2A 29                 DEFB    ")"
-FF2B CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
+FF2B CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
 FF2E E5                 PUSH    HL              ; Save code string address
 FF2F FDE1               POP     IY              ; In IY
-FF31 CD96FF             CALL    XYPOS           ; Address and bit mask
+FF31 CD96FF             CALL    <a href="../../../33/28/text/#XYPOS">XYPOS</a>           ; Address and bit mask
 FF34 F5                 PUSH    AF              ; Save mask
-FF35 CDC2FF             CALL    ADJCOL          ; Adjust column
-FF38 CD11FE             CALL    SCRADR          ; Get VDU address
+FF35 CDC2FF             CALL    <a href="../../../33/29/text/#ADJCOL">ADJCOL</a>          ; Adjust column
+FF38 CD11FE             CALL    <a href="../../../33/26/text/#SCRADR">SCRADR</a>          ; Get <a href="../../../24/23/text/#VDU">VDU</a> address
 FF3B F1                 POP     AF              ; Restore bit mask
 FF3C 06C0               LD      B,11000000B     ; Block graphics base
 FF3E B0                 OR      B               ; Set bits 7 & 6
 FF3F C9                 RET
 
-<span id="FF40">FF40 CD15FF     SETB:   CALL    GETXYA          ; Get co-ords and VDU address</span>
+<span id="FF40">FF40</span> CD15FF     <span id="SETB"><a href="#SETB">SETB</a></span>:   CALL    <a href="../../../33/28/text/#GETXYA">GETXYA</a>          ; Get co-ords and <a href="../../../24/23/text/#VDU">VDU</a> address
 FF43 F5                 PUSH    AF              ; Save bit mask
 FF44 7E                 LD      A,(HL)          ; Get character from screen
 FF45 FEC0               CP      11000000B       ; Is it a block graphic?
-FF47 D250FF             JP      NC,SETOR        ; Yes - OR new bit
+FF47 D250FF             JP      NC,<a href="../../../33/28/text/#SETOR">SETOR</a>        ; Yes - OR new bit
 FF4A F1                 POP     AF              ; Restore bit mask
-FF4B 77         PUTBIT: LD      (HL),A          ; Put character on screen
-FF4C FDE5       RESCSA: PUSH    IY              ; Restore code string address
+<span id="FF4B">FF4B</span> 77         <span id="PUTBIT"><a href="#PUTBIT">PUTBIT</a></span>: LD      (HL),A          ; Put character on screen
+<span id="FF4C">FF4C</span> FDE5       <span id="RESCSA"><a href="#RESCSA">RESCSA</a></span>: PUSH    IY              ; Restore code string address
 FF4E E1                 POP     HL              ; From IY
 FF4F C9                 RET
 
-FF50 C1         SETOR:  POP     BC              ; Restore bit mask
+<span id="FF50">FF50</span> C1         <span id="SETOR"><a href="#SETOR">SETOR</a></span>:  POP     BC              ; Restore bit mask
 FF51 B0                 OR      B               ; Merge the bits
-FF52 C34BFF             JP      PUTBIT          ; Save on screen
+FF52 C34BFF             JP      <a href="../../../33/28/text/#PUTBIT">PUTBIT</a>          ; Save on screen
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    101</span>
 
-<span id="FF55">FF55 CD15FF     RESETB: CALL    GETXYA          ; Get co-ords and VDU address</span>
+<span id="FF55">FF55</span> CD15FF     <span id="RESETB"><a href="#RESETB">RESETB</a></span>: CALL    <a href="../../../33/28/text/#GETXYA">GETXYA</a>          ; Get co-ords and <a href="../../../24/23/text/#VDU">VDU</a> address
 FF58 F5                 PUSH    AF              ; Save bit mask
 FF59 7E                 LD      A,(HL)          ; Get byte from screen
 FF5A FEC0               CP      11000000B       ; Is it a block graphic?
-FF5C DA75FF             JP      C,NORES         ; No - Leave it
+FF5C DA75FF             JP      C,<a href="../../../33/28/text/#NORES">NORES</a>         ; No - Leave it
 FF5F 063F               LD      B,00111111B     ; Six bits per block
 FF61 A0                 AND     B               ; Clear bits 7 & 6
 FF62 C1                 POP     BC              ; Get bit mask
 FF63 A0                 AND     B               ; Test for common bit
-FF64 CA4CFF             JP      Z,RESCSA        ; None - Leave it
+FF64 CA4CFF             JP      Z,<a href="../../../33/28/text/#RESCSA">RESCSA</a>        ; None - Leave it
 FF67 7E                 LD      A,(HL)          ; Get byte from screen
 FF68 E63F               AND     00111111B       ; Isolate bit
 FF6A A8                 XOR     B               ; Clear that bit
 FF6B FEC0               CP      11000000B       ; Is it a graphic blank?
-FF6D C24BFF             JP      NZ,PUTBIT       ; No - Save character
+FF6D C24BFF             JP      NZ,<a href="../../../33/28/text/#PUTBIT">PUTBIT</a>       ; No - Save character
 FF70 3E20               LD      A," "           ; Put a space there
-FF72 C34BFF             JP      PUTBIT          ; Save the space
+FF72 C34BFF             JP      <a href="../../../33/28/text/#PUTBIT">PUTBIT</a>          ; Save the space
 
-FF75 C1         NORES:  POP     BC              ; Drop bit mask
-FF76 C34CFF             JP      RESCSA          ; Restore code string address
+<span id="FF75">FF75</span> C1         <span id="NORES"><a href="#NORES">NORES</a></span>:  POP     BC              ; Drop bit mask
+FF76 C34CFF             JP      <a href="../../../33/28/text/#RESCSA">RESCSA</a>          ; Restore code string address
 
-<span id="FF79">FF79 CD15FF     POINTB: CALL    GETXYA          ; Get co-ords and VDU address</span>
+<span id="FF79">FF79</span> CD15FF     <span id="POINTB"><a href="#POINTB">POINTB</a></span>: CALL    <a href="../../../33/28/text/#GETXYA">GETXYA</a>          ; Get co-ords and <a href="../../../24/23/text/#VDU">VDU</a> address
 FF7C 46                 LD      B,(HL)          ; Get character from screen
-FF7D CDEDFF             CALL    TSTBIT          ; Test if bit is set
-FF80 C291FF             JP      NZ,POINT0       ; Different - Return zero
+FF7D CDEDFF             CALL    <a href="../../../33/29/text/#TSTBIT">TSTBIT</a>          ; Test if bit is set
+FF80 C291FF             JP      NZ,<a href="../../../33/28/text/#POINT0">POINT0</a>       ; Different - Return zero
 FF83 3E00               LD      A,0
 FF85 0601               LD      B,1             ; Integer AB = 1
-FF87 E1         POINTX: POP     HL              ; Drop return
+<span id="FF87">FF87</span> E1         <span id="POINTX"><a href="#POINTX">POINTX</a></span>: POP     HL              ; Drop return
 FF88 FDE5               PUSH    IY              ; PUSH code string address
-FF8A 111DEE             LD      DE,RETNUM       ; To return a number
+FF8A 111DEE             LD      DE,<a href="../../../26/35/text/#RETNUM">RETNUM</a>       ; To return a number
 FF8D D5                 PUSH    DE              ; Save for return
-FF8E C3F2F0             JP      ABPASS          ; Return integer AB
+FF8E C3F2F0             JP      <a href="../../../31/25/text/#ABPASS">ABPASS</a>          ; Return integer AB
 
-FF91 0600       POINT0: LD      B,0             ; Set zero
-FF93 C387FF             JP      POINTX          ; Return value
+<span id="FF91">FF91</span> 0600       <span id="POINT0"><a href="#POINT0">POINT0</a></span>: LD      B,0             ; Set zero
+FF93 C387FF             JP      <a href="../../../33/28/text/#POINTX">POINTX</a>          ; Return value
 
-<span id="FF96">FF96 C1         XYPOS:  POP     BC              ; Get return address</span>
+<span id="FF96">FF96</span> C1         <span id="XYPOS"><a href="#XYPOS">XYPOS</a></span>:  POP     BC              ; Get return address
 FF97 E1                 POP     HL              ; Get column
 FF98 E5                 PUSH    HL              ; And re-save
 FF99 C5                 PUSH    BC              ; Put back return address
@@ -242,10 +242,10 @@ FFA0 E1                 POP     HL              ; to HL
 FFA1 110000             LD      DE,0            ; Zero line count
 FFA4 010300             LD      BC,3            ; 3 blocks per line
 FFA7 23                 INC     HL
-FFA8 ED42       DIV3LP: SBC     HL,BC           ; Subtract 3
+<span id="FFA8">FFA8</span> ED42       <span id="DIV3LP"><a href="#DIV3LP">DIV3LP</a></span>: SBC     HL,BC           ; Subtract 3
 FFAA 13                 INC     DE              ; Count the subtractions
-FFAB CAB1FF             JP      Z,DIV3EX        ; Exactly - Exit
-FFAE F2A8FF             JP      P,DIV3LP        ; More to do
+FFAB CAB1FF             JP      Z,<a href="../../../33/29/text/#DIV3EX">DIV3EX</a>        ; Exactly - Exit
+FFAE F2A8FF             JP      P,<a href="../../../33/28/text/#DIV3LP">DIV3LP</a>        ; More to do
 </pre>
 <!-- 1 column: end --></div>
 </div>

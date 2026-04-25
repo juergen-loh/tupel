@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,44 +138,44 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    59</span>
 
-<span id="F189">F189 CD90E6     CHEKFN: CALL    CHKSYN          ; Make sure FN follows</span>
-F18C A7                 DEFB    ZFN             ; "FN" token
+<span id="F189">F189</span> CD90E6     <span id="CHEKFN"><a href="#CHEKFN">CHEKFN</a></span>: CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure FN follows
+F18C A7                 DEFB    <a href="../../../24/28/text/#ZFN">ZFN</a>             ; "FN" token
 F18D 3E80               LD      A,80H
-F18F 32CB10             LD      (FORFLG),A      ; Flag FN name to find
+F18F 32CB10             LD      (<a href="../../../24/24/text/#FORFLG">FORFLG</a>),A      ; Flag FN name to find
 F192 B6                 OR      (HL)            ; FN name has bit 7 set
 F193 47                 LD      B,A             ; in first byte of name
-F194 CD32EF             CALL    GTFNAM          ; Get FN name
-F197 C344ED             JP      TSTNUM          ; Make sure numeric function
+F194 CD32EF             CALL    <a href="../../../26/37/text/#GTFNAM">GTFNAM</a>          ; Get FN name
+F197 C344ED             JP      <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure numeric function
 
-<span id="F19A">F19A CD44ED     STR:    CALL    TSTNUM          ; Make sure it's a number</span>
-F19D CDB8F9             CALL    NUMASC          ; Turn number into text
-F1A0 CDCEF1             CALL    CRTST           ; Create string entry for it
-F1A3 CD53F3             CALL    GSTRCU          ; Current string to pool
-F1A6 01AEF3             LD      BC,TOPOOL       ; Save in string pool
+<span id="F19A">F19A</span> CD44ED     <span id="STR"><a href="#STR">STR</a></span>:    CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure it's a number
+F19D CDB8F9             CALL    <a href="../../../32/27/text/#NUMASC">NUMASC</a>          ; Turn number into text
+F1A0 CDCEF1             CALL    <a href="../../../31/26/text/#CRTST">CRTST</a>           ; Create string entry for it
+F1A3 CD53F3             CALL    <a href="../../../31/28/text/#GSTRCU">GSTRCU</a>          ; Current string to pool
+F1A6 01AEF3             LD      BC,<a href="../../../31/29/text/#TOPOOL">TOPOOL</a>       ; Save in string pool
 F1A9 C5                 PUSH    BC              ; Save address on stack
 
-<span id="F1AA">F1AA 7E         SAVSTR: LD      A,(HL)          ; Get string length</span>
+<span id="F1AA">F1AA</span> 7E         <span id="SAVSTR"><a href="#SAVSTR">SAVSTR</a></span>: LD      A,(HL)          ; Get string length
 F1AB 23                 INC     HL
 F1AC 23                 INC     HL
 F1AD E5                 PUSH    HL              ; Save pointer to string
-F1AE CD29F2             CALL    TESTR           ; See if enough string space
+F1AE CD29F2             CALL    <a href="../../../31/27/text/#TESTR">TESTR</a>           ; See if enough string space
 F1B1 E1                 POP     HL              ; Restore pointer to string
 F1B2 4E                 LD      C,(HL)          ; Get LSB of address
 F1B3 23                 INC     HL
 F1B4 46                 LD      B,(HL)          ; Get MSB of address
-F1B5 CDC2F1             CALL    CRTMST          ; Create string entry
+F1B5 CDC2F1             CALL    <a href="../../../31/26/text/#CRTMST">CRTMST</a>          ; Create string entry
 F1B8 E5                 PUSH    HL              ; Save pointer to MSB of addr
 F1B9 6F                 LD      L,A             ; Length of string
-F1BA CD46F3             CALL    TOSTRA          ; Move to string area
+F1BA CD46F3             CALL    <a href="../../../31/28/text/#TOSTRA">TOSTRA</a>          ; Move to string area
 F1BD D1                 POP     DE              ; Restore pointer to MSB
 F1BE C9                 RET
 
-<span id="F1BF">F1BF CD29F2     MKTMST: CALL    TESTR           ; See if enough string space</span>
-F1C2 21BF10     CRTMST: LD      HL,TMPSTR       ; Temporary string
+<span id="F1BF">F1BF</span> CD29F2     <span id="MKTMST"><a href="#MKTMST">MKTMST</a></span>: CALL    <a href="../../../31/27/text/#TESTR">TESTR</a>           ; See if enough string space
+<span id="F1C2">F1C2</span> 21BF10     <span id="CRTMST"><a href="#CRTMST">CRTMST</a></span>: LD      HL,<a href="../../../24/24/text/#TMPSTR">TMPSTR</a>       ; Temporary string
 F1C5 E5                 PUSH    HL              ; Save it
 F1C6 77                 LD      (HL),A          ; Save length of string
 F1C7 23                 INC     HL
-F1C8 23         SVSTAD: INC     HL
+<span id="F1C8">F1C8</span> 23         <span id="SVSTAD"><a href="#SVSTAD">SVSTAD</a></span>: INC     HL
 F1C9 73                 LD      (HL),E          ; Save LSB of address
 F1CA 23                 INC     HL
 F1CB 72                 LD      (HL),D          ; Save MSB of address
@@ -186,54 +186,54 @@ F1CD C9                 RET
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    60</span>
 
-F1CE 2B         CRTST:  DEC     HL              ; DEC - INCed after
-F1CF 0622       QTSTR:  LD      B,'"'           ; Terminating quote
+<span id="F1CE">F1CE</span> 2B         <span id="CRTST"><a href="#CRTST">CRTST</a></span>:  DEC     HL              ; DEC - INCed after
+<span id="F1CF">F1CF</span> 0622       <span id="QTSTR"><a href="#QTSTR">QTSTR</a></span>:  LD      B,'"'           ; Terminating quote
 F1D1 50                 LD      D,B             ; Quote to D
-F1D2 E5         DTSTR:  PUSH    HL              ; Save start
+<span id="F1D2">F1D2</span> E5         <span id="DTSTR"><a href="#DTSTR">DTSTR</a></span>:  PUSH    HL              ; Save start
 F1D3 0EFF               LD      C,-1            ; Set counter to -1
-F1D5 23         QTSTLP: INC     HL              ; Move on
+<span id="F1D5">F1D5</span> 23         <span id="QTSTLP"><a href="#QTSTLP">QTSTLP</a></span>: INC     HL              ; Move on
 F1D6 7E                 LD      A,(HL)          ; Get byte
 F1D7 0C                 INC     C               ; Count bytes
 F1D8 B7                 OR      A               ; End of line?
-F1D9 CAE4F1             JP      Z,CRTSTE        ; Yes - Create string entry
+F1D9 CAE4F1             JP      Z,<a href="../../../31/26/text/#CRTSTE">CRTSTE</a>        ; Yes - Create string entry
 F1DC BA                 CP      D               ; Terminator D found?
-F1DD CAE4F1             JP      Z,CRTSTE        ; Yes - Create string entry
+F1DD CAE4F1             JP      Z,<a href="../../../31/26/text/#CRTSTE">CRTSTE</a>        ; Yes - Create string entry
 F1E0 B8                 CP      B               ; Terminator B found?
-F1E1 C2D5F1             JP      NZ,QTSTLP       ; No - Keep looking
-F1E4 FE22       CRTSTE: CP      '"'             ; End with '"'?
-F1E6 CC36E8             CALL    Z,GETCHR        ; Yes - Get next character
+F1E1 C2D5F1             JP      NZ,<a href="../../../31/26/text/#QTSTLP">QTSTLP</a>       ; No - Keep looking
+<span id="F1E4">F1E4</span> FE22       <span id="CRTSTE"><a href="#CRTSTE">CRTSTE</a></span>: CP      '"'             ; End with '"'?
+F1E6 CC36E8             CALL    Z,<a href="../../../25/34/text/#GETCHR">GETCHR</a>        ; Yes - Get next character
 F1E9 E3                 EX      (SP),HL         ; Starting quote
 F1EA 23                 INC     HL              ; First byte of string
 F1EB EB                 EX      DE,HL           ; To DE
 F1EC 79                 LD      A,C             ; Get length
-F1ED CDC2F1             CALL    CRTMST          ; Create string entry
-F1F0 11BF10     TSTOPL: LD      DE,TMPSTR       ; Temporary string
-F1F3 2AB110             LD      HL,(TMSTPT)     ; Temporary string pool pointer
-F1F6 22E410             LD      (FPREG),HL      ; Save address of string ptr
+F1ED CDC2F1             CALL    <a href="../../../31/26/text/#CRTMST">CRTMST</a>          ; Create string entry
+<span id="F1F0">F1F0</span> 11BF10     <span id="TSTOPL"><a href="#TSTOPL">TSTOPL</a></span>: LD      DE,<a href="../../../24/24/text/#TMPSTR">TMPSTR</a>       ; Temporary string
+F1F3 2AB110             LD      HL,(<a href="../../../24/24/text/#TMSTPT">TMSTPT</a>)     ; Temporary string pool pointer
+F1F6 22E410             LD      (<a href="../../../24/24/text/#FPREG">FPREG</a>),HL      ; Save address of string ptr
 F1F9 3E01               LD      A,1
-F1FB 32AD10             LD      (TYPE),A        ; Set type to string
-F1FE CD6EF8             CALL    DETHL4          ; Move string to pool
-F201 CD8AE6             CALL    CPDEHL          ; Out of string pool?
-F204 22B110             LD      (TMSTPT),HL     ; Save new pointer
+F1FB 32AD10             LD      (<a href="../../../24/24/text/#TYPE">TYPE</a>),A        ; Set type to string
+F1FE CD6EF8             CALL    <a href="../../../32/25/text/#DETHL4">DETHL4</a>          ; Move string to pool
+F201 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Out of string pool?
+F204 22B110             LD      (<a href="../../../24/24/text/#TMSTPT">TMSTPT</a>),HL     ; Save new pointer
 F207 E1                 POP     HL              ; Restore code string address
 F208 7E                 LD      A,(HL)          ; Get next code byte
 F209 C0                 RET     NZ              ; Return if pool OK
-F20A 1E1E               LD      E,ST            ; ?ST Error
-F20C C3C1E3             JP      ERROR           ; String pool overflow
+F20A 1E1E               LD      E,<a href="../../../24/24/text/#ST">ST</a>            ; ?<a href="../../../24/24/text/#ST">ST</a> Error
+F20C C3C1E3             JP      <a href="../../../24/30/text/#ERROR">ERROR</a>           ; String pool overflow
 
-<span id="F20F">F20F 23         PRNUMS: INC     HL              ; Skip leading space</span>
-<span id="F210">F210 CDCEF1     PRS:    CALL    CRTST           ; Create string entry for it</span>
-F213 CD53F3     PRS1:   CALL    GSTRCU          ; Current string to pool
-F216 CD62F8             CALL    LOADFP          ; Move string block to BCDE
+<span id="F20F">F20F</span> 23         <span id="PRNUMS"><a href="#PRNUMS">PRNUMS</a></span>: INC     HL              ; Skip leading space
+<span id="F210">F210</span> CDCEF1     <span id="PRS"><a href="#PRS">PRS</a></span>:    CALL    <a href="../../../31/26/text/#CRTST">CRTST</a>           ; Create string entry for it
+<span id="F213">F213</span> CD53F3     <span id="PRS1"><a href="#PRS1">PRS1</a></span>:   CALL    <a href="../../../31/28/text/#GSTRCU">GSTRCU</a>          ; Current string to pool
+F216 CD62F8             CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; Move string block to BCDE
 F219 1C                 INC     E               ; Length + 1
-F21A 1D         PRSLP:  DEC     E               ; Count characters
+<span id="F21A">F21A</span> 1D         <span id="PRSLP"><a href="#PRSLP">PRSLP</a></span>:  DEC     E               ; Count characters
 F21B C8                 RET     Z               ; End of string
 F21C 0A                 LD      A,(BC)          ; Get byte to output
-F21D CD9BE6             CALL    OUTC            ; Output character in A
-F220 FE0D               CP      CR              ; Return?
-F222 CC86EB             CALL    Z,DONULL        ; Yes - Do nulls
+F21D CD9BE6             CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output character in A
+F220 FE0D               CP      <a href="../../../24/23/text/#CR">CR</a>              ; Return?
+F222 CC86EB             CALL    Z,<a href="../../../26/32/text/#DONULL">DONULL</a>        ; Yes - Do nulls
 F225 03                 INC     BC              ; Next byte in string
-F226 C31AF2             JP      PRSLP           ; More characters to output
+F226 C31AF2             JP      <a href="../../../31/26/text/#PRSLP">PRSLP</a>           ; More characters to output
 </pre>
 <!-- 1 column: end --></div>
 </div>

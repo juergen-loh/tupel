@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/24/29/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -140,8 +140,8 @@
 
                 ; INITIALISATION TABLE
 
-E2DF C3AEE0     INITAB: JP      WARMST          ; Warm start jump
-E2E2 C3A0E9             JP      FCERR           ; "USR (X)" jump (Set to Error)
+<span id="E2DF">E2DF</span> C3AEE0     <span id="INITAB"><a href="#INITAB">INITAB</a></span>: JP      <a href="../../../24/25/text/#WARMST">WARMST</a>          ; Warm start jump
+E2E2 C3A0E9             JP      <a href="../../../25/36/text/#FCERR">FCERR</a>           ; "<a href="../../../24/24/text/#USR">USR</a> (X)" jump (Set to Error)
 
 E2E5 D300               OUT     (0),A           ; "OUT p,n" skeleton
 E2E7 C9                 RET
@@ -158,7 +158,7 @@ E2F3 3E00               LD      A,0
 E2F5 C9                 RET
 
 E2F6 000000             DEFB    0,0,0                   ; Random number seed
-                                                        ; Table used by RND
+                                                        ; Table used by <a href="../../../33/23/text/#RND">RND</a>
 E2F9 354ACA99           DEFB    035H,04AH,0CAH,099H     ;-2.65145E+07
 E2FD 391C7698           DEFB    039H,01CH,076H,098H     ; 1.61291E+07
 E301 2295B398           DEFB    022H,095H,0B3H,098H     ;-1.17691E+07
@@ -169,10 +169,10 @@ E311 65BCCD98           DEFB    065H,0BCH,0CDH,098H     ;-1.34831E+07
 E315 D6773E98           DEFB    0D6H,077H,03EH,098H     ; 1.24825E+07
 E319 52C74F80           DEFB    052H,0C7H,04FH,080H     ; Last random number
 
-E31D DB00               IN      A,(0)           ; INP (x) skeleton
+E31D DB00               IN      A,(0)           ; <a href="../../../31/30/text/#INP">INP</a> (x) skeleton
 E31F C9                 RET
 
-E320 01                 DEFB    1               ; POS (x) number (1)
+E320 01                 DEFB    1               ; <a href="../../../31/25/text/#POS">POS</a> (x) number (1)
 E321 2F                 DEFB    47              ; Terminal width (47)
 E322 1C                 DEFB    28              ; Width for commas (3 columns)
 E323 00                 DEFB    0               ; No nulls after input bytes
@@ -182,66 +182,66 @@ E325 0500               DEFW    5               ; Initial lines counter
 E327 0500               DEFW    5               ; Initial lines number
 E329 0000               DEFW    0               ; Array load/save check sum
 
-E32B 00                 DEFB    0               ; Break not by NMI
+E32B 00                 DEFB    0               ; Break not by <a href="../../../24/23/text/#NMI">NMI</a>
 E32C 00                 DEFB    0               ; Break flag
 
-E32D C307E6             JP      TTYLIN          ; Input reflection (set to TTY)
-E330 C379FF             JP      POINTB          ; POINT reflection unused
-E333 C340FF             JP      SETB            ; SET reflection
-E336 C355FF             JP      RESETB          ; RESET reflection
+E32D C307E6             JP      <a href="../../../24/34/text/#TTYLIN">TTYLIN</a>          ; Input reflection (set to TTY)
+E330 C379FF             JP      <a href="../../../33/28/text/#POINTB">POINTB</a>          ; <a href="../../../24/24/text/#POINT">POINT</a> reflection unused
+E333 C340FF             JP      <a href="../../../33/28/text/#SETB">SETB</a>            ; SET reflection
+E336 C355FF             JP      <a href="../../../33/28/text/#RESETB">RESETB</a>          ; <a href="../../../24/24/text/#RESET">RESET</a> reflection
 
-E339 5D11               DEFW    STLOOK          ; Temp string space
+E339 5D11               DEFW    <a href="../../../24/24/text/#STLOOK">STLOOK</a>          ; Temp string space
 E33B FEFF               DEFW    -2              ; Current line number (cold)
-E33D FA10               DEFW    PROGST+1        ; Start of program text
-E33F            INITBE:                         ; END OF INITIALISATION TABLE
+E33D FA10               DEFW    <a href="../../../24/24/text/#PROGST">PROGST</a>+1        ; Start of program text
+<span id="E33F">E33F</span>            <span id="INITBE"><a href="#INITBE">INITBE</a></span>:                         ; END OF INITIALISATION TABLE
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    13</span>
 
-E33F 20457272   ERRMSG: DEFB    " Error",0
+<span id="E33F-ERRMSG">E33F</span> 20457272   <span id="ERRMSG"><a href="#ERRMSG">ERRMSG</a></span>: DEFB    " Error",0
 E345 00
-E346 20696E20   INMSG:  DEFB    " in ",0
-E34A            ZERBYT  EQU     $-1             ; A zero byte
-E34B 4F6B0D00   OKMSG:  DEFB    "Ok",CR,0,0
-E350 42726561   BRKMSG: DEFB    "Break",0
+<span id="E346">E346</span> 20696E20   <span id="INMSG"><a href="#INMSG">INMSG</a></span>:  DEFB    " in ",0
+<span id="E34A">E34A</span>            <span id="ZERBYT"><a href="#ZERBYT">ZERBYT</a></span>  EQU     $-1             ; A zero byte
+<span id="E34B">E34B</span> 4F6B0D00   <span id="OKMSG"><a href="#OKMSG">OKMSG</a></span>:  DEFB    "Ok",<a href="../../../24/23/text/#CR">CR</a>,0,0
+<span id="E350">E350</span> 42726561   <span id="BRKMSG"><a href="#BRKMSG">BRKMSG</a></span>: DEFB    "Break",0
 
-E356 210400     BAKSTK: LD      HL,4            ; Look for "FOR" block with
+<span id="E356">E356</span> 210400     <span id="BAKSTK"><a href="#BAKSTK">BAKSTK</a></span>: LD      HL,4            ; Look for "<a href="../../../25/33/text/#FOR">FOR</a>" block with
 E359 39                 ADD     HL,SP           ; same index as specified
-E35A 7E         LOKFOR: LD      A,(HL)          ; Get block ID
+<span id="E35A">E35A</span> 7E         <span id="LOKFOR"><a href="#LOKFOR">LOKFOR</a></span>: LD      A,(HL)          ; Get block ID
 E35B 23                 INC     HL              ; Point to index address
-E35C FE81               CP      ZFOR            ; Is it a "FOR" token
+E35C FE81               CP      <a href="../../../24/28/text/#ZFOR">ZFOR</a>            ; Is it a "<a href="../../../25/33/text/#FOR">FOR</a>" token
 E35E C0                 RET     NZ              ; No - exit
-E35F 4E                 LD      C,(HL)          ; BC = Address of "FOR" index
+E35F 4E                 LD      C,(HL)          ; BC = Address of "<a href="../../../25/33/text/#FOR">FOR</a>" index
 E360 23                 INC     HL
 E361 46                 LD      B,(HL)
 E362 23                 INC     HL              ; Point to sign of STEP
 E363 E5                 PUSH    HL              ; Save pointer to sign
-E364 69                 LD      L,C             ; HL = address of "FOR" index
+E364 69                 LD      L,C             ; HL = address of "<a href="../../../25/33/text/#FOR">FOR</a>" index
 E365 60                 LD      H,B
 E366 7A                 LD      A,D             ; See if an index was specified
 E367 B3                 OR      E               ; DE = 0 if no index specified
 E368 EB                 EX      DE,HL           ; Specified index into HL
-E369 CA70E3             JP      Z,INDFND        ; Skip if no index given
+E369 CA70E3             JP      Z,<a href="../../../24/29/text/#INDFND">INDFND</a>        ; Skip if no index given
 E36C EB                 EX      DE,HL           ; Index back into DE
-E36D CD8AE6             CALL    CPDEHL          ; Compare index with one given
-E370 010D00     INDFND: LD      BC,16-3         ; Offset to next block
+E36D CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Compare index with one given
+<span id="E370">E370</span> 010D00     <span id="INDFND"><a href="#INDFND">INDFND</a></span>: LD      BC,16-3         ; Offset to next block
 E373 E1                 POP     HL              ; Restore pointer to sign
 E374 C8                 RET     Z               ; Return if block found
 E375 09                 ADD     HL,BC           ; Point to next block
-E376 C35AE3             JP      LOKFOR          ; Keep on looking
+E376 C35AE3             JP      <a href="../../../24/29/text/#LOKFOR">LOKFOR</a>          ; Keep on looking
 
-E379 CD93E3     MOVUP:  CALL    ENFMEM          ; See if enough memory
-E37C C5         MOVSTR: PUSH    BC              ; Save end of source
+<span id="E379">E379</span> CD93E3     <span id="MOVUP"><a href="#MOVUP">MOVUP</a></span>:  CALL    <a href="../../../24/30/text/#ENFMEM">ENFMEM</a>          ; See if enough memory
+<span id="E37C">E37C</span> C5         <span id="MOVSTR"><a href="#MOVSTR">MOVSTR</a></span>: PUSH    BC              ; Save end of source
 E37D E3                 EX      (SP),HL         ; Swap source and dest" end
 E37E C1                 POP     BC              ; Get end of destination
-E37F CD8AE6     MOVLP:  CALL    CPDEHL          ; See if list moved
+<span id="E37F">E37F</span> CD8AE6     <span id="MOVLP"><a href="#MOVLP">MOVLP</a></span>:  CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; See if list moved
 E382 7E                 LD      A,(HL)          ; Get byte
 E383 02                 LD      (BC),A          ; Move it
 E384 C8                 RET     Z               ; Exit if all done
 E385 0B                 DEC     BC              ; Next byte to move to
 E386 2B                 DEC     HL              ; Next byte to move
-E387 C37FE3             JP      MOVLP           ; Loop until all bytes moved
+E387 C37FE3             JP      <a href="../../../24/29/text/#MOVLP">MOVLP</a>           ; Loop until all bytes moved
 </pre>
 <!-- 1 column: end --></div>
 </div>

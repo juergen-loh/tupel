@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/31/24/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,59 +138,59 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    55</span>
 
-F04A 110400     CREARY: LD      DE,4            ; 4 Bytes per entry
+<span id="F04A">F04A</span> 110400     <span id="CREARY"><a href="#CREARY">CREARY</a></span>: LD      DE,4            ; 4 Bytes per entry
 F04D F1                 POP     AF              ; Array to save or 0 dim'ns?
-F04E CAA0E9             JP      Z,FCERR         ; Yes - ?FC Error
+F04E CAA0E9             JP      Z,<a href="../../../25/36/text/#FCERR">FCERR</a>         ; Yes - ?<a href="../../../24/24/text/#FC">FC</a> Error
 F051 71                 LD      (HL),C          ; Save second byte of name
 F052 23                 INC     HL
 F053 70                 LD      (HL),B          ; Save first byte of name
 F054 23                 INC     HL
 F055 4F                 LD      C,A             ; Number of dimensions to C
-F056 CD8AE3             CALL    CHKSTK          ; Check if enough memory
+F056 CD8AE3             CALL    <a href="../../../24/30/text/#CHKSTK">CHKSTK</a>          ; Check if enough memory
 F059 23                 INC     HL              ; Point to number of dimensions
 F05A 23                 INC     HL
-F05B 22C510             LD      (CUROPR),HL     ; Save address of pointer
+F05B 22C510             LD      (<a href="../../../24/24/text/#CUROPR">CUROPR</a>),HL     ; Save address of pointer
 F05E 71                 LD      (HL),C          ; Set number of dimensions
 F05F 23                 INC     HL
-F060 3AAC10             LD      A,(LCRFLG)      ; Locate of Create?
+F060 3AAC10             LD      A,(<a href="../../../24/24/text/#LCRFLG">LCRFLG</a>)      ; Locate of Create?
 F063 17                 RLA                     ; Carry set = Create
 F064 79                 LD      A,C             ; Get number of dimensions
-F065 010B00     CRARLP: LD      BC,10+1         ; Default dimension size 10
-F068 D26DF0             JP      NC,DEFSIZ       ; Locate - Set default size
+<span id="F065">F065</span> 010B00     <span id="CRARLP"><a href="#CRARLP">CRARLP</a></span>: LD      BC,10+1         ; Default dimension size 10
+F068 D26DF0             JP      NC,<a href="../../../31/24/text/#DEFSIZ">DEFSIZ</a>       ; Locate - Set default size
 F06B C1                 POP     BC              ; Get specified dimension size
 F06C 03                 INC     BC              ; Include zero element
-F06D 71         DEFSIZ: LD      (HL),C          ; Save LSB of dimension size
+<span id="F06D">F06D</span> 71         <span id="DEFSIZ"><a href="#DEFSIZ">DEFSIZ</a></span>: LD      (HL),C          ; Save LSB of dimension size
 F06E 23                 INC     HL
 F06F 70                 LD      (HL),B          ; Save MSB of dimension size
 F070 23                 INC     HL
 F071 F5                 PUSH    AF              ; Save num' of dim'ns an status
 F072 E5                 PUSH    HL              ; Save address of dim'n size
-F073 CDFFF8             CALL    MLDEBC          ; Multiply DE by BC to find
+F073 CDFFF8             CALL    <a href="../../../32/26/text/#MLDEBC">MLDEBC</a>          ; Multiply DE by BC to find
 F076 EB                 EX      DE,HL           ; amount of mem needed (to DE)
 F077 E1                 POP     HL              ; Restore address of dimension
 F078 F1                 POP     AF              ; Restore number of dimensions
 F079 3D                 DEC     A               ; Count them
-F07A C265F0             JP      NZ,CRARLP       ; Do next dimension if more
+F07A C265F0             JP      NZ,<a href="../../../31/24/text/#CRARLP">CRARLP</a>       ; Do next dimension if more
 F07D F5                 PUSH    AF              ; Save locate/create flag
 F07E 42                 LD      B,D             ; MSB of memory needed
 F07F 4B                 LD      C,E             ; LSB of memory needed
 F080 EB                 EX      DE,HL
 F081 19                 ADD     HL,DE           ; Add bytes to array start
-F082 DAA2E3             JP      C,OMERR         ; Too big - Error
-F085 CD93E3             CALL    ENFMEM          ; See if enough memory
-F088 22DA10             LD      (ARREND),HL     ; Save new end of array
+F082 DAA2E3             JP      C,<a href="../../../24/30/text/#OMERR">OMERR</a>         ; Too big - Error
+F085 CD93E3             CALL    <a href="../../../24/30/text/#ENFMEM">ENFMEM</a>          ; See if enough memory
+F088 22DA10             LD      (<a href="../../../24/24/text/#ARREND">ARREND</a>),HL     ; Save new end of array
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    56</span>
 
-F08B 2B         ZERARY: DEC     HL              ; Back through array data
+<span id="F08B">F08B</span> 2B         <span id="ZERARY"><a href="#ZERARY">ZERARY</a></span>: DEC     HL              ; Back through array data
 F08C 3600               LD      (HL),0          ; Set array element to zero
-F08E CD8AE6             CALL    CPDEHL          ; All elements zeroed?
-F091 C28BF0             JP      NZ,ZERARY       ; No - Keep on going
+F08E CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; All elements zeroed?
+F091 C28BF0             JP      NZ,<a href="../../../31/24/text/#ZERARY">ZERARY</a>       ; No - Keep on going
 F094 03                 INC     BC              ; Number of bytes + 1
 F095 57                 LD      D,A             ; A=0
-F096 2AC510             LD      HL,(CUROPR)     ; Get address of array
+F096 2AC510             LD      HL,(<a href="../../../24/24/text/#CUROPR">CUROPR</a>)     ; Get address of array
 F099 5E                 LD      E,(HL)          ; Number of dimensions
 F09A EB                 EX      DE,HL           ; To HL
 F09B 29                 ADD     HL,HL           ; Two bytes per dimension size
@@ -203,36 +203,36 @@ F0A1 23                 INC     HL
 F0A2 72                 LD      (HL),D          ; Save MSB of bytes needed
 F0A3 23                 INC     HL
 F0A4 F1                 POP     AF              ; Locate / Create?
-F0A5 DACCF0             JP      C,ENDDIM        ; A is 0 , End if create
-F0A8 47         FINDEL: LD      B,A             ; Find array element
+F0A5 DACCF0             JP      C,<a href="../../../31/24/text/#ENDDIM">ENDDIM</a>        ; A is 0 , End if create
+<span id="F0A8">F0A8</span> 47         <span id="FINDEL"><a href="#FINDEL">FINDEL</a></span>: LD      B,A             ; Find array element
 F0A9 4F                 LD      C,A
 F0AA 7E                 LD      A,(HL)          ; Number of dimensions
 F0AB 23                 INC     HL
 F0AC 16                 DEFB    (LD D,n)        ; Skip "POP HL"
-F0AD E1         FNDELP: POP     HL              ; Address of next dim' size
+<span id="F0AD">F0AD</span> E1         <span id="FNDELP"><a href="#FNDELP">FNDELP</a></span>: POP     HL              ; Address of next dim' size
 F0AE 5E                 LD      E,(HL)          ; Get LSB of dim'n size
 F0AF 23                 INC     HL
 F0B0 56                 LD      D,(HL)          ; Get MSB of dim'n size
 F0B1 23                 INC     HL
 F0B2 E3                 EX      (SP),HL         ; Save address - Get index
 F0B3 F5                 PUSH    AF              ; Save number of dim'ns
-F0B4 CD8AE6             CALL    CPDEHL          ; Dimension too large?
-F0B7 D245F0             JP      NC,BSERR        ; Yes - ?BS Error
+F0B4 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Dimension too large?
+F0B7 D245F0             JP      NC,<a href="../../../31/23/text/#BSERR">BSERR</a>        ; Yes - ?BS Error
 F0BA E5                 PUSH    HL              ; Save index
-F0BB CDFFF8             CALL    MLDEBC          ; Multiply previous by size
+F0BB CDFFF8             CALL    <a href="../../../32/26/text/#MLDEBC">MLDEBC</a>          ; Multiply previous by size
 F0BE D1                 POP     DE              ; Index supplied to DE
 F0BF 19                 ADD     HL,DE           ; Add index to pointer
 F0C0 F1                 POP     AF              ; Number of dimensions
 F0C1 3D                 DEC     A               ; Count them
 F0C2 44                 LD      B,H             ; MSB of pointer
 F0C3 4D                 LD      C,L             ; LSB of pointer
-F0C4 C2ADF0             JP      NZ,FNDELP       ; More - Keep going
+F0C4 C2ADF0             JP      NZ,<a href="../../../31/24/text/#FNDELP">FNDELP</a>       ; More - Keep going
 F0C7 29                 ADD     HL,HL           ; 4 Bytes per element
 F0C8 29                 ADD     HL,HL
 F0C9 C1                 POP     BC              ; Start of array
 F0CA 09                 ADD     HL,BC           ; Point to element
 F0CB EB                 EX      DE,HL           ; Address of element to DE
-F0CC 2AD010     ENDDIM: LD      HL,(NXTOPR)     ; Got code string address
+<span id="F0CC">F0CC</span> 2AD010     <span id="ENDDIM"><a href="#ENDDIM">ENDDIM</a></span>: LD      HL,(<a href="../../../24/24/text/#NXTOPR">NXTOPR</a>)     ; Got code string address
 F0CF C9                 RET
 </pre>
 <!-- 1 column: end --></div>

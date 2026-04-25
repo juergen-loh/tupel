@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,108 +138,108 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    71</span>
 
-F56B 219DF5     OUTBAD: LD      HL,BAD          ; "Bad" message
-F56E CD10F2             CALL    PRS             ; Output string
-F571 C3E1E3             JP      ERRIN           ; In line message
+<span id="F56B">F56B</span> 219DF5     <span id="OUTBAD"><a href="#OUTBAD">OUTBAD</a></span>: LD      HL,<a href="../../../31/32/text/#BAD">BAD</a>          ; "Bad" message
+F56E CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output string
+F571 C3E1E3             JP      <a href="../../../24/30/text/#ERRIN">ERRIN</a>           ; In line message
 
-F574 C5         FILFND: PUSH    BC              ; &lt;- Save
+<span id="F574">F574</span> C5         <span id="FILFND"><a href="#FILFND">FILFND</a></span>: PUSH    BC              ; &lt;- Save
 F575 E5                 PUSH    HL              ; &lt;- all
 F576 D5                 PUSH    DE              ; &lt;- the
 F577 F5                 PUSH    AF              ; &lt;- registers
-F578 218EF5             LD      HL,FILE         ; "File" message
-F57B CD10F2             CALL    PRS             ; Output string
+F578 218EF5             LD      HL,<a href="../../../31/32/text/#FILE">FILE</a>         ; "File" message
+F57B CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output string
 F57E F1                 POP     AF              ; Get file name
 F57F F5                 PUSH    AF              ; And re-save
-F580 CDD9FC             CALL    CONMON          ; Output file name to screen
-F583 2194F5             LD      HL,FOUND        ; "Found" message
-F586 CD10F2             CALL    PRS             ; Output string
+F580 CDD9FC             CALL    <a href="../../../33/25/text/#CONMON">CONMON</a>          ; Output file name to screen
+F583 2194F5             LD      HL,<a href="../../../31/32/text/#FOUND">FOUND</a>        ; "Found" message
+F586 CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output string
 F589 F1                 POP     AF              ; &lt;- Restore
 F58A D1                 POP     DE              ; &lt;- all
 F58B E1                 POP     HL              ; &lt;- the
 F58C C1                 POP     BC              ; &lt;- registers
 F58D C9                 RET
 
-F58E 46696C65   FILE:   DEFB    "File ",0
-F594 20466F75   FOUND:  DEFB    " Found",CR,LF,0
-F59D 42616400   BAD:    DEFB    "Bad",0,0,0
+<span id="F58E">F58E</span> 46696C65   <span id="FILE"><a href="#FILE">FILE</a></span>:   DEFB    "File ",0
+<span id="F594">F594</span> 20466F75   <span id="FOUND"><a href="#FOUND">FOUND</a></span>:  DEFB    " Found",<a href="../../../24/23/text/#CR">CR</a>,<a href="../../../24/23/text/#LF">LF</a>,0
+<span id="F59D">F59D</span> 42616400   <span id="BAD"><a href="#BAD">BAD</a></span>:    DEFB    "Bad",0,0,0
 
-<span id="F5A3">F5A3 CD8BE9     PEEK:   CALL    DEINT           ; Get memory address</span>
+<span id="F5A3">F5A3</span> CD8BE9     <span id="PEEK"><a href="#PEEK">PEEK</a></span>:   CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get memory address
 F5A6 1A                 LD      A,(DE)          ; Get byte in memory
-F5A7 C301F1             JP      PASSA           ; Return integer A
+F5A7 C301F1             JP      <a href="../../../31/25/text/#PASSA">PASSA</a>           ; Return integer A
 
-<span id="F5AA">F5AA CD41ED     POKE:   CALL    GETNUM          ; Get memory address</span>
-F5AD CD8BE9             CALL    DEINT           ; Get integer -32768 to 3276
+<span id="F5AA">F5AA</span> CD41ED     <span id="POKE"><a href="#POKE">POKE</a></span>:   CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get memory address
+F5AD CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 3276
 F5B0 D5                 PUSH    DE              ; Save memory address
-F5B1 CD90E6             CALL    CHKSYN          ; Make sure "," follows
+F5B1 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "," follows
 F5B4 2C                 DEFB    ","
-F5B5 CD84F4             CALL    GETINT          ; Get integer 0-255
+F5B5 CD84F4             CALL    <a href="../../../31/30/text/#GETINT">GETINT</a>          ; Get integer 0-255
 F5B8 D1                 POP     DE              ; Restore memory address
 F5B9 12                 LD      (DE),A          ; Load it into memory
 F5BA C9                 RET
 
-<span id="F5BB">F5BB 2191FA     ROUND:  LD      HL,HALF         ; Add 0.5 to FPREG</span>
-<span id="F5BE">F5BE CD62F8     ADDPHL: CALL    LOADFP          ; Load FP at (HL) to BCDE</span>
-F5C1 C3CDF5             JP      FPADD           ; Add BCDE to FPREG
+<span id="F5BB">F5BB</span> 2191FA     <span id="ROUND"><a href="#ROUND">ROUND</a></span>:  LD      HL,<a href="../../../32/28/text/#HALF">HALF</a>         ; Add 0.5 to <a href="../../../24/24/text/#FPREG">FPREG</a>
+<span id="F5BE">F5BE</span> CD62F8     <span id="ADDPHL"><a href="#ADDPHL">ADDPHL</a></span>: CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; Load FP at (HL) to BCDE
+F5C1 C3CDF5             JP      <a href="../../../31/32/text/#FPADD">FPADD</a>           ; Add BCDE to <a href="../../../24/24/text/#FPREG">FPREG</a>
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    72</span>
 
-<span id="F5C4">F5C4 CD62F8     SUBPHL: CALL    LOADFP          ; FPREG = -FPREG + number at HL</span>
+<span id="F5C4">F5C4</span> CD62F8     <span id="SUBPHL"><a href="#SUBPHL">SUBPHL</a></span>: CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; <a href="../../../24/24/text/#FPREG">FPREG</a> = -<a href="../../../24/24/text/#FPREG">FPREG</a> + number at HL
 F5C7 21                 DEFB    (LD HL,nn)      ; Skip "POP BC" and "POP DE"
-<span id="F5C8">F5C8 C1         PSUB:   POP     BC              ; Get FP number from stack</span>
+<span id="F5C8">F5C8</span> C1         <span id="PSUB"><a href="#PSUB">PSUB</a></span>:   POP     BC              ; Get FP number from stack
 F5C9 D1                 POP     DE
-<span id="F5CA">F5CA CD3CF8     SUBCDE: CALL    INVSGN          ; Negate FPREG</span>
-<span id="F5CD">F5CD 78         FPADD:  LD      A,B             ; Get FP exponent</span>
+<span id="F5CA">F5CA</span> CD3CF8     <span id="SUBCDE"><a href="#SUBCDE">SUBCDE</a></span>: CALL    <a href="../../../32/25/text/#INVSGN">INVSGN</a>          ; Negate <a href="../../../24/24/text/#FPREG">FPREG</a>
+<span id="F5CD">F5CD</span> 78         <span id="FPADD"><a href="#FPADD">FPADD</a></span>:  LD      A,B             ; Get FP exponent
 F5CE B7                 OR      A               ; Is number zero?
 F5CF C8                 RET     Z               ; Yes - Nothing to add
-F5D0 3AE710             LD      A,(FPEXP)       ; Get FPREG exponent
+F5D0 3AE710             LD      A,(<a href="../../../24/24/text/#FPEXP">FPEXP</a>)       ; Get <a href="../../../24/24/text/#FPREG">FPREG</a> exponent
 F5D3 B7                 OR      A               ; Is this number zero?
-F5D4 CA54F8             JP      Z,FPBCDE        ; Yes - Move BCDE to FPREG
+F5D4 CA54F8             JP      Z,<a href="../../../32/25/text/#FPBCDE">FPBCDE</a>        ; Yes - Move BCDE to <a href="../../../24/24/text/#FPREG">FPREG</a>
 F5D7 90                 SUB     B               ; BCDE number larger?
-F5D8 D2E7F5             JP      NC,NOSWAP       ; No - Don't swap them
+F5D8 D2E7F5             JP      NC,<a href="../../../31/32/text/#NOSWAP">NOSWAP</a>       ; No - Don't swap them
 F5DB 2F                 CPL                     ; Two's complement
 F5DC 3C                 INC     A               ;  FP exponent
 F5DD EB                 EX      DE,HL
-F5DE CD44F8             CALL    STAKFP          ; Put FPREG on stack
+F5DE CD44F8             CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Put <a href="../../../24/24/text/#FPREG">FPREG</a> on stack
 F5E1 EB                 EX      DE,HL
-F5E2 CD54F8             CALL    FPBCDE          ; Move BCDE to FPREG
+F5E2 CD54F8             CALL    <a href="../../../32/25/text/#FPBCDE">FPBCDE</a>          ; Move BCDE to <a href="../../../24/24/text/#FPREG">FPREG</a>
 F5E5 C1                 POP     BC              ; Restore number from stack
 F5E6 D1                 POP     DE
-F5E7 FE19       NOSWAP: CP      24+1            ; Second number insignificant?
+<span id="F5E7">F5E7</span> FE19       <span id="NOSWAP"><a href="#NOSWAP">NOSWAP</a></span>: CP      24+1            ; Second number insignificant?
 F5E9 D0                 RET     NC              ; Yes - First number is result
 F5EA F5                 PUSH    AF              ; Save number of bits to scale
-F5EB CD79F8             CALL    SIGNS           ; Set MSBs & sign of result
+F5EB CD79F8             CALL    <a href="../../../32/25/text/#SIGNS">SIGNS</a>           ; Set MSBs & sign of result
 F5EE 67                 LD      H,A             ; Save sign of result
 F5EF F1                 POP     AF              ; Restore scaling factor
-F5F0 CD92F6             CALL    SCALE           ; Scale BCDE to same exponent
+F5F0 CD92F6             CALL    <a href="../../../31/33/text/#SCALE">SCALE</a>           ; Scale BCDE to same exponent
 F5F3 B4                 OR      H               ; Result to be positive?
-F5F4 21E410             LD      HL,FPREG        ; Point to FPREG
-F5F7 F20DF6             JP      P,MINCDE        ; No - Subtract FPREG from CDE
-F5FA CD72F6             CALL    PLUCDE          ; Add FPREG to CDE
-F5FD D253F6             JP      NC,RONDUP       ; No overflow - Round it up
+F5F4 21E410             LD      HL,<a href="../../../24/24/text/#FPREG">FPREG</a>        ; Point to <a href="../../../24/24/text/#FPREG">FPREG</a>
+F5F7 F20DF6             JP      P,<a href="../../../31/32/text/#MINCDE">MINCDE</a>        ; No - Subtract <a href="../../../24/24/text/#FPREG">FPREG</a> from CDE
+F5FA CD72F6             CALL    <a href="../../../31/33/text/#PLUCDE">PLUCDE</a>          ; Add <a href="../../../24/24/text/#FPREG">FPREG</a> to CDE
+F5FD D253F6             JP      NC,<a href="../../../31/33/text/#RONDUP">RONDUP</a>       ; No overflow - Round it up
 F600 23                 INC     HL              ; Point to exponent
 F601 34                 INC     (HL)            ; Increment it
-F602 CABCE3             JP      Z,OVERR         ; Number overflowed - Error
+F602 CABCE3             JP      Z,<a href="../../../24/30/text/#OVERR">OVERR</a>         ; Number overflowed - Error
 F605 2E01               LD      L,1             ; 1 bit to shift right
-F607 CDA8F6             CALL    SHRT1           ; Shift result right
-F60A C353F6             JP      RONDUP          ; Round it up
+F607 CDA8F6             CALL    <a href="../../../31/34/text/#SHRT1">SHRT1</a>           ; Shift result right
+F60A C353F6             JP      <a href="../../../31/33/text/#RONDUP">RONDUP</a>          ; Round it up
 
-<span id="F60D">F60D AF         MINCDE: XOR     A               ; Clear A and carry</span>
+<span id="F60D">F60D</span> AF         <span id="MINCDE"><a href="#MINCDE">MINCDE</a></span>: XOR     A               ; Clear A and carry
 F60E 90                 SUB     B               ; Negate exponent
 F60F 47                 LD      B,A             ; Re-save exponent
-F610 7E                 LD      A,(HL)          ; Get LSB of FPREG
+F610 7E                 LD      A,(HL)          ; Get LSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F611 9B                 SBC     A, E            ; Subtract LSB of BCDE
 F612 5F                 LD      E,A             ; Save LSB of BCDE
 F613 23                 INC     HL
-F614 7E                 LD      A,(HL)          ; Get NMSB of FPREG
+F614 7E                 LD      A,(HL)          ; Get NMSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F615 9A                 SBC     A,D             ; Subtract NMSB of BCDE
 F616 57                 LD      D,A             ; Save NMSB of BCDE
 F617 23                 INC     HL
-F618 7E                 LD      A,(HL)          ; Get MSB of FPREG
+F618 7E                 LD      A,(HL)          ; Get MSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F619 99                 SBC     A,C             ; Subtract MSB of BCDE
 F61A 4F                 LD      C,A             ; Save MSB of BCDE
-F61B DC7EF6     CONPOS: CALL    C,COMPL         ; Overflow - Make it positive
+<span id="F61B">F61B</span> DC7EF6     <span id="CONPOS"><a href="#CONPOS">CONPOS</a></span>: CALL    C,<a href="../../../31/33/text/#COMPL">COMPL</a>         ; Overflow - Make it positive
 </pre>
 <!-- 1 column: end --></div>
 </div>

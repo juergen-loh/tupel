@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,41 +138,41 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    96</span>
 
-FD9B AF         DELAY:  XOR     A               ; Delay routine
-FD9C F5         DELAY1: PUSH    AF              ; PUSHes and POPs delay
+<span id="FD9B">FD9B</span> AF         <span id="DELAY"><a href="#DELAY">DELAY</a></span>:  XOR     A               ; Delay routine
+<span id="FD9C">FD9C</span> F5         <span id="DELAY1"><a href="#DELAY1">DELAY1</a></span>: PUSH    AF              ; PUSHes and POPs delay
 FD9D F1                 POP     AF
 FD9E F5                 PUSH    AF
 FD9F F1                 POP     AF
 FDA0 3D                 DEC     A               ; Count delays
-FDA1 C29CFD             JP      NZ,DELAY1       ; More delay
+FDA1 C29CFD             JP      NZ,<a href="../../../33/26/text/#DELAY1">DELAY1</a>       ; More delay
 FDA4 C9                 RET
 
-<span id="FDA5">FDA5 CD84F4     WIDTH:  CALL    GETINT          ; Get integer 0-255</span>
+<span id="FDA5">FDA5</span> CD84F4     <span id="WIDTH"><a href="#WIDTH">WIDTH</a></span>:  CALL    <a href="../../../31/30/text/#GETINT">GETINT</a>          ; Get integer 0-255
 FDA8 7B                 LD      A,E             ; Width to A
-FDA9 324210             LD      (LWIDTH),A      ; Set width
+FDA9 324210             LD      (<a href="../../../24/24/text/#LWIDTH">LWIDTH</a>),A      ; Set width
 FDAC C9                 RET
 
-<span id="FDAD">FDAD CD41ED     LINES:  CALL    GETNUM          ; Get a number</span>
-FDB0 CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
-FDB3 ED534610           LD      (LINESC),DE     ; Set lines counter
-FDB7 ED534810           LD      (LINESN),DE     ; Set lines number
+<span id="FDAD">FDAD</span> CD41ED     <span id="LINES"><a href="#LINES">LINES</a></span>:  CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get a number
+FDB0 CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
+FDB3 ED534610           LD      (<a href="../../../24/24/text/#LINESC">LINESC</a>),DE     ; Set lines counter
+FDB7 ED534810           LD      (<a href="../../../24/24/text/#LINESN">LINESN</a>),DE     ; Set lines number
 FDBB C9                 RET
 
-<span id="FDBC">FDBC CD8BE9     DEEK:   CALL    DEINT           ; Get integer -32768 to 32767</span>
+<span id="FDBC">FDBC</span> CD8BE9     <span id="DEEK"><a href="#DEEK">DEEK</a></span>:   CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
 FDBF D5                 PUSH    DE              ; Save number
 FDC0 E1                 POP     HL              ; Number to HL
 FDC1 46                 LD      B,(HL)          ; Get LSB of contents
 FDC2 23                 INC     HL
 FDC3 7E                 LD      A,(HL)          ; Get MSB of contents
-FDC4 C3F2F0             JP      ABPASS          ; Return integer AB
+FDC4 C3F2F0             JP      <a href="../../../31/25/text/#ABPASS">ABPASS</a>          ; Return integer AB
 
-<span id="FDC7">FDC7 CD41ED     DOKE:   CALL    GETNUM          ; Get a number</span>
-FDCA CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
+<span id="FDC7">FDC7</span> CD41ED     <span id="DOKE"><a href="#DOKE">DOKE</a></span>:   CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get a number
+FDCA CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
 FDCD D5                 PUSH    DE              ; Save address
-FDCE CD90E6             CALL    CHKSYN          ; Make sure "," follows
+FDCE CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "," follows
 FDD1 2C                 DEFB    ","
-FDD2 CD41ED             CALL    GETNUM          ; Get a number
-FDD5 CD8BE9             CALL    DEINT           ; Get integer -32768 to 32767
+FDD2 CD41ED             CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get a number
+FDD5 CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 to 32767
 FDD8 E3                 EX      (SP),HL         ; Save value,get address
 FDD9 73                 LD      (HL),E          ; Save LSB of value
 FDDA 23                 INC     HL
@@ -180,69 +180,69 @@ FDDB 72                 LD      (HL),D          ; Save MSB of value
 FDDC E1                 POP     HL              ; Restore code string address
 FDDD C9                 RET
 
-FDDE F3         JJUMP1: DI                      ; Disable interrupts
+<span id="FDDE">FDDE</span> F3         <span id="JJUMP1"><a href="#JJUMP1">JJUMP1</a></span>: DI                      ; Disable interrupts
 FDDF DD21FFFF           LD      IX,-1           ; Flag cold start
-FDE3 C312E0             JP      CSTART          ; Go and initialise
+FDE3 C312E0             JP      <a href="../../../24/25/text/#CSTART">CSTART</a>          ; Go and initialise
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    97</span>
 
-<span id="FDE6">FDE6 CD84F4     SCREEN: CALL    GETINT          ; Get integer 0 to 255</span>
+<span id="FDE6">FDE6</span> CD84F4     <span id="SCREEN"><a href="#SCREEN">SCREEN</a></span>: CALL    <a href="../../../31/30/text/#GETINT">GETINT</a>          ; Get integer 0 to 255
 FDE9 F5                 PUSH    AF              ; Save column
-FDEA CD90E6             CALL    CHKSYN          ; Make sure "," follows
+FDEA CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "," follows
 FDED 2C                 DEFB    ","
-FDEE CD84F4             CALL    GETINT          ; Get integer 0 to 255
+FDEE CD84F4             CALL    <a href="../../../31/30/text/#GETINT">GETINT</a>          ; Get integer 0 to 255
 FDF1 C1                 POP     BC              ; Column to B
 FDF2 E5                 PUSH    HL              ; Save code string address
 FDF3 C5                 PUSH    BC              ; Save column
-FDF4 CD11FE             CALL    SCRADR          ; Calculate screen address
+FDF4 CD11FE             CALL    <a href="../../../33/26/text/#SCRADR">SCRADR</a>          ; Calculate screen address
 FDF7 E5                 PUSH    HL              ; Save screen address
-FDF8 CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FDFB CA04FE             JP      Z,TMNCUR        ; "T" monitor - "T" cursor
+FDF8 CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FDFB CA04FE             JP      Z,<a href="../../../33/26/text/#TMNCUR">TMNCUR</a>        ; "T" monitor - "T" cursor
 FDFE E1                 POP     HL              ; Restore screen address
-FDFF 22290C             LD      (CURSOR),HL     ; Set new cursor position
+FDFF 22290C             LD      (<a href="../../../24/23/text/#CURSOR">CURSOR</a>),HL     ; Set new cursor position
 FE02 E1                 POP     HL              ; Rstore code string address
 FE03 C9                 RET
 
-FE04 2A180C     TMNCUR: LD      HL,(TCUR)       ; Get address or cursor
+<span id="FE04">FE04</span> 2A180C     <span id="TMNCUR"><a href="#TMNCUR">TMNCUR</a></span>: LD      HL,(<a href="../../../24/23/text/#TCUR">TCUR</a>)       ; Get address or cursor
 FE07 3620               LD      (HL)," "        ; Remove cursor
 FE09 E1                 POP     HL              ; Get new cursor address
-FE0A 22180C             LD      (TCUR),HL       ; Set new cursor
+FE0A 22180C             LD      (<a href="../../../24/23/text/#TCUR">TCUR</a>),HL       ; Set new cursor
 FE0D 365F               LD      (HL),"_"        ; Put it on screen
 FE0F E1                 POP     HL              ; Restore code string address
 FE10 C9                 RET
 
-FE11 21C907     SCRADR: LD      HL,VDU+10-65    ; SCREEN VDU address (0,0)
+<span id="FE11">FE11</span> 21C907     <span id="SCRADR"><a href="#SCRADR">SCRADR</a></span>: LD      HL,<a href="../../../24/23/text/#VDU">VDU</a>+10-65    ; <a href="../../../33/26/text/#SCREEN">SCREEN</a> <a href="../../../24/23/text/#VDU">VDU</a> address (0,0)
 FE14 0600               LD      B,0
 FE16 4F                 LD      C,A             ; Line to BC
 FE17 B7                 OR      A               ; Test it
-FE18 CAA0E9             JP      Z,FCERR         ; Zero - ?FC Error
+FE18 CAA0E9             JP      Z,<a href="../../../25/36/text/#FCERR">FCERR</a>         ; Zero - ?<a href="../../../24/24/text/#FC">FC</a> Error
 FE1B FE11               CP      16+1            ; 16 lines
-FE1D F2A0E9             JP      P,FCERR         ; > 16 - ?FC Error
+FE1D F2A0E9             JP      P,<a href="../../../25/36/text/#FCERR">FCERR</a>         ; > 16 - ?<a href="../../../24/24/text/#FC">FC</a> Error
 FE20 D1                 POP     DE              ; RETurn address
 FE21 F1                 POP     AF              ; Get column
 FE22 D5                 PUSH    DE              ; Re-save RETurn
 FE23 1600               LD      D,0
 FE25 5F                 LD      E,A             ; Column to DE
 FE26 B7                 OR      A               ; Test it
-FE27 CAA0E9             JP      Z,FCERR         ; Zero - ?FC Error
+FE27 CAA0E9             JP      Z,<a href="../../../25/36/text/#FCERR">FCERR</a>         ; Zero - ?<a href="../../../24/24/text/#FC">FC</a> Error
 FE2A FE31               CP      48+1            ; 48 characters per line
-FE2C F2A0E9             JP      P,FCERR         ; > 48 - ?FC Error
+FE2C F2A0E9             JP      P,<a href="../../../25/36/text/#FCERR">FCERR</a>         ; > 48 - ?<a href="../../../24/24/text/#FC">FC</a> Error
 FE2F 19                 ADD     HL,DE           ; Add column to address
 FE30 1600               LD      D,0
 FE32 59                 LD      E,C             ; Line to DE
 FE33 0640               LD      B,64            ; 64 Bytes per line
-FE35 19         ADD64X: ADD     HL,DE           ; Add line
-FE36 10FD               DJNZ    ADD64X          ; SIXTY FOUR TIMES!!!
+<span id="FE35">FE35</span> 19         <span id="ADD64X"><a href="#ADD64X">ADD64X</a></span>: ADD     HL,DE           ; Add line
+FE36 10FD               DJNZ    <a href="../../../33/26/text/#ADD64X">ADD64X</a>          ; SIXTY FOUR TIMES!!!
 FE38 C9                 RET
 
-FE39 CD6DFE     FLPLED: CALL    MONTST          ; See if NAS-SYS
-FE3C CA42FE             JP      Z,TMFLP         ; "T" MFLP
-FE3F DF5F               SCAL    MFLP
+<span id="FE39">FE39</span> CD6DFE     <span id="FLPLED"><a href="#FLPLED">FLPLED</a></span>: CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FE3C CA42FE             JP      Z,<a href="../../../33/26/text/#TMFLP">TMFLP</a>         ; "T" <a href="../../../24/23/text/#MFLP">MFLP</a>
+FE3F DF5F               SCAL    <a href="../../../24/23/text/#MFLP">MFLP</a>
 FE41 C9                 RET
 
-FE42 C35100     TMFLP:  JP      MFLP            ; Flip drive LED
+<span id="FE42">FE42</span> C35100     <span id="TMFLP"><a href="#TMFLP">TMFLP</a></span>:  JP      <a href="../../../24/23/text/#MFLP">MFLP</a>            ; Flip drive LED
 </pre>
 <!-- 1 column: end --></div>
 </div>

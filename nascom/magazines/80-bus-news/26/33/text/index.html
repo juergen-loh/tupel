@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,104 +138,104 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    42</span>
 
-EC39 CD90E6     NEDMOR: CALL    CHKSYN          ; Check for comma between items
+<span id="EC39">EC39</span> CD90E6     <span id="NEDMOR"><a href="#NEDMOR">NEDMOR</a></span>: CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Check for comma between items
 EC3C 2C                 DEFB    ","
-EC3D CD2DEF     GTVLUS: CALL    GETVAR          ; Get variable name
+<span id="EC3D">EC3D</span> CD2DEF     <span id="GTVLUS"><a href="#GTVLUS">GTVLUS</a></span>: CALL    <a href="../../../26/37/text/#GETVAR">GETVAR</a>          ; Get variable name
 EC40 E3                 EX      (SP),HL         ; Save code str" , Get pointer
 EC41 D5                 PUSH    DE              ; Save variable address
-EC42 7E                 LD      A,(HL)          ; Get next "INPUT"/"DATA" byte
+EC42 7E                 LD      A,(HL)          ; Get next "<a href="../../../26/32/text/#INPUT">INPUT</a>"/"<a href="../../../25/38/text/#DATA">DATA</a>" byte
 EC43 FE2C               CP      ","             ; Comma?
-EC45 CA65EC             JP      Z,ANTVLU        ; Yes - Get another value
-EC48 3ACD10             LD      A,(READFG)      ; Is it READ?
+EC45 CA65EC             JP      Z,<a href="../../../26/33/text/#ANTVLU">ANTVLU</a>        ; Yes - Get another value
+EC48 3ACD10             LD      A,(<a href="../../../24/24/text/#READFG">READFG</a>)      ; Is it <a href="../../../26/32/text/#READ">READ</a>?
 EC4B B7                 OR      A
-EC4C C2D2EC             JP      NZ,FDTLP        ; Yes - Find next DATA stmt
-EC4F 3E3F               LD      A,"?"           ; More INPUT needed
-EC51 CD9BE6             CALL    OUTC            ; Output character
-EC54 CDFCE4             CALL    PROMPT          ; Get INPUT with prompt
+EC4C C2D2EC             JP      NZ,<a href="../../../26/33/text/#FDTLP">FDTLP</a>        ; Yes - Find next DATA stmt
+EC4F 3E3F               LD      A,"?"           ; More <a href="../../../26/32/text/#INPUT">INPUT</a> needed
+EC51 CD9BE6             CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output character
+EC54 CDFCE4             CALL    <a href="../../../24/32/text/#PROMPT">PROMPT</a>          ; Get <a href="../../../26/32/text/#INPUT">INPUT</a> with prompt
 EC57 D1                 POP     DE              ; Variable address
 EC58 C1                 POP     BC              ; Code string address
-EC59 DA77E8             JP      C,INPBRK        ; Break pressed
+EC59 DA77E8             JP      C,<a href="../../../25/35/text/#INPBRK">INPBRK</a>        ; Break pressed
 EC5C 23                 INC     HL              ; Point to next DATA byte
 EC5D 7E                 LD      A,(HL)          ; Get byte
 EC5E B7                 OR      A               ; Is it zero (No input) ?
-EC5F 2B                 DEC     HL              ; Back space INPUT pointer
+EC5F 2B                 DEC     HL              ; Back space <a href="../../../26/32/text/#INPUT">INPUT</a> pointer
 EC60 C5                 PUSH    BC              ; Save code string address
-EC61 CA6FEA             JP      Z,NXTDTA        ; Find end of buffer
+EC61 CA6FEA             JP      Z,<a href="../../../25/37/text/#NXTDTA">NXTDTA</a>        ; Find end of buffer
 EC64 D5                 PUSH    DE              ; Save variable address
-EC65 3AAD10     ANTVLU: LD      A,(TYPE)        ; Check data type
+<span id="EC65">EC65</span> 3AAD10     <span id="ANTVLU"><a href="#ANTVLU">ANTVLU</a></span>: LD      A,(<a href="../../../24/24/text/#TYPE">TYPE</a>)        ; Check data type
 EC68 B7                 OR      A               ; Is it numeric?
-EC69 CA8FEC             JP      Z,INPBIN        ; Yes - Convert to binary
-EC6C CD36E8             CALL    GETCHR          ; Get next character
+EC69 CA8FEC             JP      Z,<a href="../../../26/33/text/#INPBIN">INPBIN</a>        ; Yes - Convert to binary
+EC6C CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
 EC6F 57                 LD      D,A             ; Save input character
 EC70 47                 LD      B,A             ; Again
 EC71 FE22               CP      '"'             ; Start of literal sting?
-EC73 CA83EC             JP      Z,STRENT        ; Yes - Create string entry
-EC76 3ACD10             LD      A,(READFG)      ; "READ" or "INPUT" ?
+EC73 CA83EC             JP      Z,<a href="../../../26/33/text/#STRENT">STRENT</a>        ; Yes - Create string entry
+EC76 3ACD10             LD      A,(<a href="../../../24/24/text/#READFG">READFG</a>)      ; "<a href="../../../26/32/text/#READ">READ</a>" or "<a href="../../../26/32/text/#INPUT">INPUT</a>" ?
 EC79 B7                 OR      A
-EC7A 57                 LD      D,A             ; Save 00 if "INPUT"
-EC7B CA80EC             JP      Z,ITMSEP        ; "INPUT" - End with 00
-EC7E 163A               LD      D,":"           ; "DATA" - End with 00 or ":"
-EC80 062C       ITMSEP: LD      B,","           ; Item separator
-EC82 2B                 DEC     HL              ; Back space for DTSTR
-EC83 CDD2F1     STRENT: CALL    DTSTR           ; Get string terminated by D
+EC7A 57                 LD      D,A             ; Save 00 if "<a href="../../../26/32/text/#INPUT">INPUT</a>"
+EC7B CA80EC             JP      Z,<a href="../../../26/33/text/#ITMSEP">ITMSEP</a>        ; "<a href="../../../26/32/text/#INPUT">INPUT</a>" - End with 00
+EC7E 163A               LD      D,":"           ; "<a href="../../../25/38/text/#DATA">DATA</a>" - End with 00 or ":"
+<span id="EC80">EC80</span> 062C       <span id="ITMSEP"><a href="#ITMSEP">ITMSEP</a></span>: LD      B,","           ; Item separator
+EC82 2B                 DEC     HL              ; Back space for <a href="../../../31/26/text/#DTSTR">DTSTR</a>
+<span id="EC83">EC83</span> CDD2F1     <span id="STRENT"><a href="#STRENT">STRENT</a></span>: CALL    <a href="../../../31/26/text/#DTSTR">DTSTR</a>           ; Get string terminated by D
 EC86 EB                 EX      DE,HL           ; String address to DE
-EC87 219AEC             LD      HL,LTSTND       ; Where to go after LETSTR
-EC8A E3                 EX      (SP),HL         ; Save HL&nbsp;, get input pointer
+EC87 219AEC             LD      HL,<a href="../../../26/33/text/#LTSTND">LTSTND</a>       ; Where to go after <a href="../../../25/38/text/#LETSTR">LETSTR</a>
+EC8A E3                 EX      (SP),HL         ; Save HL , get input pointer
 EC8B D5                 PUSH    DE              ; Save address of string
-EC8C C3A2EA             JP      LETSTR          ; Assign string to variable
+EC8C C3A2EA             JP      <a href="../../../25/38/text/#LETSTR">LETSTR</a>          ; Assign string to variable
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    43</span>
 
-EC8F CD36E8     INPBIN: CALL    GETCHR          ; Get next character
-EC92 CD1AF9             CALL    ASCTFP          ; Convert ASCII to FP number
+<span id="EC8F">EC8F</span> CD36E8     <span id="INPBIN"><a href="#INPBIN">INPBIN</a></span>: CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+EC92 CD1AF9             CALL    <a href="../../../32/26/text/#ASCTFP">ASCTFP</a>          ; Convert ASCII to FP number
 EC95 E3                 EX      (SP),HL         ; Save input ptr, Get var addr
-EC96 CD6BF8             CALL    FPTHL           ; Move FPREG to variable
+EC96 CD6BF8             CALL    <a href="../../../32/25/text/#FPTHL">FPTHL</a>           ; Move <a href="../../../24/24/text/#FPREG">FPREG</a> to variable
 EC99 E1                 POP     HL              ; Restore input pointer
-EC9A 2B         LTSTND: DEC     HL              ; DEC 'cos GETCHR INCs
-EC9B CD36E8             CALL    GETCHR          ; Get next character
-EC9E CAA6EC             JP      Z,MORDT         ; End of line - More needed?
+<span id="EC9A">EC9A</span> 2B         <span id="LTSTND"><a href="#LTSTND">LTSTND</a></span>: DEC     HL              ; DEC 'cos <a href="../../../25/34/text/#GETCHR">GETCHR</a> INCs
+EC9B CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+EC9E CAA6EC             JP      Z,<a href="../../../26/33/text/#MORDT">MORDT</a>         ; End of line - More needed?
 ECA1 FE2C               CP      ","             ; Another value?
-ECA3 C2ECEB             JP      NZ,BADINP       ; No - Bad input
-ECA6 E3         MORDT:  EX      (SP),HL         ; Get code string address
-ECA7 2B                 DEC     HL              ; DEC 'cos GETCHR INCs
-ECA8 CD36E8             CALL    GETCHR          ; Get next character
-ECAB C239EC             JP      NZ,NEDMOR       ; More needed - Get it
+ECA3 C2ECEB             JP      NZ,<a href="../../../26/32/text/#BADINP">BADINP</a>       ; No - Bad input
+<span id="ECA6">ECA6</span> E3         <span id="MORDT"><a href="#MORDT">MORDT</a></span>:  EX      (SP),HL         ; Get code string address
+ECA7 2B                 DEC     HL              ; DEC 'cos <a href="../../../25/34/text/#GETCHR">GETCHR</a> INCs
+ECA8 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+ECAB C239EC             JP      NZ,<a href="../../../26/33/text/#NEDMOR">NEDMOR</a>       ; More needed - Get it
 ECAE D1                 POP     DE              ; Restore DATA pointer
-ECAF 3ACD10             LD      A,(READFG)      ; "READ" or "INPUT" ?
+ECAF 3ACD10             LD      A,(<a href="../../../24/24/text/#READFG">READFG</a>)      ; "<a href="../../../26/32/text/#READ">READ</a>" or "<a href="../../../26/32/text/#INPUT">INPUT</a>" ?
 ECB2 B7                 OR      A
 ECB3 EB                 EX      DE,HL           ; DATA pointer to HL
-ECB4 C25CE8             JP      NZ,UPDATA       ; Update DATA pointer if "READ"
+ECB4 C25CE8             JP      NZ,<a href="../../../25/35/text/#UPDATA">UPDATA</a>       ; Update DATA pointer if "<a href="../../../26/32/text/#READ">READ</a>"
 ECB7 D5                 PUSH    DE              ; Save code string address
 ECB8 B6                 OR      (HL)            ; More input given?
-ECB9 21C1EC             LD      HL,EXTIG        ; "?Extra ignored" message
-ECBC C410F2             CALL    NZ,PRS          ; Output string if extra given
+ECB9 21C1EC             LD      HL,<a href="../../../26/33/text/#EXTIG">EXTIG</a>        ; "?Extra ignored" message
+ECBC C410F2             CALL    NZ,<a href="../../../31/26/text/#PRS">PRS</a>          ; Output string if extra given
 ECBF E1                 POP     HL              ; Restore code string address
 ECC0 C9                 RET
 
-ECC1 3F457874   EXTIG:  DEFB    "?Extra ignored",CR,LF,0
+<span id="ECC1">ECC1</span> 3F457874   <span id="EXTIG"><a href="#EXTIG">EXTIG</a></span>:  DEFB    "?Extra ignored",<a href="../../../24/23/text/#CR">CR</a>,<a href="../../../24/23/text/#LF">LF</a>,0
 
-<span id="ECD2">ECD2 CD70EA     FDTLP:  CALL    DATA            ; Get next statement</span>
+<span id="ECD2">ECD2</span> CD70EA     <span id="FDTLP"><a href="#FDTLP">FDTLP</a></span>:  CALL    <a href="../../../25/38/text/#DATA">DATA</a>            ; Get next statement
 ECD5 B7                 OR      A               ; End of line?
-ECD6 C2EBEC             JP      NZ,FANDT        ; No - See if DATA statement
+ECD6 C2EBEC             JP      NZ,<a href="../../../26/33/text/#FANDT">FANDT</a>        ; No - See if <a href="../../../25/38/text/#DATA">DATA</a> statement
 ECD9 23                 INC     HL
 ECDA 7E                 LD      A,(HL)          ; End of program?
 ECDB 23                 INC     HL
 ECDC B6                 OR      (HL)            ; 00 00 Ends program
-ECDD 1E06               LD      E,OD            ; ?OD Error
-ECDF CAC1E3             JP      Z,ERROR         ; Yes - Out of DATA
+ECDD 1E06               LD      E,<a href="../../../24/24/text/#OD">OD</a>            ; ?<a href="../../../24/24/text/#OD">OD</a> Error
+ECDF CAC1E3             JP      Z,<a href="../../../24/30/text/#ERROR">ERROR</a>         ; Yes - Out of DATA
 ECE2 23                 INC     HL
 ECE3 5E                 LD      E,(HL)          ; LSB of line number
 ECE4 23                 INC     HL
 ECE5 56                 LD      D,(HL)          ; MSB of line number
 ECE6 EB                 EX      DE,HL
-ECE7 22C910             LD      (DATLIN),HL     ; Set line of current DATA item
+ECE7 22C910             LD      (<a href="../../../24/24/text/#DATLIN">DATLIN</a>),HL     ; Set line of current DATA item
 ECEA EB                 EX      DE,HL
-ECEB CD36E8     FANDT:  CALL    GETCHR          ; Get next character
-ECEE FE83               CP      ZDATA           ; "DATA" token
-ECF0 C2D2EC             JP      NZ,FDTLP        ; No "DATA" - Keep looking
-ECF3 C365EC             JP      ANTVLU          ; Found - Convert input
+<span id="ECEB">ECEB</span> CD36E8     <span id="FANDT"><a href="#FANDT">FANDT</a></span>:  CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+ECEE FE83               CP      <a href="../../../24/28/text/#ZDATA">ZDATA</a>           ; "<a href="../../../25/38/text/#DATA">DATA</a>" token
+ECF0 C2D2EC             JP      NZ,<a href="../../../26/33/text/#FDTLP">FDTLP</a>        ; No "DATA" - Keep looking
+ECF3 C365EC             JP      <a href="../../../26/33/text/#ANTVLU">ANTVLU</a>          ; Found - Convert input
 </pre>
 <!-- 1 column: end --></div>
 </div>

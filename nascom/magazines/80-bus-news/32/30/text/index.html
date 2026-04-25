@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,19 +138,19 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    90</span>
 
-<span id="FB5B">FB5B CD44F8     SUMSER: CALL    STAKFP          ; Put FPREG on stack</span>
-FB5E 1106F7             LD      DE,MULT         ; Multiply by "X"
+<span id="FB5B">FB5B</span> CD44F8     <span id="SUMSER"><a href="#SUMSER">SUMSER</a></span>: CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Put <a href="../../../24/24/text/#FPREG">FPREG</a> on stack
+FB5E 1106F7             LD      DE,<a href="../../../31/34/text/#MULT">MULT</a>         ; Multiply by "X"
 FB61 D5                 PUSH    DE              ; To be done after
 FB62 E5                 PUSH    HL              ; Save address of table
-FB63 CD5FF8             CALL    BCDEFP          ; Move FPREG to BCDE
-FB66 CD08F7             CALL    FPMULT          ; Square the value
+FB63 CD5FF8             CALL    <a href="../../../32/25/text/#BCDEFP">BCDEFP</a>          ; Move <a href="../../../24/24/text/#FPREG">FPREG</a> to BCDE
+FB66 CD08F7             CALL    <a href="../../../31/34/text/#FPMULT">FPMULT</a>          ; Square the value
 FB69 E1                 POP     HL              ; Restore address of table
-<span id="FB6A">FB6A CD44F8     SMSER1: CALL    STAKFP          ; Put value on stack</span>
+<span id="FB6A">FB6A</span> CD44F8     <span id="SMSER1"><a href="#SMSER1">SMSER1</a></span>: CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Put value on stack
 FB6D 7E                 LD      A,(HL)          ; Get number of coefficients
 FB6E 23                 INC     HL              ; Point to start of table
-FB6F CD51F8             CALL    PHLTFP          ; Move coefficient to FPREG
+FB6F CD51F8             CALL    <a href="../../../32/25/text/#PHLTFP">PHLTFP</a>          ; Move coefficient to <a href="../../../24/24/text/#FPREG">FPREG</a>
 FB72 06                 DEFB    (LD B,n)        ; Skip "POP AF"
-FB73 F1         SUMLP:  POP     AF              ; Restore count
+<span id="FB73">FB73</span> F1         <span id="SUMLP"><a href="#SUMLP">SUMLP</a></span>:  POP     AF              ; Restore count
 FB74 C1                 POP     BC              ; Restore number
 FB75 D1                 POP     DE
 FB76 3D                 DEC     A               ; Cont coefficients
@@ -159,13 +159,13 @@ FB78 D5                 PUSH    DE              ; Save number
 FB79 C5                 PUSH    BC
 FB7A F5                 PUSH    AF              ; Save count
 FB7B E5                 PUSH    HL              ; Save address in table
-FB7C CD08F7             CALL    FPMULT          ; Multiply FPREG by BCDE
+FB7C CD08F7             CALL    <a href="../../../31/34/text/#FPMULT">FPMULT</a>          ; Multiply <a href="../../../24/24/text/#FPREG">FPREG</a> by BCDE
 FB7F E1                 POP     HL              ; Restore address in table
-FB80 CD62F8             CALL    LOADFP          ; Number at HL to BCDE
+FB80 CD62F8             CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; Number at HL to BCDE
 FB83 E5                 PUSH    HL              ; Save address in table
-FB84 CDCDF5             CALL    FPADD           ; Add coefficient to FPREG
+FB84 CDCDF5             CALL    <a href="../../../31/32/text/#FPADD">FPADD</a>           ; Add coefficient to <a href="../../../24/24/text/#FPREG">FPREG</a>
 FB87 E1                 POP     HL              ; Restore address in table
-FB88 C373FB             JP      SUMLP           ; More coefficients
+FB88 C373FB             JP      <a href="../../../32/30/text/#SUMLP">SUMLP</a>           ; More coefficients
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <h2>

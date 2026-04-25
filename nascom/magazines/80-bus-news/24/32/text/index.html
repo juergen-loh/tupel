@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,8 +138,8 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    18</span>
 
-<span id="E499">E499 2A5E10     SRCHLN: LD      HL,(BASTXT)     ; Start of program text</span>
-E49C 44         SRCHLP: LD      B,H             ; BC = Address to look at
+<span id="E499">E499</span> 2A5E10     <span id="SRCHLN"><a href="#SRCHLN">SRCHLN</a></span>: LD      HL,(<a href="../../../24/24/text/#BASTXT">BASTXT</a>)     ; Start of program text
+<span id="E49C">E49C</span> 44         <span id="SRCHLP"><a href="#SRCHLP">SRCHLP</a></span>: LD      B,H             ; BC = Address to look at
 E49D 4D                 LD      C,L
 E49E 7E                 LD      A,(HL)          ; Get address of next line
 E49F 23                 INC     HL
@@ -152,7 +152,7 @@ E4A5 7E                 LD      A,(HL)          ; Get LSB of line number
 E4A6 23                 INC     HL
 E4A7 66                 LD      H,(HL)          ; Get MSB of line number
 E4A8 6F                 LD      L,A
-E4A9 CD8AE6             CALL    CPDEHL          ; Compare with line in DE
+E4A9 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Compare with line in DE
 E4AC 60                 LD      H,B             ; HL = Start of this line
 E4AD 69                 LD      L,C
 E4AE 7E                 LD      A,(HL)          ; Get LSB of next line address
@@ -163,54 +163,54 @@ E4B2 3F                 CCF
 E4B3 C8                 RET     Z               ; Lines found - Exit
 E4B4 3F                 CCF
 E4B5 D0                 RET     NC              ; Line not found,at line after
-E4B6 C39CE4             JP      SRCHLP          ; Keep looking
+E4B6 C39CE4             JP      <a href="../../../24/32/text/#SRCHLP">SRCHLP</a>          ; Keep looking
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    19</span>
 
-<span id="E4B9">E4B9 C0         NEW:    RET     NZ              ; Return if any more on line</span>
-E4BA 2A5E10     CLRPTR: LD      HL,(BASTXT)     ; Point to start of program
+<span id="E4B9">E4B9</span> C0         <span id="NEW"><a href="#NEW">NEW</a></span>:    RET     NZ              ; Return if any more on line
+<span id="E4BA">E4BA</span> 2A5E10     <span id="CLRPTR"><a href="#CLRPTR">CLRPTR</a></span>: LD      HL,(<a href="../../../24/24/text/#BASTXT">BASTXT</a>)     ; Point to start of program
 E4BD AF                 XOR     A               ; Set program area to empty
 E4BE 77                 LD      (HL),A          ; Save LSB = 00
 E4BF 23                 INC     HL
 E4C0 77                 LD      (HL),A          ; Save MSB = 00
 E4C1 23                 INC     HL
-E4C2 22D610             LD      (PROGND),HL     ; Set program end
+E4C2 22D610             LD      (<a href="../../../24/24/text/#PROGND">PROGND</a>),HL     ; Set program end
 
-<span id="E4C5">E4C5 2A5E10     RUNFST: LD      HL,(BASTXT)     ; Clear all variables</span>
+<span id="E4C5">E4C5</span> 2A5E10     <span id="RUNFST"><a href="#RUNFST">RUNFST</a></span>: LD      HL,(<a href="../../../24/24/text/#BASTXT">BASTXT</a>)     ; Clear all variables
 E4C8 2B                 DEC     HL
 
-<span id="E4C9">E4C9 22CE10     INTVAR: LD      (BRKLIN),HL     ; Initialise RUN variables</span>
-E4CC 2AAF10             LD      HL,(LSTRAM)     ; Get end of RAM
-E4CF 22C310             LD      (STRBOT),HL     ; Clear string space
+<span id="E4C9">E4C9</span> 22CE10     <span id="INTVAR"><a href="#INTVAR">INTVAR</a></span>: LD      (<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>),HL     ; Initialise <a href="../../../25/37/text/#RUN">RUN</a> variables
+E4CC 2AAF10             LD      HL,(<a href="../../../24/24/text/#LSTRAM">LSTRAM</a>)     ; Get end of RAM
+E4CF 22C310             LD      (<a href="../../../24/24/text/#STRBOT">STRBOT</a>),HL     ; Clear string space
 E4D2 AF                 XOR     A
-E4D3 CD46E8             CALL    RESTOR          ; Reset DATA pointers
-E4D6 2AD610             LD      HL,(PROGND)     ; Get end of program
-E4D9 22D810             LD      (VAREND),HL     ; Clear variables
-E4DC 22DA10             LD      (ARREND),HL     ; Clear arrays
+E4D3 CD46E8             CALL    <a href="../../../25/35/text/#RESTOR">RESTOR</a>          ; Reset DATA pointers
+E4D6 2AD610             LD      HL,(<a href="../../../24/24/text/#PROGND">PROGND</a>)     ; Get end of program
+E4D9 22D810             LD      (<a href="../../../24/24/text/#VAREND">VAREND</a>),HL     ; Clear variables
+E4DC 22DA10             LD      (<a href="../../../24/24/text/#ARREND">ARREND</a>),HL     ; Clear arrays
 
-<span id="E4DF">E4DF C1         CLREG:  POP     BC              ; Save return address</span>
-E4E0 2A5A10             LD      HL,(STRSPC)     ; Get end of working RAN
+<span id="E4DF">E4DF</span> C1         <span id="CLREG"><a href="#CLREG">CLREG</a></span>:  POP     BC              ; Save return address
+E4E0 2A5A10             LD      HL,(<a href="../../../24/24/text/#STRSPC">STRSPC</a>)     ; Get end of working RAN
 E4E3 F9                 LD      SP,HL           ; Set stack
-E4E4 21B310             LD      HL,TMSTPL       ; Temporary string pool
-E4E7 22B110             LD      (TMSTPT),HL     ; Reset temporary string ptr
+E4E4 21B310             LD      HL,<a href="../../../24/24/text/#TMSTPL">TMSTPL</a>       ; Temporary string pool
+E4E7 22B110             LD      (<a href="../../../24/24/text/#TMSTPT">TMSTPT</a>),HL     ; Reset temporary string ptr
 E4EA AF                 XOR     A               ; A = 00
 E4EB 6F                 LD      L,A             ; HL = 0000
 E4EC 67                 LD      H,A
-E4ED 22D410             LD      (CONTAD),HL     ; No CONTinue
-E4F0 32CB10             LD      (FORFLG),A      ; Clear FOR flag
-E4F3 22DE10             LD      (FNRGNM),HL     ; Clear FN argument
+E4ED 22D410             LD      (<a href="../../../24/24/text/#CONTAD">CONTAD</a>),HL     ; No CONTinue
+E4F0 32CB10             LD      (<a href="../../../24/24/text/#FORFLG">FORFLG</a>),A      ; Clear <a href="../../../25/33/text/#FOR">FOR</a> flag
+E4F3 22DE10             LD      (<a href="../../../24/24/text/#FNRGNM">FNRGNM</a>),HL     ; Clear FN argument
 E4F6 E5                 PUSH    HL              ; HL = 0000
 E4F7 C5                 PUSH    BC              ; Put back return
-E4F8 2ACE10     DOAGN:  LD      HL,(BRKLIN)     ; Get address of code to RUN
+<span id="E4F8">E4F8</span> 2ACE10     <span id="DOAGN"><a href="#DOAGN">DOAGN</a></span>:  LD      HL,(<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>)     ; Get address of code to <a href="../../../25/37/text/#RUN">RUN</a>
 E4FB C9                 RET                     ; Return to execution driver
 
-<span id="E4FC">E4FC 3E3F       PROMPT: LD      A,"?"           ; "?"</span>
-E4FE CD9BE6             CALL    OUTC            ; Output character
+<span id="E4FC">E4FC</span> 3E3F       <span id="PROMPT"><a href="#PROMPT">PROMPT</a></span>: LD      A,"?"           ; "?"
+E4FE CD9BE6             CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output character
 E501 3E20               LD      A," "           ; Space
-E503 CD9BE6             CALL    OUTC            ; Output character
-E506 C34E10             JP      RINPUT          ; Get input line
+E503 CD9BE6             CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output character
+E506 C34E10             JP      <a href="../../../24/24/text/#RINPUT">RINPUT</a>          ; Get input line
 </pre>
 <!-- 1 column: end --></div>
 </div>

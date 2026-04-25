@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,21 +138,21 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    29</span>
 
-E7A9 EB         FORFND: EX      DE,HL           ; Code string address to HL
+<span id="E7A9">E7A9</span> EB         <span id="FORFND"><a href="#FORFND">FORFND</a></span>: EX      DE,HL           ; Code string address to HL
 E7AA 0E08               LD      C,8
-E7AC CD8AE3             CALL    CHKSTK          ; Check for 8 levels of stack
+E7AC CD8AE3             CALL    <a href="../../../24/30/text/#CHKSTK">CHKSTK</a>          ; Check for 8 levels of stack
 E7AF E5                 PUSH    HL              ; Save code string address
-E7B0 2AC710             LD      HL,(LOOPST)     ; Get first statement of loop
+E7B0 2AC710             LD      HL,(<a href="../../../24/24/text/#LOOPST">LOOPST</a>)     ; Get first statement of loop
 E7B3 E3                 EX      (SP),HL         ; Save and restore code string
 E7B4 E5                 PUSH    HL              ; Re-save code string address
-E7B5 2A5C10             LD      HL,(LINEAT)     ; Get current line number
+E7B5 2A5C10             LD      HL,(<a href="../../../24/24/text/#LINEAT">LINEAT</a>)     ; Get current line number
 E7B8 E3                 EX      (SP),HL         ; Save and restore code string
-E7B9 CD44ED             CALL    TSTNUM          ; Make sure it's a number
-E7BC CD90E6             CALL    CHKSYN          ; Make sure "TO" is next
-E7BF A6                 DEFB    ZTO             ; "TO" token
-E7C0 CD41ED             CALL    GETNUM          ; Get "TO" expression value
+E7B9 CD44ED             CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure it's a number
+<span id="E7BC">E7BC</span> CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "TO" is next
+E7BF A6                 DEFB    <a href="../../../24/28/text/#ZTO">ZTO</a>             ; "TO" token
+E7C0 CD41ED             CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get "TO" expression value
 E7C3 E5                 PUSH    HL              ; Save code string address
-E7C4 CD5FF8             CALL    BCDEFP          ; Move "TO" value to BCDE
+E7C4 CD5FF8             CALL    <a href="../../../32/25/text/#BCDEFP">BCDEFP</a>          ; Move "TO" value to BCDE
 E7C7 E1                 POP     HL              ; Restore code string address
 E7C8 C5                 PUSH    BC              ; Save "TO" value in block
 E7C9 D5                 PUSH    DE
@@ -160,23 +160,23 @@ E7CA 010081             LD      BC,8100H        ; BCDE - 1 (default STEP)
 E7CD 51                 LD      D,C             ; C=0
 E7CE 5A                 LD      E,D             ; D=0
 E7CF 7E                 LD      A,(HL)          ; Get next byte in code string
-E7D0 FEAB               CP      ZSTEP           ; See if "STEP" is stated
+<span id="E7D0">E7D0</span> FEAB               CP      <a href="../../../24/28/text/#ZSTEP">ZSTEP</a>           ; See if "STEP" is stated
 E7D2 3E01               LD      A,1             ; Sign of step = 1
-E7D4 C2E5E7             JP      NZ,SAVSTP       ; No STEP given - Default to 1
-E7D7 CD36E8             CALL    GETCHR          ; Jump over "STEP" token
-E7DA CD41ED             CALL    GETNUM          ; Get step value
+E7D4 C2E5E7             JP      NZ,<a href="../../../25/34/text/#SAVSTP">SAVSTP</a>       ; No STEP given - Default to 1
+E7D7 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Jump over "STEP" token
+E7DA CD41ED             CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get step value
 E7DD E5                 PUSH    HL              ; Save code string address
-E7DE CD5FF8             CALL    BCDEFP          ; Move STEP to BCDE
-E7E1 CD13F8             CALL    TSTSGN          ; Test sign of FPREG
+E7DE CD5FF8             CALL    <a href="../../../32/25/text/#BCDEFP">BCDEFP</a>          ; Move STEP to BCDE
+E7E1 CD13F8             CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
 E7E4 E1                 POP     HL              ; Restore code string address
-E7E5 C5         SAVSTP: PUSH    BC              ; Save the STEP value in block
+<span id="E7E5">E7E5</span> C5         <span id="SAVSTP"><a href="#SAVSTP">SAVSTP</a></span>: PUSH    BC              ; Save the STEP value in block
 E7E6 D5                 PUSH    DE
 E7E7 F5                 PUSH    AF              ; Save sign of STEP
 E7E8 33                 INC     SP              ; Don't save flags
 E7E9 E5                 PUSH    HL              ; Save code string address
-E7EA 2ACE10             LD      HL,(BRKLIN)     ; Get address of index variable
+E7EA 2ACE10             LD      HL,(<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>)     ; Get address of index variable
 E7ED E3                 EX      (SP),HL         ; Save and restore code string
-E7EE 0681       PUTFID: LD      B,ZFOR          ; "FOR" block marker
+<span id="E7EE">E7EE</span> 0681       <span id="PUTFID"><a href="#PUTFID">PUTFID</a></span>: LD      B,<a href="../../../24/28/text/#ZFOR">ZFOR</a>          ; "<a href="../../../25/33/text/#FOR">FOR</a>" block marker
 E7F0 C5                 PUSH    BC              ; Save it
 E7F1 33                 INC     SP              ; Don't save C
 </pre>
@@ -184,40 +184,40 @@ E7F1 33                 INC     SP              ; Don't save C
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    30</span>
 
-<span id="E7F2">E7F2 CD40FD     RUNCNT: CALL    CHKBRK          ; Execution driver - Test break</span>
+<span id="E7F2">E7F2</span> CD40FD     <span id="RUNCNT"><a href="#RUNCNT">RUNCNT</a></span>: CALL    <a href="../../../33/25/text/#CHKBRK">CHKBRK</a>          ; Execution driver - Test break
 E7F5 B7                 OR      A               ; Break key hit?
-E7F6 C466E8             CALL    NZ,STALL        ; Yes - Pause for a key
-E7F9 22CE10             LD      (BRKLIN),HL     ; Save code address for break
+E7F6 C466E8             CALL    NZ,<a href="../../../25/35/text/#STALL">STALL</a>        ; Yes - Pause for a key
+E7F9 22CE10             LD      (<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>),HL     ; Save code address for break
 E7FC 7E                 LD      A,(HL)          ; Get next byte in code string
 E7FD FE3A               CP      ":"             ; Multi statement line?
-E7FF CA16E8             JP      Z,EXCUTE        ; Yes - Execute it
+E7FF CA16E8             JP      Z,<a href="../../../25/34/text/#EXCUTE">EXCUTE</a>        ; Yes - Execute it
 E802 B7                 OR      A               ; End of line?
-E803 C2ADE3             JP      NZ,SNERR        ; No - Syntax error
+E803 C2ADE3             JP      NZ,<a href="../../../24/30/text/#SNERR">SNERR</a>        ; No - Syntax error
 E806 23                 INC     HL              ; Point to address of next line
 E807 7E                 LD      A,(HL)          ; Get LSB of line pointer
 E808 23                 INC     HL
 E809 B6                 OR      (HL)            ; Is it zero (End of prog)?
-E80A CA7AE8             JP      Z,ENDPRG        ; Yes - Terminate execution
+E80A CA7AE8             JP      Z,<a href="../../../25/35/text/#ENDPRG">ENDPRG</a>        ; Yes - Terminate execution
 E80D 23                 INC     HL              ; Point to line number
 E80E 5E                 LD      E,(HL)          ; Get LSB of line number
 E80F 23                 INC     HL
 E810 56                 LD      D,(HL)          ; Get MSB of line number
 E811 EB                 EX      DE,HL           ; Line number to HL
-E812 225C10             LD      (LINEAT),HL     ; Save as current line number
+E812 225C10             LD      (<a href="../../../24/24/text/#LINEAT">LINEAT</a>),HL     ; Save as current line number
 E815 EB                 EX      DE,HL           ; Line number back to DE
-<span id="E816">E816 CD36E8     EXCUTE: CALL    GETCHR          ; Get key word</span>
-E819 11F2E7             LD      DE,RUNCNT       ; Where to RETurn to
+<span id="E816">E816</span> CD36E8     <span id="EXCUTE"><a href="#EXCUTE">EXCUTE</a></span>: CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get key word
+E819 11F2E7             LD      DE,<a href="../../../25/34/text/#RUNCNT">RUNCNT</a>       ; Where to RETurn to
 E81C D5                 PUSH    DE              ; Save for RETurn
-E81D C8         IFJMP:  RET     Z               ; Go to RUNCNT if end of STMT
-E81E D680       ONJMP:  SUB     ZEND            ; Is it a token?
-E820 DA87EA             JP      C,LET           ; No - try to assign it
-E823 FE25               CP      ZNEW+1-ZEND     ; END to NEW&nbsp;?
-E825 D2ADE3             JP      NC,SNERR        ; Not a key word - ?SN Error
+<span id="E81D">E81D</span> C8         <span id="IFJMP"><a href="#IFJMP">IFJMP</a></span>:  RET     Z               ; Go to <a href="../../../25/34/text/#RUNCNT">RUNCNT</a> if end of STMT
+<span id="E81E">E81E</span> D680       <span id="ONJMP"><a href="#ONJMP">ONJMP</a></span>:  SUB     <a href="../../../24/28/text/#ZEND">ZEND</a>            ; Is it a token?
+E820 DA87EA             JP      C,<a href="../../../25/38/text/#LET">LET</a>           ; No - try to assign it
+E823 FE25               CP      <a href="../../../24/28/text/#ZNEW">ZNEW</a>+1-<a href="../../../24/28/text/#ZEND">ZEND</a>     ; END to <a href="../../../24/32/text/#NEW">NEW</a>&nbsp;?
+E825 D2ADE3             JP      NC,<a href="../../../24/30/text/#SNERR">SNERR</a>        ; Not a key word - ?<a href="../../../24/24/text/#SN">SN</a> Error
 E828 07                 RLCA                    ; Double it
 E829 4F                 LD      C,A             ; BC = Offset into table
 E82A 0600               LD      B,0
 E82C EB                 EX      DE,HL           ; Save code string address
-E82D 215AE2             LD      HL,WORDTB       ; Keyword address table
+E82D 215AE2             LD      HL,<a href="../../../24/27/text/#WORDTB">WORDTB</a>       ; Keyword address table
 E830 09                 ADD     HL,BC           ; Point to routine address
 E831 4E                 LD      C,(HL)          ; Get LSB of routine address
 E832 23                 INC     HL
@@ -225,12 +225,12 @@ E833 46                 LD      B,(HL)          ; Get MSB of routine address
 E834 C5                 PUSH    BC              ; Save routine address
 E835 EB                 EX      DE,HL           ; Restore code string address
 
-<span id="E836">E836 23         GETCHR: INC     HL              ; Point to next character</span>
+<span id="E836">E836</span> 23         <span id="GETCHR"><a href="#GETCHR">GETCHR</a></span>: INC     HL              ; Point to next character
 E837 7E                 LD      A,(HL)          ; Get next code string byte
 E838 FE3A               CP      ":"             ; Z if ":"
 E83A D0                 RET     NC              ; NC if &gt; "9"
 E83B FE20               CP      " "
-E83D CA36E8             JP      Z,GETCHR        ; Skip over spaces
+E83D CA36E8             JP      Z,<a href="../../../25/34/text/#GETCHR">GETCHR</a>        ; Skip over spaces
 E840 FE30               CP      "0"
 E842 3F                 CCF                     ; NC if &lt; "0"
 E843 3C                 INC     A               ; Test for zero - Leave carry

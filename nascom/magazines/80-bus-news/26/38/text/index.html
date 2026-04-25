@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/26/38/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,104 +138,104 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    52</span>
 
-EF75 AF         NSCFOR: XOR     A               ; Simple variable
-EF76 32CB10             LD      (FORFLG),A      ; Clear "FOR" flag
+<span id="EF75">EF75</span> AF         <span id="NSCFOR"><a href="#NSCFOR">NSCFOR</a></span>: XOR     A               ; Simple variable
+EF76 32CB10             LD      (<a href="../../../24/24/text/#FORFLG">FORFLG</a>),A      ; Clear "<a href="../../../25/33/text/#FOR">FOR</a>" flag
 EF79 E5                 PUSH    HL              ; Save code string address
 EF7A 50                 LD      D,B             ; DE = Variable name to find
 EF7B 59                 LD      E,C
-EF7C 2ADE10             LD      HL,(FNRGNM)     ; FN argument name
-EF7F CD8AE6             CALL    CPDEHL          ; Is it the FN argument?
-EF82 11E010             LD      DE,FNARG        ; Point to argument value
-EF85 CA54F7             JP      Z,POPHRT        ; Yes - Return FN argument value
-EF88 2AD810             LD      HL,(VAREND)     ; End of variables
+EF7C 2ADE10             LD      HL,(<a href="../../../24/24/text/#FNRGNM">FNRGNM</a>)     ; FN argument name
+EF7F CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Is it the FN argument?
+EF82 11E010             LD      DE,<a href="../../../24/24/text/#FNARG">FNARG</a>        ; Point to argument value
+EF85 CA54F7             JP      Z,<a href="../../../31/34/text/#POPHRT">POPHRT</a>        ; Yes - Return FN argument value
+EF88 2AD810             LD      HL,(<a href="../../../24/24/text/#VAREND">VAREND</a>)     ; End of variables
 EF8B EB                 EX      DE,HL           ; Address of end of search
-EF8C 2AD610             LD      HL,(PROGND)     ; Start of variables address
-EF8F CD8AE6     FNDVAR: CALL    CPDEHL          ; End of variable list table?
-EF92 CAA8EF             JP      Z,CFEVAL        ; Yes - Called from EVAL?
+EF8C 2AD610             LD      HL,(<a href="../../../24/24/text/#PROGND">PROGND</a>)     ; Start of variables address
+<span id="EF8F">EF8F</span> CD8AE6     <span id="FNDVAR"><a href="#FNDVAR">FNDVAR</a></span>: CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; End of variable list table?
+EF92 CAA8EF             JP      Z,<a href="../../../26/38/text/#CFEVAL">CFEVAL</a>        ; Yes - Called from <a href="../../../26/34/text/#EVAL">EVAL</a>?
 EF95 79                 LD      A,C             ; Get second byte of name
 EF96 96                 SUB     (HL)            ; Compare with name in list
 EF97 23                 INC     HL              ; Move on to first byte
-EF98 C29DEF             JP      NZ,FNTHR        ; Different - Find another
+EF98 C29DEF             JP      NZ,<a href="../../../26/38/text/#FNTHR">FNTHR</a>        ; Different - Find another
 EF9B 78                 LD      A,B             ; Get first byte of name
 EF9C 96                 SUB     (HL)            ; Compare with name in list
-EF9D 23         FNTHR:  INC     HL              ; Move on to LSB of value
-EF9E CADCEF             JP      Z,RETADR        ; Found - Return address
+<span id="EF9D">EF9D</span> 23         <span id="FNTHR"><a href="#FNTHR">FNTHR</a></span>:  INC     HL              ; Move on to LSB of value
+EF9E CADCEF             JP      Z,<a href="../../../26/38/text/#RETADR">RETADR</a>        ; Found - Return address
 EFA1 23                 INC     HL              ; &lt;- Skip
 EFA2 23                 INC     HL              ; &lt;- over
 EFA3 23                 INC     HL              ; &lt;- F.P.
 EFA4 23                 INC     HL              ; &lt;- value
-EFA5 C38FEF             JP      FNDVAR          ; Keep looking
+EFA5 C38FEF             JP      <a href="../../../26/38/text/#FNDVAR">FNDVAR</a>          ; Keep looking
 
-EFA8 E1         CFEVAL: POP     HL              ; Restore code string address
+<span id="EFA8">EFA8</span> E1         <span id="CFEVAL"><a href="#CFEVAL">CFEVAL</a></span>: POP     HL              ; Restore code string address
 EFA9 E3                 EX      (SP),HL         ; Get return address
 EFAA D5                 PUSH    DE              ; Save address of variable
-EFAB 1125EE             LD      DE,FRMEVL       ; Return address in EVAL
-EFAE CD8AE6             CALL    CPDEHL          ; Called from EVAL&nbsp;?
+EFAB 1125EE             LD      DE,<a href="../../../26/35/text/#FRMEVL">FRMEVL</a>       ; Return address in <a href="../../../26/34/text/#EVAL">EVAL</a>
+EFAE CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Called from <a href="../../../26/34/text/#EVAL">EVAL</a> ?
 EFB1 D1                 POP     DE              ; Restore address of variable
-EFB2 CADFEF             JP      Z,RETNUL        ; Yes - Return null variable
+EFB2 CADFEF             JP      Z,<a href="../../../26/38/text/#RETNUL">RETNUL</a>        ; Yes - Return null variable
 EFB5 E3                 EX      (SP),HL         ; Put back return
 EFB6 E5                 PUSH    HL              ; Save code string address
 EFB7 C5                 PUSH    BC              ; Save variable name
 EFB8 010600             LD      BC,6            ; 2 byte name plus 4 byte data
-EFBB 2ADA10             LD      HL,(ARREND)     ; End of arrays
+EFBB 2ADA10             LD      HL,(<a href="../../../24/24/text/#ARREND">ARREND</a>)     ; End of arrays
 EFBE E5                 PUSH    HL              ; Save end of arrays
 EFBF 09                 ADD     HL,BC           ; Move up 6 bytes
 EFC0 C1                 POP     BC              ; Source address in BC
 EFC1 E5                 PUSH    HL              ; Save new end address
-EFC2 CD79E3             CALL    MOVUP           ; Move arrays up
+EFC2 CD79E3             CALL    <a href="../../../24/29/text/#MOVUP">MOVUP</a>           ; Move arrays up
 EFC5 E1                 POP     HL              ; Restore new end address
-EFC6 22DA10             LD      (ARREND),HL     ; Set new end address
+EFC6 22DA10             LD      (<a href="../../../24/24/text/#ARREND">ARREND</a>),HL     ; Set new end address
 EFC9 60                 LD      H,B             ; End of variables to HL
 EFCA 69                 LD      L,C
-EFCB 22D810             LD      (VAREND),HL     ; Set new end address
+EFCB 22D810             LD      (<a href="../../../24/24/text/#VAREND">VAREND</a>),HL     ; Set new end address
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    53</span>
 
-EFCE 2B         ZEROLP: DEC     HL              ; Back through to zero variable
+<span id="EFCE">EFCE</span> 2B         <span id="ZEROLP"><a href="#ZEROLP">ZEROLP</a></span>: DEC     HL              ; Back through to zero variable
 EFCF 3600               LD      (HL),0          ; Zero byte in variable
-EFD1 CD8AE6             CALL    CPDEHL          ; Done them all?
-EFD4 C2CEEF             JP      NZ,ZEROLP       ; No - Keep on going
+EFD1 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Done them all?
+EFD4 C2CEEF             JP      NZ,<a href="../../../26/38/text/#ZEROLP">ZEROLP</a>       ; No - Keep on going
 EFD7 D1                 POP     DE              ; Get variable name
 EFD8 73                 LD      (HL),E          ; Store second character
 EFD9 23                 INC     HL
 EFDA 72                 LD      (HL),D          ; Store first character
 EFDB 23                 INC     HL
-EFDC EB         RETADR: EX      DE,HL           ; Address of variable in DE
+<span id="EFDC">EFDC</span> EB         <span id="RETADR"><a href="#RETADR">RETADR</a></span>: EX      DE,HL           ; Address of variable in DE
 EFDD E1                 POP     HL              ; Restore code string address
 EFDE C9                 RET
 
-EFDF 32E710     RETNUL: LD      (FPEXP),A       ; Set result to zero
-EFE2 214AE3             LD      HL,ZERBYT       ; Also set a null string
-EFE5 22E410             LD      (FPREG),HL      ; Save for EVAL
+<span id="EFDF">EFDF</span> 32E710     <span id="RETNUL"><a href="#RETNUL">RETNUL</a></span>: LD      (<a href="../../../24/24/text/#FPEXP">FPEXP</a>),A       ; Set result to zero
+EFE2 214AE3             LD      HL,<a href="../../../24/29/text/#ZERBYT">ZERBYT</a>       ; Also set a null string
+EFE5 22E410             LD      (<a href="../../../24/24/text/#FPREG">FPREG</a>),HL      ; Save for <a href="../../../26/34/text/#EVAL">EVAL</a>
 EFE8 E1                 POP     HL              ; Restore code string address
 EFE9 C9                 RET
 
-EFEA E5         SBSCPT: PUSH    HL              ; Save code string address
-EFEB 2AAC10             LD      HL,(LCRFLG)     ; Locate/Create and Type
+<span id="EFEA">EFEA</span> E5         <span id="SBSCPT"><a href="#SBSCPT">SBSCPT</a></span>: PUSH    HL              ; Save code string address
+EFEB 2AAC10             LD      HL,(<a href="../../../24/24/text/#LCRFLG">LCRFLG</a>)     ; Locate/Create and Type
 EFEE E3                 EX      (SP),HL         ; Save and get code string
 EFEF 57                 LD      D,A             ; Zero number of dimensions
-EFF0 D5         SCPTLP: PUSH    DE              ; Save number of dimensions
+<span id="EFF0">EFF0</span> D5         <span id="SCPTLP"><a href="#SCPTLP">SCPTLP</a></span>: PUSH    DE              ; Save number of dimensions
 EFF1 C5                 PUSH    BC              ; Save array name
-EFF2 CD7FE9             CALL    FPSINT          ; Get subscript (0-32767)
+EFF2 CD7FE9             CALL    <a href="../../../25/36/text/#FPSINT">FPSINT</a>          ; Get subscript (0-32767)
 EFF5 C1                 POP     BC              ; Restore array name
 EFF6 F1                 POP     AF              ; Get number of dimensions
 EFF7 EB                 EX      DE,HL
 EFF8 E3                 EX      (SP),HL         ; Save subscript value
-EFF9 E5                 PUSH    HL              ; Save LCRFLG and TYPE
+EFF9 E5                 PUSH    HL              ; Save <a href="../../../24/24/text/#LCRFLG">LCRFLG</a> and <a href="../../../24/24/text/#TYPE">TYPE</a>
 EFFA EB                 EX      DE,HL
 EFFB 3C                 INC     A               ; Count dimensions
 EFFC 57                 LD      D,A             ; Save in D
 EFFD 7E                 LD      A,(HL)          ; Get next byte in code string
 EFFE FE2C               CP      ","             ; Comma (more to come)?
-F000 CAF0EF             JP      Z,SCPTLP        ; Yes - More subscripts
-F003 CD90E6             CALL    CHKSYN          ; Make sure ")" follows
+F000 CAF0EF             JP      Z,<a href="../../../26/38/text/#SCPTLP">SCPTLP</a>        ; Yes - More subscripts
+F003 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure ")" follows
 F006 29                 DEFB    ")"
-F007 22D010             LD      (NXTOPR),HL     ; Save code string address
-F00A E1                 POP     HL              ; Get LCRFLG and TYPE
-F00B 22AC10             LD      (LCRFLG),HL     ; Restore Locate/create & type
-F00E 1E00               LD      E,0             ; Flag not CSAVE* or CLOAD*
+F007 22D010             LD      (<a href="../../../24/24/text/#NXTOPR">NXTOPR</a>),HL     ; Save code string address
+F00A E1                 POP     HL              ; Get <a href="../../../24/24/text/#LCRFLG">LCRFLG</a> and <a href="../../../24/24/text/#TYPE">TYPE</a>
+F00B 22AC10             LD      (<a href="../../../24/24/text/#LCRFLG">LCRFLG</a>),HL     ; Restore Locate/create & type
+F00E 1E00               LD      E,0             ; Flag not <a href="../../../31/31/text/#CSAVE">CSAVE</a>* or <a href="../../../31/31/text/#CLOAD">CLOAD</a>*
 F010 D5                 PUSH    DE              ; Save number of dimensions (D)
 F011 11                 DEFB    (LD DE,nn)      ; Skip "PUSH HL" and "PUSH AF'
 </pre>

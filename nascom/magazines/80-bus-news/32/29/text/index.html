@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,78 +138,78 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    88</span>
 
-FAB5 C1         POWER:  POP     BC              ; Get base
+<span id="FAB5">FAB5</span> C1         <span id="POWER"><a href="#POWER">POWER</a></span>:  POP     BC              ; Get base
 FAB6 D1                 POP     DE
-FAB7 CD13F8             CALL    TSTSGN          ; Test sign of power
+FAB7 CD13F8             CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of power
 FABA 78                 LD      A,B             ; Get exponent of base
-FABB CAFAFA             JP      Z,EXP           ; Make result 1 if zero
-FABE F2C5FA             JP      P,POWER1        ; Positive base - Ok
+FABB CAFAFA             JP      Z,<a href="../../../32/29/text/#EXP">EXP</a>           ; Make result 1 if zero
+FABE F2C5FA             JP      P,<a href="../../../32/29/text/#POWER1">POWER1</a>        ; Positive base - Ok
 FAC1 B7                 OR      A               ; Zero to negative power?
-FAC2 CAB0E3             JP      Z,DZERR         ; Yes - ?/0 Error
-FAC5 B7         POWER1: OR      A               ; Base zero?
-FAC6 CA34F6             JP      Z,SAVEXP        ; Yes - Return zero
+FAC2 CAB0E3             JP      Z,<a href="../../../24/30/text/#DZERR">DZERR</a>         ; Yes - ?/0 Error
+<span id="FAC5">FAC5</span> B7         <span id="POWER1"><a href="#POWER1">POWER1</a></span>: OR      A               ; Base zero?
+FAC6 CA34F6             JP      Z,<a href="../../../31/33/text/#SAVEXP">SAVEXP</a>        ; Yes - Return zero
 FAC9 D5                 PUSH    DE              ; Save base
 FACA C5                 PUSH    BC
 FACB 79                 LD      A,C             ; Get MSB of base
 FACC F67F               OR      01111111B       ; Get sign status
-FACE CD5FF8             CALL    BCDEFP          ; Move power to BCDE
-FAD1 F2E2FA             JP      P,POWER2        ; Positive base - Ok
+FACE CD5FF8             CALL    <a href="../../../32/25/text/#BCDEFP">BCDEFP</a>          ; Move power to BCDE
+FAD1 F2E2FA             JP      P,<a href="../../../32/29/text/#POWER2">POWER2</a>        ; Positive base - Ok
 FAD4 D5                 PUSH    DE              ; Save power
 FAD5 C5                 PUSH    BC
-FAD6 CDE6F8             CALL    INT             ; Get integer of power
+FAD6 CDE6F8             CALL    <a href="../../../32/26/text/#INT">INT</a>             ; Get integer of power
 FAD9 C1                 POP     BC              ; Restore power
 FADA D1                 POP     DE
 FADB F5                 PUSH    AF              ; MSB of base
-FADC CD8EF8             CALL    CMPNUM          ; Power an integer?
+FADC CD8EF8             CALL    <a href="../../../32/25/text/#CMPNUM">CMPNUM</a>          ; Power an integer?
 FADF E1                 POP     HL              ; Restore MSB of base
 FAE0 7C                 LD      A,H             ; but don't affect flags
 FAE1 1F                 RRA                     ; Exponent odd or even?
-FAE2 E1         POWER2: POP     HL              ; Restore MSB and exponent
-FAE3 22E610             LD      (FPREG+2),HL    ; Save base in FPREG
+<span id="FAE2">FAE2</span> E1         <span id="POWER2"><a href="#POWER2">POWER2</a></span>: POP     HL              ; Restore MSB and exponent
+FAE3 22E610             LD      (<a href="../../../24/24/text/#FPREG">FPREG</a>+2),HL    ; Save base in <a href="../../../24/24/text/#FPREG">FPREG</a>
 FAE6 E1                 POP     HL              ; LSBs of base
-FAE7 22E410             LD      (FPREG),HL      ; Save in FPREG
-FAEA DCA7FA             CALL    C,NEGAFT        ; Odd power - Negate result
-FAED CC3CF8             CALL    Z,INVSGN        ; Negative base - Negate it
+FAE7 22E410             LD      (<a href="../../../24/24/text/#FPREG">FPREG</a>),HL      ; Save in <a href="../../../24/24/text/#FPREG">FPREG</a>
+FAEA DCA7FA             CALL    C,<a href="../../../32/28/text/#NEGAFT">NEGAFT</a>        ; Odd power - Negate result
+FAED CC3CF8             CALL    Z,<a href="../../../32/25/text/#INVSGN">INVSGN</a>        ; Negative base - Negate it
 FAF0 D5                 PUSH    DE              ; Save power
 FAF1 C5                 PUSH    BC
-FAF2 CDC7F6             CALL    LOG             ; Get LOG of base
+FAF2 CDC7F6             CALL    <a href="../../../31/34/text/#LOG">LOG</a>             ; Get <a href="../../../31/34/text/#LOG">LOG</a> of base
 FAF5 C1                 POP     BC              ; Restore power
 FAF6 D1                 POP     DE
-FAF7 CD08F7             CALL    FPMULT          ; Multiply LOG by power
+FAF7 CD08F7             CALL    <a href="../../../31/34/text/#FPMULT">FPMULT</a>          ; Multiply <a href="../../../31/34/text/#LOG">LOG</a> by power
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    89</span>
 
-<span id="FAFA">FAFA CD44F8     EXP:    CALL    STAKFP          ; Put value on stack</span>
+<span id="FAFA">FAFA</span> CD44F8     <span id="EXP"><a href="#EXP">EXP</a></span>:    CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Put value on stack
 FAFD 013881             LD      BC,08138H       ; BCDE = 1/Ln(2)
 FB00 113BAA             LD      DE,0AA3BH
-FB03 CD08F7             CALL    FPMULT          ; Multiply value by 1/LN(2)
-FB06 3AE710             LD      A,(FPEXP)       ; Get exponent
+FB03 CD08F7             CALL    <a href="../../../31/34/text/#FPMULT">FPMULT</a>          ; Multiply value by 1/LN(2)
+FB06 3AE710             LD      A,(<a href="../../../24/24/text/#FPEXP">FPEXP</a>)       ; Get exponent
 FB09 FE88               CP      80H+8           ; Is it in range?
-FB0B D2EFF7             JP      NC,OVTST1       ; No - Test for overflow
-FB0E CDE6F8             CALL    INT             ; Get INT of FPREG
+FB0B D2EFF7             JP      NC,<a href="../../../32/24/text/#OVTST1">OVTST1</a>       ; No - Test for overflow
+FB0E CDE6F8             CALL    <a href="../../../32/26/text/#INT">INT</a>             ; Get <a href="../../../32/26/text/#INT">INT</a> of <a href="../../../24/24/text/#FPREG">FPREG</a>
 FB11 C680               ADD     A,80H           ; For excess 128
 FB13 C602               ADD     A,2             ; Exponent > 126?
-FB15 DAEFF7             JP      C,OVTST1        ; Yes - Test for overflow
+FB15 DAEFF7             JP      C,<a href="../../../32/24/text/#OVTST1">OVTST1</a>        ; Yes - Test for overflow
 FB18 F5                 PUSH    AF              ; Save scaling factor
-FB19 21B6F6             LD      HL,UNITY        ; Point to 1.
-FB1C CDBEF5             CALL    ADDPHL          ; Add 1 to FPREG
-FB1F CDFFF6             CALL    MULLN2          ; Multiply by LN(2)
+FB19 21B6F6             LD      HL,<a href="../../../31/34/text/#UNITY">UNITY</a>        ; Point to 1.
+FB1C CDBEF5             CALL    <a href="../../../31/32/text/#ADDPHL">ADDPHL</a>          ; Add 1 to <a href="../../../24/24/text/#FPREG">FPREG</a>
+FB1F CDFFF6             CALL    <a href="../../../31/34/text/#MULLN2">MULLN2</a>          ; Multiply by LN(2)
 FB22 F1                 POP     AF              ; Restore scaling factor
 FB23 C1                 POP     BC              ; Restore exponent
 FB24 D1                 POP     DE
 FB25 F5                 PUSH    AF              ; Save scaling factor
-FB26 CDCAF5             CALL    SUBCDE          ; Subtract exponent from FPREG
-FB29 CD3CF8             CALL    INVSGN          ; Negate result
-FB2C 213AFB             LD      HL,EXPTAB       ; Coefficient table
-FB2F CD6AFB             CALL    SMSER1          ; Sum the series
+FB26 CDCAF5             CALL    <a href="../../../31/32/text/#SUBCDE">SUBCDE</a>          ; Subtract exponent from <a href="../../../24/24/text/#FPREG">FPREG</a>
+FB29 CD3CF8             CALL    <a href="../../../32/25/text/#INVSGN">INVSGN</a>          ; Negate result
+FB2C 213AFB             LD      HL,<a href="../../../32/29/text/#EXPTAB">EXPTAB</a>       ; Coefficient table
+FB2F CD6AFB             CALL    <a href="../../../32/30/text/#SMSER1">SMSER1</a>          ; Sum the series
 FB32 110000             LD      DE,0            ; Zero LSBs
 FB35 C1                 POP     BC              ; Scaling factor
 FB36 4A                 LD      C,D             ; Zero MSB
-FB37 C308F7             JP      FPMULT          ; Scale result to correct value
+FB37 C308F7             JP      <a href="../../../31/34/text/#FPMULT">FPMULT</a>          ; Scale result to correct value
 
-FB3A 08         EXPTAB: DEFB    8                       ; Table used by EXP
+<span id="FB3A">FB3A</span> 08         <span id="EXPTAB"><a href="#EXPTAB">EXPTAB</a></span>: DEFB    8                       ; Table used by <a href="../../../32/29/text/#EXP">EXP</a>
 FB3B 402E9474           DEFB    040H,02EH,094H,074H     ; -1/7! (-1/5040)
 FB3F 704F2E77           DEFB    070H,04FH,02EH,077H     ;  1/6! ( 1/720)
 FB43 6E02887A           DEFB    06EH,002H,088H,07AH     ; -1/5! (-1/120)

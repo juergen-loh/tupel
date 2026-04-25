@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,13 +138,13 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    75</span>
 
-F6A1 C609       SHRITE: ADD     A,8+1           ; Adjust count
+<span id="F6A1">F6A1</span> C609       <span id="SHRITE"><a href="#SHRITE">SHRITE</a></span>: ADD     A,8+1           ; Adjust count
 F6A3 6F                 LD      L,A             ; Save bits to shift
-F6A4 AF         SHRLP:  XOR     A               ; Flag for all done
+<span id="F6A4">F6A4</span> AF         <span id="SHRLP"><a href="#SHRLP">SHRLP</a></span>:  XOR     A               ; Flag for all done
 F6A5 2D                 DEC     L               ; All shifting done?
 F6A6 C8                 RET     Z               ; Yes - Return
 F6A7 79                 LD      A,C             ; Get MSB
-F6A8 1F         SHRT1:  RRA                     ; Shift it right
+<span id="F6A8">F6A8</span> 1F         <span id="SHRT1"><a href="#SHRT1">SHRT1</a></span>:  RRA                     ; Shift it right
 F6A9 4F                 LD      C,A             ; Re-save
 F6AA 7A                 LD      A,D             ; Get NMSB
 F6AB 1F                 RRA                     ; Shift right with last bit
@@ -155,42 +155,42 @@ F6AF 5F                 LD      E,A             ; Re-save it
 F6B0 78                 LD      A,B             ; Get underflow
 F6B1 1F                 RRA                     ; Shift right with last bit
 F6B2 47                 LD      B,A             ; Re-save underflow
-F6B3 C3A4F6             JP      SHRLP           ; More bits to do
+F6B3 C3A4F6             JP      <a href="../../../31/34/text/#SHRLP">SHRLP</a>           ; More bits to do
 
-F6B6 00000081   UNITY:  DEFB    000H,000H,000H,081H     ; 1.00000
+<span id="F6B6">F6B6</span> 00000081   <span id="UNITY"><a href="#UNITY">UNITY</a></span>:  DEFB    000H,000H,000H,081H     ; 1.00000
 
-F6BA 03         LOGTAB: DEFB    3                       ; Table used by LOG
+<span id="F6BA">F6BA</span> 03         <span id="LOGTAB"><a href="#LOGTAB">LOGTAB</a></span>: DEFB    3                       ; Table used by <a href="../../../31/34/text/#LOG">LOG</a>
 F6BB AA561980           DEFB    0AAH,056H,019H,080H     ; 0.59898
 F6BF F1227680           DEFB    0F1H,022H,076H,080H     ; 0.96147
 F6C3 45AA3882           DEFB    045H,0AAH,038H,082H     ; 2.88539
 
-<span id="F6C7">F6C7 CD13F8     LOG:    CALL    TSTSGN          ; Test sign of value</span>
+<span id="F6C7">F6C7</span> CD13F8     <span id="LOG"><a href="#LOG">LOG</a></span>:    CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of value
 F6CA B7                 OR      A
-F6CB EAA0E9             JP      PE,FCERR        ; ?FC Error if &lt;= zero
-F6CE 21E710             LD      HL,FPEXP        ; Point to exponent
+F6CB EAA0E9             JP      PE,<a href="../../../25/36/text/#FCERR">FCERR</a>        ; ?<a href="../../../24/24/text/#FC">FC</a> Error if &lt;= zero
+F6CE 21E710             LD      HL,<a href="../../../24/24/text/#FPEXP">FPEXP</a>        ; Point to exponent
 F6D1 7E                 LD      A,(HL)          ; Get exponent
-F6D2 013580             LD      BC,8035H        ; BCDE = SQR(1/2)
+F6D2 013580             LD      BC,8035H        ; BCDE = <a href="../../../32/28/text/#SQR">SQR</a>(1/2)
 F6D5 11F304             LD      DE,04F3H
 F6D8 90                 SUB     B               ; Scale value to be &lt; 1
 F6D9 F5                 PUSH    AF              ; Save scale factor
 F6DA 70                 LD      (HL),B          ; Save new exponent
-F6DB D5                 PUSH    DE              ; Save SQR(1/2)
+F6DB D5                 PUSH    DE              ; Save <a href="../../../32/28/text/#SQR">SQR</a>(1/2)
 F6DC C5                 PUSH    BC
-F6DD CDCDF5             CALL    FPADD           ; Add SQR(1/2) to value
-F6E0 C1                 POP     BC              ; Restore SQR(1/2)
+F6DD CDCDF5             CALL    <a href="../../../31/32/text/#FPADD">FPADD</a>           ; Add <a href="../../../32/28/text/#SQR">SQR</a>(1/2) to value
+F6E0 C1                 POP     BC              ; Restore <a href="../../../32/28/text/#SQR">SQR</a>(1/2)
 F6E1 D1                 POP     DE
-F6E2 04                 INC     B               ; Make it SQR(2)
-F6E3 CD69F7             CALL    DVBCDE          ; Divide by SQR(2)
-F6E6 21B6F6             LD      HL,UNITY        ; Point to 1.
-F6E9 CDC4F5             CALL    SUBPHL          ; Subtract FPREG from 1
-F6EC 21BAF6             LD      HL,LOGTAB       ; Coefficient table
-F6EF CD5BFB             CALL    SUMSER          ; Evaluate sum of series
+F6E2 04                 INC     B               ; Make it <a href="../../../32/28/text/#SQR">SQR</a>(2)
+F6E3 CD69F7             CALL    <a href="../../../32/23/text/#DVBCDE">DVBCDE</a>          ; Divide by <a href="../../../32/28/text/#SQR">SQR</a>(2)
+F6E6 21B6F6             LD      HL,<a href="../../../31/34/text/#UNITY">UNITY</a>        ; Point to 1.
+F6E9 CDC4F5             CALL    <a href="../../../31/32/text/#SUBPHL">SUBPHL</a>          ; Subtract <a href="../../../24/24/text/#FPREG">FPREG</a> from 1
+F6EC 21BAF6             LD      HL,<a href="../../../31/34/text/#LOGTAB">LOGTAB</a>       ; Coefficient table
+F6EF CD5BFB             CALL    <a href="../../../32/30/text/#SUMSER">SUMSER</a>          ; Evaluate sum of series
 F6F2 018080             LD      BC,8080H        ; BCDE = -0.5
 F6F5 110000             LD      DE,0000H
-F6F8 CDCDF5             CALL    FPADD           ; Subtract 0.5 from FPREG
+F6F8 CDCDF5             CALL    <a href="../../../31/32/text/#FPADD">FPADD</a>           ; Subtract 0.5 from <a href="../../../24/24/text/#FPREG">FPREG</a>
 F6FB F1                 POP     AF              ; Restore scale factor
-F6FC CD8EF9             CALL    RSCALE          ; Re-scale number
-F6FF 013180     MULLN2: LD      BC,8031H        ; BCDE = Ln(2)
+F6FC CD8EF9             CALL    <a href="../../../32/27/text/#RSCALE">RSCALE</a>          ; Re-scale number
+<span id="F6FF">F6FF</span> 013180     <span id="MULLN2"><a href="#MULLN2">MULLN2</a></span>: LD      BC,8031H        ; BCDE = Ln(2)
 F702 111872             LD      DE,7218H
 F705 21                 DEFB    (LD HL,nn)      ; Skip "POP BC" and "POP DE"
 </pre>
@@ -198,43 +198,43 @@ F705 21                 DEFB    (LD HL,nn)      ; Skip "POP BC" and "POP DE"
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    76</span>
 
-<span id="F706">F706 C1         MULT:   POP     BC              ; Get number from stack</span>
+<span id="F706">F706</span> C1         <span id="MULT"><a href="#MULT">MULT</a></span>:   POP     BC              ; Get number from stack
 F707 D1                 POP     DE
-<span id="F708">F708 CD13F8     FPMULT: CALL    TSTSGN          ; Test sign of FPREG</span>
+<span id="F708">F708</span> CD13F8     <span id="FPMULT"><a href="#FPMULT">FPMULT</a></span>: CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F70B C8                 RET     Z               ; Return zero if zero
 F70C 2E00               LD      L,0             ; Flag add exponents
-F70E CDD1F7             CALL    ADDEXP          ; Add exponents
+F70E CDD1F7             CALL    <a href="../../../32/24/text/#ADDEXP">ADDEXP</a>          ; Add exponents
 F711 79                 LD      A,C             ; Get MSB of multiplier
-F712 32F610             LD      (MULVAL),A      ; Save MSB of multiplier
+F712 32F610             LD      (<a href="../../../24/24/text/#MULVAL">MULVAL</a>),A      ; Save MSB of multiplier
 F715 EB                 EX      DE,HL
-F716 22F710             LD      (MULVAL+1),HL   ; Save rest of multiplier
+F716 22F710             LD      (<a href="../../../24/24/text/#MULVAL">MULVAL</a>+1),HL   ; Save rest of multiplier
 F719 010000             LD      BC,0            ; Partial product (BCDE) = zero
 F71C 50                 LD      D,B
 F71D 58                 LD      E,B
-F71E 211EF6             LD      HL,BNORM        ; Address of normalise
+F71E 211EF6             LD      HL,<a href="../../../31/33/text/#BNORM">BNORM</a>        ; Address of normalise
 F721 E5                 PUSH    HL              ; Save for return
-F722 212AF7             LD      HL,MULT8        ; Address of 8 bit multiply
+F722 212AF7             LD      HL,<a href="../../../31/34/text/#MULT8">MULT8</a>        ; Address of 8 bit multiply
 F725 E5                 PUSH    HL              ; Save for NMSB,MSB
 F726 E5                 PUSH    HL              ;
-F727 21E410             LD      HL,FPREG        ; Point to number
-F72A 7E         MULT8:  LD      A,(HL)          ; Get LSB of number
+F727 21E410             LD      HL,<a href="../../../24/24/text/#FPREG">FPREG</a>        ; Point to number
+<span id="F72A">F72A</span> 7E         <span id="MULT8"><a href="#MULT8">MULT8</a></span>:  LD      A,(HL)          ; Get LSB of number
 F72B 23                 INC     HL              ; Point to NMSB
 F72C B7                 OR      A               ; Test LSB
-F72D CA56F7             JP      Z,BYTSFT        ; Zero - shift to next byte
+F72D CA56F7             JP      Z,<a href="../../../31/34/text/#BYTSFT">BYTSFT</a>        ; Zero - shift to next byte
 F730 E5                 PUSH    HL              ; Save address of number
 F731 2E08               LD      L,8             ; 8 bits to multiply by
-F733 1F         MUL8LP: RRA                     ; Shift LSB right
+<span id="F733">F733</span> 1F         <span id="MUL8LP"><a href="#MUL8LP">MUL8LP</a></span>: RRA                     ; Shift LSB right
 F734 67                 LD      H,A             ; Save LSB
 F735 79                 LD      A,C             ; Get MSB
-F736 D244F7             JP      NC,NOMADD       ; Bit was zero - Don't add
+F736 D244F7             JP      NC,<a href="../../../31/34/text/#NOMADD">NOMADD</a>       ; Bit was zero - Don't add
 F739 E5                 PUSH    HL              ; Save LSB and count
-F73A 2AF710             LD      HL,(MULVAL+1)   ; Get LSB and NMSB
+F73A 2AF710             LD      HL,(<a href="../../../24/24/text/#MULVAL">MULVAL</a>+1)   ; Get LSB and NMSB
 F73D 19                 ADD     HL,DE           ; Add NMSB and LSB
 F73E EB                 EX      DE,HL           ; Leave sum in DE
 F73F E1                 POP     HL              ; Restore MSB and count
-F740 3AF610             LD      A,(MULVAL)      ; Get MSB of multiplier
+F740 3AF610             LD      A,(<a href="../../../24/24/text/#MULVAL">MULVAL</a>)      ; Get MSB of multiplier
 F743 89                 ADC     A,C             ; Add MSB
-F744 1F         NOMADD: RRA                     ; Shift MSB right
+<span id="F744">F744</span> 1F         <span id="NOMADD"><a href="#NOMADD">NOMADD</a></span>: RRA                     ; Shift MSB right
 F745 4F                 LD      C,A             ; Re-save MSB
 F746 7A                 LD      A,D             ; Get NMSB
 F747 1F                 RRA                     ; Shift NMSB right
@@ -247,11 +247,11 @@ F74D 1F                 RRA                     ; Shift VLSB right
 F74E 47                 LD      B,A             ; Re-save VLSB
 F74F 2D                 DEC     L               ; Count bits multiplied
 F750 7C                 LD      A,H             ; Get LSB of multiplier
-F751 C233F7             JP      NZ,MUL8LP       ; More - Do it
-F754 E1         POPHRT: POP     HL              ; Restore address of number
+F751 C233F7             JP      NZ,<a href="../../../31/34/text/#MUL8LP">MUL8LP</a>       ; More - Do it
+<span id="F754">F754</span> E1         <span id="POPHRT"><a href="#POPHRT">POPHRT</a></span>: POP     HL              ; Restore address of number
 F755 C9                 RET
 
-F756 43         BYTSFT: LD      B,E             ; Shift partial product left
+<span id="F756">F756</span> 43         <span id="BYTSFT"><a href="#BYTSFT">BYTSFT</a></span>: LD      B,E             ; Shift partial product left
 F757 5A                 LD      E,D
 F758 51                 LD      D,C
 F759 4F                 LD      C,A

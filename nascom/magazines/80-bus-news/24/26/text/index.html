@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/24/26/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2025-08-20 21:30:39 +0200 (Mi, 20. Aug 2025) $ -->
+	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Thu, 18 Sep 2025 11:06:24 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,41 +138,41 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    6</span>
 
-E0B7 20427974   BFREE:  DEFB    " Bytes free",CR,0,0
+<span id="E0B7">E0B7</span> 20427974   <span id="BFREE"><a href="#BFREE">BFREE</a></span>:  DEFB    " Bytes free",<a href="../../../24/23/text/#CR">CR</a>,0,0
 
-E0C5 4E415343   SIGNON: DEFB    "<span class="uppercase">Nascom</span> ROM BASIC Ver 4.7   ",CR
-E0E1 436F7079           DEFB    "Copyright (C) 1978 by Microsoft",CR,0,0
+<span id="E0C5">E0C5</span> 4E415343   <span id="SIGNON"><a href="#SIGNON">SIGNON</a></span>: DEFB    "<span class="uppercase">Nascom</span> ROM BASIC Ver 4.7   ",<a href="../../../24/23/text/#CR">CR</a>
+E0E1 436F7079           DEFB    "Copyright (C) 1978 by Microsoft",<a href="../../../24/23/text/#CR">CR</a>,0,0
 
-E103 4D656D6F   MEMMSG: DEFB    "Memory size",0
+<span id="E103">E103</span> 4D656D6F   <span id="MEMMSG"><a href="#MEMMSG">MEMMSG</a></span>: DEFB    "Memory size",0
 
                 ; FUNCTION ADDRESS TABLE
 
-E10F 22F8       FNCTAB: DEFW    SGN
-E111 E6F8               DEFW    INT
-E113 38F8               DEFW    ABS
-E115 0310               DEFW    USR
-E117 D0F0               DEFW    FRE
-E119 41F4               DEFW    INP
-E11B FEF0               DEFW    POS
-E11D ACFA               DEFW    SQR
-E11F 8BFB               DEFW    RND
-E121 C7F6               DEFW    LOG
-E123 FAFA               DEFW    EXP
-E125 00FC               DEFW    COS
-E127 06FC               DEFW    SIN
-E129 67FC               DEFW    TAN
-E12B 7CFC               DEFW    ATN
-E12D A3F5               DEFW    PEEK
-E12F BCFD               DEFW    DEEK
-E131 5110               DEFW    POINT
-E133 82F3               DEFW    LEN
-E135 9AF1               DEFW    STR
-E137 1CF4               DEFW    VAL
-E139 91F3               DEFW    ASC
-E13B A2F3               DEFW    CHR
-E13D B2F3               DEFW    LEFT
-E13F E2F3               DEFW    RIGHT
-E141 ECF3               DEFW    MID
+<span id="E10F">E10F</span> 22F8       <span id="FNCTAB"><a href="#FNCTAB">FNCTAB</a></span>: DEFW    <a href="../../../32/24/text/#SGN">SGN</a>
+E111 E6F8               DEFW    <a href="../../../32/26/text/#INT">INT</a>
+E113 38F8               DEFW    <a href="../../../32/25/text/#ABS">ABS</a>
+E115 0310               DEFW    <a href="../../../24/24/text/#USR">USR</a>
+E117 D0F0               DEFW    <a href="../../../31/25/text/#FRE">FRE</a>
+E119 41F4               DEFW    <a href="../../../31/30/text/#INP">INP</a>
+E11B FEF0               DEFW    <a href="../../../31/25/text/#POS">POS</a>
+<span id="E11D">E11D</span> ACFA               DEFW    <a href="../../../32/28/text/#SQR">SQR</a>
+E11F 8BFB               DEFW    <a href="../../../33/23/text/#RND">RND</a>
+E121 C7F6               DEFW    <a href="../../../31/34/text/#LOG">LOG</a>
+E123 FAFA               DEFW    <a href="../../../32/29/text/#EXP">EXP</a>
+E125 00FC               DEFW    <a href="../../../33/24/text/#COS">COS</a>
+E127 06FC               DEFW    <a href="../../../33/24/text/#SIN">SIN</a>
+E129 67FC               DEFW    <a href="../../../33/24/text/#TAN">TAN</a>
+E12B 7CFC               DEFW    <a href="../../../33/24/text/#ATN">ATN</a>
+E12D A3F5               DEFW    <a href="../../../31/32/text/#PEEK">PEEK</a>
+E12F BCFD               DEFW    <a href="../../../33/26/text/#DEEK">DEEK</a>
+E131 5110               DEFW    <a href="../../../24/24/text/#POINT">POINT</a>
+E133 82F3               DEFW    <a href="../../../31/29/text/#LEN">LEN</a>
+E135 9AF1               DEFW    <a href="../../../31/26/text/#STR">STR</a>
+E137 1CF4               DEFW    <a href="../../../31/30/text/#VAL">VAL</a>
+E139 91F3               DEFW    <a href="../../../31/29/text/#ASC">ASC</a>
+E13B A2F3               DEFW    <a href="../../../31/29/text/#CHR">CHR</a>
+E13D B2F3               DEFW    <a href="../../../31/29/text/#LEFT">LEFT</a>
+E13F E2F3               DEFW    <a href="../../../31/29/text/#RIGHT">RIGHT</a>
+E141 ECF3               DEFW    <a href="../../../31/30/text/#MID">MID</a>
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
@@ -180,43 +180,43 @@ E141 ECF3               DEFW    MID
 
                 ; RESERVED WORD LIST
 
-E143 C54E44     WORDS:  DEFB    80H+"END"
-E146 C64F52             DEFB    80H+"FOR"
-E149 CE455854           DEFB    80H+"NEXT"
-E14D C4415441           DEFB    80H+"DATA"
-E151 C94E5055           DEFB    80H+"INPUT"
-E156 C4494D             DEFB    80H+"DIM"
-E159 D2454144           DEFB    80H+"READ"
-E15D CC4554             DEFB    80H+"LET"
-E160 C74F544F           DEFB    80H+"GOTO"
-E164 D2554E             DEFB    80H+"RUN"
-E167 C946               DEFB    80H+"IF"
-E169 D2455354           DEFB    80H+"RESTORE"
-E170 C74F5355           DEFB    80H+"GOSUB"
-E175 D2455455           DEFB    80H+"RETURN"
-E17B D2454D             DEFB    80H+"REM"
-E17E D3544F50           DEFB    80H+"STOP"
-E182 CF5554             DEFB    80H+"OUT"
-E185 CF4E               DEFB    80H+"ON"
-E187 CE554C4C           DEFB    80H+"NULL"
-E18B D7414954           DEFB    80H+"WAIT"
-E18F C44546             DEFB    80H+"DEF"
-E192 D04F4B45           DEFB    80H+"POKE"
-E196 C44F4B45           DEFB    80H+"DOKE"
-E19A D3435245           DEFB    80H+"SCREEN"
-E1A0 CC494E45           DEFB    80H+"LINES"
-E1A5 C34C53             DEFB    80H+"CLS"
-E1A8 D7494454           DEFB    80H+"WIDTH"
-E1AD CD4F4E49           DEFB    80H+"MONITOR"
-E1B4 D34554             DEFB    80H+"SET"
-E1B7 D2455345           DEFB    80H+"RESET"
-E1BC D052494E           DEFB    80H+"PRINT"
-E1C1 C34F4E54           DEFB    80H+"CONT"
-E1C5 CC495354           DEFB    80H+"LIST"
-E1C9 C34C4541           DEFB    80H+"CLEAR"
-E1CE C34C4F41           DEFB    80H+"CLOAD"
-E1D3 C3534156           DEFB    80H+"CSAVE"
-E1D8 CE4557             DEFB    80H+"NEW"
+<span id="E143">E143</span> C54E44     <span id="WORDS"><a href="#WORDS">WORDS</a></span>:  DEFB    80H+"<a href="../../../25/35/text/#PEND">END</a>"
+E146 C64F52             DEFB    80H+"<a href="../../../25/33/text/#FOR">FOR</a>"
+E149 CE455854           DEFB    80H+"<a href="../../../26/34/text/#NEXT">NEXT</a>"
+E14D C4415441           DEFB    80H+"<a href="../../../25/38/text/#DATA">DATA</a>"
+E151 C94E5055           DEFB    80H+"<a href="../../../26/32/text/#INPUT">INPUT</a>"
+E156 C4494D             DEFB    80H+"<a href="../../../26/37/text/#DIM">DIM</a>"
+E159 D2454144           DEFB    80H+"<a href="../../../26/32/text/#READ">READ</a>"
+E15D CC4554             DEFB    80H+"<a href="../../../25/38/text/#LET">LET</a>"
+E160 C74F544F           DEFB    80H+"<a href="../../../25/37/text/#GOTO">GOTO</a>"
+E164 D2554E             DEFB    80H+"<a href="../../../25/37/text/#RUN">RUN</a>"
+E167 C946               DEFB    80H+"<a href="../../../25/38/text/#IF">IF</a>"
+E169 D2455354           DEFB    80H+"<a href="../../../25/35/text/#RESTOR">RESTORE</a>"
+E170 C74F5355           DEFB    80H+"<a href="../../../25/37/text/#GOSUB">GOSUB</a>"
+E175 D2455455           DEFB    80H+"<a href="../../../25/37/text/#RETURN">RETURN</a>"
+E17B D2454D             DEFB    80H+"<a href="../../../25/38/text/#REM">REM</a>"
+E17E D3544F50           DEFB    80H+"<a href="../../../25/35/text/#STOP">STOP</a>"
+E182 CF5554             DEFB    80H+"<a href="../../../31/30/text/#OUT">OUT</a>"
+E185 CF4E               DEFB    80H+"<a href="../../../25/38/text/#ON">ON</a>"
+E187 CE554C4C           DEFB    80H+"<a href="../../../25/35/text/#NULL">NULL</a>"
+E18B D7414954           DEFB    80H+"<a href="../../../31/30/text/#WAIT">WAIT</a>"
+E18F C44546             DEFB    80H+"<a href="../../../31/25/text/#DEF">DEF</a>"
+E192 D04F4B45           DEFB    80H+"<a href="../../../31/32/text/#POKE">POKE</a>"
+E196 C44F4B45           DEFB    80H+"<a href="../../../33/26/text/#DOKE">DOKE</a>"
+E19A D3435245           DEFB    80H+"<a href="../../../33/26/text/#SCREEN">SCREEN</a>"
+E1A0 CC494E45           DEFB    80H+"<a href="../../../33/26/text/#LINES">LINES</a>"
+E1A5 C34C53             DEFB    80H+"<a href="../../../33/25/text/#CLS">CLS</a>"
+E1A8 D7494454           DEFB    80H+"<a href="../../../33/26/text/#WIDTH">WIDTH</a>"
+E1AD CD4F4E49           DEFB    80H+"<a href="../../../33/27/text/#MONITR">MONITOR</a>"
+E1B4 D34554             DEFB    80H+"<a href="../../../24/24/text/#PSET">SET</a>"
+E1B7 D2455345           DEFB    80H+"<a href="../../../24/24/text/#RESET">RESET</a>"
+E1BC D052494E           DEFB    80H+"<a href="../../../26/31/text/#PRINT">PRINT</a>"
+E1C1 C34F4E54           DEFB    80H+"<a href="../../../25/35/text/#CONT">CONT</a>"
+E1C5 CC495354           DEFB    80H+"<a href="../../../25/32/text/#LIST">LIST</a>"
+E1C9 C34C4541           DEFB    80H+"<a href="../../../25/37/text/#CLEAR">CLEAR</a>"
+E1CE C34C4F41           DEFB    80H+"<a href="../../../31/31/text/#CLOAD">CLOAD</a>"
+E1D3 C3534156           DEFB    80H+"<a href="../../../31/31/text/#CSAVE">CSAVE</a>"
+E1D8 CE4557             DEFB    80H+"<a href="../../../24/32/text/#NEW">NEW</a>"
 </pre>
 <!-- 1 column: end --></div>
 </div>

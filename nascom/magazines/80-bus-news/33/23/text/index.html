@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -139,26 +139,26 @@
 <span class="uppercase">Nascom</span><br>
 ROM<br>
 BASIC<br>
-Dis&ndash;Assembled
+Dis&mdash;Assembled
 </h1>
 <h2 class="uppercase">
 Part 7
 </h2>
 <h3 class="author uppercase">
-By Carl Lloyd&ndash;Parker
+By Carl Lloyd&mdash;Parker
 </h3>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    91</span>
 
-<span id="FB8B">FB8B CD13F8     RND:    CALL    TSTSGN          ; Test sign of FPREG</span>
-FB8E 211910             LD      HL,SEED+2       ; Random number seed
-FB91 FAECFB             JP      M,RESEED        ; Negative - Re-seed
-FB94 213A10             LD      HL,LSTRND       ; Last random number
-FB97 CD51F8             CALL    PHLTFP          ; Move last RND to FPREG
-FB9A 211910             LD      HL,SEED+2       ; Random number seed
-FB9D C8                 RET     Z               ; Return if RND(0)
-FB9E 86                 ADD     A,(HL)          ; Add (SEED)+2)
+<span id="FB8B">FB8B</span> CD13F8     <span id="RND"><a href="#RND">RND</a></span>:    CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
+FB8E 211910             LD      HL,<a href="../../../24/24/text/#SEED">SEED</a>+2       ; Random number seed
+FB91 FAECFB             JP      M,<a href="../../../33/24/text/#RESEED">RESEED</a>        ; Negative - Re-seed
+FB94 213A10             LD      HL,<a href="../../../24/24/text/#LSTRND">LSTRND</a>       ; Last random number
+FB97 CD51F8             CALL    <a href="../../../32/25/text/#PHLTFP">PHLTFP</a>          ; Move last <a href="../../../33/23/text/#RND">RND</a> to <a href="../../../24/24/text/#FPREG">FPREG</a>
+FB9A 211910             LD      HL,<a href="../../../24/24/text/#SEED">SEED</a>+2       ; Random number seed
+FB9D C8                 RET     Z               ; Return if <a href="../../../33/23/text/#RND">RND</a>(0)
+FB9E 86                 ADD     A,(HL)          ; Add (<a href="../../../24/24/text/#SEED">SEED</a>)+2)
 FB9F E607               AND     00000111B       ; 0 to 7
 FBA1 0600               LD      B,0
 FBA3 77                 LD      (HL),A          ; Re-save seed
@@ -167,22 +167,22 @@ FBA5 87                 ADD     A,A             ; 4 bytes
 FBA6 87                 ADD     A,A             ; per entry
 FBA7 4F                 LD      C,A             ; BC = Offset into table
 FBA8 09                 ADD     HL,BC           ; Point to coefficient
-FBA9 CD62F8             CALL    LOADFP          ; Coefficient to BCDE
-FBAC CD08F7             CALL    FPMULT          ; Multiply FPREG by coefficient
-FBAF 3A1810             LD      A,(SEED+1)      ; Get (SEED+1)
+FBA9 CD62F8             CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; Coefficient to BCDE
+FBAC CD08F7             CALL    <a href="../../../31/34/text/#FPMULT">FPMULT</a>          ; Multiply <a href="../../../24/24/text/#FPREG">FPREG</a> by coefficient
+FBAF 3A1810             LD      A,(<a href="../../../24/24/text/#SEED">SEED</a>+1)      ; Get (<a href="../../../24/24/text/#SEED">SEED</a>+1)
 FBB2 3C                 INC     A               ; Add 1
 FBB3 E603               AND     00000011B       ; 0 to 3
 FBB5 0600               LD      B,0
 FBB7 FE01               CP      1               ; Is it zero?
 FBB9 88                 ADC     A,B             ; Yes - Make it 1
-FBBA 321810             LD      (SEED+1),A      ; Re-save seed
-FBBD 21F0FB             LD      HL,RNDTAB-4     ; Addition table
+FBBA 321810             LD      (<a href="../../../24/24/text/#SEED">SEED</a>+1),A      ; Re-save seed
+FBBD 21F0FB             LD      HL,<a href="../../../33/24/text/#RNDTAB">RNDTAB</a>-4     ; Addition table
 FBC0 87                 ADD     A,A             ; 4 bytes
 FBC1 87                 ADD     A,A             ; per entry
 FBC2 4F                 LD      C,A             ; BC = Offset into table
 FBC3 09                 ADD     HL,BC           ; Point to value
-FBC4 CDBEF5             CALL    ADDPHL          ; Add value to FPREG
-FBC7 CD5FF8     RND1:   CALL    BCDEFP          ; Move FPREG to BCDE
+FBC4 CDBEF5             CALL    <a href="../../../31/32/text/#ADDPHL">ADDPHL</a>          ; Add value to <a href="../../../24/24/text/#FPREG">FPREG</a>
+<span id="FBC7">FBC7</span> CD5FF8     <span id="RND1"><a href="#RND1">RND1</a></span>:   CALL    <a href="../../../32/25/text/#BCDEFP">BCDEFP</a>          ; Move <a href="../../../24/24/text/#FPREG">FPREG</a> to BCDE
 FBCA 7B                 LD      A,E             ; Get LSB
 FBCB 59                 LD      E,C             ; LSB = MSB
 FBCC EE4F               XOR     01001111B       ; Fiddle around
@@ -191,18 +191,18 @@ FBCF 3680               LD      (HL),80H        ; Set exponent
 FBD1 2B                 DEC     HL              ; Point to MSB
 FBD2 46                 LD      B,(HL)          ; Get MSB
 FBD3 3680               LD      (HL),80H        ; Make value -0.5
-FBD5 211710             LD      HL,SEED         ; Random number seed
+FBD5 211710             LD      HL,<a href="../../../24/24/text/#SEED">SEED</a>         ; Random number seed
 FBD8 34                 INC     (HL)            ; Count seed
 FBD9 7E                 LD      A,(HL)          ; Get seed
 FBDA D6AB               SUB     171             ; Do it modulo 171
-FBDC C2E3FB             JP      NZ,RND2         ; Non-zero - Ok
+FBDC C2E3FB             JP      NZ,<a href="../../../33/23/text/#RND2">RND2</a>         ; Non-zero - Ok
 FBDF 77                 LD      (HL),A          ; Zero seed
 FBE0 0C                 INC     C               ; Fillde about
 FBE1 15                 DEC     D               ; with the
 FBE2 1C                 INC     E               ; number
-FBE3 CD1EF6     RND2:   CALL    BNORM           ; Normalise number
-FBE6 213A10             LD      HL,LSTRND       ; Save random number
-FBE9 C36BF8             JP      FPTHL           ; Move FPREG to last and return
+<span id="FBE3">FBE3</span> CD1EF6     <span id="RND2"><a href="#RND2">RND2</a></span>:   CALL    <a href="../../../31/33/text/#BNORM">BNORM</a>           ; Normalise number
+FBE6 213A10             LD      HL,<a href="../../../24/24/text/#LSTRND">LSTRND</a>       ; Save random number
+FBE9 C36BF8             JP      <a href="../../../32/25/text/#FPTHL">FPTHL</a>           ; Move <a href="../../../24/24/text/#FPREG">FPREG</a> to last and return
 </pre>
 <!-- 1 column: end --></div>
 </div>

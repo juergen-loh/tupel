@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,13 +138,13 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    73</span>
 
-F61E 68         BNORM:  LD      L,B             ; L = Exponent
+<span id="F61E">F61E</span> 68         <span id="BNORM"><a href="#BNORM">BNORM</a></span>:  LD      L,B             ; L = Exponent
 F61F 63                 LD      H,E             ; H = LSB
 F620 AF                 XOR     A
-F621 47         BNRMLP: LD      B,A             ; Save bit count
+<span id="F621">F621</span> 47         <span id="BNRMLP"><a href="#BNRMLP">BNRMLP</a></span>: LD      B,A             ; Save bit count
 F622 79                 LD      A,C             ; Get MSB
 F623 B7                 OR      A               ; Is it zero?
-F624 C240F6             JP      NZ,PNORM        ; No - Do it bit at a time
+F624 C240F6             JP      NZ,<a href="../../../31/33/text/#PNORM">PNORM</a>        ; No - Do it bit at a time
 F627 4A                 LD      C,D             ; MSB = NMSB
 F628 54                 LD      D,H             ; NMSB= LSB
 F629 65                 LD      H,L             ; LSB = VLSB
@@ -152,12 +152,12 @@ F62A 6F                 LD      L,A             ; VLSB= 0
 F62B 78                 LD      A,B             ; Get exponent
 F62C D608               SUB     8               ; Count 8 bits
 F62E FEE0               CP      -24-8           ; Was number zero?
-F630 C221F6             JP      NZ,BNRMLP       ; No - Keep normalising
-F633 AF         RESZER: XOR     A               ; Result is zero
-F634 32E710     SAVEXP: LD      (FPEXP),A       ; Save result as zero
+F630 C221F6             JP      NZ,<a href="../../../31/33/text/#BNRMLP">BNRMLP</a>       ; No - Keep normalising
+<span id="F633">F633</span> AF         <span id="RESZER"><a href="#RESZER">RESZER</a></span>: XOR     A               ; Result is zero
+<span id="F634">F634</span> 32E710     <span id="SAVEXP"><a href="#SAVEXP">SAVEXP</a></span>: LD      (<a href="../../../24/24/text/#FPEXP">FPEXP</a>),A       ; Save result as zero
 F637 C9                 RET
 
-<span id="F638">F638 05         NORMAL: DEC     B               ; Count bits</span>
+<span id="F638">F638</span> 05         <span id="NORMAL"><a href="#NORMAL">NORMAL</a></span>: DEC     B               ; Count bits
 F639 29                 ADD     HL,HL           ; Shift HL left
 F63A 7A                 LD      A,D             ; Get NMSB
 F63B 17                 RLA                     ; Shift left with last bit
@@ -165,34 +165,34 @@ F63C 57                 LD      D,A             ; Save NMSB
 F63D 79                 LD      A,C             ; Get MSB
 F63E 8F                 ADC     A,A             ; Shift left with last bit
 F63F 4F                 LD      C,A             ; Save MSB
-F640 F238F6     PNORM:  JP      P,NORMAL        ; Not done - Keep going
+<span id="F640">F640</span> F238F6     <span id="PNORM"><a href="#PNORM">PNORM</a></span>:  JP      P,<a href="../../../31/33/text/#NORMAL">NORMAL</a>        ; Not done - Keep going
 F643 78                 LD      A,B             ; Number of bits shifted
 F644 5C                 LD      E,H             ; Save HL in EB
 F645 45                 LD      B,L
 F646 B7                 OR      A               ; Any shifting done?
-F647 CA53F6             JP      Z,RONDUP        ; No - Round it up
-F64A 21E710             LD      HL,FPEXP        ; Point to exponent
+F647 CA53F6             JP      Z,<a href="../../../31/33/text/#RONDUP">RONDUP</a>        ; No - Round it up
+F64A 21E710             LD      HL,<a href="../../../24/24/text/#FPEXP">FPEXP</a>        ; Point to exponent
 F64D 86                 ADD     A,(HL)          ; Add shifted bits
 F64E 77                 LD      (HL),A          ; Re-save exponent
-F64F D233F6             JP      NC,RESZER       ; Underflow - Result is zero
+F64F D233F6             JP      NC,<a href="../../../31/33/text/#RESZER">RESZER</a>       ; Underflow - Result is zero
 F652 C8                 RET     Z               ; Result is zero
-F653 78         RONDUP: LD      A,B             ; Get VLSB of number
-F654 21E710     RONDB:  LD      HL,FPEXP        ; Point to exponent
+<span id="F653">F653</span> 78         <span id="RONDUP"><a href="#RONDUP">RONDUP</a></span>: LD      A,B             ; Get VLSB of number
+<span id="F654">F654</span> 21E710     <span id="RONDB"><a href="#RONDB">RONDB</a></span>:  LD      HL,<a href="../../../24/24/text/#FPEXP">FPEXP</a>        ; Point to exponent
 F657 B7                 OR      A               ; Any rounding?
-F658 FC65F6             CALL    M,FPROND        ; Yes - Round number up
+F658 FC65F6             CALL    M,<a href="../../../31/33/text/#FPROND">FPROND</a>        ; Yes - Round number up
 F65B 46                 LD      B,(HL)          ; B = Exponent
 F65C 23                 INC     HL
 F65D 7E                 LD      A,(HL)          ; Get sign of result
 F65E E680               AND     10000000B       ; Only bit 7 needed
 F660 A9                 XOR     C               ; Set correct sign
 F661 4F                 LD      C,A             ; Save correct sign in number
-F662 C354F8             JP      FPBCDE          ; Move BCDE to FPREG
+F662 C354F8             JP      <a href="../../../32/25/text/#FPBCDE">FPBCDE</a>          ; Move BCDE to <a href="../../../24/24/text/#FPREG">FPREG</a>
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    74</span>
 
-F665 1C         FPROND: INC     E               ; Round LSB
+<span id="F665">F665</span> 1C         <span id="FPROND"><a href="#FPROND">FPROND</a></span>: INC     E               ; Round LSB
 F666 C0                 RET     NZ              ; Return if ok
 F667 14                 INC     D               ; Round NMSB
 F668 C0                 RET     NZ              ; Return if ok
@@ -201,22 +201,22 @@ F66A C0                 RET     NZ              ; Return if ok
 F66B 0E80               LD      C,80H           ; Set normal value
 F66D 34                 INC     (HL)            ; Increment exponent
 F66E C0                 RET     NZ              ; Return if ok
-F66F C3BCE3             JP      OVERR           ; Overflow error
+F66F C3BCE3             JP      <a href="../../../24/30/text/#OVERR">OVERR</a>           ; Overflow error
 
-<span id="F672">F672 7E         PLUCDE: LD      A,(HL)          ; Get LSB of FPREG</span>
+<span id="F672">F672</span> 7E         <span id="PLUCDE"><a href="#PLUCDE">PLUCDE</a></span>: LD      A,(HL)          ; Get LSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F673 83                 ADD     A,E             ; Add LSB of BCDE
 F674 5F                 LD      E,A             ; Save LSB of BCDE
 F675 23                 INC     HL
-F676 7E                 LD      A,(HL)          ; Get NMSB of FPREG
+F676 7E                 LD      A,(HL)          ; Get NMSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F677 8A                 ADC     A,D             ; Add NMSB of BCDE
 F678 57                 LD      D,A             ; Save NMSB of BCDE
 F679 23                 INC     HL
-F67A 7E                 LD      A,(HL)          ; Get MSB of FPREG
+F67A 7E                 LD      A,(HL)          ; Get MSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F67B 89                 ADC     A,C             ; Add MSB of BCDE
 F67C 4F                 LD      C,A             ; Save MSB of BCDE
 F67D C9                 RET
 
-<span id="F67E">F67E 21E810     COMPL:  LD      HL,SGNRES       ; Sign of result</span>
+<span id="F67E">F67E</span> 21E810     <span id="COMPL"><a href="#COMPL">COMPL</a></span>:  LD      HL,<a href="../../../24/24/text/#SGNRES">SGNRES</a>       ; Sign of result
 F681 7E                 LD      A,(HL)          ; Get sign of result
 F682 2F                 CPL                     ; Negate it
 F683 77                 LD      (HL),A          ; Put it back
@@ -235,14 +235,14 @@ F68F 99                 SBC     A,C             ; Negate MSB
 F690 4F                 LD      C,A             ; Re-save MSB
 F691 C9                 RET
 
-F692 0600       SCALE:  LD      B,0             ; Clear underflow
-F694 D608       SCALLP: SUB     8               ; 8 bits (a whole byte)?
-F696 DAA1F6             JP      C,SHRITE        ; No - Shift right A bits
+<span id="F692">F692</span> 0600       <span id="SCALE"><a href="#SCALE">SCALE</a></span>:  LD      B,0             ; Clear underflow
+<span id="F694">F694</span> D608       <span id="SCALLP"><a href="#SCALLP">SCALLP</a></span>: SUB     8               ; 8 bits (a whole byte)?
+F696 DAA1F6             JP      C,<a href="../../../31/34/text/#SHRITE">SHRITE</a>        ; No - Shift right A bits
 F699 43                 LD      B,E             ; &lt;- Shift
 F69A 5A                 LD      E,D             ; &lt;- right
 F69B 51                 LD      D,C             ; &lt;- eight
 F69C 0E00               LD      C,0             ; &lt;- bits
-F69E C394F6             JP      SCALLP          ; More bits to shift
+F69E C394F6             JP      <a href="../../../31/33/text/#SCALLP">SCALLP</a>          ; More bits to shift
 </pre>
 <!-- 1 column: end --></div>
 </div>

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,21 +138,21 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    50</span>
 
-EEBA BCEE       CMPLOG: DEFW    CMPLG1          ; Compare two values / strings
-EEBC 79         CMPLG1: LD      A,C             ; Get data type
+<span id="EEBA">EEBA</span> BCEE       <span id="CMPLOG"><a href="#CMPLOG">CMPLOG</a></span>: DEFW    <a href="../../../26/37/text/#CMPLG1">CMPLG1</a>          ; Compare two values / strings
+<span id="EEBC">EEBC</span> 79         <span id="CMPLG1"><a href="#CMPLG1">CMPLG1</a></span>: LD      A,C             ; Get data type
 EEBD B7                 OR      A
 EEBE 1F                 RRA
 EEBF C1                 POP     BC              ; Get last expression to BCDE
 EEC0 D1                 POP     DE
 EEC1 F5                 PUSH    AF              ; Save status
-EEC2 CD46ED             CALL    CHKTYP          ; Check that types match
-EEC5 21FEEE             LD      HL,CMPRES       ; Result to comparison
+EEC2 CD46ED             CALL    <a href="../../../26/34/text/#CHKTYP">CHKTYP</a>          ; Check that types match
+EEC5 21FEEE             LD      HL,<a href="../../../26/37/text/#CMPRES">CMPRES</a>       ; Result to comparison
 EEC8 E5                 PUSH    HL              ; Save for RETurn
-EEC9 CA8EF8             JP      Z,CMPNUM        ; Compare values if numeric
+EEC9 CA8EF8             JP      Z,<a href="../../../32/25/text/#CMPNUM">CMPNUM</a>        ; Compare values if numeric
 EECC AF                 XOR     A               ; Compare two strings
-EECD 32AD10             LD      (TYPE),A        ; Set type to numeric
+EECD 32AD10             LD      (<a href="../../../24/24/text/#TYPE">TYPE</a>),A        ; Set type to numeric
 EED0 D5                 PUSH    DE              ; Save string name
-EED1 CD53F3             CALL    GSTRCU          ; Get current string
+EED1 CD53F3             CALL    <a href="../../../31/28/text/#GSTRCU">GSTRCU</a>          ; Get current string
 EED4 7E                 LD      A,(HL)          ; Get length of string
 EED5 23                 INC     HL
 EED6 23                 INC     HL
@@ -162,12 +162,12 @@ EED9 46                 LD      B,(HL)          ; Get MSB of address
 EEDA D1                 POP     DE              ; Restore string name
 EEDB C5                 PUSH    BC              ; Save address of string
 EEDC F5                 PUSH    AF              ; Save length of string
-EEDD CD57F3             CALL    GSTRDE          ; Get second string
-EEE0 CD62F8             CALL    LOADFP          ; Get address of second string
+EEDD CD57F3             CALL    <a href="../../../31/28/text/#GSTRDE">GSTRDE</a>          ; Get second string
+EEE0 CD62F8             CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; Get address of second string
 EEE3 F1                 POP     AF              ; Restore length of string 1
 EEE4 57                 LD      D,A             ; Length to D
 EEE5 E1                 POP     HL              ; Restore address of string 1
-EEE6 7B         CMPSTR: LD      A,E             ; Bytes of string 2 to do
+<span id="EEE6">EEE6</span> 7B         <span id="CMPSTR"><a href="#CMPSTR">CMPSTR</a></span>: LD      A,E             ; Bytes of string 2 to do
 EEE7 B2                 OR      D               ; Bytes of string 1 to do
 EEE8 C8                 RET     Z               ; Exit if all bytes compared
 EEE9 7A                 LD      A,D             ; Get bytes of string 1 to do
@@ -183,75 +183,75 @@ EEF3 0A                 LD      A,(BC)          ; Byte in string 2
 EEF4 BE                 CP      (HL)            ; Compare to byte in string 1
 EEF5 23                 INC     HL              ; Move up string 1
 EEF6 03                 INC     BC              ; Move up string 2
-EEF7 CAE6EE             JP      Z,CMPSTR        ; Same - Try next bytes
+EEF7 CAE6EE             JP      Z,<a href="../../../26/37/text/#CMPSTR">CMPSTR</a>        ; Same - Try next bytes
 EEFA 3F                 CCF                     ; Flag difference ("&gt;" or "&lt;")
-EEFB C31EF8             JP      FLGDIF          ; "&lt;" gives -1 , "&gt;" gives +1
+EEFB C31EF8             JP      <a href="../../../32/24/text/#FLGDIF">FLGDIF</a>          ; "&lt;" gives -1 , "&gt;" gives +1
 
-EEFE 3C         CMPRES: INC     A               ; Increment current value
+<span id="EEFE">EEFE</span> 3C         <span id="CMPRES"><a href="#CMPRES">CMPRES</a></span>: INC     A               ; Increment current value
 EEFF 8F                 ADC     A,A             ; Double plus carry
 EF00 C1                 POP     BC              ; Get other value
 EF01 A0                 AND     B               ; Combine them
 EF02 C6FF               ADD     A,-1            ; Carry set if different
-EF04 9F                 SBC     A,A             ; 00 - Equal&nbsp;, FF - Different
-EF05 C325F8             JP      FLGREL          ; Set current value & continue
+EF04 9F                 SBC     A,A             ; 00 - Equal , FF - Different
+EF05 C325F8             JP      <a href="../../../32/24/text/#FLGREL">FLGREL</a>          ; Set current value & continue
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    51</span>
 
-EF08 165A       EVNOT:  LD      D,5AH           ; Precedence value for "NOT"
-EF0A CD5DED             CALL    EVAL1           ; Eval until precedence break
-EF0D CD44ED             CALL    TSTNUM          ; Make sure it's a number
-EF10 CD8BE9             CALL    DEINT           ; Get integer -32768 - 32767
+<span id="EF08">EF08</span> 165A       <span id="EVNOT"><a href="#EVNOT">EVNOT</a></span>:  LD      D,5AH           ; Precedence value for "NOT"
+EF0A CD5DED             CALL    <a href="../../../26/34/text/#EVAL1">EVAL1</a>           ; Eval until precedence break
+EF0D CD44ED             CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure it's a number
+EF10 CD8BE9             CALL    <a href="../../../25/36/text/#DEINT">DEINT</a>           ; Get integer -32768 - 32767
 EF13 7B                 LD      A,E             ; Get LSB
 EF14 2F                 CPL                     ; Invert LSB
 EF15 4F                 LD      C,A             ; Save "NOT" of LSB
 EF16 7A                 LD      A,D             ; Get MSB
 EF17 2F                 CPL                     ; Invert MSB
-EF18 CDF1F0             CALL    ACPASS          ; Save AC as current
+EF18 CDF1F0             CALL    <a href="../../../31/25/text/#ACPASS">ACPASS</a>          ; Save AC as current
 EF1B C1                 POP     BC              ; Clean up stack
-EF1C C369ED             JP      EVAL3           ; Continue evaluation
+EF1C C369ED             JP      <a href="../../../26/34/text/#EVAL3">EVAL3</a>           ; Continue evaluation
 
-EF1F 2B         DIMRET: DEC     HL              ; DEC 'cos GETCHR INCs
-EF20 CD36E8             CALL    GETCHR          ; Get next character
-EF23 C8                 RET     Z               ; End of DIM statement
-EF24 CD90E6             CALL    CHKSYN          ; Make sure "," follows
+<span id="EF1F">EF1F</span> 2B         <span id="DIMRET"><a href="#DIMRET">DIMRET</a></span>: DEC     HL              ; DEC 'cos <a href="../../../25/34/text/#GETCHR">GETCHR</a> INCs
+EF20 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+EF23 C8                 RET     Z               ; End of <a href="../../../26/37/text/#DIM">DIM</a> statement
+EF24 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "," follows
 EF27 2C                 DEFB    ","
-<span id="EF28">EF28 011FEF     DIM:    LD      BC,DIMRET       ; Return to "DIMRET"</span>
+<span id="EF28">EF28</span> 011FEF     <span id="DIM"><a href="#DIM">DIM</a></span>:    LD      BC,<a href="../../../26/37/text/#DIMRET">DIMRET</a>       ; Return to "DIMRET"
 EF2B C5                 PUSH    BC              ; Save on stack
 EF2C F6                 DEFB    (OR n)          ; Flag "Create" variable
-EF2D AF         GETVAR: XOR     A               ; Find variable address,to DE
-EF2E 32AC10             LD      (LCRFLG),A      ; Set locate / create flag
+<span id="EF2D">EF2D</span> AF         <span id="GETVAR"><a href="#GETVAR">GETVAR</a></span>: XOR     A               ; Find variable address,to DE
+EF2E 32AC10             LD      (<a href="../../../24/24/text/#LCRFLG">LCRFLG</a>),A      ; Set locate / create flag
 EF31 46                 LD      B,(HL)          ; Get First byte of name
-EF32 CD77E9     GTFNAM: CALL    CHKLTR          ; See if a letter
-EF35 DAADE3             JP      C,SNERR         ; ?SN Error if not a letter
+<span id="EF32">EF32</span> CD77E9     <span id="GTFNAM"><a href="#GTFNAM">GTFNAM</a></span>: CALL    <a href="../../../25/36/text/#CHKLTR">CHKLTR</a>          ; See if a letter
+EF35 DAADE3             JP      C,<a href="../../../24/30/text/#SNERR">SNERR</a>         ; ?<a href="../../../24/24/text/#SN">SN</a> Error if not a letter
 EF38 AF                 XOR     A
 EF39 4F                 LD      C,A             ; Clear second byte of name
-EF3A 32AD10             LD      (TYPE),A        ; Set type to numeric
-EF3D CD36E8             CALL    GETCHR          ; Get next character
-EF40 DA49EF             JP      C,SVNAM2        ; Numeric - Save in name
-EF43 CD77E9             CALL    CHKLTR          ; See if a letter
-EF46 DA56EF             JP      C,CHARTY        ; Not a letter - Check type
-EF49 4F         SVNAM2: LD      C,A             ; Save second byte of name
-EF4A CD36E8     ENDNAM: CALL    GETCHR          ; Get next character
-EF4D DA4AEF             JP      C,ENDNAM        ; Numeric - Get another
-EF50 CD77E9             CALL    CHKLTR          ; See if a letter
-EF53 D24AEF             JP      NC,ENDNAM       ; Letter - Get another
-EF56 D624       CHARTY: SUB     "$"             ; String variable?
-EF58 C265EF             JP      NZ,NOTSTR       ; No - Numeric variable
+EF3A 32AD10             LD      (<a href="../../../24/24/text/#TYPE">TYPE</a>),A        ; Set type to numeric
+EF3D CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+EF40 DA49EF             JP      C,<a href="../../../26/37/text/#SVNAM2">SVNAM2</a>        ; Numeric - Save in name
+EF43 CD77E9             CALL    <a href="../../../25/36/text/#CHKLTR">CHKLTR</a>          ; See if a letter
+EF46 DA56EF             JP      C,<a href="../../../26/37/text/#CHARTY">CHARTY</a>        ; Not a letter - Check type
+<span id="EF49">EF49</span> 4F         <span id="SVNAM2"><a href="#SVNAM2">SVNAM2</a></span>: LD      C,A             ; Save second byte of name
+<span id="EF4A">EF4A</span> CD36E8     <span id="ENDNAM"><a href="#ENDNAM">ENDNAM</a></span>: CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+EF4D DA4AEF             JP      C,<a href="../../../26/37/text/#ENDNAM">ENDNAM</a>        ; Numeric - Get another
+EF50 CD77E9             CALL    <a href="../../../25/36/text/#CHKLTR">CHKLTR</a>          ; See if a letter
+EF53 D24AEF             JP      NC,<a href="../../../26/37/text/#ENDNAM">ENDNAM</a>       ; Letter - Get another
+<span id="EF56">EF56</span> D624       <span id="CHARTY"><a href="#CHARTY">CHARTY</a></span>: SUB     "$"             ; String variable?
+EF58 C265EF             JP      NZ,<a href="../../../26/37/text/#NOTSTR">NOTSTR</a>       ; No - Numeric variable
 EF5B 3C                 INC     A               ; A = 1 (string type)
-EF5C 32AD10             LD      (TYPE),A        ; Set type to string
-EF5F 0F                 RRCA                    ; A = 80H&nbsp;, Flag for string
+EF5C 32AD10             LD      (<a href="../../../24/24/text/#TYPE">TYPE</a>),A        ; Set type to string
+EF5F 0F                 RRCA                    ; A = 80H , Flag for string
 EF60 81                 ADD     A,C             ; 2nd byte of name has bit 7 on
 EF61 4F                 LD      C,A             ; Resave second byte on name
-EF62 CD36E8             CALL    GETCHR          ; Get next character
-EF65 3ACB10     NOTSTR: LD      A,(FORFLG)      ; Array name needed&nbsp;?
+EF62 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+<span id="EF65">EF65</span> 3ACB10     <span id="NOTSTR"><a href="#NOTSTR">NOTSTR</a></span>: LD      A,(<a href="../../../24/24/text/#FORFLG">FORFLG</a>)      ; Array name needed ?
 EF68 3D                 DEC     A
-EF69 CA12F0             JP      Z,ARLDSV        ; Yes - Get array name
-EF6C F275EF             JP      P,NSCFOR        ; No array with "FOR" or "FN"
+EF69 CA12F0             JP      Z,<a href="../../../31/23/text/#ARLDSV">ARLDSV</a>        ; Yes - Get array name
+EF6C F275EF             JP      P,<a href="../../../26/38/text/#NSCFOR">NSCFOR</a>        ; No array with "<a href="../../../25/33/text/#FOR">FOR</a>" or "FN"
 EF6F 7E                 LD      A,(HL)          ; Get byte again
 EF70 D628               SUB     "("             ; Subscripted variable?
-EF72 CAEAEF             JP      Z,SBSCPT        ; Yes - Sort out subscript
+EF72 CAEAEF             JP      Z,<a href="../../../26/38/text/#SBSCPT">SBSCPT</a>        ; Yes - Sort out subscript
 </pre>
 <!-- 1 column: end --></div>
 </div>

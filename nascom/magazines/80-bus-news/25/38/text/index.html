@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,61 +138,61 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    37</span>
 
-<span id="EA70">EA70 013A       DATA:   DEFB    (LD BC,":")     ; ":" End of statement</span>
-<span id="EA72">EA72 0E00       REM:    LD      C,0             ; 00  End of statement</span>
+<span id="EA70">EA70</span> 013A       <span id="DATA"><a href="#DATA">DATA</a></span>:   DEFB    (LD BC,":")     ; ":" End of statement
+<span id="EA72">EA72</span> 0E00       <span id="REM"><a href="#REM">REM</a></span>:    LD      C,0             ; 00  End of statement
 EA74 0600               LD      B,0
-EA76 79         NXTSTL: LD      A,C             ; Statement and byte
+<span id="EA76">EA76</span> 79         <span id="NXTSTL"><a href="#NXTSTL">NXTSTL</a></span>: LD      A,C             ; Statement and byte
 EA77 48                 LD      C,B
 EA78 47                 LD      B,A             ; Statement end byte
-EA79 7E         NXTSTT: LD      A,(HL)          ; Get byte
+<span id="EA79">EA79</span> 7E         <span id="NXTSTT"><a href="#NXTSTT">NXTSTT</a></span>: LD      A,(HL)          ; Get byte
 EA7A B7                 OR      A               ; End of line?
 EA7B C8                 RET     Z               ; Yes - Exit
 EA7C B8                 CP      B               ; End of statement?
 EA7D C8                 RET     Z               ; Yes - Exit
 EA7E 23                 INC     HL              ; Next byte
 EA7F FE22               CP      '"'             ; Literal string?
-EA81 CA76EA             JP      Z,NXTSTL        ; Yes - Look for another '"'
-EA84 C379EA             JP      NXTSTT          ; Keep looking
+EA81 CA76EA             JP      Z,<a href="../../../25/38/text/#NXTSTL">NXTSTL</a>        ; Yes - Look for another '"'
+EA84 C379EA             JP      <a href="../../../25/38/text/#NXTSTT">NXTSTT</a>          ; Keep looking
 
-<span id="EA87">EA87 CD2DEF     LET:    CALL    GETVAR          ; Get variable name</span>
-EA8A CD90E6             CALL    CHKSYN          ; Make sure "=" follows
-EA8D B4                 DEFB    ZEQUAL          ; "=" token
+<span id="EA87">EA87</span> CD2DEF     <span id="LET"><a href="#LET">LET</a></span>:    CALL    <a href="../../../26/37/text/#GETVAR">GETVAR</a>          ; Get variable name
+EA8A CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "=" follows
+EA8D B4                 DEFB    <a href="../../../24/28/text/#ZEQUAL">ZEQUAL</a>          ; "=" token
 EA8E D5                 PUSH    DE              ; Save address of variable
-EA8F 3AAD10             LD      A,(TYPE)        ; Get data type
+EA8F 3AAD10             LD      A,(<a href="../../../24/24/text/#TYPE">TYPE</a>)        ; Get data type
 EA92 F5                 PUSH    AF              ; Save type
-EA93 CD5AED             CALL    EVAL            ; Evaluate expression
+EA93 CD5AED             CALL    <a href="../../../26/34/text/#EVAL">EVAL</a>            ; Evaluate expression
 EA96 F1                 POP     AF              ; Restore type
 EA97 E3                 EX      (SP),HL         ; Save code - Get var addr
-EA98 22CE10             LD      (BRKLIN),HL     ; Save address of variable
+EA98 22CE10             LD      (<a href="../../../24/24/text/#BRKLIN">BRKLIN</a>),HL     ; Save address of variable
 EA9B 1F                 RRA                     ; Adjust type
-EA9C CD46ED             CALL    CHKTYP          ; Check types are the same
-EA9F CADAEA             JP      Z,LETNUM        ; Numeric - Move value
-EAA2 E5         LETSTR: PUSH    HL              ; Save address of string var
-EAA3 2AE410             LD      HL,(FPREG)      ; Pointer to string entry
+EA9C CD46ED             CALL    <a href="../../../26/34/text/#CHKTYP">CHKTYP</a>          ; Check types are the same
+EA9F CADAEA             JP      Z,<a href="../../../25/38/text/#LETNUM">LETNUM</a>        ; Numeric - Move value
+<span id="EAA2">EAA2</span> E5         <span id="LETSTR"><a href="#LETSTR">LETSTR</a></span>: PUSH    HL              ; Save address of string var
+EAA3 2AE410             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; Pointer to string entry
 EAA6 E5                 PUSH    HL              ; Save it on stack
 EAA7 23                 INC     HL              ; Skip over length
 EAA8 23                 INC     HL
 EAA9 5E                 LD      E,(HL)          ; LSB of string address
 EAAA 23                 INC     HL
 EAAB 56                 LD      D,(HL)          ; MSB of string address
-EAAC 2A5E10             LD      HL,(BASTXT)     ; Point to start of program
-EAAF CD8AE6             CALL    CPDEHL          ; Is string before program?
-EAB2 D2C9EA             JP      NC,CRESTR       ; Yes - Create string entry
-EAB5 2A5A10             LD      HL,(STRSPC)     ; Point to string space
-EAB8 CD8AE6             CALL    CPDEHL          ; Is string literal in program?
+EAAC 2A5E10             LD      HL,(<a href="../../../24/24/text/#BASTXT">BASTXT</a>)     ; Point to start of program
+EAAF CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Is string before program?
+EAB2 D2C9EA             JP      NC,<a href="../../../25/38/text/#CRESTR">CRESTR</a>       ; Yes - Create string entry
+EAB5 2A5A10             LD      HL,(<a href="../../../24/24/text/#STRSPC">STRSPC</a>)     ; Point to string space
+EAB8 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Is string literal in program?
 EABB D1                 POP     DE              ; Restore address of string
-EABC D2D1EA             JP      NC,MVSTPT       ; Yes - Set up pointer
-EABF 21BF10             LD      HL,TMPSTR       ; Temporary string pool
-EAC2 CD8AE6             CALL    CPDEHL          ; Is string in temporary pool?
-EAC5 D2D1EA             JP      NC,MVSTPT       ; No - Set up pointer
+EABC D2D1EA             JP      NC,<a href="../../../25/38/text/#MVSTPT">MVSTPT</a>       ; Yes - Set up pointer
+EABF 21BF10             LD      HL,<a href="../../../24/24/text/#TMPSTR">TMPSTR</a>       ; Temporary string pool
+EAC2 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Is string in temporary pool?
+EAC5 D2D1EA             JP      NC,<a href="../../../25/38/text/#MVSTPT">MVSTPT</a>       ; No - Set up pointer
 EAC8 3E                 DEFB    (LD A,n)        ; Skip "POP DE"
-EAC9 D1         CRESTR: POP     DE              ; Restore address of string
-EACA CD71F3             CALL    BAKTMP          ; Back to last tmp-str entry
+<span id="EAC9">EAC9</span> D1         <span id="CRESTR"><a href="#CRESTR">CRESTR</a></span>: POP     DE              ; Restore address of string
+EACA CD71F3             CALL    <a href="../../../31/28/text/#BAKTMP">BAKTMP</a>          ; Back to last tmp-str entry
 EACD EB                 EX      DE,HL           ; Address of string entry
-EACE CDAAF1             CALL    SAVSTR          ; Save string in string area
-EAD1 CD71F3     MVSTPT: CALL    BAKTMP          ; Back to last tmp-str entry
+EACE CDAAF1             CALL    <a href="../../../31/26/text/#SAVSTR">SAVSTR</a>          ; Save string in string area
+<span id="EAD1">EAD1</span> CD71F3     <span id="MVSTPT"><a href="#MVSTPT">MVSTPT</a></span>: CALL    <a href="../../../31/28/text/#BAKTMP">BAKTMP</a>          ; Back to last tmp-str entry
 EAD4 E1                 POP     HL              ; Get string pointer
-EAD5 CD6EF8             CALL    DETHL4          ; Move string pointer to var
+EAD5 CD6EF8             CALL    <a href="../../../32/25/text/#DETHL4">DETHL4</a>          ; Move string pointer to var
 EAD8 E1                 POP     HL              ; Restore code string address
 EAD9 C9                 RET
 </pre>
@@ -200,42 +200,42 @@ EAD9 C9                 RET
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    38</span>
 
-EADA E5         LETNUM: PUSH    HL              ; Save address of variable
-EADB CD6BF8             CALL    FPTHL           ; Move value to variable
+<span id="EADA">EADA</span> E5         <span id="LETNUM"><a href="#LETNUM">LETNUM</a></span>: PUSH    HL              ; Save address of variable
+EADB CD6BF8             CALL    <a href="../../../32/25/text/#FPTHL">FPTHL</a>           ; Move value to variable
 EADE D1                 POP     DE              ; Restore address of variable
 EADF E1                 POP     HL              ; Restore code string address
 EAE0 C9                 RET
 
-<span id="EAE1">EAE1 CD84F4     ON:     CALL    GETINT          ; Get integer 0-255</span>
-EAE4 7E                 LD      A,(HL)          ; Get "GOTO" or "GOSUB" token
+<span id="EAE1">EAE1</span> CD84F4     <span id="ON"><a href="#ON">ON</a></span>:     CALL    <a href="../../../31/30/text/#GETINT">GETINT</a>          ; Get integer 0-255
+EAE4 7E                 LD      A,(HL)          ; Get "<a href="../../../25/37/text/#GOTO">GOTO</a>" or "<a href="../../../25/37/text/#GOSUB">GOSUB</a>" token
 EAE5 47                 LD      B,A             ; Save in B
-EAE6 FE8C               CP      ZGOSUB          ; "GOSUB" token?
-EAE8 CAF0EA             JP      Z,ONGO          ; Yes - Find line number
-EAEB CD90E6             CALL    CHKSYN          ; Make sure it's "GOTO"
-EAEE 88                 DEFB    ZGOTO           ; "GOTO" token
+EAE6 FE8C               CP      <a href="../../../24/28/text/#ZGOSUB">ZGOSUB</a>          ; "<a href="../../../25/37/text/#GOSUB">GOSUB</a>" token?
+EAE8 CAF0EA             JP      Z,<a href="../../../25/38/text/#ONGO">ONGO</a>          ; Yes - Find line number
+EAEB CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure it's "<a href="../../../25/37/text/#GOTO">GOTO</a>"
+EAEE 88                 DEFB    <a href="../../../24/28/text/#ZGOTO">ZGOTO</a>           ; "<a href="../../../25/37/text/#GOTO">GOTO</a>" token
 EAEF 2B                 DEC     HL              ; Cancel increment
-EAF0 4B         ONGO:   LD      C,E             ; Integer of branch value
-EAF1 0D         ONGOLP: DEC     C               ; Count branches
-EAF2 78                 LD      A,B             ; Get "GOTO" or "GOSUB" token
-EAF3 CA1EE8             JP      Z,ONJMP         ; Go to that line if right one
-EAF6 CDA6E9             CALL    GETLN           ; Get line number to DE
+<span id="EAF0">EAF0</span> 4B         <span id="ONGO"><a href="#ONGO">ONGO</a></span>:   LD      C,E             ; Integer of branch value
+<span id="EAF1">EAF1</span> 0D         <span id="ONGOLP"><a href="#ONGOLP">ONGOLP</a></span>: DEC     C               ; Count branches
+EAF2 78                 LD      A,B             ; Get "<a href="../../../25/37/text/#GOTO">GOTO</a>" or "<a href="../../../25/37/text/#GOSUB">GOSUB</a>" token
+EAF3 CA1EE8             JP      Z,<a href="../../../25/34/text/#ONJMP">ONJMP</a>         ; Go to that line if right one
+EAF6 CDA6E9             CALL    <a href="../../../25/36/text/#GETLN">GETLN</a>           ; Get line number to DE
 EAF9 FE2C               CP      ","             ; Another line number?
 EAFB C0                 RET     NZ              ; No - Drop through
-EAFC C3F1EA             JP      ONGOLP          ; Yes - loop
+EAFC C3F1EA             JP      <a href="../../../25/38/text/#ONGOLP">ONGOLP</a>          ; Yes - loop
 
-<span id="EAFF">EAFF CD5AED     IF:     CALL    EVAL            ; Evaluate expression</span>
+<span id="EAFF">EAFF</span> CD5AED     <span id="IF"><a href="#IF">IF</a></span>:     CALL    <a href="../../../26/34/text/#EVAL">EVAL</a>            ; Evaluate expression
 EB02 7E                 LD      A,(HL)          ; Get token
-EB03 FE88               CP      ZGOTO           ; "GOTO" token?
-EB05 CA0DEB             JP      Z,IFGO          ; Yes - Get line
-EB08 CD90E6             CALL    CHKSYN          ; Make sure it's "THEN"
-EB0B A9                 DEFB    ZTHEN           ; "THEN" token
+EB03 FE88               CP      <a href="../../../24/28/text/#ZGOTO">ZGOTO</a>           ; "<a href="../../../25/37/text/#GOTO">GOTO</a>" token?
+EB05 CA0DEB             JP      Z,<a href="../../../25/38/text/#IFGO">IFGO</a>          ; Yes - Get line
+<span id="EB08">EB08</span> CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure it's "THEN"
+EB0B A9                 DEFB    <a href="../../../24/28/text/#ZTHEN">ZTHEN</a>           ; "THEN" token
 EB0C 2B                 DEC     HL              ; Cancel increment
-EB0D CD44ED     IFGO:   CALL    TSTNUM          ; Make sure it's numeric
-EB10 CD13F8             CALL    TSTSGN          ; Test state of expression
-EB13 CA72EA             JP      Z,REM           ; False - Drop through
-EB16 CD36E8             CALL    GETCHR          ; Get next character
-EB19 DA2DEA             JP      C,GOTO          ; Number - GOTO that line
-EB1C C31DE8             JP      IFJMP           ; Otherwise do statement
+<span id="EB0D">EB0D</span> CD44ED     <span id="IFGO"><a href="#IFGO">IFGO</a></span>:   CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure it's numeric
+EB10 CD13F8             CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test state of expression
+EB13 CA72EA             JP      Z,<a href="../../../25/38/text/#REM">REM</a>           ; False - Drop through
+EB16 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+EB19 DA2DEA             JP      C,<a href="../../../25/37/text/#GOTO">GOTO</a>          ; Number - <a href="../../../25/37/text/#GOTO">GOTO</a> that line
+EB1C C31DE8             JP      <a href="../../../25/34/text/#IFJMP">IFJMP</a>           ; Otherwise do statement
 </pre>
 <!-- 1 column: end --></div>
 </div>

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,110 +138,110 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    98</span>
 
-FE45 F5         MONOUT: PUSH    AF              ; Save character
-FE46 CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FE49 CA4FFE             JP      Z,TMNOUT        ; "T" output
+<span id="FE45">FE45</span> F5         <span id="MONOUT"><a href="#MONOUT">MONOUT</a></span>: PUSH    AF              ; Save character
+FE46 CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FE49 CA4FFE             JP      Z,<a href="../../../33/27/text/#TMNOUT">TMNOUT</a>        ; "T" output
 FE4C F1                 POP     AF              ; Restore character
 FE4D F7                 ROUT                    ; Output it
 FE4E C9                 RET
 
-FE4F F1         TMNOUT: POP     AF              ; Restore character
-FE50 C34A0C             JP      TOUT            ; "T" output
+<span id="FE4F">FE4F</span> F1         <span id="TMNOUT"><a href="#TMNOUT">TMNOUT</a></span>: POP     AF              ; Restore character
+FE50 C34A0C             JP      <a href="../../../24/23/text/#TOUT">TOUT</a>            ; "T" output
 
-FE53 3A4D10     BREAK2: LD      A,(BRKFLG)      ; Break flag set?
-FE56 C265FE             JP      NZ,RETCTC       ; Yes - Return ^C
-FE59 CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FE5C CA62FE             JP      Z,TCHINP        ; Get "T" character input
+<span id="FE53">FE53</span> 3A4D10     <span id="BREAK2"><a href="#BREAK2">BREAK2</a></span>: LD      A,(<a href="../../../24/24/text/#BRKFLG">BRKFLG</a>)      ; Break flag set?
+FE56 C265FE             JP      NZ,<a href="../../../33/27/text/#RETCTC">RETCTC</a>       ; Yes - Return ^C
+FE59 CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FE5C CA62FE             JP      Z,<a href="../../../33/27/text/#TCHINP">TCHINP</a>        ; Get "T" character input
 FE5F DF62               SCAL    RIN             ; Scan for a character
 FE61 C9                 RET
 
-FE62 C34D0C     TCHINP: JP      TIN             ; "T" input a character
+<span id="FE62">FE62</span> C34D0C     <span id="TCHINP"><a href="#TCHINP">TCHINP</a></span>: JP      <a href="../../../24/23/text/#TIN">TIN</a>             ; "T" input a character
 
-FE65 3E00       RETCTC: LD      A,0             ; Clear Break flag
-FE67 324D10             LD      (BRKFLG),A
-FE6A 3E03               LD      A,CTRLC         ; Return ^C
+<span id="FE65">FE65</span> 3E00       <span id="RETCTC"><a href="#RETCTC">RETCTC</a></span>: LD      A,0             ; Clear Break flag
+FE67 324D10             LD      (<a href="../../../24/24/text/#BRKFLG">BRKFLG</a>),A
+FE6A 3E03               LD      A,<a href="../../../24/23/text/#CTRLC">CTRLC</a>         ; Return ^C
 FE6C C9                 RET
 
-FE6D 3A0100     MONTST: LD      A,(MONSTT+1)    ; "T" monitor or NAS-SYS?
+<span id="FE6D">FE6D</span> 3A0100     <span id="MONTST"><a href="#MONTST">MONTST</a></span>: LD      A,(<a href="../../../24/23/text/#MONSTT">MONSTT</a>+1)    ; "T" monitor or NAS-SYS?
 FE70 FE33               CP      33H             ; 31 00 10 / 31 33 0C
 FE72 C9                 RET
 
-FE73 CD39FE     SAVE:   CALL    FLPLED          ; Flip tape LED
-FE76 CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FE79 CA7FFE             JP      Z,TSAVE         ; "T" save
+<span id="FE73">FE73</span> CD39FE     <span id="SAVE"><a href="#SAVE">SAVE</a></span>:   CALL    <a href="../../../33/26/text/#FLPLED">FLPLED</a>          ; Flip tape LED
+FE76 CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FE79 CA7FFE             JP      Z,<a href="../../../33/27/text/#TSAVE">TSAVE</a>         ; "T" save
 FE7C DF57               SCAL    WRITE           ; Save program
 FE7E C9                 RET
 
-FE7F 3A8D00     TSAVE:  LD      A,(MONTYP)      ; "T2" or "T4" (FLAGS!!!)
-FE82 CA0004             JP      Z,T4WR          ; T4 Write
-FE85 C3D103             JP      T2DUMP          ; T2 Dump
+<span id="FE7F">FE7F</span> 3A8D00     <span id="TSAVE"><a href="#TSAVE">TSAVE</a></span>:  LD      A,(<a href="../../../24/23/text/#MONTYP">MONTYP</a>)      ; "T2" or "T4" (FLAGS!!!)
+FE82 CA0004             JP      Z,<a href="../../../24/23/text/#T4WR">T4WR</a>          ; T4 Write
+FE85 C3D103             JP      <a href="../../../24/23/text/#T2DUMP">T2DUMP</a>          ; T2 Dump
 
-FE88 CD39FE     MONLD:  CALL    FLPLED          ; Flip tape LED
-FE8B CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FE8E CA99FE             JP      Z,TLOAD         ; "T" load
-FE91 3E52               LD      A,"R"           ; Set READ
-FE93 322B0C             LD      (ARGN),A
-FE96 DF52               SCAL    READ            ; Load program
+<span id="FE88">FE88</span> CD39FE     <span id="MONLD"><a href="#MONLD">MONLD</a></span>:  CALL    <a href="../../../33/26/text/#FLPLED">FLPLED</a>          ; Flip tape LED
+FE8B CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FE8E CA99FE             JP      Z,<a href="../../../33/27/text/#TLOAD">TLOAD</a>         ; "T" load
+FE91 3E52               LD      A,"R"           ; Set <a href="../../../26/32/text/#READ">READ</a>
+FE93 322B0C             LD      (<a href="../../../24/23/text/#ARGN">ARGN</a>),A
+FE96 DF52               SCAL    <a href="../../../26/32/text/#READ">READ</a>            ; Load program
 FE98 C9                 RET
 
-FE99 3A8D00     TLOAD:  LD      A,(MONTYP)      ; "T2" or "T4" (FLAGS!!!)
-FE9C CA0C07             JP      Z,T4READ        ; T4 Read
-FE9F C3D103             JP      T2DUMP          ; T2 Dump&nbsp;??????????
+<span id="FE99">FE99</span> 3A8D00     <span id="TLOAD"><a href="#TLOAD">TLOAD</a></span>:  LD      A,(<a href="../../../24/23/text/#MONTYP">MONTYP</a>)      ; "T2" or "T4" (FLAGS!!!)
+FE9C CA0C07             JP      Z,<a href="../../../24/23/text/#T4READ">T4READ</a>        ; T4 Read
+FE9F C3D103             JP      <a href="../../../24/23/text/#T2DUMP">T2DUMP</a>          ; T2 Dump ??????????
 
-FEA2 CD6DFE     MONITR: CALL    MONTST          ; See if NAS-SYS
-FEA5 CA0000             JP      Z,MONSTT        ; Jump to zero if "T"
+<span id="FEA2">FEA2</span> CD6DFE     <span id="MONITR"><a href="#MONITR">MONITR</a></span>: CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FEA5 CA0000             JP      Z,<a href="../../../24/23/text/#MONSTT">MONSTT</a>        ; Jump to zero if "T"
 FEA8 DF5B               SCAL    MRET            ; Return to NAS-SYS
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    99</span>
 
-FEAA CD39FE     MONVE:  CALL    FLPLED          ; Flip tape LED
-FEAD CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FEB0 CAA0E9             JP      Z,FCERR         ; Verify not available on "T"
+<span id="FEAA">FEAA</span> CD39FE     <span id="MONVE"><a href="#MONVE">MONVE</a></span>:  CALL    <a href="../../../33/26/text/#FLPLED">FLPLED</a>          ; Flip tape LED
+FEAD CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FEB0 CAA0E9             JP      Z,<a href="../../../25/36/text/#FCERR">FCERR</a>         ; Verify not available on "T"
 FEB3 3E56               LD      A,"V"           ; Set VERIFY
-FEB5 322B0C             LD      (ARGN),A
+FEB5 322B0C             LD      (<a href="../../../24/23/text/#ARGN">ARGN</a>),A
 FEB8 DF56               SCAL    VERIFY          ; Verify tape
 FEBA C9                 RET
 
-FEBB 3E00       INITST: LD      A,0             ; Clear break flag
-FEBD 324D10             LD      (BRKFLG),A
-FEC0 CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FEC3 CA19E0             JP      Z,INIT          ; "T" - No NMI vector
-FEC6 21DEFE             LD      HL,BREAK        ; Set NMI gives break
-FEC9 227E0C             LD      (NMI),HL
+<span id="FEBB">FEBB</span> 3E00       <span id="INITST"><a href="#INITST">INITST</a></span>: LD      A,0             ; Clear break flag
+FEBD 324D10             LD      (<a href="../../../24/24/text/#BRKFLG">BRKFLG</a>),A
+FEC0 CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FEC3 CA19E0             JP      Z,<a href="../../../24/25/text/#INIT">INIT</a>          ; "T" - No <a href="../../../24/23/text/#NMI">NMI</a> vector
+FEC6 21DEFE             LD      HL,<a href="../../../33/27/text/#BREAK">BREAK</a>        ; Set <a href="../../../24/23/text/#NMI">NMI</a> gives break
+FEC9 227E0C             LD      (<a href="../../../24/23/text/#NMI">NMI</a>),HL
 FECC DDE5               PUSH    IX              ; Get start up condition
-FECE F1                 POP     AF              ; "Z" set if cold&nbsp;, Else clear
+FECE F1                 POP     AF              ; "Z" set if cold , Else clear
 FECF B7                 OR      A               ; "Cold" or "Cool" start?
-FED0 C219E0             JP      NZ,INIT         ; "Cool" don't init NAS-SYS
+FED0 C219E0             JP      NZ,<a href="../../../24/25/text/#INIT">INIT</a>         ; "Cool" don't init NAS-SYS
 FED3 060F               LD      B,15            ; Delay for keyboard clear
-FED5 CDCDFC             CALL    DELAYB          ; Allow time for key release
-FED8 CD0D00             CALL    STMON           ; Initialise NAS-SYS
-FEDB C319E0             JP      INIT            ; Initialise BASIC
+FED5 CDCDFC             CALL    <a href="../../../33/25/text/#DELAYB">DELAYB</a>          ; Allow time for key release
+FED8 CD0D00             CALL    <a href="../../../24/23/text/#STMON">STMON</a>           ; Initialise NAS-SYS
+FEDB C319E0             JP      <a href="../../../24/25/text/#INIT">INIT</a>            ; Initialise BASIC
 
-FEDE F5         BREAK:  PUSH    AF              ; Save character
+<span id="FEDE">FEDE</span> F5         <span id="BREAK"><a href="#BREAK">BREAK</a></span>:  PUSH    AF              ; Save character
 FEDF 3EFF               LD      A,-1
-FEE1 324D10             LD      (BRKFLG),A      ; Flag break
+FEE1 324D10             LD      (<a href="../../../24/24/text/#BRKFLG">BRKFLG</a>),A      ; Flag break
 FEE4 F1                 POP     AF              ; Restore character
-FEE5 ED45       ARETN:  RETN                    ; Return from NMI
+<span id="FEE5">FEE5</span> ED45       <span id="ARETN"><a href="#ARETN">ARETN</a></span>:  RETN                    ; Return from <a href="../../../24/23/text/#NMI">NMI</a>
 
 FEE7 00                 NOP
 
-<span id="FEE8">FEE8 DF63       INLINE: SCAL    INLIN           ; Get an input line</span>
+<span id="FEE8">FEE8</span> DF63       <span id="INLINE"><a href="#INLINE">INLINE</a></span>: SCAL    INLIN           ; Get an input line
 FEEA D5                 PUSH    DE              ; Save cursor address
 FEEB D5                 PUSH    DE              ; Cursor address to HL
 FEEC E1                 POP     HL
 FEED 112F00             LD      DE,48-1         ; Length of line-1
 FEF0 19                 ADD     HL,DE           ; Point to end of line
-FEF1 7E         ENDLIN: LD      A,(HL)          ; Get end of line
+<span id="FEF1">FEF1</span> 7E         <span id="ENDLIN"><a href="#ENDLIN">ENDLIN</a></span>: LD      A,(HL)          ; Get end of line
 FEF2 FE20               CP      " "             ; Space?
-FEF4 C202FF             JP      NZ,LINTBF       ; No - Copy to buffer
+FEF4 C202FF             JP      NZ,<a href="../../../33/28/text/#LINTBF">LINTBF</a>       ; No - Copy to buffer
 FEF7 1D                 DEC     E               ; Back 1 character
 FEF8 3E00               LD      A,0             ; Wasteful test on E
 FEFA B3                 OR      E
-FEFB CA02FF             JP      Z,LINTBF        ; Start of line - Copy it
+FEFB CA02FF             JP      Z,<a href="../../../33/28/text/#LINTBF">LINTBF</a>        ; Start of line - Copy it
 FEFE 2B                 DEC     HL              ; Back 1 character
-FEFF C3F1FE             JP      ENDLIN          ; Keep looking for end
+FEFF C3F1FE             JP      <a href="../../../33/27/text/#ENDLIN">ENDLIN</a>          ; Keep looking for end
 </pre>
 <!-- 1 column: end --></div>
 </div>

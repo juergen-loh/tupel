@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,13 +138,13 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    78</span>
 
-F7A1 C1         RESDIV: POP     BC              ; Restore divisor
+<span id="F7A1">F7A1</span> C1         <span id="RESDIV"><a href="#RESDIV">RESDIV</a></span>: POP     BC              ; Restore divisor
 F7A2 E1                 POP     HL
 F7A3 79                 LD      A,C             ; Get MSB of quotient
 F7A4 3C                 INC     A
 F7A5 3D                 DEC     A
 F7A6 1F                 RRA                     ; Bit 0 to bit 7
-F7A7 FA54F6             JP      M,RONDB         ; Done - Normalise result
+F7A7 FA54F6             JP      M,<a href="../../../31/33/text/#RONDB">RONDB</a>         ; Done - Normalise result
 F7AA 17                 RLA                     ; Restore carry
 F7AB 7B                 LD      A,E             ; Get LSB of quotient
 F7AC 17                 RLA                     ; Double it
@@ -159,36 +159,36 @@ F7B4 29                 ADD     HL,HL           ; Double NMSB,LSB of divisor
 F7B5 78                 LD      A,B             ; Get MSB of divisor
 F7B6 17                 RLA                     ; Double it
 F7B7 47                 LD      B,A             ; Put it back
-F7B8 3A1510             LD      A,(DIV4)        ; Get VLSB of quotient
+F7B8 3A1510             LD      A,(<a href="../../../24/24/text/#DIV4">DIV4</a>)        ; Get VLSB of quotient
 F7BB 17                 RLA                     ; Double it
-F7BC 321510             LD      (DIV4),A        ; Put it back
+F7BC 321510             LD      (<a href="../../../24/24/text/#DIV4">DIV4</a>),A        ; Put it back
 F7BF 79                 LD      A,C             ; Get MSB of quotient
 F7C0 B2                 OR      D               ; Merge NMSB
 F7C1 B3                 OR      E               ; Merge LSB
-F7C2 C28EF7             JP      NZ,DIVLP        ; Not done - Keep dividing
+F7C2 C28EF7             JP      NZ,<a href="../../../32/23/text/#DIVLP">DIVLP</a>        ; Not done - Keep dividing
 F7C5 E5                 PUSH    HL              ; Save divisor
-F7C6 21E710             LD      HL,FPEXP        ; Point to exponent
+F7C6 21E710             LD      HL,<a href="../../../24/24/text/#FPEXP">FPEXP</a>        ; Point to exponent
 F7C9 35                 DEC     (HL)            ; Divide by 2
 F7CA E1                 POP     HL              ; Restore divisor
-F7CB C28EF7             JP      NZ,DIVLP        ; Ok - Keep going
-F7CE C3BCE3             JP      OVERR           ; Overflow error
+F7CB C28EF7             JP      NZ,<a href="../../../32/23/text/#DIVLP">DIVLP</a>        ; Ok - Keep going
+F7CE C3BCE3             JP      <a href="../../../24/30/text/#OVERR">OVERR</a>           ; Overflow error
 
-F7D1 78         ADDEXP: LD      A,B             ; Get exponent of dividend
+<span id="F7D1">F7D1</span> 78         <span id="ADDEXP"><a href="#ADDEXP">ADDEXP</a></span>: LD      A,B             ; Get exponent of dividend
 F7D2 B7                 OR      A               ; Test it
-F7D3 CAF5F7             JP      Z,OVTST3        ; Zero - Result zero
+F7D3 CAF5F7             JP      Z,<a href="../../../32/24/text/#OVTST3">OVTST3</a>        ; Zero - Result zero
 F7D6 7D                 LD      A,L             ; Get add/subtract flag
-F7D7 21E710             LD      HL,FPEXP        ; Point to exponent
+F7D7 21E710             LD      HL,<a href="../../../24/24/text/#FPEXP">FPEXP</a>        ; Point to exponent
 F7DA AE                 XOR     (HL)            ; Add or subtract it
 F7DB 80                 ADD     A,B             ; Add the other exponent
 F7DC 47                 LD      B,A             ; Save new exponent
 F7DD 1F                 RRA                     ; Test exponent for overflow
 F7DE A8                 XOR     B
 F7DF 78                 LD      A,B             ; Get exponent
-F7E0 F2F4F7             JP      P,OVTST2        ; Positive - Test for overflow
+F7E0 F2F4F7             JP      P,<a href="../../../32/24/text/#OVTST2">OVTST2</a>        ; Positive - Test for overflow
 F7E3 C680               ADD     A,80H           ; Add excess 128
 F7E5 77                 LD      (HL),A          ; Save new exponent
-F7E6 CA54F7             JP      Z,POPHRT        ; Zero - Result zero
-F7E9 CD79F8             CALL    SIGNS           ; Set MSBs and sign of result
+F7E6 CA54F7             JP      Z,<a href="../../../31/34/text/#POPHRT">POPHRT</a>        ; Zero - Result zero
+F7E9 CD79F8             CALL    <a href="../../../32/25/text/#SIGNS">SIGNS</a>           ; Set MSBs and sign of result
 F7EC 77                 LD      (HL),A          ; Save new exponent
 F7ED 2B                 DEC     HL              ; Point to MSB
 F7EE C9                 RET
@@ -197,50 +197,50 @@ F7EE C9                 RET
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    79</span>
 
-F7EF CD13F8     OVTST1: CALL    TSTSGN          ; Test sign of FPREG
+<span id="F7EF">F7EF</span> CD13F8     <span id="OVTST1"><a href="#OVTST1">OVTST1</a></span>: CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F7F2 2F                 CPL                     ; Invert sign
 F7F3 E1                 POP     HL              ; Clean up stack
-F7F4 B7         OVTST2: OR      A               ; Test if new exponent zero
-F7F5 E1         OVTST3: POP     HL              ; Clear off return address
-F7F6 F233F6             JP      P,RESZER        ; Result zero
-F7F9 C3BCE3             JP      OVERR           ; Overflow error
+<span id="F7F4">F7F4</span> B7         <span id="OVTST2"><a href="#OVTST2">OVTST2</a></span>: OR      A               ; Test if new exponent zero
+<span id="F7F5">F7F5</span> E1         <span id="OVTST3"><a href="#OVTST3">OVTST3</a></span>: POP     HL              ; Clear off return address
+F7F6 F233F6             JP      P,<a href="../../../31/33/text/#RESZER">RESZER</a>        ; Result zero
+F7F9 C3BCE3             JP      <a href="../../../24/30/text/#OVERR">OVERR</a>           ; Overflow error
 
-F7FC CD5FF8     MLSP10: CALL    BCDEFP          ; Move FPREG to BCDE
+<span id="F7FC">F7FC</span> CD5FF8     <span id="MLSP10"><a href="#MLSP10">MLSP10</a></span>: CALL    <a href="../../../32/25/text/#BCDEFP">BCDEFP</a>          ; Move <a href="../../../24/24/text/#FPREG">FPREG</a> to BCDE
 F7FF 78                 LD      A,B             ; Get exponent
 F800 B7                 OR      A               ; Is it zero?
 F801 C8                 RET     Z               ; Yes - Result is zero
 F802 C602               ADD     A,2             ; Multiply by 4
-F804 DABCE3             JP      C,OVERR         ; Overflow - ?OV Error
+F804 DABCE3             JP      C,<a href="../../../24/30/text/#OVERR">OVERR</a>         ; Overflow - ?<a href="../../../24/24/text/#OV">OV</a> Error
 F807 47                 LD      B,A             ; Re-save exponent
-F808 CDCDF5             CALL    FPADD           ; Add BCDE to FPREG (Times 5)
-F80B 21E710             LD      HL,FPEXP        ; Point to exponent
+F808 CDCDF5             CALL    <a href="../../../31/32/text/#FPADD">FPADD</a>           ; Add BCDE to <a href="../../../24/24/text/#FPREG">FPREG</a> (Times 5)
+F80B 21E710             LD      HL,<a href="../../../24/24/text/#FPEXP">FPEXP</a>        ; Point to exponent
 F80E 34                 INC     (HL)            ; Double number (Times 10)
 F80F C0                 RET     NZ              ; Ok - Return
-F810 C3BCE3             JP      OVERR           ; Overflow error
+F810 C3BCE3             JP      <a href="../../../24/30/text/#OVERR">OVERR</a>           ; Overflow error
 
-F813 3AE710     TSTSGN: LD      A,(FPEXP)       ; Get sign of FPREG
+<span id="F813">F813</span> 3AE710     <span id="TSTSGN"><a href="#TSTSGN">TSTSGN</a></span>: LD      A,(<a href="../../../24/24/text/#FPEXP">FPEXP</a>)       ; Get sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F816 B7                 OR      A
 F817 C8                 RET     Z               ; RETurn if number is zero
-F818 3AE610             LD      A,(FPREG+2)     ; Get MSB of FPREG
+F818 3AE610             LD      A,(<a href="../../../24/24/text/#FPREG">FPREG</a>+2)     ; Get MSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F81B FE                 DEFB    (CP 2FH         ; Test sign
-F81C 2F         RETREL: CPL                     ; Invert sign
+<span id="F81C">F81C</span> 2F         <span id="RETREL"><a href="#RETREL">RETREL</a></span>: CPL                     ; Invert sign
 F81D 17                 RLA                     ; Sign bit to carry
-F81E 9F         FLGDIF: SBC     A,A             ; Carry to all bits of A
+<span id="F81E">F81E</span> 9F         <span id="FLGDIF"><a href="#FLGDIF">FLGDIF</a></span>: SBC     A,A             ; Carry to all bits of A
 F81F C0                 RET     NZ              ; Return -1 if negative
 F820 3C                 INC     A               ; Bump to +1
 F821 C9                 RET                     ; Positive - Return +1
 
-<span id="F822">F822 CD13F8     SGN:    CALL    TSTSGN          ; Test sign of FPREG</span>
-F825 0688       FLGREL: LD      B,80H+8         ; 8 bit integer in exponent
+<span id="F822">F822</span> CD13F8     <span id="SGN"><a href="#SGN">SGN</a></span>:    CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
+<span id="F825">F825</span> 0688       <span id="FLGREL"><a href="#FLGREL">FLGREL</a></span>: LD      B,80H+8         ; 8 bit integer in exponent
 F827 110000             LD      DE,0            ; Zero NMSB and LSB
-F82A 21E710     RETINT: LD      HL,FPEXP        ; Point to exponent
+<span id="F82A">F82A</span> 21E710     <span id="RETINT"><a href="#RETINT">RETINT</a></span>: LD      HL,<a href="../../../24/24/text/#FPEXP">FPEXP</a>        ; Point to exponent
 F82D 4F                 LD      C,A             ; CDE = MSB,NMSB and LSB
 F82E 70                 LD      (HL),B          ; Save exponent
 F82F 0600               LD      B,0             ; CDE = integer to normalise
 F831 23                 INC     HL              ; Point to sign of result
 F832 3680               LD      (HL),80H        ; Set sign of result
 F834 17                 RLA                     ; Carry = sign of integer
-F835 C31BF6             JP      CONPOS          ; Set sign of result
+F835 C31BF6             JP      <a href="../../../31/32/text/#CONPOS">CONPOS</a>          ; Set sign of result
 </pre>
 <!-- 1 column: end --></div>
 </div>

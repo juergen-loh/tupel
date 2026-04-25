@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,101 +138,101 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    40</span>
 
-EB7C 3600       ENDINP: LD      (HL),0          ; Mark end of buffer
-EB7E 216010             LD      HL,BUFFER-1     ; Point to buffer
-EB81 3E0D       PRNTCR: LD      A,CR            ; Load a CR
-EB83 CD9BE6             CALL    OUTC            ; Output character
-EB86 AF         DONULL: XOR     A               ; Set to position 0
-EB87 32AB10             LD      (CURPOS),A      ; Store it
-EB8A 3A4110             LD      A,(NULLS)       ; Get number of nulls
-EB8D 3D         NULLP:  DEC     A               ; Count them
+<span id="EB7C">EB7C</span> 3600       <span id="ENDINP"><a href="#ENDINP">ENDINP</a></span>: LD      (HL),0          ; Mark end of buffer
+EB7E 216010             LD      HL,<a href="../../../24/24/text/#BUFFER">BUFFER</a>-1     ; Point to buffer
+<span id="EB81">EB81</span> 3E0D       <span id="PRNTCR"><a href="#PRNTCR">PRNTCR</a></span>: LD      A,<a href="../../../24/23/text/#CR">CR</a>            ; Load a CR
+EB83 CD9BE6             CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output character
+<span id="EB86">EB86</span> AF         <span id="DONULL"><a href="#DONULL">DONULL</a></span>: XOR     A               ; Set to position 0
+EB87 32AB10             LD      (<a href="../../../24/24/text/#CURPOS">CURPOS</a>),A      ; Store it
+EB8A 3A4110             LD      A,(<a href="../../../24/24/text/#NULLS">NULLS</a>)       ; Get number of nulls
+<span id="EB8D">EB8D</span> 3D         <span id="NULLP"><a href="#NULLP">NULLP</a></span>:  DEC     A               ; Count them
 EB8E C8                 RET     Z               ; Return if done
 EB8F F5                 PUSH    AF              ; Save count
 EB90 AF                 XOR     A               ; Load a null
-EB91 CD9BE6             CALL    OUTC            ; Output it
+EB91 CD9BE6             CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output it
 EB94 F1                 POP     AF              ; Restore count
-EB95 C38DEB             JP      NULLP           ; Keep counting
+EB95 C38DEB             JP      <a href="../../../26/32/text/#NULLP">NULLP</a>           ; Keep counting
 
-EB98 3A4310     DOCOM:  LD      A,(COMMAN)      ; Get comma width
+<span id="EB98">EB98</span> 3A4310     <span id="DOCOM"><a href="#DOCOM">DOCOM</a></span>:  LD      A,(<a href="../../../24/24/text/#COMMAN">COMMAN</a>)      ; Get comma width
 EB9B 47                 LD      B,A             ; Save in B
-EB9C 3AAB10             LD      A,(CURPOS)      ; Get current position
+EB9C 3AAB10             LD      A,(<a href="../../../24/24/text/#CURPOS">CURPOS</a>)      ; Get current position
 EB9F B8                 CP      B               ; Within the limit?
-EBA0 D481EB             CALL    NC,PRNTCR       ; No - output CRLF
-EBA3 D2D2EB             JP      NC,NEXITM       ; Get next item
-EBA6 D60E       ZONELP: SUB     14              ; Next zone of 14 characters
-EBA8 D2A6EB             JP      NC,ZONELP       ; Repeat if more zones
+EBA0 D481EB             CALL    NC,<a href="../../../26/32/text/#PRNTCR">PRNTCR</a>       ; No - output CRLF
+EBA3 D2D2EB             JP      NC,<a href="../../../26/32/text/#NEXITM">NEXITM</a>       ; Get next item
+<span id="EBA6">EBA6</span> D60E       <span id="ZONELP"><a href="#ZONELP">ZONELP</a></span>: SUB     14              ; Next zone of 14 characters
+EBA8 D2A6EB             JP      NC,<a href="../../../26/32/text/#ZONELP">ZONELP</a>       ; Repeat if more zones
 EBAB 2F                 CPL                     ; Number of spaces to output
-EBAC C3C7EB             JP      ASPCS           ; Output them
+EBAC C3C7EB             JP      <a href="../../../26/32/text/#ASPCS">ASPCS</a>           ; Output them
 
-EBAF F5         DOTAB:  PUSH    AF              ; Save token
-EBB0 CD81F4             CALL    FNDNUM          ; Evaluate expression
-EBB3 CD90E6             CALL    CHKSYN          ; Make sure ")" follows
+<span id="EBAF">EBAF</span> F5         <span id="DOTAB"><a href="#DOTAB">DOTAB</a></span>:  PUSH    AF              ; Save token
+EBB0 CD81F4             CALL    <a href="../../../31/30/text/#FNDNUM">FNDNUM</a>          ; Evaluate expression
+EBB3 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure ")" follows
 EBB6 29                 DEFB    ")"
 EBB7 2B                 DEC     HL              ; Back space on to ")"
 EBB8 F1                 POP     AF              ; Restore token
-EBB9 D6A8               SUB     ZSPC            ; Was it "SPC(" ?
+EBB9 D6A8               SUB     <a href="../../../24/28/text/#ZSPC">ZSPC</a>            ; Was it "SPC(" ?
 EBBB E5                 PUSH    HL              ; Save code string address
-EBBC CAC2EB             JP      Z,DOSPC         ; Yes - Do "E" spaces
-EBBF 3AAB10             LD      A,(CURPOS)      ; Get current position
-EBC2 2F         DOSPC:  CPL                     ; Number of spaces to print to
+EBBC CAC2EB             JP      Z,<a href="../../../26/32/text/#DOSPC">DOSPC</a>         ; Yes - Do "E" spaces
+EBBF 3AAB10             LD      A,(<a href="../../../24/24/text/#CURPOS">CURPOS</a>)      ; Get current position
+<span id="EBC2">EBC2</span> 2F         <span id="DOSPC"><a href="#DOSPC">DOSPC</a></span>:  CPL                     ; Number of spaces to print to
 EBC3 83                 ADD     A,E             ; Total number to print
-EBC4 D2D2EB             JP      NC,NEXITM       ; TAB &lt; Current POS(X)
-EBC7 3C         ASPCS:  INC     A               ; Output A spaces
+EBC4 D2D2EB             JP      NC,<a href="../../../26/32/text/#NEXITM">NEXITM</a>       ; TAB &lt; Current <a href="../../../31/25/text/#POS">POS</a>(X)
+<span id="EBC7">EBC7</span> 3C         <span id="ASPCS"><a href="#ASPCS">ASPCS</a></span>:  INC     A               ; Output A spaces
 EBC8 47                 LD      B,A             ; Save number to print
 EBC9 3E20               LD      A," "           ; Space
-EBCB CD9BE6     SPCLP:  CALL    OUTC            ; Output character in A
+<span id="EBCB">EBCB</span> CD9BE6     <span id="SPCLP"><a href="#SPCLP">SPCLP</a></span>:  CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output character in A
 EBCE 05                 DEC     B               ; Count them
-EBCF C2CBEB             JP      NZ,SPCLP        ; Repeat if more
-EBD2 E1         NEXITM: POP     HL              ; Restore code string address
-EBD3 CD36E8             CALL    GETCHR          ; Get next character
-EBD6 C326EB             JP      PRNTLP          ; More to print
+EBCF C2CBEB             JP      NZ,<a href="../../../26/32/text/#SPCLP">SPCLP</a>        ; Repeat if more
+<span id="EBD2">EBD2</span> E1         <span id="NEXITM"><a href="#NEXITM">NEXITM</a></span>: POP     HL              ; Restore code string address
+EBD3 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+EBD6 C326EB             JP      <a href="../../../26/31/text/#PRNTLP">PRNTLP</a>          ; More to print
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    41</span>
 
-EBD9 3F526564   REDO:   DEFB    "?Redo from start",CR,LF,0
+<span id="EBD9">EBD9</span> 3F526564   <span id="REDO"><a href="#REDO">REDO</a></span>:   DEFB    "?Redo from start",<a href="../../../24/23/text/#CR">CR</a>,<a href="../../../24/23/text/#LF">LF</a>,0
 
-EBEC 3ACD10     BADINP: LD      A,(READFG)      ; READ or INPUT?
+<span id="EBEC">EBEC</span> 3ACD10     <span id="BADINP"><a href="#BADINP">BADINP</a></span>: LD      A,(<a href="../../../24/24/text/#READFG">READFG</a>)      ; <a href="../../../26/32/text/#READ">READ</a> or <a href="../../../26/32/text/#INPUT">INPUT</a>?
 EBEF B7                 OR      A
-EBF0 C2A7E3             JP      NZ,DATSNR       ; READ - ?SN Error
+EBF0 C2A7E3             JP      NZ,<a href="../../../24/30/text/#DATSNR">DATSNR</a>       ; <a href="../../../26/32/text/#READ">READ</a> - ?<a href="../../../24/24/text/#SN">SN</a> Error
 EBF3 C1                 POP     BC              ; Throw away code string addr
-EBF4 21D9EB             LD      HL,REDO         ; "Redo from start" message
-EBF7 CD10F2             CALL    PRS             ; Output string
-EBFA C3F8E4             JP      DOAGN           ; Do last INPUT again
+EBF4 21D9EB             LD      HL,<a href="../../../26/32/text/#REDO">REDO</a>         ; "Redo from start" message
+EBF7 CD10F2             CALL    <a href="../../../31/26/text/#PRS">PRS</a>             ; Output string
+EBFA C3F8E4             JP      <a href="../../../24/32/text/#DOAGN">DOAGN</a>           ; Do last <a href="../../../26/32/text/#INPUT">INPUT</a> again
 
-<span id="EBFD">EBFD CD7BF1     INPUT:  CALL    IDTEST          ; Test for illegal direct</span>
-EC00 7E                 LD      A,(HL)          ; Get character after "INPUT"
+<span id="EBFD">EBFD</span> CD7BF1     <span id="INPUT"><a href="#INPUT">INPUT</a></span>:  CALL    <a href="../../../31/25/text/#IDTEST">IDTEST</a>          ; Test for illegal direct
+EC00 7E                 LD      A,(HL)          ; Get character after "<a href="../../../26/32/text/#INPUT">INPUT</a>"
 EC01 FE22               CP      '"'             ; Is there a prompt string?
 EC03 3E00               LD      A,0             ; Clear A and leave flags
-EC05 324510             LD      (CTLOFG),A      ; Enable output
-EC08 C217EC             JP      NZ,NOPMPT       ; No prompt - get input
-EC0B CDCFF1             CALL    QTSTR           ; Get string terminated by '"'
-EC0E CD90E6             CALL    CHKSYN          ; Check for ";" after prompt
+EC05 324510             LD      (<a href="../../../24/24/text/#CTLOFG">CTLOFG</a>),A      ; Enable output
+EC08 C217EC             JP      NZ,<a href="../../../26/32/text/#NOPMPT">NOPMPT</a>       ; No prompt - get input
+EC0B CDCFF1             CALL    <a href="../../../31/26/text/#QTSTR">QTSTR</a>           ; Get string terminated by '"'
+EC0E CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Check for ";" after prompt
 EC11 3B                 DEFB    ";"
 EC12 E5                 PUSH    HL              ; Save code string address
-EC13 CD13F2             CALL    PRS1            ; Output prompt string
+EC13 CD13F2             CALL    <a href="../../../31/26/text/#PRS1">PRS1</a>            ; Output prompt string
 EC16 3E                 DEFB    (LD A,n)        ; Skip "PUSH HL"
-EC17 E5         NOPMPT: PUSH    HL              ; Save code string address
-EC18 CDFCE4             CALL    PROMPT          ; Get input with "? " prompt
+<span id="EC17">EC17</span> E5         <span id="NOPMPT"><a href="#NOPMPT">NOPMPT</a></span>: PUSH    HL              ; Save code string address
+EC18 CDFCE4             CALL    <a href="../../../24/32/text/#PROMPT">PROMPT</a>          ; Get input with "? " prompt
 EC1B C1                 POP     BC              ; Restore code string address
-EC1C DA77E8             JP      C,INPBRK        ; Break pressed - Exit
+EC1C DA77E8             JP      C,<a href="../../../25/35/text/#INPBRK">INPBRK</a>        ; Break pressed - Exit
 EC1F 23                 INC     HL              ; Next byte
 EC20 7E                 LD      A,(HL)          ; Get it
 EC21 B7                 OR      A               ; End of line?
 EC22 2B                 DEC     HL              ; Back again
 EC23 C5                 PUSH    BC              ; Re-save code string address
-EC24 CA6FEA             JP      Z,NXTDTA        ; Yes - Find next DATA stmt
+EC24 CA6FEA             JP      Z,<a href="../../../25/37/text/#NXTDTA">NXTDTA</a>        ; Yes - Find next <a href="../../../25/38/text/#DATA">DATA</a> stmt
 EC27 362C               LD      (HL),","        ; Store comma as separator
-EC29 C331EC             JP      NXTITM          ; Get next item
+EC29 C331EC             JP      <a href="../../../26/32/text/#NXTITM">NXTITM</a>          ; Get next item
 
-<span id="EC2C">EC2C E5         READ:   PUSH    HL              ; Save code string address</span>
-EC2D 2ADC10             LD      HL,(NXTDAT)     ; Next DATA statement
-EC30 F6                 DEFB    (OR n)          ; Flag "READ"
-EC31 AF         NXTITM: XOR     A               ; Flag "INPUT"
-EC32 32CD10             LD      (READFG),A      ; Save "READ"/"INPUT" flag
+<span id="EC2C">EC2C</span> E5         <span id="READ"><a href="#READ">READ</a></span>:   PUSH    HL              ; Save code string address
+EC2D 2ADC10             LD      HL,(<a href="../../../24/24/text/#NXTDAT">NXTDAT</a>)     ; Next <a href="../../../25/38/text/#DATA">DATA</a> statement
+EC30 F6                 DEFB    (OR n)          ; Flag "<a href="../../../26/32/text/#READ">READ</a>"
+<span id="EC31">EC31</span> AF         <span id="NXTITM"><a href="#NXTITM">NXTITM</a></span>: XOR     A               ; Flag "<a href="../../../26/32/text/#INPUT">INPUT</a>"
+EC32 32CD10             LD      (<a href="../../../24/24/text/#READFG">READFG</a>),A      ; Save "<a href="../../../26/32/text/#READ">READ</a>"/"<a href="../../../26/32/text/#INPUT">INPUT</a>" flag
 EC35 E3                 EX      (SP),HL         ; Get code str' , Save pointer
-EC36 C33DEC             JP      GTVLUS          ; Get values
+EC36 C33DEC             JP      <a href="../../../26/33/text/#GTVLUS">GTVLUS</a>          ; Get values
 </pre>
 <!-- 1 column: end --></div>
 </div>

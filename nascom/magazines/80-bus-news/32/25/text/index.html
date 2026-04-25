@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - March&ndash;April 1984 - Volume 3 - Issue 2</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,59 +138,59 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    80</span>
 
-<span id="F838">F838 CD13F8     ABS:    CALL    TSTSGN          ; Test sign of FPREG</span>
+<span id="F838">F838</span> CD13F8     <span id="ABS"><a href="#ABS">ABS</a></span>:    CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F83B F0                 RET     P               ; Return if positive
-F83C 21E610     INVSGN: LD      HL,FPREG+2      ; Point to MSB
+<span id="F83C">F83C</span> 21E610     <span id="INVSGN"><a href="#INVSGN">INVSGN</a></span>: LD      HL,<a href="../../../24/24/text/#FPREG">FPREG</a>+2      ; Point to MSB
 F83F 7E                 LD      A,(HL)          ; Get sign of mantissa
 F840 EE80               XOR     80H             ; Invert sign of mantissa
 F842 77                 LD      (HL),A          ; Re-save sign of mantissa
 F843 C9                 RET
 
-<span id="F844">F844 EB         STAKFP: EX      DE,HL           ; Save code string address</span>
-F845 2AE410             LD      HL,(FPREG)      ; LSB,NLSB of FPREG
+<span id="F844">F844</span> EB         <span id="STAKFP"><a href="#STAKFP">STAKFP</a></span>: EX      DE,HL           ; Save code string address
+F845 2AE410             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; LSB,NLSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F848 E3                 EX      (SP),HL         ; Stack them,get return
 F849 E5                 PUSH    HL              ; Re-save return
-F84A 2AE610             LD      HL,(FPREG+2)    ; MSB and exponent of FPREG
+F84A 2AE610             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>+2)    ; MSB and exponent of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F84D E3                 EX      (SP),HL         ; Stack them,get return
 F84E E5                 PUSH    HL              ; Re-save return
 F84F EB                 EX      DE,HL           ; Restore code string address
 F850 C9                 RET
 
-<span id="F851">F851 CD62F8     PHLTFP: CALL    LOADFP          ; Number at HL to BCDE</span>
-<span id="F854">F854 EB         FPBCDE: EX      DE,HL           ; Save code string address</span>
-F855 22E410             LD      (FPREG),HL      ; Save LSB,NLSB of number
+<span id="F851">F851</span> CD62F8     <span id="PHLTFP"><a href="#PHLTFP">PHLTFP</a></span>: CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; Number at HL to BCDE
+<span id="F854">F854</span> EB         <span id="FPBCDE"><a href="#FPBCDE">FPBCDE</a></span>: EX      DE,HL           ; Save code string address
+F855 22E410             LD      (<a href="../../../24/24/text/#FPREG">FPREG</a>),HL      ; Save LSB,NLSB of number
 F858 60                 LD      H,B             ; Exponent of number
 F859 69                 LD      L,C             ; MSB of number
-F85A 22E610             LD      (FPREG+2),HL    ; Save MSB and exponent
+F85A 22E610             LD      (<a href="../../../24/24/text/#FPREG">FPREG</a>+2),HL    ; Save MSB and exponent
 F85D EB                 EX      DE,HL           ; Restore code string address
 F85E C9                 RET
 
-<span id="F85F">F85F 21E410     BCDEFP: LD      HL,FPREG        ; Point to FPREG</span>
-<span id="F862">F862 5E         LOADFP: LD      E,(HL)          ; Get LSB of number</span>
+<span id="F85F">F85F</span> 21E410     <span id="BCDEFP"><a href="#BCDEFP">BCDEFP</a></span>: LD      HL,<a href="../../../24/24/text/#FPREG">FPREG</a>        ; Point to <a href="../../../24/24/text/#FPREG">FPREG</a>
+<span id="F862">F862</span> 5E         <span id="LOADFP"><a href="#LOADFP">LOADFP</a></span>: LD      E,(HL)          ; Get LSB of number
 F863 23                 INC     HL
 F864 56                 LD      D,(HL)          ; Get NMSB of number
 F865 23                 INC     HL
 F866 4E                 LD      C,(HL)          ; Get MSB of number
 F867 23                 INC     HL
 F868 46                 LD      B,(HL)          ; Get exponent of number
-F869 23         INCHL:  INC     HL              ; Used for conditional "INC HL"
+<span id="F869">F869</span> 23         <span id="INCHL"><a href="#INCHL">INCHL</a></span>:  INC     HL              ; Used for conditional "INC HL"
 F86A C9                 RET
 
-<span id="F86B">F86B 11E410     FPTHL:  LD      DE,FPREG        ; Point to FPREG</span>
-F86E 0604       DETHL4: LD      B,4             ; 4 bytes to move
-F870 1A         DETHLB: LD      A,(DE)          ; Get source
+<span id="F86B">F86B</span> 11E410     <span id="FPTHL"><a href="#FPTHL">FPTHL</a></span>:  LD      DE,<a href="../../../24/24/text/#FPREG">FPREG</a>        ; Point to <a href="../../../24/24/text/#FPREG">FPREG</a>
+<span id="F86E">F86E</span> 0604       <span id="DETHL4"><a href="#DETHL4">DETHL4</a></span>: LD      B,4             ; 4 bytes to move
+<span id="F870">F870</span> 1A         <span id="DETHLB"><a href="#DETHLB">DETHLB</a></span>: LD      A,(DE)          ; Get source
 F871 77                 LD      (HL),A          ; Save destination
 F872 13                 INC     DE              ; Next source
 F873 23                 INC     HL              ; Next destination
 F874 05                 DEC     B               ; Count bytes
-F875 C270F8             JP      NZ,DETHLB       ; Loop if more
+F875 C270F8             JP      NZ,<a href="../../../32/25/text/#DETHLB">DETHLB</a>       ; Loop if more
 F878 C9                 RET
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    81</span>
 
-<span id="F879">F879 21E610     SIGNS:  LD      HL,FPREG+2      ; Point to MSB of FPREG</span>
+<span id="F879">F879</span> 21E610     <span id="SIGNS"><a href="#SIGNS">SIGNS</a></span>:  LD      HL,<a href="../../../24/24/text/#FPREG">FPREG</a>+2      ; Point to MSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F87C 7E                 LD      A,(HL)          ; Get MSB
 F87D 07                 RLCA                    ; Old sign to carry
 F87E 37                 SCF                     ; Set MSBit
@@ -210,24 +210,24 @@ F88B 1F                 RRA
 F88C AE                 XOR     (HL)            ; New sign of result
 F88D C9                 RET
 
-<span id="F88E">F88E 78         CMPNUM: LD      A,B             ; Get exponent of number</span>
+<span id="F88E">F88E</span> 78         <span id="CMPNUM"><a href="#CMPNUM">CMPNUM</a></span>: LD      A,B             ; Get exponent of number
 F88F B7                 OR      A
-F890 CA13F8             JP      Z,TSTSGN        ; Zero - Test sign of FPREG
-F893 211CF8             LD      HL,RETREL       ; Return relation routine
+F890 CA13F8             JP      Z,<a href="../../../32/24/text/#TSTSGN">TSTSGN</a>        ; Zero - Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
+F893 211CF8             LD      HL,<a href="../../../32/24/text/#RETREL">RETREL</a>       ; Return relation routine
 F896 E5                 PUSH    HL              ; Save for return
-F897 CD13F8             CALL    TSTSGN          ; Test sign of FPREG
+F897 CD13F8             CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F89A 79                 LD      A,C             ; Get MSB of number
-F89B C8                 RET     Z               ; FPREG zero - Number's MSB
-F89C 21E610             LD      HL,FPREG+2      ; MSB of FPREG
+F89B C8                 RET     Z               ; <a href="../../../24/24/text/#FPREG">FPREG</a> zero - Number's MSB
+F89C 21E610             LD      HL,<a href="../../../24/24/text/#FPREG">FPREG</a>+2      ; MSB of <a href="../../../24/24/text/#FPREG">FPREG</a>
 F89F AE                 XOR     (HL)            ; Combine signs
 F8A0 79                 LD      A,C             ; Get MSB of number
 F8A1 F8                 RET     M               ; Exit if signs different
-F8A2 CDA8F8             CALL    CMPFP           ; Compare FP numbers
+F8A2 CDA8F8             CALL    <a href="../../../32/25/text/#CMPFP">CMPFP</a>           ; Compare FP numbers
 F8A5 1F                 RRA                     ; Get carry to sign
 F8A6 A9                 XOR     C               ; Combine with MSB of number
 F8A7 C9                 RET
 
-F8A8 23         CMPFP:  INC     HL              ; Point to exponent
+<span id="F8A8">F8A8</span> 23         <span id="CMPFP"><a href="#CMPFP">CMPFP</a></span>:  INC     HL              ; Point to exponent
 F8A9 78                 LD      A,B             ; Get exponent
 F8AA BE                 CP      (HL)            ; Compare exponents
 F8AB C0                 RET     NZ              ; Different

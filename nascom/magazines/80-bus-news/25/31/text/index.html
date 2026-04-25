@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
-	<!-- Sat, 18 Apr 2026 18:43:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -151,38 +151,38 @@ By Carl Lloyd&mdash;Parker
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    24</span>
 
-E668 FE20       PUTBUF: CP      " "             ; Is it a control code?
-E66A DA10E6             JP      C,MORINP        ; Yes - Ignore
-E66D 78         PUTCTL: LD      A,B             ; Get number of bytes in buffer
+<span id="E668">E668</span> FE20       <span id="PUTBUF"><a href="#PUTBUF">PUTBUF</a></span>: CP      " "             ; Is it a control code?
+E66A DA10E6             JP      C,<a href="../../../24/34/text/#MORINP">MORINP</a>        ; Yes - Ignore
+<span id="E66D">E66D</span> 78         <span id="PUTCTL"><a href="#PUTCTL">PUTCTL</a></span>: LD      A,B             ; Get number of bytes in buffer
 E66E FE49               CP      72+1            ; Test for line overflow
-E670 3E07               LD      A,CTRLG         ; Set a bell
-E672 D282E6             JP      NC,OUTNBS       ; Ring bell if buffer full
+E670 3E07               LD      A,<a href="../../../24/23/text/#CTRLG">CTRLG</a>         ; Set a bell
+E672 D282E6             JP      NC,<a href="../../../25/31/text/#OUTNBS">OUTNBS</a>       ; Ring bell if buffer full
 E675 79                 LD      A,C             ; Get character
 E676 71                 LD      (HL),C          ; Save in buffer
-E677 32CC10             LD      (LSTBIN),A      ; Save last input byte
+E677 32CC10             LD      (<a href="../../../24/24/text/#LSTBIN">LSTBIN</a>),A      ; Save last input byte
 E67A 23                 INC     HL              ; Move up buffer
 E67B 04                 INC     B               ; Increment length
-E67C CD9BE6     OUTIT:  CALL    OUTC            ; Output the character entered
-E67F C310E6             JP      MORINP          ; Get another character
+<span id="E67C">E67C</span> CD9BE6     <span id="OUTIT"><a href="#OUTIT">OUTIT</a></span>:  CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output the character entered
+E67F C310E6             JP      <a href="../../../24/34/text/#MORINP">MORINP</a>          ; Get another character
 
-E682 CD9BE6     OUTNBS: CALL    OUTC            ; Output bell and back over it
-E685 3E08               LD      A,BKSP          ; Set back space
-E687 C37CE6             JP      OUTIT           ; Output it and get more
+<span id="E682">E682</span> CD9BE6     <span id="OUTNBS"><a href="#OUTNBS">OUTNBS</a></span>: CALL    <a href="../../../25/32/text/#OUTC">OUTC</a>            ; Output bell and back over it
+E685 3E08               LD      A,<a href="../../../24/23/text/#BKSP">BKSP</a>          ; Set back space
+E687 C37CE6             JP      <a href="../../../25/31/text/#OUTIT">OUTIT</a>           ; Output it and get more
 
-<span id="E68A">E68A 7C         CPDEHL: LD      A,H             ; Get H</span>
+<span id="E68A">E68A</span> 7C         <span id="CPDEHL"><a href="#CPDEHL">CPDEHL</a></span>: LD      A,H             ; Get H
 E68B 92                 SUB     D               ; Compare with D
 E68C C0                 RET     NZ              ; Different - Exit
 E68D 7D                 LD      A,L             ; Get L
 E68E 93                 SUB     E               ; Compare with E
 E68F C9                 RET                     ; Return status
 
-<span id="E690">E690 7E         CHKSYN: LD      A,(HL)          ; Check syntax of character</span>
+<span id="E690">E690</span> 7E         <span id="CHKSYN"><a href="#CHKSYN">CHKSYN</a></span>: LD      A,(HL)          ; Check syntax of character
 E691 E3                 EX      (SP),HL         ; Address of test byte
 E692 BE                 CP      (HL)            ; Same as in code string?
 E693 23                 INC     HL              ; Return address
 E694 E3                 EX      (SP),HL         ; Put it back
-E695 CA36E8             JP      Z,GETCHR        ; Yes - Get next character
-E698 C3ADE3             JP      SNERR           ; Different - ?SN Error
+E695 CA36E8             JP      Z,<a href="../../../25/34/text/#GETCHR">GETCHR</a>        ; Yes - Get next character
+E698 C3ADE3             JP      <a href="../../../24/30/text/#SNERR">SNERR</a>           ; Different - ?<a href="../../../24/24/text/#SN">SN</a> Error
 </pre>
 <!-- 1 column: end --></div>
 </div>

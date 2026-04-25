@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -139,63 +139,63 @@
 <span class="uppercase">Nascom</span><br>
 ROM<br>
 BASIC<br>
-Dis&ndash;Assembled
+Dis&mdash;Assembled
 </h1>
 <h2 class="uppercase">
 Part <b>4</b>
 </h2>
 <h3 class="author uppercase">
-By Carl Lloyd&ndash;Parker
+By Carl Lloyd&mdash;Parker
 </h3>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    39</span>
 
-EB1F 2B         MRPRNT: DEC     HL              ; DEC 'cos GETCHR INCs
-EB20 CD36E8             CALL    GETCHR          ; Get next character
-<span id="EB23">EB23 CA81EB     PRINT:  JP      Z,PRNTCR        ; CRLF if just PRINT</span>
-EB26 C8         PRNTLP: RET     Z               ; End of list - Exit
-EB27 FEA5               CP      ZTAB            ; "TAB(" token?
-EB29 CAAFEB             JP      Z,DOTAB         ; Yes - Do TAB routine
-EB2C FEA8               CP      ZSPC            ; "SPC(" token?
-EB2E CAAFEB             JP      Z,DOTAB         ; Yes - Do SPC routine
+<span id="EB1F">EB1F</span> 2B         <span id="MRPRNT"><a href="#MRPRNT">MRPRNT</a></span>: DEC     HL              ; DEC 'cos <a href="../../../25/34/text/#GETCHR">GETCHR</a> INCs
+EB20 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+<span id="EB23">EB23</span> CA81EB     <span id="PRINT"><a href="#PRINT">PRINT</a></span>:  JP      Z,<a href="../../../26/32/text/#PRNTCR">PRNTCR</a>        ; CRLF if just PRINT
+<span id="EB26">EB26</span> C8         <span id="PRNTLP"><a href="#PRNTLP">PRNTLP</a></span>: RET     Z               ; End of list - Exit
+EB27 FEA5               CP      <a href="../../../24/28/text/#ZTAB">ZTAB</a>            ; "TAB(" token?
+EB29 CAAFEB             JP      Z,<a href="../../../26/32/text/#DOTAB">DOTAB</a>         ; Yes - Do TAB routine
+EB2C FEA8               CP      <a href="../../../24/28/text/#ZSPC">ZSPC</a>            ; "SPC(" token?
+EB2E CAAFEB             JP      Z,<a href="../../../26/32/text/#DOTAB">DOTAB</a>         ; Yes - Do SPC routine
 EB31 E5                 PUSH    HL              ; Save code string address
 EB32 FE2C               CP      ","             ; Comma?
-EB34 CA98EB             JP      Z,DOCOM         ; Yes - Move to next zone
+EB34 CA98EB             JP      Z,<a href="../../../26/32/text/#DOCOM">DOCOM</a>         ; Yes - Move to next zone
 EB37 FE3B               CP      ";"             ; Semi-colon?
-EB39 CAD2EB             JP      Z,NEXITM        ; Do semi-colon routine
+EB39 CAD2EB             JP      Z,<a href="../../../26/32/text/#NEXITM">NEXITM</a>        ; Do semi-colon routine
 EB3C C1                 POP     BC              ; Code string address to BC
-EB3D CD5AED             CALL    EVAL            ; Evaluate expression
+EB3D CD5AED             CALL    <a href="../../../26/34/text/#EVAL">EVAL</a>            ; Evaluate expression
 EB40 E5                 PUSH    HL              ; Save code string address
-EB41 3AAD10             LD      A,(TYPE)        ; Get variable type
+EB41 3AAD10             LD      A,(<a href="../../../24/24/text/#TYPE">TYPE</a>)        ; Get variable type
 EB44 B7                 OR      A               ; Is it a string variable?
-EB45 C26DEB             JP      NZ,PRNTST       ; Yes - Output string contents
-EB48 CDB8F9             CALL    NUMASC          ; Convert number to text
-EB4B CDCEF1             CALL    CRTST           ; Create temporary string
+EB45 C26DEB             JP      NZ,<a href="../../../26/31/text/#PRNTST">PRNTST</a>       ; Yes - Output string contents
+EB48 CDB8F9             CALL    <a href="../../../32/27/text/#NUMASC">NUMASC</a>          ; Convert number to text
+EB4B CDCEF1             CALL    <a href="../../../31/26/text/#CRTST">CRTST</a>           ; Create temporary string
 EB4E 3620               LD      (HL)," "        ; Followed by a space
-EB50 2AE410             LD      HL,(FPREG)      ; Get length of output
+EB50 2AE410             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; Get length of output
 EB53 34                 INC     (HL)            ; Plus 1 for the space
-EB54 2AE410             LD      HL,(FPREG)      ; &lt; Not needed &gt;
-EB57 3A4210             LD      A,(LWIDTH)      ; Get width of line
+EB54 2AE410             LD      HL,(<a href="../../../24/24/text/#FPREG">FPREG</a>)      ; &lt; Not needed &gt;
+EB57 3A4210             LD      A,(<a href="../../../24/24/text/#LWIDTH">LWIDTH</a>)      ; Get width of line
 EB5A 47                 LD      B,A             ; To B
 EB5B 04                 INC     B               ; Width 255 (No limit)?
-EB5C CA69EB             JP      Z,PRNTNB        ; Yes - Output number string
+EB5C CA69EB             JP      Z,<a href="../../../26/31/text/#PRNTNB">PRNTNB</a>        ; Yes - Output number string
 EB5F 04                 INC     B               ; Adjust it
-EB60 3AAB10             LD      A,(CURPOS)      ; Get cursor position
+EB60 3AAB10             LD      A,(<a href="../../../24/24/text/#CURPOS">CURPOS</a>)      ; Get cursor position
 EB63 86                 ADD     A,(HL)          ; Add length of string
 EB64 3D                 DEC     A               ; Adjust it
 EB65 B8                 CP      B               ; Will output fit on this line?
-EB66 D481EB             CALL    NC,PRNTCR       ; No - CRLF first
-EB69 CD13F2     PRNTNB: CALL    PRS1            ; Output string at (HL)
+EB66 D481EB             CALL    NC,<a href="../../../26/32/text/#PRNTCR">PRNTCR</a>       ; No - CRLF first
+<span id="EB69">EB69</span> CD13F2     <span id="PRNTNB"><a href="#PRNTNB">PRNTNB</a></span>: CALL    <a href="../../../31/26/text/#PRS1">PRS1</a>            ; Output string at (HL)
 EB6C AF                 XOR     A               ; Skip CALL by setting "Z" flag
-EB6D C413F2     PRNTST: CALL    NZ,PRS1         ; Output string at (HL)
+<span id="EB6D">EB6D</span> C413F2     <span id="PRNTST"><a href="#PRNTST">PRNTST</a></span>: CALL    NZ,<a href="../../../31/26/text/#PRS1">PRS1</a>         ; Output string at (HL)
 EB70 E1                 POP     HL              ; Restore code string address
-EB71 C31FEB             JP      MRPRNT          ; See if more to PRINT
+EB71 C31FEB             JP      <a href="../../../26/31/text/#MRPRNT">MRPRNT</a>          ; See if more to <a href="../../../26/31/text/#PRINT">PRINT</a>
 
-EB74 3AAB10     STTLIN: LD      A,(CURPOS)      ; Make sure on new line
+<span id="EB74">EB74</span> 3AAB10     <span id="STTLIN"><a href="#STTLIN">STTLIN</a></span>: LD      A,(<a href="../../../24/24/text/#CURPOS">CURPOS</a>)      ; Make sure on new line
 EB77 B7                 OR      A               ; Already at start?
 EB78 C8                 RET     Z               ; Yes - Do nothing
-EB79 C381EB             JP      PRNTCR          ; Start a new line
+EB79 C381EB             JP      <a href="../../../26/32/text/#PRNTCR">PRNTCR</a>          ; Start a new line
 </pre>
 <!-- 1 column: end --></div>
 </div>

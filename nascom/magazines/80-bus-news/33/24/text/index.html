@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,53 +138,53 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    92</span>
 
-FBEC 77         RESEED: LD      (HL),A          ; Re-seed random numbers
+<span id="FBEC">FBEC</span> 77         <span id="RESEED"><a href="#RESEED">RESEED</a></span>: LD      (HL),A          ; Re-seed random numbers
 FBED 2B                 DEC     HL
 FBEE 77                 LD      (HL),A
 FBEF 2B                 DEC     HL
 FBF0 77                 LD      (HL),A
-FBF1 C3C7FB             JP      RND1            ; Return RND seed
+FBF1 C3C7FB             JP      <a href="../../../33/23/text/#RND1">RND1</a>            ; Return <a href="../../../33/23/text/#RND">RND</a> seed
 
-FBF4 68B14668   RNDTAB: DEFB    068H,0B1H,046H,068H     ; Table used by RND
+<span id="FBF4">FBF4</span> 68B14668   <span id="RNDTAB"><a href="#RNDTAB">RNDTAB</a></span>: DEFB    068H,0B1H,046H,068H     ; Table used by <a href="../../../33/23/text/#RND">RND</a>
 FBF8 99E99269           DEFB    099H,0E9H,092H,069H
 FBFC 10D17568           DEFB    010H,0D1H,075H,068H
 
-<span id="FC00">FC00 214AFC     COS:    LD      HL,HALFPI       ; Point to PI/2</span>
-FC03 CDBEF5             CALL    ADDPHL          ; Add it to PPREG
-<span id="FC06">FC06 CD44F8     SIN:    CALL    STAKFP          ; Put angle on stack</span>
+<span id="FC00">FC00</span> 214AFC     <span id="COS"><a href="#COS">COS</a></span>:    LD      HL,<a href="../../../33/24/text/#HALFPI">HALFPI</a>       ; Point to PI/2
+<span id="FC03">FC03</span> CDBEF5             CALL    <a href="../../../31/32/text/#ADDPHL">ADDPHL</a>          ; Add it to <a href="../../../24/24/text/#FPREG">FPREG</a>
+<span id="FC06">FC06</span> CD44F8     <span id="SIN"><a href="#SIN">SIN</a></span>:    CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Put angle on stack
 FC09 014983             LD      BC,8349H        ; BCDE = 2 PI
 FC0C 11DB0F             LD      DE,0FDBH
-FC0F CD54F8             CALL    FPBCDE          ; Move 2 PI to FPREG
+FC0F CD54F8             CALL    <a href="../../../32/25/text/#FPBCDE">FPBCDE</a>          ; Move 2 PI to <a href="../../../24/24/text/#FPREG">FPREG</a>
 FC12 C1                 POP     BC              ; Restore angle
 FC13 D1                 POP     DE
-FC14 CD69F7             CALL    DVBCDE          ; Divide angle by 2 PI
-FC17 CD44F8             CALL    STAKFP          ; Put it on stack
-FC1A CDE6F8             CALL    INT             ; Get INT of result
+FC14 CD69F7             CALL    <a href="../../../32/23/text/#DVBCDE">DVBCDE</a>          ; Divide angle by 2 PI
+FC17 CD44F8             CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Put it on stack
+FC1A CDE6F8             CALL    <a href="../../../32/26/text/#INT">INT</a>             ; Get <a href="../../../32/26/text/#INT">INT</a> of result
 FC1D C1                 POP     BC              ; Restore number
 FC1E D1                 POP     DE
-FC1F CDCAF5             CALL    SUBCDE          ; Make it 0 &lt;= value &lt; 1
-FC22 214EFC             LD      HL,QUARTR       ; Point to 0.25
-FC25 CDC4F5             CALL    SUBPHL          ; Subtract value from 0.25
-FC28 CD13F8             CALL    TSTSGN          ; Test sign of value
+FC1F CDCAF5             CALL    <a href="../../../31/32/text/#SUBCDE">SUBCDE</a>          ; Make it 0 &lt;= value &lt; 1
+FC22 214EFC             LD      HL,<a href="../../../33/24/text/#QUARTR">QUARTR</a>       ; Point to 0.25
+FC25 CDC4F5             CALL    <a href="../../../31/32/text/#SUBPHL">SUBPHL</a>          ; Subtract value from 0.25
+FC28 CD13F8             CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of value
 FC2B 37                 SCF                     ; Flag positive
-FC2C F236FC             JP      P,SIN1          ; Positive - Ok
-FC2F CDBBF5             CALL    ROUND           ; Add 0.5 to value
-FC32 CD13F8             CALL    TSTSGN          ; Test sign of value
+FC2C F236FC             JP      P,<a href="../../../33/24/text/#SIN1">SIN1</a>          ; Positive - Ok
+FC2F CDBBF5             CALL    <a href="../../../31/32/text/#ROUND">ROUND</a>           ; Add 0.5 to value
+FC32 CD13F8             CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of value
 FC35 B7                 OR      A               ; Flag negative
-FC36 F5         SIN1:   PUSH    AF              ; Save sign
-FC37 F43CF8             CALL    P,INVSGN        ; Negate value if positive
-FC3A 214EFC             LD      HL,QUARTR       ; Point to 0.25
-FC3D CDBEF5             CALL    ADDPHL          ; Add 0.25 to value
+<span id="FC36">FC36</span> F5         <span id="SIN1"><a href="#SIN1">SIN1</a></span>:   PUSH    AF              ; Save sign
+FC37 F43CF8             CALL    P,<a href="../../../32/25/text/#INVSGN">INVSGN</a>        ; Negate value if positive
+FC3A 214EFC             LD      HL,<a href="../../../33/24/text/#QUARTR">QUARTR</a>       ; Point to 0.25
+FC3D CDBEF5             CALL    <a href="../../../31/32/text/#ADDPHL">ADDPHL</a>          ; Add 0.25 to value
 FC40 F1                 POP     AF              ; Restore sign
-FC41 D43CF8             CALL    NC,INVSGN       ; Negative - Make positive
-FC44 2152FC             LD      HL,SINTAB       ; Coefficient table
-FC47 C35BFB             JP      SUMSER          ; Evaluate sum of series
+FC41 D43CF8             CALL    NC,<a href="../../../32/25/text/#INVSGN">INVSGN</a>       ; Negative - Make positive
+FC44 2152FC             LD      HL,<a href="../../../33/24/text/#SINTAB">SINTAB</a>       ; Coefficient table
+FC47 C35BFB             JP      <a href="../../../32/30/text/#SUMSER">SUMSER</a>          ; Evaluate sum of series
 
-FC4A DB0F4981   HALFPI: DEFB    0DBH,00FH,049H,081H     ; 1.5708 (PI/2)
+<span id="FC4A">FC4A</span> DB0F4981   <span id="HALFPI"><a href="#HALFPI">HALFPI</a></span>: DEFB    0DBH,00FH,049H,081H     ; 1.5708 (PI/2)
 
-FC4E 0000007F   QUARTR: DEFB    000H,000H,000H,07FH     ; 0.25
+<span id="FC4E">FC4E</span> 0000007F   <span id="QUARTR"><a href="#QUARTR">QUARTR</a></span>: DEFB    000H,000H,000H,07FH     ; 0.25
 
-FC52 05         SINTAB: DEFB    5                       ; Table used by SIN
+<span id="FC52">FC52</span> 05         <span id="SINTAB"><a href="#SINTAB">SINTAB</a></span>: DEFB    5                       ; Table used by <a href="../../../33/24/text/#SIN">SIN</a>
 FC53 BAD71E86           DEFB    0BAH,0D7H,01EH,086H     ; 39.711
 FC57 64269987           DEFB    064H,026H,099H,087H     ;-76.575
 FC5B 58342387           DEFB    058H,034H,023H,087H     ; 81.602
@@ -195,34 +195,34 @@ FC63 DA0F4983           DEFB    0DAH,00FH,049H,083H     ;  6.2832
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    93</span>
 
-<span id="FC67">FC67 CD44F8     TAN:    CALL    STAKFP          ; Put angle on stack</span>
-FC6A CD06FC             CALL    SIN             ; Get SIN of angle
+<span id="FC67">FC67</span> CD44F8     <span id="TAN"><a href="#TAN">TAN</a></span>:    CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Put angle on stack
+FC6A CD06FC             CALL    <a href="../../../33/24/text/#SIN">SIN</a>             ; Get <a href="../../../33/24/text/#SIN">SIN</a> of angle
 FC6D C1                 POP     BC              ; Restore angle
 FC6E E1                 POP     HL
-FC6F CD44F8             CALL    STAKFP          ; Save SIN of angle
+FC6F CD44F8             CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Save <a href="../../../33/24/text/#SIN">SIN</a> of angle
 FC72 EB                 EX      DE,HL           ; BCDE = Angle
-FC73 CD54F8             CALL    FPBCDE          ; Angle to FPREG
-FC76 CD00FC             CALL    COS             ; Get COS of angle
-FC79 C367F7             JP      DIV             ; TAN = SIN / COS
+FC73 CD54F8             CALL    <a href="../../../32/25/text/#FPBCDE">FPBCDE</a>          ; Angle to <a href="../../../24/24/text/#FPREG">FPREG</a>
+FC76 CD00FC             CALL    <a href="../../../33/24/text/#COS">COS</a>             ; Get COS of angle
+FC79 C367F7             JP      <a href="../../../32/23/text/#DIV">DIV</a>             ; <a href="../../../33/24/text/#TAN">TAN</a> = <a href="../../../33/24/text/#SIN">SIN</a> / <a href="../../../33/24/text/#COS">COS</a>
 
-<span id="FC7C">FC7C CD13F8     ATN:    CALL    TSTSGN          ; Test sign of value</span>
-FC7F FCA7FA             CALL    M,NEGAFT        ; Negate result after if -ve
-FC82 FC3CF8             CALL    M,INVSGN        ; Negate value if -ve
-FC85 3AE710             LD      A,(FPEXP)       ; Get exponent
+<span id="FC7C">FC7C</span> CD13F8     <span id="ATN"><a href="#ATN">ATN</a></span>:    CALL    <a href="../../../32/24/text/#TSTSGN">TSTSGN</a>          ; Test sign of value
+FC7F FCA7FA             CALL    M,<a href="../../../32/28/text/#NEGAFT">NEGAFT</a>        ; Negate result after if -ve
+FC82 FC3CF8             CALL    M,<a href="../../../32/25/text/#INVSGN">INVSGN</a>        ; Negate value if -ve
+FC85 3AE710             LD      A,(<a href="../../../24/24/text/#FPEXP">FPEXP</a>)       ; Get exponent
 FC88 FE81               CP      81H             ; Number less than 1?
-FC8A DA99FC             JP      C,ATN1          ; Yes - Get arc tangnt
+FC8A DA99FC             JP      C,<a href="../../../33/24/text/#ATN1">ATN1</a>          ; Yes - Get arc tangnt
 FC8D 010081             LD      BC,8100H        ; BCDE = 1
 FC90 51                 LD      D,C
 FC91 59                 LD      E,C
-FC92 CD69F7             CALL    DVBCDE          ; Get reciprocal of number
-FC95 21C4F5             LD      HL,SUBPHL       ; Sub angle from PI/2
+FC92 CD69F7             CALL    <a href="../../../32/23/text/#DVBCDE">DVBCDE</a>          ; Get reciprocal of number
+FC95 21C4F5             LD      HL,<a href="../../../31/32/text/#SUBPHL">SUBPHL</a>       ; Sub angle from PI/2
 FC98 E5                 PUSH    HL              ; Save for angle > 1
-FC99 21A3FC     ATN1:   LD      HL,ATNTAB       ; Coefficient table
-FC9C CD5BFB             CALL    SUMSER          ; Evaluate sum of series
-FC9F 214AFC             LD      HL,HALFPI       ; PI/2 - angle in case &gt; 1
+<span id="FC99">FC99</span> 21A3FC     <span id="ATN1"><a href="#ATN1">ATN1</a></span>:   LD      HL,<a href="../../../33/24/text/#ATNTAB">ATNTAB</a>       ; Coefficient table
+FC9C CD5BFB             CALL    <a href="../../../32/30/text/#SUMSER">SUMSER</a>          ; Evaluate sum of series
+FC9F 214AFC             LD      HL,<a href="../../../33/24/text/#HALFPI">HALFPI</a>       ; PI/2 - angle in case &gt; 1
 FCA2 C9                 RET                     ; Number &gt; 1 - Sub from PI/2
 
-FCA3 09         ATNTAB: DEFB    9                       ; Table used by ATN
+<span id="FCA3">FCA3</span> 09         <span id="ATNTAB"><a href="#ATNTAB">ATNTAB</a></span>: DEFB    9                       ; Table used by <a href="../../../33/24/text/#ATN">ATN</a>
 FCA4 4AD73B78           DEFB    04AH,0D7H,03BH,078H     ; 1/17
 FCA8 026E847B           DEFB    002H,06EH,084H,07BH     ;-1/15
 FCAC FEC12F7C           DEFB    0FEH,0C1H,02FH,07CH     ; 1/13

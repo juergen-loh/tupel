@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -159,14 +159,17 @@ control of the input buffer. This occurs when the input is in the NAS-SYS or <sp
 mode, or during an INPUT statement.
 </p>
 <p>
-Ever noticed how slow BASIC is on starting up? Take a look at locations FCCDH
-through to FCD4H these locations form a routine which is simply a delay. At this point
+Ever noticed how slow BASIC is on starting up? Take a look at locations
+<a href="../../../../80-bus-news/33/25/text/#FCCD">FCCDH</a>
+through to <a href="../../../../80-bus-news/33/25/text/#FCD4">FCD4H</a>
+these locations form a routine which is simply a delay. At this point
 I will grit my teeth and hope that I&rsquo;m right and that it is all it does.
 </p>
 <p>
 Ever wondered why you can&rsquo;t single step BASIC? It&rsquo;s because it changes the NMI
 jump vector in the workspace. If you want to single step BASIC ignore any calls to
-FEBBH because that&rsquo;s where it changes. Ok so it changes the NMI jump so what does it
+<a href="../../../../80-bus-news/33/27/text/#FEBB">FEBBH</a>
+because that&rsquo;s where it changes. Ok so it changes the NMI jump so what does it
 change it to? It changes it to the break function, so if you can generate an NMI you
 can use it as a break key. How do I generate an NMI&nbsp;? Simple connect a push to make
 switch between pin 4 of the keyboard and ground. (Nascom&nbsp;2 only. Ed.)

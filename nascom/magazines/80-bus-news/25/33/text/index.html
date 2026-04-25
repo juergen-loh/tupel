@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,60 +138,60 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    27</span>
 
-E733 E5         SETLIN: PUSH    HL              ; Set up LINES counter
-E734 2A4810             LD      HL,(LINESN)     ; Get LINES number
-E737 224610             LD      (LINESC),HL     ; Save in LINES counter
+<span id="E733">E733</span> E5         <span id="SETLIN"><a href="#SETLIN">SETLIN</a></span>: PUSH    HL              ; Set up <a href="../../../33/26/text/#LINES">LINES</a> counter
+E734 2A4810             LD      HL,(<a href="../../../24/24/text/#LINESN">LINESN</a>)     ; Get <a href="../../../33/26/text/#LINES">LINES</a> number
+E737 224610             LD      (<a href="../../../24/24/text/#LINESC">LINESC</a>),HL     ; Save in <a href="../../../33/26/text/#LINES">LINES</a> counter
 E73A E1                 POP     HL
 E73B C9                 RET
 
-E73C 21DEFE     LDNMI1: LD      HL,BREAK        ; Break routine
-E73F 227E0C             LD      (NMI),HL        ; NMI forces break
-E742 C3F8E3             JP      PRNTOK          ; Go to command mode
+<span id="E73C">E73C</span> 21DEFE     <span id="LDNMI1"><a href="#LDNMI1">LDNMI1</a></span>: LD      HL,<a href="../../../33/27/text/#BREAK">BREAK</a>        ; Break routine
+E73F 227E0C             LD      (<a href="../../../24/23/text/#NMI">NMI</a>),HL        ; <a href="../../../24/23/text/#NMI">NMI</a> forces break
+E742 C3F8E3             JP      <a href="../../../24/31/text/#PRNTOK">PRNTOK</a>          ; Go to command mode
 
 E745 FE                 DEFB    (CP n)          ; &lt;&lt;&lt; NO REFERENCE TO HERE &gt;&gt;&gt;
 
-E746 E5         COUNT:  PUSH    HL              ; Save code string address
+<span id="E746">E746</span> E5         <span id="COUNT"><a href="#COUNT">COUNT</a></span>:  PUSH    HL              ; Save code string address
 E747 D5                 PUSH    DE
-E748 2A4610             LD      HL,(LINESC)     ; Get LINES counter
+E748 2A4610             LD      HL,(<a href="../../../24/24/text/#LINESC">LINESC</a>)     ; Get <a href="../../../33/26/text/#LINES">LINES</a> counter
 E74B 11FFFF             LD      DE,-1
 E74E ED5A               ADC     HL,DE           ; Decrement
-E750 224610             LD      (LINESC),HL     ; Put it back
+E750 224610             LD      (<a href="../../../24/24/text/#LINESC">LINESC</a>),HL     ; Put it back
 E753 D1                 POP     DE
 E754 E1                 POP     HL              ; Restore code string address
 E755 F0                 RET     P               ; Return if more lines to go
 E756 E5                 PUSH    HL              ; Save code string address
-E757 2A4810             LD      HL,(LINESN)     ; Get LINES number
-E75A 224610             LD      (LINESC),HL     ; Reset LINES counter
-E75D 3A4C10             LD      A,(NMIFLG)      ; Break by NMI?
+E757 2A4810             LD      HL,(<a href="../../../24/24/text/#LINESN">LINESN</a>)     ; Get <a href="../../../33/26/text/#LINES">LINES</a> number
+E75A 224610             LD      (<a href="../../../24/24/text/#LINESC">LINESC</a>),HL     ; Reset <a href="../../../33/26/text/#LINES">LINES</a> counter
+E75D 3A4C10             LD      A,(<a href="../../../24/24/text/#NMIFLG">NMIFLG</a>)      ; Break by <a href="../../../24/23/text/#NMI">NMI</a>?
 E760 B7                 OR      A
-E761 C2E5FE             JP      NZ,ARETN        ; Yes - "RETN"
-E764 CD05FD             CALL    GETINP          ; Get input character
-E767 FE03               CP      CTRLC           ; Is it control "C"?
-E769 CA70E7             JP      Z,RSLNBK        ; Yes - Reset LINES an break
+E761 C2E5FE             JP      NZ,<a href="../../../33/27/text/#ARETN">ARETN</a>        ; Yes - "RETN"
+E764 CD05FD             CALL    <a href="../../../33/25/text/#GETINP">GETINP</a>          ; Get input character
+E767 FE03               CP      <a href="../../../24/23/text/#CTRLC">CTRLC</a>           ; Is it control "C"?
+E769 CA70E7             JP      Z,<a href="../../../25/33/text/#RSLNBK">RSLNBK</a>        ; Yes - Reset <a href="../../../33/26/text/#LINES">LINES</a> an break
 E76C E1                 POP     HL              ; Restore code string address
-E76D C346E7             JP      COUNT           ; Keep on counting
+E76D C346E7             JP      <a href="../../../25/33/text/#COUNT">COUNT</a>           ; Keep on counting
 
-E770 2A4810     RSLNBK: LD      HL,(LINESN)     ; Get LINES number
-E773 224610             LD      (LINESC),HL     ; Reset LINES counter
-E776 C3B1E0             JP      BRKRET          ; Go and output "Break"
+<span id="E770">E770</span> 2A4810     <span id="RSLNBK"><a href="#RSLNBK">RSLNBK</a></span>: LD      HL,(<a href="../../../24/24/text/#LINESN">LINESN</a>)     ; Get <a href="../../../33/26/text/#LINES">LINES</a> number
+E773 224610             LD      (<a href="../../../24/24/text/#LINESC">LINESC</a>),HL     ; Reset <a href="../../../33/26/text/#LINES">LINES</a> counter
+E776 C3B1E0             JP      <a href="../../../24/25/text/#BRKRET">BRKRET</a>          ; Go and output "Break"
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    28</span>
 
-<span id="E779">E779 3E64       FOR:    LD      A,64H           ; Flag "FOR" assignment</span>
-E77B 32CB10             LD      (FORFLG),A      ; Save "FOR" flag
-E77E CD87EA             CALL    LET             ; Set up initial index
+<span id="E779">E779</span> 3E64       <span id="FOR"><a href="#FOR">FOR</a></span>:    LD      A,64H           ; Flag "<a href="../../../25/33/text/#FOR">FOR</a>" assignment
+E77B 32CB10             LD      (<a href="../../../24/24/text/#FORFLG">FORFLG</a>),A      ; Save "<a href="../../../25/33/text/#FOR">FOR</a>" flag
+E77E CD87EA             CALL    <a href="../../../25/38/text/#LET">LET</a>             ; Set up initial index
 E781 C1                 POP     BC              ; Drop RETurn address
 E782 E5                 PUSH    HL              ; Save code string address
-E783 CD70EA             CALL    DATA            ; Get next statement address
-E786 22C710             LD      (LOOPST),HL     ; Save it for start of lo6p
-E789 210200             LD      HL,2            ; Offset for "FOR" block
+E783 CD70EA             CALL    <a href="../../../25/38/text/#DATA">DATA</a>            ; Get next statement address
+E786 22C710             LD      (<a href="../../../24/24/text/#LOOPST">LOOPST</a>),HL     ; Save it for start of lo6p
+E789 210200             LD      HL,2            ; Offset for "<a href="../../../25/33/text/#FOR">FOR</a>" block
 E78C 39                 ADD     HL,SP           ; Point to it
-E78D CD5AE3     FORSLP: CALL    LOKFOR          ; Look for existing "FOR" block
+<span id="E78D">E78D</span> CD5AE3     <span id="FORSLP"><a href="#FORSLP">FORSLP</a></span>: CALL    <a href="../../../24/29/text/#LOKFOR">LOKFOR</a>          ; Look for existing "<a href="../../../25/33/text/#FOR">FOR</a>" block
 E790 D1                 POP     DE              ; Get code string address
-E791 C2A9E7             JP      NZ,FORFND       ; No nesting found
-E794 09                 ADD     HL,BC           ; Move into "FOR" block
+E791 C2A9E7             JP      NZ,<a href="../../../25/34/text/#FORFND">FORFND</a>       ; No nesting found
+E794 09                 ADD     HL,BC           ; Move into "<a href="../../../25/33/text/#FOR">FOR</a>" block
 E795 D5                 PUSH    DE              ; Save code string address
 E796 2B                 DEC     HL
 E797 56                 LD      D,(HL)          ; Get MSB of loop statement
@@ -200,10 +200,10 @@ E799 5E                 LD      E,(HL)          ; Get LSB of loop statement
 E79A 23                 INC     HL
 E79B 23                 INC     HL
 E79C E5                 PUSH    HL              ; Save block address
-E79D 2AC710             LD      HL,(LOOPST)     ; Get address of loop statement
-E7A0 CD8AE6             CALL    CPDEHL          ; Compare the FOR loops
+E79D 2AC710             LD      HL,(<a href="../../../24/24/text/#LOOPST">LOOPST</a>)     ; Get address of loop statement
+E7A0 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Compare the <a href="../../../25/33/text/#FOR">FOR</a> loops
 E7A3 E1                 POP     HL              ; Restore block address
-E7A4 C28DE7             JP      NZ,FORSLP       ; Different FORs - Find another
+E7A4 C28DE7             JP      NZ,<a href="../../../25/33/text/#FORSLP">FORSLP</a>       ; Different FORs - Find another
 E7A7 D1                 POP     DE              ; Restore code string address
 E7A8 F9                 LD      SP,HL           ; Remove all nested loops
 </pre>

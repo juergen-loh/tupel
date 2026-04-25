@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,100 +138,100 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    35</span>
 
-<span id="E9CA">E9CA CAC9E4     CLEAR:  JP      Z,INTVAR        ; Just "CLEAR" Keep parameters</span>
-E9CD CD82E9             CALL    POSINT          ; Get integer 0 to 32767 to DE
+<span id="E9CA">E9CA</span> CAC9E4     <span id="CLEAR"><a href="#CLEAR">CLEAR</a></span>:  JP      Z,<a href="../../../24/32/text/#INTVAR">INTVAR</a>        ; Just "CLEAR" Keep parameters
+E9CD CD82E9             CALL    <a href="../../../25/36/text/#POSINT">POSINT</a>          ; Get integer 0 to 32767 to DE
 E9D0 2B                 DEC     HL              ; Cancel increment
-E9D1 CD36E8             CALL    GETCHR          ; Get next character
+E9D1 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
 E9D4 E5                 PUSH    HL              ; Save code string address
-E9D5 2AAF10             LD      HL,(LSTRAM)     ; Get end of RAM
-E9D8 CAEDE9             JP      Z,STORED        ; No value given - Use stored
+E9D5 2AAF10             LD      HL,(<a href="../../../24/24/text/#LSTRAM">LSTRAM</a>)     ; Get end of RAM
+E9D8 CAEDE9             JP      Z,<a href="../../../25/37/text/#STORED">STORED</a>        ; No value given - Use stored
 E9DB E1                 POP     HL              ; Restore code string address
-E9DC CD90E6             CALL    CHKSYN          ; Check for comma
+E9DC CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Check for comma
 E9DF 2C                 DEFB    ","
 E9E0 D5                 PUSH    DE              ; Save number
-E9E1 CD82E9             CALL    POSINT          ; Get integer 0 to 32767
+E9E1 CD82E9             CALL    <a href="../../../25/36/text/#POSINT">POSINT</a>          ; Get integer 0 to 32767
 E9E4 2B                 DEC     HL              ; Cancel increment
-E9E5 CD36E8             CALL    GETCHR          ; Get next character
-E9E8 C2ADE3             JP      NZ,SNERR        ; ?SN Error if more on line
+E9E5 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+E9E8 C2ADE3             JP      NZ,<a href="../../../24/30/text/#SNERR">SNERR</a>        ; ?<a href="../../../24/24/text/#SN">SN</a> Error if more on line
 E9EB E3                 EX      (SP),HL         ; Save code string address
 E9EC EB                 EX      DE,HL           ; Number to DE
-E9ED 7D         STORED: LD      A,L             ; Get LSB of new RAM top
+<span id="E9ED">E9ED</span> 7D         <span id="STORED"><a href="#STORED">STORED</a></span>: LD      A,L             ; Get LSB of new RAM top
 E9EE 93                 SUB     E               ; Subtract LSB of string space
 E9EF 5F                 LD      E,A             ; Save LSB
 E9F0 7C                 LD      A,H             ; Get MSB of new RAM top
 E9F1 9A                 SBC     A,D             ; Subtract MSB of string space
 E9F2 57                 LD      D,A             ; Save MSB
-E9F3 DAA2E3             JP      C,OMERR         ; ?OM Error if not enough mem
+E9F3 DAA2E3             JP      C,<a href="../../../24/30/text/#OMERR">OMERR</a>         ; ?<a href="../../../24/24/text/#OM">OM</a> Error if not enough mem
 E9F6 E5                 PUSH    HL              ; Save RAM top
-E9F7 2AD610             LD      HL,(PROGND)     ; Get program end
+E9F7 2AD610             LD      HL,(<a href="../../../24/24/text/#PROGND">PROGND</a>)     ; Get program end
 E9FA 012800             LD      BC,40           ; 40 Bytes minimum working RAM
 E9FD 09                 ADD     HL,BC           ; Get lowest address
-E9FE CD8AE6             CALL    CPDEHL          ; Enough memory?
-EA01 D2A2E3             JP      NC,OMERR        ; No - ?OM Error
+E9FE CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Enough memory?
+EA01 D2A2E3             JP      NC,<a href="../../../24/30/text/#OMERR">OMERR</a>        ; No - ?<a href="../../../24/24/text/#OM">OM</a> Error
 EA04 EB                 EX      DE,HL           ; RAM top to HL
-EA05 225A10             LD      (STRSPC),HL     ; Set new string space
+EA05 225A10             LD      (<a href="../../../24/24/text/#STRSPC">STRSPC</a>),HL     ; Set new string space
 EA08 E1                 POP     HL              ; End of memory to use
-EA09 22AF10             LD      (LSTRAM),HL     ; Set new top of RAM
+EA09 22AF10             LD      (<a href="../../../24/24/text/#LSTRAM">LSTRAM</a>),HL     ; Set new top of RAM
 EA0C E1                 POP     HL              ; Restore code string address
-EA0D C3C9E4             JP      INTVAR          ; Initialise variables
+EA0D C3C9E4             JP      <a href="../../../24/32/text/#INTVAR">INTVAR</a>          ; Initialise variables
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    36</span>
 
-<span id="EA10">EA10 CAC5E4     RUN:    JP      Z,RUNFST        ; RUN from start if just RUN</span>
-EA13 CDC9E4             CALL    INTVAR          ; Initialise variables
-EA16 01F2E7             LD      BC,RUNCNT       ; Execution driver loop
-EA19 C32CEA             JP      RUNLIN          ; RUN from line number
+<span id="EA10">EA10</span> CAC5E4     <span id="RUN"><a href="#RUN">RUN</a></span>:    JP      Z,<a href="../../../24/32/text/#RUNFST">RUNFST</a>        ; <a href="../../../25/37/text/#RUN">RUN</a> from start if just <a href="../../../25/37/text/#RUN">RUN</a>
+EA13 CDC9E4             CALL    <a href="../../../24/32/text/#INTVAR">INTVAR</a>          ; Initialise variables
+EA16 01F2E7             LD      BC,<a href="../../../25/34/text/#RUNCNT">RUNCNT</a>       ; Execution driver loop
+EA19 C32CEA             JP      <a href="../../../25/37/text/#RUNLIN">RUNLIN</a>          ; <a href="../../../25/37/text/#RUN">RUN</a> from line number
 
-<span id="EA1C">EA1C 0E03       GOSUB:  LD      C,3             ; 3 Levels of stack needed</span>
-EA1E CD8AE3             CALL    CHKSTK          ; Check for 3 levels of stack
+<span id="EA1C">EA1C</span> 0E03       <span id="GOSUB"><a href="#GOSUB">GOSUB</a></span>:  LD      C,3             ; 3 Levels of stack needed
+EA1E CD8AE3             CALL    <a href="../../../24/30/text/#CHKSTK">CHKSTK</a>          ; Check for 3 levels of stack
 EA21 C1                 POP     BC              ; Get return address
-EA22 E5                 PUSH    HL              ; Save code string for RETURN
-EA23 E5                 PUSH    HL              ; And for GOSUB routine
-EA24 2A5C10             LD      HL,(LINEAT)     ; Get current line
+EA22 E5                 PUSH    HL              ; Save code string for <a href="../../../25/37/text/#RETURN">RETURN</a>
+EA23 E5                 PUSH    HL              ; And for <a href="../../../25/37/text/#GOSUB">GOSUB</a> routine
+EA24 2A5C10             LD      HL,(<a href="../../../24/24/text/#LINEAT">LINEAT</a>)     ; Get current line
 EA27 E3                 EX      (SP),HL         ; Into stack - Code string out
-EA28 3E8C               LD      A,ZGOSUB        ; "GOSUB" token
+EA28 3E8C               LD      A,<a href="../../../24/28/text/#ZGOSUB">ZGOSUB</a>        ; "<a href="../../../25/37/text/#GOSUB">GOSUB</a>" token
 EA2A F5                 PUSH    AF              ; Save token
 EA2B 33                 INC     SP              ; Don't save flags
 
-EA2C C5         RUNLIN: PUSH    BC              ; Save return address
-<span id="EA2D">EA2D CDA5E9     GOTO:   CALL    ATOH            ; ASCII number to DE binary</span>
-EA30 CD72EA             CALL    REM             ; Get end of line
+<span id="EA2C">EA2C</span> C5         <span id="RUNLIN"><a href="#RUNLIN">RUNLIN</a></span>: PUSH    BC              ; Save return address
+<span id="EA2D">EA2D</span> CDA5E9     <span id="GOTO"><a href="#GOTO">GOTO</a></span>:   CALL    <a href="../../../25/36/text/#ATOH">ATOH</a>            ; ASCII number to DE binary
+EA30 CD72EA             CALL    <a href="../../../25/38/text/#REM">REM</a>             ; Get end of line
 EA33 E5                 PUSH    HL              ; Save end of line
-EA34 2A5C10             LD      HL,(LINEAT)     ; Get current line
-EA37 CD8AE6             CALL    CPDEHL          ; Line after current?
+EA34 2A5C10             LD      HL,(<a href="../../../24/24/text/#LINEAT">LINEAT</a>)     ; Get current line
+EA37 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Line after current?
 EA3A E1                 POP     HL              ; Restore end of line
 EA3B 23                 INC     HL              ; Start of next line
-EA3C DC9CE4             CALL    C,SRCHLP        ; Line is after current line
-EA3F D499E4             CALL    NC,SRCHLN       ; Line is before current line
+EA3C DC9CE4             CALL    C,<a href="../../../24/32/text/#SRCHLP">SRCHLP</a>        ; Line is after current line
+EA3F D499E4             CALL    NC,<a href="../../../24/32/text/#SRCHLN">SRCHLN</a>       ; Line is before current line
 EA42 60                 LD      H,B             ; Set up code string address
 EA43 69                 LD      L,C
 EA44 2B                 DEC     HL              ; Incremented after
 EA45 D8                 RET     C               ; Line found
-EA46 1E0E       ULERR:  LD      E,UL            ; ?UL Error
-EA48 C3C1E3             JP      ERROR           ; Output error message
+<span id="EA46">EA46</span> 1E0E       <span id="ULERR"><a href="#ULERR">ULERR</a></span>:  LD      E,<a href="../../../24/24/text/#UL">UL</a>            ; ?<a href="../../../24/24/text/#UL">UL</a> Error
+EA48 C3C1E3             JP      <a href="../../../24/30/text/#ERROR">ERROR</a>           ; Output error message
 
-<span id="EA4B">EA4B C0         RETURN: RET     NZ              ; Return if not just RETURN</span>
-EA4C 16FF               LD      D,-1            ; Flag "GOSUB" search
-EA4E CD56E3             CALL    BAKSTK          ; Look "GOSUB" block
+<span id="EA4B">EA4B</span> C0         <span id="RETURN"><a href="#RETURN">RETURN</a></span>: RET     NZ              ; Return if not just <a href="../../../25/37/text/#RETURN">RETURN</a>
+EA4C 16FF               LD      D,-1            ; Flag "<a href="../../../25/37/text/#GOSUB">GOSUB</a>" search
+EA4E CD56E3             CALL    <a href="../../../24/29/text/#BAKSTK">BAKSTK</a>          ; Look "<a href="../../../25/37/text/#GOSUB">GOSUB</a>" block
 EA51 F9                 LD      SP,HL           ; Kill all FORs in subroutine
-EA52 FE8C               CP      ZGOSUB          ; Test for "GOSUB" token
-EA54 1E04               LD      E,RG            ; ?RG Error
-EA56 C2C1E3             JP      NZ,ERROR        ; Error if no "GOSUB" found
-EA59 E1                 POP     HL              ; Get RETURN line number
-EA5A 225C10             LD      (LINEAT),HL     ; Save as current
+EA52 FE8C               CP      <a href="../../../24/28/text/#ZGOSUB">ZGOSUB</a>          ; Test for "<a href="../../../25/37/text/#GOSUB">GOSUB</a>" token
+EA54 1E04               LD      E,<a href="../../../24/24/text/#RG">RG</a>            ; ?<a href="../../../24/24/text/#RG">RG</a> Error
+EA56 C2C1E3             JP      NZ,<a href="../../../24/30/text/#ERROR">ERROR</a>        ; Error if no "<a href="../../../25/37/text/#GOSUB">GOSUB</a>" found
+EA59 E1                 POP     HL              ; Get <a href="../../../25/37/text/#RETURN">RETURN</a> line number
+EA5A 225C10             LD      (<a href="../../../24/24/text/#LINEAT">LINEAT</a>),HL     ; Save as current
 EA5D 23                 INC     HL              ; Was it from direct statement?
 EA5E 7C                 LD      A,H
 EA5F B5                 OR      L               ; Return to line
-EA60 C26AEA             JP      NZ,RETLIN       ; No - Return to line
-EA63 3ACC10             LD      A,(LSTBIN)      ; Any INPUT in subroutine?
+EA60 C26AEA             JP      NZ,<a href="../../../25/37/text/#RETLIN">RETLIN</a>       ; No - Return to line
+EA63 3ACC10             LD      A,(<a href="../../../24/24/text/#LSTBIN">LSTBIN</a>)      ; Any <a href="../../../26/32/text/#INPUT">INPUT</a> in subroutine?
 EA66 B7                 OR      A               ; If so buffer is corrupted
-EA67 C2F7E3             JP      NZ,POPNOK       ; Yes - Go to command mode
-EA6A 21F2E7     RETLIN: LD      HL,RUNCNT       ; Execution driver loop
+EA67 C2F7E3             JP      NZ,<a href="../../../24/30/text/#POPNOK">POPNOK</a>       ; Yes - Go to command mode
+<span id="EA6A">EA6A</span> 21F2E7     <span id="RETLIN"><a href="#RETLIN">RETLIN</a></span>: LD      HL,<a href="../../../25/34/text/#RUNCNT">RUNCNT</a>       ; Execution driver loop
 EA6D E3                 EX      (SP),HL         ; Into stack - Code string out
 EA6E 3E                 DEFB    (LD A,n)        ; Skip "POP HL"
-EA6F E1         NXTDTA: POP     HL              ; Restore code string address
+<span id="EA6F">EA6F</span> E1         <span id="NXTDTA"><a href="#NXTDTA">NXTDTA</a></span>: POP     HL              ; Restore code string address
 </pre>
 <!-- 1 column: end --></div>
 </div>

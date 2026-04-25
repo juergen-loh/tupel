@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,70 +138,70 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    94</span>
 
-FCC8 CD39FE     CASFFW: CALL    FLPLED          ; Turn on cassette
+<span id="FCC8">FCC8</span> CD39FE     <span id="CASFFW"><a href="#CASFFW">CASFFW</a></span>: CALL    <a href="../../../33/26/text/#FLPLED">FLPLED</a>          ; Turn on cassette
 FCCB 0600               LD      B,0             ; Set 1 second delay
-FCCD CD9BFD     DELAYB: CALL    DELAY           ; Wait a bit
+<span id="FCCD">FCCD</span> CD9BFD     <span id="DELAYB"><a href="#DELAYB">DELAYB</a></span>: CALL    <a href="../../../33/26/text/#DELAY">DELAY</a>           ; Wait a bit
 FCD0 05                 DEC     B               ; Count
-FCD1 C2CDFC             JP      NZ,DELAYB       ; More delay needed
-FCD4 C9                 RET
+FCD1 C2CDFC             JP      NZ,<a href="../../../33/25/text/#DELAYB">DELAYB</a>       ; More delay needed
+<span id="FCD4">FCD4</span> C9                 RET
 
-FCD5 C339FE     CASFF:  JP      FLPLED          ; Flip tape LED
+<span id="FCD5">FCD5</span> C339FE     <span id="CASFF"><a href="#CASFF">CASFF</a></span>:  JP      <a href="../../../33/26/text/#FLPLED">FLPLED</a>          ; Flip tape LED
 
-FCD8 C9         ARET:   RET                     ; A RETurn instruction
+<span id="FCD8">FCD8</span> C9         <span id="ARET"><a href="#ARET">ARET</a></span>:   RET                     ; A RETurn instruction
 
-FCD9 E5         CONMON: PUSH    HL              ; Output character to screen
+<span id="FCD9">FCD9</span> E5         <span id="CONMON"><a href="#CONMON">CONMON</a></span>: PUSH    HL              ; Output character to screen
 FCDA C5                 PUSH    BC              ;
 FCDB D5                 PUSH    DE              ;
 FCDC F5                 PUSH    AF              ;
-FCDD CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FCE0 C2FBFC             JP      NZ,NASOUT       ; NAS-SYS - Output ASCII
+FCDD CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FCE0 C2FBFC             JP      NZ,<a href="../../../33/25/text/#NASOUT">NASOUT</a>       ; NAS-SYS - Output ASCII
 FCE3 F1                 POP     AF              ; Get character
 FCE4 F5                 PUSH    AF              ; And re-save
-FCE5 FE0A               CP      LF              ; ASCII Line feed?
-FCE7 CA00FD             JP      Z,IGCHR         ; Yes - Ignore it
-FCEA FE08               CP      BKSP            ; ASCII back space?
-FCEC C2F1FC             JP      NZ,CONOT1       ; No - Test for CR
-FCEF 3E1D               LD      A,TBS           ; <span class="uppercase">Nasbug</span> back space
-FCF1 FE0D       CONOT1: CP      CR              ; ASCII CR?
-FCF3 C2FDFC             JP      NZ,OUTCHR       ; No - Output character
-FCF6 3E1F               LD      A,TCR           ; <span class="uppercase">Nasbug</span> CR
-FCF8 C3FDFC             JP      OUTCHR          ; Output it
+FCE5 FE0A               CP      <a href="../../../24/23/text/#LF">LF</a>              ; ASCII Line feed?
+FCE7 CA00FD             JP      Z,<a href="../../../33/25/text/#IGCHR">IGCHR</a>         ; Yes - Ignore it
+FCEA FE08               CP      <a href="../../../24/23/text/#BKSP">BKSP</a>            ; ASCII back space?
+FCEC C2F1FC             JP      NZ,<a href="../../../33/25/text/#CONOT1">CONOT1</a>       ; No - Test for CR
+FCEF 3E1D               LD      A,<a href="../../../24/23/text/#TBS">TBS</a>           ; <span class="uppercase">Nasbug</span> back space
+<span id="FCF1">FCF1</span> FE0D       <span id="CONOT1"><a href="#CONOT1">CONOT1</a></span>: CP      <a href="../../../24/23/text/#CR">CR</a>              ; ASCII CR?
+FCF3 C2FDFC             JP      NZ,<a href="../../../33/25/text/#OUTCHR">OUTCHR</a>       ; No - Output character
+FCF6 3E1F               LD      A,<a href="../../../24/23/text/#TCR">TCR</a>           ; <span class="uppercase">Nasbug</span> CR
+FCF8 C3FDFC             JP      <a href="../../../33/25/text/#OUTCHR">OUTCHR</a>          ; Output it
 
-FCFB F1         NASOUT: POP     AF              ; Get character
+<span id="FCFB">FCFB</span> F1         <span id="NASOUT"><a href="#NASOUT">NASOUT</a></span>: POP     AF              ; Get character
 FCFC F5                 PUSH    AF              ; And re-save
-FCFD CD45FE     OUTCHR: CALL    MONOUT          ; Output it
-FD00 F1         IGCHR:  POP     AF              ; Restore character
+<span id="FCFD">FCFD</span> CD45FE     <span id="OUTCHR"><a href="#OUTCHR">OUTCHR</a></span>: CALL    <a href="../../../33/27/text/#MONOUT">MONOUT</a>          ; Output it
+<span id="FD00">FD00</span> F1         <span id="IGCHR"><a href="#IGCHR">IGCHR</a></span>:  POP     AF              ; Restore character
 FD01 D1                 POP     DE              ;
 FD02 C1                 POP     BC              ;
 FD03 E1                 POP     HL              ;
 FD04 C9                 RET
 
-FD05 E5         GETINP: PUSH    HL              ; Get an input character
+<span id="FD05">FD05</span> E5         <span id="GETINP"><a href="#GETINP">GETINP</a></span>: PUSH    HL              ; Get an input character
 FD06 C5                 PUSH    BC              ;
 FD07 D5                 PUSH    DE              ;
-FD08 CD6DFE             CALL    MONTST          ; See if NAS-SYS
-FD0B CA13FD             JP      Z,GETTIN        ; "T" monitor - Get input
+FD08 CD6DFE             CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FD0B CA13FD             JP      Z,<a href="../../../33/25/text/#GETTIN">GETTIN</a>        ; "T" monitor - Get input
 FD0E DF0B               SCAL    BLINK
-FD10 C319FD             JP      CONVIN          ; Convert to ASCII
+FD10 C319FD             JP      <a href="../../../33/25/text/#CONVIN">CONVIN</a>          ; Convert to ASCII
 
-FD13 CD4D0C     GETTIN: CALL    TIN             ; "T" input a character
-FD16 D213FD             JP      NC,GETTIN       ; No input - wait
-FD19 FE1D       CONVIN: CP      TBS             ; <span class="uppercase">Nasbug</span> back space?
-FD1B C220FD             JP      NZ,CNVIN1       ; No - Test for break
-FD1E 3E08               LD      A,BKSP          ; ASCII back space
-FD20 FE1C       CNVIN1: CP      TBRK            ; <span class="uppercase">Nasbug</span> break?
-FD22 C227FD             JP      NZ,CNVIN2       ; No - Test for control Z
-FD25 3E03               LD      A,CTRLC         ; Control C
-FD27 FE1A       CNVIN2: CP      CTRLZ           ; ^Z?
-FD29 C22EFD             JP      NZ,CNVIN3       ; No - Test for escape
-FD2C 3E7F               LD      A,DEL           ; Delete
-FD2E FE1B       CNVIN3: CP      ESC             ; "ESC" ?
-FD30 C235FD             JP      NZ,CNVIN4       ; No - Test for CR
-FD33 3E03               LD      A,CTRLC         ; Control C
-FD35 FE1F       CNVIN4: CP      TCR             ; <span class="uppercase">Nasbug</span> CR?
-FD37 C23CFD             JP      NZ,CNVIN5       ; No - Return character
-FD3A 3E0D               LD      A,CR            ; ASCII CR
-FD3C D1         CNVIN5: POP     DE
+<span id="FD13">FD13</span> CD4D0C     <span id="GETTIN"><a href="#GETTIN">GETTIN</a></span>: CALL    <a href="../../../24/23/text/#TIN">TIN</a>             ; "T" input a character
+FD16 D213FD             JP      NC,<a href="../../../33/25/text/#GETTIN">GETTIN</a>       ; No input - wait
+<span id="FD19">FD19</span> FE1D       <span id="CONVIN"><a href="#CONVIN">CONVIN</a></span>: CP      <a href="../../../24/23/text/#TBS">TBS</a>             ; <span class="uppercase">Nasbug</span> back space?
+FD1B C220FD             JP      NZ,<a href="../../../33/25/text/#CNVIN1">CNVIN1</a>       ; No - Test for break
+FD1E 3E08               LD      A,<a href="../../../24/23/text/#BKSP">BKSP</a>          ; ASCII back space
+<span id="FD20">FD20</span> FE1C       <span id="CNVIN1"><a href="#CNVIN1">CNVIN1</a></span>: CP      <a href="../../../24/23/text/#TBRK">TBRK</a>            ; <span class="uppercase">Nasbug</span> break?
+FD22 C227FD             JP      NZ,<a href="../../../33/25/text/#CNVIN2">CNVIN2</a>       ; No - Test for control Z
+FD25 3E03               LD      A,<a href="../../../24/23/text/#CTRLC">CTRLC</a>         ; Control C
+<span id="FD27">FD27</span> FE1A       <span id="CNVIN2"><a href="#CNVIN2">CNVIN2</a></span>: CP      <a href="../../../24/23/text/#CTRLZ">CTRLZ</a>           ; ^Z?
+FD29 C22EFD             JP      NZ,<a href="../../../33/25/text/#CNVIN3">CNVIN3</a>       ; No - Test for escape
+FD2C 3E7F               LD      A,<a href="../../../24/23/text/#DEL">DEL</a>           ; Delete
+<span id="FD2E">FD2E</span> FE1B       <span id="CNVIN3"><a href="#CNVIN3">CNVIN3</a></span>: CP      <a href="../../../24/23/text/#ESC">ESC</a>             ; "ESC" ?
+FD30 C235FD             JP      NZ,<a href="../../../33/25/text/#CNVIN4">CNVIN4</a>       ; No - Test for CR
+FD33 3E03               LD      A,<a href="../../../24/23/text/#CTRLC">CTRLC</a>         ; Control C
+<span id="FD35">FD35</span> FE1F       <span id="CNVIN4"><a href="#CNVIN4">CNVIN4</a></span>: CP      <a href="../../../24/23/text/#TCR">TCR</a>             ; <span class="uppercase">Nasbug</span> CR?
+FD37 C23CFD             JP      NZ,<a href="../../../33/25/text/#CNVIN5">CNVIN5</a>       ; No - Return character
+FD3A 3E0D               LD      A,<a href="../../../24/23/text/#CR">CR</a>            ; ASCII CR
+<span id="FD3C">FD3C</span> D1         <span id="CNVIN5"><a href="#CNVIN5">CNVIN5</a></span>: POP     DE
 FD3D C1                 POP     BC
 FD3E E1                 POP     HL
 FD3F C9                 RET
@@ -210,42 +210,42 @@ FD3F C9                 RET
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    95</span>
 
-FD40 AF         CHKBRK: XOR     A               ; Check for break
-FD41 CD70FD             CALL    SFTENT          ; Test for shift/enter
-FD44 CA50FD             JP      Z,TBRK2         ; Yes - Test for second break
-FD47 3A4D10             LD      A,(BRKFLG)      ; Get break flag
+<span id="FD40">FD40</span> AF         <span id="CHKBRK"><a href="#CHKBRK">CHKBRK</a></span>: XOR     A               ; Check for break
+FD41 CD70FD             CALL    <a href="../../../33/25/text/#SFTENT">SFTENT</a>          ; Test for shift/enter
+FD44 CA50FD             JP      Z,<a href="../../../33/25/text/#TBRK2">TBRK2</a>         ; Yes - Test for second break
+FD47 3A4D10             LD      A,(<a href="../../../24/24/text/#BRKFLG">BRKFLG</a>)      ; Get break flag
 FD4A B7                 OR      A               ; Break flag set?
-FD4B C250FD             JP      NZ,TBRK2        ; Yes - Test for second break
+FD4B C250FD             JP      NZ,<a href="../../../33/25/text/#TBRK2">TBRK2</a>        ; Yes - Test for second break
 FD4E AF                 XOR     A               ; Flag no break
 FD4F C9                 RET
 
-FD50 CD53FE     TBRK2:  CALL    BREAK2          ; Second break?
+<span id="FD50">FD50</span> CD53FE     <span id="TBRK2"><a href="#TBRK2">TBRK2</a></span>:  CALL    <a href="../../../33/27/text/#BREAK2">BREAK2</a>          ; Second break?
 FD53 3EFF               LD      A,-1            ; Flag break
 FD55 C9                 RET
 
-FD56 DB02       GUART:  IN      A,(UARTS)       ; Get UART status
+<span id="FD56">FD56</span> DB02       <span id="GUART"><a href="#GUART">GUART</a></span>:  IN      A,(<a href="../../../24/23/text/#UARTS">UARTS</a>)       ; Get UART status
 FD58 17                 RLA                     ; Any data ready?
-FD59 D256FD             JP      NC,GUART        ; No - wait until there is
-FD5C DB01               IN      A,(UARTD)       ; Get data from UART
+FD59 D256FD             JP      NC,<a href="../../../33/25/text/#GUART">GUART</a>        ; No - wait until there is
+FD5C DB01               IN      A,(<a href="../../../24/23/text/#UARTD">UARTD</a>)       ; Get data from UART
 FD5E C9                 RET
 
-FD5F D301       UARTOT: OUT     (UARTD),A       ; Send data to UART
-FD61 DB02       URTOLP: IN      A,(UARTS)       ; Get status
+<span id="FD5F">FD5F</span> D301       <span id="UARTOT"><a href="#UARTOT">UARTOT</a></span>: OUT     (<a href="../../../24/23/text/#UARTD">UARTD</a>),A       ; Send data to UART
+<span id="FD61">FD61</span> DB02       <span id="URTOLP"><a href="#URTOLP">URTOLP</a></span>: IN      A,(<a href="../../../24/23/text/#UARTS">UARTS</a>)       ; Get status
 FD63 87                 ADD     A,A             ; Byte sent?
 FD64 F8                 RET     M               ; Yes - Return
-FD65 C361FD             JP      URTOLP          ; Keep waiting
+FD65 C361FD             JP      <a href="../../../33/25/text/#URTOLP">URTOLP</a>          ; Keep waiting
 
-FD68 F5         SUART:  PUSH    AF              ; Save A
-FD69 CD5FFD             CALL    UARTOT          ; Send it to UART
+<span id="FD68">FD68</span> F5         <span id="SUART"><a href="#SUART">SUART</a></span>:  PUSH    AF              ; Save A
+FD69 CD5FFD             CALL    <a href="../../../33/25/text/#UARTOT">UARTOT</a>          ; Send it to UART
 FD6C F1                 POP     AF              ; Restore A
 FD6D C9                 RET
 
 FD6E 00                 NOP
 FD6F 00                 NOP
 
-FD70 E5         SFTENT: PUSH    HL              ; Test for Shift Enter from KBD
+<span id="FD70">FD70</span> E5         <span id="SFTENT"><a href="#SFTENT">SFTENT</a></span>: PUSH    HL              ; Test for Shift Enter from KBD
 FD71 3E02               LD      A,00000010B     ; Reset KBD counter mask
-FD73 21000C             LD      HL,PORT0        ; Get old contents
+FD73 21000C             LD      HL,<a href="../../../24/23/text/#PORT0">PORT0</a>        ; Get old contents
 FD76 AE                 XOR     (HL)            ; Toggle bit
 FD77 D300               OUT     (0),A           ; Reset KBD counter
 FD79 EE01               XOR     00000001B       ; Toggle bit
@@ -254,19 +254,19 @@ FD7D EE02               XOR     00000010B
 FD7F D300               OUT     (0),A           ; Clear "clear" strobe
 FD81 7E                 LD      A,(HL)          ; Get old value
 FD82 D300               OUT     (0),A           ; Original contents
-FD84 19                 ADD     HL,DE           ; ?? WHAT&nbsp;??
+FD84 19                 ADD     HL,DE           ; ?? WHAT ??
 FD85 E1                 POP     HL              ; Restore HL
 FD86 DB00               IN      A,(0)           ; Read in row
 FD88 E612               AND     00010010B       ; Mask SHIFT and ENTER
 FD8A C9                 RET
 
-<span id ="FD8B">FD8B CD6DFE     CLS:    CALL    MONTST          ; See if NAS-SYS</span>
-FD8E CA96FD             JP      Z,TCLS          ; "T" CLS
-FD91 3E0C               LD      A,CS            ; ASCII Clear screen
-FD93 C3D9FC             JP      CONMON          ; Output character
+<span id="FD8B">FD8B</span> CD6DFE     <span id="CLS"><a href="#CLS">CLS</a></span>:    CALL    <a href="../../../33/27/text/#MONTST">MONTST</a>          ; See if NAS-SYS
+FD8E CA96FD             JP      Z,<a href="../../../33/25/text/#TCLS">TCLS</a>          ; "T" <a href="../../../33/25/text/#CLS">CLS</a>
+FD91 3E0C               LD      A,<a href="../../../24/23/text/#CS">CS</a>            ; ASCII Clear screen
+FD93 C3D9FC             JP      <a href="../../../33/25/text/#CONMON">CONMON</a>          ; Output character
 
-FD96 3E1E       TCLS:   LD      A,TCS           ; <span class="uppercase">Nasbug</span> Clear screen
-FD98 C3D9FC             JP      CONMON          ; Output character
+<span id="FD96">FD96</span> 3E1E       <span id="TCLS"><a href="#TCLS">TCLS</a></span>:   LD      A,<a href="../../../24/23/text/#TCS">TCS</a>           ; <span class="uppercase">Nasbug</span> Clear screen
+FD98 C3D9FC             JP      <a href="../../../33/25/text/#CONMON">CONMON</a>          ; Output character
 </pre>
 <!-- 1 column: end --></div>
 </div>

@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sun, 12 Apr 2026 07:34:56 GMT -->
+	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-12 09:34:56 +0200 (So, 12. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,20 +138,20 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    65</span>
 
-<span id="F382">F382 0101F1     LEN:    LD      BC,PASSA        ; To return integer A</span>
+<span id="F382">F382</span> 0101F1     <span id="LEN"><a href="#LEN">LEN</a></span>:    LD      BC,<a href="../../../31/25/text/#PASSA">PASSA</a>        ; To return integer A
 F385 C5                 PUSH    BC              ; Save address
-F386 CD50F3     GETLEN: CALL    GETSTR          ; Get string and its length
+<span id="F386">F386</span> CD50F3     <span id="GETLEN"><a href="#GETLEN">GETLEN</a></span>: CALL    <a href="../../../31/28/text/#GETSTR">GETSTR</a>          ; Get string and its length
 F389 AF                 XOR     A
 F38A 57                 LD      D,A             ; Clear D
-F38B 32AD10             LD      (TYPE),A        ; Set type to numeric
+F38B 32AD10             LD      (<a href="../../../24/24/text/#TYPE">TYPE</a>),A        ; Set type to numeric
 F38E 7E                 LD      A,(HL)          ; Get length of string
 F38F B7                 OR      A               ; Set status flags
 F390 C9                 RET
 
-<span id="F391">F391 0101F1     ASC:    LD      BC,PASSA        ; To return integer A</span>
+<span id="F391">F391</span> 0101F1     <span id="ASC"><a href="#ASC">ASC</a></span>:    LD      BC,<a href="../../../31/25/text/#PASSA">PASSA</a>        ; To return integer A
 F394 C5                 PUSH    BC              ; Save address
-F395 CD86F3     GTFLNM: CALL    GETLEN          ; Get length of string
-F398 CAA0E9             JP      Z,FCERR         ; Null string - Error
+<span id="F395">F395</span> CD86F3     <span id="GTFLNM"><a href="#GTFLNM">GTFLNM</a></span>: CALL    <a href="../../../31/29/text/#GETLEN">GETLEN</a>          ; Get length of string
+F398 CAA0E9             JP      Z,<a href="../../../25/36/text/#FCERR">FCERR</a>         ; Null string - Error
 F39B 23                 INC     HL
 F39C 23                 INC     HL
 F39D 5E                 LD      E,(HL)          ; Get LSB of address
@@ -160,31 +160,31 @@ F39F 56                 LD      D,(HL)          ; Get MSB of address
 F3A0 1A                 LD      A,(DE)          ; Get first byte of string
 F3A1 C9                 RET
 
-<span id="F3A2">F3A2 3E01       CHR:    LD      A,1             ; One character string</span>
-F3A4 CDBFF1             CALL    MKTMST          ; Make a temporary string
-F3A7 CD87F4             CALL    MAKINT          ; Make it integer A
-F3AA 2AC110             LD      HL,(TMPSTR+2)   ; Get address of string
+<span id="F3A2">F3A2</span> 3E01       <span id="CHR"><a href="#CHR">CHR</a></span>:    LD      A,1             ; One character string
+F3A4 CDBFF1             CALL    <a href="../../../31/26/text/#MKTMST">MKTMST</a>          ; Make a temporary string
+F3A7 CD87F4             CALL    <a href="../../../31/30/text/#MAKINT">MAKINT</a>          ; Make it integer A
+F3AA 2AC110             LD      HL,(<a href="../../../24/24/text/#TMPSTR">TMPSTR</a>+2)   ; Get address of string
 F3AD 73                 LD      (HL),E          ; Save character
-F3AE C1         TOPOOL: POP     BC              ; Clean up stack
-F3AF C3F0F1             JP      TSTOPL          ; Temporary string to pool
+<span id="F3AE">F3AE</span> C1         <span id="TOPOOL"><a href="#TOPOOL">TOPOOL</a></span>: POP     BC              ; Clean up stack
+F3AF C3F0F1             JP      <a href="../../../31/26/text/#TSTOPL">TSTOPL</a>          ; Temporary string to pool
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    66</span>
 
-<span id="F3B2">F3B2 CD37F4     LEFT:   CALL    LFRGNM          ; Get number and ending ")"</span>
+<span id="F3B2">F3B2</span> CD37F4     <span id="LEFT"><a href="#LEFT">LEFT</a></span>:   CALL    <a href="../../../31/30/text/#LFRGNM">LFRGNM</a>          ; Get number and ending ")"
 F3B5 AF                 XOR     A               ; Start at first byte in string
-F3B6 E3         RIGHT1: EX      (SP),HL         ; Save code string,Get string
+<span id="F3B6">F3B6</span> E3         <span id="RIGHT1"><a href="#RIGHT1">RIGHT1</a></span>: EX      (SP),HL         ; Save code string,Get string
 F3B7 4F                 LD      C,A             ; Starting position in string
-F3B8 E5         MID1:   PUSH    HL              ; Save string block address
+<span id="F3B8">F3B8</span> E5         <span id="MID1"><a href="#MID1">MID1</a></span>:   PUSH    HL              ; Save string block address
 F3B9 7E                 LD      A,(HL)          ; Get length of string
 F3BA B8                 CP      B               ; Compare with number given
-F3BB DAC0F3             JP      C,ALLFOL        ; All following bytes required
+F3BB DAC0F3             JP      C,<a href="../../../31/29/text/#ALLFOL">ALLFOL</a>        ; All following bytes required
 F3BE 78                 LD      A,B             ; Get new length
 F3BF 11                 DEFB    (LD DE,nn)      ; Skip "LD C,0"
-F3C0 0E00       ALLFOL: LD      C,0             ; First byte of string
+<span id="F3C0">F3C0</span> 0E00       <span id="ALLFOL"><a href="#ALLFOL">ALLFOL</a></span>: LD      C,0             ; First byte of string
 F3C2 C5                 PUSH    BC              ; Save position in string
-F3C3 CD29F2             CALL    TESTR           ; See if enough string space
+F3C3 CD29F2             CALL    <a href="../../../31/27/text/#TESTR">TESTR</a>           ; See if enough string space
 F3C6 C1                 POP     BC              ; Get position in string
 F3C7 E1                 POP     HL              ; Restore string block address
 F3C8 E5                 PUSH    HL              ; And re-save it
@@ -198,19 +198,19 @@ F3CF 0600               LD      B,0             ; BC = starting address
 F3D1 09                 ADD     HL,BC           ; Point to that byte
 F3D2 44                 LD      B,H             ; BC = source string
 F3D3 4D                 LD      C,L
-F3D4 CDC2F1             CALL    CRTMST          ; Create a string entry
+F3D4 CDC2F1             CALL    <a href="../../../31/26/text/#CRTMST">CRTMST</a>          ; Create a string entry
 F3D7 6F                 LD      L,A             ; Length of new string
-F3D8 CD46F3             CALL    TOSTRA          ; Move string to string area
+F3D8 CD46F3             CALL    <a href="../../../31/28/text/#TOSTRA">TOSTRA</a>          ; Move string to string area
 F3DB D1                 POP     DE              ; Clear stack
-F3DC CD57F3             CALL    GSTRDE          ; Move to string pool if needed
-F3DF C3F0F1             JP      TSTOPL          ; Temporary string to pool
+F3DC CD57F3             CALL    <a href="../../../31/28/text/#GSTRDE">GSTRDE</a>          ; Move to string pool if needed
+F3DF C3F0F1             JP      <a href="../../../31/26/text/#TSTOPL">TSTOPL</a>          ; Temporary string to pool
 
-<span id="F3E2">F3E2 CD37F4     RIGHT:  CALL    LFRGNM          ; Get number and ending ")"</span>
+<span id="F3E2">F3E2</span> CD37F4     <span id="RIGHT"><a href="#RIGHT">RIGHT</a></span>:  CALL    <a href="../../../31/30/text/#LFRGNM">LFRGNM</a>          ; Get number and ending ")"
 F3E5 D1                 POP     DE              ; Get string length
 F3E6 D5                 PUSH    DE              ; And re-save
 F3E7 1A                 LD      A,(DE)          ; Get length
 F3E8 90                 SUB     B               ; Move back N bytes
-F3E9 C3B6F3             JP      RIGHT1          ; Go and get sub-string
+F3E9 C3B6F3             JP      <a href="../../../31/29/text/#RIGHT1">RIGHT1</a>          ; Go and get sub-string
 </pre>
 <!-- 1 column: end --></div>
 </div>

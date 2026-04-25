@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,91 +138,91 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    61</span>
 
-<span id="F229">F229 B7         TESTR:  OR      A               ; Test if enough room</span>
+<span id="F229">F229</span> B7         <span id="TESTR"><a href="#TESTR">TESTR</a></span>:  OR      A               ; Test if enough room
 F22A 0E                 DEFB    (LD C,n)        ; No garbage collection done
-F22B F1         GRBDON: POP     AF              ; Garbage collection done
+<span id="F22B">F22B</span> F1         <span id="GRBDON"><a href="#GRBDON">GRBDON</a></span>: POP     AF              ; Garbage collection done
 F22C F5                 PUSH    AF              ; Save status
-F22D 2A5A10             LD      HL,(STRSPC)     ; Bottom of string space in use
+F22D 2A5A10             LD      HL,(<a href="../../../24/24/text/#STRSPC">STRSPC</a>)     ; Bottom of string space in use
 F230 EB                 EX      DE,HL           ; To DE
-F231 2AC310             LD      HL,(STRBOT)     ; Bottom of string area
+F231 2AC310             LD      HL,(<a href="../../../24/24/text/#STRBOT">STRBOT</a>)     ; Bottom of string area
 F234 2F                 CPL                     ; Negate length (Top down)
 F235 4F                 LD      C,A             ; -Length to BC
 F236 06FF               LD      B,-1            ; BC = -ve length of string
 F238 09                 ADD     HL,BC           ; Add to bottom of space in use
 F239 23                 INC     HL              ; Plus one for 2's complement
-F23A CD8AE6             CALL    CPDEHL          ; Below string RAM area?
-F23D DA47F2             JP      C,TESTOS        ; Tidy up if not done else err
-F240 22C310             LD      (STRBOT),HL     ; Save new bottom of area
+F23A CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Below string RAM area?
+F23D DA47F2             JP      C,<a href="../../../31/27/text/#TESTOS">TESTOS</a>        ; Tidy up if not done else err
+F240 22C310             LD      (<a href="../../../24/24/text/#STRBOT">STRBOT</a>),HL     ; Save new bottom of area
 F243 23                 INC     HL              ; Point to first byte of string
 F244 EB                 EX      DE,HL           ; Address to DE
-F245 F1         POPAF:  POP     AF              ; Throw away status push
+<span id="F245">F245</span> F1         <span id="POPAF"><a href="#POPAF">POPAF</a></span>:  POP     AF              ; Throw away status push
 F246 C9                 RET
 
-F247 F1         TESTOS: POP     AF              ; Garbage collect been done?
-F248 1E1A               LD      E,OS            ; ?OS Error
-F24A CAC1E3             JP      Z,ERROR         ; Yes - Not enough string apace
+<span id="F247">F247</span> F1         <span id="TESTOS"><a href="#TESTOS">TESTOS</a></span>: POP     AF              ; Garbage collect been done?
+F248 1E1A               LD      E,<a href="../../../24/24/text/#OS">OS</a>            ; ?<a href="../../../24/24/text/#OS">OS</a> Error
+F24A CAC1E3             JP      Z,<a href="../../../24/30/text/#ERROR">ERROR</a>         ; Yes - Not enough string apace
 F24D BF                 CP      A               ; Flag garbage collect done
 F24E F5                 PUSH    AF              ; Save status
-F24F 012BF2             LD      BC,GRBDON       ; Garbage collection done
+F24F 012BF2             LD      BC,<a href="../../../31/27/text/#GRBDON">GRBDON</a>       ; Garbage collection done
 F252 C5                 PUSH    BC              ; Save for RETurn
-<span id="F253">F253 2AAF10     GARBGE: LD      HL,(LSTRAM)     ; Get end of RAM pointer</span>
-F256 22C310     GARBLP: LD      (STRBOT),HL     ; Reset string pointer
+<span id="F253">F253</span> 2AAF10     <span id="GARBGE"><a href="#GARBGE">GARBGE</a></span>: LD      HL,(<a href="../../../24/24/text/#LSTRAM">LSTRAM</a>)     ; Get end of RAM pointer
+<span id="F256">F256</span> 22C310     <span id="GARBLP"><a href="#GARBLP">GARBLP</a></span>: LD      (<a href="../../../24/24/text/#STRBOT">STRBOT</a>),HL     ; Reset string pointer
 F259 210000             LD      HL,0
 F25C E5                 PUSH    HL              ; Flag no string found
-F25D 2A5A10             LD      HL,(STRSPC)     ; Get bottom of string space
+F25D 2A5A10             LD      HL,(<a href="../../../24/24/text/#STRSPC">STRSPC</a>)     ; Get bottom of string space
 F260 E5                 PUSH    HL              ; Save bottom of string space
-F261 21B310             LD      HL,TMSTPL       ; Temporary string pool
-F264 EB         GRBLP:  EX      DE,HL
-F265 2AB110             LD      HL,(TMSTPT)     ; Temporary string pool pointer
+F261 21B310             LD      HL,<a href="../../../24/24/text/#TMSTPL">TMSTPL</a>       ; Temporary string pool
+<span id="F264">F264</span> EB         <span id="GRBLP"><a href="#GRBLP">GRBLP</a></span>:  EX      DE,HL
+F265 2AB110             LD      HL,(<a href="../../../24/24/text/#TMSTPT">TMSTPT</a>)     ; Temporary string pool pointer
 F268 EB                 EX      DE,HL
-F269 CD8AE6             CALL    CPDEHL          ; Temporary string pool done?
-F26C 0164F2             LD      BC,GRBLP        ; Loop until string pool done
-F26F C2B8F2             JP      NZ,STPOOL       ; No - See if in string area
-F272 2AD610             LD      HL,(PROGND)     ; Start of simple variables
-F275 EB         SMPVAR: EX      DE,HL
-F276 2AD810             LD      HL,(VAREND)     ; End of simple variables
+F269 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Temporary string pool done?
+F26C 0164F2             LD      BC,<a href="../../../31/27/text/#GRBLP">GRBLP</a>        ; Loop until string pool done
+F26F C2B8F2             JP      NZ,<a href="../../../31/27/text/#STPOOL">STPOOL</a>       ; No - See if in string area
+F272 2AD610             LD      HL,(<a href="../../../24/24/text/#PROGND">PROGND</a>)     ; Start of simple variables
+<span id="F275">F275</span> EB         <span id="SMPVAR"><a href="#SMPVAR">SMPVAR</a></span>: EX      DE,HL
+F276 2AD810             LD      HL,(<a href="../../../24/24/text/#VAREND">VAREND</a>)     ; End of simple variables
 F279 EB                 EX      DE,HL
-F27A CD8AE6             CALL    CPDEHL          ; All simple strings done?
-F27D CA8BF2             JP      Z,ARRLP         ; Yes - Do string arrays
+F27A CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; All simple strings done?
+F27D CA8BF2             JP      Z,<a href="../../../31/27/text/#ARRLP">ARRLP</a>         ; Yes - Do string arrays
 F280 7E                 LD      A,(HL)          ; Get type of variable
 F281 23                 INC     HL
 F282 23                 INC     HL
 F283 B7                 OR      A               ; "S" flag set if string
-F284 CDBBF2             CALL    STRADD          ; See if string in string area
-F287 C375F2             JP      SMPVAR          ; Loop until simple ones done
+F284 CDBBF2             CALL    <a href="../../../31/27/text/#STRADD">STRADD</a>          ; See if string in string area
+F287 C375F2             JP      <a href="../../../31/27/text/#SMPVAR">SMPVAR</a>          ; Loop until simple ones done
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    62</span>
 
-F28A C1         GNXARY: POP     BC              ; Scrap address of this array
-F28B EB         ARRLP:  EX      DE,HL
-F28C 2ADA10             LD      HL,(ARREND)     ; End of string arrays
+<span id="F28A">F28A</span> C1         <span id="GNXARY"><a href="#GNXARY">GNXARY</a></span>: POP     BC              ; Scrap address of this array
+<span id="F28B">F28B</span> EB         <span id="ARRLP"><a href="#ARRLP">ARRLP</a></span>:  EX      DE,HL
+F28C 2ADA10             LD      HL,(<a href="../../../24/24/text/#ARREND">ARREND</a>)     ; End of string arrays
 F28F EB                 EX      DE,HL
-F290 CD8AE6             CALL    CPDEHL          ; All string arrays done?
-F293 CAE1F2             JP      Z,SCNEND        ; Yes - Move string if found
-F296 CD62F8             CALL    LOADFP          ; Get array name to BCDE
+F290 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; All string arrays done?
+F293 CAE1F2             JP      Z,<a href="../../../31/28/text/#SCNEND">SCNEND</a>        ; Yes - Move string if found
+F296 CD62F8             CALL    <a href="../../../32/25/text/#LOADFP">LOADFP</a>          ; Get array name to BCDE
 F299 7B                 LD      A,E             ; Get type of array
 F29A E5                 PUSH    HL              ; Save address of num of dim'ns
 F29B 09                 ADD     HL,BC           ; Start of next array
 F29C B7                 OR      A               ; Test type of array
-F29D F28AF2             JP      P,GNXARY        ; Numeric array - Ignore it
-F2A0 22C510             LD      (CUROPR),HL     ; Save address of next array
+F29D F28AF2             JP      P,<a href="../../../31/27/text/#GNXARY">GNXARY</a>        ; Numeric array - Ignore it
+F2A0 22C510             LD      (<a href="../../../24/24/text/#CUROPR">CUROPR</a>),HL     ; Save address of next array
 F2A3 E1                 POP     HL              ; Get address of num of dim'ns
 F2A4 4E                 LD      C,(HL)          ; BC = Number of dimensions
 F2A5 0600               LD      B,0
 F2A7 09                 ADD     HL,BC           ; Two bytes per dimension size
 F2A8 09                 ADD     HL,BC
 F2A9 23                 INC     HL              ; Plus one for number of dim'ns
-F2AA EB         GRBARY: EX      DE,HL
-F2AB 2AC510             LD      HL,(CUROPR)     ; Get address of next array
+<span id="F2AA">F2AA</span> EB         <span id="GRBARY"><a href="#GRBARY">GRBARY</a></span>: EX      DE,HL
+F2AB 2AC510             LD      HL,(<a href="../../../24/24/text/#CUROPR">CUROPR</a>)     ; Get address of next array
 F2AE EB                 EX      DE,HL
-F2AF CD8AE6             CALL    CPDEHL          ; Is this array finished?
-F2B2 CA8BF2             JP      Z,ARRLP         ; Yes - Get next one
-F2B5 01AAF2             LD      BC,GRBARY       ; Loop until array all done
-F2B8 C5         STPOOL: PUSH    BC              ; Save return address
+F2AF CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; Is this array finished?
+F2B2 CA8BF2             JP      Z,<a href="../../../31/27/text/#ARRLP">ARRLP</a>         ; Yes - Get next one
+F2B5 01AAF2             LD      BC,<a href="../../../31/27/text/#GRBARY">GRBARY</a>       ; Loop until array all done
+<span id="F2B8">F2B8</span> C5         <span id="STPOOL"><a href="#STPOOL">STPOOL</a></span>: PUSH    BC              ; Save return address
 F2B9 F680               OR      80H             ; Flag string type
-F2BB 7E         STRADD: LD      A,(HL)          ; Get string length
+<span id="F2BB">F2BB</span> 7E         <span id="STRADD"><a href="#STRADD">STRADD</a></span>: LD      A,(HL)          ; Get string length
 F2BC 23                 INC     HL
 F2BD 23                 INC     HL
 F2BE 5E                 LD      E,(HL)          ; Get LSB of string address
@@ -234,20 +234,20 @@ F2C3 B7                 OR      A               ; Set flags on string length
 F2C4 C8                 RET     Z               ; Null string - Return
 F2C5 44                 LD      B,H             ; Save variable pointer
 F2C6 4D                 LD      C,L
-F2C7 2AC310             LD      HL,(STRBOT)     ; Bottom of new area
-F2CA CD8AE6             CALL    CPDEHL          ; String been done?
+F2C7 2AC310             LD      HL,(<a href="../../../24/24/text/#STRBOT">STRBOT</a>)     ; Bottom of new area
+F2CA CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; String been done?
 F2CD 60                 LD      H,B             ; Restore variable pointer
 F2CE 69                 LD      L,C
 F2CF D8                 RET     C               ; String done - Ignore
 F2D0 E1                 POP     HL              ; Return address
 F2D1 E3                 EX      (SP),HL         ; Lowest available string area
-F2D2 CD8AE6             CALL    CPDEHL          ; String within string area?
+F2D2 CD8AE6             CALL    <a href="../../../25/31/text/#CPDEHL">CPDEHL</a>          ; String within string area?
 F2D5 E3                 EX      (SP),HL         ; Lowest available string area
 F2D6 E5                 PUSH    HL              ; Re-save return address
 F2D7 60                 LD      H,B             ; Restore variable pointer
 F2D8 69                 LD      L,C
 F2D9 D0                 RET     NC              ; Outside string area - Ignore
-F2DA C1                 POP     BC              ; Get return&nbsp;, Throw 2 away
+F2DA C1                 POP     BC              ; Get return , Throw 2 away
 F2DB F1                 POP     AF              ;
 F2DC F1                 POP     AF              ;
 F2DD E5                 PUSH    HL              ; Save variable pointer

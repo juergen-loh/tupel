@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
 
 	<title>80-Bus News - January&ndash;February 1984 - Volume 3 - Issue 1</title>
-	<!-- Sat, 18 Apr 2026 18:51:28 GMT -->
+	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-18 20:51:28 +0200 (Sa, 18. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,44 +138,44 @@
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    57</span>
 
-<span id="F0D0">F0D0 2ADA10     FRE:    LD      HL,(ARREND)     ; Start of free memory</span>
+<span id="F0D0">F0D0</span> 2ADA10     <span id="FRE"><a href="#FRE">FRE</a></span>:    LD      HL,(<a href="../../../24/24/text/#ARREND">ARREND</a>)     ; Start of free memory
 F0D3 EB                 EX      DE,HL           ; To DE
 F0D4 210000             LD      HL,0            ; End of free memory
 F0D7 39                 ADD     HL,SP           ; Current stack value
-F0D8 3AAD10             LD      A,(TYPE)        ; Dummy argument type
+F0D8 3AAD10             LD      A,(<a href="../../../24/24/text/#TYPE">TYPE</a>)        ; Dummy argument type
 F0DB B7                 OR      A
-F0DC CAECF0             JP      Z,FRENUM        ; Numeric - Free variable space
-F0DF CD53F3             CALL    GSTRCU          ; Current string to pool
-F0E2 CD53F2             CALL    GARBGE          ; Garbage collection
-F0E5 2A5A10             LD      HL,(STRSPC)     ; Bottom of string space in use
+F0DC CAECF0             JP      Z,<a href="../../../31/25/text/#FRENUM">FRENUM</a>        ; Numeric - Free variable space
+F0DF CD53F3             CALL    <a href="../../../31/28/text/#GSTRCU">GSTRCU</a>          ; Current string to pool
+F0E2 CD53F2             CALL    <a href="../../../31/27/text/#GARBGE">GARBGE</a>          ; Garbage collection
+F0E5 2A5A10             LD      HL,(<a href="../../../24/24/text/#STRSPC">STRSPC</a>)     ; Bottom of string space in use
 F0E8 EB                 EX      DE,HL           ; To DE
-F0E9 2AC310             LD      HL,(STRBOT)     ; Bottom of string space
-F0EC 7D         FRENUM: LD      A,L             ; Get LSB of end
+F0E9 2AC310             LD      HL,(<a href="../../../24/24/text/#STRBOT">STRBOT</a>)     ; Bottom of string space
+<span id="F0EC">F0EC</span> 7D         <span id="FRENUM"><a href="#FRENUM">FRENUM</a></span>: LD      A,L             ; Get LSB of end
 F0ED 93                 SUB     E               ; Subtract LSB of beginning
 F0EE 4F                 LD      C,A             ; Save difference if C
 F0EF 7C                 LD      A,H             ; Get MSB of end
 F0F0 9A                 SBC     A,D             ; Subtract MSB of beginning
-F0F1 41         ACPASS: LD      B,C             ; Return integer AC
-F0F2 50         ABPASS: LD      D,B             ; Return integer AB
+<span id="F0F1">F0F1</span> 41         <span id="ACPASS"><a href="#ACPASS">ACPASS</a></span>: LD      B,C             ; Return integer AC
+<span id="F0F2">F0F2</span> 50         <span id="ABPASS"><a href="#ABPASS">ABPASS</a></span>: LD      D,B             ; Return integer AB
 F0F3 1E00               LD      E,0
-F0F5 21AD10             LD      HL,TYPE         ; Point to type
+F0F5 21AD10             LD      HL,<a href="../../../24/24/text/#TYPE">TYPE</a>         ; Point to type
 F0F8 73                 LD      (HL),E          ; Set type to numeric
 F0F9 0690               LD      B,80H+16        ; 16 bit integer
-F0FB C32AF8             JP      RETINT          ; Return the integr
+F0FB C32AF8             JP      <a href="../../../32/24/text/#RETINT">RETINT</a>          ; Return the integr
 
-<span id="F0FE">F0FE 3AAB10     POS:    LD      A,(CURPOS)      ; Get cursor position</span>
-F101 47         PASSA:  LD      B,A             ; Put A into AB
+<span id="F0FE">F0FE</span> 3AAB10     <span id="POS"><a href="#POS">POS</a></span>:    LD      A,(<a href="../../../24/24/text/#CURPOS">CURPOS</a>)      ; Get cursor position
+<span id="F101">F101</span> 47         <span id="PASSA"><a href="#PASSA">PASSA</a></span>:  LD      B,A             ; Put A into AB
 F102 AF                 XOR     A               ; Zero A
-F103 C3F2F0             JP      ABPASS          ; Return integer AB
+F103 C3F2F0             JP      <a href="../../../31/25/text/#ABPASS">ABPASS</a>          ; Return integer AB
 
-<span id="F106">F106 CD89F1     DEF:    CALL    CHEKFN          ; Get "FN" and name</span>
-F109 CD7BF1             CALL    IDTEST          ; Test for illegal direct
-F10C 0170EA             LD      BC,DATA         ; To get next statement
+<span id="F106">F106</span> CD89F1     <span id="DEF"><a href="#DEF">DEF</a></span>:    CALL    <a href="../../../31/26/text/#CHEKFN">CHEKFN</a>          ; Get "FN" and name
+F109 CD7BF1             CALL    <a href="../../../31/25/text/#IDTEST">IDTEST</a>          ; Test for illegal direct
+F10C 0170EA             LD      BC,<a href="../../../25/38/text/#DATA">DATA</a>         ; To get next statement
 F10F C5                 PUSH    BC              ; Save address for RETurn
 F110 D5                 PUSH    DE              ; Save address of function ptr
-F111 CD90E6             CALL    CHKSYN          ; Make sure "(" follows
+F111 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "(" follows
 F114 28                 DEFB    "("
-F115 CD2DEF             CALL    GETVAR          ; Get argument variable name
+F115 CD2DEF             CALL    <a href="../../../26/37/text/#GETVAR">GETVAR</a>          ; Get argument variable name
 F118 E5                 PUSH    HL              ; Save code string address
 F119 EB                 EX      DE,HL           ; Argument address to HL
 F11A 2B                 DEC     HL
@@ -183,73 +183,73 @@ F11B 56                 LD      D,(HL)          ; Get first byte of arg name
 F11C 2B                 DEC     HL
 F11D 5E                 LD      E,(HL)          ; Get second byte of arg name
 F11E E1                 POP     HL              ; Restore code string address
-F11F CD44ED             CALL    TSTNUM          ; Make sure numeric argument
-F122 CD90E6             CALL    CHKSYN          ; Make sure ")" follows
+F11F CD44ED             CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure numeric argument
+F122 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure ")" follows
 F125 29                 DEFB    ")"
-F126 CD90E6             CALL    CHKSYN          ; Make sure "=" follows
-F129 B4                 DEFB    ZEQUAL          ; "=" token
+F126 CD90E6             CALL    <a href="../../../25/31/text/#CHKSYN">CHKSYN</a>          ; Make sure "=" follows
+F129 B4                 DEFB    <a href="../../../24/28/text/#ZEQUAL">ZEQUAL</a>          ; "=" token
 F12A 44                 LD      B,H             ; Code string address to BC
 F12B 4D                 LD      C,L
-F12C E3                 EX      (SP),HL         ; Save code str&nbsp;, Get FN ptr
+F12C E3                 EX      (SP),HL         ; Save code str , Get FN ptr
 F12D 71                 LD      (HL),C          ; Save LSB of FN code string
 F12E 23                 INC     HL
 F12F 70                 LD      (HL),B          ; Save MSB of FN code string
-F130 C3C8F1             JP      SVSTAD          ; Save address and do function
+F130 C3C8F1             JP      <a href="../../../31/26/text/#SVSTAD">SVSTAD</a>          ; Save address and do function
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    58</span>
 
-<span id="F133">F133 CD89F1     DOFN:   CALL    CHEKFN          ; Make sure FN follows</span>
+<span id="F133">F133</span> CD89F1     <span id="DOFN"><a href="#DOFN">DOFN</a></span>:   CALL    <a href="../../../31/26/text/#CHEKFN">CHEKFN</a>          ; Make sure FN follows
 F136 D5                 PUSH    DE              ; Save function pointer address
-F137 CD09EE             CALL    EVLPAR          ; Evaluate expression in "()"
-F13A CD44ED             CALL    TSTNUM          ; Make sure numeric result
-F13D E3                 EX      (SP),HL         ; Save code str&nbsp;, Get FN ptr
+F137 CD09EE             CALL    <a href="../../../26/35/text/#EVLPAR">EVLPAR</a>          ; Evaluate expression in "()"
+F13A CD44ED             CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure numeric result
+F13D E3                 EX      (SP),HL         ; Save code str , Get FN ptr
 F13E 5E                 LD      E,(HL)          ; Get LSB of FN code string
 F13F 23                 INC     HL
 F140 56                 LD      D,(HL)          ; Get MSB of FN code string
 F141 23                 INC     HL
 F142 7A                 LD      A,D             ; And function DEFined?
 F143 B3                 OR      E
-F144 CAB9E3             JP      Z,UFERR         ; No - ?UF Error
+F144 CAB9E3             JP      Z,<a href="../../../24/30/text/#UFERR">UFERR</a>         ; No - ?<a href="../../../24/24/text/#UF">UF</a> Error
 F147 7E                 LD      A,(HL)          ; Get LSB of argument address
 F148 23                 INC     HL
 F149 66                 LD      H,(HL)          ; Get MSB of argument address
 F14A 6F                 LD      L,A             ; HL = Arg variable address
 F14B E5                 PUSH    HL              ; Save it
-F14C 2ADE10             LD      HL,(FNRGNM)     ; Get old argument name
-F14F E3                 EX      (SP),HL         ; Save old&nbsp;, Get new
-F150 22DE10             LD      (FNRGNM),HL     ; Set new argument name
-F153 2AE210             LD      HL,(FNARG+2)    ; Get LSB,NLSB of old arg value
+F14C 2ADE10             LD      HL,(<a href="../../../24/24/text/#FNRGNM">FNRGNM</a>)     ; Get old argument name
+F14F E3                 EX      (SP),HL         ; Save old , Get new
+F150 22DE10             LD      (<a href="../../../24/24/text/#FNRGNM">FNRGNM</a>),HL     ; Set new argument name
+F153 2AE210             LD      HL,(<a href="../../../24/24/text/#FNARG">FNARG</a>+2)    ; Get LSB,NLSB of old arg value
 F156 E5                 PUSH    HL              ; Save it
-F157 2AE010             LD      HL,(FNARG)      ; Get MSB,EXP of old arg value
+F157 2AE010             LD      HL,(<a href="../../../24/24/text/#FNARG">FNARG</a>)      ; Get MSB,EXP of old arg value
 F15A E5                 PUSH    HL              ; Save it
-F15B 21E010             LD      HL,FNARG        ; HL = Value of argument
+F15B 21E010             LD      HL,<a href="../../../24/24/text/#FNARG">FNARG</a>        ; HL = Value of argument
 F15E D5                 PUSH    DE              ; Save FN code string address
-F15F CD6BF8             CALL    FPTHL           ; Move FPREG to argument
+F15F CD6BF8             CALL    <a href="../../../32/25/text/#FPTHL">FPTHL</a>           ; Move <a href="../../../24/24/text/#FPREG">FPREG</a> to argument
 F162 E1                 POP     HL              ; Get FN code string address
-F163 CD41ED             CALL    GETNUM          ; Get value from function
-F166 2B                 DEC     HL              ; DEC 'cos GETCHR INCs
-F167 CD36E8             CALL    GETCHR          ; Get next character
-F16A C2ADE3             JP      NZ,SNERR        ; Bad character in FN - Error
+F163 CD41ED             CALL    <a href="../../../26/34/text/#GETNUM">GETNUM</a>          ; Get value from function
+F166 2B                 DEC     HL              ; DEC 'cos <a href="../../../25/34/text/#GETCHR">GETCHR</a> INCs
+F167 CD36E8             CALL    <a href="../../../25/34/text/#GETCHR">GETCHR</a>          ; Get next character
+F16A C2ADE3             JP      NZ,<a href="../../../24/30/text/#SNERR">SNERR</a>        ; Bad character in FN - Error
 F16D E1                 POP     HL              ; Get MSB,EXP of old arg
-F16E 22E010             LD      (FNARG),HL      ; Restore it
+F16E 22E010             LD      (<a href="../../../24/24/text/#FNARG">FNARG</a>),HL      ; Restore it
 F171 E1                 POP     HL              ; Get LSB,NLSB of old arg
-F172 22E210             LD      (FNARG+2),HL    ; Restore it
+F172 22E210             LD      (<a href="../../../24/24/text/#FNARG">FNARG</a>+2),HL    ; Restore it
 F175 E1                 POP     HL              ; Get name of old arg
-F176 22DE10             LD      (FNRGNM),HL     ; Restore it
+F176 22DE10             LD      (<a href="../../../24/24/text/#FNRGNM">FNRGNM</a>),HL     ; Restore it
 F179 E1                 POP     HL              ; Restore code string address
 F17A C9                 RET
 
-<span id="F17B">F17B E5         IDTEST: PUSH    HL              ; Save code string address</span>
-F17C 2A5C10             LD      HL,(LINEAT)     ; Get current line number
+<span id="F17B">F17B</span> E5         <span id="IDTEST"><a href="#IDTEST">IDTEST</a></span>: PUSH    HL              ; Save code string address
+F17C 2A5C10             LD      HL,(<a href="../../../24/24/text/#LINEAT">LINEAT</a>)     ; Get current line number
 F17F 23                 INC     HL              ; -1 means direct statement
 F180 7C                 LD      A,H
 F181 B5                 OR      L
 F182 E1                 POP     HL              ; Restore code string address
 F183 C0                 RET     NZ              ; Return if in program
-F184 1E16               LD      E,ID            ; ?ID Error
-F186 C3C1E3             JP      ERROR
+F184 1E16               LD      E,<a href="../../../24/24/text/#ID">ID</a>            ; ?<a href="../../../24/24/text/#ID">ID</a> Error
+F186 C3C1E3             JP      <a href="../../../24/30/text/#ERROR">ERROR</a>
 </pre>
 <!-- 1 column: end --></div>
 </div>
