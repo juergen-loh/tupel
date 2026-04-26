@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/25/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
+	<!-- page.php / $Date: 2026-04-26 16:43:21 +0200 (So, 26. Apr 2026) $ -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
-	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
+	<!-- Sun, 26 Apr 2026 14:43:23 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -161,10 +161,10 @@ FCE5 FE0A               CP      <a href="../../../24/23/text/#LF">LF</a>        
 FCE7 CA00FD             JP      Z,<a href="../../../33/25/text/#IGCHR">IGCHR</a>         ; Yes - Ignore it
 FCEA FE08               CP      <a href="../../../24/23/text/#BKSP">BKSP</a>            ; ASCII back space?
 FCEC C2F1FC             JP      NZ,<a href="../../../33/25/text/#CONOT1">CONOT1</a>       ; No - Test for CR
-FCEF 3E1D               LD      A,<a href="../../../24/23/text/#TBS">TBS</a>           ; <span class="uppercase">Nasbug</span> back space
+FCEF 3E1D               LD      A,<a href="../../../24/23/text/#TBS">TBS</a>           ; NASBUG back space
 <span id="FCF1">FCF1</span> FE0D       <span id="CONOT1"><a href="#CONOT1">CONOT1</a></span>: CP      <a href="../../../24/23/text/#CR">CR</a>              ; ASCII CR?
 FCF3 C2FDFC             JP      NZ,<a href="../../../33/25/text/#OUTCHR">OUTCHR</a>       ; No - Output character
-FCF6 3E1F               LD      A,<a href="../../../24/23/text/#TCR">TCR</a>           ; <span class="uppercase">Nasbug</span> CR
+FCF6 3E1F               LD      A,<a href="../../../24/23/text/#TCR">TCR</a>           ; NASBUG CR
 FCF8 C3FDFC             JP      <a href="../../../33/25/text/#OUTCHR">OUTCHR</a>          ; Output it
 
 <span id="FCFB">FCFB</span> F1         <span id="NASOUT"><a href="#NASOUT">NASOUT</a></span>: POP     AF              ; Get character
@@ -186,10 +186,10 @@ FD10 C319FD             JP      <a href="../../../33/25/text/#CONVIN">CONVIN</a>
 
 <span id="FD13">FD13</span> CD4D0C     <span id="GETTIN"><a href="#GETTIN">GETTIN</a></span>: CALL    <a href="../../../24/23/text/#TIN">TIN</a>             ; "T" input a character
 FD16 D213FD             JP      NC,<a href="../../../33/25/text/#GETTIN">GETTIN</a>       ; No input - wait
-<span id="FD19">FD19</span> FE1D       <span id="CONVIN"><a href="#CONVIN">CONVIN</a></span>: CP      <a href="../../../24/23/text/#TBS">TBS</a>             ; <span class="uppercase">Nasbug</span> back space?
+<span id="FD19">FD19</span> FE1D       <span id="CONVIN"><a href="#CONVIN">CONVIN</a></span>: CP      <a href="../../../24/23/text/#TBS">TBS</a>             ; NASBUG back space?
 FD1B C220FD             JP      NZ,<a href="../../../33/25/text/#CNVIN1">CNVIN1</a>       ; No - Test for break
 FD1E 3E08               LD      A,<a href="../../../24/23/text/#BKSP">BKSP</a>          ; ASCII back space
-<span id="FD20">FD20</span> FE1C       <span id="CNVIN1"><a href="#CNVIN1">CNVIN1</a></span>: CP      <a href="../../../24/23/text/#TBRK">TBRK</a>            ; <span class="uppercase">Nasbug</span> break?
+<span id="FD20">FD20</span> FE1C       <span id="CNVIN1"><a href="#CNVIN1">CNVIN1</a></span>: CP      <a href="../../../24/23/text/#TBRK">TBRK</a>            ; NASBUG break?
 FD22 C227FD             JP      NZ,<a href="../../../33/25/text/#CNVIN2">CNVIN2</a>       ; No - Test for control Z
 FD25 3E03               LD      A,<a href="../../../24/23/text/#CTRLC">CTRLC</a>         ; Control C
 <span id="FD27">FD27</span> FE1A       <span id="CNVIN2"><a href="#CNVIN2">CNVIN2</a></span>: CP      <a href="../../../24/23/text/#CTRLZ">CTRLZ</a>           ; ^Z?
@@ -198,7 +198,7 @@ FD2C 3E7F               LD      A,<a href="../../../24/23/text/#DEL">DEL</a>    
 <span id="FD2E">FD2E</span> FE1B       <span id="CNVIN3"><a href="#CNVIN3">CNVIN3</a></span>: CP      <a href="../../../24/23/text/#ESC">ESC</a>             ; "ESC" ?
 FD30 C235FD             JP      NZ,<a href="../../../33/25/text/#CNVIN4">CNVIN4</a>       ; No - Test for CR
 FD33 3E03               LD      A,<a href="../../../24/23/text/#CTRLC">CTRLC</a>         ; Control C
-<span id="FD35">FD35</span> FE1F       <span id="CNVIN4"><a href="#CNVIN4">CNVIN4</a></span>: CP      <a href="../../../24/23/text/#TCR">TCR</a>             ; <span class="uppercase">Nasbug</span> CR?
+<span id="FD35">FD35</span> FE1F       <span id="CNVIN4"><a href="#CNVIN4">CNVIN4</a></span>: CP      <a href="../../../24/23/text/#TCR">TCR</a>             ; NASBUG CR?
 FD37 C23CFD             JP      NZ,<a href="../../../33/25/text/#CNVIN5">CNVIN5</a>       ; No - Return character
 FD3A 3E0D               LD      A,<a href="../../../24/23/text/#CR">CR</a>            ; ASCII CR
 <span id="FD3C">FD3C</span> D1         <span id="CNVIN5"><a href="#CNVIN5">CNVIN5</a></span>: POP     DE
@@ -265,7 +265,7 @@ FD8E CA96FD             JP      Z,<a href="../../../33/25/text/#TCLS">TCLS</a>  
 FD91 3E0C               LD      A,<a href="../../../24/23/text/#CS">CS</a>            ; ASCII Clear screen
 FD93 C3D9FC             JP      <a href="../../../33/25/text/#CONMON">CONMON</a>          ; Output character
 
-<span id="FD96">FD96</span> 3E1E       <span id="TCLS"><a href="#TCLS">TCLS</a></span>:   LD      A,<a href="../../../24/23/text/#TCS">TCS</a>           ; <span class="uppercase">Nasbug</span> Clear screen
+<span id="FD96">FD96</span> 3E1E       <span id="TCLS"><a href="#TCLS">TCLS</a></span>:   LD      A,<a href="../../../24/23/text/#TCS">TCS</a>           ; NASBUG Clear screen
 FD98 C3D9FC             JP      <a href="../../../33/25/text/#CONMON">CONMON</a>          ; Output character
 </pre>
 <!-- 1 column: end --></div>

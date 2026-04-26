@@ -21,10 +21,10 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/26/35/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
+	<!-- page.php / $Date: 2026-04-26 16:43:21 +0200 (So, 26. Apr 2026) $ -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
-	<!-- Sat, 25 Apr 2026 19:28:14 GMT -->
+	<!-- Sun, 26 Apr 2026 14:43:23 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -136,6 +136,53 @@
 <div class="col-sm-12 mag-80-bus-news issue-26 page-35" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <div class="DisAssemblyRomBasic"><!-- 1 column: start --><div>
 <pre>
+<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    46</span>
+
+<span id="ED92">ED92</span> 7A         <span id="FOPRND"><a href="#FOPRND">FOPRND</a></span>: LD      A,D             ; &lt; = &gt; found ?
+ED93 B7                 OR      A
+ED94 C2A8EE             JP      NZ,<a href="../../../26/36/text/#TSTRED">TSTRED</a>       ; Yes - Test for reduction
+ED97 7E                 LD      A,(HL)          ; Get operator token
+ED98 22C510             LD      (<a href="../../../24/24/text/#CUROPR">CUROPR</a>),HL     ; Save operator address
+ED9B D6AC               SUB     <a href="../../../24/28/text/#ZPLUS">ZPLUS</a>           ; Operator or function?
+ED9D D8                 RET     C               ; Neither - Exit
+<span id="ED9E">ED9E</span> FE07               CP      <a href="../../../24/28/text/#ZOR">ZOR</a>+1-<a href="../../../24/28/text/#ZPLUS">ZPLUS</a>     ; Is it + - * / ^ AND OR ?
+EDA0 D0                 RET     NC              ; No - Exit
+EDA1 5F                 LD      E,A             ; Coded operator
+EDA2 3AAD10             LD      A,(<a href="../../../24/24/text/#TYPE">TYPE</a>)        ; Get data type
+EDA5 3D                 DEC     A               ; FF = numeric , 00 = string
+EDA6 B3                 OR      E               ; Combine with coded operator
+EDA7 7B                 LD      A,E             ; Get coded operator
+EDA8 CA06F3             JP      Z,<a href="../../../31/28/text/#CONCAT">CONCAT</a>        ; String concatenation
+EDAB 07                 RLCA                    ; Times 2
+EDAC 83                 ADD     A,E             ; Times 3
+EDAD 5F                 LD      E,A             ; To DE (D is 0)
+EDAE 21A4E2             LD      HL,<a href="../../../24/28/text/#PRITAB">PRITAB</a>       ; Precedence table
+EDB1 19                 ADD     HL,DE           ; To the operator concerned
+EDB2 78                 LD      A,B             ; Last operator precedence
+EDB3 56                 LD      D,(HL)          ; Get evaluation precedence
+EDB4 BA                 CP      D               ; Compare with eval precedence
+EDB5 D0                 RET     NC              ; Exit if higher precedence
+EDB6 23                 INC     HL              ; Point to routine address
+EDB7 CD44ED             CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure it's a number
+
+<span id="EDBA">EDBA</span> C5         <span id="STKTHS"><a href="#STKTHS">STKTHS</a></span>: PUSH    BC              ; Save last precedence & token
+EDBB 0169ED             LD      BC,<a href="../../../26/34/text/#EVAL3">EVAL3</a>        ; Where to go on prec' break
+EDBE C5                 PUSH    BC              ; Save on stack for return
+EDBF 43                 LD      B,E             ; Save operator
+EDC0 4A                 LD      C,D             ; Save precedence
+EDC1 CD44F8             CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Move value to stack
+EDC4 58                 LD      E,B             ; Restore operator
+EDC5 51                 LD      D,C             ; Restore precedence
+EDC6 4E                 LD      C,(HL)          ; Get LSB of routine address
+EDC7 23                 INC     HL
+EDC8 46                 LD      B,(HL)          ; Get MSB of routine address
+EDC9 23                 INC     HL
+EDCA C5                 PUSH    BC              ; Save routine address
+EDCB 2AC510             LD      HL,(<a href="../../../24/24/text/#CUROPR">CUROPR</a>)     ; Address of current operator
+EDCE C35DED             JP      <a href="../../../26/34/text/#EVAL1">EVAL1</a>           ; Loop until prec' break
+</pre>
+<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
+<pre>
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    47</span>
 
 <span id="EDD1">EDD1</span> AF         <span id="OPRND"><a href="#OPRND">OPRND</a></span>:  XOR     A               ; Get operand routine
@@ -183,53 +230,6 @@ EE2D B7                 OR      A               ; Numeric?
 EE2E CC51F8             CALL    Z,<a href="../../../32/25/text/#PHLTFP">PHLTFP</a>        ; Yes - Move contents to <a href="../../../24/24/text/#FPREG">FPREG</a>
 EE31 E1                 POP     HL              ; Restore code string address
 EE32 C9                 RET
-</pre>
-<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
-<pre>
-<span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    46</span>
-
-<span id="ED92">ED92</span> 7A         <span id="FOPRND"><a href="#FOPRND">FOPRND</a></span>: LD      A,D             ; &lt; = &gt; found ?
-ED93 B7                 OR      A
-ED94 C2A8EE             JP      NZ,<a href="../../../26/36/text/#TSTRED">TSTRED</a>       ; Yes - Test for reduction
-ED97 7E                 LD      A,(HL)          ; Get operator token
-ED98 22C510             LD      (<a href="../../../24/24/text/#CUROPR">CUROPR</a>),HL     ; Save operator address
-ED9B D6AC               SUB     <a href="../../../24/28/text/#ZPLUS">ZPLUS</a>           ; Operator or function?
-ED9D D8                 RET     C               ; Neither - Exit
-<span id="ED9E">ED9E</span> FE07               CP      <a href="../../../24/28/text/#ZOR">ZOR</a>+1-<a href="../../../24/28/text/#ZPLUS">ZPLUS</a>     ; Is it + - * / ^ AND OR ?
-EDA0 D0                 RET     NC              ; No - Exit
-EDA1 5F                 LD      E,A             ; Coded operator
-EDA2 3AAD10             LD      A,(<a href="../../../24/24/text/#TYPE">TYPE</a>)        ; Get data type
-EDA5 3D                 DEC     A               ; FF = numeric , 00 = string
-EDA6 B3                 OR      E               ; Combine with coded operator
-EDA7 7B                 LD      A,E             ; Get coded operator
-EDA8 CA06F3             JP      Z,<a href="../../../31/28/text/#CONCAT">CONCAT</a>        ; String concatenation
-EDAB 07                 RLCA                    ; Times 2
-EDAC 83                 ADD     A,E             ; Times 3
-EDAD 5F                 LD      E,A             ; To DE (D is 0)
-EDAE 21A4E2             LD      HL,<a href="../../../24/28/text/#PRITAB">PRITAB</a>       ; Precedence table
-EDB1 19                 ADD     HL,DE           ; To the operator concerned
-EDB2 78                 LD      A,B             ; Last operator precedence
-EDB3 56                 LD      D,(HL)          ; Get evaluation precedence
-EDB4 BA                 CP      D               ; Compare with eval precedence
-EDB5 D0                 RET     NC              ; Exit if higher precedence
-EDB6 23                 INC     HL              ; Point to routine address
-EDB7 CD44ED             CALL    <a href="../../../26/34/text/#TSTNUM">TSTNUM</a>          ; Make sure it's a number
-
-<span id="EDBA">EDBA</span> C5         <span id="STKTHS"><a href="#STKTHS">STKTHS</a></span>: PUSH    BC              ; Save last precedence & token
-EDBB 0169ED             LD      BC,<a href="../../../26/34/text/#EVAL3">EVAL3</a>        ; Where to go on prec' break
-EDBE C5                 PUSH    BC              ; Save on stack for return
-EDBF 43                 LD      B,E             ; Save operator
-EDC0 4A                 LD      C,D             ; Save precedence
-EDC1 CD44F8             CALL    <a href="../../../32/25/text/#STAKFP">STAKFP</a>          ; Move value to stack
-EDC4 58                 LD      E,B             ; Restore operator
-EDC5 51                 LD      D,C             ; Restore precedence
-EDC6 4E                 LD      C,(HL)          ; Get LSB of routine address
-EDC7 23                 INC     HL
-EDC8 46                 LD      B,(HL)          ; Get MSB of routine address
-EDC9 23                 INC     HL
-EDCA C5                 PUSH    BC              ; Save routine address
-EDCB 2AC510             LD      HL,(<a href="../../../24/24/text/#CUROPR">CUROPR</a>)     ; Address of current operator
-EDCE C35DED             JP      <a href="../../../26/34/text/#EVAL1">EVAL1</a>           ; Loop until prec' break
 </pre>
 <!-- 1 column: end --></div>
 </div>
