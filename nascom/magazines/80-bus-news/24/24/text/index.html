@@ -24,7 +24,7 @@
 	<!-- page.php / $Date: 2026-04-26 16:43:21 +0200 (So, 26. Apr 2026) $ -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
-	<!-- Sun, 26 Apr 2026 14:43:23 GMT -->
+	<!-- Sun, 26 Apr 2026 17:37:10 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +79,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-04-26 19:37:10 +0200 (So, 26. Apr 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -142,7 +142,7 @@
 
 <span id="1000">1000</span>            <span id="WRKSPC"><a href="#WRKSPC">WRKSPC</a></span>  EQU     1000H           ; BASIC Work space
 <span id="1003">1003</span>            <span id="USR"><a href="#USR">USR</a></span>     EQU     1003H           ; "<a href="../../../24/24/text/#USR">USR</a> (x)" jump
-<span id="1006">1006</span>            <span id="OUTSUB"><a href="#OUTSUB">OUTSUB</a></span>  EQU     1006H           ; "OUT p,n"
+<span id="1006">1006</span>            <span id="OUTSUB"><a href="#OUTSUB">OUTSUB</a></span>  EQU     1006H           ; "<a href="../../../31/30/text/#POUT">OUT</a> p,n"
 <span id="1007">1007</span>            <span id="OTPORT"><a href="#OTPORT">OTPORT</a></span>  EQU     1007H           ; Port (p)
 <span id="1009">1009</span>            <span id="DIVSUP"><a href="#DIVSUP">DIVSUP</a></span>  EQU     1009H           ; Division support routine
 <span id="100A">100A</span>            <span id="DIV1"><a href="#DIV1">DIV1</a></span>    EQU     100AH           ; &lt;- Values
@@ -212,25 +212,25 @@
 
                 ; BASIC ERROR CODE VALUES
 
-<span id="0000">0000</span>            <span id="NF"><a href="#NF">NF</a></span>      EQU     00H             ; <a href="../../../26/34/text/#NEXT">NEXT</a> without <a href="../../../25/33/text/#FOR">FOR</a>
-<span id="0002">0002</span>            <span id="SN"><a href="#SN">SN</a></span>      EQU     02H             ; Syntax error
-<span id="0004">0004</span>            <span id="RG"><a href="#RG">RG</a></span>      EQU     04H             ; <a href="../../../25/37/text/#RETURN">RETURN</a> without <a href="../../../25/37/text/#GOSUB">GOSUB</a>
-<span id="0006">0006</span>            <span id="OD"><a href="#OD">OD</a></span>      EQU     06H             ; Out of <a href="../../../25/38/text/#DATA">DATA</a>
-<span id="0008">0008</span>            <span id="FC"><a href="#FC">FC</a></span>      EQU     08H             ; Function call error
-<span id="000A">000A</span>            <span id="OV"><a href="#OV">OV</a></span>      EQU     0AH             ; Overflow
-<span id="000C">000C</span>            <span id="OM"><a href="#OM">OM</a></span>      EQU     0CH             ; Out of memory
-<span id="000E">000E</span>            <span id="UL"><a href="#UL">UL</a></span>      EQU     0EH             ; Undefined line number
-<span id="0010">0010</span>            <span id="BS"><a href="#BS">BS</a></span>      EQU     10H             ; Bad subscript
-<span id="0012">0012</span>            <span id="DD"><a href="#DD">DD</a></span>      EQU     12H             ; Re-DIMensioned array
-<span id="0014">0014</span>            <span id="DZ"><a href="#DZ">DZ</a></span>      EQU     14H             ; Division by zero (/0)
-<span id="0016">0016</span>            <span id="ID"><a href="#ID">ID</a></span>      EQU     16H             ; Illegal direct
-<span id="0018">0018</span>            <span id="TM"><a href="#TM">TM</a></span>      EQU     18H             ; Type miss-match
-<span id="001A">001A</span>            <span id="OS"><a href="#OS">OS</a></span>      EQU     1AH             ; Out of string space
-<span id="001C">001C</span>            <span id="LS"><a href="#LS">LS</a></span>      EQU     1CH             ; String too long
-<span id="001E">001E</span>            <span id="ST"><a href="#ST">ST</a></span>      EQU     1EH             ; String formula too complex
-<span id="0020">0020</span>            <span id="CN"><a href="#CN">CN</a></span>      EQU     20H             ; Can't CONTinue
-<span id="0022">0022</span>            <span id="UF"><a href="#UF">UF</a></span>      EQU     22H             ; UnDEFined FN function
-<span id="0024">0024</span>            <span id="MO"><a href="#MO">MO</a></span>      EQU     24H             ; Missing operand
+0000            <span id="NF"><a href="#NF">NF</a></span>      EQU     00H             ; <a href="../../../26/34/text/#NEXT">NEXT</a> without <a href="../../../25/33/text/#FOR">FOR</a>
+0002            <span id="SN"><a href="#SN">SN</a></span>      EQU     02H             ; Syntax error
+0004            <span id="RG"><a href="#RG">RG</a></span>      EQU     04H             ; <a href="../../../25/37/text/#RETURN">RETURN</a> without <a href="../../../25/37/text/#GOSUB">GOSUB</a>
+0006            <span id="OD"><a href="#OD">OD</a></span>      EQU     06H             ; Out of <a href="../../../25/38/text/#DATA">DATA</a>
+0008            <span id="FC"><a href="#FC">FC</a></span>      EQU     08H             ; Function call error
+000A            <span id="OV"><a href="#OV">OV</a></span>      EQU     0AH             ; Overflow
+000C            <span id="OM"><a href="#OM">OM</a></span>      EQU     0CH             ; Out of memory
+000E            <span id="UL"><a href="#UL">UL</a></span>      EQU     0EH             ; Undefined line number
+0010            <span id="BS"><a href="#BS">BS</a></span>      EQU     10H             ; Bad subscript
+0012            <span id="DD"><a href="#DD">DD</a></span>      EQU     12H             ; Re-DIMensioned array
+0014            <span id="DZ"><a href="#DZ">DZ</a></span>      EQU     14H             ; Division by zero (/0)
+0016            <span id="ID"><a href="#ID">ID</a></span>      EQU     16H             ; Illegal direct
+0018            <span id="TM"><a href="#TM">TM</a></span>      EQU     18H             ; Type miss-match
+001A            <span id="OS"><a href="#OS">OS</a></span>      EQU     1AH             ; Out of string space
+001C            <span id="LS"><a href="#LS">LS</a></span>      EQU     1CH             ; String too long
+001E            <span id="ST"><a href="#ST">ST</a></span>      EQU     1EH             ; String formula too complex
+0020            <span id="CN"><a href="#CN">CN</a></span>      EQU     20H             ; Can't CONTinue
+0022            <span id="UF"><a href="#UF">UF</a></span>      EQU     22H             ; UnDEFined FN function
+0024            <span id="MO"><a href="#MO">MO</a></span>      EQU     24H             ; Missing operand
 </pre>
 <!-- 1 column: end --></div>
 </div>
