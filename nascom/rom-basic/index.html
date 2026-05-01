@@ -22,7 +22,7 @@
 <!-- /navi-head.php -->
 	<meta name="keywords" content="Nascom ROM Basic 4.7, Microsoft BASIC, Nascom Computer, Nascom 1, Nascom 2">
 	<title>Nascom ROM Basic</title>
-	<!-- $Date: 2026-04-26 19:37:10 +0200 (So, 26. Apr 2026) $ / Sun, 26 Apr 2026 17:37:13 GMT -->
+	<!-- $Date: 2026-05-01 13:22:07 +0200 (Fr, 01. Mai 2026) $ / lastModified: Fri, 01 May 2026 11:44:37 GMT -->
 	<link rel="stylesheet" type="text/css" href="../magazines/80-bus-news/style.css">
 <!-- navi-body.php -->
 </head>
@@ -76,7 +76,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-26 19:37:10 +0200 (So, 26. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-01 08:46:12 +0200 (Fr, 01. Mai 2026) $ -->
 
 <div class="DisAssemblyRomBasic" lang="en">
 <h1 id="article1" class="uppercase">
@@ -487,7 +487,7 @@ Example of the number 35.25 in floating point:&ndash;<br><br></p>
 <tr><td colspan=3>As the bit after the point is ALWAYS &ldquo;1&rdquo; this bit can be used
 to store the sign of the number &ldquo;0&rdquo; for +ve, &ldquo;1&rdquo; for -ve</td></tr>
 <tr><td>So +35.25 is stored as</td><td colspan=2>.00001101 * 2 ^ 00000110</td></tr>
-<tr><td>Which in 24 bits is</td><td colspan=2>.000011010000000000000000 *2^ 00000110</td></tr>
+<tr><td>Which in 24 bits is</td><td colspan=2>.000011010000&#x200b;000000000000 *2^ 00000110</td></tr>
 <tr><td colspan=3>&#x200b;</td></tr>
 
 <tr><td colspan=3>128 is added to the exponent so that overflows and underflows
@@ -555,10 +555,10 @@ the first) line is to be executed.
 
 <tr><td><p></p></td><td><p></p></td><td colspan=2><p>
 Example:&ndash; The program:&ndash;</p>
-<pre>
-  10 <a href="#ZFOR">FOR</a> A=1 <a href="#ZTO">TO</a> 5:<a href="#ZPRINT">PRINT</a> A,<a href="#E11D">SQR</a>(1):<a href="#NEXT">NEXT</a> A
-  20 <a href="#ZEND">END</a>
-</pre>
+<p style="margin-left: 1em">
+  10 <a href="#FOR">FOR</a> A=1 <a href="#ZTO">TO</a> 5:&#x200b;<a href="#PRINT">PRINT</a> A,<a href="#SQR">SQR</a>(1):&#x200b;<a href="#NEXT">NEXT</a> A<br>
+  20 <a href="#PEND">END</a>
+</p>
 <p>is in memory, it would look like this:&ndash;
 </p></td></tr>
 <tr><td><p></p></td><td><p></p></td><td colspan=2>
@@ -570,7 +570,7 @@ Example:&ndash; The program:&ndash;</p>
 <tr><td>10FE</td><td>81		</td><td><a href="#ZFOR">FOR</a> token</td></tr>
 <tr><td>10FF</td><td>20		</td><td>Space</td></tr>
 <tr><td>1100</td><td>41		</td><td>A</td></tr>
-<tr><td>1101</td><td>B4		</td><td>= token</td></tr>
+<tr><td>1101</td><td>B4		</td><td><a href="#ZEQUAL">=</a> token</td></tr>
 <tr><td>1102</td><td>31		</td><td>1</td></tr>
 <tr><td>1103</td><td>20		</td><td>Space</td></tr>
 <tr><td>1104</td><td>A6		</td><td><a href="#ZTO">TO</a> token</td></tr>
@@ -581,7 +581,7 @@ Example:&ndash; The program:&ndash;</p>
 <tr><td>1109</td><td>20		</td><td>Space</td></tr>
 <tr><td>110A</td><td>41		</td><td>A</td></tr>
 <tr><td>110B</td><td>2C		</td><td>,</td></tr>
-<tr><td>110C</td><td>BA		</td><td><a href="#E11D">SQR</a> token</td></tr>
+<tr><td>110C</td><td>BA		</td><td><a href="#SQR">SQR</a> token</td></tr>
 <tr><td>110D</td><td>28		</td><td>(</td></tr>
 <tr><td>110E</td><td>41		</td><td>A</td></tr>
 <tr><td>110F</td><td>29		</td><td>)</td></tr>
@@ -612,11 +612,11 @@ Example:&ndash; The program:&ndash;</p>
 </p></td></tr>
 <tr><td colspan=4><p>
 Variables such as AB AB$ and FN AB are all stored in the simple variable area
-of memory. The start address of this area is held in PROGND and the end address
-is held in VAREND.
+of memory. The start address of this area is held in <a href="#PROGND">PROGND</a> and the end address
+is held in <a href="#VAREND">VAREND</a>.
 </p></td></tr>
 <tr><td colspan=4><p>
-If AB=10 and AB$="TEXT&rdquo; and FN AB(XY) had been defined then the memory would
+If AB=10 and AB$=&ldquo;TEXT&rdquo; and FN AB(XY) had been defined then the memory would
 look like this
 </p></td></tr>
 
@@ -625,7 +625,7 @@ look like this
 <colgroup><col><col></colgroup>
 
 <tr><td><p>42 41</p></td><td><p>
-Name of AB in reverse (42 41 = &ldquo;B&rdquo; &ldquo;A")
+Name of AB in reverse (42 41 = &ldquo;B&rdquo; &ldquo;A&rdquo;)
 </p></td></tr>
 <tr><td><p>00 00 20 84</p></td><td><p>
 Floating point value for 10
@@ -658,10 +658,10 @@ Address where &ldquo;TEXT&rdquo; is to be found
 Name of FN AB (C1 is &ldquo;A&rdquo; with bit 7 set)
 </p></td></tr>
 <tr><td><p>LL HH</p></td><td><p>
-Address of function (After &ldquo;=")
+Address of function (After &ldquo;=&rdquo;)
 </p></td></tr>
 <tr><td><p>59 58</p></td><td><p>
-Argument name in reverse (59 58 = &ldquo;Y&rdquo; &ldquo;X")
+Argument name in reverse (59 58 = &ldquo;Y&rdquo; &ldquo;X&rdquo;)
 </p></td></tr>
 
 </table>
@@ -669,7 +669,7 @@ Argument name in reverse (59 58 = &ldquo;Y&rdquo; &ldquo;X")
 
 <tr><td colspan=4><p>
 Arrays such as AB(1,3) and AB$(3,1) are stored in the array area of memory. The
-start address of this area is held in VAREND and the end address is held in
+start address of this area is held in <a href="#VAREND">VAREND</a> and the end address is held in
 <a href="#ARREND">ARREND</a>.
 </p></td></tr>
 <tr><td colspan=4><p>
@@ -1919,10 +1919,10 @@ E1D8 CE4557             DEFB    80H+"<a href="#NEW">NEW</a>"
 <span class="head">Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    8</span>
 
 E1DB D4414228           DEFB    80H+"<a href="#DOTAB">TAB</a>("
-E1DF D44F               DEFB    80H+"<a href="#E7BC">TO</a>"
+E1DF D44F               DEFB    80H+"TO"
 E1E1 C64E               DEFB    80H+"<a href="#DOFN">FN</a>"
 E1E3 D3504328           DEFB    80H+"<a href="#DOSPC">SPC</a>("
-E1E7 D448454E           DEFB    80H+"<a href="#EB08">THEN</a>"
+E1E7 D448454E           DEFB    80H+"THEN"
 E1EB CE4F54             DEFB    80H+"<a href="#EVNOT">NOT</a>"
 E1EE D3544550           DEFB    80H+"STEP"
 
@@ -6189,13 +6189,6 @@ FB87 E1                 POP     HL              ; Restore address in table
 FB88 C373FB             JP      <a href="#SUMLP">SUMLP</a>           ; More coefficients
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
-<h2 class="uppercase">
-Last<br>
-Part<br>
-Next<br>
-Issue!
-</h2>
-<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <h1 id="article7" class="uppercase">
 <span class="uppercase">Nascom</span><br>
 ROM<br>
@@ -6903,13 +6896,13 @@ FFF7 C381EB             JP      <a href="#PRNTCR">PRNTCR</a>          ; Output C
 <a href="#BAD">BAD</a>     <a href="#F59D">F59D</a>    <a href="#BADINP">BADINP</a>  <a href="#EBEC">EBEC</a>    <a href="#BAKSTK">BAKSTK</a>  <a href="#E356">E356</a>    <a href="#BAKTMP">BAKTMP</a>  <a href="#F371">F371</a>    <a href="#BASTXT">BASTXT</a>  <a href="#105E">105E</a>
 <a href="#BCDEFP">BCDEFP</a>  <a href="#F85F">F85F</a>    <a href="#BFREE">BFREE</a>   <a href="#E0B7">E0B7</a>    <a href="#BKSP">BKSP</a>    <a href="#BKSP">0008</a>    <a href="#BNORM">BNORM</a>   <a href="#F61E">F61E</a>    <a href="#BNRMLP">BNRMLP</a>  <a href="#F621">F621</a>
 <a href="#BREAK">BREAK</a>   <a href="#FEDE">FEDE</a>    <a href="#BREAK2">BREAK2</a>  <a href="#FE53">FE53</a>    <a href="#BRKFLG">BRKFLG</a>  <a href="#104D">104D</a>    <a href="#BRKLIN">BRKLIN</a>  <a href="#10CE">10CE</a>    <a href="#BRKMSG">BRKMSG</a>  <a href="#E350">E350</a>
-<a href="#BRKRET">BRKRET</a>  <a href="#E0B1">E0B1</a>    <a href="#BS">BS</a>      <a href="#0010">0010</a>    <a href="#BSERR">BSERR</a>   <a href="#F045">F045</a>    <a href="#BUFFER">BUFFER</a>  <a href="#1061">1061</a>    <a href="#BYTSFT">BYTSFT</a>  <a href="#F756">F756</a>
+<a href="#BRKRET">BRKRET</a>  <a href="#E0B1">E0B1</a>    <a href="#BS">BS</a>      <a href="#BS">0010</a>    <a href="#BSERR">BSERR</a>   <a href="#F045">F045</a>    <a href="#BUFFER">BUFFER</a>  <a href="#1061">1061</a>    <a href="#BYTSFT">BYTSFT</a>  <a href="#F756">F756</a>
 <a href="#CASFF">CASFF</a>   <a href="#FCD5">FCD5</a>    <a href="#CASFFW">CASFFW</a>  <a href="#FCC8">FCC8</a>    <a href="#CFEVAL">CFEVAL</a>  <a href="#EFA8">EFA8</a>    <a href="#CHARTY">CHARTY</a>  <a href="#EF56">EF56</a>    <a href="#CHEKFN">CHEKFN</a>  <a href="#F189">F189</a>
 <a href="#CHKBRK">CHKBRK</a>  <a href="#FD40">FD40</a>    <a href="#CHKLTR">CHKLTR</a>  <a href="#E977">E977</a>    <a href="#CHKSTK">CHKSTK</a>  <a href="#E38A">E38A</a>    <a href="#CHKSUM">CHKSUM</a>  <a href="#104A">104A</a>    <a href="#CHKSYN">CHKSYN</a>  <a href="#E690">E690</a>
 <a href="#CHKTYP">CHKTYP</a>  <a href="#ED46">ED46</a>    <a href="#CHR">CHR</a>     <a href="#F3A2">F3A2</a>    <a href="#CHSUMS">CHSUMS</a>  <a href="#E960">E960</a>    <a href="#CIN">CIN</a>     <a href="#0C75">0C75</a>    <a href="#CLEAR">CLEAR</a>   <a href="#E9CA">E9CA</a>
 <a href="#CLOAD">CLOAD</a>   <a href="#F4F9">F4F9</a>    <a href="#CLOAD1">CLOAD1</a>  <a href="#F52B">F52B</a>    <a href="#CLOAD2">CLOAD2</a>  <a href="#F52D">F52D</a>    <a href="#CLOADE">CLOADE</a>  <a href="#F55F">F55F</a>    <a href="#CLOADV">CLOADV</a>  <a href="#F55C">F55C</a>
 <a href="#CLOTST">CLOTST</a>  <a href="#E6CC">E6CC</a>    <a href="#CLREG">CLREG</a>   <a href="#E4DF">E4DF</a>    <a href="#CLRPTR">CLRPTR</a>  <a href="#E4BA">E4BA</a>    <a href="#CLS">CLS</a>     <a href="#FD8B">FD8B</a>    <a href="#CMPFP">CMPFP</a>   <a href="#F8A8">F8A8</a>
-<a href="#CMPLOG">CMPLOG</a>  <a href="#EEBA">EEBA</a>    <a href="#CMPNUM">CMPNUM</a>  <a href="#F88E">F88E</a>    <a href="#CMPRES">CMPRES</a>  <a href="#EEFE">EEFE</a>    <a href="#CMPSTR">CMPSTR</a>  <a href="#EEE6">EEE6</a>    <a href="#CN">CN</a>      <a href="#0020">0020</a>
+<a href="#CMPLOG">CMPLOG</a>  <a href="#EEBA">EEBA</a>    <a href="#CMPNUM">CMPNUM</a>  <a href="#F88E">F88E</a>    <a href="#CMPRES">CMPRES</a>  <a href="#EEFE">EEFE</a>    <a href="#CMPSTR">CMPSTR</a>  <a href="#EEE6">EEE6</a>    <a href="#CN">CN</a>      <a href="#CN">0020</a>
 <a href="#CNVIN1">CNVIN1</a>  <a href="#FD20">FD20</a>    <a href="#CNVIN2">CNVIN2</a>  <a href="#FD27">FD27</a>    <a href="#CNVIN3">CNVIN3</a>  <a href="#FD2E">FD2E</a>    <a href="#CNVIN4">CNVIN4</a>  <a href="#FD35">FD35</a>    <a href="#CNVIN5">CNVIN5</a>  <a href="#FD3C">FD3C</a>
 <a href="#CNVNUM">CNVNUM</a>  <a href="#F926">F926</a>    <a href="#COMMAN">COMMAN</a>  <a href="#1043">1043</a>    <a href="#COMPL">COMPL</a>   <a href="#F67E">F67E</a>    <a href="#CONCAT">CONCAT</a>  <a href="#F306">F306</a>    <a href="#CONEXP">CONEXP</a>  <a href="#F956">F956</a>
 <a href="#CONMON">CONMON</a>  <a href="#FCD9">FCD9</a>    <a href="#CONOT1">CONOT1</a>  <a href="#FCF1">FCF1</a>    <a href="#CONPOS">CONPOS</a>  <a href="#F61B">F61B</a>    <a href="#CONT">CONT</a>    <a href="#E89E">E89E</a>    <a href="#CONTAD">CONTAD</a>  <a href="#10D4">10D4</a>
@@ -6928,7 +6921,7 @@ FFF7 C381EB             JP      <a href="#PRNTCR">PRNTCR</a>          ; Output C
 <a href="#DIV3EX">DIV3EX</a>  <a href="#FFB1">FFB1</a>    <a href="#DIV3LP">DIV3LP</a>  <a href="#FFA8">FFA8</a>    <a href="#DIV4">DIV4</a>    <a href="#1015">1015</a>    <a href="#DIVLP">DIVLP</a>   <a href="#F78E">F78E</a>    <a href="#DIVSUP">DIVSUP</a>  <a href="#1009">1009</a>
 <a href="#DOAGN">DOAGN</a>   <a href="#E4F8">E4F8</a>    <a href="#DOCOM">DOCOM</a>   <a href="#EB98">EB98</a>    <a href="#DODEL">DODEL</a>   <a href="#E5C1">E5C1</a>    <a href="#DOEBIT">DOEBIT</a>  <a href="#FA60">FA60</a>    <a href="#DOFN">DOFN</a>    <a href="#F133">F133</a>
 <a href="#DOKE">DOKE</a>    <a href="#FDC7">FDC7</a>    <a href="#DONULL">DONULL</a>  <a href="#EB86">EB86</a>    <a href="#DOSPC">DOSPC</a>   <a href="#EBC2">EBC2</a>    <a href="#DOSUM">DOSUM</a>   <a href="#E94D">E94D</a>    <a href="#DOTAB">DOTAB</a>   <a href="#EBAF">EBAF</a>
-<a href="#DPOINT">DPOINT</a>  <a href="#F952">F952</a>    <a href="#DTSTR">DTSTR</a>   <a href="#F1D2">F1D2</a>    <a href="#DVBCDE">DVBCDE</a>  <a href="#F769">F769</a>    <a href="#DZ">DZ</a>      <a href="#0014">0014</a>    <a href="#DZERR">DZERR</a>   <a href="#E3B0">E3B0</a>
+<a href="#DPOINT">DPOINT</a>  <a href="#F952">F952</a>    <a href="#DTSTR">DTSTR</a>   <a href="#F1D2">F1D2</a>    <a href="#DVBCDE">DVBCDE</a>  <a href="#F769">F769</a>    <a href="#DZ">DZ</a>      <a href="#DZ">0014</a>    <a href="#DZERR">DZERR</a>   <a href="#E3B0">E3B0</a>
 <a href="#ECHDEL">ECHDEL</a>  <a href="#E5D5">E5D5</a>    <a href="#EDIGIT">EDIGIT</a>  <a href="#F999">F999</a>    <a href="#ENDBUF">ENDBUF</a>  <a href="#E5B8">E5B8</a>    <a href="#ENDCON">ENDCON</a>  <a href="#F965">F965</a>    <a href="#ENDDIM">ENDDIM</a>  <a href="#F0CC">F0CC</a>
 <a href="#ENDINP">ENDINP</a>  <a href="#EB7C">EB7C</a>    <a href="#ENDLIN">ENDLIN</a>  <a href="#FEF1">FEF1</a>    <a href="#ENDNAM">ENDNAM</a>  <a href="#EF4A">EF4A</a>    <a href="#ENDPRG">ENDPRG</a>  <a href="#E87A">E87A</a>    <a href="#ENFMEM">ENFMEM</a>  <a href="#E393">E393</a>
 <a href="#ERRIN">ERRIN</a>   <a href="#E3E1">E3E1</a>    <a href="#ERRLIN">ERRLIN</a>  <a href="#10D2">10D2</a>    <a href="#ERRMSG">ERRMSG</a>  <a href="#ERRMSG">E33F</a>    <a href="#ERROR">ERROR</a>   <a href="#E3C1">E3C1</a>    <a href="#ERRORS">ERRORS</a>  <a href="#E2B9">E2B9</a>
@@ -6950,7 +6943,7 @@ FFF7 C381EB             JP      <a href="#PRNTCR">PRNTCR</a>          ; Output C
 <a href="#GRBARY">GRBARY</a>  <a href="#F2AA">F2AA</a>    <a href="#GRBDON">GRBDON</a>  <a href="#F22B">F22B</a>    <a href="#GRBLP">GRBLP</a>   <a href="#F264">F264</a>    <a href="#GSTRCU">GSTRCU</a>  <a href="#F353">F353</a>    <a href="#GSTRDE">GSTRDE</a>  <a href="#F357">F357</a>
 <a href="#GSTRHL">GSTRHL</a>  <a href="#F356">F356</a>    <a href="#GTFLNM">GTFLNM</a>  <a href="#F395">F395</a>    <a href="#GTFNAM">GTFNAM</a>  <a href="#EF32">EF32</a>    <a href="#GTLNLP">GTLNLP</a>  <a href="#E9A9">E9A9</a>    <a href="#GTSIXD">GTSIXD</a>  <a href="#F9EA">F9EA</a>
 <a href="#GTVLUS">GTVLUS</a>  <a href="#EC3D">EC3D</a>    <a href="#GUART">GUART</a>   <a href="#FD56">FD56</a>    <a href="#HALF">HALF</a>    <a href="#FA91">FA91</a>    <a href="#HALFPI">HALFPI</a>  <a href="#FC4A">FC4A</a>    <a href="#HDRLP">HDRLP</a>   <a href="#E912">E912</a>
-<a href="#ID">ID</a>      <a href="#0016">0016</a>    <a href="#IDTEST">IDTEST</a>  <a href="#F17B">F17B</a>    <a href="#IF">IF</a>      <a href="#EAFF">EAFF</a>    <a href="#IFGO">IFGO</a>    <a href="#EB0D">EB0D</a>    <a href="#IFJMP">IFJMP</a>   <a href="#E81D">E81D</a>
+<a href="#ID">ID</a>      <a href="#ID">0016</a>    <a href="#IDTEST">IDTEST</a>  <a href="#F17B">F17B</a>    <a href="#IF">IF</a>      <a href="#EAFF">EAFF</a>    <a href="#IFGO">IFGO</a>    <a href="#EB0D">EB0D</a>    <a href="#IFJMP">IFJMP</a>   <a href="#E81D">E81D</a>
 <a href="#IGCHR">IGCHR</a>   <a href="#FD00">FD00</a>    <a href="#INCHL">INCHL</a>   <a href="#F869">F869</a>    <a href="#INCLEN">INCLEN</a>  <a href="#E6BB">E6BB</a>    <a href="#INDFND">INDFND</a>  <a href="#E370">E370</a>    <a href="#INEWLN">INEWLN</a>  <a href="#E455">E455</a>
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
@@ -6971,7 +6964,7 @@ FFF7 C381EB             JP      <a href="#PRNTCR">PRNTCR</a>          ; Output C
 <a href="#MAKNUM">MAKNUM</a>  <a href="#FA0F">FA0F</a>    <a href="#MANLP">MANLP</a>   <a href="#F92E">F92E</a>    <a href="#MATCH">MATCH</a>   <a href="#E589">E589</a>    <a href="#MEMMSG">MEMMSG</a>  <a href="#E103">E103</a>    <a href="#MFLP">MFLP</a>    <a href="#0051">0051</a>
 <a href="#MID">MID</a>     <a href="#F3EC">F3EC</a>    <a href="#MID1">MID1</a>    <a href="#F3B8">F3B8</a>    <a href="#MIDNUM">MIDNUM</a>  <a href="#F43C">F43C</a>    <a href="#MINCDE">MINCDE</a>  <a href="#F60D">F60D</a>    <a href="#MINUS">MINUS</a>   <a href="#EE11">EE11</a>
 <a href="#MKTMST">MKTMST</a>  <a href="#F1BF">F1BF</a>    <a href="#MLDBLP">MLDBLP</a>  <a href="#F907">F907</a>    <a href="#MLDEBC">MLDEBC</a>  <a href="#F8FF">F8FF</a>    <a href="#MLOOP">MLOOP</a>   <a href="#E049">E049</a>    <a href="#MLSP10">MLSP10</a>  <a href="#F7FC">F7FC</a>
-<a href="#MO">MO</a>      <a href="#0024">0024</a>    <a href="#MONITR">MONITR</a>  <a href="#FEA2">FEA2</a>    <a href="#MONLD">MONLD</a>   <a href="#FE88">FE88</a>    <a href="#MONOUT">MONOUT</a>  <a href="#FE45">FE45</a>    <a href="#MONSTT">MONSTT</a>  <a href="#MONSTT">0000</a>
+<a href="#MO">MO</a>      <a href="#MO">0024</a>    <a href="#MONITR">MONITR</a>  <a href="#FEA2">FEA2</a>    <a href="#MONLD">MONLD</a>   <a href="#FE88">FE88</a>    <a href="#MONOUT">MONOUT</a>  <a href="#FE45">FE45</a>    <a href="#MONSTT">MONSTT</a>  <a href="#MONSTT">0000</a>
 <a href="#MONTST">MONTST</a>  <a href="#FE6D">FE6D</a>    <a href="#MONTYP">MONTYP</a>  <a href="#008D">008D</a>    <a href="#MONVE">MONVE</a>   <a href="#FEAA">FEAA</a>    <a href="#MORDT">MORDT</a>   <a href="#ECA6">ECA6</a>    <a href="#MORINP">MORINP</a>  <a href="#E610">E610</a>
 <a href="#MOVBUF">MOVBUF</a>  <a href="#E474">E474</a>    <a href="#MOVDIR">MOVDIR</a>  <a href="#E591">E591</a>    <a href="#MOVLP">MOVLP</a>   <a href="#E37F">E37F</a>    <a href="#MOVSTR">MOVSTR</a>  <a href="#E37C">E37C</a>    <a href="#MOVUP">MOVUP</a>   <a href="#E379">E379</a>
 <a href="#MRPRNT">MRPRNT</a>  <a href="#EB1F">EB1F</a>    <a href="#MSIZE">MSIZE</a>   <a href="#E036">E036</a>    <a href="#MUL8LP">MUL8LP</a>  <a href="#F733">F733</a>    <a href="#MULLN2">MULLN2</a>  <a href="#F6FF">F6FF</a>    <a href="#MULT">MULT</a>    <a href="#F706">F706</a>
@@ -6983,7 +6976,7 @@ FFF7 C381EB             JP      <a href="#PRNTCR">PRNTCR</a>          ; Output C
 <a href="#NOSWAP">NOSWAP</a>  <a href="#F5E7">F5E7</a>    <a href="#NOTSTR">NOTSTR</a>  <a href="#EF65">EF65</a>    <a href="#NOXOR">NOXOR</a>   <a href="#F467">F467</a>    <a href="#NSCFOR">NSCFOR</a>  <a href="#EF75">EF75</a>    <a href="#NULFLG">NULFLG</a>  <a href="#1044">1044</a>
 <a href="#NULL">NULL</a>    <a href="#E8B1">E8B1</a>    <a href="#NULLP">NULLP</a>   <a href="#EB8D">EB8D</a>    <a href="#NULLS">NULLS</a>   <a href="#1041">1041</a>    <a href="#NUMASC">NUMASC</a>  <a href="#F9B8">F9B8</a>    <a href="#NXTARY">NXTARY</a>  <a href="#F02C">F02C</a>
 <a href="#NXTBYT">NXTBYT</a>  <a href="#E567">E567</a>    <a href="#NXTCHR">NXTCHR</a>  <a href="#E5A8">E5A8</a>    <a href="#NXTDAT">NXTDAT</a>  <a href="#10DC">10DC</a>    <a href="#NXTDTA">NXTDTA</a>  <a href="#EA6F">EA6F</a>    <a href="#NXTITM">NXTITM</a>  <a href="#EC31">EC31</a>
-<a href="#NXTOPR">NXTOPR</a>  <a href="#10D0">10D0</a>    <a href="#NXTSTL">NXTSTL</a>  <a href="#EA76">EA76</a>    <a href="#NXTSTT">NXTSTT</a>  <a href="#EA79">EA79</a>    <a href="#OD">OD</a>      <a href="#0006">0006</a>    <a href="#OKMSG">OKMSG</a>   <a href="#E34B">E34B</a>
+<a href="#NXTOPR">NXTOPR</a>  <a href="#10D0">10D0</a>    <a href="#NXTSTL">NXTSTL</a>  <a href="#EA76">EA76</a>    <a href="#NXTSTT">NXTSTT</a>  <a href="#EA79">EA79</a>    <a href="#OD">OD</a>      <a href="#OD">0006</a>    <a href="#OKMSG">OKMSG</a>   <a href="#E34B">E34B</a>
 <a href="#OM">OM</a>      <a href="#OM">000C</a>    <a href="#OMERR">OMERR</a>   <a href="#E3A2">E3A2</a>    <a href="#ON">ON</a>      <a href="#EAE1">EAE1</a>    <a href="#ONGO">ONGO</a>    <a href="#EAF0">EAF0</a>    <a href="#ONGOLP">ONGOLP</a>  <a href="#EAF1">EAF1</a>
 <a href="#ONJMP">ONJMP</a>   <a href="#E81E">E81E</a>    <a href="#OPNPAR">OPNPAR</a>  <a href="#ED56">ED56</a>    <a href="#OPRND">OPRND</a>   <a href="#EDD1">EDD1</a>    <a href="#OS">OS</a>      <a href="#OS">001A</a>    <a href="#OTKLN">OTKLN</a>   <a href="#E5E9">E5E9</a>
 <a href="#OTPORT">OTPORT</a>  <a href="#1007">1007</a>    <a href="#OUTBAD">OUTBAD</a>  <a href="#F56B">F56B</a>    <a href="#OUTC">OUTC</a>    <a href="#E69B">E69B</a>    <a href="#OUTCHR">OUTCHR</a>  <a href="#FCFD">FCFD</a>    <a href="#OUTEXP">OUTEXP</a>  <a href="#FA70">FA70</a>
@@ -7004,7 +6997,7 @@ FFF7 C381EB             JP      <a href="#PRNTCR">PRNTCR</a>          ; Output C
 <a href="#RESEED">RESEED</a>  <a href="#FBEC">FBEC</a>    <a href="#RESET">RESET</a>   <a href="#1057">1057</a>    <a href="#RESETB">RESETB</a>  <a href="#FF55">FF55</a>    <a href="#RESTNL">RESTNL</a>  <a href="#E85B">E85B</a>    <a href="#RESTOR">RESTOR</a>  <a href="#E846">E846</a>
 <a href="#RESZER">RESZER</a>  <a href="#F633">F633</a>    <a href="#RETADR">RETADR</a>  <a href="#EFDC">EFDC</a>    <a href="#RETCTC">RETCTC</a>  <a href="#FE65">FE65</a>    <a href="#RETINT">RETINT</a>  <a href="#F82A">F82A</a>    <a href="#RETLIN">RETLIN</a>  <a href="#EA6A">EA6A</a>
 <a href="#RETNAD">RETNAD</a>  <a href="#E58D">E58D</a>    <a href="#RETNUL">RETNUL</a>  <a href="#EFDF">EFDF</a>    <a href="#RETNUM">RETNUM</a>  <a href="#EE1D">EE1D</a>    <a href="#RETREL">RETREL</a>  <a href="#F81C">F81C</a>    <a href="#RETURN">RETURN</a>  <a href="#EA4B">EA4B</a>
-<a href="#RG">RG</a>      <a href="#0004">0004</a>    <a href="#RIGHT">RIGHT</a>   <a href="#F3E2">F3E2</a>    <a href="#RIGHT1">RIGHT1</a>  <a href="#F3B6">F3B6</a>    <a href="#RINPUT">RINPUT</a>  <a href="#104E">104E</a>    <a href="#RLTLP">RLTLP</a>   <a href="#ED76">ED76</a>
+<a href="#RG">RG</a>      <a href="#RG">0004</a>    <a href="#RIGHT">RIGHT</a>   <a href="#F3E2">F3E2</a>    <a href="#RIGHT1">RIGHT1</a>  <a href="#F3B6">F3B6</a>    <a href="#RINPUT">RINPUT</a>  <a href="#104E">104E</a>    <a href="#RLTLP">RLTLP</a>   <a href="#ED76">ED76</a>
 <a href="#RND">RND</a>     <a href="#FB8B">FB8B</a>    <a href="#RND1">RND1</a>    <a href="#FBC7">FBC7</a>    <a href="#RND2">RND2</a>    <a href="#FBE3">FBE3</a>    <a href="#RNDTAB">RNDTAB</a>  <a href="#FBF4">FBF4</a>    <a href="#RNGTST">RNGTST</a>  <a href="#FA82">FA82</a>
 <a href="#RONDB">RONDB</a>   <a href="#F654">F654</a>    <a href="#RONDUP">RONDUP</a>  <a href="#F653">F653</a>    <a href="#ROUND">ROUND</a>   <a href="#F5BB">F5BB</a>    <a href="#RSCALE">RSCALE</a>  <a href="#F98E">F98E</a>    <a href="#RSLNBK">RSLNBK</a>  <a href="#E770">E770</a>
 <a href="#RSTSTR">RSTSTR</a>  <a href="#F405">F405</a>    <a href="#RUART">RUART</a>   <a href="#F4B4">F4B4</a>    <a href="#RUN">RUN</a>     <a href="#EA10">EA10</a>    <a href="#RUNCNT">RUNCNT</a>  <a href="#E7F2">E7F2</a>    <a href="#RUNFST">RUNFST</a>  <a href="#E4C5">E4C5</a>
@@ -7032,13 +7025,13 @@ FFF7 C381EB             JP      <a href="#PRNTCR">PRNTCR</a>          ; Output C
 <a href="#T4WR">T4WR</a>    <a href="#0400">0400</a>    <a href="#TAN">TAN</a>     <a href="#FC67">FC67</a>    <a href="#TBRK">TBRK</a>    <a href="#TBRK">001C</a>    <a href="#TBRK2">TBRK2</a>   <a href="#FD50">FD50</a>    <a href="#TBS">TBS</a>     <a href="#001D">001D</a>
 <a href="#TCHINP">TCHINP</a>  <a href="#FE62">FE62</a>    <a href="#TCLS">TCLS</a>    <a href="#FD96">FD96</a>    <a href="#TCR">TCR</a>     <a href="#001F">001F</a>    <a href="#TCS">TCS</a>     <a href="#TCS">001E</a>    <a href="#TCUR">TCUR</a>    <a href="#0C18">0C18</a>
 <a href="#TESTOS">TESTOS</a>  <a href="#F247">F247</a>    <a href="#TESTR">TESTR</a>   <a href="#F229">F229</a>    <a href="#THSFIL">THSFIL</a>  <a href="#F548">F548</a>    <a href="#TIN">TIN</a>     <a href="#0C4D">0C4D</a>    <a href="#TLOAD">TLOAD</a>   <a href="#FE99">FE99</a>
-<a href="#TM">TM</a>      <a href="#0018">0018</a>    <a href="#TMERR">TMERR</a>   <a href="#E3BF">E3BF</a>    <a href="#TMFLP">TMFLP</a>   <a href="#FE42">FE42</a>    <a href="#TMNCUR">TMNCUR</a>  <a href="#FE04">FE04</a>    <a href="#TMNOUT">TMNOUT</a>  <a href="#FE4F">FE4F</a>
+<a href="#TM">TM</a>      <a href="#TM">0018</a>    <a href="#TMERR">TMERR</a>   <a href="#E3BF">E3BF</a>    <a href="#TMFLP">TMFLP</a>   <a href="#FE42">FE42</a>    <a href="#TMNCUR">TMNCUR</a>  <a href="#FE04">FE04</a>    <a href="#TMNOUT">TMNOUT</a>  <a href="#FE4F">FE4F</a>
 <a href="#TMPSTR">TMPSTR</a>  <a href="#10BF">10BF</a>    <a href="#TMSTPL">TMSTPL</a>  <a href="#10B3">10B3</a>    <a href="#TMSTPT">TMSTPT</a>  <a href="#10B1">10B1</a>    <a href="#TOPOOL">TOPOOL</a>  <a href="#F3AE">F3AE</a>    <a href="#TOSTRA">TOSTRA</a>  <a href="#F346">F346</a>
 <a href="#TOUT">TOUT</a>    <a href="#0C4A">0C4A</a>    <a href="#TRYAGN">TRYAGN</a>  <a href="#FA2F">FA2F</a>    <a href="#TSALP">TSALP</a>   <a href="#F347">F347</a>    <a href="#TSAVE">TSAVE</a>   <a href="#FE7F">FE7F</a>    <a href="#TSTBIT">TSTBIT</a>  <a href="#FFED">FFED</a>
 <a href="#TSTBRK">TSTBRK</a>  <a href="#E861">E861</a>    <a href="#TSTMEM">TSTMEM</a>  <a href="#E05B">E05B</a>    <a href="#TSTNUM">TSTNUM</a>  <a href="#ED44">ED44</a>    <a href="#TSTOPL">TSTOPL</a>  <a href="#F1F0">F1F0</a>    <a href="#TSTRED">TSTRED</a>  <a href="#EEA8">EEA8</a>
 <a href="#TSTREM">TSTREM</a>  <a href="#E5A2">E5A2</a>    <a href="#TSTSGN">TSTSGN</a>  <a href="#F813">F813</a>    <a href="#TSTSTR">TSTSTR</a>  <a href="#ED45">ED45</a>    <a href="#TTYLIN">TTYLIN</a>  <a href="#E607">E607</a>    <a href="#TYPE">TYPE</a>    <a href="#10AD">10AD</a>
-<a href="#UARTD">UARTD</a>   <a href="#0001">0001</a>    <a href="#UARTOT">UARTOT</a>  <a href="#FD5F">FD5F</a>    <a href="#UARTS">UARTS</a>   <a href="#UARTS">0002</a>    <a href="#UF">UF</a>      <a href="#0022">0022</a>    <a href="#UFERR">UFERR</a>   <a href="#E3B9">E3B9</a>
-<a href="#UL">UL</a>      <a href="#000E">000E</a>    <a href="#ULERR">ULERR</a>   <a href="#EA46">EA46</a>    <a href="#UNITY">UNITY</a>   <a href="#F6B6">F6B6</a>    <a href="#UPDATA">UPDATA</a>  <a href="#E85C">E85C</a>    <a href="#URTOLP">URTOLP</a>  <a href="#FD61">FD61</a>
+<a href="#UARTD">UARTD</a>   <a href="#0001">0001</a>    <a href="#UARTOT">UARTOT</a>  <a href="#FD5F">FD5F</a>    <a href="#UARTS">UARTS</a>   <a href="#UARTS">0002</a>    <a href="#UF">UF</a>      <a href="#UF">0022</a>    <a href="#UFERR">UFERR</a>   <a href="#E3B9">E3B9</a>
+<a href="#UL">UL</a>      <a href="#UL">000E</a>    <a href="#ULERR">ULERR</a>   <a href="#EA46">EA46</a>    <a href="#UNITY">UNITY</a>   <a href="#F6B6">F6B6</a>    <a href="#UPDATA">UPDATA</a>  <a href="#E85C">E85C</a>    <a href="#URTOLP">URTOLP</a>  <a href="#FD61">FD61</a>
 <a href="#USR">USR</a>     <a href="#1003">1003</a>    <a href="#VAL">VAL</a>     <a href="#F41C">F41C</a>    <a href="#VAREND">VAREND</a>  <a href="#10D8">10D8</a>    <a href="#VDU">VDU</a>     <a href="#0800">0800</a>    <a href="#WAIT">WAIT</a>    <a href="#F453">F453</a>
 <a href="#WAITLP">WAITLP</a>  <a href="#F468">F468</a>    <a href="#WARMST">WARMST</a>  <a href="#E0AE">E0AE</a>    <a href="#WIDTH">WIDTH</a>   <a href="#FDA5">FDA5</a>    <a href="#WORDS">WORDS</a>   <a href="#E143">E143</a>    <a href="#WORDTB">WORDTB</a>  <a href="#E25A">E25A</a>
 <a href="#WRKSPC">WRKSPC</a>  <a href="#1000">1000</a>    <a href="#WUART">WUART</a>   <a href="#F4BA">F4BA</a>    <a href="#WUART2">WUART2</a>  <a href="#F4B7">F4B7</a>    <a href="#XYPOS">XYPOS</a>   <a href="#FF96">FF96</a>    <a href="#ZDATA">ZDATA</a>   <a href="#0083">0083</a>
@@ -7054,11 +7047,7 @@ FFF7 C381EB             JP      <a href="#PRNTCR">PRNTCR</a>          ; Output C
 <h2>
 THE END
 </h2>
-<!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
-<!--
-	TSALP
-	bas8K.*[A-Z0-9]"\); \?>$
-	<a href="#"></a>--></div><br>
+</div><br>
 
 <!-- navi-footer.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
 

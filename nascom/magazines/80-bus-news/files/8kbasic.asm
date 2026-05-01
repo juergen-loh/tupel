@@ -435,7 +435,7 @@ PRITAB: DEFB	79H		; Precedence value
 	DEFW	PSUB		; FPREG = <last> - FPREG
 
 	DEFB	7CH		; Precedence value
-	DEFW	MULT		; PPREG = <last> * FPREG
+	DEFW	MULT		; FPREG = <last> * FPREG
 
 	DEFB	7CH		; Precedence value
 	DEFW	DIV		; FPREG = <last> / FPREG
@@ -4262,7 +4262,7 @@ RNDTAB: DEFB	068H,0B1H,046H,068H	; Table used by RND
 	DEFB	010H,0D1H,075H,068H
 
 COS:	LD	HL,HALFPI	; Point to PI/2
-	CALL	ADDPHL		; Add it to PPREG
+	CALL	ADDPHL		; Add it to FPREG
 SIN:	CALL	STAKFP		; Put angle on stack
 	LD	BC,8349H	; BCDE = 2 PI
 	LD	DE,0FDBH

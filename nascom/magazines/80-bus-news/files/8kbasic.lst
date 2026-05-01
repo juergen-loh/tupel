@@ -459,7 +459,7 @@ E2A7 79                 DEFB    79H             ; Precedence value
 E2A8 C8F5               DEFW    PSUB            ; FPREG = <last> - FPREG
 
 E2AA 7C                 DEFB    7CH             ; Precedence value
-E2AB 06F7               DEFW    MULT            ; PPREG = <last> * FPREG
+E2AB 06F7               DEFW    MULT            ; FPREG = <last> * FPREG
 
 E2AD 7C                 DEFB    7CH             ; Precedence value
 E2AE 67F7               DEFW    DIV             ; FPREG = <last> / FPREG
@@ -4449,7 +4449,7 @@ FBF8 99E99269           DEFB    099H,0E9H,092H,069H
 FBFC 10D17568           DEFB    010H,0D1H,075H,068H
 
 FC00 214AFC     COS:    LD      HL,HALFPI       ; Point to PI/2
-FC03 CDBEF5             CALL    ADDPHL          ; Add it to PPREG
+FC03 CDBEF5             CALL    ADDPHL          ; Add it to FPREG
 FC06 CD44F8     SIN:    CALL    STAKFP          ; Put angle on stack
 FC09 014983             LD      BC,8349H        ; BCDE = 2 PI
 FC0C 11DB0F             LD      DE,0FDBH

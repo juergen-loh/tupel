@@ -21,10 +21,9 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/23/30/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-04-12 08:39:28 +0200 (So, 12. Apr 2026) $ -->
+	<!-- page.php / $Date: 2026-05-01 13:22:07 +0200 (Fr, 01. Mai 2026) $ / lastModified: Fri, 01 May 2026 11:22:34 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
-	<!-- Sat, 25 Apr 2026 19:20:34 GMT -->
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
 	<link rel="stylesheet" type="text/css" href="../../../style.css">
 <!-- navi-body.php -->
@@ -79,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-04-25 21:20:34 +0200 (Sa, 25. Apr 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-01 08:46:12 +0200 (Fr, 01. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -167,7 +166,7 @@ Example of the number 35.25 in floating point:&ndash;<br><br></p>
 <tr><td colspan=3>As the bit after the point is ALWAYS &ldquo;1&rdquo; this bit can be used
 to store the sign of the number &ldquo;0&rdquo; for +ve, &ldquo;1&rdquo; for -ve</td></tr>
 <tr><td>So +35.25 is stored as</td><td colspan=2>.00001101 * 2 ^ 00000110</td></tr>
-<tr><td>Which in 24 bits is</td><td colspan=2>.000011010000000000000000 *2^ 00000110</td></tr>
+<tr><td>Which in 24 bits is</td><td colspan=2>.000011010000&#x200b;000000000000 *2^ 00000110</td></tr>
 <tr><td colspan=3>&#x200b;</td></tr>
 
 <tr><td colspan=3>128 is added to the exponent so that overflows and underflows
@@ -235,10 +234,10 @@ the first) line is to be executed.
 
 <tr><td><p></p></td><td><p></p></td><td colspan=2><p>
 Example:&ndash; The program:&ndash;</p>
-<pre>
-  10 <a href="../../../24/28/text/#ZFOR">FOR</a> A=1 <a href="../../../24/28/text/#ZTO">TO</a> 5:<a href="../../../24/28/text/#ZPRINT">PRINT</a> A,<a href="../../../24/26/text/#E11D">SQR</a>(1):<a href="../../../26/34/text/#NEXT">NEXT</a> A
-  20 <a href="../../../24/28/text/#ZEND">END</a>
-</pre>
+<p style="margin-left: 1em">
+  10 <a href="../../../25/33/text/#FOR">FOR</a> A=1 <a href="../../../24/28/text/#ZTO">TO</a> 5:&#x200b;<a href="../../../26/31/text/#PRINT">PRINT</a> A,<a href="../../../32/28/text/#SQR">SQR</a>(1):&#x200b;<a href="../../../26/34/text/#NEXT">NEXT</a> A<br>
+  20 <a href="../../../25/35/text/#PEND">END</a>
+</p>
 <p>is in memory, it would look like this:&ndash;
 </p></td></tr>
 <tr><td><p></p></td><td><p></p></td><td colspan=2>
@@ -250,7 +249,7 @@ Example:&ndash; The program:&ndash;</p>
 <tr><td>10FE</td><td>81		</td><td><a href="../../../24/28/text/#ZFOR">FOR</a> token</td></tr>
 <tr><td>10FF</td><td>20		</td><td>Space</td></tr>
 <tr><td>1100</td><td>41		</td><td>A</td></tr>
-<tr><td>1101</td><td>B4		</td><td>= token</td></tr>
+<tr><td>1101</td><td>B4		</td><td><a href="../../../24/28/text/#ZEQUAL">=</a> token</td></tr>
 <tr><td>1102</td><td>31		</td><td>1</td></tr>
 <tr><td>1103</td><td>20		</td><td>Space</td></tr>
 <tr><td>1104</td><td>A6		</td><td><a href="../../../24/28/text/#ZTO">TO</a> token</td></tr>
@@ -261,7 +260,7 @@ Example:&ndash; The program:&ndash;</p>
 <tr><td>1109</td><td>20		</td><td>Space</td></tr>
 <tr><td>110A</td><td>41		</td><td>A</td></tr>
 <tr><td>110B</td><td>2C		</td><td>,</td></tr>
-<tr><td>110C</td><td>BA		</td><td><a href="../../../24/26/text/#E11D">SQR</a> token</td></tr>
+<tr><td>110C</td><td>BA		</td><td><a href="../../../32/28/text/#SQR">SQR</a> token</td></tr>
 <tr><td>110D</td><td>28		</td><td>(</td></tr>
 <tr><td>110E</td><td>41		</td><td>A</td></tr>
 <tr><td>110F</td><td>29		</td><td>)</td></tr>
