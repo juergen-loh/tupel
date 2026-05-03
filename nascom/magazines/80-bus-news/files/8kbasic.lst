@@ -2037,7 +2037,7 @@ ED36 FE2C               CP      ","             ; More NEXTs ?
 ED38 C2F2E7             JP      NZ,RUNCNT       ; No - Do next statement
 ED3B CD36E8             CALL    GETCHR          ; Position to index name
 ED3E CDF9EC             CALL    NEXT1           ; Re-enter NEXT routine
-                ; < will not RETurn to here , Exit to RUNCNT or Loop >
+                        ; < will not RETurn to here , Exit to RUNCNT or Loop >
 
 Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    45
 
@@ -2050,7 +2050,7 @@ ED4A B7                 OR      A               ; Clear carry , set parity
 ED4B E8                 RET     PE              ; Even parity - Types match
 ED4C C3BFE3             JP      TMERR           ; Different types - Error
 
-                ; <<< NO REFERENCE TO HERE >>>
+                        ; <<< NO REFERENCE TO HERE >>>
 
 ED4F CD90E6             CALL    CHKSYN          ; Make sure "=" follows
 ED52 B4                 DEFB    ZEQUAL          ; "="

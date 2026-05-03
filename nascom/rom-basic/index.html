@@ -22,7 +22,7 @@
 <!-- /navi-head.php -->
 	<meta name="keywords" content="Nascom ROM Basic 4.7, Microsoft BASIC, Nascom Computer, Nascom 1, Nascom 2">
 	<title>Nascom ROM Basic</title>
-	<!-- $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 13:34:22 GMT -->
 	<link rel="stylesheet" type="text/css" href="../magazines/80-bus-news/style.css">
 <!-- navi-body.php -->
 </head>
@@ -3727,7 +3727,7 @@ ED36 FE2C               CP      ","             ; More NEXTs ?
 ED38 C2F2E7             JP      NZ,<a href="#RUNCNT">RUNCNT</a>       ; No - Do next statement
 ED3B CD36E8             CALL    <a href="#GETCHR">GETCHR</a>          ; Position to index name
 ED3E CDF9EC             CALL    <a href="#NEXT1">NEXT1</a>           ; Re-enter <a href="#NEXT">NEXT</a> routine
-                ; &lt; will not RETurn to here , Exit to <a href="#RUNCNT">RUNCNT</a> or Loop &gt;
+                        ; &lt; will not RETurn to here , Exit to <a href="#RUNCNT">RUNCNT</a> or Loop &gt;
 </pre>
 <!-- Linie --><div class="hline" style="width: 100%; margin:auto;  border-top:2px solid #000; padding: 0; margin-top: 3px; margin-bottom: 3px"></div>
 <pre>
@@ -3742,7 +3742,7 @@ ED4A B7                 OR      A               ; Clear carry , set parity
 ED4B E8                 RET     PE              ; Even parity - Types match
 ED4C C3BFE3             JP      <a href="#TMERR">TMERR</a>           ; Different types - Error
 
-                ; &lt;&lt;&lt; NO REFERENCE TO HERE &gt;&gt;&gt;
+                        ; &lt;&lt;&lt; NO REFERENCE TO HERE &gt;&gt;&gt;
 
 ED4F CD90E6             CALL    <a href="#CHKSYN">CHKSYN</a>          ; Make sure "=" follows
 ED52 B4                 DEFB    <a href="#ZEQUAL">ZEQUAL</a>          ; "="

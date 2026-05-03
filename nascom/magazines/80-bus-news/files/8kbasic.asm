@@ -1946,7 +1946,7 @@ KILFOR: LD	SP,HL		; Remove "FOR" block
 	JP	NZ,RUNCNT	; No - Do next statement
 	CALL	GETCHR		; Position to index name
 	CALL	NEXT1		; Re-enter NEXT routine
-; < will not RETurn to here , Exit to RUNCNT or Loop >
+	; < will not RETurn to here , Exit to RUNCNT or Loop >
 
 GETNUM: CALL	EVAL		; Get a numeric expression
 TSTNUM: DEFB	(OR n)		; Clear carry (numeric)
@@ -1957,7 +1957,7 @@ CHKTYP: LD	A,(TYPE)	; Check types match
 	RET	PE		; Even parity - Types match
 	JP	TMERR		; Different types - Error
 
-; <<< NO REFERENCE TO HERE >>>
+	; <<< NO REFERENCE TO HERE >>>
 
 	CALL	CHKSYN		; Make sure "=" follows
 	DEFB	ZEQUAL		; "="
