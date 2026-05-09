@@ -22,7 +22,7 @@
 <!-- /navi-head.php -->
 	<meta name="keywords" content="Nascom ROM Basic 4.7, Microsoft BASIC, Nascom Computer, Nascom 1, Nascom 2">
 	<title>Nascom ROM Basic</title>
-	<!-- $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 18:47:09 GMT -->
+	<!-- $Date: 2026-05-03 23:15:24 +0200 (So, 03. Mai 2026) $ / lastModified: Mon, 04 May 2026 19:55:18 GMT -->
 	<link rel="stylesheet" type="text/css" href="../magazines/80-bus-news/style.css">
 <!-- navi-body.php -->
 </head>
@@ -76,7 +76,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-03 23:15:24 +0200 (So, 03. Mai 2026) $ -->
 
 <div class="mag-80-bus-news DisAssemblyRomBasic" lang="en">
 <h1 id="article1" class="uppercase">
@@ -179,9 +179,9 @@ before a character is sent to them!
 <tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p><span id="work2"><a href="../magazines/80-bus-news/23/28/text/#work2">PAGE 2</a></span></p></th></tr>
 
 <tr><td><p><a href="#CTLOFG">CTLOFG</a></p></td><td><p><a href="#1045">1045</a></p></td><td colspan=2><p>
-Control &ldquo;0&rdquo; (Disable output) flag.<br>
+Control &ldquo;O&rdquo; (Disable output) flag.<br>
 If this flag is set then no output will not appear at the
-terminal. This flag is flipped every time control &ldquo;0&rdquo; is typed
+terminal. This flag is flipped every time control &ldquo;O&rdquo; is typed
 from the keyboard.
 </p></td></tr>
 <tr><td><p><a href="#LINESC">LINESC</a></p></td><td><p><a href="#1046">1046</a></p></td><td colspan=2><p>
@@ -327,7 +327,7 @@ This contains a pointer into the temporary string pool.
 <tr><td><p><a href="#TMSTPL">TMSTPL</a></p></td><td><p><a href="#10B3">10B3</a></p></td><td colspan=2><p>
 Temporary string pool.<br>
 This is a store of 4 temporary strings that were created by
-such things as &ldquo;LEFTS&rdquo;,&ldquo;CHRS&rdquo; and string concatenation.
+such things as &ldquo;LEFT$&rdquo;,&ldquo;CHR$&rdquo; and string concatenation.
 </p></td></tr>
 <tr><td><p><a href="#TMPSTR">TMPSTR</a></p></td><td><p><a href="#10BF">10BF</a></p></td><td colspan=2><p>
 Temporary string.<br>
@@ -523,7 +523,7 @@ it can be tested after to make the result correct.
 <tr><td><p><a href="#PBUFF">PBUFF</a></p></td><td><p><a href="#10E9">10E9</a></p></td><td colspan=2><p>
 Number print buffer.<br>
 When a floating point number has to be converted into ASCII
-for PRINT or STRS the ASCII number is built up in this buffer
+for PRINT or STR$ the ASCII number is built up in this buffer
 by NUMASC so that it can be output or assigned to a string.
 </p></td></tr>
 <tr><td><p><a href="#MULVAL">MULVAL</a></p></td><td><p><a href="#10F6">10F6</a></p></td><td colspan=2><p>
@@ -1207,7 +1207,7 @@ result in FPREG and set TYPE to string or numeric.
 <tr><td><p><a href="#FNOFST">FNOFST</a></p></td><td><p><a href="#EE33">EE33</a></p></td><td colspan=2><p>
 Enter with offset into FNCTAB. If it is &ldquo;POINT (X,Y)&rdquo; then jump
 directly to &ldquo;POINT (X,Y)&rdquo; routine (This SHOULD have been a jump
-via the POINT reflection). If it is LEFT$, RIGHTS or MID$ then
+via the POINT reflection). If it is LEFT$, RIGHT$ or MID$ then
 evaluate the string expression and get the &ldquo;,&rdquo; after it then go
 to the string function. If it is any other function then get
 its address from FNCTAB and call it.
@@ -1319,7 +1319,7 @@ RIGHT$ (X$,X) routine.
 <tr><td><p><a href="#MID">MID</a></p></td><td><p><a href="#F3EC">F3EC</a></p></td><td colspan=2><p>
 MID$(X$,P[,L]) routine.<br>
 MID$(X$,P) returns string from character P to the end.<br>
-MIDS(X$,P,L) returns string from position P for L characters.
+MID$(X$,P,L) returns string from position P for L characters.
 </p></td></tr>
 <tr><td><p><a href="#VAL">VAL</a></p></td><td><p><a href="#F41C">F41C</a></p></td><td colspan=2><p>
 VAL(X$) routine.
