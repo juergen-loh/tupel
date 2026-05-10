@@ -22,7 +22,7 @@
 <!-- /navi-head.php -->
 	<meta name="keywords" content="Nascom ROM Basic 4.7, Microsoft BASIC, Nascom Computer, Nascom 1, Nascom 2">
 	<title>Nascom ROM Basic</title>
-	<!-- $Date: 2026-05-03 23:15:24 +0200 (So, 03. Mai 2026) $ / lastModified: Mon, 04 May 2026 19:55:18 GMT -->
+	<!-- $Date: 2026-05-03 23:15:24 +0200 (So, 03. Mai 2026) $ / lastModified: Sat, 09 May 2026 16:57:36 GMT -->
 	<link rel="stylesheet" type="text/css" href="../magazines/80-bus-news/style.css">
 <!-- navi-body.php -->
 </head>
@@ -296,7 +296,7 @@ or create the specified array.
 </p></td></tr>
 <tr><td><p><a href="#TYPE">TYPE</a></p></td><td><p><a href="#10AD">10AD</a></p></td><td colspan=2><p>
 Data type flag.<br>
-This flag contains the &ldquo;type&rdquo; of the current expression.
+This flag contains the &ldquo;type&rdquo; of the current expression.<br>
 That is:&ndash; zero = Numeric, non-zero = string.
 </p></td></tr>
 <tr><td><p><a href="#DATFLG">DATFLG</a></p></td><td><p><a href="#10AE">10AE</a></p></td><td colspan=2><p>
@@ -862,7 +862,7 @@ If the FOR block cannot be found then a &ldquo;?NF Error&rdquo; occurs.
 <table>
 <colgroup><col><col><col><col></colgroup>
 
-<tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p>PAGE 10</p></th></tr>
+<tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p><span id="work10"><a href="../magazines/80-bus-news/23/32/text/#work10">PAGE 10</a></span></p></th></tr>
 
 <tr><td colspan=4><p>
 ******** Now for the exciting bit &ndash; The ROM ********
@@ -878,7 +878,7 @@ at 1000 to 105F.
 </p></td></tr>
 
 <tr><td><p><a href="#MSIZE">MSIZE</a></p></td><td><p><a href="#E036">E036</a></p></td><td colspan=2><p>
-Output &ldquo;Memory size&rdquo; prompt and get response from user.
+Output &ldquo;Memory size&rdquo; prompt and get response from user.<br>
 If a number is given jump to TSTMEM otherwise start at the
 beginning of RAM and test each successive byte until the end
 of RAM is found. When the end has been found jump to SETTOP.
@@ -966,7 +966,7 @@ Clear out variables and string space an reset DATA pointer.
 <table>
 <colgroup><col><col><col><col></colgroup>
 
-<tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p>PAGE 11</p></th></tr>
+<tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p><span id="work11"><a href="../magazines/80-bus-news/23/32/text/#work11">PAGE 11</a></span></p></th></tr>
 
 <tr><td><p><a href="#CLREG">CLREG</a></p></td><td><p><a href="#E4DF">E4DF</a></p></td><td colspan=2><p>
 Reset stack to top of memory, clear out temporary strings,
@@ -995,12 +995,12 @@ Get an input line by character and save it in <a href="#BUFFER">BUFFER</a>.
 </p></td></tr>
 
 <tr><td><p><a href="#CPDEHL">CPDEHL</a></p></td><td><p><a href="#E68A">E68A</a></p></td><td colspan=2><p>
-Compare the DE register with the HL register returning flags:&ndash;<br>
+Compare the DE register with the HL register returning flags:&ndash;
 Z &ndash; Registers are equal, C &ndash; DE &gt; HL and NC- DE &lt;= HL
 </p></td></tr>
 
 <tr><td><p><a href="#CHKSYN">CHKSYN</a></p></td><td><p><a href="#E690">E690</a></p></td><td colspan=2><p>
-Make sure the next byte in the code string is the same as the
+Make sure the next byte in the code string is the sam as the
 byte following the &ldquo;CALL CHKSYN&rdquo;. If not &ndash; output &ldquo;?SN Error&rdquo;.
 </p></td></tr>
 
@@ -1085,7 +1085,7 @@ CONT routine. Get continue address, if it is zero then output
 NULL routine. Set number of nulls to be output after CRLF.
 </p></td></tr>
 <tr><td><p><a href="#CHKLTR">CHKLTR</a></p></td><td><p><a href="#E977">E977</a></p></td><td colspan=2><p>
-Test next character in code string and return flags:&ndash;
+Test next character in code string and return flags:&ndash;<br>
 NC &ndash; Letter, C &ndash; Not a letter.
 </p></td></tr>
 <tr><td><p><a href="#FPSINT">FPSINT</a></p></td><td><p><a href="#E97F">E97F</a></p></td><td colspan=2><p>
@@ -1170,8 +1170,8 @@ assign values to variables.
 <tr><td><p><a href="#READ">READ</a></p></td><td><p><a href="#EC2C">EC2C</a></p></td><td colspan=2><p>
 READ routine. Get address of next DATA item and flag READ.
 Read in items an assign to variables (used for INPUT and READ).
-If any errors occur use READFG to see if:&ndash;<BR>
-&ldquo;OSN Error&rdquo; or &ldquo;?0D Error&rdquo; are needed for READ or<BR>
+If any errors occur use READFG to see if:&ndash;<br>
+&ldquo;?SN Error&rdquo; or &ldquo;?0D Error&rdquo; are needed for READ or<br>
 &ldquo;Redo&rdquo; or &ldquo;Extra ignored&rdquo; are needed for INPUT.
 </p></td></tr>
 <tr><td><p><a href="#FDTLP">FDTLP</a></p></td><td><p><a href="#ECD2">ECD2</a></p></td><td colspan=2><p>

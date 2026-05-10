@@ -1,3 +1,948 @@
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    1
+
+                A description of BASIC's usage of the memory
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+                *** The work space RAM from 1000 to 10F8 ***
+
+Name    Addr    What is it used for
+~~~~    ~~~~    ~~~~~~~~~~~~~~~~~~~
+
+WRKSPC  1000    Jump to warm start BASIC
+
+USR     1003    Jump for user defined function "USR(X)".
+                This is initialised to give "?FC Error".
+
+OUTSUB  1006    Skeleton for output to port "n" as the 8080 does not  have  the
+                "OUT (C),r" instruction. The port "n" is loaded into 1007.
+
+DIVSUP  1009    Skeleton  subtraction  routine  for  division.  The   dividend,
+                divisor and quotient  cannot  all  be  held  in  the  registers
+                therefore  the  divisor  is  loaded  into  this routine so that
+                there are sufficient registers for the dividend and quotient.
+
+SEED    1017    3 byte seed for random number generator.
+
+        101A    Table of floating point values used by RND.
+                The seed is used to find which value of the eight  to multiply
+                the last random number by.
+
+LSTRND  103A    Where the last random number "RND(0)" is kept.
+
+INPSUB  103E    Skeleton for input from port "n" as the 8080 does not have  the
+                "IN r,(C)" instruction. The port "n" is loaded into 103F.
+
+NULLS   1041    Number of nulls to output after carriage return. This value  is
+                set by the "NULLS n" command.
+
+LWIDTH  1042    Width of terminal. This is set by "WIDTH n" command.
+
+COMMAN  1043    Width of terminal for printing with commas.
+                Why this has to be a seperate byte I don't know,  however,  the
+                "WIDTH  n"  command  sets  LWIDTH  but does NOT set this value,
+                this has an irritating result when using BASIC with  a  printer
+                and  trying  to  have  more  than three columns using commas in
+                "PRINT" statements, what ever you set "WIDTH" to you don't  get
+                more  than three columns! This can be overcome in a simple way:
+                "POKE 4163,252" - This makes "WIDTH" work correctly.
+
+NULFLG  1044    Nulls after input byte flag.
+                This is a flag that is examined and then zeroed by the teletype
+                line  input  routine  (TTYLIN).  If the character input routine
+                sets this flag before returning the input character then a null
+                is output before the character. The only use I can think of for
+                this is for VERY slow terminals which need  to  be  "woken  up"
+                before a character is sent to them!
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    2
+
+CTLOFG  1045    Control "O" (Disable output) flag.
+                If this flag is set then no  output  will  not  appear  at  the
+                terminal.  This flag is flipped every time control "O" is typed
+                from the keyboard.
+
+LINESC  1046    "LINES" counter.
+                This is initially set to the value in  LINESN  and  decremented
+                after  every line. If this value reaches zero then it is loaded
+                with the value in LINESN and BASIC waits for a  character from
+                the keyboard.
+
+LINESN  1048    "LINES" number.
+                This is set by the "LINES n" command for the number of lines to
+                be LISTed at a time.
+
+CHKSUM  104A    Check sum for array loading and saving.
+                This accumulates the value of all the bytes  in  the  array  80
+                that errors can be detected during "CLOAD*"
+
+NMIFLG  104C    Non-maskable interrupt flag.
+                When an NMI is received this flag is set to let BASIC know that
+                the break was caused by an NMI.
+
+BRKFLG  104D    Break flag.
+                This flag is set by the input routine to let  BASIC  know  that
+                the break key was pressed.
+
+RINPUT  104E    Reflection for "INPUT" routine.
+                When an "INPUT" instruction is encountered BASIC jumps  to  the
+                input  routine  via this jump. This value may be changed by the
+                user as in the Nascom BASIC manual. They go to the following:-
+
+                "DOKE 4175,-25"         Output CR,LF and get a line     (CRLIN)
+                "DOKE 4175,-6670"       No CRLF, get a line            (GETLIN)
+                "DOKE 4175,-6649"       Get a line by character        (TTYLIN)
+
+POINT   1051    Reflection for "POINT (X,Y)" function (Unused!)
+                This contains a jump to the "POINT (X,Y)" routine so  that  the
+                user  SHOULD  be  able  to change it to be some other function.
+                However, due to a "mis-firing"  in  someone's  brain  when  the
+                "POINT"  routine  was added, the function driver (FNOFST) tests
+                for "POINT" and jumps Directly to the "POINT (X,Y)" routine!
+
+PSET    1054    Reflection for "SET (Z,Y)" routine.
+                This contains a jump to the "SET (X,Y)"  routine  in  the  same
+                fashion  as  in  "POINT". The "SET (X,Y)" routine is called via
+                this reflection so that the user CAN  change  it  to  add  more
+                routines to BASIC.
+
+RESET   1057    Reflection for "RESET (X,Y)" routine.
+                This contains a jump to the "RESET (X,Y)" as in PSET.
+
+STRSPC  105A    Start of string space pointer.
+                This contains a pointer to the start of  string  space.  It  is
+                initially  set  to  50 bytes below the end of memory but can be
+                changed by the "CLEAR n" statement.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    3
+
+LINEAT  105C    Current line number.
+                This contains the value of the current line being executed.  If
+                a  direct  statement  is  being executed then this is -1 and if
+                "Memory size?" is being asked it contains  -2.  This  value  is
+                examined  by  the  ERROR routine to see if a line number has to
+                be printed or not. If this value is  -2  then  the  error  must
+                have  occurred  in  reply  to  "Memory  size?" so BASIC is cold
+                atarted again.
+
+BASTXT  105E    BASIC program text origin.
+                This is a pointer to where  the  BASIC  program  is  stored  in
+                memory.  It  usually points to 10FA which is the usual start of
+                a BASIC program. This can be changed if a  program  is  located
+                somewhere else in memory such as in ROM.
+
+BUFFER  1061    Terminal input buffer.
+                This is a 72 character buffer where all input from the keyboard
+                is to be stored such as commands, BASIC lines and "INPUT".
+
+CURPOS  10AB    Cursor position.
+                This contains the current value returned by "POS (X)" and it is
+                incremented  every time a character is printed. When a new line
+                is started this value is zeroed, however,  when  a  back  space
+                is  printed it is NOT decremented and when "SCREEN X,Y" ia done
+                it is not set to the new "X". This can cause spurious CRLFs  to
+                be  output  when  "SCREEN" and back spaces are used. A cure for
+                this is to set "WIDTH 255".
+
+LCRFLG  10AC    Locate / Create variable flag.
+                This is used by the variable search routine to tell if it is in
+                a  "DIM"  statement or not so that it knows if it has to locate
+                or create the specified array.
+
+TYPE    10AD    Data type flag.
+                This flag contains the "type" of the current expression.
+                That is:- zero = Numeric, non-zero = string.
+
+DATFLG  10AE    Literal statement flag.
+                This flag is used to tell  BASIC  that  it  is  pointing  at a
+                literal  statement  such  as  a string in quotes or a "REM" or
+                "DATA" statement.
+
+LSTRAM  10AF    Last available RAM pointer.
+                This contains the address of the highest location in  RAM  that
+                BASIC will use. It can be changed by the "CLEAR,n" statement.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    4
+
+TMSTPT  10B1    Temporary string pointer.
+                This contains a pointer into the temporary string pool.
+
+TMSTPL  10B3    Temporary string pool.
+                This is a store of 4 temporary strings  that  were  created  by
+                such things as "LEFT$","CHR$" and string concatenation.
+
+TMPSTR  10BF    Temporary string.
+                This string block for the  current  string  being  constructed.
+                All  string  blocks  are  four bytes long. The first byte gives
+                the length of the string. The second byte is not used  and  the
+                third  and  fourth  bytes  form the address in memory where the
+                string itself can be found.
+
+STRBOT  10C3    Bottom of string space.
+                This contains a pointer to the bottom of the string  area  that
+                is  currently  being used. Each time a new string is defined it
+                is moved into the  string  area  below  this  pointer  and  the
+                pointer  is adjusted to point to the new bottom of string area.
+                If there  is  not  enough  room  for  the  new  string  then a
+                "garbage collection" is performed to remove all unused strings.
+                If there still is not enough room then an "?OS Error" occurs.
+
+CUROPR  10C5    Current operator address.
+                This contains the address  of  the  current  operator  in  EVAL
+                so  that  the registers may hold other values without using the
+                stack which is being used to hold sub-expressions.
+
+LOOPST  10C7    Loop start address.
+                This contains the address of first statement in  the  FOR  loop
+                which  is  being  constructed. This address is later moved into
+                the FOR block on the stack.
+
+DATLIN  10C9    DATA statement line number.
+                This contains the line number of the current  position  of  the
+                DATA  statement  pointer. It is used by DATSNR to tell the user
+                in which line the bad DATA occurred.
+
+FORFLG  10CB    FOR / FN / array flag.
+                This contains a flag as to what GETVAR must find.
+                A value of 00H means find a variable or array element.
+                A value or 01H means find an array name.
+                A value of 64H means find a variable only.
+                A value of 80H means find an FN function.
+
+LSTBIN  10CC    This flag is set when ever any input is made into BUFFER.
+                RETURN  first  tests to see if the GOSUB was a direct statement
+                and if so checks this flag, if this flag is set then  an  INPUT
+                statement  has  occurred within the subroutine and so as far as
+                RETURN is concerned, BUFFER now contains garbage  so  it  jumps
+                back to command mode.
+
+READFG  10CD    READ / INPUT flag.
+                This contains a flag to tell the READ/INPUT routine  if  it  is
+                processing  a  DATA  statement  or data for an INPUT statement.
+                If this value is zero then INPUT is active else READ is.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    5
+
+BRKLIN  10CE    Break line point.
+                This contains the address in the  line  where  break  occurred.
+                It's value is saved so that CONT knows where to continue.
+
+NXTOPR  10D0    Next operator address.
+                This contains a pointer into  the  expression  being  evaluated
+                by EVAL. It is used to keep track of where it is in the string.
+
+ERRLIN  10D2    Line number of break.
+                This  contains  the  line  number  of  the line where the break
+                occurred. It is saved so that CONT knows what line it is in.
+
+CONTAD  10D4    Continue address.
+                This  contains  the  address  of  the statement where CONT will
+                continue.
+
+
+                ******** Values from here on are saved during CSAVE ********
+
+PROGND  10D6    End of program.
+                This  contains  the  address  of  the byte after the end of the
+                BASIC program text.
+
+VAREND  10D8    End of variables.
+                This contains the address of the byte after the last variable.
+
+ARREND  10DA    End of arrays.
+                This contains the address of the byte after the last array.
+
+NXTDAT  10DC    Next DATA item.
+                This contains the address of the next item of DATA to be READ.
+
+FNRGNM  10DE    FN argument name.
+                This  contains  the  name  of  the  argument for the current FN
+                function. If an FN function  calls  another  FN  function  then
+                this name is saved on the stack.
+
+FNARG   10E0    FN function argument.
+                This is  the  floating  point  value  of  the  the  current  FN
+                function's  argument.  If  an  FN  function  calls  another  FN
+                function then this value is saved on the  stack  together  with
+                the name of the FN argument.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    6
+
+FPREG   10E4    Floating point register.
+                This is a floating point number for the current  value.  It  is
+                a  four  byte  store using 24 bit normalised sign and magnitude
+                representation for the mantissa and excess  128  representation
+                for the exponent of two.
+                    Example of the number 35.25 in floating point:-
+
+                35.25 in binary is      100011.01
+                Which is the same as    100011.01 *2^ 00000000
+
+                The binary point is moved so that it precedes the first "1"
+                This gives  .10001101
+
+                The point was moved left 6 times dividing the number by 2^6 so
+                6 must be added to the exponent to re-multiply by 2^6.
+                This gives            .10001101 *2^ 00000110
+
+                As the bit after the point is ALWAYS "1" this bit can be used
+                to store the sign of the number "0" for +ve, "1" for -ve
+                So +35.25 is stored as  .00001101 * 2 ^ 00000110
+                Which in 24 bits is     .000011010000000000000000 *2^ 00000110
+
+                128 is added to the exponent so that overflows and underflows
+                can be more easily detected.
+                So the whole number in binary is:-
+                                        00001101 00000000 00000000 10000110
+                Which is                  0  D     0  0     0  0     8  6   HEX
+                The bytes of the mantissa are stored in reverse order.
+                This gives the value for +35.25 as      00 00 0D 86
+                And -35.25 would be stored as           00 00 8D 86
+
+
+
+
+SGNRES  10E8    Sign of result.
+                This contains the sign of the result for  multiplication.  Both
+                values  to  be  multiplied  are  tested  and if their signs are
+                different then the product will be negative otherwise  it  will
+                be  positive.  The  sign for the product is stored here so that
+                it can be tested after to make the result correct.
+
+PBUFF   10E9    Number print buffer.
+                When  a  floating  point  number has to be converted into ASCII
+                for PRINT or STR$ the ASCII number is built up in  this  buffer
+                by NUMASC so that it can be output or assigned to a string.
+
+MULVAL  10F6    Multiply value.
+                This contains the 24  bit  multiplier  because  there  are  not
+                enough  registers  to  hold  the  multiplier,  multiplicand and
+                product all at the same time.
+
+PROGST  10F9    Program start.
+                This  is the byte before the first line in the program. It must
+                be  zero  to  tell the execution driver that the next (actually
+                the first) line is to be executed.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    7
+
+******** How a program is stored in memory ********
+
+Example:- The program:-
+  10 FOR A=1 TO 5:PRINT A,SQR(1):NEXT A
+  20 END
+is in memory, it would look like this:-
+
+PROGND  111C    Pointer to byte after program
+
+10FA    15 11   Pointer to next line (1115)
+10FC    0A 00   Line number (10)
+10FE    81      FOR token
+10FF    20      Space
+1100    41      A
+1101    B4      = token
+1102    31      1
+1103    20      Space
+1104    A6      TO token
+1105    20      Space
+1106    35      5
+1107    3A      :
+1108    9E      PRINT token
+1109    20      Space
+110A    41      A
+110B    2C      ,
+110C    BA      SQR token
+110D    28      (
+110E    41      A
+110F    29      )
+1110    3A      :
+1111    82      NEXT token
+1112    20      Space
+1113    41      A
+1114    00      End of line
+1115    1A 11   Pointer to next line (111A)
+1117    14 00   Line number (20)
+1118    80      END token
+1119    00      End of line
+111A    00 00   Pointer to next line (0000 = End of program)
+111C
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    8
+
+******** How variables and arrays are stored ********
+
+Variables such as AB AB$ and FN AB are all stored in the simple  variable  area
+of memory. The start address of this area is held in PROGND and the end address
+is held in VAREND.
+
+If AB=10 and AB$="TEXT" and FN AB(XY) had been defined then  the  memory  would
+look like this
+
+42 41           Name of AB in reverse (42 41 = "B" "A")
+00 00 20 84     Floating point value for 10
+
+C2 41           Name for AB$ (C2 is "B" with bit 7 set)
+
+04              Length of string (4 characters)
+??              This byte unused for string
+LL HH           Address where "TEXT" is to be found
+
+42 C1           Name of FN AB (C1 is "A" with bit 7 set)
+LL HH           Address of function (After "=")
+59 58           Argument name in reverse (59 58 = "Y" "X")
+
+Arrays such as AB(1,3) and AB$(3,1) are stored in the array area of memory. The
+start  address  of  this  area is held in VAREND and the end address is held in
+ARREND.
+
+If DIM AB(1,3),AB$(3,1) had been entered then the memory would look like this:-
+
+42 41           Name of array AB in reverse
+25 00           Bytes used for array (0025 = 37)
+02              2 dimensions
+04 00           Size of second dimension including zero element
+02 00           Size of first dimension including zero element
+00 00 00 00     AB(0,0)
+00 00 00 00     AB(1,0)
+00 00 00 00     AB(0,1)
+00 00 00 00     AB(1,1)
+00 00 00 00     AB(0,2)
+00 00 00 00     AB(1,2)
+00 00 00 00     AB(0,3)
+00 00 00 00     AB(1,3)
+
+C2 41           Name of array AB$ in reverse
+25 00           Bytes used for array (0025 = 37)
+02              2 dimensions
+02 00           Size of second dimension including zero element
+04 00           Size of first dimension including zero element
+00 00 00 00     AB$(0,0)
+00 00 00 00     AB$(1,0)
+00 00 00 00     AB$(2,0)
+00 00 00 00     AB$(3,0)
+00 00 00 00     AB$(0,1)
+00 00 00 00     AB$(1,1)
+00 00 00 00     AB$(2,1)
+00 00 00 00     AB$(3,1)
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE    9
+
+******** Usage of the stack for GOSUB/RETURN and FOR/NEXT ********
+
+GOSUB and RETURN usage of the stack
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a GOSUB is executed the address of where to RETURN to and the number of
+the line to RETURN to are PUSHed on the stack as follows:-
+
+HIGH MEMORY:    XX XX   Address of where to RETURN to
+                XX XX   Number of line to RETURN to
+STACK POINTER:  8C      GOSUB token as marker
+
+This GOSUB block remains on the stack until a RETURN is executed at which point
+BASIC looks back through the stack until it finds a GOSUB block and  then  sets
+the  stack there and then POPs the line number and the address of the statement
+after the GOSUB and continues execution.
+
+The fact that the stack is set to this GOSUB block kills all active  FOR  loops
+which were set up inside the subroutine.
+
+
+
+
+
+
+
+
+
+
+
+
+FOR and NEXT usage of the stack
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a FOR is executed the address of the first statement in the loop,
+the line number of the loop statement, the TO value, the STEP value and
+the sign of the STEP are all PUSHed onto the stack as follows:-
+
+HIGH MEMORY:    XX XX           Address of first statement in loop
+                XX XX           Line number of loop statement
+                XX XX XX XX     TO value in floating point
+                XX XX XX XX     STEP value in floating point
+                XX              Sign of STEP
+                XX XX           Address of index variable
+STACK POINTER:  81              FOR token as marker
+
+This FOR block remains on the stack until a matching  NEXT  is  executed.  When
+next  is  executed  BASIC looks back through the stack to find the matching FOR
+block. If it is found then the STEP value is added to the value  of  the  index
+variable  and  the result is compared with the TO value. With the use of the TO
+value and the sign of the step BASIC knows if the loop has  been  completed  or
+not. If it has not been completed then the FOR block remains on the stack until
+the loop has been completed. The stack is set to point to this  FOR  block  and
+effectively  kills all FORs nested within this loop. When the loop is completed
+the FOR block is removed from the stack and execution continues from after  the
+NEXT instruction.
+
+If the FOR block cannot be found then a "?NF Error" occurs.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE   10
+
+******** Now for the exciting bit - The ROM ********
+
+Name    Addr    What the routine does
+~~~~    ~~~~    ~~~~~~~~~~~~~~~~~~~~~
+
+INIT    E019    Copy the initial work space conditions into the work space  RAM
+                at 1000 to 105F.
+
+MSIZE   E036    Output "Memory size" prompt and get response from user.
+                If a number is given jump to  TSTMEM  otherwise  start  at  the
+                beginning  of  RAM  and test each successive byte until the end
+                of RAM is found. When the end has been found jump to SETTOP.
+
+TSTMEM  E05B    Get supplied address.
+                If  any  bad  characters  output  "?SN Error" and re-initialise
+                otherwise try to write a D0H byte into  that  address.  If  D9H
+                is  not  read  back  then there is no RAM at that address so go
+                to MSIZE to ask again. If D0H is read back  then  drop  through
+                to SETTOP.
+
+SETTOP  E06D    Test  for  minimum memory requirement and if not enough jump to
+                MSIZE to ask again otherwise save this address as  the  highest
+                available  memory  location, allocate 50 bytes for string space
+                and output the sign on message and the number  of  bytes  free.
+                Then drop through to WARMST.
+
+WARMST  E0AE    Clear run-time registers and jump to PRNTOK.
+
+BAKSTK  E356    Look back through stack for FOR or GOSUB blocks and  exit  with
+                HL pointing to the block.
+
+CHKSTK  E38A    Check for "C" levels of stack  space  and  output  "?OM  Error"
+                if not enough stack space.
+
+DATSNR  E3A7 to
+TMERR   E3BF    I  like  this section of code because you jump into the routine
+                at one of the entry points, this loads the  "E"  register  with
+                the  error  number  and  the  "LD BC,nn" opcode (01H) skips all
+                the following "LD E,n" instructions. It is very efficient.
+
+ERROR   E3C1    Output error code for error number in the  E  register,  output
+                the line number if needed and drop through to PRNTOK.
+
+PRNTOK  E3F8    Output "Ok" message and drop through to GETCMD.
+
+GETCMD  E405    Get a direct statement or BASIC line, CRUNCH the  text  and  if
+                it is a direct statement go to EXCUTE to execute it. If it is a
+                BASIC line then move it to the program text area.
+
+SRCHLN  E499    Search for line number in register DE.
+
+NEW     E4B9    Set PROGND to start of program text area to effectively  remove
+                program  from  memory and execute the null program to clear all
+                the other pointers.
+
+RUNFST  E4C5    Execute program from first statement.
+
+INTVAR  E4C9    Clear out variables and string space an reset DATA pointer.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE   11
+
+CLREG   E4DF    Reset stack to top of  memory,  clear  out  temporary  strings,
+                disable CONTinue and execute program.
+
+PROMPT  E4FC    Output "? " prompt for INPUT and go to get input line.
+
+CRUNCH  E509    Move text string from HL to  BUFFER  crunching  reserved  words
+                into tokens as you go.
+
+ENDBUF  E5B8    Mark the end of BUFFER with three nulls.
+
+GETLIN  E5F2    Get an input line from monitor.
+
+TTYLIN  E607    Get an input line by character and save it in BUFFER.
+
+CPDEHL  E68A    Compare the DE register with the HL register returning  flags:-
+                Z - Registers are equal, C - DE > HL and NC- DE <= HL
+
+CHKSYN  E690    Make sure the next byte in the code string is the  sam  as  the
+                byte following the "CALL CHKSYN". If not - output "?SN Error".
+
+OUTC    E69B    Output character in the A register to the terminal and output a
+                CRLF  if  the  current terminal width is exceeded. Character is
+                not output if CTLOFG is set.
+
+CLOTST  E6CC    Get an input character and flip CTLOFG if it is control "O".
+
+LIST    E6DD    LIST BASIC program from start (or specified line number) LINESN
+                lines  at  a  time. It does not take into account that graphics
+                may appear in quotes, DATA or REM  statements  so  the  graphic
+                character  is  treated as a reserved word token and expanded to
+                the complete word.
+
+FOR     E779    Assign the initial value to the index variable and then set  up
+                a FOR block on the stack.
+
+RUNCNT  E7F2    Main execution  driver  loop.  This  gets  the  next  statement
+                (May be after ":" or on next line) and gives it to EXCUTE.
+
+EXCUTE  E816    Test current statement. If it is  a  key  word  then  find  the
+                address  of  the  routine  from  WORDTB and call it. If it is a
+                letter then call LET to try to  assign  a  variable.  Otherwise
+                generate "?SN Error".
+
+GETCHR  E836    Get next character in code string and return flags:-
+                Z - End of statement (":" or null)
+                C - Character is a digit otherwise NC.
+
+RESTOR  E846    Restore routine. Set  DATA  pointer  to  start  of  program  or
+                to specified line if a line number is given.
+
+TSTBRK  E861    Test for break key. If pressed test for  control  "S"  (pause).
+                If  another  break pressed then stop execution and output break
+				message.
+
+STOP    E870    STOP routine. Flag "STOP" an join END.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE   12
+
+END     E872    END routine. Flag "END".
+                Save address of  break  and  set  continue  address  and  line.
+                If  from  STOP  or break then output "Break" message and if not
+                a direct statement then output line number also.
+
+CONT    E89E    CONT routine. Get continue address, if it is zero  then  output
+                "?ON Error" else set address and line as current and continue.
+
+NULL    E8B1    NULL routine. Set number of nulls to be output after CRLF.
+
+CHKLTR  E977    Test next character in code string and return flags:-
+                NC - Letter, C - Not a letter.
+
+FPSINT  E97F    Get an integer 0 to 32767 from next character.
+
+POSINT  E982    Get an integer 0 to 32767 to DE.
+
+DEPINT  E985    Test for integer 0 to 32767 and leave it in DE.
+
+DEINT   E98B    Test for integer -32768 to 32767 and leave it in DE.
+
+ATOH    E9A5    Read an ASCII integer 0 to 65529 into DE from code string.
+
+CLEAR   E9CA    CLEAR routine. "CLEAR" Clear variables,
+                "CLEAR s" also reserves string space (where t is 0 to 32767),
+                "CLEAR,t" sets top of memory (where t is 0 to 32767),
+                "CLEAR s,t" reserves string space and sets RAM top.
+
+RUN     EA10    RUN  routine. "RUN" run from start of program, "RUN n" run from
+                specified line.
+
+GOSUB   EA1C    GOSUB routine. Create a GOSUB  block  on  the  stack  and  GOTO
+                specified line.
+
+GOTO    EA2D    GOTO routine. Get ASCII  line  number  and  continue  execution
+                from that line.
+
+RETURN  EA4B    RETURN routine. Look back  through  stack  for  a  GOSUB  block
+                and  if  one  is  found POP line number and address in line and
+                continue execution from there. Otherwise "?RG Error" occurs.
+
+DATA    EA70    DATA routine. Flag DATA and drop through to common code.
+
+REM     EA72    REM routine. Flag REM and  look  for  end  of  statement,  DATA
+                statement  ends  with ":" or null, REM statement ends only with
+                null (End of line).
+
+LET     EA87    LET routine. Get variable name, make sure "=" follows, evaluate
+                expression and assign it to the variable.
+
+ON      EAE1    ON GOTO / ON GOSUB routine. Get integer expression (0 to  255).
+                Look  through  list  of  ASCII line numbers until the Nth value
+                is found. If value N exists GOTO or GOSUB that line.  Otherwise
+                drop through to next statement.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE   13
+
+IF      EAFF    IF routine. Evaluate expression. If it is zero then dop through
+                to  the next line. Otherwise GOTO line number if specified else
+                go to execute the statement.
+
+PRINT   EB23    PRINT routine.
+
+INPUT   EBFD    INPUT routine. Test for direct mode, if  in  direct  mode  then
+                no  INPUT allowed ("?ID Error"). Otherwise output prompt string
+                if one is given, Get an input line and  join  READ  routine  to
+                assign values to variables.
+
+READ    EC2C    READ routine. Get address of next  DATA  item  and  flag  READ.
+                Read in items an assign to variables (used for INPUT and READ).
+                If any errors occur use READFG to see if:-
+                "?SN Error" or "?0D Error" are needed for READ or
+                "Redo" or "Extra ignored" are needed for INPUT.
+
+FDTLP   ECD2    Find next DATA statement.
+
+NEXT    ECF6    NEXT routine. Look back through stack for a matching FOR block.
+                If one is found then add STEP to  index  variable  and  compare
+                it  with  the TO value. If the loop has not been completed then
+                continue execution from  the  first  statement  in  that  loop.
+                Otherwise  remove  t he FOR block from the stack. Then look for
+                another variable (Eg "NEXT B,A"). If found then  re-enter  NEXT
+                routine  to  process  this  loop.  Otherwise continue execution
+                from the statement after the NEXT.
+
+GETNUM  ED41    Get a numeric expression.
+
+TSTNUM  ED44    Make sure current value is numeric ("?TM Error" if not).
+
+TSTSTR  ED45    Make sure current value is a string ("?TM Error" if not).
+
+CHKTYP  ED46    Make sure current value is of the type selected by TYPE.
+
+EVAL    ED5A    Evaluate an expression using algebraic logic (Do multiplication
+                and  division before addition and subtraction. Etc.). Leave the
+                result in FPREG and set TYPE to string or numeric.
+
+FNOFST  EE33    Enter with offset into FNCTAB. If it is "POINT (X,Y)" then jump
+                directly to "POINT (X,Y)" routine (This SHOULD have been a jump
+                via the POINT reflection). If it is LEFT$, RIGHT$ or MID$  then
+                evaluate the string expression and get the "," after it then go
+                to the string function. If it is any other  function  then  get
+                its address from FNCTAB and call it.
+
+SGNEXP  EE70    Get sign of number and return in the D register:-
+                FF - Negative, 00 Positive.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE   14
+
+DIM     EF28    DIM routine. Flag "create" variable and join common.
+
+GETVAR  EF2D    Look for specified variable. Use FORFLG to:-
+                1. Not allow subscripted FOR loops.
+                2. Look for an FN function definition.
+                3. Look for an array name for CLOAD* and CSAVE*.
+                4. Or just look for the variable as supplied.
+
+FRE     F0D0    FRE(X) routine. If X is a numeric expression  then  return  the
+                amount of memory between ARREND and the stack. If X is a string
+                expression then do a "Garbage collection" and return the number
+                of unused bytes in the string area.
+
+POS     F0FE    POS(X) routine. Return the current cursor position (CURPOS).
+
+DEF     F106    DEF FN routine. Define a user defined function.
+                This is not legal in direct mode.
+
+DOFN    F133    Call  an FN function. Save any previous argument name and value
+                on the  stack,  Evaluate  the  function  an  then  restore  the
+                previous argument name and value.
+
+IDTEST  F17B    If in direct mode then output "?ID Error" else return.
+
+CHEKFN  F189    Make sure "FN" follows and flag find FN function definition.
+
+STR     F19A    STR$ routine. Convert current numeric value to ASCII and create
+                a temporary string for it.
+
+SAVSTR  F1AA    Save current string in string area.
+
+MKTMST  F1BF    Make a temporary string.
+
+PRNUMS  F20F    Print number string at HL.
+
+PRS     F210    Print string at HL.
+
+TESTR   F229    Test if  enough  string  space.  If  insufficient  then  GRBAGE
+                collect  and  test  again.  If  still  insufficient  space then
+                output "?0S Error".
+
+GRBAGE  F253    Do a "Garbage collection" on string area.
+                Scan  through all string variables and shift all active strings
+                to the top of the string area thus leaving the  free  space  in
+                one block.
+
+CONCAT  F306    Concatenate two strings (Eg A$+B$).
+
+GETSTR  F350    Get a string routine.
+
+LEN     F382    LEN(X$) routine.
+
+ASC     F391    ASC(X$) routine.
+
+CHR     F3A2    CHR$(X) routine.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE   15
+
+LEFT    F3B2    LEFT$(X$,X) routine.
+
+RIGHT   F3E2    RIGHT$ (X$,X) routine.
+
+MID     F3EC    MID$(X$,P[,L]) routine.
+                MID$(X$,P) returns string from character P to the end.
+                MID$(X$,P,L) returns string from position P for L characters.
+
+VAL     F41C    VAL(X$) routine.
+
+INP     F441    INP(X) routine. Set up port  number  in  work  space  and  call
+                INPSUB skeleton. Return value from port.
+
+POUT    F44D    OUT P,N routine. Set up port number  in  work  space  and  call
+                OUTSUB skeleton to output value to the port.
+
+WAIT    F453    WAIT P,A,X routine. Set up port  number  in  work  space.  Call
+                INPSUB  to get byte, XOR value with X if X is supplied and then
+                AND the value with A. If this value is zero  then  go  back  to
+                WAITLP until value is non-zero.
+
+FNDNUM  F481    Get next number from code string.
+
+CSAVE   F4C3    CSAVE routine. If CSAVE* jump to  array  save  routine  ARRSV1.
+                Evaluate string expression for name and save program.
+
+CLOAD   F4F9    CLOAD routine. If CLOAD* jump to  array  load  routine  ARRLD1.
+                See  if  CLOAD?  and  save  status.  Evaluate string expression
+                for file name (None given - any file will do)  and  search  for
+                that file. When found load it into memory.
+
+PEEK    F5A3    PEEK(X) routine.
+
+POKE    F5AA    POKE A,V routine.
+
+ROUND   F5BB    Round number up by adding 0.5 to it.
+
+ADDPHL  F5BE    Add floating point number at HL to the current value in FPREG.
+
+SUBPHL  F5C4    Subtract the current value from the value at HL and  leave  the
+                result in FPREG.
+
+PSUB    F5C8    Subtract FPREG from the value on the stack and leave the result
+                in FPREG.
+
+SUBCDE  F5CA    Subtract FPREG from the value in BCDE and leave the  result  in
+                FPREG.
+
+FPADD   F5CD    Add the value in BCDE to the value in FPREG.
+
+MINCDE  F60D    Subtract value in FPREG from value in BCDE.
+
+NORMAL  F638    Normalise value in BCDE.
+
+PLUCDE  F672    Add value in FPREG to value in BCDE.
+
+COMPL   F67E    Complement value in BCDE.
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE   16
+
+LOG     F6C7    LOG(X) routine. Get LOG of FPREG.
+                Scale the number to be between 0 and 1.
+                Add SQR(1/2) to value.
+                Divide into SQR(2).
+                Subtract from 1.
+                Compute the sum of series using LOGTAB for coefficients.
+                Subtract 0.5 from result.
+                Re-scale the number and then multiply by LOG(2).
+
+MULT    F706    Multiply FPREG by value on stack.
+
+FPMULT  F708    MULTIPLY FPREG by value in BCDE.
+
+DIV     F767    Divide the value on stack by FPREG  and  leave  the  result  in
+                FPREG.
+
+DVBCDE  F768   Divide the value in BCDE  by  FPREG  and  leave  the  result  in
+                FPREG.
+
+TSTSGN  F813    Test sign of number in FPREG.
+
+SGN     F822    SGN(X) routine.
+
+ABS     F838    ABS(X) routine.
+
+STAKFP  F844    Move value in FPREG to stack.
+
+PHLTFP  F851    Move value at HL to FPREG.
+
+FPBCDE  F854    Move value in BCDE to FPREG.
+
+BCDEFP  F85F    Move FPREG to BCDE.
+
+LOADFP  F862    Move value at HL to BCDE.
+
+FPTHL   F86B    Move Value in FPREG to HL.
+
+SIGNS   F879    Set sign of result depending on signs of operands.
+
+CMPNUM  F88E    Compare numbers.
+
+FPINT   F8BB    Get integer of FP value.
+
+INT     F8E6    INT(X) routine.
+
+ASCTFP  F91A    Convert ASCII floating point number into binary.
+
+NUMASC  F9B8    Convert floating point binary into ASCII.
+
+SQR     FAAC    SQR(X) routine. Uses SQR(X) = X ^ 0.5
+
+POWER   FAB5    Raise base BCDE to the power FPREG.
+                Uses X^Y = EXP( Y*LOG(X) ).
+
+The workings of Nascom ROM BASIC Ver 4.7                              PAGE   17
+
+EXP     FAFA    EXP(X) routine.
+                Scale value to be between 0 and 1
+                Compute sum of series using EXPTAB for coefficients.
+                Re-scale number.
+
+SUMSER  FB5B    Sum the series using table of coefficients at HL.
+                (( N1 * X^2 + N2 ) * X^2 + N3 ) * X^2 ... + Nn
+
+SUMSER1 FB6A    Sum the series using table of coefficients at HL.
+                (( N1 * X + N2 ) * X + N3 ) * X ... + Nn
+
+RND     FB8B    RND(X) routine.
+
+COS     FC00    COS(X) routine. Uses COS(X) = SIN(X+PI/2).
+
+SIN     FC03    SIN(X) routine.
+                Divide angle by 2*PI.
+                Get fraction part.
+                Move other quadrants around and set what result will be.
+                Sum the series using table of coefficients at SINTAB.
+                Adjust result.
+
+TAN     FC67    TAN(X) routine. TAN(X) = SIN(X) / COS(X).
+
+ATN     F67C    ATN(X) routine.
+                If value > 1 then get 1/value and set PI/2 - angle.
+                Sum the series using table of coefficients at ATNTAB.
+                Negate result if original value was > 4.
+
+WIDTH   FDA5    WIDTH routine. Set terminal width but NOT commas width.
+
+LINES   FDAD    LINES routine.
+
+DEEK    FDBC    DEEK(X) routine.
+
+DOKE    FDC7    DOKE A,V routine.
+
+SCREEN  FDE6    SCREEN X,Y routine.
+
+SCRADR  FE11    Get screen address from row and column in DE and BC.
+
+INLINE  FEE8    Get an input line from NAS-SYS.
+
+GETXYA  FF15    Get (X,Y) for SET,RESET and POINT.
+                Return address on screen and a bit mask.
+
+SETB    FF40    SET(X,Y) routine.
+
+RESETB  FF55    RESET(X,Y) routine.
+
+POINTB  FF79    POINT(X,Y) routine.
+
+XYPOS   FF96    Convert (X,Y) to a row and column on screen.
+
 Dis-assembly of NASCOM ROM BASIC Ver 4.7                PAGE    1
 
                 ; GENERAL EQUATES

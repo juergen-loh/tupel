@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/23/32/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-03 23:15:24 +0200 (So, 03. Mai 2026) $ / lastModified: Sat, 09 May 2026 16:51:23 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-03 23:15:24 +0200 (So, 03. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -137,7 +137,7 @@
 <table>
 <colgroup><col><col><col><col></colgroup>
 
-<tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p>PAGE 10</p></th></tr>
+<tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p><span id="work10"><a href="../../../../../rom-basic/#work10">PAGE 10</a></span></p></th></tr>
 
 <tr><td colspan=4><p>
 ******** Now for the exciting bit &ndash; The ROM ********
@@ -153,7 +153,7 @@ at 1000 to 105F.
 </p></td></tr>
 
 <tr><td><p><a href="../../../24/25/text/#MSIZE">MSIZE</a></p></td><td><p><a href="../../../24/25/text/#E036">E036</a></p></td><td colspan=2><p>
-Output &ldquo;Memory size&rdquo; prompt and get response from user.
+Output &ldquo;Memory size&rdquo; prompt and get response from user.<br>
 If a number is given jump to TSTMEM otherwise start at the
 beginning of RAM and test each successive byte until the end
 of RAM is found. When the end has been found jump to SETTOP.
@@ -241,7 +241,7 @@ Clear out variables and string space an reset DATA pointer.
 <table>
 <colgroup><col><col><col><col></colgroup>
 
-<tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p>PAGE 11</p></th></tr>
+<tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p><span id="work11"><a href="../../../../../rom-basic/#work11">PAGE 11</a></span></p></th></tr>
 
 <tr><td><p><a href="../../../24/32/text/#CLREG">CLREG</a></p></td><td><p><a href="../../../24/32/text/#E4DF">E4DF</a></p></td><td colspan=2><p>
 Reset stack to top of memory, clear out temporary strings,
@@ -270,12 +270,12 @@ Get an input line by character and save it in <a href="../../../24/24/text/#BUFF
 </p></td></tr>
 
 <tr><td><p><a href="../../../25/31/text/#CPDEHL">CPDEHL</a></p></td><td><p><a href="../../../25/31/text/#E68A">E68A</a></p></td><td colspan=2><p>
-Compare the DE register with the HL register returning flags:&ndash;<br>
+Compare the DE register with the HL register returning flags:&ndash;
 Z &ndash; Registers are equal, C &ndash; DE &gt; HL and NC- DE &lt;= HL
 </p></td></tr>
 
 <tr><td><p><a href="../../../25/31/text/#CHKSYN">CHKSYN</a></p></td><td><p><a href="../../../25/31/text/#E690">E690</a></p></td><td colspan=2><p>
-Make sure the next byte in the code string is the same as the
+Make sure the next byte in the code string is the sam as the
 byte following the &ldquo;CALL CHKSYN&rdquo;. If not &ndash; output &ldquo;?SN Error&rdquo;.
 </p></td></tr>
 
