@@ -1,4 +1,4 @@
-/* /style.css / $Date: 2025-09-06 19:02:16 +0200 (Sa, 06. Sep 2025) $ */
+/* /style.css / $Date: 2026-05-10 17:21:53 +0200 (So, 10. Mai 2026) $ */
 
 html,
 body,
@@ -211,6 +211,8 @@ td.clPage,		th.chPage
 	font-size: 0.93rem;
 }
 */
+/*-------------------------------------------------------------------------*/
+
 td.clTitle,
 td.clTitle:first-child
 {
