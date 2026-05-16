@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/micropower/23/22/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Micropower - Volume 2 - Number 3 - July 1982</title>
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -154,7 +154,7 @@ HL have been printed in hexadecimal.
 SCAL CRLF, DF 6A
 </h3>
 <p>
-A carriage return/&#x200b;line feed is output by loading the
+A carriage return/&ZeroWidthSpace;line feed is output by loading the
 accumulator with &pound;0D and calling restart ROUT. The code
 used is the end of the next, &lsquo;Error message&rsquo;. subroutine.
 </p>
@@ -174,7 +174,7 @@ SCAL TX1, DF 6C
 </h3>
 <p>
 The main use of this subroutine call is to print out
-the header on each block of data for tape input/&#x200b;output. The
+the header on each block of data for tape input/&ZeroWidthSpace;output. The
 start address of the block is in the HL register pair, the
 length of the block in E, and the block number in D. After
 the header data has been received from or sent to tape it is

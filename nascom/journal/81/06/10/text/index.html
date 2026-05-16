@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/81/06/10/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-01 16:53:20 +0200 (Fr, 01. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:14 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Nascom Journal - Juni 1981 - Ausgabe 6</title>
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -144,8 +144,8 @@ Parallelinterface für Drucker
 <!-- 2(2) Spalten: Start --><div class="style-multi-column-2">
 
 <p>
-Viele billige Drucker,&#x200b;z.B. der EPSON MX-80 oder der SEIKO
-GP-80,&#x200b;haben standardmäßig eine Centronix-Schnittstelle und bieten
+Viele billige Drucker,&ZeroWidthSpace;z.B. der EPSON MX-80 oder der SEIKO
+GP-80,&ZeroWidthSpace;haben standardmäßig eine Centronix-Schnittstelle und bieten
 eine Nascom-kompatible serielle Schnittstelle nur gegen Aufpreis
 (250 Mark). Wer das bezahlt, ist selbst schuld. Man kann natürlich
 aus beiden Ports der <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
@@ -163,13 +163,13 @@ zu dem UART geschaltet.
 
 <p>
 Alle Daten, die an den UART ausgegeben werden, gelangen nun auch
-zum Drucker.&#x200b;Die Baudrate kann beliebig hoch eingestellt werden, da
+zum Drucker.&ZeroWidthSpace;Die Baudrate kann beliebig hoch eingestellt werden, da
 über das TBRE-Signal nun auch die BUSY-Meldung des Druckers
 abgefragt wird. Über Port 0, Bit 2 kann das höchstwertige Datenbit
 gesperrt werden; dies ist für normalen Betrieb erforderlich, da der
 X-Befehl Bit 7 als Paritätsbit ausgibt. Will man Bit 7 in
 speziellen Druckerprogrammen mitbenutzen, muß vorher also Bit 2 in
-Port 0 auf 1 gesetzt werden. In Port 2,&#x200b;Bit 4 kann das
+Port 0 auf 1 gesetzt werden. In Port 2,&ZeroWidthSpace;Bit 4 kann das
 Error-Signal des Druckers abgefragt werden.
 </p>
 <br>

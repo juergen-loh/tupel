@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/scorpio-news/14/09/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Scorpio News - October&ndash;December 1987 &ndash; Volume 1. Issue 4.</title>
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -135,7 +135,7 @@
 <div class="col-sm-12 mag-scorpio-news issue-14 page-09" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <h3 class="uppercase">
-Separate User/&#x200b;Supervisor Modes
+Separate User/&ZeroWidthSpace;Supervisor Modes
 </h3>
 <p>
 This when very important when advanced, fully protected operating systems are used. The User
@@ -154,14 +154,14 @@ system by &ldquo;Trap&rdquo; (see below).
 An interesting by-product of this is being able to translate memory &amp; I/O addresses, all
 completely transparent to the user. If bit 2 of the trap control is set then any direct
 I/O in user mode causes a &ldquo;Privileged Instruction Trap&rdquo;. The CPU jumps straight to the address
-found at the contents of the &ldquo;Interrupt/&#x200b;Trap vector pointer&rdquo; +54H. Here we do the direct I/O
+found at the contents of the &ldquo;Interrupt/&ZeroWidthSpace;Trap vector pointer&rdquo; +54H. Here we do the direct I/O
 using en I/O conversion table, then return to the user program, using the new &ldquo;RETIL&rdquo; (return from
 Interrupt long) instruction.
 </p>
 <p>
 Similarly, the MMU can be &ldquo;write  protected&rdquo; at a block of memory. Any access to this block of
 memory causes a &ldquo;Page fault Trap&rdquo;. The CPU jumps straight to the address found at the contents of
-the &ldquo;Interrupt/&#x200b;Trap vector Table pointer&rdquo; +4CH. Here we do the required address translation, or
+the &ldquo;Interrupt/&ZeroWidthSpace;Trap vector Table pointer&rdquo; +4CH. Here we do the required address translation, or
 anything else required, all transparent to the user, then return to the user program using the new
 &ldquo;RETIL&rdquo; (return from Interrupt long) instruction.
 </p>
@@ -201,15 +201,15 @@ system. This board also allows me to have more than one program block each using
 block. This feature is not enabled on reset. It must be enabled on the MMU.
 </p>
 <h3 class="uppercase">
-The Interrupt/&#x200b;Trap Vector Table
+The Interrupt/&ZeroWidthSpace;Trap Vector Table
 </h3>
 <p>
 The I/T vector table consists of of Master status register and Program counter words, one
 pair for each interrupt or trap source.
 </p>
 <p>
-The CPU contains an additional register, the &ldquo;Interrupt/&#x200b;Trap Vector Table Pointer&rdquo;. This
-contains the top 12 bits of the physical address of the contents of the &ldquo;Interrupt/&#x200b;Trap Vector
+The CPU contains an additional register, the &ldquo;Interrupt/&ZeroWidthSpace;Trap Vector Table Pointer&rdquo;. This
+contains the top 12 bits of the physical address of the contents of the &ldquo;Interrupt/&ZeroWidthSpace;Trap Vector
 Table&rdquo;. Any interrupt or trap, finds the address of its service routine from this table.
 </p>
 <!-- 1 column: end --></div>

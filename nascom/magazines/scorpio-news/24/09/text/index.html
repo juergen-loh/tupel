@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/scorpio-news/24/09/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Scorpio News - October&ndash;December 1988 &ndash; Volume 2. Issue 4.</title>
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -145,7 +145,7 @@
 <tr><td colspan=5>(Result = 2500.004634)</td></tr>
 </table>
 <p>
-All times in seconds, relative speed expressed as Nascom time/&#x200b;NE898 time. All tests
+All times in seconds, relative speed expressed as Nascom time/&ZeroWidthSpace;NE898 time. All tests
 were run on my own concoction of a complete Z80 CP/M look-alike.
 </p>
 <h2>
@@ -155,10 +155,10 @@ Standards
 The NE898 departs from 80-BUS specification in a few minor details:
 </p>
 <ul>
-<li>The /NMI SW line is not implemented.</li>
+<li>The <span class="nowrap">/NMI</span> SW line is not implemented.</li>
 <li>Line 7 (RSFU) is used to provide the clock for the slave processor in a dual
 	NE898 system (This is link disabled by default)</li>
-<li>The /RAMDIS line is not implemented (Is this significant in a memory mapping
+<li>The <span class="nowrap">/RAMDIS</span> line is not implemented (Is this significant in a memory mapping
 	system with 20 bit addressing, and should the bus-master generate it or respond
 	to it?)</li>
 <li>The /HALT line is not implemented</li>
@@ -166,7 +166,7 @@ The NE898 departs from 80-BUS specification in a few minor details:
 </ul>
 <p>
 None of these is a serious departure, although the author is accustomed to using
-/NMI SW and /HALT during testing and debugging of interrupt driven software.
+<span class="nowrap">/NMI</span> SW and <span class="nowrap">/HALT</span> during testing and debugging of interrupt driven software.
 Address bit A19 is link selectable to either line 49 or line 58, thus accommodating
 both the MAP80 and Gemini implementations of 20 bit addressing.
 </p>

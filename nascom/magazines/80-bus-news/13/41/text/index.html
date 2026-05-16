@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/13/41/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - July&ndash;October 1982 - Volume 1 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -165,7 +165,7 @@ slightly worrying. A more detailed cosideration is required to see if they matte
 Assume that a DRQ has appeared towards the end of the execution of the IN
 instruction that is checking the status port, and has just been missed. Now the
 number of T states that occur until the data byte is actually read is:
-4+&#x200b;12+&#x200b;11+&#x200b;4+&#x200b;7+&#x200b;10+&#x200b;11
+4+&ZeroWidthSpace;12+&ZeroWidthSpace;11+&ZeroWidthSpace;4+&ZeroWidthSpace;7+&ZeroWidthSpace;10+&ZeroWidthSpace;11
 = 59 &ndash; so that byte will be read before the controller assembles
 the next byte (which comes after 64 T states). When the label LOOP is next reached
 the DRQ bit will be set (because it has taken &gt;64 T-sates to get back there) so the

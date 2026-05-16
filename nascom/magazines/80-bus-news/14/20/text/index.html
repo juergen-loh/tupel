@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/14/20/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - November&ndash;December 1982 - Volume 1 - Issue 4</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -135,7 +135,7 @@
 <div class="col-sm-12 mag-80-bus-news issue-14 page-20" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <p class="continued">
-confuse the unwary, the documentation gives the clear impression that the /NASIO
+confuse the unwary, the documentation gives the clear impression that the <span class="nowrap">/NASIO</span>
 circuitry must be added by the user, and the manual goes on to suggest a method
 of implementing this (using extra chips, of course). To really confuse matters,
 the actual circuitry used (it IS supplied) lives on the prototyping area and uses
@@ -158,7 +158,7 @@ set available, which is certainly much more extensive than that on CFS (more
 about the software later). It also allows an easy upgrade to <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->.
 </p>
 <p>
-The data rate used is 6000 bits per second, which, because no start/&#x200b;stop
+The data rate used is 6000 bits per second, which, because no start/&ZeroWidthSpace;stop
 bits are used, is the equivalent of 7500&nbsp;bps (e.g. using CUTS, if you could get
 it to work that fast!). Data is recorded in blocks of 2K bytes, and the
 catalogue, which is at the start of the tape, also uses a 2K block. This gives a
@@ -172,7 +172,7 @@ the other 2038 bytes &lsquo;above&rsquo; it in RAM being corrupted.
 <p>
 The hardware falls down in one very important point: whereas the drive
 buffers use ports &pound;F8-&pound;FB, the SIO uses ports &pound;FC-&pound;FF. This is bad news indeed to
-those using page mode on their RAM/&#x200b;ROM cards, since the page mode circuitry also
+those using page mode on their RAM/&ZeroWidthSpace;ROM cards, since the page mode circuitry also
 uses port &pound;FF (and port &pound;FE on the
 <!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/map80/MAP80_256.htm" title="External Link: MAP80 256K RAM" target="_blank" rel="noreferrer">MAP 256K RAM</a><!-- /External Link -->
  and Gemini
@@ -184,9 +184,9 @@ reconfigure the SIO at a different I/O address (and change the software to suit)
 The port decoding is hard-wired, but luckily there are a couple of unused
 inverters on the board, so it is just a matter of breaking a track or two and
 inverting an address line to reconfigure the port decoding. This is something I
-have yet to do (spot the RAM-A user!). Neither are the address/&#x200b;data lines
+have yet to do (spot the RAM-A user!). Neither are the address/&ZeroWidthSpace;data lines
 buffered on the card: some of the lines have several LS-TTL loads attached to
-them. Buffering would then make it easier (neater) to mount the <!-- External Link --><a href="https://deramp.com/downloads/eprom_programmers/TMS2708.pdf" title="External Link" target="_blank" rel="noreferrer">2708</a><!-- /External Link -->s/&#x200b;4118s on
+them. Buffering would then make it easier (neater) to mount the <!-- External Link --><a href="https://deramp.com/downloads/eprom_programmers/TMS2708.pdf" title="External Link" target="_blank" rel="noreferrer">2708</a><!-- /External Link -->s/&ZeroWidthSpace;4118s on
 the card if your Nascom (&amp; RAM-A) card are already chock full of ZEAP, NASDIS,
 DEBUG, NASPEN, etc., or has been reconfigured for <!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="External Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->/<!-- External Link --><a href="https://sites.ecse.rpi.edu/courses/CStudio/data%20sheets/hm6116.pdf" title="External Link" target="_blank" rel="noreferrer">6116</a><!-- /External Link -->&rsquo;s.
 </p>
@@ -198,7 +198,7 @@ already being drawn from the 12V line, then an extra power supply may be needed.
 The cassettes are very small, being the same type as those used in &lsquo;Dictaphone&rsquo;
 machines, only the ones used are certified free from drop-outs, which they do
 indeed seem to be (unlike &lsquo;computer quality&rsquo; C10 audio cassettes). This means
-that Read/&#x200b;Write errors are definitely a thing of the past! Uncertified cassttes
+that Read/&ZeroWidthSpace;Write errors are definitely a thing of the past! Uncertified cassttes
 may also be used, but on your own head be it!
 </p>
 <h3>

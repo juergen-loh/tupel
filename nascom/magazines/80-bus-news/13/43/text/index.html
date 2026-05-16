@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/13/43/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - July&ndash;October 1982 - Volume 1 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -141,7 +141,7 @@ timing of the above sections of code!
 <p>
 One other point for budding Bios writers to bear in mind &ndash; The most useful (and
 accurate) part of the 1797 data sheet are the various flow charts of command
-execution. For example the text for Read/&#x200b;Write commands goes&hellip;
+execution. For example the text for Read/&ZeroWidthSpace;Write commands goes&hellip;
 </p>
 <p>
 ..Upon receipt of the Type II command, the busy status Bit is set. If the E flag =
@@ -153,9 +153,9 @@ Referring to the flow charts it can be seen that after Busy is set the &ldquo;Re
 is checked, and only if it is true will the 1797 continue with the command,
 otherwise it sets IRQ and terminates. If there has been no disk activity for a
 while there will be no Ready signal as the controller will have unloaded the heads
-and as a result deselected the drive. Thus, in order to get the Read/&#x200b;Write commands
+and as a result deselected the drive. Thus, in order to get the Read/&ZeroWidthSpace;Write commands
 to execute, the software has to ensure that the drive is selected. (My software
-checks the Ready line before all Read/&#x200b;Writes, and issues a Seek command to the
+checks the Ready line before all Read/&ZeroWidthSpace;Writes, and issues a Seek command to the
 current track if it is found to be false. This activates HLD without actually
 stepping the heads at all, and ensures that the drive is selected and the Ready
 line represents the true state of the drive. All type I commands, of which SEEK is

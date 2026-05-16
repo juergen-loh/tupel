@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/21/07/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -154,7 +154,7 @@ those of us who are into machine code. This is to provide a Single Step facility
 (On Gemini systems the NMI is uncommitted, and Single Stepping is provided in
 software by Gemdebug.) The Nascom Single Step works as follows: on Execution of a
 command, a bit is set in Port 0. This bit is clocked through a succession of
-flipflops, ending up toggling the /NMI pin of the CPU. The CPU immediately jumps
+flipflops, ending up toggling the <span class="nowrap">/NMI</span> pin of the CPU. The CPU immediately jumps
 to the service routine, which looks to see if the instruction executed was an E
 or S. If E, the CPU carries on with the next instruction, but if S, it prints the
 register display.
@@ -195,10 +195,10 @@ is the appropriate number.
 <p>
 Interrupt Mode 0 is identical to the <!-- External Link --><a href="https://en.wikipedia.org/wiki/Intel_8080" title="External Link" target="_blank" rel="noreferrer">8080</a><!-- /External Link -->
  interrupt response mode. At the
-end of each instruction, the CPU looks at /INT (pin 16). If this line has gone
+end of each instruction, the CPU looks at <span class="nowrap">/INT</span> (pin 16). If this line has gone
 low, something has requested an interrupt. Note that this line need not be low
 when examined. Its status is internally latched and reset when the CPU reads it.
-The CPU acknowledges this if interrupts have been enabled by making /M1 and /IORQ
+The CPU acknowledges this if interrupts have been enabled by making <span class="nowrap">/M1</span> and <span class="nowrap">/IORQ</span>
 lines go low. The interrupting device is supposed to recognise this signal and to
 place the next instruction to be executed on the bus. Normally this instruction
 is a restart, which is a call to one of 8 specific locations, but it can be an

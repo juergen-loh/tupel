@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/83/06/05/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-01 16:53:20 +0200 (Fr, 01. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:14 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus Journal - Juni 1983 - Ausgabe 6</title>
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -138,12 +138,12 @@
 <!-- 2(2) Spalten im Blocksatz: Start --><div class="style-multi-column-2 justify">
 
 <p>
-Außerdem erzeugt diese Schaltung auch noch das /MEMEXT-Signal und damit
+Außerdem erzeugt diese Schaltung auch noch das <span class="nowrap">/MEMEXT</span>-Signal und damit
 zugleich die Möglichkeit, für
 <!-- External Link --><a href="https://de.wikipedia.org/wiki/CP/M" title="Externer Link" target="_blank" rel="noreferrer">CP/M</a><!-- /External Link -->-Betrieb
 die unteren 4K beliebig ein-
 und auszublenden. Auf den 2. Steckplatz habe ich eine kleine
-Zusatzschaltung gesteckt, die die /IOEXT-Dekodierung vornimmt (s.u.),
+Zusatzschaltung gesteckt, die die <span class="nowrap">/IOEXT</span>-Dekodierung vornimmt (s.u.),
 da ich ja sonst die zusätzlichen IO-Bausteine der CPU-Karte nicht
 einsetzen könnte. Dabei kann auch die <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
  der Grundkarte
@@ -161,7 +161,7 @@ bestückt sie selbst, dann muß man etwa 250,&ndash;&nbsp;DM anlegen und ersetzt
 damit ein Buffer Board, eine I/O-Karte und eine Monitor-Umschaltkarte.
 </p>
 <h4 class="uppercase">
-/IOEXT-Erzeugung
+<span class="nowrap">/IOEXT</span>-Erzeugung
 </h4>
 <p>
 Will man die I/O-Adressen des <span class="uppercase">Nascom</span>-1 vollständig dekodieren, dann muß
@@ -169,7 +169,7 @@ ein externes Signal zugeführt werden, das immer dann LOW ist, wenn eine
 der 8 untersten Adressen (0-7) angesprochen wird. Das ist an sich ganz
 simpel; ärgerlich ist nur, daß dann die PIO der Grundplatine nicht mehr
 benutzt werden kann. Die hier abgebildete kleine Schaltung vermeidet
-diesen Nachteil (Bild 1). Ausgang A wird mit /IOEXT auf dem Bus oder an
+diesen Nachteil (Bild 1). Ausgang A wird mit <span class="nowrap">/IOEXT</span> auf dem Bus oder an
 der Lötbrücke auf der Grundplatine verbunden, Ausgang B wird an den
 Sockel von IC&nbsp;46, Pin 2 gelegt; das zugehörige IC-Beinchen muß aus der
 Fassung raus! Als Eingang erwartet die Schaltung die
@@ -202,11 +202,11 @@ des Adreßbereichs auf 128K RAM. Voraussetzung ist nur, daß sich im
 System eine RAM-Karte mit einem DE&shy;SE&shy;LECT-Eingang befindet, bei der auch
 die unteren 4K bestückt bzw. adressierbar sind. Das ist bei jeder dyn.
 64K-Karte der Fall, weil ja immer ein Monitor- oder Boot-Eprom
-einblendbar sein muß. Auf dem 80-BUS heißt das Signal /RAM DIS&shy;ABLE
+einblendbar sein muß. Auf dem 80-BUS heißt das Signal <span class="nowrap">/RAM</span> DIS&shy;ABLE
 (Busleitung 9); auf dem <!-- External Link --><a href="https://de.wikipedia.org/wiki/Europe_Card_Bus" title="Externer Link: Einfach-Europaformat-Computer-Baugruppe" target="_blank" rel="noreferrer">ECB</a><!-- /External Link -->-Bus
 ist es nicht als Standard definiert,
-wird aber in der Regel als /DE&shy;SE&shy;LECT auf Bahn 26a gelegt. Es bietet
-sich nun an, das /MEM&shy;EXT-Signal auf die /DE&shy;SE&shy;LECT-Leitung zu legen;
+wird aber in der Regel als <span class="nowrap">/DE</span>&shy;SE&shy;LECT auf Bahn 26a gelegt. Es bietet
+sich nun an, das <span class="nowrap">/MEM</span>&shy;EXT-Signal auf die <span class="nowrap">/DE</span>&shy;SE&shy;LECT-Leitung zu legen;
 damit wird der interne Speicher des Grundsystems ein- und der externe
 Speicher ausgeblendet. Schaltet man noch ein Gatter dazwischen, dann
 kann man mit einem Bit eines Output-Ports im Bereich 0-4K zwischen dem
@@ -214,12 +214,12 @@ Speicher auf der Grundkarte und externem RAM umschalten. Man muß nur
 dafür sorgen, daß sich bei einem RESET definierte Verhältnisse
 einstellen, also entweder NAS-SYS oder das BOOT-Eprom eingeschaltet
 werden. Ich benütze Bit 5 von Port 0, das über ein ODER-Gatter mit
-/MEM&shy;EXT verknüpft wird. Falls noch keine /MEM&shy;EXT-Erzeugung vorhanden
+<span class="nowrap">/MEM</span>&shy;EXT verknüpft wird. Falls noch keine <span class="nowrap">/MEM</span>&shy;EXT-Erzeugung vorhanden
 ist, kann man die restlichen 3 ODER-Gatter eines LS32 dafür benutzen
 (<a href="../../06/text/#article1">Bild 2</a>).
 Um bei RESET die gewünschten Verhältnisse herzustellen, muß
 IC&nbsp;41 (LS378) durch ein LS174 ersetzt werden. Diese beiden Latches sind
-pinkompatibel bis auf Pin 1. Beim LS378 ist das ein /ENABLE-Eingang,
+pinkompatibel bis auf Pin 1. Beim LS378 ist das ein <span class="nowrap">/ENABLE</span>-Eingang,
 beim LS174 werden damit alle 6 Ausgänge zurückgesetzt. Trennt man also
 Pin 1 von IC&nbsp;41 von Masse ab und verbindet den Anschluß mit der
 RESET-Leitung, dann ist dafür gesorgt, daß bei RESET der Speicher des

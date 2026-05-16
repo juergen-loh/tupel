@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/81/09/12/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-01 16:53:20 +0200 (Fr, 01. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:14 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Nascom Journal - September 1981 - Ausgabe 9</title>
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -154,7 +154,7 @@
 <tr><td>CONS</td><td>:gibt die Adresse der CONS-Funktion</td></tr>
 <tr><td>VARBL</td><td>:gibt die Adresse der VARIAB-Funktion (siehe Beispiele unten!)</td></tr>
 <tr><th colspan=2>Constanten und Variablen</th></tr>
-<tr><td>I,&#x200b;J,&#x200b;K</td><td>:geben den Wert der Schleifenvariablen auf den Stack</td></tr>
+<tr><td>I,&ZeroWidthSpace;J,&ZeroWidthSpace;K</td><td>:geben den Wert der Schleifenvariablen auf den Stack</td></tr>
 <tr><td>NAMES</td><td>:Startadresse des Interpreter-Dict.</td></tr>
 <tr><td>EXEC</td><td>:Die Routine TOP führt in einer endlosen Schleife das Programm aus, dessen Adresse von der Variablenfunktion EXEC auf den Stack gegeben wird. Bei Initialisierung des Systems: <span class="uppercase">Interact</span></td></tr>
 <tr><td>MEMORY</td><td>:Obergrenze RAM</td></tr>
@@ -169,7 +169,7 @@
 <table class="donthyphenate">
 <tr><td></td><td>(dort springt das Programm nach THEN) oder, falls kein ELSE vorhanden, bis THEN. Im Standard-FORTH ist THEN durch ENDIF ersetzt, das klingt wenigstens ein bischen logischer! UPN!</td></tr>
 <tr><td>REPEAT UNTIL LOOP</td><td>:Das ist nicht ganz so schlimm: der Programmteil zwischen REPEAT und LOOP wird so lange wiederholt, bis das dazwischen liegende UNTIL einen Wert ungleich 0 auf dem Stack vorfindet. Dann wird das Programm mit der nächsten Routine hinter LOOP fortgesetzt.</td></tr>
-<tr><td>FOR LOOP</td><td>:Die Schleifenvariable (I,&#x200b;J oder K- von innen nach außen) erhält den Anfangswert T und wird bei jeder Schleifenwiederholung incrementiert, bis sie den Wert T-1 erreicht hat. Außer durch die umgekehrte Eingabe unterscheidet sich das nicht von der For-Next-Schleife in BASIC.</td></tr>
+<tr><td>FOR LOOP</td><td>:Die Schleifenvariable (I,&ZeroWidthSpace;J oder K- von innen nach außen) erhält den Anfangswert T und wird bei jeder Schleifenwiederholung incrementiert, bis sie den Wert T-1 erreicht hat. Außer durch die umgekehrte Eingabe unterscheidet sich das nicht von der For-Next-Schleife in BASIC.</td></tr>
 </table>
 
 <p>

@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/13/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -139,7 +139,7 @@ required if only the 64k version is to be used. It is then sufficient to tie
 the reset pin to the OR gate output as indicated by the dotted line. The
 inverter for the clock input to the flip-flop can be taken from pin 9 (input)
 and pin 8 (output) of IC&nbsp;34 which does not appear to be used in the original
-design. Both the extra address line A7&rsquo; and the /CAS signal should be coupled
+design. Both the extra address line A7&rsquo; and the <span class="nowrap">/CAS</span> signal should be coupled
 to the RAM via 33R resistors to reduce electrical noise and ringing.
 </p>
 <img class="img-fluid mx-auto d-block " src="../../Image-13-1.png" alt="Timing Diagram" width="621" height="213">
@@ -149,20 +149,20 @@ FIGURE 3
 <p>
 When it was first tested by writing a block of identical bytes using the
 NAS&shy;SYS C command, the RAM showed a lot of corrupted bytes. The reason for this
-took me many hours to uncover. Eventually I discovered that the read/&#x200b;write
+took me many hours to uncover. Eventually I discovered that the read/&ZeroWidthSpace;write
 line on pin 1 of the data bus buffer IC&nbsp;2 suffered from spurious negative
-pulses of about 50 nSec duration. These pulses occurred every time the /RAMDIS
-signal was activated. This line goes low about 50 to 60 nSec after /MREQ;
-thus, with /CS on P6 or P7 held low, the buffer is put into the read state as
-soon as /RD and /MREQ go active. Now if this is the start of a read-cycle of
+pulses of about 50 nSec duration. These pulses occurred every time the <span class="nowrap">/RAMDIS</span>
+signal was activated. This line goes low about 50 to 60 nSec after <span class="nowrap">/MREQ</span>;
+thus, with <span class="nowrap">/CS</span> on P6 or P7 held low, the buffer is put into the read state as
+soon as <span class="nowrap">/RD</span> and <span class="nowrap">/MREQ</span> go active. Now if this is the start of a read-cycle of
 memory on the main board, the read buffer on the RAM board should not be
-activated, but it does not know that for 50 nSec or so, until /RAMDIS goes
+activated, but it does not know that for 50 nSec or so, until <span class="nowrap">/RAMDIS</span> goes
 active. As designed, P6 or P7 are fed from the decoders IC&nbsp;22 and IC&nbsp;23, or IC
 24, and these, together with the address latch IC&nbsp;25, produce sufficient delay
-that /RAMDIS goes low before /CS and hence there is no timing problem. The
-solution which seemed to be most simple was to produce a version of /MREQ
+that <span class="nowrap">/RAMDIS</span> goes low before <span class="nowrap">/CS</span> and hence there is no timing problem. The
+solution which seemed to be most simple was to produce a version of <span class="nowrap">/MREQ</span>
 delayed by about 60 nSec, and apply it to the <span class="uppercase">Nascom</span> SEL pin (which is coupled
-directly to bus line 11); this stops IC&nbsp;36 from going low until after /RAMDIS
+directly to bus line 11); this stops IC&nbsp;36 from going low until after <span class="nowrap">/RAMDIS</span>
 goes active, if it is going to. I used two gates from a CMOS 4049 inverter
 connected in series, which produces sufficient delay. This is the only
 additional chip which is required to complete the 64k conversion. I must

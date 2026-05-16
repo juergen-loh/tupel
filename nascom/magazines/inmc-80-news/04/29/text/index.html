@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/inmc-80-news/04/29/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -135,21 +135,21 @@
 <div class="col-sm-12 mag-inmc-80-news issue-04 page-29" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <h4>
-Line 22, /INT.
+Line 22, <span class="nowrap">/INT</span>.
 </h4>
 <p>
 Used for the Z80 maskable interrupt. For full details see the book &ldquo;Z80 family
 program interrupt structure&rdquo; available from <!-- External Link --><a href="https://www.zilog.com/" title="External Link" target="_blank" rel="noreferrer">Zilog</a><!-- /External Link -->.
 </p>
 <h4>
-Line 23, /WAIT.
+Line 23, <span class="nowrap">/WAIT</span>.
 </h4>
 <p>
 Used to insert wait states into Z80 machine cycles. Expansion cards that
 require wait states should provide them.
 </p>
 <h4>
-Line 24, /RFSH.
+Line 24, <span class="nowrap">/RFSH</span>.
 </h4>
 <p>
 Used to control the refreshing of dynamic RAM. It should be noted that a
@@ -158,53 +158,53 @@ register contents will appear as the top eight bits on the address bus during a
 refresh cycle.
 </p>
 <h4>
-Line 25, /M1.
+Line 25, <span class="nowrap">/M1</span>.
 </h4>
 <p>
-Z80 /M1 used to indicate an opcode fetch, also used (in conjunction with
-/IORQ) to indicate an interrupt acknowledge cycle.
+Z80 <span class="nowrap">/M1</span> used to indicate an opcode fetch, also used (in conjunction with
+<span class="nowrap">/IORQ</span>) to indicate an interrupt acknowledge cycle.
 </p>
 <h4>
-Line 26, /IORQ.
+Line 26, <span class="nowrap">/IORQ</span>.
 </h4>
 <p>
 Used to indicate a Z80 I/O cycle. The port address will be on the bottom eight
 address lines (A0 to A7). The top eight will have the contents of the A register on
-them. If /IORQ is asserted with /M1 it indicates an interrupt acknowledge cycle and
+them. If <span class="nowrap">/IORQ</span> is asserted with <span class="nowrap">/M1</span> it indicates an interrupt acknowledge cycle and
 the Z80 will expect to receive an interrupt vector.
 </p>
 <h4>
-Line 27, /MREQ.
+Line 27, <span class="nowrap">/MREQ</span>.
 </h4>
 <p>
 Used to indicate a Z80 memory cycle.
 </p>
 <h4>
-Line 28, /WR.
+Line 28, <span class="nowrap">/WR</span>.
 </h4>
 <p>
-Used to indicate a Z80 write cycle, asserted in conjunction with /IORQ or
-/MREQ.
+Used to indicate a Z80 write cycle, asserted in conjunction with <span class="nowrap">/IORQ</span> or
+<span class="nowrap">/MREQ</span>.
 </p>
 <h4>
-Line 29, /RD.
+Line 29, <span class="nowrap">/RD</span>.
 </h4>
 <p>
-Used to indicate a Z80 read cycle, asserted in conjunction with /IORQ or
-/MREQ. It should be noted that /RD is not asserted during an interrupt acknowledge.
+Used to indicate a Z80 read cycle, asserted in conjunction with <span class="nowrap">/IORQ</span> or
+<span class="nowrap">/MREQ</span>. It should be noted that <span class="nowrap">/RD</span> is not asserted during an interrupt acknowledge.
 </p>
 <h4>
 Lines 30 to 45, A0 to A15.
 </h4>
 <p>
-Z80 address lines, should be tristated during a /BUSAK.
+Z80 address lines, should be tristated during a <span class="nowrap">/BUSAK</span>.
 </p>
 <h4>
 Lines 46,47,48, A16, A17, A18.
 </h4>
 <p>
 Optional implementation for extended addressing, should be tristated during a
-/BUSAK.
+<span class="nowrap">/BUSAK</span>.
 </p>
 <h4>
 Line 49, GND.
@@ -217,7 +217,7 @@ the mother board and on expansion boards.
 Lines 50 to 57, D0 to D7.
 </h4>
 <p>
-Z80 data lines, should be tristated during /BUSAK.
+Z80 data lines, should be tristated during <span class="nowrap">/BUSAK</span>.
 </p>
 <h4>
 Line 58, RSFU.

@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/21/05/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -142,10 +142,10 @@ A$ = LEFT$(B$,4) + MID$(A$,3,3) + " Wowee!"
 </pre>
 <p>
 In fact, Pascal has these facilities in exactly the same way as BASIC:
-they may or may not be provided with the compiler/&#x200b;interpreter as &ldquo;standard&rdquo; or
+they may or may not be provided with the compiler/&ZeroWidthSpace;interpreter as &ldquo;standard&rdquo; or
 &ldquo;intrinsic&rdquo; functions. Most of the Pascal compilers around, of course, are really
 only &ldquo;Tiny&rdquo; Pascals (i.e. a subset) and many don&rsquo;t even allow the user to define
-his/&#x200b;her own data types (the solution suggested by Dr. Dark). The Nascom Pascal,
+his/&ZeroWidthSpace;her own data types (the solution suggested by Dr. Dark). The Nascom Pascal,
 approved by Lucas Logic, however, does indeed have the relevant functions and is
 probably one of the few Tiny Pascals which do.
 </p>
@@ -157,7 +157,7 @@ standard intrinsics as a matter of course. In
 Dark&rsquo;s line of BASIC could be re-written as:
 </p>
 <pre>
-   astring := concat(copy(bstring,1,4),&#x200b;copy(astring,3,3),&#x200b;" Wowee!");
+   astring := concat(copy(bstring,1,4),&ZeroWidthSpace;copy(astring,3,3),&ZeroWidthSpace;" Wowee!");
 </pre>
 <p>
 where astring and bstring (and the functions copy and concat) are STRING types
@@ -176,11 +176,11 @@ digits and can then be used with the usual arithmetic operations.
 Big H,
 <a href="../../../14/11/text/#article1">in the same issue</a>,
 details his method of utilising other
-&ldquo;Centronics"&rdquo; signals besides BUSY and /STROBE. However, his <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="External Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
+&ldquo;Centronics"&rdquo; signals besides BUSY and <span class="nowrap">/STROBE</span>. However, his <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="External Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
  Port assignments
-are not consistent with existing conventions for BUSY and /STROBE. Both Nascom
+are not consistent with existing conventions for BUSY and <span class="nowrap">/STROBE</span>. Both Nascom
 and Gemini, I believe, now employ the convention that Port B is used for data and
-Port A for control with bit 0 assigned to BUSY and bit 1 to /STROBE. It would be
+Port A for control with bit 0 assigned to BUSY and bit 1 to <span class="nowrap">/STROBE</span>. It would be
 helpful if other pioneers could maintain consistency as they progess further into
 the jungle!
 </p>
@@ -200,7 +200,7 @@ On my own system I am experimenting with the assignment for Port A:
 <tr><td>7</td><td>/ERROR</td><td>I</td></tr>
 </table>
 <p class="continued">
-/ERROR, in particular, is assigned to bit 7 so that a simple RLA will enable the
+<span class="nowrap">/ERROR</span>, in particular, is assigned to bit 7 so that a simple RLA will enable the
 Carry flag to show its status.
 </p>
 <p class="noindent">

@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/24/51/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - July&ndash;August 1983 - Volume 2 - Issue 4</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -152,11 +152,11 @@ the BIOS Read routine. The Read routine starts by converting the CP/M logical
 sector number to a physical sector number. (It divides it by 4 as 512/128=4).
 Next it checks a flag to see if there is anything in the buffer. If there
 isn&rsquo;t, it jumps on to do the actual read. If there is, it checks to see if it
-is the same drive/&#x200b;track/&#x200b;sector as the current request. If it is the same, then
+is the same drive/&ZeroWidthSpace;track/&ZeroWidthSpace;sector as the current request. If it is the same, then
 the read can be skipped as there is no point in overwriting the buffer with
 identical data! Once the buffer is full of data, the flag is set to indicate
 valid data is present, and the buffer pointers are updated to the correct
-drive/&#x200b;track/&#x200b;sector combination. Finally the transfer of 128 bytes of data to
+drive/&ZeroWidthSpace;track/&ZeroWidthSpace;sector combination. Finally the transfer of 128 bytes of data to
 the BDOS follows. To locate which 128 bytes, the logical sector sector number
 is reloaded, and the lower two bits are isolated, (the remainder when divided
 by 4). These are then used as an index into the appropriate quarter of the

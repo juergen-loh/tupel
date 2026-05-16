@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/scorpio-news/13/62/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Scorpio News - July&ndash;September 1987 &ndash; Volume 1. Issue 3.</title>
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -156,13 +156,13 @@ found a new command for the CONFIG.SYS file (it actually ends up in the
 &lsquo;environment string space&rsquo;) and it goes like this:
 </p>
 <table id="article1" class="drivparm-help">
-<tr><td>DRIVPARM=/D:dd[/F:ff&#x200b;/T:tt&#x200b;/S:ss&#x200b;/N&#x200b;/C&#x200b;/H:hh]</td></tr>
+<tr><td>DRIVPARM=/D:dd[/F:ff&ZeroWidthSpace;/T:tt&ZeroWidthSpace;/S:ss&ZeroWidthSpace;/N&ZeroWidthSpace;/C&ZeroWidthSpace;/H:hh]</td></tr>
 <tr><td><br>
-		where /D:dd is the drive number (0-255)<br>
+		where <span class="nowrap">/D:dd</span> is the drive number (0-255)<br>
 		<br></td></tr>
 <tr><td>and optionally:</td></tr>
-<tr><td>/T:tt is the number of tracks/&#x200b;side (1-999)</td></tr>
-<tr><td>/S:ss is the number of sectors/&#x200b;track (1-99)</td></tr>
+<tr><td>/T:tt is the number of tracks/&ZeroWidthSpace;side (1-999)</td></tr>
+<tr><td>/S:ss is the number of sectors/&ZeroWidthSpace;track (1-99)</td></tr>
 <tr><td>/H:hh is the maximum head number (1-99)</td></tr>
 <tr><td>/C indicates changeline (door lock) support required</td></tr>
 <tr><td>/N indicates non-removable block device</td></tr>
@@ -187,9 +187,9 @@ How do you get 720K per disk on an AT?
 Well I run DOS 3.2, so I tried the above on both my AT clone and one of the
 real genuine IBM AT&rsquo;s at work with peculiar results! Firstly an AT is fitted
 with a double sided 80 track dual speed drive, giving 1.2&nbsp;Mbyte on that drive,
-made up of 15 sectors of 512 bytes/&#x200b;track. It can also double step the drive and
+made up of 15 sectors of 512 bytes/&ZeroWidthSpace;track. It can also double step the drive and
 forget about the double speed bit and give the &lsquo;IBM standard&rsquo; 360K, double sided
-40 tracks, 9 sectors of 512 bytes/&#x200b;track. The snag is that at 1.2&nbsp;Mbyte, the
+40 tracks, 9 sectors of 512 bytes/&ZeroWidthSpace;track. The snag is that at 1.2&nbsp;Mbyte, the
 disks are expensive, whilst 360K per disk is hardly enough to be usable.
 Wouldn&rsquo;t be nice to keep drive A as a 1.2&nbsp;Mbyte drive, whilst at the same time
 using the drive as 720K logical drive at a different logical address, mainly
@@ -197,12 +197,12 @@ because I&rsquo;ve got lots of ordinary disks end very few high density disks. M
 clone is also fitted with a 40 track Teac as drive B.
 </p>
 <p>
-So first I set the drive parameters for drive A, 80 track 9 sectors/&#x200b;track.
+So first I set the drive parameters for drive A, 80 track 9 sectors/&ZeroWidthSpace;track.
 I used the Amstrad FORMAT.EXE, because a &lsquo;file compare&rsquo; showed it was different
 to my original format program, and as the <span class="uppercase">Drivparm</span> ends up in the &lsquo;environment
 string space&rsquo; I figured that the program might actually look there to see what
 drives it had got. The darned thing paid no notice, it still formatted the
-drive as 80 track, 15 sectors/&#x200b;track, that is 1.2&nbsp;Mbyte. So then I set drive
+drive as 80 track, 15 sectors/&ZeroWidthSpace;track, that is 1.2&nbsp;Mbyte. So then I set drive
 parameters to drive B, the Teac 40 track, and lo and behold, the dear old head
 moved 80 steps (Ok, so as it was a 80 track drive, the last 40 steps were
 knocking against the end stop), but the disk reported 720K when it had finished.

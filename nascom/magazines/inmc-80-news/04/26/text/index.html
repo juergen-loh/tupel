@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/inmc-80-news/04/26/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -163,20 +163,20 @@
 <p class="noindent">
 1) * is an open collector line.<br>
 2) IEI to be linked to IEO on cards not using the interrupt daisy chain.<br>
-3) /BAI to be linked to /BAO on cards not using the <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
+3) <span class="nowrap">/BAI</span> to be linked to <span class="nowrap">/BAO</span> on cards not using the <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
  daisy chain.<br>
 4) Bus drivers must be able to drive 75/15 U.L.<br>
 5) Bus receivers must not load the bus past I/O.25 U.L.<br>
 6) Bus master to pull up all open collector lines with 2k2.<br>
-7) Bus master to pull up the following lines with 10k, /HALT, /MREQ, /IORQ, /RD, /WR,
-/M1, /RFSH.<br>
+7) Bus master to pull up the following lines with 10k, <span class="nowrap">/HALT</span>, <span class="nowrap">/MREQ</span>, <span class="nowrap">/IORQ</span>, <span class="nowrap">/RD</span>, <span class="nowrap">/WR</span>,
+<span class="nowrap">/M1</span>, <span class="nowrap">/RFSH</span>.<br>
 8) Bus timing reference point is pin 6 of the Z80. As the bus is in essence a buffered
-Z80, the timing of bus signals is as the <!-- External Link --><a href="https://www.zilog.com/" title="External Link" target="_blank" rel="noreferrer">Zilog</a><!-- /External Link -->/&#x200b;Mostek Z80 data book. All Z80 signals
+Z80, the timing of bus signals is as the <!-- External Link --><a href="https://www.zilog.com/" title="External Link" target="_blank" rel="noreferrer">Zilog</a><!-- /External Link -->/&ZeroWidthSpace;Mostek Z80 data book. All Z80 signals
 are buffered onto the bus with 20nS +/&nbsp; 10nS buffers, the sole exception being the bus
 clock which should be 20nS (+/&nbsp; 10nS) ahead of the Z80 clock (pin6). The timing of
 other signals is detailed in the description of the particular signal. All expansion
 card timing must, however be referenced to the bus.<br>
-9) Cards using /BAI, /BAO, IEI &amp; IEO should pull them up with 2k2.<br>
+9) Cards using <span class="nowrap">/BAI</span>, <span class="nowrap">/BAO</span>, IEI &amp; IEO should pull them up with 2k2.<br>
 10) Bus termination. Long buses may require termination. 220R on each line to a 2.6V
 low impedance source should solve 99% of problems.<br>
 11) Grounding. The ground line to the PSU should be as short as possible and as thick

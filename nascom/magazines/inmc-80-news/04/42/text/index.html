@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/inmc-80-news/04/42/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -140,7 +140,7 @@
 <p>
 The Gemini EPROM board is a standard 8&Prime;x8&Prime; Nasbus (compatible! &ndash;Ed) card, with
 silk-screen, solder resist, and with plated through holes. It holds the usual
-addressing logic/&#x200b;buffering for the Nasbus and has 16 empty 24-pin sockets to
+addressing logic/&ZeroWidthSpace;buffering for the Nasbus and has 16 empty 24-pin sockets to
 accommodate the EPROMs and one additional socket which will accept the Nascom Basic
 Rom. There is also an on-board wait state generator that can be switched in or out as
 required. This has an advantage over the one on the Nascom&nbsp;2 in that it only inserts
@@ -148,7 +148,7 @@ wait states when the EPROM board is being addressed, and not in every cycle
 irrespective of whether RAM or EPROM is being accessed. As with the Nascom&nbsp;2 the wait
 state occurs in both M1 and MREQ cycles. (If you check your Z80 data sheets you will
 notice that the critical cycle from the point of view of memory access is the M1
-cycle, other Read/&#x200b;Write cycles are 1/2 a clock period longer). As mentioned earlier
+cycle, other Read/&ZeroWidthSpace;Write cycles are 1/2 a clock period longer). As mentioned earlier
 the Board also supports the Nascom Page Mode of working.
 </p>
 <p>
@@ -182,11 +182,11 @@ swearing) it partially conceded and now sits about 2/3rd of the way into its soc
 </p>
 <p>
 With the TTL ics in and the board plugged into the bus everything still worked, so it
-was time to add some EPROMs. I set the strap fields for 2716s,&#x200b;the decode address for
+was time to add some EPROMs. I set the strap fields for 2716s,&ZeroWidthSpace;the decode address for
 8000 on Bank 0, inserted some 2716s and plugged the board back in. Lo and behold
 everything worked! However I subsequently discovered one small point that does not
 appear in the manual. If a 2716 bank is decoded as a 4K block and the 4K block is an
-even one (0,&#x200b;2,&#x200b;4,&#x200b;6,&#x200b;8,&#x200b;A,&#x200b;C,&#x200b;E) then the 2716s must be placed in positions X0 and X1, if it
+even one (0,&ZeroWidthSpace;2,&ZeroWidthSpace;4,&ZeroWidthSpace;6,&ZeroWidthSpace;8,&ZeroWidthSpace;A,&ZeroWidthSpace;C,&ZeroWidthSpace;E) then the 2716s must be placed in positions X0 and X1, if it
 is odd then they must go in X2 and X3. From this it follows that if a 2716 bank is
 decoded as two non-contiguous 4K blocks, then one must be odd and one must be even.
 </p>

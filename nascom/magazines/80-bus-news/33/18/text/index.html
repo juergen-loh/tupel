@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/18/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -166,21 +166,21 @@ Transparent Access &amp; ESP
 With the SVC, a hardware technique is used to achieve transparent access.
 On the face of it all that has to be done is to connect the &lsquo;display enable&rsquo;
 (or &lsquo;display active&rsquo;) signal from the display controller via a few gates to
-the Z80 /WAIT input. Thus, if the processor attempts to access the screen
+the Z80 <span class="nowrap">/WAIT</span> input. Thus, if the processor attempts to access the screen
 memory while the display is active, it is made to wait until the end of the
-display period, after which the Z80 is free to continue with its read/&#x200b;write
+display period, after which the Z80 is free to continue with its read/&ZeroWidthSpace;write
 cycle. However a problem arises when the Z80 finds, on going to access the
 display memory, that the display is inactive. The dilema here is that although
 the display memory is free at that instant, the display controller may start a
 new display line at any moment (like in the middle of the forthcoming
-read/&#x200b;write cycle of the Z80). If it does, this will lead to one of two
-outcomes: a corrupted read/&#x200b;write cycle, or interference down the left hand
+read/&ZeroWidthSpace;write cycle of the Z80). If it does, this will lead to one of two
+outcomes: a corrupted read/&ZeroWidthSpace;write cycle, or interference down the left hand
 side of the display depending on which controller gets priority.
 </p>
 <p>
 This is where ESP comes in. The arbitration circuit has to know whether
-there is time for the Z80 to complete its read/&#x200b;write cycle without
-interruption, or whether the /WAIT signal should be applied immediately as the
+there is time for the Z80 to complete its read/&ZeroWidthSpace;write cycle without
+interruption, or whether the <span class="nowrap">/WAIT</span> signal should be applied immediately as the
 display controller is about to start a new display line. Those of you who have
 followed the description so far are probably thinking &ndash; &lsquo;ah! you just generate
 or tap off an earlier version of the Display Enable signal and use that&rsquo;.

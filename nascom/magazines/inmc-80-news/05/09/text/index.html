@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/inmc-80-news/05/09/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>INMC 80 News - October&ndash;December 1981 - Issue 5</title>
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -147,7 +147,7 @@ and I thought you might be interested in my own ideas on the subject.
 The reason Mr Willmott&rsquo;s attempt to use WAIT failed is that he has
 misunderstood the effect of WAIT. It is described for various cycles (Memory
 read, Memory write, etc) on pages&nbsp;15-18 of the Z80 Technical Manual. Whenever
-/WAIT is asserted the cycle is stretched by inserting wait states until /WAIT
+<span class="nowrap">/WAIT</span> is asserted the cycle is stretched by inserting wait states until <span class="nowrap">/WAIT</span>
 goes high again. During this time all the bus signals are maintained. Thus
 while waiting for a blanking period the VRAM signal will be active, preventing
 the VDU circuitry from accessing the RAM.
@@ -171,7 +171,7 @@ period starts. I have not so far experimented with this enough to be sure it
 works, but the technique is promising.
 </p>
 <p>
-/BLANKING is a composite of two blanking signals: blanking between
+<span class="nowrap">/BLANKING</span> is a composite of two blanking signals: blanking between
 scan lines, and blanking between frames. The former lasts for quite a short
 period &ndash; I think less than the time required to access one byte. Therefore I
 have been using only the interframe blanking period, identified by the VBLANK

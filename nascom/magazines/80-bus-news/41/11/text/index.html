@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/41/11/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - Spring 1985 - Volume 4 - Issue 1</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -145,7 +145,7 @@ same time leaving CP/M internally compatible with
 128 byte sectors, which CP/M programs still use
 (compatibility between CP/M&nbsp;1.4 and CP/M&nbsp;2.2).
 CP/M now carries out a two stage disk access.
-Firstly it calculates the start of physical track/&#x200b;sector
+Firstly it calculates the start of physical track/&ZeroWidthSpace;sector
 containing the 128 bytes it&rsquo;s after. This n-length
 sector (512 bytes in the case of <i>Gemini</i>) is read into
 a work space called the deblocking buffer. Next
@@ -165,7 +165,7 @@ this:
 <p class="exdent">
 READ (from Winnie)<br>
 CP/M calculates the appropriate physical
-track/&#x200b;sector where the 128 bytes
+track/&ZeroWidthSpace;sector where the 128 bytes
 required are situated.<br>
 Wait for that sector to appear (very fast
 as the Winnie controller probably
@@ -180,7 +180,7 @@ area.
 <p class="exdent">
 WRITE (to disk)<br>
 CP/M calculates the appropriate 512
-byte physical track/&#x200b;sector where the
+byte physical track/&ZeroWidthSpace;sector where the
 128 bytes are going to go.<br>
 Wait for that sector to appear (up to
 199mS delay)<br>
@@ -225,12 +225,12 @@ routine? Well the cause of the problem is this
 swapping of data about in the deblocking buffer.
 The deblocking logic is quite clever, although if
 you&rsquo;ve read the source, quite messy. It knows not
-to flush the buffer if the same physical track/&#x200b;sector
+to flush the buffer if the same physical track/&ZeroWidthSpace;sector
 information is still current and no data write has
 been made to it. If a write to it has been made, then
 is still doesn&rsquo;t write whilst the same physical
-track/&#x200b;sector remains current. However, as soon as
-the physical track/&#x200b;sector is changed, or the file is
+track/&ZeroWidthSpace;sector remains current. However, as soon as
+the physical track/&ZeroWidthSpace;sector is changed, or the file is
 opened or closed, then the buffer is flushed if no
 writes were made, or written out then flushed if
 writes were made to it.

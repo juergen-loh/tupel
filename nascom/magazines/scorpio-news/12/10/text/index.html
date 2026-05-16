@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/scorpio-news/12/10/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Scorpio News - April&ndash;June 1987 &ndash; Volume 1. Issue 2.</title>
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,7 +138,7 @@
 from the system Clock. If the System Clock is being used, it is routed through
 a prescaler, where it is divided by either 16 of 256. The counter can be set to
 count down from any number between 256 and 1. On reaching zero, the channel
-sends out a pulse on its Zero Count/&#x200b;Time Out (ZC/TOn) pin, except for channel 3
+sends out a pulse on its Zero Count/&ZeroWidthSpace;Time Out (ZC/TOn) pin, except for channel 3
 which lacks that pin. The counter can be caused to automatically reload the
 initial count everytime it reaches zero. The important event is the counter
 reaching zero, which can cause an output pulse on the ZC/TOn pin, an automatic
@@ -150,7 +150,7 @@ typical example ia the
 <!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/map80/MAP80_CPU.htm" title="External Link: MAP80 CPU" target="_blank" rel="noreferrer">MAP CPU</a><!-- /External Link -->
  board, where channel 3 of the on-board CTC is
 configured to interrupt when the keyboard has a character ready. This is done
-by telling the CTC channel 4 that it is to count 1 transition on the CLK/&#x200b;TRG3
+by telling the CTC channel 4 that it is to count 1 transition on the CLK/&ZeroWidthSpace;TRG3
 pin (the keyboard strobe), cause an interrupt, and automatically reload the
 count ready to go again.
 </p>
@@ -185,7 +185,7 @@ These bits have the following meaning
 		this, an interrupt vector must have been written to the CTC.</td></tr>
 <tr><td>D7 = 0 &nbsp; &ndash;</td><td>No interrupt from this channel.<br><br></td></tr>
 <tr><td>D6 = 1 &nbsp; &ndash;</td><td>Select counter mode. Down counter is decremented by each triggering
-		edge of the external clock from CLK/&#x200b;TRG pin. No prescaler used.</td></tr>
+		edge of the external clock from CLK/&ZeroWidthSpace;TRG pin. No prescaler used.</td></tr>
 <tr><td>D6 = 0 &nbsp; &ndash;</td><td>Select timer mode. System clock feeds through the Prescaler, thence
 		to the Down Counter. The ZC/TOn pin is pulsed at a frequency of
 		tc*P*TC, where tc is system clock period, P is prescaler factor of 16

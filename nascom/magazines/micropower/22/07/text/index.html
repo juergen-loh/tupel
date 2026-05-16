@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/micropower/22/07/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Micropower - Volume 2 - Number 2 - April 1982</title>
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -146,7 +146,7 @@ SCAL KBD, DF 61
 <p>
 The keys of the keyboard are connected in an array of eight rows by seven
 columns (six columns in the case of the Nascom&nbsp;1 keyboard). Each row of keys is
-connected to one output line of a chip known as a &lsquo;BCD to Decimal Decoder/&#x200b;Driver&rsquo;.
+connected to one output line of a chip known as a &lsquo;BCD to Decimal Decoder/&ZeroWidthSpace;Driver&rsquo;.
 This chip accepts a four-bit binary pattern and if it represents a valid decimal digit
 (i.e., if it is in the range 0 &ndash; 9) it drives the corresponding output line to zero volts.
 Three of the input lines are taken from a binary counter, which merely counts a series
@@ -158,7 +158,7 @@ received.
 <p>
 Each key is effectively a miniature transformer, the magnetic circuit of which
 is only complete when the key is depressed. Thus as a row is pulled to zero volts by
-the decoder/&#x200b;driver, a pulse is output on by each key in that row which is down. The
+the decoder/&ZeroWidthSpace;driver, a pulse is output on by each key in that row which is down. The
 pulses are amplified and output to the data bus via a buffer which is only enabled
 when port 0 is read. Thus the circuitry produces a sequential scan of the keys and
 makes the information on which keys are pressed available to the processor.

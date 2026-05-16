@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/10/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -205,10 +205,10 @@ First the lowest 7 lines of the
 address bus are fed to the address
 pins of the chip and these are
 latched internally by applying a low
-on the /RAS (row address select)
+on the <span class="nowrap">/RAS</span> (row address select)
 pin; then, the next 7 bits are fed
 to the chip and these are latched by
-pulling the /CAS (column address
+pulling the <span class="nowrap">/CAS</span> (column address
 select) pin low. It is one of the
 functions of the board designer to
 ensure that the addresses and their appropriate latching signals are fed to
@@ -216,7 +216,7 @@ the chip in the correct sequence. The 4164 operates in a similar manner but
 requires that all sixteen address lines are coupled in two groups A0 &ndash; A7, and
 A8 &ndash; A15. Setting up an address on the input latches gives access to one cell
 so that we can read or write one bit. When R/W goes low, the bit presented at
-the input pin D is latched provided /CAS is also low. The stored bit then
+the input pin D is latched provided <span class="nowrap">/CAS</span> is also low. The stored bit then
 </p>
 <!-- 1 column: end --></div>
 

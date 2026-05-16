@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/83/06/04/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-01 16:53:20 +0200 (Fr, 01. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:14 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus Journal - Juni 1983 - Ausgabe 6</title>
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -156,7 +156,7 @@ Meist beschränkte sich dies jedoch auf eine Handverdrahtung vom
 Grundsystem bzw. Buffer Board auf eine Buskarte für den ECB-Bus oder
 auf eine selbstgestrickte Pufferkarte, die den <span class="uppercase">Nascom</span>-1 mit dem ECB-Bus
 verband und zugleich die für eine vollständige Dekodierung notwendigen
-Signale /MEMEXT und /IOEXT erzeugte. Dazu sind
+Signale <span class="nowrap">/MEMEXT</span> und <span class="nowrap">/IOEXT</span> erzeugte. Dazu sind
 <a href="../../../../81/04/04/text/#article1">einige</a>
 <a href="../../../../81/04/06/text/#article1">interessante</a>
 <a href="../../../../81/04/09/text/#article1">Beiträge</a> im
@@ -209,7 +209,7 @@ Zunächst mit einem handverdrahteten
 
 mit nur einem Steckplatz, in dem sich zuerst eine stat. 8K-RAM-Karte
 befand, später eine dyn. 64K-Karte. Nur die Signale MREQ, RD und WR
-waren gepuffert und die /MEMEXT-Erzeugung erfolgte mit drei
+waren gepuffert und die <span class="nowrap">/MEMEXT</span>-Erzeugung erfolgte mit drei
 Oder-Gattern. Das System arbeitete (nach anfänglichen Problemen mit der
 dyn. Speicherkarte) absolut zuverlässig, aber ein weiterer Ausbau
 verlangte doch eine ordentliche Pufferung. Zuerst wollte ich das
@@ -228,8 +228,8 @@ Seite aus einem 40-pol. DIL-Sockel, auf der anderen Seite aus einer
 verbunden sind. In die Busplatine habe ich eine Wire-Wrap-Ausführung
 der 64-pol. VG-Leiste gelötet. Die Wire-Wrap-Pfosten lassen sich nun
 leicht in die 64-pol. Leiste des Adapters stecken. Einige wenige
-zusätzliche Verbindungen dienen der vollständigen Dekodierung (/MEMEXT
-und /IOEXT) sowie Sonderfunktionen wie NAS&shy;BOOT und NAS&shy;BANK
+zusätzliche Verbindungen dienen der vollständigen Dekodierung <span class="nowrap">(/MEMEXT</span>
+und <span class="nowrap">/IOEXT</span>) sowie Sonderfunktionen wie NAS&shy;BOOT und NAS&shy;BANK
 (<a href="../../05/text/#article1">siehe unten</a>!).
 Unabhängig von der speziellen Konfiguration läßt sich dieses
 Prinzip (mit nur wenigen Änderungen) universell anwenden, etwa auch in
@@ -255,7 +255,7 @@ CPU-Karte befinden sich eine
 <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->,
 ein <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0181.pdf" title="Externer Link: Z80 CTC" target="_blank" rel="noreferrer">CTC</a><!-- /External Link -->
  und eine <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0183.pdf" title="Externer Link: Z80 SIO" target="_blank" rel="noreferrer">SIO</a><!-- /External Link -->/0, womit die
-Ein/&#x200b;Ausgabe-Möglichkeiten des <span class="uppercase">Nascom</span> wesentlich erweitert werden.
+Ein/&ZeroWidthSpace;Ausgabe-Möglichkeiten des <span class="uppercase">Nascom</span> wesentlich erweitert werden.
 Außerdem enthält sie zwei 24-polige Memory-Steckplätze incl. Bootlogik.
 Das habe ich ein bißchen unfrisiert, so daß ich die Karte gleichzeitig
 als Monitor-Umschaltkarte verwenden kann. (Wegen der dollen

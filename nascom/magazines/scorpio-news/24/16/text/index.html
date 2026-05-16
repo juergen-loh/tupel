@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/scorpio-news/24/16/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Scorpio News - October&ndash;December 1988 &ndash; Volume 2. Issue 4.</title>
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -136,9 +136,9 @@
 <!-- 1 column: start --><div>
 <p>
 The C I/O system starts with a set of character level functions: getc(chan),
-putc(chan,&#x200b;char), getchar() and putchar(char). The last two use the default streams.
+putc(chan,&ZeroWidthSpace;char), getchar() and putchar(char). The last two use the default streams.
 Unlike CP/M, UNIX uses <span class="uppercase">Newline</span> (ASCII 10) to separate lines rather than
-CR,&#x200b;LF (13,&#x200b;10). Also unlike CP/M, UNIX knows the exact length of all files, so end
+CR,&ZeroWidthSpace;LF (13,&ZeroWidthSpace;10). Also unlike CP/M, UNIX knows the exact length of all files, so end
 of file is reported by a value of &minus;1 (which is why getc() and getchar() return an
 integer rather than a character). Because of these differences, files must be declared
 as either text or binary type. This is not a problem since UNIX versions of C must
@@ -146,8 +146,8 @@ be able to cope with standard terminal devices so the facility is available.
 </p>
 <p>
 Built on the basic I/O above are string I/O functions: puts(str), gets(str),
-fputs(str,&#x200b;chan) and fgets(str,&#x200b;len,&#x200b;chan), and also word I/O getw(chan) and
-putw(word,&#x200b;chan) and block I/O which accounts for a number of similar functions
+fputs(str,&ZeroWidthSpace;chan) and fgets(str,&ZeroWidthSpace;len,&ZeroWidthSpace;chan), and also word I/O getw(chan) and
+putw(word,&ZeroWidthSpace;chan) and block I/O which accounts for a number of similar functions
 which I don&rsquo;t have room to go into here. The behaviour of the string I/O is slightly
 different with the file functions. Specifically, puts() adds a newline, fputs() does
 not. Also fgets() has a length limit and leaves the newline in, whereas gets()
@@ -159,7 +159,7 @@ file based equivalents fprintf() and fscanf(), and string based versions sprintf
 and sscanf(). These both take a variable number of arguments (they are variadic),
 the first of which is a control string (with the string and file versions the control string
 comes second after the file-pointer or string-pointer). The control string declares
-how the output/&#x200b;input should look. For example:
+how the output/&ZeroWidthSpace;input should look. For example:
 </p>
 <p class="indent">
 printf ( "File %s, %d records in %dK\n", filename, record_count, size );

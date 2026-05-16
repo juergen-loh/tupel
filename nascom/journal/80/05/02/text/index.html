@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/80/05/02/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-01 16:53:20 +0200 (Fr, 01. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:14 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Nascom Journal - 5/80</title>
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -150,11 +150,11 @@ bis 0C1Fh.
 Start&nbsp;:
 </p>
 <p>
-Der Kaltstart erfolgt durch &bdquo;ECC00&ldquo;,&#x200b;dadurch wird der
-RAM-Bereich initiiert,&#x200b;die Koordinaten auf Null gesetzt,&#x200b;die <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
+Der Kaltstart erfolgt durch &bdquo;ECC00&ldquo;,&ZeroWidthSpace;dadurch wird der
+RAM-Bereich initiiert,&ZeroWidthSpace;die Koordinaten auf Null gesetzt,&ZeroWidthSpace;die <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
  zur
 Datenausgabe initiiert und eine neue Kommandotabelle kreiert. Ein
-Warmstart ist durch &bdquo;ECC16&ldquo; möglich,&#x200b;dabei werden die bereits
+Warmstart ist durch &bdquo;ECC16&ldquo; möglich,&ZeroWidthSpace;dabei werden die bereits
 vorhandenen Koordinaten beibehalten.
 </p>
 <h4>
@@ -165,13 +165,13 @@ vorhandenen Koordinaten beibehalten.
 </p>
 <p>
 Will man den Zeichenstift an eine bestimmte Stelle positionieren, so
-gibt man den Buchstaben A,&#x200b;gefolgt von zwei Dezimalzahlen (im Bereich
-von &minus;32768 bis +32767),&#x200b;die die X-und Y-Koordinaten des gewählten
-Punktes darstellen,&#x200b;ein und nach &bdquo;New Line&ldquo; werden diese
+gibt man den Buchstaben A,&ZeroWidthSpace;gefolgt von zwei Dezimalzahlen (im Bereich
+von &minus;32768 bis +32767),&ZeroWidthSpace;die die X-und Y-Koordinaten des gewählten
+Punktes darstellen,&ZeroWidthSpace;ein und nach &bdquo;New Line&ldquo; werden diese
 beiden Zahlen auf dem Bildschirm des <span class="uppercase">Nascom</span> in der obersten Zeile
 rechts angezeigt. Gleichzeitig laufen die beiden Schrittmotoren an und
 deren aktuellen Koordinaten werden links oben als Hexadezimalzahlen
-angezeigt. Ist das Ziel erreicht,&#x200b;so bleiben die Motoren stehen,&#x200b;der
+angezeigt. Ist das Ziel erreicht,&ZeroWidthSpace;so bleiben die Motoren stehen,&ZeroWidthSpace;der
 Cursor erscheint auf dem Bildschirm und es können neue Kommandos
 eingegeben werden.
 </p>
@@ -179,7 +179,7 @@ eingegeben werden.
 <u>R: Relative Positionierung</u>
 </p>
 <p>
-Dieses Kommando dient dazu,&#x200b;wie bei einer Vektoraddition beliebige
+Dieses Kommando dient dazu,&ZeroWidthSpace;wie bei einer Vektoraddition beliebige
 Streckenzüge hintereinander ohne Rücksicht auf den Koordinatenursprung
 zu zeichnen. Die Dateneingabe erfolgt wie unter absoluter
 Positionierung beschrieben. In der obersten Zeile werden wieder die
@@ -192,7 +192,7 @@ Binär-Dezimalwandlung nicht sinnvoll.
 <u>H: Heben des Zeichenstiftes</u>
 </p>
 <p>
-Gibt man dieses Kommando ein,&#x200b;so zieht der Hubmagnet den Zeichenstift
+Gibt man dieses Kommando ein,&ZeroWidthSpace;so zieht der Hubmagnet den Zeichenstift
 hoch und nach einer kurzen Pause erscheint wieder der Cursor auf dem
 Bildschirm.
 </p>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,9 +21,9 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/84/03/45/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-01 16:53:20 +0200 (Fr, 01. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:14 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
-	<title>80-Bus Journal - Juli&#x200b;/&#x200b;Aug.&#x200b;/&#x200b;September 1984 - Ausgabe 3</title>
+	<title>80-Bus Journal - Juli/{Aug}./{}September 1984 - Ausgabe 3</title>
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -85,7 +85,7 @@
 		</td>
 		<td>&nbsp;&nbsp;</td>
 		<td style="vertical-align:top">
-			<h2 class="h2Navi"><span class="nowrap">Juli&#x200b;/&#x200b;Aug.&#x200b;/&#x200b;September 1984 &middot;</span> <span class="nowrap">Ausgabe 3</span></h2>
+			<h2 class="h2Navi"><span class="nowrap">Juli$ZeroWidthSpace/{$ZeroWidthSpaceAug}.$ZeroWidthSpace/{$ZeroWidthSpace}September 1984 &middot;</span> <span class="nowrap">Ausgabe 3</span></h2>
 		</td>
 	</tr>
 </table>
@@ -156,14 +156,14 @@ Nach anfaenglichen Schwierigkeiten laufen nun 2
 Laufwerke an
 meinem <span class="uppercase">Nascom&nbsp;2</span> zur vollsten Zufriedenheit. Zunaechst hatte ich Aerger
 mit meinem Speicher (64kb statisch) der sich dann aber recht einfach
-loesen lies.&#x200b;Dann kam das Problem mit der Monitorumschaltung. Das
+loesen lies.&ZeroWidthSpace;Dann kam das Problem mit der Monitorumschaltung. Das
 Betriebssystem steht bei mir in einem EPROM vom Typ
 <!-- External Link --><a href="https://ece-classes.usc.edu/ee459/library/datasheets/2716.pdf" title="Externer Link" target="_blank" rel="noreferrer">2716</a><!-- /External Link -->
 und wird jetzt
 in einem ebenfalls statischen Speicher vom Typ
 <!-- External Link --><a href="https://sites.ecse.rpi.edu/courses/CStudio/data%20sheets/hm6116.pdf" title="Externer Link" target="_blank" rel="noreferrer">6116</a><!-- /External Link -->
 copiert. Der 6116
-steckt in einem freien ROM/&#x200b;EPROM-Sockel des <span class="uppercase">Nascom&nbsp;2</span>,&#x200b;die eigentlich nur
+steckt in einem freien ROM/&ZeroWidthSpace;EPROM-Sockel des <span class="uppercase">Nascom&nbsp;2</span>,&ZeroWidthSpace;die eigentlich nur
 fuer 1kb Speichertypen vorgesehen sind. Durch das dazulegen von Adresse
 10 lassen sich aber auch 2kb Typen verwenden. Die Umschaltung von EPROM
 auf RAM erfolgt durch einen 74LS74 der von Port 0 angesprochen wird.
@@ -179,10 +179,10 @@ steht.
 <img class="img-fluid" src="../../Image-45-3.jpeg" alt="Assembler-Listing" width="272" height="123">
 <p class="uppercase">
 Es ist unbedingt erforderlich IC&nbsp;45 des <span class="uppercase">Nascom&nbsp;2</span> zu entfernen und durch
-Drahtbruecken zu ersetzen,&#x200b;da dieser Buffer bei Zugriff auf Adresse
+Drahtbruecken zu ersetzen,&ZeroWidthSpace;da dieser Buffer bei Zugriff auf Adresse
 0000h bis 0800h von dem PROM N2MD (IC&nbsp;47) nur in Leserichtung
 geschaltet wird. Selbstverstaendlich kann man auch das
-&bdquo;DIR&ldquo;&#x200b;Singnal an Pin 11 des IC&nbsp;45 abnehmen, einmal invertieren
+&bdquo;DIR&ldquo;&ZeroWidthSpace;Singnal an Pin 11 des IC&nbsp;45 abnehmen, einmal invertieren
 und mit beiden Signalen auf ein &bdquo;Oder&ldquo;-Gatter legen, sodas
 dann der Buffer in jedem Falle durchschaltet
 </p>
@@ -190,7 +190,7 @@ dann der Buffer in jedem Falle durchschaltet
 Nun blieb nur noch die
 Erzeugung des IOEXT-Signals uebrig was sich durch die Vorschlaege aus
 <a href="../../../01/32/text/#article1">Heft 1/84</a>
-des 80-Bus Jornals als recht einfach ergab.&#x200b;Bei meinem Rechner
+des 80-Bus Jornals als recht einfach ergab.&ZeroWidthSpace;Bei meinem Rechner
 kam der
 <a href="../../../01/33/text/#article1">Vorschlag</a>
 von Klaus Flockau zur Anwendung, bei dem die
@@ -198,7 +198,7 @@ Decodierung mit einem 74LS32 geschieht. Bleibt noch zu bemerken das ich
 oefters Schwierigkeiten mit der
 <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="Externer Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
  hatte, die sich nicht immer
-ruecksetzen lies.&#x200b;RESET und M1 mit einem Und-Gatter verknotet und dann
+ruecksetzen lies.&ZeroWidthSpace;RESET und M1 mit einem Und-Gatter verknotet und dann
 auf M1 (Pin 37)der PIO legen, beseitigen dieses Uebel. Seither laeuft
 alles zur Zufriedenheit bei 2&nbsp;MHz, wie auch bei 4&nbsp;MHz. Ein Dankeschoen
 moechte ich noch an alle Autoren richten&nbsp;, die mit ihren Textbeitraegen

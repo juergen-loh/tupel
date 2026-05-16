@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/26/46/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - November&ndash;December 1983 - Volume 2 - Issue 6</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -165,10 +165,10 @@ How it works
 </h3>
 <p>
 A 1MHz character clock emerges from IC49/13 (IC43 pin 13). This is
-divided down in the six-bit counter formed by IC51/&#x200b;IC52. The outputs of the
+divided down in the six-bit counter formed by IC51/&ZeroWidthSpace;IC52. The outputs of the
 six-bit counter form the address of a character within a display line, and
-address the video RAM via multiplexors IC62/&#x200b;IC63. The address is also decoded
-by IC55/&#x200b;IC60 to provide the blanking signal that frames the active 48
+address the video RAM via multiplexors IC62/&ZeroWidthSpace;IC63. The address is also decoded
+by IC55/&ZeroWidthSpace;IC60 to provide the blanking signal that frames the active 48
 characters of the display, out of the total of the 64 characters that make up
 a line. (Remember that the Nascom video RAM has 16 unused characters between
 the end of one display line and the start of the next one). The output of
@@ -178,15 +178,15 @@ the character generator. The character generator ROM address lines are also
 decoded by IC44c which, when the 625 line option is selected, resets the row
 address counter to zero everytime row 14 is reached. Thus only rows 0-13 of
 the character generator are displayed. Every time IC53/11 returns to 0, the
-five-bit counter formed by IC68/&#x200b;IC13b is clocked. The outputs of IC68 address
+five-bit counter formed by IC68/&ZeroWidthSpace;IC13b is clocked. The outputs of IC68 address
 the video ram via multiplexor IC64 and form the &lsquo;character line&rsquo; address.
 Finally the IC68/IC13b counter is decoded in the N2V PROM (IC59). There are
 two outputs from this PROM, D1 provides the vertical blanking signal, and the
 D0 output is used to trigger the vertical sync signal (from IC57) and preset
-the five-bit counter IC68/&#x200b;IC13b to 11. (Check the hardwired inputs on IC68 to
+the five-bit counter IC68/&ZeroWidthSpace;IC13b to 11. (Check the hardwired inputs on IC68 to
 confirm this). The contents of the N2V PROM can be found in the Nascom&nbsp;2
 documentation, and from the listing you should be able to deduce the
-following, starting at the point where IC68/&#x200b;IC13b is reset to 11&hellip;
+following, starting at the point where IC68/&ZeroWidthSpace;IC13b is reset to 11&hellip;
 </p>
 <table class="indent">
 <tr><td>Counter</td><td>Action</td></tr>

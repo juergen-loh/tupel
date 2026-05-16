@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/21/06/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -157,7 +157,7 @@ purpose machine, although on a dedicated machine such as a process controller it
 is possible. It is very likely that a Nascom or Gemini system will be used as a
 development system, to develop software for a purpose built dedicated controller.
 This possibility underlies the following notes. Whether a dedicated controller
-will be used, or the system software of a Nascom/&#x200b;Gemini modified to support
+will be used, or the system software of a Nascom/&ZeroWidthSpace;Gemini modified to support
 multiple interrupts is a matter for the individuals concerned, but it is
 essential that each interrupt be set up and carefully debugged along the lines we
 will examine.
@@ -193,7 +193,7 @@ voltage levels. This is not always so!
 <p>
 The first interrupt structure on the Z80 is the Non Maskable Interrupt,
 known familiarly as the NMI. Those familiar with the pinouts of the CPU chip will
-know that pin 17 is called /NMI. This is an input, negative edge triggered. That
+know that pin 17 is called <span class="nowrap">/NMI</span>. This is an input, negative edge triggered. That
 is, the transition from high level (normal condition) to low level tells the CPU
 that an NMI is required. The CPU examines the state of this pin at the end of
 every instruction, and if the pin is active, then it proceeds to service an NMI.
@@ -206,7 +206,7 @@ of a Nascom or Gemini, as the dynamic memory would not be refreshed, and the
 program lost. It might happen in use of a Z80 based controller, where the machine
 was executing Wait states, waiting for a very slow peripheral to react &ndash; said
 peripheral having perhaps gone on the blink! The other failure to see an NMI is
-if /BUSRQ is active, i.e. if something like a <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
+if <span class="nowrap">/BUSRQ</span> is active, i.e. if something like a <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
  chip has control of the bus.
 </p>
 <!-- 1 column: end --></div>

@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/micropower/13/28/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Micropower - Volume 1 - Number 3 - November 1981</title>
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -144,14 +144,14 @@ OUTPUT O xx yy
 <p>
 This routine sends data yy to port xx. The port number, xx, is placed on the
 bottom eight address lines, A0 &ndash; A7, and this is decoded to determine which
-input/&#x200b;output device is activated. The data to be sent, yy, is placed on the data bus,
+input/&ZeroWidthSpace;output device is activated. The data to be sent, yy, is placed on the data bus,
 and the activated device receives it. The main use of the output command is to
 communicate with external devices via the <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="External Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link -->
  chip, so perhaps a few words on the
 operation of this device would not be out of place here.
 </p>
 <p>
-The MK3881 PIO chip used on the Nascom is a programmable input/&#x200b;output chip
+The MK3881 PIO chip used on the Nascom is a programmable input/&ZeroWidthSpace;output chip
 which the main processor sees as four ports; of these, two ports each provide
 eight lines, which can be programmed to be input, output or bidirectional, for external
 communication, while the remaining two ports are used to control the operation of
@@ -187,7 +187,7 @@ READ R xxxx (y)
 <p>
 The Read command loads data from a cassette tape written in the format used
 by the standard Write command. After turning on the tape LED the routine sets
-the input/&#x200b;output table addresses to their &lsquo;normal&rsquo; values, saving the addresses that
+the input/&ZeroWidthSpace;output table addresses to their &lsquo;normal&rsquo; values, saving the addresses that
 were at &pound;0C73, &pound;0C75 on the stack, so that they can be restored
 </p>
 <!-- 1 column: end --></div>

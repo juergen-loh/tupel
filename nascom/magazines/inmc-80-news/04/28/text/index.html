@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/inmc-80-news/04/28/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>INMC 80 News - May&ndash;September 1981 - Issue 4</title>
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -135,25 +135,25 @@
 <div class="col-sm-12 mag-inmc-80-news issue-04 page-28" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <h4>
-Line 13, /DBDR.
+Line 13, <span class="nowrap">/DBDR</span>.
 </h4>
 <p>
 This signal is used by the Buffer board and Supermum with Nascom&nbsp;1. It
 controls the direction of the data bus buffers. When an expansion card outputs data to
 the bus this line must be taken low, normally this is the same signal as used to turn
 on the output buffers. Despite being only used by expanded Nascom&nbsp;1s it is felt that
-this signal must be provided on all expansion cards. While /DBDR should ideally go low
+this signal must be provided on all expansion cards. While <span class="nowrap">/DBDR</span> should ideally go low
 before the data bus driver is enabled, it must be low within 30nS of the data bus
-driver being enabled and must release /DBDR within 30nS of the data bus drivers being
+driver being enabled and must release <span class="nowrap">/DBDR</span> within 30nS of the data bus drivers being
 disabled.
 </p>
 <h4>
-Line 14, /RESET.
+Line 14, <span class="nowrap">/RESET</span>.
 </h4>
 <p>
 This line is the &ldquo;cleaned up&rdquo; version of line 10. It is important that the
 falling edge of the reset pulse on this line be synchronised with the falling edge of
-/M1, and the bus master must provide the appropriate logic to take care of this. The
+<span class="nowrap">/M1</span>, and the bus master must provide the appropriate logic to take care of this. The
 last issue of the Nasbus specification called for a 10uS reset pulse. This has now
 been extended to 50uS as chips in the 179X family require a 50us pulse. Deep
 investigation of the matter has yet to yield a 179X chip that can tell the difference
@@ -162,29 +162,29 @@ substitute a 10nF capacitor for Cl (lnF). Supermum owners need not worry as this
 been taken care of.
 </p>
 <h4>
-Line 15, /HALT.
+Line 15, <span class="nowrap">/HALT</span>.
 </h4>
 <p>
 Z80 halt signal. Up to this point in time nobody has used it, but it is there.
 </p>
 <h4>
-Lines 16 17 18, /BAI /BAO /BUSRQ.
+Lines 16 17 18, <span class="nowrap">/BAI</span> <span class="nowrap">/BAO</span> <span class="nowrap">/BUSRQ</span>.
 </h4>
 <p>
-/BAI and /BAO are the <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
+<span class="nowrap">/BAI</span> and <span class="nowrap">/BAO</span> are the <!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
  daisy chain. If an expansion card wishes to take
 control of the bus (an expansion card is any bus card which is not a bus master) it
-asserts /BUSRQ; the bus master will respond by taking /BAO low. The mother board
+asserts <span class="nowrap">/BUSRQ</span>; the bus master will respond by taking <span class="nowrap">/BAO</span> low. The mother board
 connects line 17 to 16 between each slot, ie line 17 of the bus master will go to 16
 of the adjacent card, line 16 at the bus master is not used although it can be a test
 point. Between all subsequent cards line 17 goes to line 16 (for full connection
 details see the section on daisy chains). Cards that do not use the DMA facilities
-should connect 17 to 16. /BAO will be fed into the /BAI of any potential DMAing
-device, and the /BAO of the same device will go into the /BAI of the next and so on.
-If a potential DMAing device has not asserted the /BUSRQ line it will pass on the
-signal. When the signal reaches the device which originally asserted the /BUSRQ line
-it will hold /BAO high, at this point it will have taken contol of the bus. The
-highest priority device is that nearest the bus master.&#x200b;(CPU card).
+should connect 17 to 16. <span class="nowrap">/BAO</span> will be fed into the <span class="nowrap">/BAI</span> of any potential DMAing
+device, and the <span class="nowrap">/BAO</span> of the same device will go into the <span class="nowrap">/BAI</span> of the next and so on.
+If a potential DMAing device has not asserted the <span class="nowrap">/BUSRQ</span> line it will pass on the
+signal. When the signal reaches the device which originally asserted the <span class="nowrap">/BUSRQ</span> line
+it will hold <span class="nowrap">/BAO</span> high, at this point it will have taken contol of the bus. The
+highest priority device is that nearest the bus master.&ZeroWidthSpace;(CPU card).
 </p>
 <h4>
 Lines 19 20, IEI IEO.
@@ -199,17 +199,17 @@ down the bus. As the interrupt daisy chain does not involve the Z80 it is possib
 move the bus master from slot to slot and vary the level of interrupt priority of the
 devices on the bus master. The DMA daisy chain however does involve the Z80, and the
 bus master must always be to one side of the expansion cards which may generate a
-/BUSRQ. If the motherboard is linked in the recommended manner the device with highest
+<span class="nowrap">/BUSRQ</span>. If the motherboard is linked in the recommended manner the device with highest
 interrupt priority is nearest to the bus master. If the daisy chain is connected the
 other way arround a problem could arise as the Z80-DMA can also generate interrupts.
 For further details on connections see the section on daisy chains.
 </p>
 <h4>
-Line 21, /NMI.
+Line 21, <span class="nowrap">/NMI</span>.
 </h4>
 <p>
 A short pulse will be generated on this line by the bus master from a low on
-line 6 (/NMI SW). On Nascom&nbsp;1 the NMI is used in the single step feature and is not
+line 6 <span class="nowrap">(/NMI</span> SW). On Nascom&nbsp;1 the NMI is used in the single step feature and is not
 available.
 </p>
 <!-- 1 column: end --></div>

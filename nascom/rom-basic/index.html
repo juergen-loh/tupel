@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -22,7 +22,7 @@
 <!-- /navi-head.php -->
 	<meta name="keywords" content="Nascom ROM Basic 4.7, Microsoft BASIC, Nascom Computer, Nascom 1, Nascom 2">
 	<title>Nascom ROM Basic</title>
-	<!-- $Date: 2026-05-03 23:15:24 +0200 (So, 03. Mai 2026) $ / lastModified: Thu, 14 May 2026 16:51:09 GMT -->
+	<!-- $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 	<link rel="stylesheet" type="text/css" href="../magazines/80-bus-news/style.css">
 <!-- navi-body.php -->
 </head>
@@ -76,7 +76,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-14 18:47:44 +0200 (Do, 14. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 
 <div class="mag-80-bus-news DisAssemblyRomBasic" lang="en">
 <h1 id="article1" class="uppercase">
@@ -380,7 +380,7 @@ back to command mode.
 </p></td></tr>
 <tr><td><p><a href="#READFG">READFG</a></p></td><td><p><a href="#10CD">10CD</a></p></td><td colspan=2><p>
 READ / INPUT flag.<br>
-This contains a flag to tell the READ/&#x200b;INPUT routine if it is
+This contains a flag to tell the READ/&ZeroWidthSpace;INPUT routine if it is
 processing a DATA statement or data for an INPUT statement.
 If this value is zero then INPUT is active else READ is.
 </p></td></tr>
@@ -470,22 +470,22 @@ Example of the number 35.25 in floating point:&ndash;<br><br></p>
 <colgroup><col><col><col></colgroup>
 <tr><td>35.25 in binary is</td><td colspan=2>100011.01</td></tr>
 <tr><td>Which is the same as</td><td colspan=2>100011.01 *2^ 00000000</td></tr>
-<tr><td colspan=3>&#x200b;</td></tr>
+<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
 
 <tr><td colspan=3>The binary point is moved so that it precedes the first &ldquo;1&rdquo;</td></tr>
 <tr><td>This gives</td><td colspan=2>.10001101</td></tr>
-<tr><td colspan=3>&#x200b;</td></tr>
+<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
 
 <tr><td colspan=3>The point was moved left 6 times dividing the number by 2^6 so
 6 must be added to the exponent to re-multiply by 2^6.</td></tr>
 <tr><td>This gives</td><td colspan=2>.10001101 *2^ 00000110</td></tr>
-<tr><td colspan=3>&#x200b;</td></tr>
+<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
 
 <tr><td colspan=3>As the bit after the point is ALWAYS &ldquo;1&rdquo; this bit can be used
 to store the sign of the number &ldquo;0&rdquo; for +ve, &ldquo;1&rdquo; for -ve</td></tr>
 <tr><td>So +35.25 is stored as</td><td colspan=2>.00001101 * 2 ^ 00000110</td></tr>
-<tr><td>Which in 24 bits is</td><td colspan=2>.000011010000&#x200b;000000000000 *2^ 00000110</td></tr>
-<tr><td colspan=3>&#x200b;</td></tr>
+<tr><td>Which in 24 bits is</td><td colspan=2>.000011010000&ZeroWidthSpace;000000000000 *2^ 00000110</td></tr>
+<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
 
 <tr><td colspan=3>128 is added to the exponent so that overflows and underflows
 can be more easily detected.</td></tr>
@@ -496,7 +496,7 @@ can be more easily detected.</td></tr>
 <tr><td style="vertical-align:bottom">Which is</td><td colspan=2>
 
 <table class=rbfp>
-<tr><td>00&#x200b;00</td><td>11&#x200b;01</td><td>00&#x200b;00</td><td>00&#x200b;00</td><td>00&#x200b;00</td><td>00&#x200b;00</td><td>10&#x200b;00</td><td>01&#x200b;10</td><td></td></tr>
+<tr><td>00&ZeroWidthSpace;00</td><td>11&ZeroWidthSpace;01</td><td>00&ZeroWidthSpace;00</td><td>00&ZeroWidthSpace;00</td><td>00&ZeroWidthSpace;00</td><td>00&ZeroWidthSpace;00</td><td>10&ZeroWidthSpace;00</td><td>01&ZeroWidthSpace;10</td><td></td></tr>
 <tr><td>0</td><td>D</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>6</td><td>HEX</td></tr>
 </table>
 
@@ -504,7 +504,7 @@ can be more easily detected.</td></tr>
 <tr><td colspan=3>The bytes of the mantissa are stored in reverse order.</td></tr>
 <tr><td colspan=2>This gives the value for +35.25 as</td><td>00 00 0D 86</td></tr>
 <tr><td colspan=2>And &minus;35.25 would be stored as</td><td>00 00 8D 86</td></tr>
-<tr><td colspan=3>&#x200b;</td></tr>
+<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
 
 </table>
 
@@ -553,7 +553,7 @@ the first) line is to be executed.
 <tr><td><p></p></td><td><p></p></td><td colspan=2><p>
 Example:&ndash; The program:&ndash;</p>
 <p style="margin-left: 1em">
-  10 <a href="#FOR">FOR</a> A=1 <a href="#ZTO">TO</a> 5:&#x200b;<a href="#PRINT">PRINT</a> A,<a href="#SQR">SQR</a>(1):&#x200b;<a href="#NEXT">NEXT</a> A<br>
+  10 <a href="#FOR">FOR</a> A=1 <a href="#ZTO">TO</a> 5:&ZeroWidthSpace;<a href="#PRINT">PRINT</a> A,<a href="#SQR">SQR</a>(1):&ZeroWidthSpace;<a href="#NEXT">NEXT</a> A<br>
   20 <a href="#PEND">END</a>
 </p>
 <p>is in memory, it would look like this:&ndash;
@@ -670,7 +670,7 @@ start address of this area is held in <a href="#VAREND">VAREND</a> and the end a
 <a href="#ARREND">ARREND</a>.
 </p></td></tr>
 <tr><td colspan=4><p>
-If DIM AB(1,3),&#x200b;AB$(3,1) had been entered then the memory would look like this:&ndash;
+If DIM AB(1,3),&ZeroWidthSpace;AB$(3,1) had been entered then the memory would look like this:&ndash;
 </p></td></tr>
 
 <tr><td colspan=4>
@@ -774,7 +774,7 @@ AB$(3,1)
 <tr><th colspan=3><p>The workings of <span class="uppercase">Nascom</span> ROM BASIC Ver 4.7</p></th><th><p><span id="work9"><a href="../magazines/80-bus-news/23/31/text/#work9">PAGE 9</a></span></p></th></tr>
 
 <tr><td colspan=4><p>
-******** Usage of the stack for GOSUB/&#x200b;RETURN and FOR/&#x200b;NEXT ********
+******** Usage of the stack for GOSUB/&ZeroWidthSpace;RETURN and FOR/&ZeroWidthSpace;NEXT ********
 </p></td></tr>
 
 <tr><td colspan=4><h4>
@@ -1540,7 +1540,7 @@ Get screen address from row and column in DE and BC.
 Get an input line from NAS-SYS.
 </p></td></tr>
 <tr><td><p><a href="#GETXYA">GETXYA</a></p></td><td><p><a href="#FF15">FF15</a></p></td><td colspan=2><p>
-Get (X,Y) for SET,&#x200b;RESET and POINT.<br>
+Get (X,Y) for SET,&ZeroWidthSpace;RESET and POINT.<br>
 Return address on screen and a bit mask.
 </p></td></tr>
 <tr><td><p><a href="#SETB">SETB</a></p></td><td><p><a href="#FF40">FF40</a></p></td><td colspan=2><p>

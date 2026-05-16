@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/scorpio-news/12/11/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Scorpio News - April&ndash;June 1987 &ndash; Volume 1. Issue 2.</title>
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -172,17 +172,17 @@ reloaded at the next count down to zero.
 </p>
 <p>
 The major difference between Counter mode and Timer mode is that Counter mode
-uses the external clock or pulse provided on the CLK/&#x200b;TRGn pin, whereas the Timer
+uses the external clock or pulse provided on the CLK/&ZeroWidthSpace;TRGn pin, whereas the Timer
 mode uses the system clock, divided by the prescaler (either 16 or 256 according
 to the setting of bit 5 of the channel control byte). In timer mode, the timing
-operation can be programmed to start from an external trigger to the CLK/&#x200b;TRGn
+operation can be programmed to start from an external trigger to the CLK/&ZeroWidthSpace;TRGn
 pulse, or almost immediately from the system signals. The external starting
 trigger is usually not required, and the reader is referred to the
 manufacturer&rsquo;s data sheets for more precise details. It is also possible to
 define whether the trigger or count decrement takes place on the rising or
 falling edge of the timing clock (Bit 4). One constraint that is not very
 openly defined is to be found in the technical details of the data sheet; this
-states that the maximum frequency to be applied to the CLK/&#x200b;TRGn pin is to be
+states that the maximum frequency to be applied to the CLK/&ZeroWidthSpace;TRGn pin is to be
 half of the system clock. This means that on a 4MHz system, the maximum
 external clock to the CHC is to be 2&nbsp;MHz.
 </p>
@@ -192,8 +192,8 @@ Now for a worked example. In the case of a standard
 the CTC as follows:
 </p>
 <table class="indent">
-<tr><td>CTC0</td><td>is to drive SIO channel A to receive/&#x200b;transmit at 1200&nbsp;baud</td></tr>
-<tr><td>CTC1</td><td>is to drive SIO channel B to receive/&#x200b;transmit at 300&nbsp;baud</td></tr>
+<tr><td>CTC0</td><td>is to drive SIO channel A to receive/&ZeroWidthSpace;transmit at 1200&nbsp;baud</td></tr>
+<tr><td>CTC1</td><td>is to drive SIO channel B to receive/&ZeroWidthSpace;transmit at 300&nbsp;baud</td></tr>
 <tr><td>CTC2</td><td>is not used</td></tr>
 <tr><td>CTC3</td><td>is to receive the strobe from the keyboard, and to interrupt on each
 		key</td></tr>

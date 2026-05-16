@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/11/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -135,7 +135,7 @@
 <div class="col-sm-12 mag-80-bus-news issue-33 page-11" style="border: 1px solid #000; padding-top: 1em; padding-bottom: 1em;" lang="en" id="page">
 <!-- 1 column: start --><div>
 <p class="continued">
-appears at the output pin Q when R/W goes high. /CAS also acts as an output
+appears at the output pin Q when R/W goes high. <span class="nowrap">/CAS</span> also acts as an output
 enable; when it is high, Q switches into the high-impedance state. Because
 only one bit is stored for each address pattern, 8 chips are needed to service
 the full data bus. Thus a block of 8 <!-- External Link --><a href="https://console5.com/techwiki/images/8/85/MK4116.pdf" title="External Link" target="_blank" rel="noreferrer">4116</a><!-- /External Link -->s give 16&nbsp;kbytes and 8 <!-- External Link --><a href="https://www.mikrocontroller.net/attachment/4092/HYB4164.pdf" title="External Link" target="_blank" rel="noreferrer">4164</a><!-- /External Link -->s give a
@@ -149,9 +149,9 @@ Fach cell has to be refreshed within a time less than 2 mSec for the 4116 and
 less than 4 mSec for the 4164. This is another feature which has to be
 provided by the memory board designer. Fortunately, the problem is not as
 complex as it first appears since cells in the same column can be refreshed in
-parallel by applying an address to the rows only which is strobed by /RAS.
+parallel by applying an address to the rows only which is strobed by <span class="nowrap">/RAS</span>.
 Provided all row addresses are strobed during the stated period, refresh is
-assured. During this process, /CAS is held high which minimises power
+assured. During this process, <span class="nowrap">/CAS</span> is held high which minimises power
 consumption and ensures that no data is placed on the data bus during refresh
 cycles. The refresh process occurs during the second half of the opcode fetch
 cycle, and the Z80 provides a 7-bit refresh counter which makes this part of
@@ -186,13 +186,13 @@ are decoded by IC24 to produce 4 16k decodes &ndash; we will utilise these for
 paging the 128k RAM. For the 4164s, A0 to A7 must be multiplexed with A8 to
 A15. It does not actually matter which lines are multiplexed together as long
 as the components of each pair come from the two different groupings, and that
-A0 to A6 are coupled as a unit to the RAM chips and latched by /RAS so that
+A0 to A6 are coupled as a unit to the RAM chips and latched by <span class="nowrap">/RAS</span> so that
 refreshing is performed correctly. Unfortunately, in the original design, A0
 is switched with A7 which is not allowed, so A7 must be disconnected and
 replaced by A14, which can be picked up from pin 15 of the 74LS75 address
 latch IC25. All the remaining pairs can be left unaltered, which leaves A7 and
 A15 to be dealt with. As currently configured, the remaining inputs on IC21
-toggle between 0 and +5&nbsp;volts to provide the /CAS signal via three buffers in
+toggle between 0 and +5&nbsp;volts to provide the <span class="nowrap">/CAS</span> signal via three buffers in
 IC&nbsp;3 which provide a short delay to allow the address lines to settle. It
 seemed to me to be more straightforward to use these inputs to toggle between
 </p>

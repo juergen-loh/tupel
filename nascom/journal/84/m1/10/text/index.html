@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/84/m1/10/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-01 16:53:20 +0200 (Fr, 01. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:14 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus Journal - Mitteilungsblatt Nr. 1 - Februar 1984</title>
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -173,13 +173,13 @@ so bleibt das Programm (wahrscheinlich in der Warteschleife) hängen.
 </p>
 <p>
 Ein Leser nahm an, daß nach der Annahme des Interupts (INTA
-Interruptacknowledege) durch die CPU /M1 und /IOREQ mit der
+Interruptacknowledege) durch die CPU <span class="nowrap">/M1</span> und <span class="nowrap">/IOREQ</span> mit der
 entsprechenden Adresse auf dem Bus den Controller ansprechen.
 </p>
 <p>
 Nun ist
 aber das PROM so programmiert, daß die Karte nur angesprochen wird,
-wenn /M1 high und /IORQ low ist, Zudem sagt das Datenblatt des
+wenn <span class="nowrap">/M1</span> high und <span class="nowrap">/IORQ</span> low ist, Zudem sagt das Datenblatt des
 Controllers, daß der Interrupt nur dann nicht ausgegeben wird (was ja
 in den zweifelhaften Fällen wahrscheinlich auch nicht geschieht), wenn
 während der Abarbeitung eines Befehls (hier z.B. SEEK) auf die Register

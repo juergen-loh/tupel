@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/micropower/24/12/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Micropower - Volume 2 - Number 4 - September 1982</title>
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -138,25 +138,25 @@
 <tr><td>
 2)</td><td>/XROME&nbsp;&nbsp;</td><td>When address E000-FFFF is active low and BS2 (Bank
 Select) is low (indicating any bank except 4 is
-selected) then gate 2 ensures that /XROME goes active
-low. It is looped along the /OE pin 20s of the 8 extra
+selected) then gate 2 ensures that <span class="nowrap">/XROME</span> goes active
+low. It is looped along the <span class="nowrap">/OE</span> pin 20s of the 8 extra
 EPROMS. Whether one of these is actually enabled
 depends on the output of IC&nbsp;46.
 </td></tr>
 <tr><td>
 3)</td><td>/XROMC&nbsp;&nbsp;</td><td>When address C000-E000 is active low and BS2 is low
 (any bank selected except 4) then gate 4 ensures that
-/XROMC goes active low and is looped along link blocks
-1 to 8 (NOT 9) pins 10, to connect to the /OE pin 20s
+<span class="nowrap">/XROMC</span> goes active low and is looped along link blocks
+1 to 8 (NOT 9) pins 10, to connect to the <span class="nowrap">/OE</span> pin 20s
 of the original EPROMS in the eight Nascom sockets.
 Again, which one is actually selected depends on the
 output of IC&nbsp;46.
 </td></tr>
 <tr><td>
-4)</td><td>/BROM&nbsp;&nbsp;</td><td>When Port 3, Bank 4 is selected, BS2 goes high and
-gate 2 being an &lsquo;OR&rsquo; gate /XROME must be deselected.
-Meanwhile, /BS2 is low and gate 1 is an &lsquo;OR&rsquo; so, as
-long as address is E000+, /BROM is active and BASIC
+4)</td><td><span class="nowrap">/BROM</span>&nbsp;&nbsp;</td><td>When Port 3, Bank 4 is selected, BS2 goes high and
+gate 2 being an &lsquo;OR&rsquo; gate <span class="nowrap">/XROME</span> must be deselected.
+Meanwhile, <span class="nowrap">/BS2</span> is low and gate 1 is an &lsquo;OR&rsquo; so, as
+long as address is E000+, <span class="nowrap">/BROM</span> is active and BASIC
 occupies bank 4 E000-FFFF.
 </td></tr>
 <tr><td>
@@ -178,7 +178,7 @@ Construction takes one evening and is easy but painstaking.
 Wire wrap sockets are soldered carefully to the 8 EPROMs that
 are to be selected at C000-DFFF. These go into the eight Nascom
 sockets. The 8 EPROMS to be selected at E000-FFFF have pin 20
-carefully bent out to take a seperate /OE signal. They then
+carefully bent out to take a seperate <span class="nowrap">/OE</span> signal. They then
 piggy-back into the 8 new sockets. Wire wrap sockets are not
 essential but give some cooling space between the mated EPROMS.
 I lost no EPROMs doing this.

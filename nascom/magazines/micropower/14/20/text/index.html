@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/micropower/14/20/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Micropower - Volume 1 - Number 4 - December 1981</title>
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -152,14 +152,14 @@ combinations of keys to obtain single characters (often referred to as &lsquo;To
 the computer interprets as instructions. For example:&ndash;
 </p>
 <p class="center">
-? = PRINT &nbsp; &nbsp; &nbsp; &nbsp; CTRL/&#x200b;GRA/H =GOTO.
+? = PRINT &nbsp; &nbsp; &nbsp; &nbsp; CTRL/&ZeroWidthSpace;GRA/H =GOTO.
 </p>
 <p>
 This does save time and space when keying in a long program, but also
 causes a lot of headaches when editing. When the program is listed the tokens are
 expanded to the full reserved words; consequently lines may exceed 48 characters,
 and when you try to edit them you loose charactrers from the end. It is all too easy to
-&lsquo;crash&rsquo;. In Direct Mode, however, they are always useful. E.g. GRA/&#x200b;Space = LIST.
+&lsquo;crash&rsquo;. In Direct Mode, however, they are always useful. E.g. GRA/&ZeroWidthSpace;Space = LIST.
 </p>
 <p>
 You might also make use of this facility when designing graphics shapes for
@@ -172,12 +172,12 @@ Let us look at what happens when we press the graphics and control keys. The
 former sets Bit 7, while the latter flips Bit 6. E.g. The @ character (shift@) is 40 in
 hex or 01000000 in binary, the bits being numbered 7 to 0 from left to right. Setting
 Bit 7 gives 1100 0000, or C0 in hexadecimal, and flipping Bit 6 gives 1000 0000 or 80
-hex. Thus character 80 hex can be typed with CTRL/&#x200b;GRA/&#x200b;shift@. Similarly, 8F in
-hexadecimal is obtained with CTRL/&#x200b;GRA/O.
+hex. Thus character 80 hex can be typed with CTRL/&ZeroWidthSpace;GRA/&ZeroWidthSpace;shift@. Similarly, 8F in
+hexadecimal is obtained with CTRL/&ZeroWidthSpace;GRA/O.
 </p>
 <p>
 Character FF illustrates the effect of flipping Bit 6 from off to on. The&nbsp;? has a
-hex value of 3F (0011 1111). CTRL/? gives 7FH (01111111) , and GRA/&#x200b;CTRL/?
+hex value of 3F (0011 1111). CTRL/? gives 7FH (01111111) , and GRA/&ZeroWidthSpace;CTRL/?
 gives 0FFH (11111111)
 </p>
 <p>

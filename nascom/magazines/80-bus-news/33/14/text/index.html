@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/14/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -149,17 +149,17 @@ memory chip.
 </p>
 <p>
 So that is all you have to do to produce a full 64k conversion job.
-Adding another 64k follows along the same lines, with the /CS for that block
+Adding another 64k follows along the same lines, with the <span class="nowrap">/CS</span> for that block
 being taken from P7. The 74LS32 OR gate needs to be added to ensure that the
 flip-flop reset pin goes high when either block 1 or block 2 is selected.
 However, adding this additional gate led to another problem; on my board, the
 rising edge of the clock occurs almost simultaneously with the generation of
-the /RAS signal so that SWMx is produced within a few nanoseconds after /RAS.
+the <span class="nowrap">/RAS</span> signal so that SWMx is produced within a few nanoseconds after <span class="nowrap">/RAS</span>.
 Even though the RAM specification states that the address should remain stable
-for 20 nS following /RAS, the unmodified board and the 64k version appear to
+for 20 nS following <span class="nowrap">/RAS</span>, the unmodified board and the 64k version appear to
 work happily. However, the delay introduced by the OR-gate (even using the
 higher speed 74S32) causes the flip-flop reset to go high after the clock
-transition, which upsets the correct phasing of SWMx and /CAS. The solution is
+transition, which upsets the correct phasing of SWMx and <span class="nowrap">/CAS</span>. The solution is
 to delay the clock signal applied to the flip-flop by inserting four 74LS04
 inverting buffers coupled in series between the clock signal from the bus and
 the flip-clop clock pin, which introduces a delay of about 30 nSec; this
@@ -167,7 +167,7 @@ appears to be sufficient. I believe that
 <a href="../../../../inmc-news/07/22/text/#article1">similar modification</a>
 to the original
 board was suggested in an early issue of the INMC to delay the generation of
-SWMx and /CAS, but I was unable to find a reference to this.
+SWMx and <span class="nowrap">/CAS</span>, but I was unable to find a reference to this.
 </p>
 <p>
 We now have to select which block, or part of a block (which we will call
@@ -180,14 +180,14 @@ in any 16k page from either block. One way of doing this is shown in Fig.&nbsp;4
 the 74LS75 4-bit latch is partly decoded as port 3 &ndash; this fits in with the
 partial decoding of the other ports used on the N2 main board; you can, of
 course, fully decode it to be any other number between 9 and 255, but then
-/I0EXT must be generated too. The four Q outputs from the latch are ANDed with
+<span class="nowrap">/I0EXT</span> must be generated too. The four Q outputs from the latch are ANDed with
 the four 16k decodes which appear at the points labeled 0 to 3 on the RAM
-board, and the outputs ORed to produce a /CS for the first block of RAMs on
-P6. The /Q outputs are treated similarly and fed to P7. This ensures that
-there can be no contention between the two RAM blocks. Since /CS acts as the
+board, and the outputs ORed to produce a <span class="nowrap">/CS</span> for the first block of RAMs on
+P6. The <span class="nowrap">/Q</span> outputs are treated similarly and fed to P7. This ensures that
+there can be no contention between the two RAM blocks. Since <span class="nowrap">/CS</span> acts as the
 output buffer control line, it must only activate one block at a time; this is
 ensured using the 74LS32 to create logic-low AND gates with the inputs P6 and
-P7 to give two /CS lines, one for each block. Control of the paging can then
+P7 to give two <span class="nowrap">/CS</span> lines, one for each block. Control of the paging can then
 be done by writing to Port 3, either statically by using the NAS&shy;SYS O command
 or as part of a program by using the out instruction. O 3 0 selects the whole
 of block 1, and similarly O 3 F selects block 2, while O 3 3, for example,

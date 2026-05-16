@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/25/25/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -179,17 +179,17 @@ suggested approach below would allow the EPROMs to be used without wait
 states. The 2716/32 type of EPROMs, as well as having a greater capacity than
 the 2708 and only requiring a single +5v supply, also have a more more subtle
 difference. When the 2716 was first introduced by Intel, if my memory serves
-me right, pin 18 was designated PWR DWN, and pin 20 was /CS. (If you check the
+me right, pin 18 was designated PWR DWN, and pin 20 was <span class="nowrap">/CS</span>. (If you check the
 data sheets you will find that the 2716s power consumption drops by about a
 factor of 5 when pin 18 is at a &lsquo;1&rsquo;). Shortly afterwards they renamed the
-pins, and pin 18 became /CE (Chip Enable) and pin 20 /0E (Output Enable). The
+pins, and pin 18 became <span class="nowrap">/CE</span> (Chip Enable) and pin 20 /0E (Output Enable). The
 distinction is fairly important, and if you check the data sheet again you&rsquo;ll
 see why. The access time for a standard 2716 is 450ns from the address lines
-and the /CE pin, but only 120ns from the /OE pin. Thus in a memory system, in
-order to make the most of the EPROM, the /CE decoding should be done as soon
-as the address is available. Any later qualification, (like using /MREQ to
+and the <span class="nowrap">/CE</span> pin, but only 120ns from the <span class="nowrap">/OE</span> pin. Thus in a memory system, in
+order to make the most of the EPROM, the <span class="nowrap">/CE</span> decoding should be done as soon
+as the address is available. Any later qualification, (like using <span class="nowrap">/MREQ</span> to
 distinguish between a memory or an IO access), should preferably be applied to
-the /OE signal. Also the 2-pin approach makes it easy to design systems
+the <span class="nowrap">/OE</span> signal. Also the 2-pin approach makes it easy to design systems
 without memory contention problems.
 </p>
 <!-- 1 column: end --></div>

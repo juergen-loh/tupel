@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/25/28/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - September&ndash;October 1983 - Volume 2 - Issue 5</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -136,13 +136,13 @@
 <!-- 1 column: start --><div>
 <p class="continued">
 IC17 pin 2 &ndash; top right-hand corner of the board &ndash; and hard wiring it to pin 6
-of IC9 &ndash; its immediate neighbour). He then tried ORing /M1 and the /XROM
+of IC9 &ndash; its immediate neighbour). He then tried ORing <span class="nowrap">/M1</span> and the <span class="nowrap">/XROM</span>
 signal in an LS32, and using that to drive 1C17/2, which was where failure set
 in. His problem lies in the accumualtion of delays within the circuit. Let&rsquo;s
 try a quick total up:
 </p>
 <table class="indent">
-<tr><td>Clock falling edge to /MREQ low</td><td>&ndash; 85ns max out of Z80</td></tr>
+<tr><td>Clock falling edge to <span class="nowrap">/MREQ</span> low</td><td>&ndash; 85ns max out of Z80</td></tr>
 <tr><td>/MREQ delay through buffer</td><td>&ndash; 12ns (?)</td></tr>
 <tr><td>/XROM decoding delay thru IC47</td><td>&ndash; 25ns (typ)</td></tr>
 <tr><td>Delay thru&rsquo; LS32</td><td>&ndash; 14ns (typ)</td></tr>
@@ -152,18 +152,18 @@ try a quick total up:
 <p class="noindent">
 Time available from clock falling edge to rising edge that clocks the wait
 state generator = 125ns (4MHz system in an ideal world). 156 is greater than
-125, so failure! In practice the /MREQ delay is unlikely to be the full 85ns,
-and in fact his letter indicates that the /WAIT input does just make it low
+125, so failure! In practice the <span class="nowrap">/MREQ</span> delay is unlikely to be the full 85ns,
+and in fact his letter indicates that the <span class="nowrap">/WAIT</span> input does just make it low
 before the rising edge of the clock, but obviously not soon enough. The
 overall delay must be reduced, and one way is to do the address decoding
-separately (i.e. duplicate the PROM) and remove the dependence on /MREQ. The
-new PROM would be gated by /M1, and the LS32 would be discarded, the decoded
+separately (i.e. duplicate the PROM) and remove the dependence on <span class="nowrap">/MREQ</span>. The
+new PROM would be gated by <span class="nowrap">/M1</span>, and the LS32 would be discarded, the decoded
 output of the second prom being connected directly to IC17/2. (Alternatively
 an LS155, LS138 or similar decoder plus a few gates could be used in place of
 the PROM.) The timing figure would now be:
 </p>
 <table class="indent">
-<tr><td>Clock rising edge to /M1 low</td><td>&ndash; 100ns max</td></tr>
+<tr><td>Clock rising edge to <span class="nowrap">/M1</span> low</td><td>&ndash; 100ns max</td></tr>
 <tr><td>Clock rising edge to Address valid</td><td>&ndash; 110ns max (NB 10ns Worse than above)</td></tr>
 <tr><td>Delay through buffers</td><td>&ndash; 12ns</td></tr>
 <tr><td>PROM (or logic) decoding delay</td><td>&ndash; 25ns</td></tr>

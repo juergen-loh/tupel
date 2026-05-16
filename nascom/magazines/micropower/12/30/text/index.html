@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/micropower/12/30/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>Micropower - Volume 1 - Number 2 - September 1981</title>
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -163,9 +163,9 @@ Newline. A tape produced by the Generate routine is played directly into the mac
 with the monitor in the INLIN loop. Because this loop scans both the keyboard and
 the serial input the data received is treated as if it had been entered from the
 keyboard. Thus the first Newline sets the cursor to the beginning of a line,
-E0/&#x200b;Newline resets the monitor, and R/Newline, executes the read command. The
+E0/&ZeroWidthSpace;Newline resets the monitor, and R/Newline, executes the read command. The
 machine then reads in the data stored by the write command, and finally
-Ezzzz/&#x200b;Newline starts the program at address zzzz.
+Ezzzz/&ZeroWidthSpace;Newline starts the program at address zzzz.
 </p>
 <p>
 The G command suffers from two drawbacks; firstly, the tape LED is not turned
@@ -186,7 +186,7 @@ from this command is to press RESET. If your Nascom is connected to a printer, t
 command will enable you to use the system as a typewriter, suppressing the
 machines normal response to valid commands and error messages on invalid input.
 Of course, any commands that you need to give, such as Kn to set the keyboard
-options, U to activate the printer routine, or Xn to control external input /output, will
+options, U to activate the printer routine, or Xn to control external input <span class="nowrap">/output</span>, will
 have to be entered before the H command.
 </p>
 <!-- 1 column: end --></div>

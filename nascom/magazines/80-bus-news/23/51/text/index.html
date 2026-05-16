@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 
-<!-- navi-head.php / $Date: 2025-09-06 18:29:07 +0200 (Sa, 06. Sep 2025) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/23/51/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ / lastModified: Sun, 03 May 2026 10:44:18 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-03 12:44:14 +0200 (So, 03. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -151,7 +151,7 @@ esteemed Editor. The following few pages attempt to answer some of the questions
 asked in these letters, and are based on the premise that if one person has
 actually taken the trouble to write in with a question, there must be at least a
 thousand of you out there with the same question on your lips. So, as these pages
-are to be fueled by your questions/&#x200b;comments/&#x200b;hints/&#x200b;tips, send them in &ndash; even if it
+are to be fueled by your questions/&ZeroWidthSpace;comments/&ZeroWidthSpace;hints/&ZeroWidthSpace;tips, send them in &ndash; even if it
 is only one sentence on the back of an old envelope. Do not expect a personal
 reply. (Letter writing is not my forte). You may get a reply via 80-BUS News in
 due course. If a few people ask the same question there will almost certainly be
@@ -174,14 +174,14 @@ addresses 00-07 (NASIO), address B1 (data port), address B2 (control port),
 address B3 (card reset). The B1 and B2 outputs are qualified by RD and WR before
 they are used, but the B3 output is taken straight to the RESET input of the
 IVC&rsquo;s Z80. If you look up the interrupt behaviour of the Z80 in its data sheet
-you will see that the Z80 acknowledges an interrupt by putting out an /IORQ
-signal along with an /M1, a unique signal combination that is used at no other
+you will see that the Z80 acknowledges an interrupt by putting out an <span class="nowrap">/IORQ</span>
+signal along with an <span class="nowrap">/M1</span>, a unique signal combination that is used at no other
 time. Unfortunately if the lower 8-bits of the address bus just happen to hold
 the address B3, then the IVC is reset.
 </p>
 <p>
 The cure is simple (in theory), and that is to disconnect pin 14 of IC25
-from GND, and connect the backplane /M1 signal to it via a spare inverter on the
+from GND, and connect the backplane <span class="nowrap">/M1</span> signal to it via a spare inverter on the
 board. Pin 14 is an additional enable input (active low), and with this
 modification the decode PROM will be inhibited during any cycle where M1 is low,
 thus preventing the interrupt acknowledge cycle being misinterpreted by the IVC.
