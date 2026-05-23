@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/nascom-newsletter/33/32/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>Nascom Newsletter - Volume 3 - Number 3 - August 1983</title>
 	<meta name="keywords" content="Nascom News&shy;let&shy;ter, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -150,7 +150,7 @@ main restrictions are as follows:
 <p>
 1. Only simple character strings may be loaded or saved.
 Numbers must be converted using the STR$ and VAL functions
-before/&ZeroWidthSpace;after disc access. The variable cannot be an array
+before/<wbr>after disc access. The variable cannot be an array
 element. Thus if you have a 20 element numeric array A(&nbsp;) which
 you wish to store on disc you would need to use lines of the
 form
@@ -165,7 +165,7 @@ form
 to save the elements in character string form.
 </p>
 <p>
-2. While more than one string can be loaded/&ZeroWidthSpace;saved in a single
+2. While more than one string can be loaded/<wbr>saved in a single
 USR(&nbsp;) statement the strings are stored directly on disc with no
 separator between them, although after each disc write statement
 an end-of-record character (0D hex) is output to disc.
@@ -176,7 +176,7 @@ to determine where one string ends and the next begins. Where
 the length of the string is variable you will need to fix the
 length by padding it out to the requied length with additional
 spaces. Note that this applies where more than one variable is
-read/&ZeroWidthSpace;written in a single USR call &ndash; if only one variable is
+read/<wbr>written in a single USR call &ndash; if only one variable is
 referenced each time NAS-DOS will use the end-of-record
 separator which is put in the file after each disc write
 statement to determine where data which is being read

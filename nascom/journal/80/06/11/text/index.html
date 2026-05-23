@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/80/06/11/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:57 GMT -->
 
 	<title>Nascom Journal - 6/80 7/80</title>
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -141,22 +141,22 @@
 </h4>
 <p>
 Wie schon im <a href="../../../03/03/text/#article1">Nascom-Journal 3/80</a>
-erwähnt,&ZeroWidthSpace;herrscht bei dem Getriebe,&ZeroWidthSpace;das
-den Schlitten zieht,&ZeroWidthSpace;ein Spiel von 0,5 mm (das sind 18 Schritte&nbsp;). Um
-diesen Fehler zu beseitigen,&ZeroWidthSpace;kann man vor den Aufrufen des
+erwähnt,<wbr>herrscht bei dem Getriebe,<wbr>das
+den Schlitten zieht,<wbr>ein Spiel von 0,5 mm (das sind 18 Schritte&nbsp;). Um
+diesen Fehler zu beseitigen,<wbr>kann man vor den Aufrufen des
 Unterprogrammes ABPLOT das folgende Korrekturprogramm einschieben. Dies
-geschieht so,&ZeroWidthSpace;daß an Stelle von CF5B<sub>h</sub> einfach 0C80<sub>h</sub> als Adresse von
+geschieht so,<wbr>daß an Stelle von CF5B<sub>h</sub> einfach 0C80<sub>h</sub> als Adresse von
 ABPLOT verwendet wird.
 </p>
 <p>
-Das Programm überprüft zunächst,&ZeroWidthSpace;ob der Zeichenstift nach rechts oder
+Das Programm überprüft zunächst,<wbr>ob der Zeichenstift nach rechts oder
 links bewegt werden soll und ob diese Richtung mit der vorhergehenden
 übereinstimmt. Bei Gleichheit ist keine Korrektur notwendig und der
 eigentliche Zeichenvorgang erfolgt sofort. Sind die beiden Richtungen
-jedoch verschieden,&ZeroWidthSpace;so werden in der neuen Richtung 18 zusätzliche
-Schritte ausgeführt,&ZeroWidthSpace;bevor der Zeichenvorgang beginnt. Dadurch bewegen
-sich zunächst nur der Motor und das Getriebe;erst bei den Schritten,&ZeroWidthSpace;die
-über 18 hinausgehen und die schon zum Zeichenvorgang gehören,&ZeroWidthSpace;wird auch
+jedoch verschieden,<wbr>so werden in der neuen Richtung 18 zusätzliche
+Schritte ausgeführt,<wbr>bevor der Zeichenvorgang beginnt. Dadurch bewegen
+sich zunächst nur der Motor und das Getriebe;erst bei den Schritten,<wbr>die
+über 18 hinausgehen und die schon zum Zeichenvorgang gehören,<wbr>wird auch
 der Zeichenstift mitbewegt.
 </p>
 

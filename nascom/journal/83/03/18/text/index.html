@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/83/03/18/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:57 GMT -->
 
 	<title>80-Bus Journal - März 1983 - Ausgabe 3</title>
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -147,7 +147,7 @@ von <!-- External Link --><a href="https://michaelbach.de/" title="Externer Link
 Also: Beiliegendes Programm enthält nach einem kurzen (aber
 eindrucksvollen)
 <a href="../../../02/11/text/#article2">Demo</a>
-vorne dran 3 wesentliche Unterprogramme: PLOT(X,&ZeroWidthSpace;Y,&ZeroWidthSpace;Z), LINIE(X1,&ZeroWidthSpace;Y1,&ZeroWidthSpace;Z)
+vorne dran 3 wesentliche Unterprogramme: PLOT(X,<wbr>Y,<wbr>Z), LINIE(X1,<wbr>Y1,<wbr>Z)
 und KREIS (R). Bei PLOT werden also 3 Parameter
 übergeben: X-Wert in DE, Y-Wert in HL, und Z in A. Z wählt zwischen
 Punkt löschen, setzen und invertieren aus. Die Koordinaten brauchten
@@ -192,7 +192,7 @@ schneller &amp; einfacher als mein alter Algorithmus.
 
 <p>
 Jetzt zu LINIE: Eigentlich braucht man zum Zeichnen einer Linie 5
-Parameter: X0,Y0,&ZeroWidthSpace;X1,Y1,&ZeroWidthSpace;Z. Das ist aber unpraktisch, außerdem ist es oft
+Parameter: X0,Y0,<wbr>X1,Y1,<wbr>Z. Das ist aber unpraktisch, außerdem ist es oft
 so, daß man als Anfangspunkt einer Linie den Endpunkt der
 vorhergehenden Linie benutzt. Deshalb gibt es SETZXY, das den
 Anfangspunkt der Linie in den RAM-Variablen X0,Y0 ablegt. LINIE kriegt
@@ -219,7 +219,7 @@ lästig ist natürlich die 16-Bit-Arithmetik (mit dem 6809 z.B. geht das
 viel einfacher, mit dem 9900 auch aber das ist &rsquo;eh eine 16-Bit-CPU und
 sonst recht unschön). Ein Programmiertrick, den ich noch nie irgendwo
 anders gesehenhabe, spart RAM-Platz (Eprom-Version!), den man
-eigentlich für die Variablen NEGX,&ZeroWidthSpace;A,&ZeroWidthSpace;B,&ZeroWidthSpace;X,&ZeroWidthSpace;Y &amp;sw. benötigte: Bei LIO
+eigentlich für die Variablen NEGX,<wbr>A,<wbr>B,<wbr>X,<wbr>Y &amp;sw. benötigte: Bei LIO
 wird der Stackpointer um 6 dekrementiert und IX erhält den Wert von SP.
 Dann kann man relativ zu IX (ins Positive) innerhalb dieses
 </p>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/83/01/24/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:57 GMT -->
 
 	<title>80-Bus Journal - Januar 1983 - Ausgabe 1</title>
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -182,8 +182,8 @@ Betriebssystem, interessiert. Das besteht aus drei Teilen, dem CCP
 (Console Command Prozessor), dem BDOS (Basic Disk Operating System) und
 dem BIOS (Basic Input Output System). Die Bezeichnungen sind eigentlich
 etwas irreführend; mir gefallen die (deutschen) Bezeichnungen von ZDOS
-besser: KI (Kommando-Interpreter), LEAS (Logisches Ein/&ZeroWidthSpace;Ausgabe-System)
-und HEAS (Hardwareabhängiges Ein/&ZeroWidthSpace;Ausgabe-System). Das entscheidende
+besser: KI (Kommando-Interpreter), LEAS (Logisches Ein/<wbr>Ausgabe-System)
+und HEAS (Hardwareabhängiges Ein/<wbr>Ausgabe-System). Das entscheidende
 Kriterium ist die Hardware-Unabhängigkeit von LEAS bzw. BDOS. Nur das
 BIOS ist systemabhängig, muß also für jeden Computer neu geschrieben
 werden. Es läßt sich auch vom Benutzer verändern und ergänzen, um eine
@@ -194,11 +194,11 @@ Video, externes
 
 <!-- 2 Spalten im Blocksatz: Spaltenwechsel -->
 
-Terminal, Cassetten-Ein/&ZeroWidthSpace;Ausgabe, Lochstreifenleser und -Stanzer,
+Terminal, Cassetten-Ein/<wbr>Ausgabe, Lochstreifenleser und -Stanzer,
 Drucker usw. sowie bei einem Diskettensystem alle Ansteuerroutinen für
 die Diskettenlaufwerke (bei RP/M sind diese durch entsprechende
 Cassetten-Routinen ersetzt). HEAS bzw. BDOS besteht im wesentlichen aus
-zwei Funktionsblöcken: einer logischen Ein/&ZeroWidthSpace;Ausgabesteuerung und einer
+zwei Funktionsblöcken: einer logischen Ein/<wbr>Ausgabesteuerung und einer
 Dateiverwaltung für die Diskettenlaufwerke (oder andere Massenspeicher).
 Alle Einzelfunktionen sind über ein standardisiertes Verfahren, ein
 &bdquo;Weichwaren-Interface&ldquo;, vom Benutzer oder von
@@ -214,7 +214,7 @@ Adresse kann man die Funktionen von LEAS als Unterprogramme aufrufen.
 Im Register C wird dabei eine Kennziffer für das gewünschte
 Unterprogramm übergeben. Eingangsparameter werden in D und E
 übergeben, während Ausgangsparameter in A bzw. HL übergeben werden.
-Diesmal sollen uns nur die grundsätzlichen Ein/&ZeroWidthSpace;Ausgabefunktionen
+Diesmal sollen uns nur die grundsätzlichen Ein/<wbr>Ausgabefunktionen
 interessieren, die mit den Kennziffern 1 bis 11 aufgerufen werden
 (Kennziffer 0 bewirkt einen Kaltstart des Systems). Die genaue Funktion
 der einzelnen Routinen kann der beigefügten Tabelle entnommen werden.
@@ -226,7 +226,7 @@ oder <span class="uppercase">Gemini</span> vergebens. Schon die Bezeichnungen ve
 Betriebssystem CP/M aus der Anfangszeit der Mikrocomputerei stammt.
 Aber keine Angst; man muß sich nicht so einen altmodischen
 &bdquo;Rattermann&ldquo; anschaffen, um mit CP/M arbeiten Zu können. Den
-logischen Ein/&ZeroWidthSpace;Ausgabefunktionen können physikalische Geräte auf
+logischen Ein/<wbr>Ausgabefunktionen können physikalische Geräte auf
 vielfache Weise zugeordnet werden, sofern die zugehörigen Routinen im
 BIOS implementiert sind.
 </p>
@@ -234,7 +234,7 @@ BIOS implementiert sind.
 DAS IOBYTE
 </h4>
 <p>
-Jedem logischen Ein/&ZeroWidthSpace;Ausgabegerät können 4 physikalische Geräte
+Jedem logischen Ein/<wbr>Ausgabegerät können 4 physikalische Geräte
 zugeordnet werden. Die Zuordnung ist ebenfalls standardisiert und
 erfolgt über das &bdquo;IOBYTE&ldquo;, das an der Speicherstelle 3
 abgelegt ist. Je 2 Bit sind einem logischen Gerät zugeordnet in der

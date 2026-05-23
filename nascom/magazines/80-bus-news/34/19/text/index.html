@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/34/19/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>80-Bus News - July&ndash;August 1984 - Volume 3 - Issue 4</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -154,7 +154,7 @@ SYS <span class="uppercase">Modifications</span>
 As such restrictions were intolerable, SYS (Version 18.1) was modified so
 that it could be assembled to run with 1, 2, or 3 Pages of <span class="uppercase">Ramdisk</span> and also
 allow these pages to be contiguous. That is, starting with the system memory
-on page&nbsp;0&nbsp;,&ZeroWidthSpace;the first disk page will be 1, the next 2, and the last 3. Besides
+on page&nbsp;0&nbsp;,<wbr>the first disk page will be 1, the next 2, and the last 3. Besides
 enabling all three pages of the GM862 to be accessed, this hardware
 configuration is compatible with that employed with Gemini CONFIG.COM so that
 either operating system can be used without resetting switches or unplugging
@@ -175,9 +175,9 @@ correct line. Additions are inserted BEFORE the original Line indicated.
 SYSB3 Modifications &ndash; if vgem
 </h4>
 <table style="width: 100%">
-<tr><td>change vinit:+11</td><td>to</td><td>ld a,vnorm&ZeroWidthSpace;*16&ZeroWidthSpace;+02h</td><td>;Read from page&nbsp;1</td></tr>
-<tr><td>change vinit:+18</td><td>to</td><td>ld a,0e0&ZeroWidthSpace;+vnorm</td><td>;Write pages&nbsp;1, 2, 3</td></tr>
-<tr><td>change be2: +7</td><td>to</td><td>ld a,20h&ZeroWidthSpace;+vnorm</td><td>;Write to page&nbsp;1</td></tr>
+<tr><td>change vinit:+11</td><td>to</td><td>ld a,vnorm<wbr>*16<wbr>+02h</td><td>;Read from page&nbsp;1</td></tr>
+<tr><td>change vinit:+18</td><td>to</td><td>ld a,0e0<wbr>+vnorm</td><td>;Write pages&nbsp;1, 2, 3</td></tr>
+<tr><td>change be2: +7</td><td>to</td><td>ld a,20h<wbr>+vnorm</td><td>;Write to page&nbsp;1</td></tr>
 </table>
 <h4 class="indent">
 SYSB8 Modifications &ndash; if vgem
@@ -185,10 +185,10 @@ SYSB8 Modifications &ndash; if vgem
 <table style="width: 100%">
 <tr><td>change dpbv:+5</td><td>to</td><td>defb 0e0h,0</td><td>;ALO 3 directory blks.</td></tr>
 <tr><td colspan=3></td><td>;change is optional</td></tr>
-<tr><td>change vb: +4</td><td>to</td><td>ld a,vnorm&ZeroWidthSpace;*16&ZeroWidthSpace;+02h</td><td>;Read from page&nbsp;1</td></tr>
-<tr><td>add at vr: +8</td><td></td><td>ld a,vnorm&ZeroWidthSpace;*16&ZeroWidthSpace;+02h</td><td>;Read page&nbsp;1</td></tr>
+<tr><td>change vb: +4</td><td>to</td><td>ld a,vnorm<wbr>*16<wbr>+02h</td><td>;Read from page&nbsp;1</td></tr>
+<tr><td>add at vr: +8</td><td></td><td>ld a,vnorm<wbr>*16<wbr>+02h</td><td>;Read page&nbsp;1</td></tr>
 <tr><td></td><td></td><td>jr c,vr2</td><td>;Next page&nbsp;?</td></tr>
-<tr><td>add at vw: +8</td><td></td><td>ld a,20h&ZeroWidthSpace;+vnorm</td><td>;Write page&nbsp;1</td></tr>
+<tr><td>add at vw: +8</td><td></td><td>ld a,20h<wbr>+vnorm</td><td>;Write page&nbsp;1</td></tr>
 <tr><td colspan=2><td>jr c,vw2</td><td>;Next page&nbsp;?</td></tr>
 </table>
 <h3>

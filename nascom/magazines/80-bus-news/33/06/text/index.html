@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/33/06/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1984 - Volume 3 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -137,16 +137,16 @@
 <p>
 It is best to consider that ALL operations will occur at the
 place pointed to by the arrow. e.g. BS will delete the letter pointed to and
-characters under/&ZeroWidthSpace;after the cursor will move left/up. Any typed Characters will
-be inserted in the &lsquo;gap&rsquo; pointed to, and text under/&ZeroWidthSpace;after the cursor will move
-right/&ZeroWidthSpace;down. This is different to editing in BASIC etc. where characters will
-&lsquo;overtype&rsquo; unless space is created by shift/&ZeroWidthSpace;right arrow. The Insert mode is
+characters under/<wbr>after the cursor will move left/up. Any typed Characters will
+be inserted in the &lsquo;gap&rsquo; pointed to, and text under/<wbr>after the cursor will move
+right/<wbr>down. This is different to editing in BASIC etc. where characters will
+&lsquo;overtype&rsquo; unless space is created by shift/<wbr>right arrow. The Insert mode is
 terminated by a ^Z.
 </p>
 <p>
 A number of commands (also used in Insert mode) are available to move the
 cursor forwards or backwards through the text by units of one
-character/&ZeroWidthSpace;word/&ZeroWidthSpace;line/&ZeroWidthSpace;paragraph/&ZeroWidthSpace;Quarter page. The main cursor commands are Right
+character/<wbr>word/<wbr>line/<wbr>paragraph/<wbr>Quarter page. The main cursor commands are Right
 and Left arrow, to move one character, Shift Right or Shift Left arrow to move
 one Word, Up or Down arrow to move one (logical) line, Shift Up or Shift Down
 arrow to move one Paragraph. In command mode, text can also be scanned in
@@ -166,14 +166,14 @@ The text will &lsquo;wrap around&rsquo; onto the next line of the screen, etc., 
 some words may appear broken when the end of screen line is reached. In memory
 though, the text will be continuous. Thus a paragraph of say 200 words may be
 entered, and the cursor may be half way down the screen but the line counter
-will still say line 1, because the logical end of line is marked by a CR,&ZeroWidthSpace;LF
+will still say line 1, because the logical end of line is marked by a CR,<wbr>LF
 sequence, which results from pressing ENTER, or from formatting. Half a dozen
 such paragraphs may occupy several K. of memory and take two or three screens
 to display fully, but may only register six lines on the status display.
 </p>
 <p>
 When the text is formatted to the desired length however, the program
-will place a CR,&ZeroWidthSpace;LF at the end of every line of 76 (or whatever length set &ndash;
+will place a CR,<wbr>LF at the end of every line of 76 (or whatever length set &ndash;
 N.B. These are .1&Prime; steps, NOT characters), and the line counter will display
 the correct count. Since the screen can only display 48 or 80 chars. on a
 line, any lines formatted longer than this will &lsquo;wrap around&rsquo;, and this will
@@ -181,7 +181,7 @@ result in the line count indicator not agreeing with lines as counted on the
 screen.
 </p>
 <p>
-Another consequence of the lack of CR,&ZeroWidthSpace;LF before formatting is that the
+Another consequence of the lack of CR,<wbr>LF before formatting is that the
 UP/DOWN arrow keys will cause the cursor to jump the whole length of the
 logical line. This makes reaching the middle of a paragraph by cursor
 character or word commands tedious. The answer is to format frequently, or to

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/scorpio-news/22/07/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>Scorpio News - April&ndash;June 1988 &ndash; Volume 2. Issue 2.</title>
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -170,7 +170,7 @@ goes through is:&ndash;
 <li>head load</li>
 <li>2 index pulses sensed and READY (pin 34) enabled, (But drive may still not
 	be up to speed.)</li>
-<li>fine stepper centres head on track and READY/&ZeroWidthSpace;SEEK COMPLETE (pin 4)
+<li>fine stepper centres head on track and READY/<wbr>SEEK COMPLETE (pin 4)
 	is enabled</li>
 </ol>
 <p>
@@ -179,7 +179,7 @@ active. This means that he may be attempting to write to disk while the heads ar
 still moving or the disk is not yet up to speed.
 </p>
 <p>
-I think that with these drives the Bios should wait for READY/&ZeroWidthSpace;SEEK COMPLETE
+I think that with these drives the Bios should wait for READY/<wbr>SEEK COMPLETE
 before initiating a read or write command. The motor start may also need up to a 2
 sec. delay to allow the motor speed to stabilise.
 </p>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/23/30/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>80-Bus News - May&ndash;June 1983 - Volume 2 - Issue 3</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -152,22 +152,22 @@ Example of the number 35.25 in floating point:&ndash;<br><br></p>
 <colgroup><col><col><col></colgroup>
 <tr><td>35.25 in binary is</td><td colspan=2>100011.01</td></tr>
 <tr><td>Which is the same as</td><td colspan=2>100011.01 *2^ 00000000</td></tr>
-<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
+<tr><td colspan=3><wbr></td></tr>
 
 <tr><td colspan=3>The binary point is moved so that it precedes the first &ldquo;1&rdquo;</td></tr>
 <tr><td>This gives</td><td colspan=2>.10001101</td></tr>
-<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
+<tr><td colspan=3><wbr></td></tr>
 
 <tr><td colspan=3>The point was moved left 6 times dividing the number by 2^6 so
 6 must be added to the exponent to re-multiply by 2^6.</td></tr>
 <tr><td>This gives</td><td colspan=2>.10001101 *2^ 00000110</td></tr>
-<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
+<tr><td colspan=3><wbr></td></tr>
 
 <tr><td colspan=3>As the bit after the point is ALWAYS &ldquo;1&rdquo; this bit can be used
 to store the sign of the number &ldquo;0&rdquo; for +ve, &ldquo;1&rdquo; for -ve</td></tr>
 <tr><td>So +35.25 is stored as</td><td colspan=2>.00001101 * 2 ^ 00000110</td></tr>
-<tr><td>Which in 24 bits is</td><td colspan=2>.000011010000&ZeroWidthSpace;000000000000 *2^ 00000110</td></tr>
-<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
+<tr><td>Which in 24 bits is</td><td colspan=2>.000011010000<wbr>000000000000 *2^ 00000110</td></tr>
+<tr><td colspan=3><wbr></td></tr>
 
 <tr><td colspan=3>128 is added to the exponent so that overflows and underflows
 can be more easily detected.</td></tr>
@@ -178,7 +178,7 @@ can be more easily detected.</td></tr>
 <tr><td style="vertical-align:bottom">Which is</td><td colspan=2>
 
 <table class=rbfp>
-<tr><td>00&ZeroWidthSpace;00</td><td>11&ZeroWidthSpace;01</td><td>00&ZeroWidthSpace;00</td><td>00&ZeroWidthSpace;00</td><td>00&ZeroWidthSpace;00</td><td>00&ZeroWidthSpace;00</td><td>10&ZeroWidthSpace;00</td><td>01&ZeroWidthSpace;10</td><td></td></tr>
+<tr><td>00<wbr>00</td><td>11<wbr>01</td><td>00<wbr>00</td><td>00<wbr>00</td><td>00<wbr>00</td><td>00<wbr>00</td><td>10<wbr>00</td><td>01<wbr>10</td><td></td></tr>
 <tr><td>0</td><td>D</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>6</td><td>HEX</td></tr>
 </table>
 
@@ -186,7 +186,7 @@ can be more easily detected.</td></tr>
 <tr><td colspan=3>The bytes of the mantissa are stored in reverse order.</td></tr>
 <tr><td colspan=2>This gives the value for +35.25 as</td><td>00 00 0D 86</td></tr>
 <tr><td colspan=2>And &minus;35.25 would be stored as</td><td>00 00 8D 86</td></tr>
-<tr><td colspan=3>&ZeroWidthSpace;</td></tr>
+<tr><td colspan=3><wbr></td></tr>
 
 </table>
 
@@ -235,7 +235,7 @@ the first) line is to be executed.
 <tr><td><p></p></td><td><p></p></td><td colspan=2><p>
 Example:&ndash; The program:&ndash;</p>
 <p style="margin-left: 1em">
-  10 <a href="../../../25/33/text/#FOR">FOR</a> A=1 <a href="../../../24/28/text/#ZTO">TO</a> 5:&ZeroWidthSpace;<a href="../../../26/31/text/#PRINT">PRINT</a> A,<a href="../../../32/28/text/#SQR">SQR</a>(1):&ZeroWidthSpace;<a href="../../../26/34/text/#NEXT">NEXT</a> A<br>
+  10 <a href="../../../25/33/text/#FOR">FOR</a> A=1 <a href="../../../24/28/text/#ZTO">TO</a> 5:<wbr><a href="../../../26/31/text/#PRINT">PRINT</a> A,<a href="../../../32/28/text/#SQR">SQR</a>(1):<wbr><a href="../../../26/34/text/#NEXT">NEXT</a> A<br>
   20 <a href="../../../25/35/text/#PEND">END</a>
 </p>
 <p>is in memory, it would look like this:&ndash;

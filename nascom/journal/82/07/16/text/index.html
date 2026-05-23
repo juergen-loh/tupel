@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/82/07/16/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:57 GMT -->
 
 	<title>Nascom Journal - Juli/August 1982 - Ausgabe 7/8</title>
 	<meta name="keywords" content="Nascom Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -161,13 +161,13 @@ Wer also seinem Nascom das Sprechen beibringen will, geht wie folgt vor:
 <p>
 Jedes Wort, das der Rechner
 &bdquo;koennen&ldquo; soll, muss ihm zuerst &bdquo;vorgesagt&ldquo; werden.
-Dabei muss die digitalisierte Sprache an Bit 0/&ZeroWidthSpace;Port B anliegen. Dazu
+Dabei muss die digitalisierte Sprache an Bit 0/<wbr>Port B anliegen. Dazu
 wird der Ausgang des Recorders, der die gewuenschten Laute von Cassette
 abspielt, oder des Verstaerkers, an den ein Mikrofon angeschlossen ist,
 mit TP 9 (Cass. In) verbunden. Dann ist noch eine Verbindung von TP 19
-(Cass. Schmitt) zu Bit 0/&ZeroWidthSpace;Port B herzustellen. Auf keinen Fall darf
+(Cass. Schmitt) zu Bit 0/<wbr>Port B herzustellen. Auf keinen Fall darf
 vergessen werden, BSTROBE auf Masse zu legen, sonst funktioniert die
-Eingabe nicht. Schliesslich muss noch ein Verstaerker an Bit 5/&ZeroWidthSpace;Port 0
+Eingabe nicht. Schliesslich muss noch ein Verstaerker an Bit 5/<wbr>Port 0
 angeschlossen werden. Das war dann schon der ganze Hardware-Aufwand.
 </p>
 <p>
@@ -189,9 +189,9 @@ abzuschalten, um den &bdquo;Schmutzeffekt&ldquo; zu vermeiden. Wird dann
 <p>
 Die beiden Unterprogramme &bdquo;record&ldquo; und &bdquo;talk&ldquo;, der
 &bdquo;Kern&ldquo; des Synthese-Programms, kann natuerlich auch in
-anderen Anwendungen benutzt werden.&ZeroWidthSpace;Das Register HL muss dann BegAdr,
+anderen Anwendungen benutzt werden.<wbr>Das Register HL muss dann BegAdr,
 und DE EndAdr enthalten, BC und AF werden veraendert. Man sollte
-uebrigens nicht versuchen, Bit 7/&ZeroWidthSpace;Port 0 fuer die Eingabe zu verwenden;
+uebrigens nicht versuchen, Bit 7/<wbr>Port 0 fuer die Eingabe zu verwenden;
 das klingt nicht besonders. Die beiden scheinbar ueberfluessigen
 Befehle &bdquo;neg&ldquo; und &bdquo;or a&ldquo; passen die
 Aufnahmegeschwindigkeit der der Wiedergabe an. Die Verzoegerung

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/83/09/15/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:57 GMT -->
 
 	<title>80-Bus Journal - September 1983 - Ausgabe 9</title>
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -150,9 +150,9 @@ abgedruckten RTTY-Programms war, dass es ohne Hardwareaenderungen auf
 der Grundplatine des Nascom&nbsp;1 laufen koennen sollte. Durch diese
 Beschraenkung liessen sich jedoch solche Annehmlichkeiten wie
 Vorschreiben bei Em&shy;pfang, Abruf von Festtexten,
-ASCII/&ZeroWidthSpace;Baudot-Umschaltung usw. nicht realisieren. Das hier vorgestellte
+ASCII/<wbr>Baudot-Umschaltung usw. nicht realisieren. Das hier vorgestellte
 Programm bietet diesen Komfort, erfordert aber eine
-Hardwaremodifikation. Fuer die seriell/&ZeroWidthSpace;parallel- und
+Hardwaremodifikation. Fuer die seriell/<wbr>parallel- und
 parall./ser.-Wandlung befindet sich auf dem Nascom bereits ein
 spezieller Baustein, der UART. Dieser UART könnte prinzipiell direkt
 ueber den Bus fuer verschiedene Formate, z.B. 5 Bit-Daten und 1.5
@@ -178,8 +178,8 @@ als auch bei Sendebetrieb Gueltigkeit haben:
 <table>
 <tr><td>Ctrl&nbsp;A:&nbsp;</td><td>ASCII</td></tr>
 <tr><td>Ctrl&nbsp;B:</td><td>Baudot</td></tr>
-<tr><td>Ctrl&nbsp;C:</td><td>bei Baudot: Aendern der Bu/&ZeroWidthSpace;Zi-Ebene<br>
-bei ASCII&nbsp;: K1-Option von NAS-SYS ein/&ZeroWidthSpace;ausschalten</td></tr>
+<tr><td>Ctrl&nbsp;C:</td><td>bei Baudot: Aendern der Bu/<wbr>Zi-Ebene<br>
+bei ASCII&nbsp;: K1-Option von NAS-SYS ein/<wbr>ausschalten</td></tr>
 <tr><td>Ctrl&nbsp;D:</td><td>Baudrate erniedrigen (45.45,50,75, 100,110,150,300,600 Baud)</td></tr>
 <tr><td>Ctrl&nbsp;I:</td><td>Baudrate erhoehen</td></tr>
 </table>
@@ -197,7 +197,7 @@ Senders verwendet werden.</td></tr>
 </table>
 <p>
 Der Vorschreibspeicher ist etwa 2&nbsp;kByte lang und beginnt bei 17D8H, der
-Stack liegt bei 1000H.&ZeroWidthSpace;Festtexte koennen beliebig lang sein und muessen
+Stack liegt bei 1000H.<wbr>Festtexte koennen beliebig lang sein und muessen
 mit einer 0 abgeschlossen werden. Bei 0DH (CR) wird immer auch ein 0AH
 (LF) ausgesendet. Die Anfangsadressen der 5 Texte muessen zwischen
 0F00H und 0F09H eingetragen werden. Den Abruf von nicht definierten

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/21/09/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -145,20 +145,20 @@ peripheral devices. Designed as full members of the Z80 family are the following
 <table class="indent">
 <tr><td><!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0180.pdf" title="External Link: Z80 PIO" target="_blank" rel="noreferrer">PIO</a><!-- /External Link --></td><td>giving two 8 bit parallel ports</td></tr>
 <tr><td><!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0181.pdf" title="External Link: Z80 CTC" target="_blank" rel="noreferrer">CTC</a><!-- /External Link -->
-</td><td>giving four counter/&ZeroWidthSpace;timer channels</td></tr>
-<tr><td><!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0183.pdf" title="External Link: Z80 SIO" target="_blank" rel="noreferrer">SIO</a><!-- /External Link --></td><td>offering two serial input/&ZeroWidthSpace;output ports, with high speed
+</td><td>giving four counter/<wbr>timer channels</td></tr>
+<tr><td><!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0183.pdf" title="External Link: Z80 SIO" target="_blank" rel="noreferrer">SIO</a><!-- /External Link --></td><td>offering two serial input/<wbr>output ports, with high speed
 		synchronous facilities.</td></tr>
 <tr><td><!-- External Link --><a href="https://datasheet.datasheetarchive.com/originals/scans/Scans-97/DSAIHSC00072076.pdf" title="External Link: Z80 DART" target="_blank" rel="noreferrer">DART</a><!-- /External Link -->
 </td><td>a reduced specification SIO, best thought of as an
 		intelligent UART</td></tr>
 <tr><td><!-- External Link --><a href="https://www.zilog.com/docs/z80/ps0179.pdf" title="External Link: Z80 DMA" target="_blank" rel="noreferrer">DMA</a><!-- /External Link -->
-</td><td>offering high speed transfer of data from port/&ZeroWidthSpace;memory to
-		memory/&ZeroWidthSpace;port, with search facilities.</td></tr>
+</td><td>offering high speed transfer of data from port/<wbr>memory to
+		memory/<wbr>port, with search facilities.</td></tr>
 </table>
 <p>
 In addition to these devices, Zilog also offer another family, the 8500
 peripheral device family. These devices are specialised microcomputers, which are
-set up to be input/&ZeroWidthSpace;output devices of astonishing complexity! I propose to deal
+set up to be input/<wbr>output devices of astonishing complexity! I propose to deal
 only with the PIO and CTC at present, as these are the only two devices on which
 I can claim any experience. The SIO and DART I may be able to deal with in the
 future as Gemini have an SIO board in design. [Ed. &ndash; using SCCs from the 8500
@@ -173,7 +173,7 @@ bit parallel ports, each with two handshaking or control lines. As normally used
 it appears as a block of four ports, with the data ports A &amp; B, and then the
 corresponding control ports CTRLA &amp; CTRLB. On the standard Nascom, this block
 occupies Ports 4,5,6,7. Port A is number 4 with its control port CTRLA number 6.
-The two data ports are Read/&ZeroWidthSpace;Write, the two control ports are Write only. We can
+The two data ports are Read/<wbr>Write, the two control ports are Write only. We can
 set this device up in a number of operating modes. First of all, we can pick Mode
 0, which configures the port as Output, say driving a parallel printer. The two
 handshake lines are used here, one from the PIO to indicate that the data is

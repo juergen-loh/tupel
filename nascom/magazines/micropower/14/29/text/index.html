@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/micropower/14/29/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>Micropower - Volume 1 - Number 4 - December 1981</title>
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -150,7 +150,7 @@ modify command, either by producing error messages or, if the ASCII section
 contains a full stop, by terminating the modify routine.
 </p>
 <h3 class="uppercase">
-User Input/&ZeroWidthSpace;Output U
+User Input/<wbr>Output U
 </h3>
 <p>
 Input and output is accessed via pointers to tables which list the routines to be
@@ -179,7 +179,7 @@ VERIFY V
 The address stored in the command table for the VERIFY command is the same
 as that for the READ command. The two commands use the same code, except that
 as each data byte is obtained the value stored at location &pound;0C2B, which contains the
-last command letter entered,&ZeroWidthSpace;is tested to see if it an R. If it is not, the data bytes are
+last command letter entered,<wbr>is tested to see if it an R. If it is not, the data bytes are
 not stored in memory, and faulty data cannot corrupt data already in store. If you are
 calling the READ routine from a program you must store an R at &pound;0C2B or data will
 not be loaded.

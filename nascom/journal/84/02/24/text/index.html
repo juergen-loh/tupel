@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="de">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,9 +21,9 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/journal/84/02/24/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:30:16 GMT -->
 
-	<title>80-Bus Journal - April/{}Mai/{}Juni 1984 - Ausgabe 2</title>
+	<title>80-Bus Journal - April/Mai/Juni 1984 - Ausgabe 2</title>
 	<meta name="keywords" content="80-Bus Journal, Nascom Computer, Nascom 1, Nascom 2">
 <!-- navi-body.php -->
 </head>
@@ -77,7 +77,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 	<tr>
 		<td>
@@ -85,7 +85,7 @@
 		</td>
 		<td>&nbsp;&nbsp;</td>
 		<td style="vertical-align:top">
-			<h2 class="h2Navi"><span class="nowrap">April$ZeroWidthSpace/{$ZeroWidthSpace}Mai$ZeroWidthSpace/{$ZeroWidthSpace}Juni 1984 &middot;</span> <span class="nowrap">Ausgabe 2</span></h2>
+			<h2 class="h2Navi"><span class="nowrap">April<wbr>/<wbr>Mai<wbr>/<wbr>Juni 1984 &middot;</span> <span class="nowrap">Ausgabe 2</span></h2>
 		</td>
 	</tr>
 </table>
@@ -169,12 +169,12 @@ Maschinenunterprogramm ausführen zu lassen. Dabei kann man sowohl einen
 Wert aus dem Basic ins Maschinenprogramm als auch umgekehrt übergeben.
 </p>
 <p>
-Vorher muß man die Startadresse des Masch. Progr. in USRLOC (4100 dez)
+Vorher muß man die Startadresse des Masch. Progr. in <a href="../../../../../rom-basic/#USR">USRLOC</a> (4100 dez)
 ein-&bdquo;doken&ldquo;. In den meisten Fällen wird das wohl #C80 d.h.
-3200dez sein. Mit &bdquo;CALL #E98B&ldquo; wird der Inhalt der Klammer
+3200dez sein. Mit &bdquo;CALL #<a href="../../../../../rom-basic/#E98B">E98B</a>&ldquo; wird der Inhalt der Klammer
 ins DE-Register geladen. Will man ein Rechenergebnis ins Basic
-übergeben,&ZeroWidthSpace;lädt man das Low-Byte ins B, das High-Byte ins A-Register und
-springt mit &bdquo;JP #F0F2&ldquo; ins Basic zurück. (Es gibt noch die
+übergeben,<wbr>lädt man das Low-Byte ins B, das High-Byte ins A-Register und
+springt mit &bdquo;JP #<a href="../../../../../rom-basic/#F0F2">F0F2</a>&ldquo; ins Basic zurück. (Es gibt noch die
 Möglichkeit mit &bdquo;RET&ldquo;, aber darüber möchte ich mich nicht
 auslassen, weil ich nicht weiß, warum es funktioniert).
 </p>

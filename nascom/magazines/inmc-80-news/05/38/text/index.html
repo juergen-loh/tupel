@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/inmc-80-news/05/38/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>INMC 80 News - October&ndash;December 1981 - Issue 5</title>
 	<meta name="keywords" content="INMC 80 News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -136,7 +136,7 @@
 <!-- 1 column: start --><div>
 <p>
 This information must also include the synchronization bytes along
-with each track/&ZeroWidthSpace;sector header. If we want to record in small amounts, we can
+with each track/<wbr>sector header. If we want to record in small amounts, we can
 divide the tracks up into small sectors, each one say 128 bytes long. After
 subtracting all the bytes used (in the above example) we are left with only
 161,280 bytes on our disk. With a format that divides it up into 18 sectors
@@ -171,7 +171,7 @@ recovering the data correctly.
 Addressing the disk. The disk is addressed by first positioning the
 head on the right track, a task performed by the controller chip, and then
 reading a sector header. The controller reports that the correct track has (or
-has not) been found and then, if the track/&ZeroWidthSpace;sector header was as required,
+has not) been found and then, if the track/<wbr>sector header was as required,
 proceeds to read or write the sector as instructed. When writing, the CPU
 sends the data to the controller chip byte by byte, the controller converting
 it to serial data and providing the necessary clock pulses, then feeding it to
@@ -184,7 +184,7 @@ comes and grabs the byte.
 Controlling the controller chip is a piece of software known as the
 &lsquo;disk primitives&rsquo;. This software is concerned with the mundane business of
 reading and writing a sector. It requires to know which drive is required,
-whether you wish to read or write, which track/&ZeroWidthSpace;sector is to be read or written
+whether you wish to read or write, which track/<wbr>sector is to be read or written
 to, where the data is to go to/come from; and other things such as reporting
 errors, keeping the drive motors running etc. In all this piece of software is
 usually about 1K long, very involved, and a perfect example of using a CPU to
@@ -200,7 +200,7 @@ do, and this is the function of the &lsquo;Disk Operating System&rsquo; or DOS. 
 be as simple or as elaborate as you wish. The simplest in common use for the
 Nascom is D-DOS, which is nothing more than (nor does it pretend to be
 anything more than) a number of keyboard routines which accept instructions as
-to how many sectors are required, which track/&ZeroWidthSpace;sector is the start, whether it
+to how many sectors are required, which track/<wbr>sector is the start, whether it
 is a read or write command, and where the data is to go to/come from. No
 </p>
 <!-- 1 column: end --></div>

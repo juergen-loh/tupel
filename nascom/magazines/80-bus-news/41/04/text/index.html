@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/41/04/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>80-Bus News - Spring 1985 - Volume 4 - Issue 1</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -150,7 +150,7 @@ Turbo Pascal &ndash; 2
 </h3>
 <p>
 I have installed <i>Borland International</i> Turbo Pascal
-onto my <i>Gemini/&ZeroWidthSpace;Nascom</i> system. With the <i>Nascom</i>
+onto my <i>Gemini/<wbr>Nascom</i> system. With the <i>Nascom</i>
 video (generated using MOVCPMN) the
 system works perfectly, but when trying to use the
 <!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm812.htm" title="External Link" target="_blank" rel="noreferrer">IVC</a><!-- /External Link -->
@@ -205,7 +205,7 @@ attached to the
 <!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm812.htm" title="External Link" target="_blank" rel="noreferrer">GM812</a><!-- /External Link -->
 video card. If the ESC key is
 pressed (as may be necessary if an error or
-interruption occurs), a List/&ZeroWidthSpace;Edit Function key
+interruption occurs), a List/<wbr>Edit Function key
 message is produced &ndash; not much use if you haven&rsquo;t
 got the appropriate keyboard and a &starf;&starf;&starf;&starf; nuisance
 as well since the system may lock-up and
@@ -232,7 +232,7 @@ disadvantage is that you lose the type-ahead buffer.
 Secondly, I bet that you have a
 <!-- External Link --><a href="https://nascom.wordpress.com/gemini/hardware/gm821-parallel-keyboard/" title="External Link" target="_blank" rel="noreferrer">GM821</a><!-- /External Link -->
 keyboard, and that
-you don&rsquo;t get the &lsquo;List/&ZeroWidthSpace;Edit ....&rsquo; message until you have
+you don&rsquo;t get the &lsquo;List/<wbr>Edit ....&rsquo; message until you have
 pressed the &lsquo;ESC&rsquo; key twice, right? To explain what is
 happening I&rsquo;ll just give a little history on <i>Gemini</i>
 keyboards.
@@ -241,7 +241,7 @@ keyboards.
 First of all came the GM821 keyboard (very originally
 known as the G613). This has 59 keys and can, with
 various permutations of Normal, Shift, Control, and
-Shift/&ZeroWidthSpace;Control, produce 128 ASCII codes, thus using 7 bits
+Shift/<wbr>Control, produce 128 ASCII codes, thus using 7 bits
 of the interface. The 8th bit is used as a strobe, and the
 keyboard can be connected to the keyboard interface on the
 <!-- External Link --><a href="https://80bus.co.uk.mirror.jloh.de/pages/gemini/gm811.htm" title="External Link" target="_blank" rel="noreferrer">GM811</a><!-- /External Link -->
@@ -252,7 +252,7 @@ When <i>Gemini</i> decided to produce the
 <!-- External Link --><a href="https://nascom.wordpress.com/gemini/hardware/gm827-87-key-parallel-keyboard/" title="External Link" target="_blank" rel="noreferrer">GM827</a><!-- /External Link -->
 keyboard,
 with 87 keys, some of the keys were used to obviate the
-necessity for the Shift/&ZeroWidthSpace;Control permutations. In addition
+necessity for the Shift/<wbr>Control permutations. In addition
 30 keys were added to be user-definable separately in
 Normal and Shifted modes. These obviously require
 additional codes, but with only 7 bits available the
@@ -266,27 +266,27 @@ on. The IVC-MON (Version 2.0 and later) was modified to
 include support for these codes. One of the user
 selectable links on the IVC (one of the switches on the
 SVC) determines whether the keyboard to be used is the GM821 or
-GM827/&ZeroWidthSpace;<!-- External Link --><a href="https://nascom.wordpress.com/gemini/hardware/gm852-keyboard/" title="External Link" target="_blank" rel="noreferrer">GM852</a><!-- /External Link -->.
+GM827/<wbr><!-- External Link --><a href="https://nascom.wordpress.com/gemini/hardware/gm852-keyboard/" title="External Link" target="_blank" rel="noreferrer">GM852</a><!-- /External Link -->.
 (The GM852 is a low-profile
 version of the GM827 with the only differences being that
 it is also available in a serial version, and that the very
 latest ones extend the user-defined keys into the Control
 mode as well.) If GM821 is selected then the code is
-passed on directly, if GM827/&ZeroWidthSpace;GM852 is selected then all
+passed on directly, if GM827/<wbr>GM852 is selected then all
 codes are passed on directly unless a 1BH is received, in
 which case it waits for the next code and translates it to
 the user-defined string held in its workspace RAM.
 </p>
 <p>
 And so back to Dr Coker&rsquo;s problem. If the IVC-MON (or
-SVC-MON) believes that the keyboard is a GM827/&ZeroWidthSpace;GM852,
+SVC-MON) believes that the keyboard is a GM827/<wbr>GM852,
 but it is in fact a GM821, then when the ESC key
 is pressed the keyboard outputs the code 1BH, which tells
 the IVC-MON that this is a special case, and that another
 code will be used to select a user-defined string.
 Consequently nothing will happen until another key is
 pressed, and depending on what this is will determine
-what the IVC/&ZeroWidthSpace;SVC actually passes onto the system. If this
+what the IVC/<wbr>SVC actually passes onto the system. If this
 is the ESC key again (being pressed in the belief that the
 </p>
 <!-- 2 columns: end --></div></div>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/scorpio-news/14/20/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>Scorpio News - October&ndash;December 1987 &ndash; Volume 1. Issue 4.</title>
 	<meta name="keywords" content="Scor&shy;pio News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -172,16 +172,16 @@ Blocking and deblocking are implemented in the BIOS under CP/M&nbsp;2.2 and (usu
 under CP/M&nbsp;3 although facilities exist within CP/M&nbsp;3 to allow the BIOS to do this. The method used
 requires a buffer in RAM that is one physical sector long (512 bytes for the Gemini DD and QD
 formats). This buffer is simply an area of RAM reserved by the BIOS for this purpose and is known
-as the blocking/&ZeroWidthSpace;deblocking buffer. This buffer is located within the BIOS under CP/M&nbsp;2.2 but under
+as the blocking/<wbr>deblocking buffer. This buffer is located within the BIOS under CP/M&nbsp;2.2 but under
 CP/M&nbsp;3, the physical record buffers controlled by the BDOS (pointed to by the DTABCBs) are used.
 From now on I shall assume that CP/M&nbsp;2.2 is in use and will describe the method of
-blocking/&ZeroWidthSpace;deblocking in respect of the CP/M&nbsp;2.2 BIOS. Under CP/M&nbsp;3, the BDOS will have calculated
+blocking/<wbr>deblocking in respect of the CP/M&nbsp;2.2 BIOS. Under CP/M&nbsp;3, the BDOS will have calculated
 physical sector numbers (using PSH and PHM) and the BIOS reads them directly.
 </p>
 <p>
 When deblocking, the BIOS takes the sector number provided by the BDOS and converts it into a
 physical sector number. i.e the physical sector that contains the required CP/M record. This
-physical sector is then read into the blocking/&ZeroWidthSpace;deblocking buffer and the wanted 128 bytes are
+physical sector is then read into the blocking/<wbr>deblocking buffer and the wanted 128 bytes are
 identified and passed to CP/M by copying them to the DMA address. At the time of reading the
 physical sector, certain facts about it are recorded. These are the drive, track and sector number
 for the physical vector. At the same time a flag is set to say that the buffer in use.
@@ -208,7 +208,7 @@ see why writing is not as fast as reading in a moment.
 <p>
 Imagine that we wish to write a random record to disk and that we are updating one record among
 many adjacent records. Since we have to write to the disk in terms of complete sectors, we
-cannot simply write 128 bytes to the disk. If we put the CP/M record in the blocking/&ZeroWidthSpace;deblocking
+cannot simply write 128 bytes to the disk. If we put the CP/M record in the blocking/<wbr>deblocking
 buffer and wrote that to disks, we would erase the other three records in the physical sector.
 </p>
 <!-- 1 column: end --></div>

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/14/22/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>80-Bus News - November&ndash;December 1982 - Volume 1 - Issue 4</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -147,7 +147,7 @@ should read:
 Another undesirable feature (alright then, a bug) in TOS occurs if any
 errors occur when using TOS under program control. Since errors can occur at
 several &lsquo;depths&rsquo; in TOS (e.g. an error in the number of arguments, no tape
-present, a read/&ZeroWidthSpace;write error, etc.) there could be problems in knowing how many
+present, a read/<wbr>write error, etc.) there could be problems in knowing how many
 return addresses should be &lsquo;thrown away&rsquo; so that TOS can do a quick exit. TOS
 gets round this the easy way by warm-starting itself whenever errors occur. No
 problem when using TOS normally (i.e. from the keyboard) but when using TOS under
@@ -157,7 +157,7 @@ obligatory. You can&rsquo;t return to NAS&shy;SYS to see what they are because &
 cold-starts NAS&shy;SYS, and this resets the workspace. Unless you have designed your
 program carefully, you have lost all the data your program just spent a long time
 building. It would be far better to return, say, to the outer level of the
-Read/&ZeroWidthSpace;Write routines or whatever, and then return to the caller if an error is
+Read/<wbr>Write routines or whatever, and then return to the caller if an error is
 detected. The latest versions of TOS have a &lsquo;Vectored Error handling function&rsquo;
 which I presume means that control is passed through a location in RAM to a
 (user) error routine.

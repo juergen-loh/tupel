@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/80-bus-news/21/24/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>80-Bus News - January&ndash;February 1983 - Volume 2 - Issue 1</title>
 	<meta name="keywords" content="80-Bus News, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -152,7 +152,7 @@ then &lsquo;RUN UP&rsquo; the modified SYS which will self locate over the OLDBI
 into low memory. (e.g. ZSID CPM64.COM (CR).) Remembering the addresses noted
 earlier, copy the active &lsquo;SYS&rsquo; from CP/M in high memory over the old CBIOS
 starting at 2100H. Since 4K is the maximum ammount that can be added, move 4K
-down to make it easy. (e.g. MEE00,&ZeroWidthSpace;FE00,&ZeroWidthSpace;2100 (CR).) will copy it down. Use the &lsquo;D&rsquo;
+down to make it easy. (e.g. MEE00,<wbr>FE00,<wbr>2100 (CR).) will copy it down. Use the &lsquo;D&rsquo;
 command to check at 2100H to see that data has changed and is the same as the
 data at EE00H. This new CP/M can now be saved. For tidyness though, I first
 filled from the end of the workspace to the highest possible end of the CBIOS
@@ -188,7 +188,7 @@ one I disassembled SYSGEN. Luckily this is a short Program of about 1K, with a
 lot of ASCII text in it, so the task was not too bad. It did not take very long
 so find out that it was the sector counting routine that was responsible for the
 problem. It was Programmed to only put 19 Sectors to disk. The count only needed
-to be &lsquo;upped&rsquo; by one to get all 20 sectors actioned. Locations 01BAH/&ZeroWidthSpace;01BBH in
+to be &lsquo;upped&rsquo; by one to get all 20 sectors actioned. Locations 01BAH/<wbr>01BBH in
 my copy were 38 14H. (LD A,14H). I used my BUG program to set this to 15H, and
 saved the altered program as SYSGEN1.COM. The revised program now Reads and
 Writes the whole system track.

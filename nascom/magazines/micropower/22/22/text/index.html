@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<!-- navi-head.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- navi-head.php / $Date: 2026-05-16 23:12:07 +0200 (Sa, 16. Mai 2026) $ -->
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -21,7 +21,7 @@
 	<link rel="canonical" href="https://tupel.jloh.de/nascom/magazines/micropower/22/22/text/">
 <!-- /navi-head.php -->
 
-	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 16 May 2026 20:33:10 GMT -->
+	<!-- page.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ / lastModified: Sat, 23 May 2026 12:27:55 GMT -->
 
 	<title>Micropower - Volume 2 - Number 2 - April 1982</title>
 	<meta name="keywords" content="Micro&shy;power, Nascom Computer, Nascom 1, Nascom 2">
@@ -78,7 +78,7 @@
 
 <!--********************************************************************************-->
 
-<!-- /navi-body.php / $Date: 2026-05-16 22:18:43 +0200 (Sa, 16. Mai 2026) $ -->
+<!-- /navi-body.php / $Date: 2026-05-23 14:27:55 +0200 (Sa, 23. Mai 2026) $ -->
 <table class="style-table-zeropadding" style="width: 100%">
 <tr>
 <td>
@@ -162,7 +162,7 @@ authors.
 <p>
 As regards the programs, I decided to go for a two dimensional string
 array, as this permits ease of handling. Thus, for a file of 30 authors (covering just
-one of the micros), we have the array P$(I,&ZeroWidthSpace;J), where J is the key to the programs
+one of the micros), we have the array P$(I,<wbr>J), where J is the key to the programs
 of each author. Since there are very few authors who have more than two
 programs, this is very wasteful of memory space, but as it is not a problem in this
 particular case, the benefits of ease of handling will be allowed to take preference.
@@ -172,8 +172,8 @@ I mentioned earlier that the majority of the information has to be output
 twice. This means that the price and numbers sold data must be held between
 one print run and the next. Alternatively, it could be saved as a temporary file, but
 this solution was not thought to be very elegant. My first solution to this problem was
-to create two three- dimensional numeric arrays viz. P(I,&ZeroWidthSpace;J,&ZeroWidthSpace;K) to hold the prices and
-S(I,&ZeroWidthSpace;J,&ZeroWidthSpace;K) to hold the relevant numbers sold. A quick calculation of 2(arrays) x
+to create two three- dimensional numeric arrays viz. P(I,<wbr>J,<wbr>K) to hold the prices and
+S(I,<wbr>J,<wbr>K) to hold the relevant numbers sold. A quick calculation of 2(arrays) x
 30(authors) x 20(programs) x 10 (prices) x 6 bytes per variable = 72000bytes
 persuaded me I had better think again.
 </p>
