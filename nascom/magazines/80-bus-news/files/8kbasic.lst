@@ -1,4 +1,4 @@
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    1
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    1
 
                 A description of BASIC's usage of the memory
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,7 +54,7 @@ NULFLG  1044    Nulls after input byte flag.
                 this is for VERY slow terminals which need  to  be  "woken  up"
                 before a character is sent to them!
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    2
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    2
 
 CTLOFG  1045    Control "O" (Disable output) flag.
                 If this flag is set then no  output  will  not  appear  at  the
@@ -113,7 +113,7 @@ STRSPC  105A    Start of string space pointer.
                 initially  set  to  50 bytes below the end of memory but can be
                 changed by the "CLEAR n" statement.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    3
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    3
 
 LINEAT  105C    Current line number.
                 This contains the value of the current line being executed.  If
@@ -161,7 +161,7 @@ LSTRAM  10AF    Last available RAM pointer.
                 This contains the address of the highest location in  RAM  that
                 BASIC will use. It can be changed by the "CLEAR,n" statement.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    4
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    4
 
 TMSTPT  10B1    Temporary string pointer.
                 This contains a pointer into the temporary string pool.
@@ -220,7 +220,7 @@ READFG  10CD    READ / INPUT flag.
                 processing  a  DATA  statement  or data for an INPUT statement.
                 If this value is zero then INPUT is active else READ is.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    5
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    5
 
 BRKLIN  10CE    Break line point.
                 This contains the address in the  line  where  break  occurred.
@@ -265,7 +265,7 @@ FNARG   10E0    FN function argument.
                 function then this value is saved on the  stack  together  with
                 the name of the FN argument.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    6
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    6
 
 FPREG   10E4    Floating point register.
                 This is a floating point number for the current  value.  It  is
@@ -323,7 +323,7 @@ PROGST  10F9    Program start.
                 be  zero  to  tell the execution driver that the next (actually
                 the first) line is to be executed.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    7
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    7
 
 ******** How a program is stored in memory ********
 
@@ -366,7 +366,7 @@ PROGND  111C    Pointer to byte after program
 111A    00 00   Pointer to next line (0000 = End of program)
 111C
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    8
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    8
 
 ******** How variables and arrays are stored ********
 
@@ -424,7 +424,7 @@ C2 41           Name of array AB$ in reverse
 00 00 00 00     AB$(2,1)
 00 00 00 00     AB$(3,1)
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE    9
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE    9
 
 ******** Usage of the stack for GOSUB/RETURN and FOR/NEXT ********
 
@@ -485,7 +485,7 @@ NEXT instruction.
 
 If the FOR block cannot be found then a "?NF Error" occurs.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE   10
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE   10
 
 ******** Now for the exciting bit - The ROM ********
 
@@ -546,7 +546,7 @@ RUNFST  E4C5    Execute program from first statement.
 
 INTVAR  E4C9    Clear out variables and string space an reset DATA pointer.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE   11
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE   11
 
 CLREG   E4DF    Reset stack to top of  memory,  clear  out  temporary  strings,
                 disable CONTinue and execute program.
@@ -604,7 +604,7 @@ TSTBRK  E861    Test for break key. If pressed test for  control  "S"  (pause).
 
 STOP    E870    STOP routine. Flag "STOP" an join END.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE   12
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE   12
 
 END     E872    END routine. Flag "END".
                 Save address of  break  and  set  continue  address  and  line.
@@ -661,7 +661,7 @@ ON      EAE1    ON GOTO / ON GOSUB routine. Get integer expression (0 to  255).
                 is found. If value N exists GOTO or GOSUB that line.  Otherwise
                 drop through to next statement.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE   13
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE   13
 
 IF      EAFF    IF routine. Evaluate expression. If it is zero then dop through
                 to  the next line. Otherwise GOTO line number if specified else
@@ -713,7 +713,7 @@ FNOFST  EE33    Enter with offset into FNCTAB. If it is "POINT (X,Y)" then jump
 SGNEXP  EE70    Get sign of number and return in the D register:-
                 FF - Negative, 00 Positive.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE   14
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE   14
 
 DIM     EF28    DIM routine. Flag "create" variable and join common.
 
@@ -771,7 +771,7 @@ ASC     F391    ASC(X$) routine.
 
 CHR     F3A2    CHR$(X) routine.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE   15
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE   15
 
 LEFT    F3B2    LEFT$(X$,X) routine.
 
@@ -831,7 +831,7 @@ PLUCDE  F672    Add value in FPREG to value in BCDE.
 
 COMPL   F67E    Complement value in BCDE.
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE   16
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE   16
 
 LOG     F6C7    LOG(X) routine. Get LOG of FPREG.
                 Scale the number to be between 0 and 1.
@@ -887,7 +887,7 @@ SQR     FAAC    SQR(X) routine. Uses SQR(X) = X ^ 0.5
 POWER   FAB5    Raise base BCDE to the power FPREG.
                 Uses X^Y = EXP( Y*LOG(X) ).
 
-The workings of Nascom ROM BASIC Ver 4.7                              PAGE   17
+The workings of NASCOM ROM BASIC Ver 4.7                              PAGE   17
 
 EXP     FAFA    EXP(X) routine.
                 Scale value to be between 0 and 1
